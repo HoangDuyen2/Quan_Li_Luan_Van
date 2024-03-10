@@ -232,7 +232,7 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.radioButton1.ForeColor = System.Drawing.Color.Black;
-            this.radioButton1.Location = new System.Drawing.Point(512, 306);
+            this.radioButton1.Location = new System.Drawing.Point(512, 304);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(56, 28);
             this.radioButton1.TabIndex = 15;
@@ -264,7 +264,7 @@
             this.pictureBox1.Image = global::Quan_Li_Luan_Van.Properties.Resources.user_128;
             this.pictureBox1.Location = new System.Drawing.Point(41, 212);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(173, 156);
+            this.pictureBox1.Size = new System.Drawing.Size(190, 176);
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 

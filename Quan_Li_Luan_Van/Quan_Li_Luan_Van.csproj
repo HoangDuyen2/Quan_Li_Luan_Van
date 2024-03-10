@@ -72,8 +72,14 @@
     <Compile Include="FGiangVien.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FGiangVien.Designer.cs">
+      <DependentUpon>FGiangVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="FSinhVien.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSinhVien.Designer.cs">
+      <DependentUpon>FSinhVien.cs</DependentUpon>
     </Compile>
     <Compile Include="FThemLuanVan.cs">
       <SubType>Form</SubType>
