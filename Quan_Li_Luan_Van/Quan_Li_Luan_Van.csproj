@@ -34,20 +34,20 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ComponentFactory.Krypton.Docking">
-      <HintPath>..\..\Application\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+      <HintPath>C:\Users\DO DUYEN\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Navigator">
-      <HintPath>..\..\Application\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
+      <HintPath>C:\Users\DO DUYEN\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Ribbon">
-      <HintPath>..\..\Application\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+      <HintPath>C:\Users\DO DUYEN\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Toolkit">
-      <HintPath>..\..\Application\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+      <HintPath>C:\Users\DO DUYEN\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Workspace">
-      <HintPath>..\..\Application\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+      <HintPath>C:\Users\DO DUYEN\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -70,9 +70,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FGiangVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FQuenMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FSinhVien.cs">
@@ -103,9 +100,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FGiangVien.resx">
       <DependentUpon>FGiangVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FQuenMatKhau.resx">
-      <DependentUpon>FQuenMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FSinhVien.resx">
       <DependentUpon>FSinhVien.cs</DependentUpon>
@@ -162,6 +156,63 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\dang_xuat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-identification-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sex.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sex1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\address.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sex2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sex3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sex4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sex5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\address1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\birthday.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_128.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

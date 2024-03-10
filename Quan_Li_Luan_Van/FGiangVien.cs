@@ -27,6 +27,7 @@ namespace QuanLyLuanVan
         private Button buttonTraCuu;
         private Button button1;
         private Button buttonThong_Tin_Chung;
+        private IContainer components;
         private Panel panel1;
 
         public FGiangVien()
@@ -37,27 +38,27 @@ namespace QuanLyLuanVan
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.labelTenTruong = new System.Windows.Forms.Label();
-            this.panelTTSV = new System.Windows.Forms.Panel();
-            this.labelTen = new System.Windows.Forms.Label();
-            this.labelMSSV = new System.Windows.Forms.Label();
-            this.labelChucVu = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.labelChucNang = new System.Windows.Forms.Label();
-            this.buttonThong_Tin_Chung = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonTraCuu = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonHome = new System.Windows.Forms.Button();
+            this.labelChucNang = new System.Windows.Forms.Label();
+            this.panelTTSV = new System.Windows.Forms.Panel();
+            this.labelChucVu = new System.Windows.Forms.Label();
+            this.labelMSSV = new System.Windows.Forms.Label();
+            this.labelTen = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonThong_Tin_Chung = new System.Windows.Forms.Button();
+            this.labelTenTruong = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panelTTSV.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panelTTSV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -71,74 +72,6 @@ namespace QuanLyLuanVan
             this.panel1.Size = new System.Drawing.Size(266, 657);
             this.panel1.TabIndex = 2;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
-            this.panel2.Controls.Add(this.buttonThong_Tin_Chung);
-            this.panel2.Controls.Add(this.labelTenTruong);
-            this.panel2.Location = new System.Drawing.Point(265, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(869, 75);
-            this.panel2.TabIndex = 3;
-            // 
-            // labelTenTruong
-            // 
-            this.labelTenTruong.AutoSize = true;
-            this.labelTenTruong.BackColor = System.Drawing.Color.Transparent;
-            this.labelTenTruong.Font = new System.Drawing.Font("Arial", 19.8F, System.Drawing.FontStyle.Bold);
-            this.labelTenTruong.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelTenTruong.Location = new System.Drawing.Point(57, 18);
-            this.labelTenTruong.Name = "labelTenTruong";
-            this.labelTenTruong.Size = new System.Drawing.Size(667, 40);
-            this.labelTenTruong.TabIndex = 11;
-            this.labelTenTruong.Text = "TRƯỜNG ĐẠI HỌC SƯ PHẠM KĨ THUẬT ";
-            // 
-            // panelTTSV
-            // 
-            this.panelTTSV.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelTTSV.Controls.Add(this.labelChucVu);
-            this.panelTTSV.Controls.Add(this.labelMSSV);
-            this.panelTTSV.Controls.Add(this.labelTen);
-            this.panelTTSV.Controls.Add(this.pictureBox1);
-            this.panelTTSV.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panelTTSV.Location = new System.Drawing.Point(1, 164);
-            this.panelTTSV.Name = "panelTTSV";
-            this.panelTTSV.Size = new System.Drawing.Size(266, 108);
-            this.panelTTSV.TabIndex = 4;
-            // 
-            // labelTen
-            // 
-            this.labelTen.AutoSize = true;
-            this.labelTen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))));
-            this.labelTen.Location = new System.Drawing.Point(89, 24);
-            this.labelTen.Name = "labelTen";
-            this.labelTen.Size = new System.Drawing.Size(140, 20);
-            this.labelTen.TabIndex = 20;
-            this.labelTen.Text = "Lê Đức Minh Vương";
-            this.labelTen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelMSSV
-            // 
-            this.labelMSSV.AutoSize = true;
-            this.labelMSSV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(158)))), ((int)(((byte)(171)))));
-            this.labelMSSV.Location = new System.Drawing.Point(118, 44);
-            this.labelMSSV.Name = "labelMSSV";
-            this.labelMSSV.Size = new System.Drawing.Size(73, 20);
-            this.labelMSSV.TabIndex = 21;
-            this.labelMSSV.Text = "22110271";
-            this.labelMSSV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelChucVu
-            // 
-            this.labelChucVu.AutoSize = true;
-            this.labelChucVu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(158)))), ((int)(((byte)(171)))));
-            this.labelChucVu.Location = new System.Drawing.Point(110, 64);
-            this.labelChucVu.Name = "labelChucVu";
-            this.labelChucVu.Size = new System.Drawing.Size(81, 20);
-            this.labelChucVu.TabIndex = 22;
-            this.labelChucVu.Text = "Giảng Viên";
-            this.labelChucVu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.button1);
@@ -150,30 +83,6 @@ namespace QuanLyLuanVan
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(265, 382);
             this.panel3.TabIndex = 5;
-            // 
-            // labelChucNang
-            // 
-            this.labelChucNang.AutoSize = true;
-            this.labelChucNang.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
-            this.labelChucNang.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelChucNang.Location = new System.Drawing.Point(3, 17);
-            this.labelChucNang.Name = "labelChucNang";
-            this.labelChucNang.Size = new System.Drawing.Size(154, 28);
-            this.labelChucNang.TabIndex = 4;
-            this.labelChucNang.Text = "CHỨC NĂNG";
-            // 
-            // buttonThong_Tin_Chung
-            // 
-            this.buttonThong_Tin_Chung.BackgroundImage = global::Quan_Li_Luan_Van.Properties.Resources.user;
-            this.buttonThong_Tin_Chung.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonThong_Tin_Chung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonThong_Tin_Chung.Location = new System.Drawing.Point(814, 18);
-            this.buttonThong_Tin_Chung.Name = "buttonThong_Tin_Chung";
-            this.buttonThong_Tin_Chung.Size = new System.Drawing.Size(46, 40);
-            this.buttonThong_Tin_Chung.TabIndex = 12;
-            this.buttonThong_Tin_Chung.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonThong_Tin_Chung.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonThong_Tin_Chung.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -242,6 +151,63 @@ namespace QuanLyLuanVan
             this.buttonHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonHome.UseVisualStyleBackColor = true;
             // 
+            // labelChucNang
+            // 
+            this.labelChucNang.AutoSize = true;
+            this.labelChucNang.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
+            this.labelChucNang.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelChucNang.Location = new System.Drawing.Point(3, 17);
+            this.labelChucNang.Name = "labelChucNang";
+            this.labelChucNang.Size = new System.Drawing.Size(154, 28);
+            this.labelChucNang.TabIndex = 4;
+            this.labelChucNang.Text = "CHỨC NĂNG";
+            // 
+            // panelTTSV
+            // 
+            this.panelTTSV.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelTTSV.Controls.Add(this.labelChucVu);
+            this.panelTTSV.Controls.Add(this.labelMSSV);
+            this.panelTTSV.Controls.Add(this.labelTen);
+            this.panelTTSV.Controls.Add(this.pictureBox1);
+            this.panelTTSV.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panelTTSV.Location = new System.Drawing.Point(1, 164);
+            this.panelTTSV.Name = "panelTTSV";
+            this.panelTTSV.Size = new System.Drawing.Size(266, 108);
+            this.panelTTSV.TabIndex = 4;
+            // 
+            // labelChucVu
+            // 
+            this.labelChucVu.AutoSize = true;
+            this.labelChucVu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(158)))), ((int)(((byte)(171)))));
+            this.labelChucVu.Location = new System.Drawing.Point(110, 64);
+            this.labelChucVu.Name = "labelChucVu";
+            this.labelChucVu.Size = new System.Drawing.Size(81, 20);
+            this.labelChucVu.TabIndex = 22;
+            this.labelChucVu.Text = "Giảng Viên";
+            this.labelChucVu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelMSSV
+            // 
+            this.labelMSSV.AutoSize = true;
+            this.labelMSSV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(158)))), ((int)(((byte)(171)))));
+            this.labelMSSV.Location = new System.Drawing.Point(118, 44);
+            this.labelMSSV.Name = "labelMSSV";
+            this.labelMSSV.Size = new System.Drawing.Size(73, 20);
+            this.labelMSSV.TabIndex = 21;
+            this.labelMSSV.Text = "22110271";
+            this.labelMSSV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelTen
+            // 
+            this.labelTen.AutoSize = true;
+            this.labelTen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))));
+            this.labelTen.Location = new System.Drawing.Point(89, 24);
+            this.labelTen.Name = "labelTen";
+            this.labelTen.Size = new System.Drawing.Size(140, 20);
+            this.labelTen.TabIndex = 20;
+            this.labelTen.Text = "Lê Đức Minh Vương";
+            this.labelTen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -264,6 +230,41 @@ namespace QuanLyLuanVan
             this.pictureBoxLogo.TabIndex = 4;
             this.pictureBoxLogo.TabStop = false;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
+            this.panel2.Controls.Add(this.buttonThong_Tin_Chung);
+            this.panel2.Controls.Add(this.labelTenTruong);
+            this.panel2.Location = new System.Drawing.Point(265, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(869, 75);
+            this.panel2.TabIndex = 3;
+            // 
+            // buttonThong_Tin_Chung
+            // 
+            this.buttonThong_Tin_Chung.BackgroundImage = global::Quan_Li_Luan_Van.Properties.Resources.user;
+            this.buttonThong_Tin_Chung.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonThong_Tin_Chung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonThong_Tin_Chung.Location = new System.Drawing.Point(814, 18);
+            this.buttonThong_Tin_Chung.Name = "buttonThong_Tin_Chung";
+            this.buttonThong_Tin_Chung.Size = new System.Drawing.Size(46, 40);
+            this.buttonThong_Tin_Chung.TabIndex = 12;
+            this.buttonThong_Tin_Chung.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonThong_Tin_Chung.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonThong_Tin_Chung.UseVisualStyleBackColor = true;
+            // 
+            // labelTenTruong
+            // 
+            this.labelTenTruong.AutoSize = true;
+            this.labelTenTruong.BackColor = System.Drawing.Color.Transparent;
+            this.labelTenTruong.Font = new System.Drawing.Font("Arial", 19.8F, System.Drawing.FontStyle.Bold);
+            this.labelTenTruong.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelTenTruong.Location = new System.Drawing.Point(57, 18);
+            this.labelTenTruong.Name = "labelTenTruong";
+            this.labelTenTruong.Size = new System.Drawing.Size(646, 38);
+            this.labelTenTruong.TabIndex = 11;
+            this.labelTenTruong.Text = "TRƯỜNG ĐẠI HỌC SƯ PHẠM KĨ THUẬT ";
+            // 
             // FGiangVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -277,14 +278,14 @@ namespace QuanLyLuanVan
             this.Name = "FGiangVien";
             this.Text = "Giảng viên";
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panelTTSV.ResumeLayout(false);
-            this.panelTTSV.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panelTTSV.ResumeLayout(false);
+            this.panelTTSV.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
