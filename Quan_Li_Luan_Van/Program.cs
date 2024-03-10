@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyLuanVan;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace Quan_Li_Luan_Van
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FThongTinCaNhan());
+            Application.Run(new FDangNhap());
         }
     }
 }

@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Reflection.Metadata.Ecma335;
+//using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -35,9 +35,8 @@ namespace QuanLyLuanVan
         private Label labelTen;
         private PictureBox pictureBox1;
         private PictureBox pictureBoxLogo;
-        private Form activeForm;
 
-        private void ActivateButton(object btnSender)
+        /*private void ActivateButton(object btnSender)
         {
             if (btnSender != null)
             {
@@ -48,7 +47,7 @@ namespace QuanLyLuanVan
                 }
             }
         }
-        private void DisableButton()
+        /*private void DisableButton()
         {
             foreach (Control previousBtn in panelMenu.Controls)
             {
@@ -59,8 +58,8 @@ namespace QuanLyLuanVan
                     previousBtn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 }
             }
-        }
-        private void OpenChildForm(Form childForm, object btnSender)
+        }*/
+        /*private void OpenChildForm(Form childForm, object btnSender)
         {
             if (activeForm != null)
                 activeForm.Close();
@@ -73,13 +72,13 @@ namespace QuanLyLuanVan
             this.panelDesktopPane.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-        }
+        }*/
         private void FSinhVien_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void buttonDangKy_Click(object sender, EventArgs e)
+        /*private void buttonDangKy_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FDangKy(), sender);
         }
@@ -92,24 +91,24 @@ namespace QuanLyLuanVan
         private void buttonDangXuat_Click(object sender, EventArgs e)
         {
 
-        }
+        }*/
 
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonThong_Tin_Chung = new System.Windows.Forms.Button();
             this.labelTenTruong = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.buttonTraCuu = new System.Windows.Forms.Button();
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.buttonHome = new System.Windows.Forms.Button();
             this.labelChucNang = new System.Windows.Forms.Label();
             this.panelTTSV = new System.Windows.Forms.Panel();
             this.labelChucVu = new System.Windows.Forms.Label();
             this.labelMSSV = new System.Windows.Forms.Label();
             this.labelTen = new System.Windows.Forms.Label();
-            this.buttonThong_Tin_Chung = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.buttonTraCuu = new System.Windows.Forms.Button();
-            this.buttonAdd = new System.Windows.Forms.Button();
-            this.buttonHome = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
@@ -130,6 +129,19 @@ namespace QuanLyLuanVan
             this.panel2.Size = new System.Drawing.Size(869, 75);
             this.panel2.TabIndex = 5;
             // 
+            // buttonThong_Tin_Chung
+            // 
+            this.buttonThong_Tin_Chung.BackgroundImage = global::Quan_Li_Luan_Van.Properties.Resources.user;
+            this.buttonThong_Tin_Chung.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonThong_Tin_Chung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonThong_Tin_Chung.Location = new System.Drawing.Point(814, 18);
+            this.buttonThong_Tin_Chung.Name = "buttonThong_Tin_Chung";
+            this.buttonThong_Tin_Chung.Size = new System.Drawing.Size(46, 40);
+            this.buttonThong_Tin_Chung.TabIndex = 12;
+            this.buttonThong_Tin_Chung.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonThong_Tin_Chung.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonThong_Tin_Chung.UseVisualStyleBackColor = true;
+            // 
             // labelTenTruong
             // 
             this.labelTenTruong.AutoSize = true;
@@ -138,7 +150,7 @@ namespace QuanLyLuanVan
             this.labelTenTruong.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelTenTruong.Location = new System.Drawing.Point(57, 18);
             this.labelTenTruong.Name = "labelTenTruong";
-            this.labelTenTruong.Size = new System.Drawing.Size(667, 40);
+            this.labelTenTruong.Size = new System.Drawing.Size(646, 38);
             this.labelTenTruong.TabIndex = 11;
             this.labelTenTruong.Text = "TRƯỜNG ĐẠI HỌC SƯ PHẠM KĨ THUẬT ";
             // 
@@ -164,6 +176,74 @@ namespace QuanLyLuanVan
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(265, 382);
             this.panel3.TabIndex = 5;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::Quan_Li_Luan_Van.Properties.Resources.dang_xuat;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(-3, 236);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(269, 63);
+            this.button1.TabIndex = 16;
+            this.button1.Text = " Đăng xuất";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // buttonTraCuu
+            // 
+            this.buttonTraCuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTraCuu.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTraCuu.ForeColor = System.Drawing.Color.White;
+            this.buttonTraCuu.Image = global::Quan_Li_Luan_Van.Properties.Resources.find;
+            this.buttonTraCuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonTraCuu.Location = new System.Drawing.Point(-3, 176);
+            this.buttonTraCuu.Name = "buttonTraCuu";
+            this.buttonTraCuu.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.buttonTraCuu.Size = new System.Drawing.Size(269, 63);
+            this.buttonTraCuu.TabIndex = 0;
+            this.buttonTraCuu.Text = " Luận văn của tôi";
+            this.buttonTraCuu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonTraCuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonTraCuu.UseVisualStyleBackColor = true;
+            this.buttonTraCuu.Click += new System.EventHandler(this.buttonTraCuu_Click);
+            // 
+            // buttonAdd
+            // 
+            this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAdd.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Bold);
+            this.buttonAdd.ForeColor = System.Drawing.Color.White;
+            this.buttonAdd.Image = global::Quan_Li_Luan_Van.Properties.Resources.add;
+            this.buttonAdd.Location = new System.Drawing.Point(-4, 116);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.buttonAdd.Size = new System.Drawing.Size(269, 63);
+            this.buttonAdd.TabIndex = 10;
+            this.buttonAdd.Text = " Đăng kí đề tài";
+            this.buttonAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            // 
+            // buttonHome
+            // 
+            this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHome.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Bold);
+            this.buttonHome.ForeColor = System.Drawing.Color.White;
+            this.buttonHome.Image = global::Quan_Li_Luan_Van.Properties.Resources.home;
+            this.buttonHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonHome.Location = new System.Drawing.Point(-3, 53);
+            this.buttonHome.Name = "buttonHome";
+            this.buttonHome.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.buttonHome.Size = new System.Drawing.Size(269, 63);
+            this.buttonHome.TabIndex = 4;
+            this.buttonHome.Text = "  Trang chủ";
+            this.buttonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonHome.UseVisualStyleBackColor = true;
             // 
             // labelChucNang
             // 
@@ -222,86 +302,6 @@ namespace QuanLyLuanVan
             this.labelTen.Text = "Lê Đức Minh Vương";
             this.labelTen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // buttonThong_Tin_Chung
-            // 
-            this.buttonThong_Tin_Chung.BackgroundImage = global::Quan_Li_Luan_Van.Properties.Resources.user;
-            this.buttonThong_Tin_Chung.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonThong_Tin_Chung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonThong_Tin_Chung.Location = new System.Drawing.Point(814, 18);
-            this.buttonThong_Tin_Chung.Name = "buttonThong_Tin_Chung";
-            this.buttonThong_Tin_Chung.Size = new System.Drawing.Size(46, 40);
-            this.buttonThong_Tin_Chung.TabIndex = 12;
-            this.buttonThong_Tin_Chung.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonThong_Tin_Chung.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonThong_Tin_Chung.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::Quan_Li_Luan_Van.Properties.Resources.dang_xuat;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(-3, 236);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(269, 63);
-            this.button1.TabIndex = 16;
-            this.button1.Text = " Đăng xuất";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // buttonTraCuu
-            // 
-            this.buttonTraCuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTraCuu.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTraCuu.ForeColor = System.Drawing.Color.White;
-            this.buttonTraCuu.Image = global::Quan_Li_Luan_Van.Properties.Resources.find;
-            this.buttonTraCuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonTraCuu.Location = new System.Drawing.Point(-3, 176);
-            this.buttonTraCuu.Name = "buttonTraCuu";
-            this.buttonTraCuu.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.buttonTraCuu.Size = new System.Drawing.Size(269, 63);
-            this.buttonTraCuu.TabIndex = 0;
-            this.buttonTraCuu.Text = " Luận văn của tôi";
-            this.buttonTraCuu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonTraCuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonTraCuu.UseVisualStyleBackColor = true;
-            // 
-            // buttonAdd
-            // 
-            this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAdd.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Bold);
-            this.buttonAdd.ForeColor = System.Drawing.Color.White;
-            this.buttonAdd.Image = global::Quan_Li_Luan_Van.Properties.Resources.add;
-            this.buttonAdd.Location = new System.Drawing.Point(-4, 116);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.buttonAdd.Size = new System.Drawing.Size(269, 63);
-            this.buttonAdd.TabIndex = 10;
-            this.buttonAdd.Text = " Đăng kí đề tài";
-            this.buttonAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonAdd.UseVisualStyleBackColor = true;
-            // 
-            // buttonHome
-            // 
-            this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonHome.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Bold);
-            this.buttonHome.ForeColor = System.Drawing.Color.White;
-            this.buttonHome.Image = global::Quan_Li_Luan_Van.Properties.Resources.home;
-            this.buttonHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonHome.Location = new System.Drawing.Point(-3, 53);
-            this.buttonHome.Name = "buttonHome";
-            this.buttonHome.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.buttonHome.Size = new System.Drawing.Size(269, 63);
-            this.buttonHome.TabIndex = 4;
-            this.buttonHome.Text = "  Trang chủ";
-            this.buttonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonHome.UseVisualStyleBackColor = true;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -330,6 +330,7 @@ namespace QuanLyLuanVan
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FSinhVien";
+            this.Load += new System.EventHandler(this.FSinhVien_Load_1);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -340,6 +341,16 @@ namespace QuanLyLuanVan
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
+
+        }
+
+        private void FSinhVien_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonTraCuu_Click(object sender, EventArgs e)
+        {
 
         }
     }
