@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Quan_Li_Luan_Van
 {
-    public partial class FGiangVien : Form
+    public partial class FDangKyLuanVan : Form
     {
-        public FGiangVien()
+        public FDangKyLuanVan()
         {
             InitializeComponent();
-        }
-
-        private void FGiangVien_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

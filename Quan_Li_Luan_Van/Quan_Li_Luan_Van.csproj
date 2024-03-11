@@ -33,20 +33,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ComponentFactory.Krypton.Docking">
+    <Reference Include="ComponentFactory.Krypton.Docking, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\DO DUYEN\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
     </Reference>
-    <Reference Include="ComponentFactory.Krypton.Navigator">
+    <Reference Include="ComponentFactory.Krypton.Navigator, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\DO DUYEN\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
     </Reference>
-    <Reference Include="ComponentFactory.Krypton.Ribbon">
+    <Reference Include="ComponentFactory.Krypton.Ribbon, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\DO DUYEN\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
     </Reference>
-    <Reference Include="ComponentFactory.Krypton.Toolkit">
+    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\DO DUYEN\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="ComponentFactory.Krypton.Workspace">
+    <Reference Include="ComponentFactory.Krypton.Workspace, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\DO DUYEN\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -63,20 +67,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FDangKy.cs">
+    <Compile Include="FDangKyLuanVan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FDangNhap.cs">
-      <SubType>Form</SubType>
+    <Compile Include="FDangKyLuanVan.Designer.cs">
+      <DependentUpon>FDangKyLuanVan.cs</DependentUpon>
     </Compile>
     <Compile Include="FGiangVien.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FGiangVien.Designer.cs">
+      <DependentUpon>FGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDangNhap.Designer.cs">
+      <DependentUpon>FDangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="FSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FThemLuanVan.cs">
-      <SubType>Form</SubType>
+    <Compile Include="FSinhVien.Designer.cs">
+      <DependentUpon>FSinhVien.cs</DependentUpon>
     </Compile>
     <Compile Include="FThongTinCaNhan.cs">
       <SubType>Form</SubType>
@@ -84,34 +97,40 @@
     <Compile Include="FThongTinCaNhan.Designer.cs">
       <DependentUpon>FThongTinCaNhan.cs</DependentUpon>
     </Compile>
-    <Compile Include="FTraCuu.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FTrangChu.Designer.cs">
+      <DependentUpon>FTrangChu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FDangKy.resx">
-      <DependentUpon>FDangKy.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FDangNhap.resx">
-      <DependentUpon>FDangNhap.cs</DependentUpon>
+    <Compile Include="FTraCuu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTraCuu.Designer.cs">
+      <DependentUpon>FTraCuu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FThemLuanVan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThemLuanVan.Designer.cs">
+      <DependentUpon>FThemLuanVan.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FDangKyLuanVan.resx">
+      <DependentUpon>FDangKyLuanVan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FGiangVien.resx">
       <DependentUpon>FGiangVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FDangNhap.resx">
+      <DependentUpon>FDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FSinhVien.resx">
       <DependentUpon>FSinhVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FThemLuanVan.resx">
-      <DependentUpon>FThemLuanVan.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FThongTinCaNhan.resx">
       <DependentUpon>FThongTinCaNhan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FTraCuu.resx">
-      <DependentUpon>FTraCuu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FTrangChu.resx">
       <DependentUpon>FTrangChu.cs</DependentUpon>
@@ -126,6 +145,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="FTraCuu.resx">
+      <DependentUpon>FTraCuu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThemLuanVan.resx">
+      <DependentUpon>FThemLuanVan.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -1,52 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace QuanLyLuanVan
+﻿namespace Quan_Li_Luan_Van
 {
-    public partial class FDangKy : Form
+    partial class FDangKyLuanVan
     {
-        private GroupBox groupBoxTraCuuLuanVan;
-        private Panel panelTile;
-        private Button buttonTimKiem;
-        private Label label1;
-        private Button btnDangKy;
-        private Panel panel2;
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
 
-        public FDangKy()
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
         {
-            InitializeComponent();
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
         }
 
-        private void labelDangKy_Click(object sender, EventArgs e)
-        {
+        #region Windows Form Designer generated code
 
-        }
-
-        private void buttonDangKy_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonTimKiem_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
         private void InitializeComponent()
         {
             this.groupBoxTraCuuLuanVan = new System.Windows.Forms.GroupBox();
+            this.buttonTimKiem = new System.Windows.Forms.Button();
             this.panelTile = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDangKy = new System.Windows.Forms.Button();
-            this.buttonTimKiem = new System.Windows.Forms.Button();
             this.groupBoxTraCuuLuanVan.SuspendLayout();
             this.panelTile.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -57,12 +44,25 @@ namespace QuanLyLuanVan
             this.groupBoxTraCuuLuanVan.Controls.Add(this.buttonTimKiem);
             this.groupBoxTraCuuLuanVan.Controls.Add(this.panelTile);
             this.groupBoxTraCuuLuanVan.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.groupBoxTraCuuLuanVan.Location = new System.Drawing.Point(0, 1);
+            this.groupBoxTraCuuLuanVan.Location = new System.Drawing.Point(-3, 1);
             this.groupBoxTraCuuLuanVan.Name = "groupBoxTraCuuLuanVan";
-            this.groupBoxTraCuuLuanVan.Size = new System.Drawing.Size(853, 176);
-            this.groupBoxTraCuuLuanVan.TabIndex = 0;
+            this.groupBoxTraCuuLuanVan.Size = new System.Drawing.Size(871, 143);
+            this.groupBoxTraCuuLuanVan.TabIndex = 2;
             this.groupBoxTraCuuLuanVan.TabStop = false;
             this.groupBoxTraCuuLuanVan.Text = "Tra cứu luận văn";
+            // 
+            // buttonTimKiem
+            // 
+            this.buttonTimKiem.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.buttonTimKiem.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.buttonTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.buttonTimKiem.Location = new System.Drawing.Point(701, 26);
+            this.buttonTimKiem.Name = "buttonTimKiem";
+            this.buttonTimKiem.Size = new System.Drawing.Size(146, 35);
+            this.buttonTimKiem.TabIndex = 2;
+            this.buttonTimKiem.Text = "         Tìm kiếm";
+            this.buttonTimKiem.UseMnemonic = false;
+            this.buttonTimKiem.UseVisualStyleBackColor = true;
             // 
             // panelTile
             // 
@@ -96,33 +96,22 @@ namespace QuanLyLuanVan
             // btnDangKy
             // 
             this.btnDangKy.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnDangKy.Location = new System.Drawing.Point(669, 481);
+            this.btnDangKy.Location = new System.Drawing.Point(643, 448);
             this.btnDangKy.Name = "btnDangKy";
             this.btnDangKy.Size = new System.Drawing.Size(146, 35);
-            this.btnDangKy.TabIndex = 1;
+            this.btnDangKy.TabIndex = 3;
             this.btnDangKy.Text = "Đăng kí đề tài mới";
             this.btnDangKy.UseVisualStyleBackColor = true;
             // 
-            // buttonTimKiem
+            // DangKyLuanVan
             // 
-            this.buttonTimKiem.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.buttonTimKiem.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.buttonTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.buttonTimKiem.Location = new System.Drawing.Point(701, 26);
-            this.buttonTimKiem.Name = "buttonTimKiem";
-            this.buttonTimKiem.Size = new System.Drawing.Size(146, 35);
-            this.buttonTimKiem.TabIndex = 2;
-            this.buttonTimKiem.Text = "         Tìm kiếm";
-            this.buttonTimKiem.UseMnemonic = false;
-            this.buttonTimKiem.UseVisualStyleBackColor = true;
-            // 
-            // FDangKy
-            // 
-            this.ClientSize = new System.Drawing.Size(855, 560);
-            this.Controls.Add(this.btnDangKy);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(871, 509);
             this.Controls.Add(this.groupBoxTraCuuLuanVan);
-            this.Name = "FDangKy";
-            this.Text = "FDangKy";
+            this.Controls.Add(this.btnDangKy);
+            this.Name = "DangKyLuanVan";
+            this.Text = "DangKyLuanVan";
             this.groupBoxTraCuuLuanVan.ResumeLayout(false);
             this.panelTile.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -130,5 +119,14 @@ namespace QuanLyLuanVan
             this.ResumeLayout(false);
 
         }
+
+        #endregion
+
+        private System.Windows.Forms.GroupBox groupBoxTraCuuLuanVan;
+        private System.Windows.Forms.Button buttonTimKiem;
+        private System.Windows.Forms.Panel panelTile;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnDangKy;
     }
 }
