@@ -242,9 +242,10 @@
             // 
             // kryptonDateTimePicker1
             // 
+            this.kryptonDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.kryptonDateTimePicker1.Location = new System.Drawing.Point(731, 232);
             this.kryptonDateTimePicker1.Name = "kryptonDateTimePicker1";
-            this.kryptonDateTimePicker1.Size = new System.Drawing.Size(265, 35);
+            this.kryptonDateTimePicker1.Size = new System.Drawing.Size(265, 39);
             this.kryptonDateTimePicker1.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.kryptonDateTimePicker1.StateCommon.Border.Color2 = System.Drawing.Color.Blue;
             this.kryptonDateTimePicker1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -254,7 +255,7 @@
             this.kryptonDateTimePicker1.StateCommon.Border.Rounding = 16;
             this.kryptonDateTimePicker1.StateCommon.Border.Width = 1;
             this.kryptonDateTimePicker1.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.kryptonDateTimePicker1.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonDateTimePicker1.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonDateTimePicker1.TabIndex = 16;
             this.kryptonDateTimePicker1.ValueNullable = new System.DateTime(2024, 3, 10, 0, 0, 0, 0);
             // 

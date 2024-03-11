@@ -30,17 +30,17 @@
         {
             this.kryptonDataGridViewTraCuu = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.kryptonThongTinMonHoc = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.labelTieuDe = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.comboxLoaiTraCuu = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.buttonTimKiem = new System.Windows.Forms.Button();
+            this.kryptonThongTinMonHoc = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.labelLoaiTraCuu = new System.Windows.Forms.Label();
             this.labelThongTinMonHoc = new System.Windows.Forms.Label();
+            this.labelTieuDe = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridViewTraCuu)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboxLoaiTraCuu)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonDataGridViewTraCuu
@@ -66,47 +66,6 @@
             this.panel2.Size = new System.Drawing.Size(959, 506);
             this.panel2.TabIndex = 5;
             // 
-            // kryptonThongTinMonHoc
-            // 
-            this.kryptonThongTinMonHoc.Location = new System.Drawing.Point(476, 32);
-            this.kryptonThongTinMonHoc.Name = "kryptonThongTinMonHoc";
-            this.kryptonThongTinMonHoc.Size = new System.Drawing.Size(297, 36);
-            this.kryptonThongTinMonHoc.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonThongTinMonHoc.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
-            this.kryptonThongTinMonHoc.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.kryptonThongTinMonHoc.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonThongTinMonHoc.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonThongTinMonHoc.StateCommon.Border.Rounding = 16;
-            this.kryptonThongTinMonHoc.StateCommon.Border.Width = 1;
-            this.kryptonThongTinMonHoc.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.kryptonThongTinMonHoc.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonThongTinMonHoc.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.kryptonThongTinMonHoc.TabIndex = 9;
-            this.kryptonThongTinMonHoc.Text = "EN035524";
-            // 
-            // labelTieuDe
-            // 
-            this.labelTieuDe.AutoSize = true;
-            this.labelTieuDe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
-            this.labelTieuDe.Font = new System.Drawing.Font("Book Antiqua", 18F, System.Drawing.FontStyle.Bold);
-            this.labelTieuDe.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelTieuDe.Location = new System.Drawing.Point(27, 10);
-            this.labelTieuDe.Name = "labelTieuDe";
-            this.labelTieuDe.Size = new System.Drawing.Size(154, 35);
-            this.labelTieuDe.TabIndex = 4;
-            this.labelTieuDe.Text = "TRA CỨU";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
-            this.panel1.Controls.Add(this.labelTieuDe);
-            this.panel1.Location = new System.Drawing.Point(-1, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(240, 53);
-            this.panel1.TabIndex = 6;
-            // 
             // comboxLoaiTraCuu
             // 
             this.comboxLoaiTraCuu.DropDownWidth = 261;
@@ -117,8 +76,8 @@
             this.comboxLoaiTraCuu.Location = new System.Drawing.Point(88, 32);
             this.comboxLoaiTraCuu.Name = "comboxLoaiTraCuu";
             this.comboxLoaiTraCuu.Size = new System.Drawing.Size(273, 39);
-            this.comboxLoaiTraCuu.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.White;
-            this.comboxLoaiTraCuu.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.White;
+            this.comboxLoaiTraCuu.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Blue;
+            this.comboxLoaiTraCuu.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.Blue;
             this.comboxLoaiTraCuu.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -130,6 +89,11 @@
             this.comboxLoaiTraCuu.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(1);
             this.comboxLoaiTraCuu.StateCommon.DropBack.Color1 = System.Drawing.Color.White;
             this.comboxLoaiTraCuu.StateCommon.DropBack.Color2 = System.Drawing.Color.White;
+            this.comboxLoaiTraCuu.StateCommon.Item.Border.Color1 = System.Drawing.Color.White;
+            this.comboxLoaiTraCuu.StateCommon.Item.Border.Color2 = System.Drawing.Color.White;
+            this.comboxLoaiTraCuu.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.comboxLoaiTraCuu.TabIndex = 11;
             this.comboxLoaiTraCuu.Text = "Chưa nhận";
             // 
@@ -149,6 +113,26 @@
             this.buttonTimKiem.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonTimKiem.UseVisualStyleBackColor = false;
+            // 
+            // kryptonThongTinMonHoc
+            // 
+            this.kryptonThongTinMonHoc.Location = new System.Drawing.Point(476, 32);
+            this.kryptonThongTinMonHoc.Name = "kryptonThongTinMonHoc";
+            this.kryptonThongTinMonHoc.Size = new System.Drawing.Size(297, 36);
+            this.kryptonThongTinMonHoc.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonThongTinMonHoc.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
+            this.kryptonThongTinMonHoc.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.kryptonThongTinMonHoc.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonThongTinMonHoc.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonThongTinMonHoc.StateCommon.Border.Rounding = 16;
+            this.kryptonThongTinMonHoc.StateCommon.Border.Width = 1;
+            this.kryptonThongTinMonHoc.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.kryptonThongTinMonHoc.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonThongTinMonHoc.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.kryptonThongTinMonHoc.TabIndex = 9;
+            this.kryptonThongTinMonHoc.Text = "EN035524";
             // 
             // labelLoaiTraCuu
             // 
@@ -172,6 +156,27 @@
             this.labelThongTinMonHoc.TabIndex = 5;
             this.labelThongTinMonHoc.Text = "  ";
             // 
+            // labelTieuDe
+            // 
+            this.labelTieuDe.AutoSize = true;
+            this.labelTieuDe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
+            this.labelTieuDe.Font = new System.Drawing.Font("Book Antiqua", 18F, System.Drawing.FontStyle.Bold);
+            this.labelTieuDe.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.labelTieuDe.Location = new System.Drawing.Point(27, 10);
+            this.labelTieuDe.Name = "labelTieuDe";
+            this.labelTieuDe.Size = new System.Drawing.Size(154, 35);
+            this.labelTieuDe.TabIndex = 4;
+            this.labelTieuDe.Text = "TRA CỨU";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
+            this.panel1.Controls.Add(this.labelTieuDe);
+            this.panel1.Location = new System.Drawing.Point(-1, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(240, 53);
+            this.panel1.TabIndex = 6;
+            // 
             // FTraCuu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -185,9 +190,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridViewTraCuu)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboxLoaiTraCuu)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboxLoaiTraCuu)).EndInit();
             this.ResumeLayout(false);
 
         }

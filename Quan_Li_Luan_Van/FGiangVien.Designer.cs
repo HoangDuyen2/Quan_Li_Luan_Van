@@ -32,12 +32,14 @@
             this.panelChucNang = new System.Windows.Forms.Panel();
             this.labelChucNang = new System.Windows.Forms.Label();
             this.panelTTGiangVien = new System.Windows.Forms.Panel();
+            this.pictureBoxUser = new System.Windows.Forms.PictureBox();
             this.labelChucVu = new System.Windows.Forms.Label();
             this.labelMSSV = new System.Windows.Forms.Label();
             this.labelTen = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.labelTenTruong = new System.Windows.Forms.Label();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panelDesktopPane = new System.Windows.Forms.Panel();
             this.panelTenTruong = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
@@ -45,15 +47,13 @@
             this.btnLuanVan = new System.Windows.Forms.Button();
             this.btnDangKy = new System.Windows.Forms.Button();
             this.buttonHome = new System.Windows.Forms.Button();
-            this.pictureBoxUser = new System.Windows.Forms.PictureBox();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panelChucNang.SuspendLayout();
             this.panelTTGiangVien.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).BeginInit();
             this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panelTenTruong.SuspendLayout();
             this.panelMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panelChucNang
@@ -90,6 +90,17 @@
             this.panelTTGiangVien.Name = "panelTTGiangVien";
             this.panelTTGiangVien.Size = new System.Drawing.Size(252, 114);
             this.panelTTGiangVien.TabIndex = 1;
+            // 
+            // pictureBoxUser
+            // 
+            this.pictureBoxUser.Image = global::Quan_Li_Luan_Van.Properties.Resources.user;
+            this.pictureBoxUser.Location = new System.Drawing.Point(26, 37);
+            this.pictureBoxUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxUser.Name = "pictureBoxUser";
+            this.pictureBoxUser.Size = new System.Drawing.Size(48, 48);
+            this.pictureBoxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxUser.TabIndex = 1;
+            this.pictureBoxUser.TabStop = false;
             // 
             // labelChucVu
             // 
@@ -150,6 +161,17 @@
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(252, 155);
             this.panelLogo.TabIndex = 1;
+            // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
+            this.pictureBoxLogo.Location = new System.Drawing.Point(63, 20);
+            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(122, 115);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLogo.TabIndex = 1;
+            this.pictureBoxLogo.TabStop = false;
             // 
             // panelDesktopPane
             // 
@@ -264,28 +286,6 @@
             this.buttonHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonHome.UseVisualStyleBackColor = true;
             // 
-            // pictureBoxUser
-            // 
-            this.pictureBoxUser.Image = global::Quan_Li_Luan_Van.Properties.Resources.user;
-            this.pictureBoxUser.Location = new System.Drawing.Point(26, 37);
-            this.pictureBoxUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBoxUser.Name = "pictureBoxUser";
-            this.pictureBoxUser.Size = new System.Drawing.Size(48, 48);
-            this.pictureBoxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxUser.TabIndex = 1;
-            this.pictureBoxUser.TabStop = false;
-            // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
-            this.pictureBoxLogo.Location = new System.Drawing.Point(63, 20);
-            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(122, 115);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxLogo.TabIndex = 1;
-            this.pictureBoxLogo.TabStop = false;
-            // 
             // FGiangVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -302,12 +302,12 @@
             this.panelChucNang.PerformLayout();
             this.panelTTGiangVien.ResumeLayout(false);
             this.panelTTGiangVien.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).EndInit();
             this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.panelTenTruong.ResumeLayout(false);
             this.panelTenTruong.PerformLayout();
             this.panelMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
