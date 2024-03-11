@@ -39,24 +39,24 @@ namespace Quan_Li_Luan_Van
             this.labelChucVu = new System.Windows.Forms.Label();
             this.labelMSSV = new System.Windows.Forms.Label();
             this.labelTen = new System.Windows.Forms.Label();
-            this.pictureBoxUser = new System.Windows.Forms.PictureBox();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panelTenTruong = new System.Windows.Forms.Panel();
             this.labelTenTruong = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panelDesktopPane = new System.Windows.Forms.Panel();
-            this.buttonHome = new System.Windows.Forms.Button();
-            this.btnDangKy = new System.Windows.Forms.Button();
-            this.btnLuanVan = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
+            this.btnLuanVan = new System.Windows.Forms.Button();
+            this.btnDangKy = new System.Windows.Forms.Button();
+            this.buttonHome = new System.Windows.Forms.Button();
+            this.pictureBoxUser = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panelChucNang.SuspendLayout();
             this.panelTTSinhVien.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).BeginInit();
             this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panelTenTruong.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -148,17 +148,6 @@ namespace Quan_Li_Luan_Van
             this.labelTen.Text = "Lê Đức Minh Vương";
             this.labelTen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBoxUser
-            // 
-            this.pictureBoxUser.Image = global::Quan_Li_Luan_Van.Properties.Resources.user;
-            this.pictureBoxUser.Location = new System.Drawing.Point(26, 37);
-            this.pictureBoxUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBoxUser.Name = "pictureBoxUser";
-            this.pictureBoxUser.Size = new System.Drawing.Size(48, 48);
-            this.pictureBoxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxUser.TabIndex = 1;
-            this.pictureBoxUser.TabStop = false;
-            // 
             // panelLogo
             // 
             this.panelLogo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -169,17 +158,6 @@ namespace Quan_Li_Luan_Van
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(252, 155);
             this.panelLogo.TabIndex = 1;
-            // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
-            this.pictureBoxLogo.Location = new System.Drawing.Point(63, 20);
-            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(122, 115);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxLogo.TabIndex = 1;
-            this.pictureBoxLogo.TabStop = false;
             // 
             // panelTenTruong
             // 
@@ -214,24 +192,44 @@ namespace Quan_Li_Luan_Van
             this.panelDesktopPane.Size = new System.Drawing.Size(959, 568);
             this.panelDesktopPane.TabIndex = 2;
             // 
-            // buttonHome
+            // btnDangXuat
             // 
-            this.buttonHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonHome.FlatAppearance.BorderSize = 0;
-            this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonHome.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.buttonHome.ForeColor = System.Drawing.Color.White;
-            this.buttonHome.Image = global::Quan_Li_Luan_Van.Properties.Resources.home;
-            this.buttonHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonHome.Location = new System.Drawing.Point(0, 330);
-            this.buttonHome.Name = "buttonHome";
-            this.buttonHome.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.buttonHome.Size = new System.Drawing.Size(252, 63);
-            this.buttonHome.TabIndex = 5;
-            this.buttonHome.Text = "  Trang chủ";
-            this.buttonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonHome.UseVisualStyleBackColor = true;
+            this.btnDangXuat.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDangXuat.FlatAppearance.BorderSize = 0;
+            this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangXuat.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnDangXuat.ForeColor = System.Drawing.Color.White;
+            this.btnDangXuat.Image = global::Quan_Li_Luan_Van.Properties.Resources.dang_xuat;
+            this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDangXuat.Location = new System.Drawing.Point(0, 519);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnDangXuat.Size = new System.Drawing.Size(252, 63);
+            this.btnDangXuat.TabIndex = 8;
+            this.btnDangXuat.Text = "  Đăng xuất";
+            this.btnDangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDangXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDangXuat.UseVisualStyleBackColor = true;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
+            // 
+            // btnLuanVan
+            // 
+            this.btnLuanVan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLuanVan.FlatAppearance.BorderSize = 0;
+            this.btnLuanVan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLuanVan.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnLuanVan.ForeColor = System.Drawing.Color.White;
+            this.btnLuanVan.Image = global::Quan_Li_Luan_Van.Properties.Resources.find;
+            this.btnLuanVan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLuanVan.Location = new System.Drawing.Point(0, 456);
+            this.btnLuanVan.Name = "btnLuanVan";
+            this.btnLuanVan.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnLuanVan.Size = new System.Drawing.Size(252, 63);
+            this.btnLuanVan.TabIndex = 7;
+            this.btnLuanVan.Text = " Luận văn của tôi";
+            this.btnLuanVan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLuanVan.UseVisualStyleBackColor = true;
+            this.btnLuanVan.Click += new System.EventHandler(this.btnLuanVan_Click);
             // 
             // btnDangKy
             // 
@@ -251,43 +249,49 @@ namespace Quan_Li_Luan_Van
             this.btnDangKy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDangKy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDangKy.UseVisualStyleBackColor = true;
+            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 
-            // btnLuanVan
+            // buttonHome
             // 
-            this.btnLuanVan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLuanVan.FlatAppearance.BorderSize = 0;
-            this.btnLuanVan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLuanVan.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnLuanVan.ForeColor = System.Drawing.Color.White;
-            this.btnLuanVan.Image = global::Quan_Li_Luan_Van.Properties.Resources.find;
-            this.btnLuanVan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuanVan.Location = new System.Drawing.Point(0, 456);
-            this.btnLuanVan.Name = "btnLuanVan";
-            this.btnLuanVan.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnLuanVan.Size = new System.Drawing.Size(252, 63);
-            this.btnLuanVan.TabIndex = 7;
-            this.btnLuanVan.Text = " Luận văn của tôi";
-            this.btnLuanVan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLuanVan.UseVisualStyleBackColor = true;
+            this.buttonHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonHome.FlatAppearance.BorderSize = 0;
+            this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHome.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonHome.ForeColor = System.Drawing.Color.White;
+            this.buttonHome.Image = global::Quan_Li_Luan_Van.Properties.Resources.home;
+            this.buttonHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonHome.Location = new System.Drawing.Point(0, 330);
+            this.buttonHome.Name = "buttonHome";
+            this.buttonHome.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.buttonHome.Size = new System.Drawing.Size(252, 63);
+            this.buttonHome.TabIndex = 5;
+            this.buttonHome.Text = "  Trang chủ";
+            this.buttonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonHome.UseVisualStyleBackColor = true;
+            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
             // 
-            // btnDangXuat
+            // pictureBoxUser
             // 
-            this.btnDangXuat.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDangXuat.FlatAppearance.BorderSize = 0;
-            this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDangXuat.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnDangXuat.ForeColor = System.Drawing.Color.White;
-            this.btnDangXuat.Image = global::Quan_Li_Luan_Van.Properties.Resources.dang_xuat;
-            this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangXuat.Location = new System.Drawing.Point(0, 519);
-            this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnDangXuat.Size = new System.Drawing.Size(252, 63);
-            this.btnDangXuat.TabIndex = 8;
-            this.btnDangXuat.Text = "  Đăng xuất";
-            this.btnDangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDangXuat.UseVisualStyleBackColor = true;
+            this.pictureBoxUser.Image = global::Quan_Li_Luan_Van.Properties.Resources.user;
+            this.pictureBoxUser.Location = new System.Drawing.Point(26, 37);
+            this.pictureBoxUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxUser.Name = "pictureBoxUser";
+            this.pictureBoxUser.Size = new System.Drawing.Size(48, 48);
+            this.pictureBoxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxUser.TabIndex = 1;
+            this.pictureBoxUser.TabStop = false;
+            // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
+            this.pictureBoxLogo.Location = new System.Drawing.Point(63, 20);
+            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(122, 115);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLogo.TabIndex = 1;
+            this.pictureBoxLogo.TabStop = false;
             // 
             // FSinhVien
             // 
@@ -300,6 +304,7 @@ namespace Quan_Li_Luan_Van
             this.Controls.Add(this.panelMenu);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FSinhVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FSinhVien";
             this.Load += new System.EventHandler(this.FSinhVien_Load);
             this.panelMenu.ResumeLayout(false);
@@ -307,11 +312,11 @@ namespace Quan_Li_Luan_Van
             this.panelChucNang.PerformLayout();
             this.panelTTSinhVien.ResumeLayout(false);
             this.panelTTSinhVien.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).EndInit();
             this.panelLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.panelTenTruong.ResumeLayout(false);
             this.panelTenTruong.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }

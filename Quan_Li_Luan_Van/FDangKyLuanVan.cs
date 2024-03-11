@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace Quan_Li_Luan_Van
 {
-    public partial class FTraCuu : Form
+    public partial class FDangKyLuanVan : Form
     {
-        public FTraCuu()
+        public FDangKyLuanVan()
         {
             InitializeComponent();
-        }
-
-        private void TraCuu_Load(object sender, EventArgs e)
-        {
-
-
         }
     }
 }

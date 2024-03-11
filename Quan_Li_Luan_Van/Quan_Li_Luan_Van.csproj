@@ -63,11 +63,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FDangKy.cs">
+    <Compile Include="FDangKyLuanVan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FDangNhap.cs">
-      <SubType>Form</SubType>
+    <Compile Include="FDangKyLuanVan.Designer.cs">
+      <DependentUpon>FDangKyLuanVan.cs</DependentUpon>
     </Compile>
     <Compile Include="FGiangVien.cs">
       <SubType>Form</SubType>
@@ -75,14 +75,17 @@
     <Compile Include="FGiangVien.Designer.cs">
       <DependentUpon>FGiangVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="FDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDangNhap.Designer.cs">
+      <DependentUpon>FDangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="FSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FSinhVien.Designer.cs">
       <DependentUpon>FSinhVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FThemLuanVan.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="FThongTinCaNhan.cs">
       <SubType>Form</SubType>
@@ -90,34 +93,40 @@
     <Compile Include="FThongTinCaNhan.Designer.cs">
       <DependentUpon>FThongTinCaNhan.cs</DependentUpon>
     </Compile>
-    <Compile Include="FTraCuu.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FTrangChu.Designer.cs">
+      <DependentUpon>FTrangChu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FDangKy.resx">
-      <DependentUpon>FDangKy.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FDangNhap.resx">
-      <DependentUpon>FDangNhap.cs</DependentUpon>
+    <Compile Include="FTraCuu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTraCuu.Designer.cs">
+      <DependentUpon>FTraCuu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FThemLuanVan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThemLuanVan.Designer.cs">
+      <DependentUpon>FThemLuanVan.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FDangKyLuanVan.resx">
+      <DependentUpon>FDangKyLuanVan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FGiangVien.resx">
       <DependentUpon>FGiangVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FDangNhap.resx">
+      <DependentUpon>FDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FSinhVien.resx">
       <DependentUpon>FSinhVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FThemLuanVan.resx">
-      <DependentUpon>FThemLuanVan.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FThongTinCaNhan.resx">
       <DependentUpon>FThongTinCaNhan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FTraCuu.resx">
-      <DependentUpon>FTraCuu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FTrangChu.resx">
       <DependentUpon>FTrangChu.cs</DependentUpon>
@@ -132,6 +141,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="FTraCuu.resx">
+      <DependentUpon>FTraCuu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThemLuanVan.resx">
+      <DependentUpon>FThemLuanVan.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
