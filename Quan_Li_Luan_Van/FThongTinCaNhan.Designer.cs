@@ -28,14 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.txtID = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtHoTen = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonTextBox3 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonTextBox4 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonTextBox5 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonTextBox6 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.rbntSV = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.kryptonDateTimePicker1 = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
@@ -190,30 +188,6 @@
             this.kryptonTextBox6.TabIndex = 13;
             this.kryptonTextBox6.Text = "nva@gmail.com";
             // 
-            // kryptonPalette1
-            // 
-            this.kryptonPalette1.ButtonStyles.ButtonFormClose.StateCheckedTracking.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonPalette1.ButtonStyles.ButtonFormClose.StateCheckedTracking.Back.Color2 = System.Drawing.Color.White;
-            this.kryptonPalette1.ButtonStyles.ButtonFormClose.StateCheckedTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonPalette1.ButtonStyles.ButtonFormClose.StateCheckedTracking.Border.Width = 0;
-            this.kryptonPalette1.ButtonStyles.ButtonFormClose.StatePressed.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonPalette1.ButtonStyles.ButtonFormClose.StatePressed.Back.Color2 = System.Drawing.Color.White;
-            this.kryptonPalette1.ButtonStyles.ButtonFormClose.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonPalette1.ButtonStyles.ButtonFormClose.StatePressed.Border.Width = 0;
-            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Border.Color2 = System.Drawing.Color.White;
-            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
-            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Border.Rounding = 16;
-            // 
             // rbntSV
             // 
             this.rbntSV.AutoSize = true;
@@ -353,7 +327,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1066, 570);
+            this.ClientSize = new System.Drawing.Size(1028, 570);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.kryptonDateTimePicker1);
             this.Controls.Add(this.radioButton1);
@@ -374,7 +348,7 @@
             this.Controls.Add(this.lbID);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FThongTinCaNhan";
-            this.Text = "Form1";
+            this.Text = "FThongTinCaNhan";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -397,7 +371,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox4;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox5;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox6;
-        private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
         private System.Windows.Forms.RadioButton rbntSV;
         private System.Windows.Forms.RadioButton radioButton1;
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker kryptonDateTimePicker1;

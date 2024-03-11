@@ -214,5 +214,23 @@
   <ItemGroup>
     <None Include="Resources\user_128.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\decribe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\date.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\progress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\major.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
