@@ -28,12 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBoxTraCuuLuanVan = new System.Windows.Forms.GroupBox();
-            this.buttonTimKiem = new System.Windows.Forms.Button();
             this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.labelThongTinMonHoc = new System.Windows.Forms.Label();
             this.comboxLoaiTraCuu = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.labelLoaiTraCuu = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDangKy = new System.Windows.Forms.Button();
             this.panelTitle = new System.Windows.Forms.Panel();
@@ -46,10 +44,17 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
+            //this.qLLUANVANDataSet = new Quan_Li_Luan_Van.QLLUANVANDataSet();
+            //this.qLLUANVANDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buttonTimKiem = new System.Windows.Forms.Button();
+            this.labelThongTinMonHoc = new System.Windows.Forms.Label();
+            this.labelLoaiTraCuu = new System.Windows.Forms.Label();
             this.groupBoxTraCuuLuanVan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboxLoaiTraCuu)).BeginInit();
             this.panelTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVDK)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.qLLUANVANDataSet)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.qLLUANVANDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxTraCuuLuanVan
@@ -67,23 +72,6 @@
             this.groupBoxTraCuuLuanVan.TabIndex = 2;
             this.groupBoxTraCuuLuanVan.TabStop = false;
             this.groupBoxTraCuuLuanVan.Text = "Tra cứu luận văn";
-            // 
-            // buttonTimKiem
-            // 
-            this.buttonTimKiem.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.buttonTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTimKiem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.buttonTimKiem.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.buttonTimKiem.Image = global::Quan_Li_Luan_Van.Properties.Resources.find;
-            this.buttonTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonTimKiem.Location = new System.Drawing.Point(859, 36);
-            this.buttonTimKiem.Name = "buttonTimKiem";
-            this.buttonTimKiem.Size = new System.Drawing.Size(158, 42);
-            this.buttonTimKiem.TabIndex = 15;
-            this.buttonTimKiem.Text = "Tìm kiếm";
-            this.buttonTimKiem.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonTimKiem.UseVisualStyleBackColor = false;
             // 
             // kryptonTextBox1
             // 
@@ -104,17 +92,6 @@
             this.kryptonTextBox1.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.kryptonTextBox1.TabIndex = 14;
             this.kryptonTextBox1.Text = "EN035524";
-            // 
-            // labelThongTinMonHoc
-            // 
-            this.labelThongTinMonHoc.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.labelThongTinMonHoc.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.labelThongTinMonHoc.Image = global::Quan_Li_Luan_Van.Properties.Resources.information;
-            this.labelThongTinMonHoc.Location = new System.Drawing.Point(417, 27);
-            this.labelThongTinMonHoc.Name = "labelThongTinMonHoc";
-            this.labelThongTinMonHoc.Size = new System.Drawing.Size(82, 63);
-            this.labelThongTinMonHoc.TabIndex = 13;
-            this.labelThongTinMonHoc.Text = "  ";
             // 
             // comboxLoaiTraCuu
             // 
@@ -146,17 +123,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.comboxLoaiTraCuu.TabIndex = 12;
             this.comboxLoaiTraCuu.Text = "Chưa nhận";
-            // 
-            // labelLoaiTraCuu
-            // 
-            this.labelLoaiTraCuu.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.labelLoaiTraCuu.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.labelLoaiTraCuu.Image = global::Quan_Li_Luan_Van.Properties.Resources.category;
-            this.labelLoaiTraCuu.Location = new System.Drawing.Point(12, 33);
-            this.labelLoaiTraCuu.Name = "labelLoaiTraCuu";
-            this.labelLoaiTraCuu.Size = new System.Drawing.Size(70, 57);
-            this.labelLoaiTraCuu.TabIndex = 11;
-            this.labelLoaiTraCuu.Text = "  ";
             // 
             // label1
             // 
@@ -194,6 +160,7 @@
             this.GVDK.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.GVDK.AutoGenerateColumns = false;
             this.GVDK.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GVDK.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
@@ -203,9 +170,10 @@
             this.Column4,
             this.Column5,
             this.Column6});
+            //this.GVDK.DataSource = this.qLLUANVANDataSetBindingSource;
             this.GVDK.GridStyles.Style = ComponentFactory.Krypton.Toolkit.DataGridViewStyle.Mixed;
             this.GVDK.GridStyles.StyleBackground = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlCustom1;
-            this.GVDK.Location = new System.Drawing.Point(0, 155);
+            this.GVDK.Location = new System.Drawing.Point(0, 158);
             this.GVDK.Name = "GVDK";
             this.GVDK.RowHeadersWidth = 51;
             this.GVDK.RowTemplate.Height = 24;
@@ -259,7 +227,7 @@
             this.Column5.HeaderText = "Từ ngày";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
-            this.Column5.Width = 95;
+            this.Column5.Width = 88;
             // 
             // Column6
             // 
@@ -267,7 +235,7 @@
             this.Column6.HeaderText = "Đến ngày";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
-            this.Column6.Width = 105;
+            this.Column6.Width = 97;
             // 
             // button1
             // 
@@ -285,6 +253,55 @@
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // qLLUANVANDataSet
+            // 
+            //this.qLLUANVANDataSet.DataSetName = "QLLUANVANDataSet";
+            //this.qLLUANVANDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // qLLUANVANDataSetBindingSource
+            // 
+            //this.qLLUANVANDataSetBindingSource.DataSource = this.qLLUANVANDataSet;
+            //this.qLLUANVANDataSetBindingSource.Position = 0;
+            // 
+            // buttonTimKiem
+            // 
+            this.buttonTimKiem.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.buttonTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTimKiem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonTimKiem.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.buttonTimKiem.Image = global::Quan_Li_Luan_Van.Properties.Resources.find;
+            this.buttonTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonTimKiem.Location = new System.Drawing.Point(859, 36);
+            this.buttonTimKiem.Name = "buttonTimKiem";
+            this.buttonTimKiem.Size = new System.Drawing.Size(158, 42);
+            this.buttonTimKiem.TabIndex = 15;
+            this.buttonTimKiem.Text = "Tìm kiếm";
+            this.buttonTimKiem.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonTimKiem.UseVisualStyleBackColor = false;
+            // 
+            // labelThongTinMonHoc
+            // 
+            this.labelThongTinMonHoc.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.labelThongTinMonHoc.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.labelThongTinMonHoc.Image = global::Quan_Li_Luan_Van.Properties.Resources.information;
+            this.labelThongTinMonHoc.Location = new System.Drawing.Point(417, 27);
+            this.labelThongTinMonHoc.Name = "labelThongTinMonHoc";
+            this.labelThongTinMonHoc.Size = new System.Drawing.Size(82, 63);
+            this.labelThongTinMonHoc.TabIndex = 13;
+            this.labelThongTinMonHoc.Text = "  ";
+            // 
+            // labelLoaiTraCuu
+            // 
+            this.labelLoaiTraCuu.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.labelLoaiTraCuu.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.labelLoaiTraCuu.Image = global::Quan_Li_Luan_Van.Properties.Resources.category;
+            this.labelLoaiTraCuu.Location = new System.Drawing.Point(12, 33);
+            this.labelLoaiTraCuu.Name = "labelLoaiTraCuu";
+            this.labelLoaiTraCuu.Size = new System.Drawing.Size(70, 57);
+            this.labelLoaiTraCuu.TabIndex = 11;
+            this.labelLoaiTraCuu.Text = "  ";
+            // 
             // FDangKyLuanVan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -297,12 +314,15 @@
             this.Controls.Add(this.groupBoxTraCuuLuanVan);
             this.Name = "FDangKyLuanVan";
             this.Text = "DangKyLuanVan";
+            this.Load += new System.EventHandler(this.FDangKyLuanVan_Load);
             this.groupBoxTraCuuLuanVan.ResumeLayout(false);
             this.groupBoxTraCuuLuanVan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboxLoaiTraCuu)).EndInit();
             this.panelTitle.ResumeLayout(false);
             this.panelTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVDK)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.qLLUANVANDataSet)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.qLLUANVANDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -327,5 +347,7 @@
         private System.Windows.Forms.Label labelThongTinMonHoc;
         private System.Windows.Forms.Button buttonTimKiem;
         private System.Windows.Forms.Button button1;
+        //private System.Windows.Forms.BindingSource qLLUANVANDataSetBindingSource;
+        //private QLLUANVANDataSet qLLUANVANDataSet;
     }
 }

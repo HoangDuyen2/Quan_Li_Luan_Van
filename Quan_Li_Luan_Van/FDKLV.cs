@@ -10,16 +10,17 @@ using System.Windows.Forms;
 
 namespace Quan_Li_Luan_Van
 {
-    public partial class FDangKyLuanVan : Form
+    public partial class FDKLV : Form
     {
-        public FDangKyLuanVan()
+        public FDKLV()
         {
             InitializeComponent();
         }
 
-        private void FDangKyLuanVan_Load(object sender, EventArgs e)
+        private void FDKLV_Load(object sender, EventArgs e)
         {
-
+            UCLV uCLV = new UCLV();
+            flPanelDSLV.Controls.Add(uCLV);
         }
     }
 }

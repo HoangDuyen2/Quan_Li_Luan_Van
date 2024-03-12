@@ -73,11 +73,29 @@
     <Compile Include="FBaoCaoTienDo.Designer.cs">
       <DependentUpon>FBaoCaoTienDo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FChiTietLuanVan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FChiTietLuanVan.Designer.cs">
+      <DependentUpon>FChiTietLuanVan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FDangKyLuanVan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FDangKyLuanVan.Designer.cs">
       <DependentUpon>FDangKyLuanVan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDKLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDKLV.Designer.cs">
+      <DependentUpon>FDKLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDuyetLuanVan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDuyetLuanVan.Designer.cs">
+      <DependentUpon>FDuyetLuanVan.cs</DependentUpon>
     </Compile>
     <Compile Include="FGiangVien.cs">
       <SubType>Form</SubType>
@@ -123,11 +141,29 @@
     <Compile Include="FThemLuanVan.Designer.cs">
       <DependentUpon>FThemLuanVan.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCLV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCLV.Designer.cs">
+      <DependentUpon>UCLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCThongBao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCThongBao.Designer.cs">
+      <DependentUpon>UCThongBao.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FBaoCaoTienDo.resx">
       <DependentUpon>FBaoCaoTienDo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FChiTietLuanVan.resx">
+      <DependentUpon>FChiTietLuanVan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FDangKyLuanVan.resx">
       <DependentUpon>FDangKyLuanVan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDKLV.resx">
+      <DependentUpon>FDKLV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FGiangVien.resx">
       <DependentUpon>FGiangVien.cs</DependentUpon>
@@ -159,6 +195,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FThemLuanVan.resx">
       <DependentUpon>FThemLuanVan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCLV.resx">
+      <DependentUpon>UCLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCThongBao.resx">
+      <DependentUpon>UCThongBao.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

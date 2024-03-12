@@ -70,7 +70,7 @@ namespace Quan_Li_Luan_Van
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FDangKyLuanVan(), sender);
+            OpenChildForm(new FDKLV(), sender);
         }
 
         private void btnLuanVan_Click(object sender, EventArgs e)

@@ -144,7 +144,7 @@
             this.labelTenTruong.AutoSize = true;
             this.labelTenTruong.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTenTruong.ForeColor = System.Drawing.Color.Snow;
-            this.labelTenTruong.Location = new System.Drawing.Point(28, 24);
+            this.labelTenTruong.Location = new System.Drawing.Point(34, 24);
             this.labelTenTruong.Name = "labelTenTruong";
             this.labelTenTruong.Size = new System.Drawing.Size(655, 38);
             this.labelTenTruong.TabIndex = 3;
@@ -179,7 +179,7 @@
             this.panelDesktopPane.Location = new System.Drawing.Point(256, 87);
             this.panelDesktopPane.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelDesktopPane.Name = "panelDesktopPane";
-            this.panelDesktopPane.Size = new System.Drawing.Size(1253, 706);
+            this.panelDesktopPane.Size = new System.Drawing.Size(1068, 706);
             this.panelDesktopPane.TabIndex = 5;
             // 
             // panelTenTruong
@@ -190,7 +190,7 @@
             this.panelTenTruong.Location = new System.Drawing.Point(256, 0);
             this.panelTenTruong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelTenTruong.Name = "panelTenTruong";
-            this.panelTenTruong.Size = new System.Drawing.Size(1253, 87);
+            this.panelTenTruong.Size = new System.Drawing.Size(1068, 87);
             this.panelTenTruong.TabIndex = 4;
             // 
             // panelMenu
@@ -245,7 +245,7 @@
             this.btnLuanVan.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.btnLuanVan.Size = new System.Drawing.Size(252, 63);
             this.btnLuanVan.TabIndex = 7;
-            this.btnLuanVan.Text = "  Tra cứu";
+            this.btnLuanVan.Text = "  Duyệt luận văn";
             this.btnLuanVan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLuanVan.UseVisualStyleBackColor = true;
             this.btnLuanVan.Click += new System.EventHandler(this.btnLuanVan_Click);
@@ -264,7 +264,7 @@
             this.btnDangKy.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.btnDangKy.Size = new System.Drawing.Size(252, 63);
             this.btnDangKy.TabIndex = 6;
-            this.btnDangKy.Text = "  Thêm luận văn";
+            this.btnDangKy.Text = "  DS luận văn";
             this.btnDangKy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDangKy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDangKy.UseVisualStyleBackColor = true;
@@ -294,7 +294,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1509, 793);
+            this.ClientSize = new System.Drawing.Size(1324, 793);
             this.Controls.Add(this.panelDesktopPane);
             this.Controls.Add(this.panelTenTruong);
             this.Controls.Add(this.panelMenu);

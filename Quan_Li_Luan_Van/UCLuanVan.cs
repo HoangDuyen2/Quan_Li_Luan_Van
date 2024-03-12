@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace Quan_Li_Luan_Van
 {
-    public partial class FDangKyLuanVan : Form
+    public partial class UCLuanVan : UserControl
     {
-        public FDangKyLuanVan()
+        public UCLuanVan()
         {
             InitializeComponent();
         }
 
-        private void FDangKyLuanVan_Load(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
