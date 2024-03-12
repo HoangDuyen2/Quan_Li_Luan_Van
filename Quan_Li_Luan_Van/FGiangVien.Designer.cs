@@ -143,7 +143,7 @@
             this.labelTenTruong.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTenTruong.AutoSize = true;
             this.labelTenTruong.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTenTruong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(182)))), ((int)(((byte)(187)))));
+            this.labelTenTruong.ForeColor = System.Drawing.Color.Snow;
             this.labelTenTruong.Location = new System.Drawing.Point(28, 24);
             this.labelTenTruong.Name = "labelTenTruong";
             this.labelTenTruong.Size = new System.Drawing.Size(655, 38);

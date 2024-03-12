@@ -67,6 +67,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FBaoCaoTienDo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FBaoCaoTienDo.Designer.cs">
+      <DependentUpon>FBaoCaoTienDo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FDangKyLuanVan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     <Compile Include="FThemLuanVan.Designer.cs">
       <DependentUpon>FThemLuanVan.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FBaoCaoTienDo.resx">
+      <DependentUpon>FBaoCaoTienDo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FDangKyLuanVan.resx">
       <DependentUpon>FDangKyLuanVan.cs</DependentUpon>
     </EmbeddedResource>
