@@ -40,16 +40,17 @@
             this.lbNgayBD = new System.Windows.Forms.Label();
             this.lbMoTaChiTiet = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.checkListBoxChuyenNganh = new ComponentFactory.Krypton.Toolkit.KryptonCheckedListBox();
+            this.comboxLoaiChuyenNganh = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.dtGioKT = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.dtGioBD = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.lbGioKT = new System.Windows.Forms.Label();
             this.dtNgayKT = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.dtNgayBD = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.lbTenLuanVan = new System.Windows.Forms.Label();
             this.lbMaLuanVan = new System.Windows.Forms.Label();
             this.labelTieuDe = new System.Windows.Forms.Label();
-            this.lbGioKT = new System.Windows.Forms.Label();
-            this.dtGioBD = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
-            this.dtGioKT = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
-            this.comboxLoaiChuyenNganh = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.checkListBoxChuyenNganh = new ComponentFactory.Krypton.Toolkit.KryptonCheckedListBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboxLoaiChuyenNganh)).BeginInit();
             this.SuspendLayout();
@@ -59,7 +60,7 @@
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdd.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.buttonAdd.ForeColor = System.Drawing.Color.Black;
-            this.buttonAdd.Location = new System.Drawing.Point(364, 556);
+            this.buttonAdd.Location = new System.Drawing.Point(518, 594);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(105, 39);
             this.buttonAdd.TabIndex = 9;
@@ -70,7 +71,7 @@
             // 
             this.lbTienDo.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTienDo.Image = global::Quan_Li_Luan_Van.Properties.Resources.progress;
-            this.lbTienDo.Location = new System.Drawing.Point(395, 289);
+            this.lbTienDo.Location = new System.Drawing.Point(543, 316);
             this.lbTienDo.Name = "lbTienDo";
             this.lbTienDo.Size = new System.Drawing.Size(80, 60);
             this.lbTienDo.TabIndex = 32;
@@ -82,11 +83,11 @@
             this.lbGioBD.ForeColor = System.Drawing.Color.Blue;
             this.lbGioBD.Image = global::Quan_Li_Luan_Van.Properties.Resources.start;
             this.lbGioBD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbGioBD.Location = new System.Drawing.Point(409, 149);
+            this.lbGioBD.Location = new System.Drawing.Point(557, 176);
             this.lbGioBD.Name = "lbGioBD";
-            this.lbGioBD.Size = new System.Drawing.Size(132, 66);
+            this.lbGioBD.Size = new System.Drawing.Size(162, 66);
             this.lbGioBD.TabIndex = 30;
-            this.lbGioBD.Text = "start";
+            this.lbGioBD.Text = "    start";
             this.lbGioBD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbNgayKT
@@ -95,16 +96,16 @@
             this.lbNgayKT.ForeColor = System.Drawing.Color.Blue;
             this.lbNgayKT.Image = global::Quan_Li_Luan_Van.Properties.Resources.date;
             this.lbNgayKT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbNgayKT.Location = new System.Drawing.Point(21, 219);
+            this.lbNgayKT.Location = new System.Drawing.Point(116, 246);
             this.lbNgayKT.Name = "lbNgayKT";
-            this.lbNgayKT.Size = new System.Drawing.Size(107, 78);
+            this.lbNgayKT.Size = new System.Drawing.Size(149, 78);
             this.lbNgayKT.TabIndex = 29;
-            this.lbNgayKT.Text = "end";
+            this.lbNgayKT.Text = " end";
             this.lbNgayKT.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // kryptonTextBox7
             // 
-            this.kryptonTextBox7.Location = new System.Drawing.Point(94, 95);
+            this.kryptonTextBox7.Location = new System.Drawing.Point(201, 122);
             this.kryptonTextBox7.Name = "kryptonTextBox7";
             this.kryptonTextBox7.Size = new System.Drawing.Size(722, 36);
             this.kryptonTextBox7.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -124,9 +125,9 @@
             // 
             // txtTenLuanVan
             // 
-            this.txtTenLuanVan.Location = new System.Drawing.Point(480, 22);
+            this.txtTenLuanVan.Location = new System.Drawing.Point(629, 49);
             this.txtTenLuanVan.Name = "txtTenLuanVan";
-            this.txtTenLuanVan.Size = new System.Drawing.Size(336, 36);
+            this.txtTenLuanVan.Size = new System.Drawing.Size(361, 36);
             this.txtTenLuanVan.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtTenLuanVan.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.txtTenLuanVan.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -152,7 +153,7 @@
             // 
             // txtMaLuanVan
             // 
-            this.txtMaLuanVan.Location = new System.Drawing.Point(94, 22);
+            this.txtMaLuanVan.Location = new System.Drawing.Point(201, 49);
             this.txtMaLuanVan.Name = "txtMaLuanVan";
             this.txtMaLuanVan.Size = new System.Drawing.Size(298, 36);
             this.txtMaLuanVan.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -174,7 +175,7 @@
             // 
             this.lbTrangThai.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTrangThai.Image = global::Quan_Li_Luan_Van.Properties.Resources.status;
-            this.lbTrangThai.Location = new System.Drawing.Point(12, 289);
+            this.lbTrangThai.Location = new System.Drawing.Point(119, 316);
             this.lbTrangThai.Name = "lbTrangThai";
             this.lbTrangThai.Size = new System.Drawing.Size(69, 78);
             this.lbTrangThai.TabIndex = 19;
@@ -184,7 +185,7 @@
             // 
             this.lbChuyenNganh.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbChuyenNganh.Image = global::Quan_Li_Luan_Van.Properties.Resources.major;
-            this.lbChuyenNganh.Location = new System.Drawing.Point(16, 359);
+            this.lbChuyenNganh.Location = new System.Drawing.Point(136, 394);
             this.lbChuyenNganh.Name = "lbChuyenNganh";
             this.lbChuyenNganh.Size = new System.Drawing.Size(74, 60);
             this.lbChuyenNganh.TabIndex = 18;
@@ -196,18 +197,18 @@
             this.lbNgayBD.ForeColor = System.Drawing.Color.Blue;
             this.lbNgayBD.Image = global::Quan_Li_Luan_Van.Properties.Resources.date;
             this.lbNgayBD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbNgayBD.Location = new System.Drawing.Point(21, 149);
+            this.lbNgayBD.Location = new System.Drawing.Point(116, 176);
             this.lbNgayBD.Name = "lbNgayBD";
-            this.lbNgayBD.Size = new System.Drawing.Size(136, 61);
+            this.lbNgayBD.Size = new System.Drawing.Size(149, 61);
             this.lbNgayBD.TabIndex = 17;
-            this.lbNgayBD.Text = "start";
+            this.lbNgayBD.Text = "    start";
             this.lbNgayBD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbMoTaChiTiet
             // 
             this.lbMoTaChiTiet.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMoTaChiTiet.Image = global::Quan_Li_Luan_Van.Properties.Resources.decribe;
-            this.lbMoTaChiTiet.Location = new System.Drawing.Point(1, 79);
+            this.lbMoTaChiTiet.Location = new System.Drawing.Point(116, 116);
             this.lbMoTaChiTiet.Name = "lbMoTaChiTiet";
             this.lbMoTaChiTiet.Size = new System.Drawing.Size(89, 60);
             this.lbMoTaChiTiet.TabIndex = 16;
@@ -235,131 +236,45 @@
             this.panel2.Controls.Add(this.lbMoTaChiTiet);
             this.panel2.Controls.Add(this.lbTenLuanVan);
             this.panel2.Controls.Add(this.lbMaLuanVan);
-            this.panel2.Location = new System.Drawing.Point(-9, 0);
+            this.panel2.Location = new System.Drawing.Point(-9, 57);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(837, 608);
+            this.panel2.Size = new System.Drawing.Size(1050, 642);
             this.panel2.TabIndex = 5;
             // 
-            // dtNgayKT
+            // checkListBoxChuyenNganh
             // 
-            this.dtNgayKT.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtNgayKT.Location = new System.Drawing.Point(163, 238);
-            this.dtNgayKT.Name = "dtNgayKT";
-            this.dtNgayKT.Size = new System.Drawing.Size(229, 39);
-            this.dtNgayKT.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
-            this.dtNgayKT.StateCommon.Border.Color2 = System.Drawing.Color.Blue;
-            this.dtNgayKT.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.checkListBoxChuyenNganh.Items.AddRange(new object[] {
+            "Hệ thống thông tin",
+            "Trí tuệ nhân tạo",
+            "Công nghệ thông tin"});
+            this.checkListBoxChuyenNganh.ItemStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorOverflow;
+            this.checkListBoxChuyenNganh.Location = new System.Drawing.Point(214, 394);
+            this.checkListBoxChuyenNganh.Name = "checkListBoxChuyenNganh";
+            this.checkListBoxChuyenNganh.Size = new System.Drawing.Size(722, 191);
+            this.checkListBoxChuyenNganh.StateCheckedNormal.Item.Content.LongText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkListBoxChuyenNganh.StateCheckedNormal.Item.Content.ShortText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkListBoxChuyenNganh.StateCheckedPressed.Item.Content.LongText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkListBoxChuyenNganh.StateCheckedPressed.Item.Content.ShortText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkListBoxChuyenNganh.StateCheckedTracking.Item.Content.LongText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkListBoxChuyenNganh.StateCheckedTracking.Item.Content.ShortText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkListBoxChuyenNganh.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
+            this.checkListBoxChuyenNganh.StateCommon.Border.Color2 = System.Drawing.Color.Blue;
+            this.checkListBoxChuyenNganh.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.dtNgayKT.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.dtNgayKT.StateCommon.Border.Rounding = 16;
-            this.dtNgayKT.StateCommon.Border.Width = 1;
-            this.dtNgayKT.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.dtNgayKT.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtNgayKT.TabIndex = 35;
-            this.dtNgayKT.ValueNullable = new System.DateTime(2024, 3, 10, 0, 0, 0, 0);
-            // 
-            // dtNgayBD
-            // 
-            this.dtNgayBD.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtNgayBD.Location = new System.Drawing.Point(163, 161);
-            this.dtNgayBD.Name = "dtNgayBD";
-            this.dtNgayBD.Size = new System.Drawing.Size(229, 39);
-            this.dtNgayBD.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
-            this.dtNgayBD.StateCommon.Border.Color2 = System.Drawing.Color.Blue;
-            this.dtNgayBD.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.dtNgayBD.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.dtNgayBD.StateCommon.Border.Rounding = 16;
-            this.dtNgayBD.StateCommon.Border.Width = 1;
-            this.dtNgayBD.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.dtNgayBD.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtNgayBD.TabIndex = 34;
-            this.dtNgayBD.ValueNullable = new System.DateTime(2024, 3, 10, 0, 0, 0, 0);
-            // 
-            // lbTenLuanVan
-            // 
-            this.lbTenLuanVan.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenLuanVan.Image = global::Quan_Li_Luan_Van.Properties.Resources.card1;
-            this.lbTenLuanVan.Location = new System.Drawing.Point(386, 16);
-            this.lbTenLuanVan.Name = "lbTenLuanVan";
-            this.lbTenLuanVan.Size = new System.Drawing.Size(89, 49);
-            this.lbTenLuanVan.TabIndex = 15;
-            this.lbTenLuanVan.Text = "  ";
-            // 
-            // lbMaLuanVan
-            // 
-            this.lbMaLuanVan.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMaLuanVan.Image = global::Quan_Li_Luan_Van.Properties.Resources.id2;
-            this.lbMaLuanVan.Location = new System.Drawing.Point(12, 9);
-            this.lbMaLuanVan.Name = "lbMaLuanVan";
-            this.lbMaLuanVan.Size = new System.Drawing.Size(72, 60);
-            this.lbMaLuanVan.TabIndex = 14;
-            this.lbMaLuanVan.Text = "  ";
-            // 
-            // labelTieuDe
-            // 
-            this.labelTieuDe.AutoSize = true;
-            this.labelTieuDe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
-            this.labelTieuDe.Font = new System.Drawing.Font("Book Antiqua", 18F, System.Drawing.FontStyle.Bold);
-            this.labelTieuDe.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelTieuDe.Location = new System.Drawing.Point(-9, -38);
-            this.labelTieuDe.Name = "labelTieuDe";
-            this.labelTieuDe.Size = new System.Drawing.Size(281, 35);
-            this.labelTieuDe.TabIndex = 3;
-            this.labelTieuDe.Text = "THÊM LUẬN VĂN";
-            // 
-            // lbGioKT
-            // 
-            this.lbGioKT.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGioKT.ForeColor = System.Drawing.Color.Blue;
-            this.lbGioKT.Image = global::Quan_Li_Luan_Van.Properties.Resources.start;
-            this.lbGioKT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbGioKT.Location = new System.Drawing.Point(409, 219);
-            this.lbGioKT.Name = "lbGioKT";
-            this.lbGioKT.Size = new System.Drawing.Size(110, 66);
-            this.lbGioKT.TabIndex = 36;
-            this.lbGioKT.Text = "end";
-            this.lbGioKT.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // dtGioBD
-            // 
-            this.dtGioBD.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtGioBD.Location = new System.Drawing.Point(551, 161);
-            this.dtGioBD.Name = "dtGioBD";
-            this.dtGioBD.Size = new System.Drawing.Size(265, 39);
-            this.dtGioBD.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
-            this.dtGioBD.StateCommon.Border.Color2 = System.Drawing.Color.Blue;
-            this.dtGioBD.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.dtGioBD.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.dtGioBD.StateCommon.Border.Rounding = 16;
-            this.dtGioBD.StateCommon.Border.Width = 1;
-            this.dtGioBD.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.dtGioBD.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtGioBD.TabIndex = 37;
-            this.dtGioBD.ValueNullable = new System.DateTime(2024, 3, 10, 0, 0, 0, 0);
-            // 
-            // dtGioKT
-            // 
-            this.dtGioKT.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtGioKT.Location = new System.Drawing.Point(551, 238);
-            this.dtGioKT.Name = "dtGioKT";
-            this.dtGioKT.Size = new System.Drawing.Size(265, 39);
-            this.dtGioKT.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
-            this.dtGioKT.StateCommon.Border.Color2 = System.Drawing.Color.Blue;
-            this.dtGioKT.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.dtGioKT.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.dtGioKT.StateCommon.Border.Rounding = 16;
-            this.dtGioKT.StateCommon.Border.Width = 1;
-            this.dtGioKT.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.dtGioKT.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtGioKT.TabIndex = 38;
-            this.dtGioKT.ValueNullable = new System.DateTime(2024, 3, 10, 0, 0, 0, 0);
+            this.checkListBoxChuyenNganh.StateCommon.Border.Rounding = 25;
+            this.checkListBoxChuyenNganh.StateCommon.Border.Width = 1;
+            this.checkListBoxChuyenNganh.StateCommon.Item.Content.LongText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkListBoxChuyenNganh.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkListBoxChuyenNganh.StateDisabled.Item.Content.LongText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkListBoxChuyenNganh.StateDisabled.Item.Content.ShortText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkListBoxChuyenNganh.StateNormal.Item.Content.LongText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkListBoxChuyenNganh.StateNormal.Item.Content.ShortText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkListBoxChuyenNganh.StatePressed.Item.Content.LongText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkListBoxChuyenNganh.StatePressed.Item.Content.ShortText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkListBoxChuyenNganh.StateTracking.Item.Content.LongText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkListBoxChuyenNganh.StateTracking.Item.Content.ShortText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkListBoxChuyenNganh.TabIndex = 40;
             // 
             // comboxLoaiChuyenNganh
             // 
@@ -368,7 +283,7 @@
             "Chưa nhận",
             "Đang tiến hành",
             "Đã hoàn thành"});
-            this.comboxLoaiChuyenNganh.Location = new System.Drawing.Point(94, 300);
+            this.comboxLoaiChuyenNganh.Location = new System.Drawing.Point(201, 327);
             this.comboxLoaiChuyenNganh.Name = "comboxLoaiChuyenNganh";
             this.comboxLoaiChuyenNganh.Size = new System.Drawing.Size(295, 39);
             this.comboxLoaiChuyenNganh.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
@@ -401,46 +316,145 @@
             this.comboxLoaiChuyenNganh.TabIndex = 39;
             this.comboxLoaiChuyenNganh.Text = "Chưa nhận";
             // 
-            // checkListBoxChuyenNganh
+            // dtGioKT
             // 
-            this.checkListBoxChuyenNganh.Items.AddRange(new object[] {
-            "Hệ thống thông tin",
-            "Trí tuệ nhân tạo",
-            "Công nghệ thông tin"});
-            this.checkListBoxChuyenNganh.ItemStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorOverflow;
-            this.checkListBoxChuyenNganh.Location = new System.Drawing.Point(94, 359);
-            this.checkListBoxChuyenNganh.Name = "checkListBoxChuyenNganh";
-            this.checkListBoxChuyenNganh.Size = new System.Drawing.Size(722, 191);
-            this.checkListBoxChuyenNganh.StateCheckedNormal.Item.Content.LongText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkListBoxChuyenNganh.StateCheckedNormal.Item.Content.ShortText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkListBoxChuyenNganh.StateCheckedPressed.Item.Content.LongText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkListBoxChuyenNganh.StateCheckedPressed.Item.Content.ShortText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkListBoxChuyenNganh.StateCheckedTracking.Item.Content.LongText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkListBoxChuyenNganh.StateCheckedTracking.Item.Content.ShortText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkListBoxChuyenNganh.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
-            this.checkListBoxChuyenNganh.StateCommon.Border.Color2 = System.Drawing.Color.Blue;
-            this.checkListBoxChuyenNganh.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.dtGioKT.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtGioKT.Location = new System.Drawing.Point(725, 265);
+            this.dtGioKT.Name = "dtGioKT";
+            this.dtGioKT.Size = new System.Drawing.Size(265, 39);
+            this.dtGioKT.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
+            this.dtGioKT.StateCommon.Border.Color2 = System.Drawing.Color.Blue;
+            this.dtGioKT.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.checkListBoxChuyenNganh.StateCommon.Border.Rounding = 25;
-            this.checkListBoxChuyenNganh.StateCommon.Border.Width = 1;
-            this.checkListBoxChuyenNganh.StateCommon.Item.Content.LongText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkListBoxChuyenNganh.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkListBoxChuyenNganh.StateDisabled.Item.Content.LongText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkListBoxChuyenNganh.StateDisabled.Item.Content.ShortText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkListBoxChuyenNganh.StateNormal.Item.Content.LongText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkListBoxChuyenNganh.StateNormal.Item.Content.ShortText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkListBoxChuyenNganh.StatePressed.Item.Content.LongText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkListBoxChuyenNganh.StatePressed.Item.Content.ShortText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkListBoxChuyenNganh.StateTracking.Item.Content.LongText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkListBoxChuyenNganh.StateTracking.Item.Content.ShortText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkListBoxChuyenNganh.TabIndex = 40;
+            this.dtGioKT.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.dtGioKT.StateCommon.Border.Rounding = 16;
+            this.dtGioKT.StateCommon.Border.Width = 1;
+            this.dtGioKT.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.dtGioKT.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtGioKT.TabIndex = 38;
+            this.dtGioKT.ValueNullable = new System.DateTime(2024, 3, 10, 0, 0, 0, 0);
+            // 
+            // dtGioBD
+            // 
+            this.dtGioBD.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtGioBD.Location = new System.Drawing.Point(725, 188);
+            this.dtGioBD.Name = "dtGioBD";
+            this.dtGioBD.Size = new System.Drawing.Size(265, 39);
+            this.dtGioBD.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
+            this.dtGioBD.StateCommon.Border.Color2 = System.Drawing.Color.Blue;
+            this.dtGioBD.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.dtGioBD.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.dtGioBD.StateCommon.Border.Rounding = 16;
+            this.dtGioBD.StateCommon.Border.Width = 1;
+            this.dtGioBD.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.dtGioBD.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtGioBD.TabIndex = 37;
+            this.dtGioBD.ValueNullable = new System.DateTime(2024, 3, 10, 0, 0, 0, 0);
+            // 
+            // lbGioKT
+            // 
+            this.lbGioKT.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGioKT.ForeColor = System.Drawing.Color.Blue;
+            this.lbGioKT.Image = global::Quan_Li_Luan_Van.Properties.Resources.start;
+            this.lbGioKT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbGioKT.Location = new System.Drawing.Point(557, 246);
+            this.lbGioKT.Name = "lbGioKT";
+            this.lbGioKT.Size = new System.Drawing.Size(132, 66);
+            this.lbGioKT.TabIndex = 36;
+            this.lbGioKT.Text = "     end";
+            this.lbGioKT.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // dtNgayKT
+            // 
+            this.dtNgayKT.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtNgayKT.Location = new System.Drawing.Point(270, 265);
+            this.dtNgayKT.Name = "dtNgayKT";
+            this.dtNgayKT.Size = new System.Drawing.Size(229, 39);
+            this.dtNgayKT.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
+            this.dtNgayKT.StateCommon.Border.Color2 = System.Drawing.Color.Blue;
+            this.dtNgayKT.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.dtNgayKT.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.dtNgayKT.StateCommon.Border.Rounding = 16;
+            this.dtNgayKT.StateCommon.Border.Width = 1;
+            this.dtNgayKT.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.dtNgayKT.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtNgayKT.TabIndex = 35;
+            this.dtNgayKT.ValueNullable = new System.DateTime(2024, 3, 10, 0, 0, 0, 0);
+            // 
+            // dtNgayBD
+            // 
+            this.dtNgayBD.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtNgayBD.Location = new System.Drawing.Point(270, 188);
+            this.dtNgayBD.Name = "dtNgayBD";
+            this.dtNgayBD.Size = new System.Drawing.Size(229, 39);
+            this.dtNgayBD.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
+            this.dtNgayBD.StateCommon.Border.Color2 = System.Drawing.Color.Blue;
+            this.dtNgayBD.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.dtNgayBD.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.dtNgayBD.StateCommon.Border.Rounding = 16;
+            this.dtNgayBD.StateCommon.Border.Width = 1;
+            this.dtNgayBD.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.dtNgayBD.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtNgayBD.TabIndex = 34;
+            this.dtNgayBD.ValueNullable = new System.DateTime(2024, 3, 10, 0, 0, 0, 0);
+            // 
+            // lbTenLuanVan
+            // 
+            this.lbTenLuanVan.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenLuanVan.Image = global::Quan_Li_Luan_Van.Properties.Resources.card1;
+            this.lbTenLuanVan.Location = new System.Drawing.Point(534, 43);
+            this.lbTenLuanVan.Name = "lbTenLuanVan";
+            this.lbTenLuanVan.Size = new System.Drawing.Size(89, 49);
+            this.lbTenLuanVan.TabIndex = 15;
+            this.lbTenLuanVan.Text = "  ";
+            // 
+            // lbMaLuanVan
+            // 
+            this.lbMaLuanVan.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaLuanVan.Image = global::Quan_Li_Luan_Van.Properties.Resources.id2;
+            this.lbMaLuanVan.Location = new System.Drawing.Point(116, 43);
+            this.lbMaLuanVan.Name = "lbMaLuanVan";
+            this.lbMaLuanVan.Size = new System.Drawing.Size(72, 60);
+            this.lbMaLuanVan.TabIndex = 14;
+            this.lbMaLuanVan.Text = "  ";
+            // 
+            // labelTieuDe
+            // 
+            this.labelTieuDe.AutoSize = true;
+            this.labelTieuDe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
+            this.labelTieuDe.Font = new System.Drawing.Font("Book Antiqua", 18F, System.Drawing.FontStyle.Bold);
+            this.labelTieuDe.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.labelTieuDe.Location = new System.Drawing.Point(-9, -38);
+            this.labelTieuDe.Name = "labelTieuDe";
+            this.labelTieuDe.Size = new System.Drawing.Size(281, 35);
+            this.labelTieuDe.TabIndex = 3;
+            this.labelTieuDe.Text = "THÊM LUẬN VĂN";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
+            this.label1.Font = new System.Drawing.Font("Book Antiqua", 18F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label1.Location = new System.Drawing.Point(2, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(281, 35);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "THÊM LUẬN VĂN";
             // 
             // FThemLuanVan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 609);
+            this.ClientSize = new System.Drawing.Size(1041, 702);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.labelTieuDe);
             this.Name = "FThemLuanVan";
@@ -479,5 +493,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dtGioBD;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox comboxLoaiChuyenNganh;
         private ComponentFactory.Krypton.Toolkit.KryptonCheckedListBox checkListBoxChuyenNganh;
+        private System.Windows.Forms.Label label1;
     }
 }

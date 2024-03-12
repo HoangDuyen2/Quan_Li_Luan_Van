@@ -36,11 +36,9 @@
             this.labelLoaiTraCuu = new System.Windows.Forms.Label();
             this.labelThongTinMonHoc = new System.Windows.Forms.Label();
             this.labelTieuDe = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridViewTraCuu)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboxLoaiTraCuu)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonDataGridViewTraCuu
@@ -162,28 +160,19 @@
             this.labelTieuDe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
             this.labelTieuDe.Font = new System.Drawing.Font("Book Antiqua", 18F, System.Drawing.FontStyle.Bold);
             this.labelTieuDe.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelTieuDe.Location = new System.Drawing.Point(27, 10);
+            this.labelTieuDe.Location = new System.Drawing.Point(11, 9);
             this.labelTieuDe.Name = "labelTieuDe";
             this.labelTieuDe.Size = new System.Drawing.Size(154, 35);
-            this.labelTieuDe.TabIndex = 4;
+            this.labelTieuDe.TabIndex = 12;
             this.labelTieuDe.Text = "TRA CỨU";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
-            this.panel1.Controls.Add(this.labelTieuDe);
-            this.panel1.Location = new System.Drawing.Point(-1, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(240, 53);
-            this.panel1.TabIndex = 6;
             // 
             // FTraCuu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(967, 557);
+            this.Controls.Add(this.labelTieuDe);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Name = "FTraCuu";
             this.Text = "TraCuu";
             this.Load += new System.EventHandler(this.TraCuu_Load);
@@ -191,9 +180,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboxLoaiTraCuu)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -205,8 +193,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonThongTinMonHoc;
         private System.Windows.Forms.Label labelLoaiTraCuu;
         private System.Windows.Forms.Label labelThongTinMonHoc;
-        private System.Windows.Forms.Label labelTieuDe;
-        private System.Windows.Forms.Panel panel1;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox comboxLoaiTraCuu;
+        private System.Windows.Forms.Label labelTieuDe;
     }
 }

@@ -275,11 +275,11 @@ namespace Quan_Li_Luan_Van
             // 
             this.labelTenTruong.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTenTruong.AutoSize = true;
-            this.labelTenTruong.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTenTruong.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold);
             this.labelTenTruong.ForeColor = System.Drawing.Color.Snow;
-            this.labelTenTruong.Location = new System.Drawing.Point(59, 24);
+            this.labelTenTruong.Location = new System.Drawing.Point(29, 24);
             this.labelTenTruong.Name = "labelTenTruong";
-            this.labelTenTruong.Size = new System.Drawing.Size(704, 41);
+            this.labelTenTruong.Size = new System.Drawing.Size(655, 38);
             this.labelTenTruong.TabIndex = 3;
             this.labelTenTruong.Text = "TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT TP.HCM";
             this.labelTenTruong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

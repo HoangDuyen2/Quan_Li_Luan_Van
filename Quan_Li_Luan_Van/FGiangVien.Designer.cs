@@ -149,7 +149,7 @@
             this.labelTenTruong.Size = new System.Drawing.Size(655, 38);
             this.labelTenTruong.TabIndex = 3;
             this.labelTenTruong.Text = "TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT TP.HCM";
-            this.labelTenTruong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelTenTruong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panelLogo
             // 
@@ -179,7 +179,7 @@
             this.panelDesktopPane.Location = new System.Drawing.Point(256, 87);
             this.panelDesktopPane.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelDesktopPane.Name = "panelDesktopPane";
-            this.panelDesktopPane.Size = new System.Drawing.Size(959, 568);
+            this.panelDesktopPane.Size = new System.Drawing.Size(1253, 706);
             this.panelDesktopPane.TabIndex = 5;
             // 
             // panelTenTruong
@@ -190,7 +190,7 @@
             this.panelTenTruong.Location = new System.Drawing.Point(256, 0);
             this.panelTenTruong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelTenTruong.Name = "panelTenTruong";
-            this.panelTenTruong.Size = new System.Drawing.Size(959, 87);
+            this.panelTenTruong.Size = new System.Drawing.Size(1253, 87);
             this.panelTenTruong.TabIndex = 4;
             // 
             // panelMenu
@@ -208,7 +208,7 @@
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(256, 655);
+            this.panelMenu.Size = new System.Drawing.Size(256, 793);
             this.panelMenu.TabIndex = 3;
             // 
             // btnDangXuat
@@ -229,6 +229,7 @@
             this.btnDangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDangXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDangXuat.UseVisualStyleBackColor = true;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
             // btnLuanVan
             // 
@@ -247,6 +248,7 @@
             this.btnLuanVan.Text = "  Tra cứu";
             this.btnLuanVan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLuanVan.UseVisualStyleBackColor = true;
+            this.btnLuanVan.Click += new System.EventHandler(this.btnLuanVan_Click);
             // 
             // btnDangKy
             // 
@@ -266,6 +268,7 @@
             this.btnDangKy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDangKy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDangKy.UseVisualStyleBackColor = true;
+            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 
             // buttonHome
             // 
@@ -285,12 +288,13 @@
             this.buttonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonHome.UseVisualStyleBackColor = true;
+            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
             // 
             // FGiangVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1215, 655);
+            this.ClientSize = new System.Drawing.Size(1509, 793);
             this.Controls.Add(this.panelDesktopPane);
             this.Controls.Add(this.panelTenTruong);
             this.Controls.Add(this.panelMenu);

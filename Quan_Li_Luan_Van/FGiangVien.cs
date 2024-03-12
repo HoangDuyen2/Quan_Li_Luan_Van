@@ -21,5 +21,43 @@ namespace Quan_Li_Luan_Van
         {
 
         }
+
+        private Form activeForm;
+        private void OpenChildForm(Form childForm, object btnSender)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            //ActivateButton(btnSender);
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.panelDesktopPane.Controls.Add(childForm);
+            this.panelDesktopPane.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+        private void buttonHome_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FTrangChu(), sender);
+        }
+
+        private void btnDangKy_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FThemLuanVan(), sender);
+        }
+
+        private void btnLuanVan_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FTraCuu(), sender);
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FDangNhap fLogin = new FDangNhap();
+            fLogin.ShowDialog();
+            this.Close();
+        }
     }
 }
