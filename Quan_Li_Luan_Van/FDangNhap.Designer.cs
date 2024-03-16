@@ -33,16 +33,16 @@
             this.panelDangNhap = new System.Windows.Forms.Panel();
             this.txtMatKhau = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btnDangNhap = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbMK = new System.Windows.Forms.Label();
             this.lblTenDangNhap = new System.Windows.Forms.Label();
             this.txtTK = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.rbtnGV = new System.Windows.Forms.RadioButton();
             this.rbtnSV = new System.Windows.Forms.RadioButton();
             this.lblText = new System.Windows.Forms.Label();
             this.panelAnh = new System.Windows.Forms.Panel();
+            this.pictureBoxUTE = new System.Windows.Forms.PictureBox();
             this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.pictureBoxUTE = new System.Windows.Forms.PictureBox();
             this.panelDangNhap.SuspendLayout();
             this.panelAnh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUTE)).BeginInit();
@@ -53,7 +53,7 @@
             this.panelDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(221)))));
             this.panelDangNhap.Controls.Add(this.txtMatKhau);
             this.panelDangNhap.Controls.Add(this.btnDangNhap);
-            this.panelDangNhap.Controls.Add(this.label1);
+            this.panelDangNhap.Controls.Add(this.lbMK);
             this.panelDangNhap.Controls.Add(this.lblTenDangNhap);
             this.panelDangNhap.Controls.Add(this.txtTK);
             this.panelDangNhap.Controls.Add(this.rbtnGV);
@@ -94,16 +94,16 @@
             this.btnDangNhap.Values.Text = "Đăng Nhập";
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
-            // label1
+            // lbMK
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(43)))), ((int)(((byte)(77)))));
-            this.label1.Location = new System.Drawing.Point(91, 366);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 28);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Mật khẩu";
+            this.lbMK.AutoSize = true;
+            this.lbMK.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(43)))), ((int)(((byte)(77)))));
+            this.lbMK.Location = new System.Drawing.Point(91, 366);
+            this.lbMK.Name = "lbMK";
+            this.lbMK.Size = new System.Drawing.Size(98, 28);
+            this.lbMK.TabIndex = 6;
+            this.lbMK.Text = "Mật khẩu";
             // 
             // lblTenDangNhap
             // 
@@ -179,6 +179,18 @@
             this.panelAnh.Size = new System.Drawing.Size(821, 642);
             this.panelAnh.TabIndex = 6;
             // 
+            // pictureBoxUTE
+            // 
+            this.pictureBoxUTE.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBoxUTE.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBoxUTE.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUTE.Image")));
+            this.pictureBoxUTE.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxUTE.Name = "pictureBoxUTE";
+            this.pictureBoxUTE.Size = new System.Drawing.Size(821, 642);
+            this.pictureBoxUTE.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxUTE.TabIndex = 0;
+            this.pictureBoxUTE.TabStop = false;
+            // 
             // kryptonTextBox1
             // 
             this.kryptonTextBox1.Location = new System.Drawing.Point(76, 397);
@@ -203,19 +215,7 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // pictureBoxUTE
-            // 
-            this.pictureBoxUTE.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBoxUTE.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBoxUTE.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUTE.Image")));
-            this.pictureBoxUTE.Location = new System.Drawing.Point(0, 0);
-            this.pictureBoxUTE.Name = "pictureBoxUTE";
-            this.pictureBoxUTE.Size = new System.Drawing.Size(821, 642);
-            this.pictureBoxUTE.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxUTE.TabIndex = 0;
-            this.pictureBoxUTE.TabStop = false;
-            // 
-            // FLogin
+            // FDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -223,7 +223,7 @@
             this.Controls.Add(this.panelDangNhap);
             this.Controls.Add(this.panelAnh);
             this.Controls.Add(this.kryptonTextBox1);
-            this.Name = "FLogin";
+            this.Name = "FDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
             this.Load += new System.EventHandler(this.FLogin_Load);
@@ -241,7 +241,7 @@
         private System.Windows.Forms.Panel panelDangNhap;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtMatKhau;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnDangNhap;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbMK;
         private System.Windows.Forms.Label lblTenDangNhap;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtTK;
         private System.Windows.Forms.RadioButton rbtnGV;

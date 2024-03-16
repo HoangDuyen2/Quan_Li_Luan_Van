@@ -32,30 +32,30 @@
             this.panelChucNang = new System.Windows.Forms.Panel();
             this.labelChucNang = new System.Windows.Forms.Label();
             this.panelTTGiangVien = new System.Windows.Forms.Panel();
-            this.pictureBoxUser = new System.Windows.Forms.PictureBox();
             this.labelChucVu = new System.Windows.Forms.Label();
             this.labelMSSV = new System.Windows.Forms.Label();
             this.labelTen = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.labelTenTruong = new System.Windows.Forms.Label();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panelDesktopPane = new System.Windows.Forms.Panel();
             this.panelTenTruong = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.picboxUser = new System.Windows.Forms.PictureBox();
             this.btnDangXuat = new System.Windows.Forms.Button();
-            this.btnLuanVan = new System.Windows.Forms.Button();
-            this.btnDangKy = new System.Windows.Forms.Button();
+            this.btnDuyetLV = new System.Windows.Forms.Button();
+            this.btnDanhSachLV = new System.Windows.Forms.Button();
             this.buttonHome = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxUser = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panelChucNang.SuspendLayout();
             this.panelTTGiangVien.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).BeginInit();
             this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panelTenTruong.SuspendLayout();
             this.panelMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panelChucNang
@@ -92,17 +92,6 @@
             this.panelTTGiangVien.Name = "panelTTGiangVien";
             this.panelTTGiangVien.Size = new System.Drawing.Size(252, 114);
             this.panelTTGiangVien.TabIndex = 1;
-            // 
-            // pictureBoxUser
-            // 
-            this.pictureBoxUser.Image = global::Quan_Li_Luan_Van.Properties.Resources.user;
-            this.pictureBoxUser.Location = new System.Drawing.Point(26, 37);
-            this.pictureBoxUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBoxUser.Name = "pictureBoxUser";
-            this.pictureBoxUser.Size = new System.Drawing.Size(48, 48);
-            this.pictureBoxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxUser.TabIndex = 1;
-            this.pictureBoxUser.TabStop = false;
             // 
             // labelChucVu
             // 
@@ -164,17 +153,6 @@
             this.panelLogo.Size = new System.Drawing.Size(252, 155);
             this.panelLogo.TabIndex = 1;
             // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
-            this.pictureBoxLogo.Location = new System.Drawing.Point(63, 20);
-            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(122, 115);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxLogo.TabIndex = 1;
-            this.pictureBoxLogo.TabStop = false;
-            // 
             // panelDesktopPane
             // 
             this.panelDesktopPane.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -187,7 +165,7 @@
             // panelTenTruong
             // 
             this.panelTenTruong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
-            this.panelTenTruong.Controls.Add(this.pictureBox1);
+            this.panelTenTruong.Controls.Add(this.picboxUser);
             this.panelTenTruong.Controls.Add(this.labelTenTruong);
             this.panelTenTruong.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTenTruong.Location = new System.Drawing.Point(256, 0);
@@ -201,8 +179,8 @@
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
             this.panelMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelMenu.Controls.Add(this.btnDangXuat);
-            this.panelMenu.Controls.Add(this.btnLuanVan);
-            this.panelMenu.Controls.Add(this.btnDangKy);
+            this.panelMenu.Controls.Add(this.btnDuyetLV);
+            this.panelMenu.Controls.Add(this.btnDanhSachLV);
             this.panelMenu.Controls.Add(this.buttonHome);
             this.panelMenu.Controls.Add(this.panelChucNang);
             this.panelMenu.Controls.Add(this.panelTTGiangVien);
@@ -213,6 +191,16 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(256, 793);
             this.panelMenu.TabIndex = 3;
+            // 
+            // picboxUser
+            // 
+            this.picboxUser.Image = global::Quan_Li_Luan_Van.Properties.Resources.user;
+            this.picboxUser.Location = new System.Drawing.Point(980, 12);
+            this.picboxUser.Name = "picboxUser";
+            this.picboxUser.Size = new System.Drawing.Size(66, 59);
+            this.picboxUser.TabIndex = 6;
+            this.picboxUser.TabStop = false;
+            this.picboxUser.Click += new System.EventHandler(this.picboxUser_Click);
             // 
             // btnDangXuat
             // 
@@ -234,44 +222,44 @@
             this.btnDangXuat.UseVisualStyleBackColor = true;
             this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
-            // btnLuanVan
+            // btnDuyetLV
             // 
-            this.btnLuanVan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLuanVan.FlatAppearance.BorderSize = 0;
-            this.btnLuanVan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLuanVan.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnLuanVan.ForeColor = System.Drawing.Color.White;
-            this.btnLuanVan.Image = global::Quan_Li_Luan_Van.Properties.Resources.find;
-            this.btnLuanVan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuanVan.Location = new System.Drawing.Point(0, 456);
-            this.btnLuanVan.Name = "btnLuanVan";
-            this.btnLuanVan.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnLuanVan.Size = new System.Drawing.Size(252, 63);
-            this.btnLuanVan.TabIndex = 7;
-            this.btnLuanVan.Text = "  Duyệt luận văn";
-            this.btnLuanVan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLuanVan.UseVisualStyleBackColor = true;
-            this.btnLuanVan.Click += new System.EventHandler(this.btnLuanVan_Click);
+            this.btnDuyetLV.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDuyetLV.FlatAppearance.BorderSize = 0;
+            this.btnDuyetLV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDuyetLV.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnDuyetLV.ForeColor = System.Drawing.Color.White;
+            this.btnDuyetLV.Image = global::Quan_Li_Luan_Van.Properties.Resources.approve;
+            this.btnDuyetLV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDuyetLV.Location = new System.Drawing.Point(0, 456);
+            this.btnDuyetLV.Name = "btnDuyetLV";
+            this.btnDuyetLV.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnDuyetLV.Size = new System.Drawing.Size(252, 63);
+            this.btnDuyetLV.TabIndex = 7;
+            this.btnDuyetLV.Text = "  Duyệt luận văn";
+            this.btnDuyetLV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDuyetLV.UseVisualStyleBackColor = true;
+            this.btnDuyetLV.Click += new System.EventHandler(this.btnLuanVan_Click);
             // 
-            // btnDangKy
+            // btnDanhSachLV
             // 
-            this.btnDangKy.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDangKy.FlatAppearance.BorderSize = 0;
-            this.btnDangKy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDangKy.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnDangKy.ForeColor = System.Drawing.Color.White;
-            this.btnDangKy.Image = global::Quan_Li_Luan_Van.Properties.Resources.add;
-            this.btnDangKy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangKy.Location = new System.Drawing.Point(0, 393);
-            this.btnDangKy.Name = "btnDangKy";
-            this.btnDangKy.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnDangKy.Size = new System.Drawing.Size(252, 63);
-            this.btnDangKy.TabIndex = 6;
-            this.btnDangKy.Text = "  DS luận văn";
-            this.btnDangKy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangKy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDangKy.UseVisualStyleBackColor = true;
-            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
+            this.btnDanhSachLV.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDanhSachLV.FlatAppearance.BorderSize = 0;
+            this.btnDanhSachLV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDanhSachLV.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnDanhSachLV.ForeColor = System.Drawing.Color.White;
+            this.btnDanhSachLV.Image = global::Quan_Li_Luan_Van.Properties.Resources.list;
+            this.btnDanhSachLV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDanhSachLV.Location = new System.Drawing.Point(0, 393);
+            this.btnDanhSachLV.Name = "btnDanhSachLV";
+            this.btnDanhSachLV.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnDanhSachLV.Size = new System.Drawing.Size(252, 63);
+            this.btnDanhSachLV.TabIndex = 6;
+            this.btnDanhSachLV.Text = "  DS luận văn";
+            this.btnDanhSachLV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDanhSachLV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDanhSachLV.UseVisualStyleBackColor = true;
+            this.btnDanhSachLV.Click += new System.EventHandler(this.btnDangKy_Click);
             // 
             // buttonHome
             // 
@@ -293,14 +281,27 @@
             this.buttonHome.UseVisualStyleBackColor = true;
             this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
             // 
-            // pictureBox1
+            // pictureBoxUser
             // 
-            this.pictureBox1.Image = global::Quan_Li_Luan_Van.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(984, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(62, 59);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxUser.Image = global::Quan_Li_Luan_Van.Properties.Resources.user;
+            this.pictureBoxUser.Location = new System.Drawing.Point(26, 37);
+            this.pictureBoxUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxUser.Name = "pictureBoxUser";
+            this.pictureBoxUser.Size = new System.Drawing.Size(48, 48);
+            this.pictureBoxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxUser.TabIndex = 1;
+            this.pictureBoxUser.TabStop = false;
+            // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
+            this.pictureBoxLogo.Location = new System.Drawing.Point(63, 20);
+            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(122, 115);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLogo.TabIndex = 1;
+            this.pictureBoxLogo.TabStop = false;
             // 
             // FGiangVien
             // 
@@ -318,13 +319,13 @@
             this.panelChucNang.PerformLayout();
             this.panelTTGiangVien.ResumeLayout(false);
             this.panelTTGiangVien.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).EndInit();
             this.panelLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.panelTenTruong.ResumeLayout(false);
             this.panelTenTruong.PerformLayout();
             this.panelMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -333,8 +334,8 @@
 
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Button btnDangXuat;
-        private System.Windows.Forms.Button btnLuanVan;
-        private System.Windows.Forms.Button btnDangKy;
+        private System.Windows.Forms.Button btnDuyetLV;
+        private System.Windows.Forms.Button btnDanhSachLV;
         private System.Windows.Forms.Button buttonHome;
         private System.Windows.Forms.Panel panelChucNang;
         private System.Windows.Forms.Label labelChucNang;
@@ -349,6 +350,6 @@
         private System.Windows.Forms.Panel panelDesktopPane;
         private System.Windows.Forms.Panel panelTenTruong;
         private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picboxUser;
     }
 }

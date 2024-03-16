@@ -103,6 +103,26 @@ namespace Quan_Li_Luan_Van.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap anhSubject {
+            get {
+                object obj = ResourceManager.GetObject("anhSubject", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap approve {
+            get {
+                object obj = ResourceManager.GetObject("approve", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap birthday {
             get {
                 object obj = ResourceManager.GetObject("birthday", resourceCulture);
@@ -336,6 +356,16 @@ namespace Quan_Li_Luan_Van.Properties {
         internal static System.Drawing.Bitmap lecture {
             get {
                 object obj = ResourceManager.GetObject("lecture", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap list {
+            get {
+                object obj = ResourceManager.GetObject("list", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -606,6 +636,16 @@ namespace Quan_Li_Luan_Van.Properties {
         internal static System.Drawing.Bitmap user_profile1 {
             get {
                 object obj = ResourceManager.GetObject("user-profile1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user1 {
+            get {
+                object obj = ResourceManager.GetObject("user1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

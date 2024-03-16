@@ -17,9 +17,10 @@ namespace Quan_Li_Luan_Van
             InitializeComponent();
         }
 
-        private void FDangKyLuanVan_Load(object sender, EventArgs e)
+        private void FDKLV_Load(object sender, EventArgs e)
         {
-
+            UCLV uCLV = new UCLV();
+            flPanelDSLV.Controls.Add(uCLV);
         }
     }
 }

@@ -85,12 +85,6 @@
     <Compile Include="FDangKyLuanVan.Designer.cs">
       <DependentUpon>FDangKyLuanVan.cs</DependentUpon>
     </Compile>
-    <Compile Include="FDKLV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FDKLV.Designer.cs">
-      <DependentUpon>FDKLV.cs</DependentUpon>
-    </Compile>
     <Compile Include="FDuyetLuanVan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,8 +162,8 @@
     <EmbeddedResource Include="FDangKyLuanVan.resx">
       <DependentUpon>FDangKyLuanVan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FDKLV.resx">
-      <DependentUpon>FDKLV.cs</DependentUpon>
+    <EmbeddedResource Include="FDuyetLuanVan.resx">
+      <DependentUpon>FDuyetLuanVan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FGiangVien.resx">
       <DependentUpon>FGiangVien.cs</DependentUpon>
@@ -388,6 +382,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\id5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\approve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anhSubject.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

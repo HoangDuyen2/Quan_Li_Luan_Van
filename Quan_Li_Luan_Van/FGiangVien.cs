@@ -44,12 +44,12 @@ namespace Quan_Li_Luan_Van
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FThemLuanVan(), sender);
+            OpenChildForm(new FTraCuu(), sender);
         }
 
         private void btnLuanVan_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FTraCuu(), sender);
+            OpenChildForm(new FDuyetLuanVan(), sender);
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
@@ -58,6 +58,11 @@ namespace Quan_Li_Luan_Van
             FDangNhap fLogin = new FDangNhap();
             fLogin.ShowDialog();
             this.Close();
+        }
+
+        private void picboxUser_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FThongTinCaNhan(), sender);
         }
     }
 }
