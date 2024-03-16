@@ -320,5 +320,32 @@
   <ItemGroup>
     <None Include="Resources\card1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\decribe1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\date1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\progress1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\major1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dissertation.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
