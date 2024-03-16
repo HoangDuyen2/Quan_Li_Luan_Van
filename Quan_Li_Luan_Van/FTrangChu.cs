@@ -16,5 +16,17 @@ namespace Quan_Li_Luan_Van
         {
             InitializeComponent();
         }
+
+        private void FTrangChu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThemThongBao_Click(object sender, EventArgs e)
+        {
+            FThemThongBao tb = new FThemThongBao();
+            tb.ShowDialog();
+
+        }
     }
 }

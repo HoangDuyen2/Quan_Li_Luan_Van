@@ -34,9 +34,9 @@
             this.lblChonngay = new System.Windows.Forms.Label();
             this.txtTimkiem = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.lblThongbao = new System.Windows.Forms.Label();
-            this.buttonTimKiem = new System.Windows.Forms.Button();
-            this.btnDangNhap = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnThemThongBao = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.flpanelDSThongBao = new System.Windows.Forms.FlowLayoutPanel();
+            this.buttonTimKiem = new System.Windows.Forms.Button();
             this.panelChucnang.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +56,7 @@
             // 
             this.panelChucnang.BackColor = System.Drawing.SystemColors.HighlightText;
             this.panelChucnang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelChucnang.Controls.Add(this.btnDangNhap);
+            this.panelChucnang.Controls.Add(this.btnThemThongBao);
             this.panelChucnang.Controls.Add(this.buttonTimKiem);
             this.panelChucnang.Controls.Add(this.dtpChonngay);
             this.panelChucnang.Controls.Add(this.lblChonngay);
@@ -120,6 +120,23 @@
             this.lblThongbao.TabIndex = 4;
             this.lblThongbao.Text = "Danh sách thông báo";
             // 
+            // btnThemThongBao
+            // 
+            this.btnThemThongBao.Location = new System.Drawing.Point(863, 78);
+            this.btnThemThongBao.Name = "btnThemThongBao";
+            this.btnThemThongBao.Size = new System.Drawing.Size(146, 36);
+            this.btnThemThongBao.TabIndex = 19;
+            this.btnThemThongBao.Values.Text = "Thêm thông báo";
+            this.btnThemThongBao.Click += new System.EventHandler(this.btnThemThongBao_Click);
+            // 
+            // flpanelDSThongBao
+            // 
+            this.flpanelDSThongBao.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpanelDSThongBao.Location = new System.Drawing.Point(0, 127);
+            this.flpanelDSThongBao.Name = "flpanelDSThongBao";
+            this.flpanelDSThongBao.Size = new System.Drawing.Size(1050, 532);
+            this.flpanelDSThongBao.TabIndex = 6;
+            // 
             // buttonTimKiem
             // 
             this.buttonTimKiem.AutoSize = true;
@@ -136,22 +153,6 @@
             this.buttonTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonTimKiem.UseVisualStyleBackColor = false;
             // 
-            // btnDangNhap
-            // 
-            this.btnDangNhap.Location = new System.Drawing.Point(863, 78);
-            this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(146, 36);
-            this.btnDangNhap.TabIndex = 19;
-            this.btnDangNhap.Values.Text = "Thêm thông báo";
-            // 
-            // flpanelDSThongBao
-            // 
-            this.flpanelDSThongBao.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpanelDSThongBao.Location = new System.Drawing.Point(0, 127);
-            this.flpanelDSThongBao.Name = "flpanelDSThongBao";
-            this.flpanelDSThongBao.Size = new System.Drawing.Size(1050, 532);
-            this.flpanelDSThongBao.TabIndex = 6;
-            // 
             // FTrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -161,6 +162,7 @@
             this.Controls.Add(this.panelChucnang);
             this.Name = "FTrangChu";
             this.Text = "FTrangChu";
+            this.Load += new System.EventHandler(this.FTrangChu_Load);
             this.panelChucnang.ResumeLayout(false);
             this.panelChucnang.PerformLayout();
             this.ResumeLayout(false);
@@ -175,7 +177,7 @@
         private System.Windows.Forms.Label lblChonngay;
         private System.Windows.Forms.DateTimePicker dtpChonngay;
         private System.Windows.Forms.Button buttonTimKiem;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnDangNhap;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnThemThongBao;
         private System.Windows.Forms.FlowLayoutPanel flpanelDSThongBao;
     }
 }
