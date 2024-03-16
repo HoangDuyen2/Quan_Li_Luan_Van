@@ -85,5 +85,10 @@ namespace Quan_Li_Luan_Van
             fLogin.ShowDialog();
             this.Close();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FThongTinCaNhan(), sender);
+        }
     }
 }

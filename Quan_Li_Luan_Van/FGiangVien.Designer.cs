@@ -47,6 +47,7 @@
             this.btnLuanVan = new System.Windows.Forms.Button();
             this.btnDangKy = new System.Windows.Forms.Button();
             this.buttonHome = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelChucNang.SuspendLayout();
             this.panelTTGiangVien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).BeginInit();
@@ -54,6 +55,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panelTenTruong.SuspendLayout();
             this.panelMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelChucNang
@@ -185,6 +187,7 @@
             // panelTenTruong
             // 
             this.panelTenTruong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
+            this.panelTenTruong.Controls.Add(this.pictureBox1);
             this.panelTenTruong.Controls.Add(this.labelTenTruong);
             this.panelTenTruong.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTenTruong.Location = new System.Drawing.Point(256, 0);
@@ -290,6 +293,15 @@
             this.buttonHome.UseVisualStyleBackColor = true;
             this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Quan_Li_Luan_Van.Properties.Resources.user;
+            this.pictureBox1.Location = new System.Drawing.Point(984, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(62, 59);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // FGiangVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -312,6 +324,7 @@
             this.panelTenTruong.ResumeLayout(false);
             this.panelTenTruong.PerformLayout();
             this.panelMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -336,5 +349,6 @@
         private System.Windows.Forms.Panel panelDesktopPane;
         private System.Windows.Forms.Panel panelTenTruong;
         private System.Windows.Forms.Panel panelMenu;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

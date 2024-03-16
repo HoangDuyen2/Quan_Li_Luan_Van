@@ -32,7 +32,7 @@
             this.txtID = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtHoTen = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonTextBox3 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonTextBox4 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtCCCD = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonTextBox5 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonTextBox6 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
@@ -48,12 +48,14 @@
             this.lbSex = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
             this.lbID = new System.Windows.Forms.Label();
+            this.btnChinhSua = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(350, 162);
+            this.txtID.Enabled = false;
+            this.txtID.Location = new System.Drawing.Point(348, 174);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(267, 36);
             this.txtID.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -79,7 +81,8 @@
             // 
             // txtHoTen
             // 
-            this.txtHoTen.Location = new System.Drawing.Point(350, 232);
+            this.txtHoTen.Enabled = false;
+            this.txtHoTen.Location = new System.Drawing.Point(348, 252);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(267, 36);
             this.txtHoTen.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -107,7 +110,8 @@
             // 
             // kryptonTextBox3
             // 
-            this.kryptonTextBox3.Location = new System.Drawing.Point(350, 372);
+            this.kryptonTextBox3.Enabled = false;
+            this.kryptonTextBox3.Location = new System.Drawing.Point(351, 412);
             this.kryptonTextBox3.Name = "kryptonTextBox3";
             this.kryptonTextBox3.Size = new System.Drawing.Size(267, 36);
             this.kryptonTextBox3.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -125,34 +129,36 @@
             this.kryptonTextBox3.TabIndex = 10;
             this.kryptonTextBox3.Text = "Ho Chi Minh";
             // 
-            // kryptonTextBox4
+            // txtCCCD
             // 
-            this.kryptonTextBox4.Location = new System.Drawing.Point(731, 162);
-            this.kryptonTextBox4.Name = "kryptonTextBox4";
-            this.kryptonTextBox4.Size = new System.Drawing.Size(265, 36);
-            this.kryptonTextBox4.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonTextBox4.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
-            this.kryptonTextBox4.StateCommon.Border.Color2 = System.Drawing.Color.Blue;
-            this.kryptonTextBox4.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtCCCD.Enabled = false;
+            this.txtCCCD.Location = new System.Drawing.Point(734, 174);
+            this.txtCCCD.Name = "txtCCCD";
+            this.txtCCCD.Size = new System.Drawing.Size(265, 36);
+            this.txtCCCD.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.txtCCCD.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
+            this.txtCCCD.StateCommon.Border.Color2 = System.Drawing.Color.Blue;
+            this.txtCCCD.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox4.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonTextBox4.StateCommon.Border.Rounding = 16;
-            this.kryptonTextBox4.StateCommon.Border.Width = 1;
-            this.kryptonTextBox4.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.kryptonTextBox4.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonTextBox4.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.kryptonTextBox4.StateDisabled.Border.Color1 = System.Drawing.Color.Blue;
-            this.kryptonTextBox4.StateDisabled.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.kryptonTextBox4.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtCCCD.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtCCCD.StateCommon.Border.Rounding = 16;
+            this.txtCCCD.StateCommon.Border.Width = 1;
+            this.txtCCCD.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.txtCCCD.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCCCD.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.txtCCCD.StateDisabled.Border.Color1 = System.Drawing.Color.Blue;
+            this.txtCCCD.StateDisabled.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.txtCCCD.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox4.TabIndex = 11;
-            this.kryptonTextBox4.Text = "0432422134";
+            this.txtCCCD.TabIndex = 11;
+            this.txtCCCD.Text = "0432422134";
             // 
             // kryptonTextBox5
             // 
-            this.kryptonTextBox5.Location = new System.Drawing.Point(731, 302);
+            this.kryptonTextBox5.Enabled = false;
+            this.kryptonTextBox5.Location = new System.Drawing.Point(734, 335);
             this.kryptonTextBox5.Name = "kryptonTextBox5";
             this.kryptonTextBox5.Size = new System.Drawing.Size(265, 36);
             this.kryptonTextBox5.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -172,7 +178,8 @@
             // 
             // kryptonTextBox6
             // 
-            this.kryptonTextBox6.Location = new System.Drawing.Point(731, 372);
+            this.kryptonTextBox6.Enabled = false;
+            this.kryptonTextBox6.Location = new System.Drawing.Point(734, 412);
             this.kryptonTextBox6.Name = "kryptonTextBox6";
             this.kryptonTextBox6.Size = new System.Drawing.Size(265, 36);
             this.kryptonTextBox6.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -217,9 +224,10 @@
             // rbntSV
             // 
             this.rbntSV.AutoSize = true;
+            this.rbntSV.Enabled = false;
             this.rbntSV.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.rbntSV.ForeColor = System.Drawing.Color.Black;
-            this.rbntSV.Location = new System.Drawing.Point(373, 304);
+            this.rbntSV.Location = new System.Drawing.Point(377, 342);
             this.rbntSV.Name = "rbntSV";
             this.rbntSV.Size = new System.Drawing.Size(72, 28);
             this.rbntSV.TabIndex = 14;
@@ -230,9 +238,10 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
+            this.radioButton1.Enabled = false;
             this.radioButton1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.radioButton1.ForeColor = System.Drawing.Color.Black;
-            this.radioButton1.Location = new System.Drawing.Point(512, 304);
+            this.radioButton1.Location = new System.Drawing.Point(517, 342);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(56, 28);
             this.radioButton1.TabIndex = 15;
@@ -242,8 +251,9 @@
             // 
             // kryptonDateTimePicker1
             // 
+            this.kryptonDateTimePicker1.Enabled = false;
             this.kryptonDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.kryptonDateTimePicker1.Location = new System.Drawing.Point(731, 232);
+            this.kryptonDateTimePicker1.Location = new System.Drawing.Point(734, 252);
             this.kryptonDateTimePicker1.Name = "kryptonDateTimePicker1";
             this.kryptonDateTimePicker1.Size = new System.Drawing.Size(265, 39);
             this.kryptonDateTimePicker1.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
@@ -272,8 +282,8 @@
             // lbPhone
             // 
             this.lbPhone.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPhone.Image = global::Quan_Li_Luan_Van.Properties.Resources.phone1;
-            this.lbPhone.Location = new System.Drawing.Point(650, 285);
+            this.lbPhone.Image = global::Quan_Li_Luan_Van.Properties.Resources.phone2;
+            this.lbPhone.Location = new System.Drawing.Point(653, 322);
             this.lbPhone.Name = "lbPhone";
             this.lbPhone.Size = new System.Drawing.Size(64, 60);
             this.lbPhone.TabIndex = 7;
@@ -282,8 +292,8 @@
             // lbEmail
             // 
             this.lbEmail.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEmail.Image = global::Quan_Li_Luan_Van.Properties.Resources.email;
-            this.lbEmail.Location = new System.Drawing.Point(648, 362);
+            this.lbEmail.Image = global::Quan_Li_Luan_Van.Properties.Resources.email1;
+            this.lbEmail.Location = new System.Drawing.Point(651, 400);
             this.lbEmail.Name = "lbEmail";
             this.lbEmail.Size = new System.Drawing.Size(66, 58);
             this.lbEmail.TabIndex = 6;
@@ -292,8 +302,8 @@
             // lbCCCD
             // 
             this.lbCCCD.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCCCD.Image = global::Quan_Li_Luan_Van.Properties.Resources.card;
-            this.lbCCCD.Location = new System.Drawing.Point(646, 153);
+            this.lbCCCD.Image = global::Quan_Li_Luan_Van.Properties.Resources.id4;
+            this.lbCCCD.Location = new System.Drawing.Point(649, 163);
             this.lbCCCD.Name = "lbCCCD";
             this.lbCCCD.Size = new System.Drawing.Size(68, 54);
             this.lbCCCD.TabIndex = 5;
@@ -302,8 +312,8 @@
             // lbBirth
             // 
             this.lbBirth.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBirth.Image = global::Quan_Li_Luan_Van.Properties.Resources.birthday;
-            this.lbBirth.Location = new System.Drawing.Point(646, 224);
+            this.lbBirth.Image = global::Quan_Li_Luan_Van.Properties.Resources.birthday1;
+            this.lbBirth.Location = new System.Drawing.Point(649, 252);
             this.lbBirth.Name = "lbBirth";
             this.lbBirth.Size = new System.Drawing.Size(68, 44);
             this.lbBirth.TabIndex = 4;
@@ -312,8 +322,8 @@
             // lbAddress
             // 
             this.lbAddress.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAddress.Image = global::Quan_Li_Luan_Van.Properties.Resources.address1;
-            this.lbAddress.Location = new System.Drawing.Point(274, 345);
+            this.lbAddress.Image = global::Quan_Li_Luan_Van.Properties.Resources.address2;
+            this.lbAddress.Location = new System.Drawing.Point(270, 395);
             this.lbAddress.Name = "lbAddress";
             this.lbAddress.Size = new System.Drawing.Size(75, 75);
             this.lbAddress.TabIndex = 3;
@@ -322,18 +332,18 @@
             // lbSex
             // 
             this.lbSex.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSex.Image = global::Quan_Li_Luan_Van.Properties.Resources.sex5;
-            this.lbSex.Location = new System.Drawing.Point(279, 292);
+            this.lbSex.Image = global::Quan_Li_Luan_Van.Properties.Resources.sex6;
+            this.lbSex.Location = new System.Drawing.Point(281, 325);
             this.lbSex.Name = "lbSex";
-            this.lbSex.Size = new System.Drawing.Size(70, 53);
+            this.lbSex.Size = new System.Drawing.Size(64, 46);
             this.lbSex.TabIndex = 2;
             this.lbSex.Text = "  ";
             // 
             // lbName
             // 
             this.lbName.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.Image = global::Quan_Li_Luan_Van.Properties.Resources.user_profile;
-            this.lbName.Location = new System.Drawing.Point(282, 223);
+            this.lbName.Image = global::Quan_Li_Luan_Van.Properties.Resources.user_profile1;
+            this.lbName.Location = new System.Drawing.Point(281, 244);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(61, 52);
             this.lbName.TabIndex = 1;
@@ -343,25 +353,44 @@
             // lbID
             // 
             this.lbID.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbID.Image = global::Quan_Li_Luan_Van.Properties.Resources.id1;
-            this.lbID.Location = new System.Drawing.Point(279, 147);
+            this.lbID.Image = global::Quan_Li_Luan_Van.Properties.Resources.StudentCode;
+            this.lbID.Location = new System.Drawing.Point(277, 163);
             this.lbID.Name = "lbID";
             this.lbID.Size = new System.Drawing.Size(65, 60);
             this.lbID.TabIndex = 0;
             this.lbID.Text = "  ";
             // 
+            // btnChinhSua
+            // 
+            this.btnChinhSua.Location = new System.Drawing.Point(834, 635);
+            this.btnChinhSua.Name = "btnChinhSua";
+            this.btnChinhSua.Size = new System.Drawing.Size(220, 51);
+            this.btnChinhSua.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnChinhSua.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnChinhSua.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnChinhSua.StateCommon.Border.Rounding = 16;
+            this.btnChinhSua.StateCommon.Border.Width = 1;
+            this.btnChinhSua.StateCommon.Content.LongText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChinhSua.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.MidnightBlue;
+            this.btnChinhSua.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChinhSua.TabIndex = 18;
+            this.btnChinhSua.Values.Text = "Chỉnh sửa thông tin";
+            // 
             // FThongTinCaNhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1066, 570);
+            this.ClientSize = new System.Drawing.Size(1066, 743);
+            this.Controls.Add(this.btnChinhSua);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.kryptonDateTimePicker1);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.rbntSV);
             this.Controls.Add(this.kryptonTextBox6);
             this.Controls.Add(this.kryptonTextBox5);
-            this.Controls.Add(this.kryptonTextBox4);
+            this.Controls.Add(this.txtCCCD);
             this.Controls.Add(this.kryptonTextBox3);
             this.Controls.Add(this.txtHoTen);
             this.Controls.Add(this.txtID);
@@ -396,7 +425,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtID;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtHoTen;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox3;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox4;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtCCCD;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox5;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox6;
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
@@ -404,6 +433,7 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker kryptonDateTimePicker1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnChinhSua;
     }
 }
 

@@ -347,5 +347,38 @@
   <ItemGroup>
     <None Include="Resources\dissertation.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-profile1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\birthday1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sex6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\address2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lecture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StudentCode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id5.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
