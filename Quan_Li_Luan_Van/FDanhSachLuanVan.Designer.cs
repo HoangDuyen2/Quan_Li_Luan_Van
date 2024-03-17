@@ -38,8 +38,10 @@
             this.buttonTimKiem = new System.Windows.Forms.Button();
             this.txthongTinMonHoc = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.labelTieuDe = new System.Windows.Forms.Label();
+            this.flowPanelLuanVan = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboxChuyenNganh)).BeginInit();
+            this.panelPhanCach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboxLoaiTraCuu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,6 +110,7 @@
             // 
             this.panelPhanCach.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelPhanCach.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelPhanCach.Controls.Add(this.flowPanelLuanVan);
             this.panelPhanCach.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panelPhanCach.Location = new System.Drawing.Point(1, 83);
             this.panelPhanCach.Name = "panelPhanCach";
@@ -222,6 +225,13 @@
             this.labelTieuDe.TabIndex = 12;
             this.labelTieuDe.Text = "DANH SÁCH LUẬN VĂN";
             // 
+            // flowPanelLuanVan
+            // 
+            this.flowPanelLuanVan.Location = new System.Drawing.Point(-1, 0);
+            this.flowPanelLuanVan.Name = "flowPanelLuanVan";
+            this.flowPanelLuanVan.Size = new System.Drawing.Size(1084, 525);
+            this.flowPanelLuanVan.TabIndex = 0;
+            // 
             // FDanhSachLuanVan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -235,6 +245,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboxChuyenNganh)).EndInit();
+            this.panelPhanCach.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.comboxLoaiTraCuu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -252,5 +263,6 @@
         private System.Windows.Forms.Panel panelPhanCach;
         private System.Windows.Forms.Label lbChuyenNganh;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox comboxChuyenNganh;
+        private System.Windows.Forms.FlowLayoutPanel flowPanelLuanVan;
     }
 }

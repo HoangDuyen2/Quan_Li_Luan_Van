@@ -147,6 +147,7 @@
             this.Controls.Add(this.flPanelDSLV);
             this.Name = "FDuyetLuanVan";
             this.Text = "FDuyetLuanVan";
+            this.Load += new System.EventHandler(this.FDuyetLuanVan_Load);
             this.panelTitle.ResumeLayout(false);
             this.groupBoxTraCuu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.comboxLoaiTraCuu)).EndInit();

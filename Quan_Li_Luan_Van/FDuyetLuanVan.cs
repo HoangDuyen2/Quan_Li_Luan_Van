@@ -16,5 +16,11 @@ namespace Quan_Li_Luan_Van
         {
             InitializeComponent();
         }
+
+        private void FDuyetLuanVan_Load(object sender, EventArgs e)
+        {
+            UCDuyet uCDuyet = new UCDuyet();
+            flPanelDSLV.Controls.Add(uCDuyet);
+        }
     }
 }

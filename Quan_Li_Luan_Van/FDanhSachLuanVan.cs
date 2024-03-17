@@ -19,8 +19,8 @@ namespace Quan_Li_Luan_Van
 
         private void TraCuu_Load(object sender, EventArgs e)
         {
-
-
+            UCLV uCLV = new UCLV();
+            flowPanelLuanVan.Controls.Add(uCLV);
         }
     }
 }
