@@ -103,6 +103,12 @@
     <Compile Include="FDangNhap.Designer.cs">
       <DependentUpon>FDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="FNhanXetChamDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FNhanXetChamDiem.Designer.cs">
+      <DependentUpon>FNhanXetChamDiem.cs</DependentUpon>
+    </Compile>
     <Compile Include="FSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FDangNhap.resx">
       <DependentUpon>FDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FNhanXetChamDiem.resx">
+      <DependentUpon>FNhanXetChamDiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FSinhVien.resx">
       <DependentUpon>FSinhVien.cs</DependentUpon>
@@ -394,6 +403,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\score.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
