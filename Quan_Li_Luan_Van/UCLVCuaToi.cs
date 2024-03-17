@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace Quan_Li_Luan_Van
 {
-    public partial class FLuanVanToi : Form
+    public partial class UCLVCuaToi : UserControl
     {
-        public FLuanVanToi()
+        public UCLVCuaToi()
         {
             InitializeComponent();
-        }
-
-        private void FLuanVanToi_Load(object sender, EventArgs e)
-        {
-            UCLVCuaToi uCLVCuaToi = new UCLVCuaToi();
-            flPanelDSLV.Controls.Add(uCLVCuaToi);
         }
     }
 }

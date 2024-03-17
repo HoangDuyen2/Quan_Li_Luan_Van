@@ -189,6 +189,12 @@
     <Compile Include="UCLV.Designer.cs">
       <DependentUpon>UCLV.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCLVCuaToi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCLVCuaToi.Designer.cs">
+      <DependentUpon>UCLVCuaToi.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCThongBao.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -264,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCLV.resx">
       <DependentUpon>UCLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCLVCuaToi.resx">
+      <DependentUpon>UCLVCuaToi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCThongBao.resx">
       <DependentUpon>UCThongBao.cs</DependentUpon>
@@ -460,6 +469,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\score.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

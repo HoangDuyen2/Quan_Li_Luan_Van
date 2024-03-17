@@ -164,6 +164,7 @@
             this.Controls.Add(this.flPanelDSLV);
             this.Name = "FLuanVanToi";
             this.Text = "Luận Văn Của Tôi";
+            this.Load += new System.EventHandler(this.FLuanVanToi_Load);
             this.panelTitle.ResumeLayout(false);
             this.groupBoxTraCuuLuanVan.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.comboxLoaiTraCuu)).EndInit();
