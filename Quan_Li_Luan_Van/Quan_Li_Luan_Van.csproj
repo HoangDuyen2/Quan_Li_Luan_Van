@@ -79,6 +79,12 @@
     <Compile Include="FChiTietLuanVan.Designer.cs">
       <DependentUpon>FChiTietLuanVan.cs</DependentUpon>
     </Compile>
+    <Compile Include="FChiTietThongBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FChiTietThongBao.Designer.cs">
+      <DependentUpon>FChiTietThongBao.cs</DependentUpon>
+    </Compile>
     <Compile Include="FDangKyLuanVan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FChiTietLuanVan.resx">
       <DependentUpon>FChiTietLuanVan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FChiTietThongBao.resx">
+      <DependentUpon>FChiTietThongBao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FDangKyLuanVan.resx">
       <DependentUpon>FDangKyLuanVan.cs</DependentUpon>

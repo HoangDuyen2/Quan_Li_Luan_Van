@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace Quan_Li_Luan_Van
 {
-    public partial class UCThongBao : UserControl
+    public partial class FChiTietThongBao : Form
     {
-        public UCThongBao()
+        public FChiTietThongBao()
         {
             InitializeComponent();
-        }
-
-        private void buttonThongBao_Click(object sender, EventArgs e)
-        {
-            FChiTietThongBao tb = new FChiTietThongBao();
-            tb.ShowDialog();
         }
     }
 }
