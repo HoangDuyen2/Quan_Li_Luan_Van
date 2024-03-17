@@ -243,7 +243,7 @@
             this.btnLuanVanCuaToi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLuanVanCuaToi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLuanVanCuaToi.UseVisualStyleBackColor = true;
-            this.btnLuanVanCuaToi.Click += new System.EventHandler(this.btnDangXuat_Click);
+            this.btnLuanVanCuaToi.Click += new System.EventHandler(this.btnLuanVanCuaToi_Click);
             // 
             // btnDuyetLV
             // 

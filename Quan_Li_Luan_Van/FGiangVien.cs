@@ -64,5 +64,10 @@ namespace Quan_Li_Luan_Van
         {
             OpenChildForm(new FThongTinCaNhan(), sender);
         }
+
+        private void btnLuanVanCuaToi_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FLuanVanCuaToi(), sender);
+        }
     }
 }
