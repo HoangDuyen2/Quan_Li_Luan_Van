@@ -32,7 +32,7 @@
             this.lbNoiDungTB = new System.Windows.Forms.Label();
             this.buttonThongBao = new System.Windows.Forms.Button();
             this.picBoxUser = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblThoiGian = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxUser)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,16 +84,16 @@
             this.picBoxUser.TabIndex = 0;
             this.picBoxUser.TabStop = false;
             // 
-            // label1
+            // lblThoiGian
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(-2, -4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 27);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "17/03/2024";
+            this.lblThoiGian.AutoSize = true;
+            this.lblThoiGian.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThoiGian.ForeColor = System.Drawing.Color.Black;
+            this.lblThoiGian.Location = new System.Drawing.Point(829, 9);
+            this.lblThoiGian.Name = "lblThoiGian";
+            this.lblThoiGian.Size = new System.Drawing.Size(216, 27);
+            this.lblThoiGian.TabIndex = 13;
+            this.lblThoiGian.Text = "17/03/2024 10:41:22";
             // 
             // UCThongBao
             // 
@@ -101,7 +101,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblThoiGian);
             this.Controls.Add(this.buttonThongBao);
             this.Controls.Add(this.lbNoiDungTB);
             this.Controls.Add(this.lbGV);
@@ -120,6 +120,6 @@
         private System.Windows.Forms.Label lbGV;
         private System.Windows.Forms.Label lbNoiDungTB;
         private System.Windows.Forms.Button buttonThongBao;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblThoiGian;
     }
 }
