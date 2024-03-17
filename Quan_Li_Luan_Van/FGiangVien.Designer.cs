@@ -42,12 +42,14 @@
             this.panelTenTruong = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.picboxUser = new System.Windows.Forms.PictureBox();
-            this.btnDangXuat = new System.Windows.Forms.Button();
+            this.btnDSNhom = new System.Windows.Forms.Button();
+            this.btnLuanVanCuaToi = new System.Windows.Forms.Button();
             this.btnDuyetLV = new System.Windows.Forms.Button();
             this.btnDanhSachLV = new System.Windows.Forms.Button();
             this.buttonHome = new System.Windows.Forms.Button();
             this.pictureBoxUser = new System.Windows.Forms.PictureBox();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.panelChucNang.SuspendLayout();
             this.panelTTGiangVien.SuspendLayout();
             this.panelLogo.SuspendLayout();
@@ -178,7 +180,9 @@
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
             this.panelMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelMenu.Controls.Add(this.btnDangXuat);
+            this.panelMenu.Controls.Add(this.button2);
+            this.panelMenu.Controls.Add(this.btnDSNhom);
+            this.panelMenu.Controls.Add(this.btnLuanVanCuaToi);
             this.panelMenu.Controls.Add(this.btnDuyetLV);
             this.panelMenu.Controls.Add(this.btnDanhSachLV);
             this.panelMenu.Controls.Add(this.buttonHome);
@@ -202,25 +206,44 @@
             this.picboxUser.TabStop = false;
             this.picboxUser.Click += new System.EventHandler(this.picboxUser_Click);
             // 
-            // btnDangXuat
+            // btnDSNhom
             // 
-            this.btnDangXuat.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDangXuat.FlatAppearance.BorderSize = 0;
-            this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDangXuat.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnDangXuat.ForeColor = System.Drawing.Color.White;
-            this.btnDangXuat.Image = global::Quan_Li_Luan_Van.Properties.Resources.dang_xuat;
-            this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangXuat.Location = new System.Drawing.Point(0, 519);
-            this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnDangXuat.Size = new System.Drawing.Size(252, 63);
-            this.btnDangXuat.TabIndex = 8;
-            this.btnDangXuat.Text = "  Đăng xuất";
-            this.btnDangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDangXuat.UseVisualStyleBackColor = true;
-            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
+            this.btnDSNhom.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDSNhom.FlatAppearance.BorderSize = 0;
+            this.btnDSNhom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDSNhom.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnDSNhom.ForeColor = System.Drawing.Color.White;
+            this.btnDSNhom.Image = global::Quan_Li_Luan_Van.Properties.Resources.dang_xuat;
+            this.btnDSNhom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDSNhom.Location = new System.Drawing.Point(0, 582);
+            this.btnDSNhom.Name = "btnDSNhom";
+            this.btnDSNhom.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnDSNhom.Size = new System.Drawing.Size(252, 63);
+            this.btnDSNhom.TabIndex = 9;
+            this.btnDSNhom.Text = "  DS nhóm";
+            this.btnDSNhom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDSNhom.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDSNhom.UseVisualStyleBackColor = true;
+            // 
+            // btnLuanVanCuaToi
+            // 
+            this.btnLuanVanCuaToi.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLuanVanCuaToi.FlatAppearance.BorderSize = 0;
+            this.btnLuanVanCuaToi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLuanVanCuaToi.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnLuanVanCuaToi.ForeColor = System.Drawing.Color.White;
+            this.btnLuanVanCuaToi.Image = global::Quan_Li_Luan_Van.Properties.Resources.dang_xuat;
+            this.btnLuanVanCuaToi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLuanVanCuaToi.Location = new System.Drawing.Point(0, 519);
+            this.btnLuanVanCuaToi.Name = "btnLuanVanCuaToi";
+            this.btnLuanVanCuaToi.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnLuanVanCuaToi.Size = new System.Drawing.Size(252, 63);
+            this.btnLuanVanCuaToi.TabIndex = 8;
+            this.btnLuanVanCuaToi.Text = "  Luận văn của tôi";
+            this.btnLuanVanCuaToi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLuanVanCuaToi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLuanVanCuaToi.UseVisualStyleBackColor = true;
+            this.btnLuanVanCuaToi.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
             // btnDuyetLV
             // 
@@ -303,6 +326,25 @@
             this.pictureBoxLogo.TabIndex = 1;
             this.pictureBoxLogo.TabStop = false;
             // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::Quan_Li_Luan_Van.Properties.Resources.dang_xuat;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(0, 645);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(252, 63);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "  Đăng xuất";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // FGiangVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -333,7 +375,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBoxLogo;
-        private System.Windows.Forms.Button btnDangXuat;
+        private System.Windows.Forms.Button btnLuanVanCuaToi;
         private System.Windows.Forms.Button btnDuyetLV;
         private System.Windows.Forms.Button btnDanhSachLV;
         private System.Windows.Forms.Button buttonHome;
@@ -351,5 +393,7 @@
         private System.Windows.Forms.Panel panelTenTruong;
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.PictureBox picboxUser;
+        private System.Windows.Forms.Button btnDSNhom;
+        private System.Windows.Forms.Button button2;
     }
 }
