@@ -67,7 +67,7 @@ namespace Quan_Li_Luan_Van
 
         private void btnLuanVanCuaToi_Click(object sender, EventArgs e)
         {
-            
+            OpenChildForm(new FLuanVanToi(), sender);
         }
     }
 }
