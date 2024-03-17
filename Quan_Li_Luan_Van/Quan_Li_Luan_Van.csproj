@@ -177,6 +177,12 @@
     <Compile Include="FThemLuanVan.Designer.cs">
       <DependentUpon>FThemLuanVan.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCDuyet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCDuyet.Designer.cs">
+      <DependentUpon>UCDuyet.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCLV.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -252,6 +258,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FThemLuanVan.resx">
       <DependentUpon>FThemLuanVan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCDuyet.resx">
+      <DependentUpon>UCDuyet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCLV.resx">
       <DependentUpon>UCLV.cs</DependentUpon>
