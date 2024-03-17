@@ -38,11 +38,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnThem = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.label3 = new System.Windows.Forms.Label();
+            this.ComboxXepLoai = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lbTienDo = new System.Windows.Forms.Label();
             this.lbTenLuanVan = new System.Windows.Forms.Label();
             this.lbMaLuanVan = new System.Windows.Forms.Label();
-            this.ComboxXepLoai = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.comboxTienTrinh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComboxXepLoai)).BeginInit();
             this.SuspendLayout();
@@ -50,7 +50,7 @@
             // txtMaLuanVan
             // 
             this.txtMaLuanVan.Enabled = false;
-            this.txtMaLuanVan.Location = new System.Drawing.Point(146, 80);
+            this.txtMaLuanVan.Location = new System.Drawing.Point(146, 75);
             this.txtMaLuanVan.Name = "txtMaLuanVan";
             this.txtMaLuanVan.Size = new System.Drawing.Size(324, 36);
             this.txtMaLuanVan.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -71,7 +71,7 @@
             // txtTenLuanVan
             // 
             this.txtTenLuanVan.Enabled = false;
-            this.txtTenLuanVan.Location = new System.Drawing.Point(614, 79);
+            this.txtTenLuanVan.Location = new System.Drawing.Point(614, 74);
             this.txtTenLuanVan.Name = "txtTenLuanVan";
             this.txtTenLuanVan.Size = new System.Drawing.Size(357, 36);
             this.txtTenLuanVan.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -113,7 +113,7 @@
             "80%",
             "90%",
             "100%"});
-            this.comboxTienTrinh.Location = new System.Drawing.Point(614, 158);
+            this.comboxTienTrinh.Location = new System.Drawing.Point(614, 153);
             this.comboxTienTrinh.Name = "comboxTienTrinh";
             this.comboxTienTrinh.Size = new System.Drawing.Size(357, 39);
             this.comboxTienTrinh.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
@@ -149,7 +149,7 @@
             // txtChuyenNganh
             // 
             this.txtChuyenNganh.Enabled = false;
-            this.txtChuyenNganh.Location = new System.Drawing.Point(146, 164);
+            this.txtChuyenNganh.Location = new System.Drawing.Point(146, 159);
             this.txtChuyenNganh.Name = "txtChuyenNganh";
             this.txtChuyenNganh.Size = new System.Drawing.Size(324, 36);
             this.txtChuyenNganh.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -170,7 +170,7 @@
             // txtNoiDungTB
             // 
             this.txtNoiDungTB.Enabled = false;
-            this.txtNoiDungTB.Location = new System.Drawing.Point(146, 260);
+            this.txtNoiDungTB.Location = new System.Drawing.Point(146, 256);
             this.txtNoiDungTB.Name = "txtNoiDungTB";
             this.txtNoiDungTB.Size = new System.Drawing.Size(825, 163);
             this.txtNoiDungTB.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
@@ -189,7 +189,7 @@
             // 
             this.lblNDTB.AutoSize = true;
             this.lblNDTB.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNDTB.Location = new System.Drawing.Point(80, 221);
+            this.lblNDTB.Location = new System.Drawing.Point(80, 212);
             this.lblNDTB.Name = "lblNDTB";
             this.lblNDTB.Size = new System.Drawing.Size(180, 28);
             this.lblNDTB.TabIndex = 46;
@@ -197,7 +197,7 @@
             // 
             // txtNhanXet
             // 
-            this.txtNhanXet.Location = new System.Drawing.Point(146, 470);
+            this.txtNhanXet.Location = new System.Drawing.Point(146, 464);
             this.txtNhanXet.Name = "txtNhanXet";
             this.txtNhanXet.Size = new System.Drawing.Size(825, 146);
             this.txtNhanXet.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
@@ -216,7 +216,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(80, 435);
+            this.label2.Location = new System.Drawing.Point(80, 425);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 28);
             this.label2.TabIndex = 48;
@@ -225,7 +225,7 @@
             // btnThem
             // 
             this.btnThem.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
-            this.btnThem.Location = new System.Drawing.Point(894, 640);
+            this.btnThem.Location = new System.Drawing.Point(939, 616);
             this.btnThem.Name = "btnThem";
             this.btnThem.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
             this.btnThem.Size = new System.Drawing.Size(123, 40);
@@ -237,51 +237,11 @@
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label3.Location = new System.Drawing.Point(638, 14);
+            this.label3.Location = new System.Drawing.Point(670, 14);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(156, 43);
             this.label3.TabIndex = 51;
             this.label3.Text = "Chấm điểm:";
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Image = global::Quan_Li_Luan_Van.Properties.Resources.major1;
-            this.label1.Location = new System.Drawing.Point(68, 161);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 43);
-            this.label1.TabIndex = 44;
-            this.label1.Text = "  ";
-            // 
-            // lbTienDo
-            // 
-            this.lbTienDo.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTienDo.Image = global::Quan_Li_Luan_Van.Properties.Resources.progress1;
-            this.lbTienDo.Location = new System.Drawing.Point(518, 161);
-            this.lbTienDo.Name = "lbTienDo";
-            this.lbTienDo.Size = new System.Drawing.Size(63, 39);
-            this.lbTienDo.TabIndex = 42;
-            this.lbTienDo.Text = "  ";
-            // 
-            // lbTenLuanVan
-            // 
-            this.lbTenLuanVan.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenLuanVan.Image = global::Quan_Li_Luan_Van.Properties.Resources.card2;
-            this.lbTenLuanVan.Location = new System.Drawing.Point(520, 75);
-            this.lbTenLuanVan.Name = "lbTenLuanVan";
-            this.lbTenLuanVan.Size = new System.Drawing.Size(57, 42);
-            this.lbTenLuanVan.TabIndex = 17;
-            this.lbTenLuanVan.Text = "  ";
-            // 
-            // lbMaLuanVan
-            // 
-            this.lbMaLuanVan.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMaLuanVan.Image = global::Quan_Li_Luan_Van.Properties.Resources.id3;
-            this.lbMaLuanVan.Location = new System.Drawing.Point(68, 77);
-            this.lbMaLuanVan.Name = "lbMaLuanVan";
-            this.lbMaLuanVan.Size = new System.Drawing.Size(54, 43);
-            this.lbMaLuanVan.TabIndex = 16;
-            this.lbMaLuanVan.Text = "  ";
             // 
             // ComboxXepLoai
             // 
@@ -296,7 +256,7 @@
             "D+",
             "D",
             "F"});
-            this.ComboxXepLoai.Location = new System.Drawing.Point(797, 12);
+            this.ComboxXepLoai.Location = new System.Drawing.Point(829, 12);
             this.ComboxXepLoai.Name = "ComboxXepLoai";
             this.ComboxXepLoai.Size = new System.Drawing.Size(142, 39);
             this.ComboxXepLoai.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
@@ -329,11 +289,51 @@
             this.ComboxXepLoai.TabIndex = 52;
             this.ComboxXepLoai.Text = "--Chọn--";
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Image = global::Quan_Li_Luan_Van.Properties.Resources.major1;
+            this.label1.Location = new System.Drawing.Point(68, 156);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 43);
+            this.label1.TabIndex = 44;
+            this.label1.Text = "  ";
+            // 
+            // lbTienDo
+            // 
+            this.lbTienDo.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTienDo.Image = global::Quan_Li_Luan_Van.Properties.Resources.progress1;
+            this.lbTienDo.Location = new System.Drawing.Point(518, 156);
+            this.lbTienDo.Name = "lbTienDo";
+            this.lbTienDo.Size = new System.Drawing.Size(63, 39);
+            this.lbTienDo.TabIndex = 42;
+            this.lbTienDo.Text = "  ";
+            // 
+            // lbTenLuanVan
+            // 
+            this.lbTenLuanVan.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenLuanVan.Image = global::Quan_Li_Luan_Van.Properties.Resources.card2;
+            this.lbTenLuanVan.Location = new System.Drawing.Point(520, 70);
+            this.lbTenLuanVan.Name = "lbTenLuanVan";
+            this.lbTenLuanVan.Size = new System.Drawing.Size(57, 42);
+            this.lbTenLuanVan.TabIndex = 17;
+            this.lbTenLuanVan.Text = "  ";
+            // 
+            // lbMaLuanVan
+            // 
+            this.lbMaLuanVan.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaLuanVan.Image = global::Quan_Li_Luan_Van.Properties.Resources.id3;
+            this.lbMaLuanVan.Location = new System.Drawing.Point(68, 72);
+            this.lbMaLuanVan.Name = "lbMaLuanVan";
+            this.lbMaLuanVan.Size = new System.Drawing.Size(54, 43);
+            this.lbMaLuanVan.TabIndex = 16;
+            this.lbMaLuanVan.Text = "  ";
+            // 
             // FNhanXetChamDiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1041, 702);
+            this.ClientSize = new System.Drawing.Size(1064, 659);
             this.Controls.Add(this.ComboxXepLoai);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnThem);

@@ -20,7 +20,7 @@ namespace Quan_Li_Luan_Van
         private void FTrangChu_Load(object sender, EventArgs e)
         {
             UCThongBao uCTB = new UCThongBao();
-            panelTB.Controls.Add(uCTB);
+            flpanelDSThongBao.Controls.Add(uCTB);
         }
 
         private void btnThemThongBao_Click(object sender, EventArgs e)

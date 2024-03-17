@@ -33,10 +33,10 @@
             this.lbSoLuong = new System.Windows.Forms.Label();
             this.buttonChiTiet = new System.Windows.Forms.Button();
             this.btnDangKi = new System.Windows.Forms.Button();
-            this.pictureBoxNen = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBoxNen = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,7 +83,7 @@
             this.buttonChiTiet.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.buttonChiTiet.ForeColor = System.Drawing.SystemColors.Highlight;
             this.buttonChiTiet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonChiTiet.Location = new System.Drawing.Point(931, 52);
+            this.buttonChiTiet.Location = new System.Drawing.Point(931, 51);
             this.buttonChiTiet.Name = "buttonChiTiet";
             this.buttonChiTiet.Size = new System.Drawing.Size(114, 42);
             this.buttonChiTiet.TabIndex = 11;
@@ -100,7 +100,7 @@
             this.btnDangKi.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnDangKi.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnDangKi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangKi.Location = new System.Drawing.Point(804, 52);
+            this.btnDangKi.Location = new System.Drawing.Point(811, 51);
             this.btnDangKi.Name = "btnDangKi";
             this.btnDangKi.Size = new System.Drawing.Size(114, 42);
             this.btnDangKi.TabIndex = 12;
@@ -108,15 +108,6 @@
             this.btnDangKi.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnDangKi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDangKi.UseVisualStyleBackColor = false;
-            // 
-            // pictureBoxNen
-            // 
-            this.pictureBoxNen.Image = global::Quan_Li_Luan_Van.Properties.Resources.anhSubject;
-            this.pictureBoxNen.Location = new System.Drawing.Point(33, 14);
-            this.pictureBoxNen.Name = "pictureBoxNen";
-            this.pictureBoxNen.Size = new System.Drawing.Size(78, 76);
-            this.pictureBoxNen.TabIndex = 5;
-            this.pictureBoxNen.TabStop = false;
             // 
             // label1
             // 
@@ -154,11 +145,21 @@
             this.label3.Text = "Đinh Công Đoan";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBoxNen
+            // 
+            this.pictureBoxNen.Image = global::Quan_Li_Luan_Van.Properties.Resources.anhSubject;
+            this.pictureBoxNen.Location = new System.Drawing.Point(33, 14);
+            this.pictureBoxNen.Name = "pictureBoxNen";
+            this.pictureBoxNen.Size = new System.Drawing.Size(78, 76);
+            this.pictureBoxNen.TabIndex = 5;
+            this.pictureBoxNen.TabStop = false;
+            // 
             // UCLV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -169,7 +170,7 @@
             this.Controls.Add(this.lbTenLV);
             this.Controls.Add(this.pictureBoxNen);
             this.Name = "UCLV";
-            this.Size = new System.Drawing.Size(1050, 100);
+            this.Size = new System.Drawing.Size(1058, 98);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

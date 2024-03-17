@@ -120,7 +120,7 @@
             this.btnDangKi.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnDangKi.Image = global::Quan_Li_Luan_Van.Properties.Resources.edit;
             this.btnDangKi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangKi.Location = new System.Drawing.Point(738, 52);
+            this.btnDangKi.Location = new System.Drawing.Point(762, 49);
             this.btnDangKi.Name = "btnDangKi";
             this.btnDangKi.Size = new System.Drawing.Size(166, 42);
             this.btnDangKi.TabIndex = 21;
@@ -136,7 +136,7 @@
             this.buttonChiTiet.ForeColor = System.Drawing.SystemColors.Highlight;
             this.buttonChiTiet.Image = global::Quan_Li_Luan_Van.Properties.Resources.delete;
             this.buttonChiTiet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonChiTiet.Location = new System.Drawing.Point(917, 52);
+            this.buttonChiTiet.Location = new System.Drawing.Point(934, 49);
             this.buttonChiTiet.Name = "buttonChiTiet";
             this.buttonChiTiet.Size = new System.Drawing.Size(114, 42);
             this.buttonChiTiet.TabIndex = 20;
@@ -158,6 +158,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -168,7 +169,7 @@
             this.Controls.Add(this.lbTenLV);
             this.Controls.Add(this.pictureBoxNen);
             this.Name = "UCLVCuaToi";
-            this.Size = new System.Drawing.Size(1050, 100);
+            this.Size = new System.Drawing.Size(1058, 98);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

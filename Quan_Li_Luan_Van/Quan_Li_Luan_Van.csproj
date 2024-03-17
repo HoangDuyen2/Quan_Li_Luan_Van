@@ -145,6 +145,12 @@
     <Compile Include="FSinhVien.Designer.cs">
       <DependentUpon>FSinhVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="FTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTask.Designer.cs">
+      <DependentUpon>FTask.cs</DependentUpon>
+    </Compile>
     <Compile Include="FThemThongBao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +201,12 @@
     <Compile Include="UCLVCuaToi.Designer.cs">
       <DependentUpon>UCLVCuaToi.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCTask.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTask.Designer.cs">
+      <DependentUpon>UCTask.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCThongBao.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -240,6 +252,9 @@
     <EmbeddedResource Include="FSinhVien.resx">
       <DependentUpon>FSinhVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FTask.resx">
+      <DependentUpon>FTask.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FThemThongBao.resx">
       <DependentUpon>FThemThongBao.cs</DependentUpon>
     </EmbeddedResource>
@@ -273,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCLVCuaToi.resx">
       <DependentUpon>UCLVCuaToi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCTask.resx">
+      <DependentUpon>UCTask.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCThongBao.resx">
       <DependentUpon>UCThongBao.cs</DependentUpon>
@@ -475,6 +493,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_blue.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

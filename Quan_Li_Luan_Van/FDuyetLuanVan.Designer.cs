@@ -33,8 +33,8 @@
             this.groupBoxTraCuu = new System.Windows.Forms.GroupBox();
             this.comboxLoaiTraCuu = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.labelLoaiTraCuu = new System.Windows.Forms.Label();
-            this.buttonTimKiem = new System.Windows.Forms.Button();
             this.flPanelDSLV = new System.Windows.Forms.FlowLayoutPanel();
+            this.buttonTimKiem = new System.Windows.Forms.Button();
             this.panelTitle.SuspendLayout();
             this.groupBoxTraCuu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboxLoaiTraCuu)).BeginInit();
@@ -46,7 +46,7 @@
             this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitle.Location = new System.Drawing.Point(0, 0);
             this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(1067, 52);
+            this.panelTitle.Size = new System.Drawing.Size(1064, 52);
             this.panelTitle.TabIndex = 24;
             // 
             // lblDuyet
@@ -114,6 +114,14 @@
             this.labelLoaiTraCuu.TabIndex = 16;
             this.labelLoaiTraCuu.Text = "Tình trạng";
             // 
+            // flPanelDSLV
+            // 
+            this.flPanelDSLV.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.flPanelDSLV.Location = new System.Drawing.Point(0, 150);
+            this.flPanelDSLV.Name = "flPanelDSLV";
+            this.flPanelDSLV.Size = new System.Drawing.Size(1064, 509);
+            this.flPanelDSLV.TabIndex = 26;
+            // 
             // buttonTimKiem
             // 
             this.buttonTimKiem.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -129,19 +137,11 @@
             this.buttonTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonTimKiem.UseVisualStyleBackColor = false;
             // 
-            // flPanelDSLV
-            // 
-            this.flPanelDSLV.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.flPanelDSLV.Location = new System.Drawing.Point(5, 163);
-            this.flPanelDSLV.Name = "flPanelDSLV";
-            this.flPanelDSLV.Size = new System.Drawing.Size(1050, 527);
-            this.flPanelDSLV.TabIndex = 26;
-            // 
             // FDuyetLuanVan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 702);
+            this.ClientSize = new System.Drawing.Size(1064, 659);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.groupBoxTraCuu);
             this.Controls.Add(this.flPanelDSLV);

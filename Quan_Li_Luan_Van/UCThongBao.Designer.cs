@@ -32,8 +32,8 @@
             this.lbNoiDungTB = new System.Windows.Forms.Label();
             this.btnXem = new System.Windows.Forms.Button();
             this.lblThoiGian = new System.Windows.Forms.Label();
-            this.picBoxUser = new System.Windows.Forms.PictureBox();
             this.lblTrangThai = new System.Windows.Forms.Label();
+            this.picBoxUser = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxUser)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +66,7 @@
             this.btnXem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnXem.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnXem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXem.Location = new System.Drawing.Point(941, 49);
+            this.btnXem.Location = new System.Drawing.Point(957, 49);
             this.btnXem.Name = "btnXem";
             this.btnXem.Size = new System.Drawing.Size(89, 42);
             this.btnXem.TabIndex = 12;
@@ -86,16 +86,6 @@
             this.lblThoiGian.TabIndex = 13;
             this.lblThoiGian.Text = "17/03/2024 10:41:22";
             // 
-            // picBoxUser
-            // 
-            this.picBoxUser.Image = global::Quan_Li_Luan_Van.Properties.Resources.user1;
-            this.picBoxUser.Location = new System.Drawing.Point(19, 11);
-            this.picBoxUser.Name = "picBoxUser";
-            this.picBoxUser.Size = new System.Drawing.Size(81, 80);
-            this.picBoxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBoxUser.TabIndex = 0;
-            this.picBoxUser.TabStop = false;
-            // 
             // lblTrangThai
             // 
             this.lblTrangThai.AutoSize = true;
@@ -106,6 +96,16 @@
             this.lblTrangThai.Size = new System.Drawing.Size(63, 20);
             this.lblTrangThai.TabIndex = 14;
             this.lblTrangThai.Text = "Đã xem";
+            // 
+            // picBoxUser
+            // 
+            this.picBoxUser.Image = global::Quan_Li_Luan_Van.Properties.Resources.user1;
+            this.picBoxUser.Location = new System.Drawing.Point(19, 11);
+            this.picBoxUser.Name = "picBoxUser";
+            this.picBoxUser.Size = new System.Drawing.Size(81, 80);
+            this.picBoxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBoxUser.TabIndex = 0;
+            this.picBoxUser.TabStop = false;
             // 
             // UCThongBao
             // 
@@ -120,7 +120,7 @@
             this.Controls.Add(this.lblGV);
             this.Controls.Add(this.picBoxUser);
             this.Name = "UCThongBao";
-            this.Size = new System.Drawing.Size(1050, 100);
+            this.Size = new System.Drawing.Size(1060, 100);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

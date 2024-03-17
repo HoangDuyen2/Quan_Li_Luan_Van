@@ -35,9 +35,9 @@
             this.groupBoxTraCuuLuanVan = new System.Windows.Forms.GroupBox();
             this.comboxLoaiTraCuu = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.labelLoaiTraCuu = new System.Windows.Forms.Label();
-            this.buttonTimKiem = new System.Windows.Forms.Button();
             this.labelThongTinMonHoc = new System.Windows.Forms.Label();
             this.flPanelDSLV = new System.Windows.Forms.FlowLayoutPanel();
+            this.buttonTimKiem = new System.Windows.Forms.Button();
             this.panelTitle.SuspendLayout();
             this.groupBoxTraCuuLuanVan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboxLoaiTraCuu)).BeginInit();
@@ -50,7 +50,7 @@
             this.btnDangKi.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnDangKi.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnDangKi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangKi.Location = new System.Drawing.Point(781, 652);
+            this.btnDangKi.Location = new System.Drawing.Point(813, 613);
             this.btnDangKi.Name = "btnDangKi";
             this.btnDangKi.Size = new System.Drawing.Size(250, 42);
             this.btnDangKi.TabIndex = 21;
@@ -66,7 +66,7 @@
             this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitle.Location = new System.Drawing.Point(0, 0);
             this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(1067, 52);
+            this.panelTitle.Size = new System.Drawing.Size(1064, 52);
             this.panelTitle.TabIndex = 19;
             // 
             // label1
@@ -156,6 +156,24 @@
             this.labelLoaiTraCuu.TabIndex = 16;
             this.labelLoaiTraCuu.Text = "Tình trạng";
             // 
+            // labelThongTinMonHoc
+            // 
+            this.labelThongTinMonHoc.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.labelThongTinMonHoc.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.labelThongTinMonHoc.Location = new System.Drawing.Point(460, 40);
+            this.labelThongTinMonHoc.Name = "labelThongTinMonHoc";
+            this.labelThongTinMonHoc.Size = new System.Drawing.Size(110, 36);
+            this.labelThongTinMonHoc.TabIndex = 13;
+            this.labelThongTinMonHoc.Text = "Mã môn";
+            // 
+            // flPanelDSLV
+            // 
+            this.flPanelDSLV.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.flPanelDSLV.Location = new System.Drawing.Point(0, 159);
+            this.flPanelDSLV.Name = "flPanelDSLV";
+            this.flPanelDSLV.Size = new System.Drawing.Size(1067, 449);
+            this.flPanelDSLV.TabIndex = 22;
+            // 
             // buttonTimKiem
             // 
             this.buttonTimKiem.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -173,29 +191,11 @@
             this.buttonTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonTimKiem.UseVisualStyleBackColor = false;
             // 
-            // labelThongTinMonHoc
-            // 
-            this.labelThongTinMonHoc.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.labelThongTinMonHoc.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.labelThongTinMonHoc.Location = new System.Drawing.Point(460, 40);
-            this.labelThongTinMonHoc.Name = "labelThongTinMonHoc";
-            this.labelThongTinMonHoc.Size = new System.Drawing.Size(110, 36);
-            this.labelThongTinMonHoc.TabIndex = 13;
-            this.labelThongTinMonHoc.Text = "Mã môn";
-            // 
-            // flPanelDSLV
-            // 
-            this.flPanelDSLV.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.flPanelDSLV.Location = new System.Drawing.Point(0, 159);
-            this.flPanelDSLV.Name = "flPanelDSLV";
-            this.flPanelDSLV.Size = new System.Drawing.Size(1067, 483);
-            this.flPanelDSLV.TabIndex = 22;
-            // 
             // FDangKyLuanVan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 702);
+            this.ClientSize = new System.Drawing.Size(1064, 659);
             this.Controls.Add(this.flPanelDSLV);
             this.Controls.Add(this.btnDangKi);
             this.Controls.Add(this.panelTitle);

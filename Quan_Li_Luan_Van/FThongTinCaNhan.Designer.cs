@@ -382,7 +382,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1066, 743);
+            this.ClientSize = new System.Drawing.Size(1082, 706);
             this.Controls.Add(this.btnChinhSua);
             this.Controls.Add(this.picBoxUser);
             this.Controls.Add(this.dtBirth);

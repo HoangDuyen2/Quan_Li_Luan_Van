@@ -31,32 +31,32 @@
         {
             this.txtTenLuanVan = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtMaLuanVan = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.lbTenLuanVan = new System.Windows.Forms.Label();
-            this.lbMaLuanVan = new System.Windows.Forms.Label();
             this.txtChuyenNganh = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtHoTen = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtID = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.lbName = new System.Windows.Forms.Label();
-            this.lbID = new System.Windows.Forms.Label();
             this.rbNu = new System.Windows.Forms.RadioButton();
             this.rbNam = new System.Windows.Forms.RadioButton();
-            this.lbSex = new System.Windows.Forms.Label();
             this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.comboxSoLuong = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.lbSoLuong = new System.Windows.Forms.Label();
             this.btnTuChoi = new System.Windows.Forms.Button();
             this.btnChapNhan = new System.Windows.Forms.Button();
             this.txtGhiChu = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.lbGhiChu = new System.Windows.Forms.Label();
+            this.lbSoLuong = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbSex = new System.Windows.Forms.Label();
+            this.lbName = new System.Windows.Forms.Label();
+            this.lbID = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbTenLuanVan = new System.Windows.Forms.Label();
+            this.lbMaLuanVan = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.comboxSoLuong)).BeginInit();
             this.SuspendLayout();
             // 
             // txtTenLuanVan
             // 
             this.txtTenLuanVan.Enabled = false;
-            this.txtTenLuanVan.Location = new System.Drawing.Point(617, 33);
+            this.txtTenLuanVan.Location = new System.Drawing.Point(631, 21);
             this.txtTenLuanVan.Name = "txtTenLuanVan";
             this.txtTenLuanVan.Size = new System.Drawing.Size(357, 36);
             this.txtTenLuanVan.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -85,7 +85,7 @@
             // txtMaLuanVan
             // 
             this.txtMaLuanVan.Enabled = false;
-            this.txtMaLuanVan.Location = new System.Drawing.Point(149, 34);
+            this.txtMaLuanVan.Location = new System.Drawing.Point(163, 22);
             this.txtMaLuanVan.Name = "txtMaLuanVan";
             this.txtMaLuanVan.Size = new System.Drawing.Size(324, 36);
             this.txtMaLuanVan.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -103,30 +103,10 @@
             this.txtMaLuanVan.TabIndex = 27;
             this.txtMaLuanVan.Text = "LV001";
             // 
-            // lbTenLuanVan
-            // 
-            this.lbTenLuanVan.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenLuanVan.Image = global::Quan_Li_Luan_Van.Properties.Resources.card2;
-            this.lbTenLuanVan.Location = new System.Drawing.Point(533, 28);
-            this.lbTenLuanVan.Name = "lbTenLuanVan";
-            this.lbTenLuanVan.Size = new System.Drawing.Size(57, 42);
-            this.lbTenLuanVan.TabIndex = 26;
-            this.lbTenLuanVan.Text = "  ";
-            // 
-            // lbMaLuanVan
-            // 
-            this.lbMaLuanVan.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMaLuanVan.Image = global::Quan_Li_Luan_Van.Properties.Resources.id3;
-            this.lbMaLuanVan.Location = new System.Drawing.Point(71, 31);
-            this.lbMaLuanVan.Name = "lbMaLuanVan";
-            this.lbMaLuanVan.Size = new System.Drawing.Size(54, 43);
-            this.lbMaLuanVan.TabIndex = 25;
-            this.lbMaLuanVan.Text = "  ";
-            // 
             // txtChuyenNganh
             // 
             this.txtChuyenNganh.Enabled = false;
-            this.txtChuyenNganh.Location = new System.Drawing.Point(149, 124);
+            this.txtChuyenNganh.Location = new System.Drawing.Point(163, 112);
             this.txtChuyenNganh.Name = "txtChuyenNganh";
             this.txtChuyenNganh.Size = new System.Drawing.Size(324, 36);
             this.txtChuyenNganh.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -144,20 +124,10 @@
             this.txtChuyenNganh.TabIndex = 47;
             this.txtChuyenNganh.Text = "Công nghệ phần mềm";
             // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Image = global::Quan_Li_Luan_Van.Properties.Resources.major1;
-            this.label1.Location = new System.Drawing.Point(71, 121);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 43);
-            this.label1.TabIndex = 46;
-            this.label1.Text = "  ";
-            // 
             // txtHoTen
             // 
             this.txtHoTen.Enabled = false;
-            this.txtHoTen.Location = new System.Drawing.Point(149, 218);
+            this.txtHoTen.Location = new System.Drawing.Point(163, 206);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(324, 36);
             this.txtHoTen.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -186,7 +156,7 @@
             // txtID
             // 
             this.txtID.Enabled = false;
-            this.txtID.Location = new System.Drawing.Point(617, 121);
+            this.txtID.Location = new System.Drawing.Point(631, 109);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(357, 36);
             this.txtID.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -210,34 +180,13 @@
             this.txtID.TabIndex = 50;
             this.txtID.Text = "123456";
             // 
-            // lbName
-            // 
-            this.lbName.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.Image = global::Quan_Li_Luan_Van.Properties.Resources.user_profile1;
-            this.lbName.Location = new System.Drawing.Point(71, 214);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(61, 52);
-            this.lbName.TabIndex = 49;
-            this.lbName.Text = "  ";
-            this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbID
-            // 
-            this.lbID.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbID.Image = global::Quan_Li_Luan_Van.Properties.Resources.StudentCode;
-            this.lbID.Location = new System.Drawing.Point(526, 108);
-            this.lbID.Name = "lbID";
-            this.lbID.Size = new System.Drawing.Size(65, 60);
-            this.lbID.TabIndex = 48;
-            this.lbID.Text = "  ";
-            // 
             // rbNu
             // 
             this.rbNu.AutoSize = true;
             this.rbNu.Enabled = false;
             this.rbNu.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.rbNu.ForeColor = System.Drawing.Color.Black;
-            this.rbNu.Location = new System.Drawing.Point(817, 217);
+            this.rbNu.Location = new System.Drawing.Point(831, 205);
             this.rbNu.Name = "rbNu";
             this.rbNu.Size = new System.Drawing.Size(56, 28);
             this.rbNu.TabIndex = 54;
@@ -251,7 +200,7 @@
             this.rbNam.Enabled = false;
             this.rbNam.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.rbNam.ForeColor = System.Drawing.Color.Black;
-            this.rbNam.Location = new System.Drawing.Point(654, 217);
+            this.rbNam.Location = new System.Drawing.Point(668, 205);
             this.rbNam.Name = "rbNam";
             this.rbNam.Size = new System.Drawing.Size(72, 28);
             this.rbNam.TabIndex = 53;
@@ -259,20 +208,10 @@
             this.rbNam.Text = "Nam";
             this.rbNam.UseVisualStyleBackColor = true;
             // 
-            // lbSex
-            // 
-            this.lbSex.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSex.Image = global::Quan_Li_Luan_Van.Properties.Resources.sex6;
-            this.lbSex.Location = new System.Drawing.Point(529, 211);
-            this.lbSex.Name = "lbSex";
-            this.lbSex.Size = new System.Drawing.Size(64, 46);
-            this.lbSex.TabIndex = 52;
-            this.lbSex.Text = "  ";
-            // 
             // kryptonTextBox1
             // 
             this.kryptonTextBox1.Enabled = false;
-            this.kryptonTextBox1.Location = new System.Drawing.Point(149, 315);
+            this.kryptonTextBox1.Location = new System.Drawing.Point(163, 303);
             this.kryptonTextBox1.Name = "kryptonTextBox1";
             this.kryptonTextBox1.Size = new System.Drawing.Size(324, 36);
             this.kryptonTextBox1.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -298,17 +237,6 @@
             this.kryptonTextBox1.TabIndex = 56;
             this.kryptonTextBox1.Text = "178.5";
             // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Image = global::Quan_Li_Luan_Van.Properties.Resources.score;
-            this.label2.Location = new System.Drawing.Point(71, 311);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 52);
-            this.label2.TabIndex = 55;
-            this.label2.Text = "  ";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // comboxSoLuong
             // 
             this.comboxSoLuong.DropDownWidth = 261;
@@ -317,7 +245,7 @@
             "1",
             "2",
             "3"});
-            this.comboxSoLuong.Location = new System.Drawing.Point(617, 315);
+            this.comboxSoLuong.Location = new System.Drawing.Point(631, 303);
             this.comboxSoLuong.Name = "comboxSoLuong";
             this.comboxSoLuong.Size = new System.Drawing.Size(357, 39);
             this.comboxSoLuong.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
@@ -350,16 +278,6 @@
             this.comboxSoLuong.TabIndex = 58;
             this.comboxSoLuong.Text = "Số lượng";
             // 
-            // lbSoLuong
-            // 
-            this.lbSoLuong.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSoLuong.Image = global::Quan_Li_Luan_Van.Properties.Resources.people;
-            this.lbSoLuong.Location = new System.Drawing.Point(519, 303);
-            this.lbSoLuong.Name = "lbSoLuong";
-            this.lbSoLuong.Size = new System.Drawing.Size(80, 60);
-            this.lbSoLuong.TabIndex = 57;
-            this.lbSoLuong.Text = "  ";
-            // 
             // btnTuChoi
             // 
             this.btnTuChoi.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -367,7 +285,7 @@
             this.btnTuChoi.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnTuChoi.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnTuChoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTuChoi.Location = new System.Drawing.Point(636, 639);
+            this.btnTuChoi.Location = new System.Drawing.Point(651, 605);
             this.btnTuChoi.Name = "btnTuChoi";
             this.btnTuChoi.Size = new System.Drawing.Size(158, 42);
             this.btnTuChoi.TabIndex = 59;
@@ -383,7 +301,7 @@
             this.btnChapNhan.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnChapNhan.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnChapNhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChapNhan.Location = new System.Drawing.Point(844, 639);
+            this.btnChapNhan.Location = new System.Drawing.Point(856, 605);
             this.btnChapNhan.Name = "btnChapNhan";
             this.btnChapNhan.Size = new System.Drawing.Size(158, 42);
             this.btnChapNhan.TabIndex = 60;
@@ -395,10 +313,10 @@
             // txtGhiChu
             // 
             this.txtGhiChu.Enabled = false;
-            this.txtGhiChu.Location = new System.Drawing.Point(149, 401);
+            this.txtGhiChu.Location = new System.Drawing.Point(163, 389);
             this.txtGhiChu.Multiline = true;
             this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(825, 212);
+            this.txtGhiChu.Size = new System.Drawing.Size(825, 187);
             this.txtGhiChu.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtGhiChu.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.txtGhiChu.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -418,17 +336,99 @@
             // 
             this.lbGhiChu.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbGhiChu.Image = global::Quan_Li_Luan_Van.Properties.Resources.decribe1;
-            this.lbGhiChu.Location = new System.Drawing.Point(56, 384);
+            this.lbGhiChu.Location = new System.Drawing.Point(70, 372);
             this.lbGhiChu.Name = "lbGhiChu";
             this.lbGhiChu.Size = new System.Drawing.Size(89, 60);
             this.lbGhiChu.TabIndex = 61;
             this.lbGhiChu.Text = "  ";
             // 
+            // lbSoLuong
+            // 
+            this.lbSoLuong.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSoLuong.Image = global::Quan_Li_Luan_Van.Properties.Resources.people;
+            this.lbSoLuong.Location = new System.Drawing.Point(533, 291);
+            this.lbSoLuong.Name = "lbSoLuong";
+            this.lbSoLuong.Size = new System.Drawing.Size(80, 60);
+            this.lbSoLuong.TabIndex = 57;
+            this.lbSoLuong.Text = "  ";
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Image = global::Quan_Li_Luan_Van.Properties.Resources.score;
+            this.label2.Location = new System.Drawing.Point(85, 299);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 52);
+            this.label2.TabIndex = 55;
+            this.label2.Text = "  ";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbSex
+            // 
+            this.lbSex.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSex.Image = global::Quan_Li_Luan_Van.Properties.Resources.sex6;
+            this.lbSex.Location = new System.Drawing.Point(543, 199);
+            this.lbSex.Name = "lbSex";
+            this.lbSex.Size = new System.Drawing.Size(64, 46);
+            this.lbSex.TabIndex = 52;
+            this.lbSex.Text = "  ";
+            // 
+            // lbName
+            // 
+            this.lbName.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.Image = global::Quan_Li_Luan_Van.Properties.Resources.user_profile1;
+            this.lbName.Location = new System.Drawing.Point(85, 202);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(61, 52);
+            this.lbName.TabIndex = 49;
+            this.lbName.Text = "  ";
+            this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbID
+            // 
+            this.lbID.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbID.Image = global::Quan_Li_Luan_Van.Properties.Resources.StudentCode;
+            this.lbID.Location = new System.Drawing.Point(540, 96);
+            this.lbID.Name = "lbID";
+            this.lbID.Size = new System.Drawing.Size(65, 60);
+            this.lbID.TabIndex = 48;
+            this.lbID.Text = "  ";
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Image = global::Quan_Li_Luan_Van.Properties.Resources.major1;
+            this.label1.Location = new System.Drawing.Point(85, 109);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 43);
+            this.label1.TabIndex = 46;
+            this.label1.Text = "  ";
+            // 
+            // lbTenLuanVan
+            // 
+            this.lbTenLuanVan.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenLuanVan.Image = global::Quan_Li_Luan_Van.Properties.Resources.card2;
+            this.lbTenLuanVan.Location = new System.Drawing.Point(547, 16);
+            this.lbTenLuanVan.Name = "lbTenLuanVan";
+            this.lbTenLuanVan.Size = new System.Drawing.Size(57, 42);
+            this.lbTenLuanVan.TabIndex = 26;
+            this.lbTenLuanVan.Text = "  ";
+            // 
+            // lbMaLuanVan
+            // 
+            this.lbMaLuanVan.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaLuanVan.Image = global::Quan_Li_Luan_Van.Properties.Resources.id3;
+            this.lbMaLuanVan.Location = new System.Drawing.Point(85, 19);
+            this.lbMaLuanVan.Name = "lbMaLuanVan";
+            this.lbMaLuanVan.Size = new System.Drawing.Size(54, 43);
+            this.lbMaLuanVan.TabIndex = 25;
+            this.lbMaLuanVan.Text = "  ";
+            // 
             // FChiTietDuyet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1041, 702);
+            this.ClientSize = new System.Drawing.Size(1064, 659);
             this.Controls.Add(this.txtGhiChu);
             this.Controls.Add(this.lbGhiChu);
             this.Controls.Add(this.btnChapNhan);

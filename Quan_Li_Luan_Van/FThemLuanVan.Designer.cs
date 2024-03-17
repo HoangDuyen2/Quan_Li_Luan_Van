@@ -62,7 +62,7 @@
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdd.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.buttonAdd.ForeColor = System.Drawing.Color.Black;
-            this.buttonAdd.Location = new System.Drawing.Point(514, 578);
+            this.buttonAdd.Location = new System.Drawing.Point(521, 534);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(105, 39);
             this.buttonAdd.TabIndex = 9;
@@ -162,7 +162,7 @@
             this.panel2.Controls.Add(this.lbMaLuanVan);
             this.panel2.Location = new System.Drawing.Point(-9, 57);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1050, 642);
+            this.panel2.Size = new System.Drawing.Size(1075, 599);
             this.panel2.TabIndex = 5;
             // 
             // comboxTienTrinh
@@ -504,7 +504,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1041, 702);
+            this.ClientSize = new System.Drawing.Size(1064, 659);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.labelTieuDe);

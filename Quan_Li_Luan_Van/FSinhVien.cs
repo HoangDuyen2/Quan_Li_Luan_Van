@@ -75,7 +75,7 @@ namespace Quan_Li_Luan_Van
 
         private void btnLuanVan_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
