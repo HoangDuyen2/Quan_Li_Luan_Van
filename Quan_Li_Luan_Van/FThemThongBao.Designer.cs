@@ -176,6 +176,7 @@
             this.Name = "FThemThongBao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm thông báo";
+            this.Load += new System.EventHandler(this.FThemThongBao_Load);
             this.panelNoidung.ResumeLayout(false);
             this.panelNoidung.PerformLayout();
             this.ResumeLayout(false);

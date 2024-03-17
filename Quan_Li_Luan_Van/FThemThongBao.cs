@@ -16,5 +16,10 @@ namespace Quan_Li_Luan_Van
         {
             InitializeComponent();
         }
+
+        private void FThemThongBao_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

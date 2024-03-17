@@ -33,11 +33,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtMaMon = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.groupBoxTraCuuLuanVan = new System.Windows.Forms.GroupBox();
-            this.buttonTimKiem = new System.Windows.Forms.Button();
-            this.labelThongTinMonHoc = new System.Windows.Forms.Label();
-            this.flPanelDSLV = new System.Windows.Forms.FlowLayoutPanel();
             this.comboxLoaiTraCuu = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.labelLoaiTraCuu = new System.Windows.Forms.Label();
+            this.labelThongTinMonHoc = new System.Windows.Forms.Label();
+            this.flPanelDSLV = new System.Windows.Forms.FlowLayoutPanel();
+            this.buttonTimKiem = new System.Windows.Forms.Button();
             this.panelTitle.SuspendLayout();
             this.groupBoxTraCuuLuanVan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboxLoaiTraCuu)).BeginInit();
@@ -58,6 +58,7 @@
             this.btnDangKi.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnDangKi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDangKi.UseVisualStyleBackColor = false;
+            this.btnDangKi.Click += new System.EventHandler(this.btnDangKi_Click);
             // 
             // panelTitle
             // 
@@ -115,41 +116,6 @@
             this.groupBoxTraCuuLuanVan.TabStop = false;
             this.groupBoxTraCuuLuanVan.Text = "Tra cứu luận văn";
             // 
-            // buttonTimKiem
-            // 
-            this.buttonTimKiem.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.buttonTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTimKiem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.buttonTimKiem.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.buttonTimKiem.Image = global::Quan_Li_Luan_Van.Properties.Resources.find;
-            this.buttonTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonTimKiem.Location = new System.Drawing.Point(897, 32);
-            this.buttonTimKiem.Name = "buttonTimKiem";
-            this.buttonTimKiem.Size = new System.Drawing.Size(158, 42);
-            this.buttonTimKiem.TabIndex = 15;
-            this.buttonTimKiem.Text = "Tìm kiếm";
-            this.buttonTimKiem.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonTimKiem.UseVisualStyleBackColor = false;
-            // 
-            // labelThongTinMonHoc
-            // 
-            this.labelThongTinMonHoc.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.labelThongTinMonHoc.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.labelThongTinMonHoc.Location = new System.Drawing.Point(460, 40);
-            this.labelThongTinMonHoc.Name = "labelThongTinMonHoc";
-            this.labelThongTinMonHoc.Size = new System.Drawing.Size(110, 36);
-            this.labelThongTinMonHoc.TabIndex = 13;
-            this.labelThongTinMonHoc.Text = "Mã môn";
-            // 
-            // flPanelDSLV
-            // 
-            this.flPanelDSLV.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.flPanelDSLV.Location = new System.Drawing.Point(0, 159);
-            this.flPanelDSLV.Name = "flPanelDSLV";
-            this.flPanelDSLV.Size = new System.Drawing.Size(1067, 483);
-            this.flPanelDSLV.TabIndex = 22;
-            // 
             // comboxLoaiTraCuu
             // 
             this.comboxLoaiTraCuu.DropDownWidth = 261;
@@ -191,7 +157,42 @@
             this.labelLoaiTraCuu.TabIndex = 16;
             this.labelLoaiTraCuu.Text = "Tình trạng";
             // 
-            // FDKLV
+            // labelThongTinMonHoc
+            // 
+            this.labelThongTinMonHoc.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.labelThongTinMonHoc.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.labelThongTinMonHoc.Location = new System.Drawing.Point(460, 40);
+            this.labelThongTinMonHoc.Name = "labelThongTinMonHoc";
+            this.labelThongTinMonHoc.Size = new System.Drawing.Size(110, 36);
+            this.labelThongTinMonHoc.TabIndex = 13;
+            this.labelThongTinMonHoc.Text = "Mã môn";
+            // 
+            // flPanelDSLV
+            // 
+            this.flPanelDSLV.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.flPanelDSLV.Location = new System.Drawing.Point(0, 159);
+            this.flPanelDSLV.Name = "flPanelDSLV";
+            this.flPanelDSLV.Size = new System.Drawing.Size(1067, 483);
+            this.flPanelDSLV.TabIndex = 22;
+            // 
+            // buttonTimKiem
+            // 
+            this.buttonTimKiem.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.buttonTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTimKiem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonTimKiem.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.buttonTimKiem.Image = global::Quan_Li_Luan_Van.Properties.Resources.find;
+            this.buttonTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonTimKiem.Location = new System.Drawing.Point(897, 32);
+            this.buttonTimKiem.Name = "buttonTimKiem";
+            this.buttonTimKiem.Size = new System.Drawing.Size(158, 42);
+            this.buttonTimKiem.TabIndex = 15;
+            this.buttonTimKiem.Text = "Tìm kiếm";
+            this.buttonTimKiem.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonTimKiem.UseVisualStyleBackColor = false;
+            // 
+            // FDangKyLuanVan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -200,7 +201,7 @@
             this.Controls.Add(this.btnDangKi);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.groupBoxTraCuuLuanVan);
-            this.Name = "FDKLV";
+            this.Name = "FDangKyLuanVan";
             this.Text = "FDKLV";
             this.Load += new System.EventHandler(this.FDKLV_Load);
             this.panelTitle.ResumeLayout(false);

@@ -30,10 +30,13 @@
         {
             this.lbChuyenNganh = new System.Windows.Forms.Label();
             this.lbTenLV = new System.Windows.Forms.Label();
-            this.lbTrangThai = new System.Windows.Forms.Label();
+            this.lbSoLuong = new System.Windows.Forms.Label();
             this.buttonChiTiet = new System.Windows.Forms.Button();
-            this.pictureBoxNen = new System.Windows.Forms.PictureBox();
             this.btnDangKi = new System.Windows.Forms.Button();
+            this.pictureBoxNen = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,33 +45,36 @@
             this.lbChuyenNganh.AutoSize = true;
             this.lbChuyenNganh.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbChuyenNganh.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.lbChuyenNganh.Location = new System.Drawing.Point(137, 60);
+            this.lbChuyenNganh.Location = new System.Drawing.Point(117, 61);
             this.lbChuyenNganh.Name = "lbChuyenNganh";
             this.lbChuyenNganh.Size = new System.Drawing.Size(186, 23);
             this.lbChuyenNganh.TabIndex = 9;
             this.lbChuyenNganh.Text = "Công nghệ phần mềm";
+            this.lbChuyenNganh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbTenLV
             // 
             this.lbTenLV.AutoSize = true;
-            this.lbTenLV.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenLV.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTenLV.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbTenLV.Location = new System.Drawing.Point(130, 20);
+            this.lbTenLV.Location = new System.Drawing.Point(115, 19);
             this.lbTenLV.Name = "lbTenLV";
-            this.lbTenLV.Size = new System.Drawing.Size(221, 31);
+            this.lbTenLV.Size = new System.Drawing.Size(191, 27);
             this.lbTenLV.TabIndex = 8;
             this.lbTenLV.Text = "Quản lí khách sạn";
+            this.lbTenLV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbTrangThai
+            // lbSoLuong
             // 
-            this.lbTrangThai.AutoSize = true;
-            this.lbTrangThai.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTrangThai.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lbTrangThai.Location = new System.Drawing.Point(689, 28);
-            this.lbTrangThai.Name = "lbTrangThai";
-            this.lbTrangThai.Size = new System.Drawing.Size(113, 23);
-            this.lbTrangThai.TabIndex = 10;
-            this.lbTrangThai.Text = "Chưa đăng kí";
+            this.lbSoLuong.AutoSize = true;
+            this.lbSoLuong.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSoLuong.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lbSoLuong.Location = new System.Drawing.Point(1017, 6);
+            this.lbSoLuong.Name = "lbSoLuong";
+            this.lbSoLuong.Size = new System.Drawing.Size(17, 23);
+            this.lbSoLuong.TabIndex = 10;
+            this.lbSoLuong.Text = "1";
+            this.lbSoLuong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonChiTiet
             // 
@@ -77,23 +83,14 @@
             this.buttonChiTiet.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.buttonChiTiet.ForeColor = System.Drawing.SystemColors.Highlight;
             this.buttonChiTiet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonChiTiet.Location = new System.Drawing.Point(960, 78);
+            this.buttonChiTiet.Location = new System.Drawing.Point(931, 52);
             this.buttonChiTiet.Name = "buttonChiTiet";
-            this.buttonChiTiet.Size = new System.Drawing.Size(97, 42);
+            this.buttonChiTiet.Size = new System.Drawing.Size(114, 42);
             this.buttonChiTiet.TabIndex = 11;
             this.buttonChiTiet.Text = "Chi tiết";
             this.buttonChiTiet.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonChiTiet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonChiTiet.UseVisualStyleBackColor = false;
-            // 
-            // pictureBoxNen
-            // 
-            this.pictureBoxNen.Image = global::Quan_Li_Luan_Van.Properties.Resources.anhSubject;
-            this.pictureBoxNen.Location = new System.Drawing.Point(24, 17);
-            this.pictureBoxNen.Name = "pictureBoxNen";
-            this.pictureBoxNen.Size = new System.Drawing.Size(100, 100);
-            this.pictureBoxNen.TabIndex = 5;
-            this.pictureBoxNen.TabStop = false;
             // 
             // btnDangKi
             // 
@@ -102,28 +99,76 @@
             this.btnDangKi.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnDangKi.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnDangKi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangKi.Location = new System.Drawing.Point(847, 78);
+            this.btnDangKi.Location = new System.Drawing.Point(804, 52);
             this.btnDangKi.Name = "btnDangKi";
-            this.btnDangKi.Size = new System.Drawing.Size(97, 42);
+            this.btnDangKi.Size = new System.Drawing.Size(114, 42);
             this.btnDangKi.TabIndex = 12;
             this.btnDangKi.Text = "Đăng kí";
             this.btnDangKi.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnDangKi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDangKi.UseVisualStyleBackColor = false;
             // 
+            // pictureBoxNen
+            // 
+            this.pictureBoxNen.Image = global::Quan_Li_Luan_Van.Properties.Resources.anhSubject;
+            this.pictureBoxNen.Location = new System.Drawing.Point(33, 14);
+            this.pictureBoxNen.Name = "pictureBoxNen";
+            this.pictureBoxNen.Size = new System.Drawing.Size(78, 76);
+            this.pictureBoxNen.TabIndex = 5;
+            this.pictureBoxNen.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.ForestGreen;
+            this.label1.Location = new System.Drawing.Point(855, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(143, 23);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Số lượng còn lại: ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.ForestGreen;
+            this.label2.Location = new System.Drawing.Point(320, 61);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 23);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "GVHD:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.ForestGreen;
+            this.label3.Location = new System.Drawing.Point(383, 61);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(140, 23);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Đinh Công Đoan";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // UCLV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDangKi);
             this.Controls.Add(this.buttonChiTiet);
-            this.Controls.Add(this.lbTrangThai);
+            this.Controls.Add(this.lbSoLuong);
             this.Controls.Add(this.lbChuyenNganh);
             this.Controls.Add(this.lbTenLV);
             this.Controls.Add(this.pictureBoxNen);
             this.Name = "UCLV";
-            this.Size = new System.Drawing.Size(1060, 126);
+            this.Size = new System.Drawing.Size(1050, 100);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -135,8 +180,11 @@
         private System.Windows.Forms.Label lbChuyenNganh;
         private System.Windows.Forms.Label lbTenLV;
         private System.Windows.Forms.PictureBox pictureBoxNen;
-        private System.Windows.Forms.Label lbTrangThai;
+        private System.Windows.Forms.Label lbSoLuong;
         private System.Windows.Forms.Button buttonChiTiet;
         private System.Windows.Forms.Button btnDangKi;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

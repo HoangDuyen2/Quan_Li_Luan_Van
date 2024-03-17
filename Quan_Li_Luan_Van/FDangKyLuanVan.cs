@@ -22,5 +22,11 @@ namespace Quan_Li_Luan_Van
             UCLV uCLV = new UCLV();
             flPanelDSLV.Controls.Add(uCLV);
         }
+
+        private void btnDangKi_Click(object sender, EventArgs e)
+        {
+            FDangKyLuanVanMoi dklvmoi = new FDangKyLuanVanMoi();
+            dklvmoi.ShowDialog();
+        }
     }
 }

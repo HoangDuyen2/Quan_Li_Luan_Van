@@ -240,6 +240,7 @@
             this.Controls.Add(this.btnGuiYC);
             this.Controls.Add(this.lblThemTB);
             this.Name = "FDangKyLuanVanMoi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng ký luận văn mới";
             this.panelNoidung.ResumeLayout(false);
             this.panelNoidung.PerformLayout();
