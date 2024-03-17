@@ -228,6 +228,7 @@
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.lblTB);
             this.Name = "FChiTietThongBao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi Tiết Thông Báo";
             this.panelNoidung.ResumeLayout(false);
             this.panelNoidung.PerformLayout();

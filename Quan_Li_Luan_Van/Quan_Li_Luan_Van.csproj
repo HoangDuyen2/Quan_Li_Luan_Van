@@ -147,11 +147,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FTraCuu.cs">
+    <Compile Include="FDanhSachLuanVan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FTraCuu.Designer.cs">
-      <DependentUpon>FTraCuu.cs</DependentUpon>
+    <Compile Include="FDanhSachLuanVan.Designer.cs">
+      <DependentUpon>FDanhSachLuanVan.cs</DependentUpon>
     </Compile>
     <Compile Include="FThemLuanVan.cs">
       <SubType>Form</SubType>
@@ -220,8 +220,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="FTraCuu.resx">
-      <DependentUpon>FTraCuu.cs</DependentUpon>
+    <EmbeddedResource Include="FDanhSachLuanVan.resx">
+      <DependentUpon>FDanhSachLuanVan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FThemLuanVan.resx">
       <DependentUpon>FThemLuanVan.cs</DependentUpon>

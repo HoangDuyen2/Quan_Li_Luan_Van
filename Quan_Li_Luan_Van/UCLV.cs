@@ -16,5 +16,11 @@ namespace Quan_Li_Luan_Van
         {
             InitializeComponent();
         }
+
+        private void buttonChiTiet_Click(object sender, EventArgs e)
+        {
+            FChiTietLuanVan ctlv = new FChiTietLuanVan();
+            ctlv.ShowDialog();
+        }
     }
 }

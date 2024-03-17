@@ -76,7 +76,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label1.Location = new System.Drawing.Point(6, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(384, 35);
+            this.label1.Size = new System.Drawing.Size(357, 35);
             this.label1.TabIndex = 1;
             this.label1.Text = "ĐĂNG KÝ LUẬN VĂN";
             // 
@@ -120,9 +120,8 @@
             // 
             this.comboxLoaiTraCuu.DropDownWidth = 261;
             this.comboxLoaiTraCuu.Items.AddRange(new object[] {
-            "Chưa nhận",
-            "Đang tiến hành",
-            "Đã hoàn thành"});
+            "Có thể đăng ký",
+            "Không thể đăng ký"});
             this.comboxLoaiTraCuu.Location = new System.Drawing.Point(166, 35);
             this.comboxLoaiTraCuu.Name = "comboxLoaiTraCuu";
             this.comboxLoaiTraCuu.Size = new System.Drawing.Size(273, 39);
@@ -145,7 +144,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.comboxLoaiTraCuu.TabIndex = 17;
-            this.comboxLoaiTraCuu.Text = "Chưa nhận";
+            this.comboxLoaiTraCuu.Text = "Tất cả";
             // 
             // labelLoaiTraCuu
             // 
@@ -202,7 +201,7 @@
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.groupBoxTraCuuLuanVan);
             this.Name = "FDangKyLuanVan";
-            this.Text = "FDKLV";
+            this.Text = "Đăng ký luận văn";
             this.Load += new System.EventHandler(this.FDKLV_Load);
             this.panelTitle.ResumeLayout(false);
             this.groupBoxTraCuuLuanVan.ResumeLayout(false);

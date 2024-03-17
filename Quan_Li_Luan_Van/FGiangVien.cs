@@ -44,7 +44,7 @@ namespace Quan_Li_Luan_Van
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FTraCuu(), sender);
+            OpenChildForm(new FDanhSachLuanVan(), sender);
         }
 
         private void btnLuanVan_Click(object sender, EventArgs e)
