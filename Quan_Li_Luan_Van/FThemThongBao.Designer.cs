@@ -32,12 +32,12 @@
             this.lblThemTB = new System.Windows.Forms.Label();
             this.btnThem = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panelNoidung = new System.Windows.Forms.Panel();
+            this.txtNoiDungTB = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
+            this.checkListGui = new ComponentFactory.Krypton.Toolkit.KryptonCheckedListBox();
             this.lblNDTB = new System.Windows.Forms.Label();
             this.lblGuiDen = new System.Windows.Forms.Label();
             this.txtTenTieuDe = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.lblTieuDe = new System.Windows.Forms.Label();
-            this.checkListGui = new ComponentFactory.Krypton.Toolkit.KryptonCheckedListBox();
-            this.txtNoiDungTB = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
             this.panelNoidung.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,7 +46,7 @@
             this.lblThemTB.AutoSize = true;
             this.lblThemTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThemTB.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblThemTB.Location = new System.Drawing.Point(207, 18);
+            this.lblThemTB.Location = new System.Drawing.Point(248, 18);
             this.lblThemTB.Name = "lblThemTB";
             this.lblThemTB.Size = new System.Drawing.Size(195, 28);
             this.lblThemTB.TabIndex = 0;
@@ -74,6 +74,37 @@
             this.panelNoidung.Name = "panelNoidung";
             this.panelNoidung.Size = new System.Drawing.Size(653, 502);
             this.panelNoidung.TabIndex = 9;
+            // 
+            // txtNoiDungTB
+            // 
+            this.txtNoiDungTB.Location = new System.Drawing.Point(114, 288);
+            this.txtNoiDungTB.Name = "txtNoiDungTB";
+            this.txtNoiDungTB.Size = new System.Drawing.Size(516, 198);
+            this.txtNoiDungTB.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
+            this.txtNoiDungTB.StateCommon.Border.Color2 = System.Drawing.Color.Blue;
+            this.txtNoiDungTB.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtNoiDungTB.StateCommon.Border.Rounding = 12;
+            this.txtNoiDungTB.StateCommon.Border.Width = 1;
+            this.txtNoiDungTB.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.txtNoiDungTB.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F);
+            this.txtNoiDungTB.TabIndex = 29;
+            this.txtNoiDungTB.Text = "";
+            // 
+            // checkListGui
+            // 
+            this.checkListGui.Location = new System.Drawing.Point(114, 72);
+            this.checkListGui.Name = "checkListGui";
+            this.checkListGui.Size = new System.Drawing.Size(516, 170);
+            this.checkListGui.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
+            this.checkListGui.StateCommon.Border.Color2 = System.Drawing.Color.Blue;
+            this.checkListGui.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.checkListGui.StateCommon.Border.Rounding = 12;
+            this.checkListGui.StateCommon.Border.Width = 1;
+            this.checkListGui.TabIndex = 28;
             // 
             // lblNDTB
             // 
@@ -132,37 +163,6 @@
             this.lblTieuDe.Size = new System.Drawing.Size(80, 28);
             this.lblTieuDe.TabIndex = 0;
             this.lblTieuDe.Text = "Tiêu đề";
-            // 
-            // checkListGui
-            // 
-            this.checkListGui.Location = new System.Drawing.Point(114, 72);
-            this.checkListGui.Name = "checkListGui";
-            this.checkListGui.Size = new System.Drawing.Size(516, 170);
-            this.checkListGui.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
-            this.checkListGui.StateCommon.Border.Color2 = System.Drawing.Color.Blue;
-            this.checkListGui.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.checkListGui.StateCommon.Border.Rounding = 12;
-            this.checkListGui.StateCommon.Border.Width = 1;
-            this.checkListGui.TabIndex = 28;
-            // 
-            // txtNoiDungTB
-            // 
-            this.txtNoiDungTB.Location = new System.Drawing.Point(114, 288);
-            this.txtNoiDungTB.Name = "txtNoiDungTB";
-            this.txtNoiDungTB.Size = new System.Drawing.Size(516, 198);
-            this.txtNoiDungTB.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
-            this.txtNoiDungTB.StateCommon.Border.Color2 = System.Drawing.Color.Blue;
-            this.txtNoiDungTB.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtNoiDungTB.StateCommon.Border.Rounding = 12;
-            this.txtNoiDungTB.StateCommon.Border.Width = 1;
-            this.txtNoiDungTB.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtNoiDungTB.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F);
-            this.txtNoiDungTB.TabIndex = 29;
-            this.txtNoiDungTB.Text = "";
             // 
             // FThemThongBao
             // 

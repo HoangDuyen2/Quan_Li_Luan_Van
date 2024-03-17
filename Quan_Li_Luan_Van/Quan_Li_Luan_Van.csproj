@@ -91,6 +91,12 @@
     <Compile Include="FDangKyLuanVan.Designer.cs">
       <DependentUpon>FDangKyLuanVan.cs</DependentUpon>
     </Compile>
+    <Compile Include="FDangKyLuanVanMoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDangKyLuanVanMoi.Designer.cs">
+      <DependentUpon>FDangKyLuanVanMoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="FDuyetLuanVan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FDangKyLuanVan.resx">
       <DependentUpon>FDangKyLuanVan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDangKyLuanVanMoi.resx">
+      <DependentUpon>FDangKyLuanVanMoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FDuyetLuanVan.resx">
       <DependentUpon>FDuyetLuanVan.cs</DependentUpon>
