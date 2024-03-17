@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace Quan_Li_Luan_Van
 {
-    public partial class FNhom : Form
+    public partial class UCNhom : UserControl
     {
-        public FNhom()
+        public UCNhom()
         {
             InitializeComponent();
-        }
-
-        private void FNhom_Load(object sender, EventArgs e)
-        {
-            UCNhom uCDuyet = new UCNhom();
-            flpanelDSNhom.Controls.Add(uCDuyet);
         }
     }
 }
