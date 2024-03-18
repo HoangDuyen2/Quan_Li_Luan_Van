@@ -273,6 +273,16 @@ namespace Quan_Li_Luan_Van.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap education {
+            get {
+                object obj = ResourceManager.GetObject("education", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap email {
             get {
                 object obj = ResourceManager.GetObject("email", resourceCulture);
@@ -436,6 +446,26 @@ namespace Quan_Li_Luan_Van.Properties {
         internal static System.Drawing.Bitmap people {
             get {
                 object obj = ResourceManager.GetObject("people", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap people_in_white {
+            get {
+                object obj = ResourceManager.GetObject("people_in_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap people_in_white1 {
+            get {
+                object obj = ResourceManager.GetObject("people_in_white1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
