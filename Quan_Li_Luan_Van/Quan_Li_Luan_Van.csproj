@@ -127,6 +127,12 @@
     <Compile Include="FLuanVanToi.Designer.cs">
       <DependentUpon>FLuanVanToi.cs</DependentUpon>
     </Compile>
+    <Compile Include="FLuanVanToi_SV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLuanVanToi_SV.Designer.cs">
+      <DependentUpon>FLuanVanToi_SV.cs</DependentUpon>
+    </Compile>
     <Compile Include="FNhanXetChamDiem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,12 @@
     </Compile>
     <Compile Include="UCLVCuaToi.Designer.cs">
       <DependentUpon>UCLVCuaToi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCNhom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCNhom.Designer.cs">
+      <DependentUpon>UCNhom.cs</DependentUpon>
     </Compile>
     <Compile Include="UCTask.cs">
       <SubType>UserControl</SubType>
@@ -288,6 +300,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCLVCuaToi.resx">
       <DependentUpon>UCLVCuaToi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCNhom.resx">
+      <DependentUpon>UCNhom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCTask.resx">
       <DependentUpon>UCTask.cs</DependentUpon>

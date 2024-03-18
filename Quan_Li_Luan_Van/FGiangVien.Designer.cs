@@ -243,6 +243,7 @@
             this.btnDSNhom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDSNhom.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDSNhom.UseVisualStyleBackColor = true;
+            this.btnDSNhom.Click += new System.EventHandler(this.btnDSNhom_Click);
             // 
             // btnLuanVanCuaToi
             // 

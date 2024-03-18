@@ -34,9 +34,9 @@
             this.lbSoLuong = new System.Windows.Forms.Label();
             this.lbChuyenNganh = new System.Windows.Forms.Label();
             this.lbTenLV = new System.Windows.Forms.Label();
-            this.btnDangKi = new System.Windows.Forms.Button();
-            this.buttonChiTiet = new System.Windows.Forms.Button();
             this.pictureBoxNen = new System.Windows.Forms.PictureBox();
+            this.buttonChiTiet = new System.Windows.Forms.Button();
+            this.btnDangKi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,21 +112,14 @@
             this.lbTenLV.Text = "Quản lí khách sạn";
             this.lbTenLV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnDangKi
+            // pictureBoxNen
             // 
-            this.btnDangKi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
-            this.btnDangKi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDangKi.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnDangKi.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnDangKi.Image = global::Quan_Li_Luan_Van.Properties.Resources.edit;
-            this.btnDangKi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangKi.Location = new System.Drawing.Point(762, 49);
-            this.btnDangKi.Name = "btnDangKi";
-            this.btnDangKi.Size = new System.Drawing.Size(166, 42);
-            this.btnDangKi.TabIndex = 21;
-            this.btnDangKi.Text = "Chỉnh sửa";
-            this.btnDangKi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDangKi.UseVisualStyleBackColor = false;
+            this.pictureBoxNen.Image = global::Quan_Li_Luan_Van.Properties.Resources.anhSubject;
+            this.pictureBoxNen.Location = new System.Drawing.Point(19, 14);
+            this.pictureBoxNen.Name = "pictureBoxNen";
+            this.pictureBoxNen.Size = new System.Drawing.Size(78, 76);
+            this.pictureBoxNen.TabIndex = 16;
+            this.pictureBoxNen.TabStop = false;
             // 
             // buttonChiTiet
             // 
@@ -144,14 +137,21 @@
             this.buttonChiTiet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonChiTiet.UseVisualStyleBackColor = false;
             // 
-            // pictureBoxNen
+            // btnDangKi
             // 
-            this.pictureBoxNen.Image = global::Quan_Li_Luan_Van.Properties.Resources.anhSubject;
-            this.pictureBoxNen.Location = new System.Drawing.Point(19, 14);
-            this.pictureBoxNen.Name = "pictureBoxNen";
-            this.pictureBoxNen.Size = new System.Drawing.Size(78, 76);
-            this.pictureBoxNen.TabIndex = 16;
-            this.pictureBoxNen.TabStop = false;
+            this.btnDangKi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
+            this.btnDangKi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangKi.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnDangKi.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnDangKi.Image = global::Quan_Li_Luan_Van.Properties.Resources.edit;
+            this.btnDangKi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDangKi.Location = new System.Drawing.Point(762, 49);
+            this.btnDangKi.Name = "btnDangKi";
+            this.btnDangKi.Size = new System.Drawing.Size(166, 42);
+            this.btnDangKi.TabIndex = 21;
+            this.btnDangKi.Text = "Chỉnh sửa";
+            this.btnDangKi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDangKi.UseVisualStyleBackColor = false;
             // 
             // UCLVCuaToi
             // 
@@ -181,11 +181,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnDangKi;
-        private System.Windows.Forms.Button buttonChiTiet;
         private System.Windows.Forms.Label lbSoLuong;
         private System.Windows.Forms.Label lbChuyenNganh;
         private System.Windows.Forms.Label lbTenLV;
         private System.Windows.Forms.PictureBox pictureBoxNen;
+        private System.Windows.Forms.Button buttonChiTiet;
+        private System.Windows.Forms.Button btnDangKi;
     }
 }
