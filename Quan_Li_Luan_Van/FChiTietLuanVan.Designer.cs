@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtGVhd2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.lbGVHD2 = new System.Windows.Forms.Label();
             this.lbGioKT = new System.Windows.Forms.Label();
             this.lbNgayKT = new System.Windows.Forms.Label();
@@ -51,6 +50,7 @@
             this.lbMoTaChiTiet = new System.Windows.Forms.Label();
             this.lbTenLuanVan = new System.Windows.Forms.Label();
             this.lbMaLuanVan = new System.Windows.Forms.Label();
+            this.txtChuyenNganh = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboxTrangThai)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboxSoLuong)).BeginInit();
@@ -58,7 +58,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.txtGVhd2);
+            this.panel2.Controls.Add(this.txtChuyenNganh);
             this.panel2.Controls.Add(this.lbGVHD2);
             this.panel2.Controls.Add(this.lbGioKT);
             this.panel2.Controls.Add(this.lbNgayKT);
@@ -85,31 +85,10 @@
             this.panel2.Size = new System.Drawing.Size(1065, 678);
             this.panel2.TabIndex = 6;
             // 
-            // txtGVhd2
-            // 
-            this.txtGVhd2.Enabled = false;
-            this.txtGVhd2.Location = new System.Drawing.Point(631, 122);
-            this.txtGVhd2.Name = "txtGVhd2";
-            this.txtGVhd2.Size = new System.Drawing.Size(344, 36);
-            this.txtGVhd2.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.txtGVhd2.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
-            this.txtGVhd2.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.txtGVhd2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtGVhd2.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtGVhd2.StateCommon.Border.Rounding = 16;
-            this.txtGVhd2.StateCommon.Border.Width = 1;
-            this.txtGVhd2.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtGVhd2.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGVhd2.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.txtGVhd2.TabIndex = 47;
-            this.txtGVhd2.Text = "Nguyễn Minh Đạo";
-            // 
             // lbGVHD2
             // 
             this.lbGVHD2.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGVHD2.Image = global::Quan_Li_Luan_Van.Properties.Resources.lecture;
+            this.lbGVHD2.Image = global::Quan_Li_Luan_Van.Properties.Resources.major1;
             this.lbGVHD2.Location = new System.Drawing.Point(531, 110);
             this.lbGVHD2.Name = "lbGVHD2";
             this.lbGVHD2.Size = new System.Drawing.Size(74, 60);
@@ -482,6 +461,27 @@
             this.lbMaLuanVan.TabIndex = 14;
             this.lbMaLuanVan.Text = "  ";
             // 
+            // txtChuyenNganh
+            // 
+            this.txtChuyenNganh.Enabled = false;
+            this.txtChuyenNganh.Location = new System.Drawing.Point(631, 122);
+            this.txtChuyenNganh.Name = "txtChuyenNganh";
+            this.txtChuyenNganh.Size = new System.Drawing.Size(344, 36);
+            this.txtChuyenNganh.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.txtChuyenNganh.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
+            this.txtChuyenNganh.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.txtChuyenNganh.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtChuyenNganh.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtChuyenNganh.StateCommon.Border.Rounding = 16;
+            this.txtChuyenNganh.StateCommon.Border.Width = 1;
+            this.txtChuyenNganh.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.txtChuyenNganh.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtChuyenNganh.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.txtChuyenNganh.TabIndex = 47;
+            this.txtChuyenNganh.Text = "Công nghệ phần mềm";
+            // 
             // FChiTietLuanVan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -522,7 +522,7 @@
         private System.Windows.Forms.Label lbGioBD;
         private System.Windows.Forms.Label lbNgayKT;
         private System.Windows.Forms.Label lbGioKT;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtGVhd2;
         private System.Windows.Forms.Label lbGVHD2;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtChuyenNganh;
     }
 }

@@ -179,6 +179,7 @@
       <DependentUpon>FTrangChu.cs</DependentUpon>
     </Compile>
     <Compile Include="GiangVien.cs" />
+    <Compile Include="LuanVan.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -195,6 +196,7 @@
       <DependentUpon>FThemLuanVan.cs</DependentUpon>
     </Compile>
     <Compile Include="SinhVien.cs" />
+    <Compile Include="TaiKhoan.cs" />
     <Compile Include="UCDuyet.cs">
       <SubType>UserControl</SubType>
     </Compile>
