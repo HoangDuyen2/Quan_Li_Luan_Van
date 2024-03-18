@@ -233,7 +233,7 @@
             this.btnDSNhom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDSNhom.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnDSNhom.ForeColor = System.Drawing.Color.White;
-            this.btnDSNhom.Image = global::Quan_Li_Luan_Van.Properties.Resources.dang_xuat;
+            this.btnDSNhom.Image = global::Quan_Li_Luan_Van.Properties.Resources.people_in_white1;
             this.btnDSNhom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDSNhom.Location = new System.Drawing.Point(0, 582);
             this.btnDSNhom.Name = "btnDSNhom";
@@ -253,7 +253,7 @@
             this.btnLuanVanCuaToi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuanVanCuaToi.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnLuanVanCuaToi.ForeColor = System.Drawing.Color.White;
-            this.btnLuanVanCuaToi.Image = global::Quan_Li_Luan_Van.Properties.Resources.dang_xuat;
+            this.btnLuanVanCuaToi.Image = global::Quan_Li_Luan_Van.Properties.Resources.education;
             this.btnLuanVanCuaToi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLuanVanCuaToi.Location = new System.Drawing.Point(0, 519);
             this.btnLuanVanCuaToi.Name = "btnLuanVanCuaToi";

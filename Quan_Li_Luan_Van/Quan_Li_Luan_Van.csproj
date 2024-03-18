@@ -255,6 +255,9 @@
     <EmbeddedResource Include="FLuanVanToi.resx">
       <DependentUpon>FLuanVanToi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FLuanVanToi_SV.resx">
+      <DependentUpon>FLuanVanToi_SV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FNhanXetChamDiem.resx">
       <DependentUpon>FNhanXetChamDiem.cs</DependentUpon>
     </EmbeddedResource>
@@ -511,6 +514,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\add_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people_in_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people_in_white1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\education.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
