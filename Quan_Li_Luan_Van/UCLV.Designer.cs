@@ -33,9 +33,9 @@
             this.lbSoLuong = new System.Windows.Forms.Label();
             this.buttonChiTiet = new System.Windows.Forms.Button();
             this.btnDangKi = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblSLCL = new System.Windows.Forms.Label();
+            this.lblGVHD = new System.Windows.Forms.Label();
+            this.lblTenGV = new System.Windows.Forms.Label();
             this.pictureBoxNen = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNen)).BeginInit();
             this.SuspendLayout();
@@ -109,41 +109,42 @@
             this.btnDangKi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDangKi.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // lblSLCL
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label1.Location = new System.Drawing.Point(855, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 23);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Số lượng còn lại: ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSLCL.AutoSize = true;
+            this.lblSLCL.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSLCL.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lblSLCL.Location = new System.Drawing.Point(855, 6);
+            this.lblSLCL.Name = "lblSLCL";
+            this.lblSLCL.Size = new System.Drawing.Size(143, 23);
+            this.lblSLCL.TabIndex = 13;
+            this.lblSLCL.Text = "Số lượng còn lại: ";
+            this.lblSLCL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // lblGVHD
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label2.Location = new System.Drawing.Point(320, 61);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 23);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "GVHD:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblGVHD.AutoSize = true;
+            this.lblGVHD.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGVHD.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lblGVHD.Location = new System.Drawing.Point(320, 61);
+            this.lblGVHD.Name = "lblGVHD";
+            this.lblGVHD.Size = new System.Drawing.Size(62, 23);
+            this.lblGVHD.TabIndex = 14;
+            this.lblGVHD.Text = "GVHD:";
+            this.lblGVHD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // lblTenGV
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label3.Location = new System.Drawing.Point(383, 61);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 23);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Đinh Công Đoan";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTenGV.AutoSize = true;
+            this.lblTenGV.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenGV.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lblTenGV.Location = new System.Drawing.Point(383, 61);
+            this.lblTenGV.Name = "lblTenGV";
+            this.lblTenGV.Size = new System.Drawing.Size(140, 23);
+            this.lblTenGV.TabIndex = 15;
+            this.lblTenGV.Text = "Đinh Công Đoan";
+            this.lblTenGV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTenGV.Click += new System.EventHandler(this.lblTenGV_Click);
             // 
             // pictureBoxNen
             // 
@@ -160,9 +161,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTenGV);
+            this.Controls.Add(this.lblGVHD);
+            this.Controls.Add(this.lblSLCL);
             this.Controls.Add(this.btnDangKi);
             this.Controls.Add(this.buttonChiTiet);
             this.Controls.Add(this.lbSoLuong);
@@ -185,8 +186,8 @@
         private System.Windows.Forms.Label lbSoLuong;
         private System.Windows.Forms.Button buttonChiTiet;
         private System.Windows.Forms.Button btnDangKi;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblSLCL;
+        private System.Windows.Forms.Label lblGVHD;
+        private System.Windows.Forms.Label lblTenGV;
     }
 }
