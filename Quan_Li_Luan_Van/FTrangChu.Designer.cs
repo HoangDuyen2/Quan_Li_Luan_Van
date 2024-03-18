@@ -34,11 +34,11 @@
             this.lblTrangThai = new System.Windows.Forms.Label();
             this.dtNgayThang = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.btnThemThongBao = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.buttonTimKiem = new System.Windows.Forms.Button();
             this.lblChonngay = new System.Windows.Forms.Label();
             this.txtTimkiem = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.lblThongbao = new System.Windows.Forms.Label();
             this.flpanelDSThongBao = new System.Windows.Forms.FlowLayoutPanel();
-            this.buttonTimKiem = new System.Windows.Forms.Button();
             this.panelChucnang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cboxTrangThai)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +57,7 @@
             // 
             // panelChucnang
             // 
-            this.panelChucnang.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.panelChucnang.BackColor = System.Drawing.SystemColors.Control;
             this.panelChucnang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelChucnang.Controls.Add(this.cboxTrangThai);
             this.panelChucnang.Controls.Add(this.lblTrangThai);
@@ -71,7 +71,7 @@
             this.panelChucnang.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelChucnang.Location = new System.Drawing.Point(0, 0);
             this.panelChucnang.Name = "panelChucnang";
-            this.panelChucnang.Size = new System.Drawing.Size(1064, 127);
+            this.panelChucnang.Size = new System.Drawing.Size(1050, 127);
             this.panelChucnang.TabIndex = 5;
             // 
             // cboxTrangThai
@@ -116,7 +116,7 @@
             // lblTrangThai
             // 
             this.lblTrangThai.AutoSize = true;
-            this.lblTrangThai.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.lblTrangThai.BackColor = System.Drawing.SystemColors.Control;
             this.lblTrangThai.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTrangThai.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblTrangThai.Location = new System.Drawing.Point(299, 90);
@@ -162,10 +162,26 @@
             this.btnThemThongBao.Values.Text = "Thêm thông báo";
             this.btnThemThongBao.Click += new System.EventHandler(this.btnThemThongBao_Click);
             // 
+            // buttonTimKiem
+            // 
+            this.buttonTimKiem.AutoSize = true;
+            this.buttonTimKiem.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.buttonTimKiem.FlatAppearance.BorderSize = 0;
+            this.buttonTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTimKiem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonTimKiem.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.buttonTimKiem.Image = global::Quan_Li_Luan_Van.Properties.Resources.find;
+            this.buttonTimKiem.Location = new System.Drawing.Point(856, 78);
+            this.buttonTimKiem.Name = "buttonTimKiem";
+            this.buttonTimKiem.Size = new System.Drawing.Size(43, 36);
+            this.buttonTimKiem.TabIndex = 18;
+            this.buttonTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonTimKiem.UseVisualStyleBackColor = false;
+            // 
             // lblChonngay
             // 
             this.lblChonngay.AutoSize = true;
-            this.lblChonngay.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.lblChonngay.BackColor = System.Drawing.SystemColors.Control;
             this.lblChonngay.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChonngay.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblChonngay.Location = new System.Drawing.Point(4, 90);
@@ -207,33 +223,18 @@
             // 
             // flpanelDSThongBao
             // 
+            this.flpanelDSThongBao.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.flpanelDSThongBao.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpanelDSThongBao.Location = new System.Drawing.Point(0, 127);
             this.flpanelDSThongBao.Name = "flpanelDSThongBao";
-            this.flpanelDSThongBao.Size = new System.Drawing.Size(1064, 532);
+            this.flpanelDSThongBao.Size = new System.Drawing.Size(1050, 532);
             this.flpanelDSThongBao.TabIndex = 6;
-            // 
-            // buttonTimKiem
-            // 
-            this.buttonTimKiem.AutoSize = true;
-            this.buttonTimKiem.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.buttonTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTimKiem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.buttonTimKiem.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.buttonTimKiem.Image = global::Quan_Li_Luan_Van.Properties.Resources.find;
-            this.buttonTimKiem.Location = new System.Drawing.Point(856, 78);
-            this.buttonTimKiem.Name = "buttonTimKiem";
-            this.buttonTimKiem.Size = new System.Drawing.Size(43, 36);
-            this.buttonTimKiem.TabIndex = 18;
-            this.buttonTimKiem.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonTimKiem.UseVisualStyleBackColor = false;
             // 
             // FTrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1064, 659);
+            this.ClientSize = new System.Drawing.Size(1050, 659);
             this.Controls.Add(this.flpanelDSThongBao);
             this.Controls.Add(this.panelChucnang);
             this.Name = "FTrangChu";

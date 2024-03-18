@@ -58,7 +58,7 @@
             this.labelTieuDe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
             this.labelTieuDe.Font = new System.Drawing.Font("Book Antiqua", 18F, System.Drawing.FontStyle.Bold);
             this.labelTieuDe.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelTieuDe.Location = new System.Drawing.Point(0, 1);
+            this.labelTieuDe.Location = new System.Drawing.Point(4, 6);
             this.labelTieuDe.Name = "labelTieuDe";
             this.labelTieuDe.Size = new System.Drawing.Size(302, 35);
             this.labelTieuDe.TabIndex = 4;
@@ -387,11 +387,13 @@
             // 
             this.lbTrangThai.AutoSize = true;
             this.lbTrangThai.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTrangThai.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.lbTrangThai.Location = new System.Drawing.Point(543, 18);
             this.lbTrangThai.Name = "lbTrangThai";
             this.lbTrangThai.Size = new System.Drawing.Size(113, 27);
             this.lbTrangThai.TabIndex = 6;
             this.lbTrangThai.Text = "Trạng thái:";
+            this.lbTrangThai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbITrangThai
             // 

@@ -200,7 +200,7 @@
             // lbMaLuanVan
             // 
             this.lbMaLuanVan.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMaLuanVan.ForeColor = System.Drawing.Color.RosyBrown;
+            this.lbMaLuanVan.ForeColor = System.Drawing.Color.RoyalBlue;
             this.lbMaLuanVan.Image = global::Quan_Li_Luan_Van.Properties.Resources.id3;
             this.lbMaLuanVan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lbMaLuanVan.Location = new System.Drawing.Point(19, 23);

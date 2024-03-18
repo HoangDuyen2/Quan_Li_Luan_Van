@@ -44,6 +44,7 @@
             // 
             // panelNoidung
             // 
+            this.panelNoidung.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelNoidung.Controls.Add(this.txtThoiGian);
             this.panelNoidung.Controls.Add(this.lblThoiGian);
             this.panelNoidung.Controls.Add(this.txtNguoiGui);
@@ -52,6 +53,7 @@
             this.panelNoidung.Controls.Add(this.lblNDTB);
             this.panelNoidung.Controls.Add(this.txtTenTieuDe);
             this.panelNoidung.Controls.Add(this.lblTieuDe);
+            this.panelNoidung.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.panelNoidung.Location = new System.Drawing.Point(19, 59);
             this.panelNoidung.Name = "panelNoidung";
             this.panelNoidung.Size = new System.Drawing.Size(653, 502);
@@ -89,6 +91,7 @@
             // 
             this.lblThoiGian.AutoSize = true;
             this.lblThoiGian.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThoiGian.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.lblThoiGian.Location = new System.Drawing.Point(11, 150);
             this.lblThoiGian.Name = "lblThoiGian";
             this.lblThoiGian.Size = new System.Drawing.Size(132, 28);
@@ -127,6 +130,7 @@
             // 
             this.lblNguoiGui.AutoSize = true;
             this.lblNguoiGui.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNguoiGui.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.lblNguoiGui.Location = new System.Drawing.Point(11, 82);
             this.lblNguoiGui.Name = "lblNguoiGui";
             this.lblNguoiGui.Size = new System.Drawing.Size(103, 28);
@@ -154,6 +158,7 @@
             // 
             this.lblNDTB.AutoSize = true;
             this.lblNDTB.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNDTB.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.lblNDTB.Location = new System.Drawing.Point(11, 214);
             this.lblNDTB.Name = "lblNDTB";
             this.lblNDTB.Size = new System.Drawing.Size(205, 28);
@@ -192,6 +197,7 @@
             // 
             this.lblTieuDe.AutoSize = true;
             this.lblTieuDe.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTieuDe.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.lblTieuDe.Location = new System.Drawing.Point(11, 17);
             this.lblTieuDe.Name = "lblTieuDe";
             this.lblTieuDe.Size = new System.Drawing.Size(80, 28);

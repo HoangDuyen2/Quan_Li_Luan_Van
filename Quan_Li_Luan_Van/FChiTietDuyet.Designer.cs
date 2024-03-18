@@ -185,7 +185,7 @@
             this.rbNu.AutoSize = true;
             this.rbNu.Enabled = false;
             this.rbNu.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rbNu.ForeColor = System.Drawing.Color.Black;
+            this.rbNu.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.rbNu.Location = new System.Drawing.Point(831, 205);
             this.rbNu.Name = "rbNu";
             this.rbNu.Size = new System.Drawing.Size(56, 28);
@@ -199,7 +199,7 @@
             this.rbNam.AutoSize = true;
             this.rbNam.Enabled = false;
             this.rbNam.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rbNam.ForeColor = System.Drawing.Color.Black;
+            this.rbNam.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.rbNam.Location = new System.Drawing.Point(668, 205);
             this.rbNam.Name = "rbNam";
             this.rbNam.Size = new System.Drawing.Size(72, 28);
