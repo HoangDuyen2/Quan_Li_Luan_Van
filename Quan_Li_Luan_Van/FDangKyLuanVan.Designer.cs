@@ -50,7 +50,7 @@
             this.btnDangKi.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnDangKi.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnDangKi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangKi.Location = new System.Drawing.Point(813, 613);
+            this.btnDangKi.Location = new System.Drawing.Point(814, 659);
             this.btnDangKi.Name = "btnDangKi";
             this.btnDangKi.Size = new System.Drawing.Size(250, 42);
             this.btnDangKi.TabIndex = 21;
@@ -171,7 +171,7 @@
             this.flPanelDSLV.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.flPanelDSLV.Location = new System.Drawing.Point(0, 159);
             this.flPanelDSLV.Name = "flPanelDSLV";
-            this.flPanelDSLV.Size = new System.Drawing.Size(1067, 449);
+            this.flPanelDSLV.Size = new System.Drawing.Size(1067, 494);
             this.flPanelDSLV.TabIndex = 22;
             // 
             // buttonTimKiem
@@ -195,7 +195,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1064, 659);
+            this.ClientSize = new System.Drawing.Size(1064, 702);
             this.Controls.Add(this.flPanelDSLV);
             this.Controls.Add(this.btnDangKi);
             this.Controls.Add(this.panelTitle);

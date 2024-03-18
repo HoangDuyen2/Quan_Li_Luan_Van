@@ -30,6 +30,11 @@
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtGVhd2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.lbGVHD2 = new System.Windows.Forms.Label();
+            this.lbGioKT = new System.Windows.Forms.Label();
+            this.lbNgayKT = new System.Windows.Forms.Label();
+            this.lbGioBD = new System.Windows.Forms.Label();
+            this.lbNgayBD = new System.Windows.Forms.Label();
             this.comboxTrangThai = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.txtGVhd = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.comboxSoLuong = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
@@ -37,15 +42,10 @@
             this.dtGioBD = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.dtNgayKT = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.dtNgayBD = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.lbSoLuong = new System.Windows.Forms.Label();
             this.txtMoTa = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtTenLuanVan = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtMaLuanVan = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.lbGVHD2 = new System.Windows.Forms.Label();
-            this.lbGioKT = new System.Windows.Forms.Label();
-            this.lbNgayKT = new System.Windows.Forms.Label();
-            this.lbGioBD = new System.Windows.Forms.Label();
-            this.lbNgayBD = new System.Windows.Forms.Label();
-            this.lbSoLuong = new System.Windows.Forms.Label();
             this.lbTrangThai = new System.Windows.Forms.Label();
             this.lbGVHD = new System.Windows.Forms.Label();
             this.lbMoTaChiTiet = new System.Windows.Forms.Label();
@@ -82,7 +82,7 @@
             this.panel2.Controls.Add(this.lbMaLuanVan);
             this.panel2.Location = new System.Drawing.Point(-1, 20);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1065, 635);
+            this.panel2.Size = new System.Drawing.Size(1065, 678);
             this.panel2.TabIndex = 6;
             // 
             // txtGVhd2
@@ -105,6 +105,68 @@
             this.txtGVhd2.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtGVhd2.TabIndex = 47;
             this.txtGVhd2.Text = "Nguyễn Minh Đạo";
+            // 
+            // lbGVHD2
+            // 
+            this.lbGVHD2.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGVHD2.Image = global::Quan_Li_Luan_Van.Properties.Resources.lecture;
+            this.lbGVHD2.Location = new System.Drawing.Point(531, 110);
+            this.lbGVHD2.Name = "lbGVHD2";
+            this.lbGVHD2.Size = new System.Drawing.Size(74, 60);
+            this.lbGVHD2.TabIndex = 46;
+            this.lbGVHD2.Text = "  ";
+            // 
+            // lbGioKT
+            // 
+            this.lbGioKT.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGioKT.ForeColor = System.Drawing.Color.Blue;
+            this.lbGioKT.Image = global::Quan_Li_Luan_Van.Properties.Resources.start1;
+            this.lbGioKT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbGioKT.Location = new System.Drawing.Point(555, 273);
+            this.lbGioKT.Name = "lbGioKT";
+            this.lbGioKT.Size = new System.Drawing.Size(53, 58);
+            this.lbGioKT.TabIndex = 45;
+            this.lbGioKT.Text = "  end";
+            this.lbGioKT.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // lbNgayKT
+            // 
+            this.lbNgayKT.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNgayKT.ForeColor = System.Drawing.Color.Blue;
+            this.lbNgayKT.Image = global::Quan_Li_Luan_Van.Properties.Resources.date1;
+            this.lbNgayKT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbNgayKT.Location = new System.Drawing.Point(93, 276);
+            this.lbNgayKT.Name = "lbNgayKT";
+            this.lbNgayKT.Size = new System.Drawing.Size(49, 58);
+            this.lbNgayKT.TabIndex = 44;
+            this.lbNgayKT.Text = "  end";
+            this.lbNgayKT.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // lbGioBD
+            // 
+            this.lbGioBD.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGioBD.ForeColor = System.Drawing.Color.Blue;
+            this.lbGioBD.Image = global::Quan_Li_Luan_Van.Properties.Resources.start1;
+            this.lbGioBD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbGioBD.Location = new System.Drawing.Point(555, 183);
+            this.lbGioBD.Name = "lbGioBD";
+            this.lbGioBD.Size = new System.Drawing.Size(70, 64);
+            this.lbGioBD.TabIndex = 43;
+            this.lbGioBD.Text = "  start";
+            this.lbGioBD.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // lbNgayBD
+            // 
+            this.lbNgayBD.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNgayBD.ForeColor = System.Drawing.Color.Blue;
+            this.lbNgayBD.Image = global::Quan_Li_Luan_Van.Properties.Resources.date1;
+            this.lbNgayBD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbNgayBD.Location = new System.Drawing.Point(94, 177);
+            this.lbNgayBD.Name = "lbNgayBD";
+            this.lbNgayBD.Size = new System.Drawing.Size(73, 72);
+            this.lbNgayBD.TabIndex = 42;
+            this.lbNgayBD.Text = "  start";
+            this.lbNgayBD.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // comboxTrangThai
             // 
@@ -288,10 +350,20 @@
             this.dtNgayBD.TabIndex = 34;
             this.dtNgayBD.ValueNullable = new System.DateTime(2024, 3, 10, 0, 0, 0, 0);
             // 
+            // lbSoLuong
+            // 
+            this.lbSoLuong.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSoLuong.Image = global::Quan_Li_Luan_Van.Properties.Resources.people;
+            this.lbSoLuong.Location = new System.Drawing.Point(533, 352);
+            this.lbSoLuong.Name = "lbSoLuong";
+            this.lbSoLuong.Size = new System.Drawing.Size(80, 60);
+            this.lbSoLuong.TabIndex = 32;
+            this.lbSoLuong.Text = "  ";
+            // 
             // txtMoTa
             // 
             this.txtMoTa.Enabled = false;
-            this.txtMoTa.Location = new System.Drawing.Point(168, 425);
+            this.txtMoTa.Location = new System.Drawing.Point(168, 460);
             this.txtMoTa.Multiline = true;
             this.txtMoTa.Name = "txtMoTa";
             this.txtMoTa.Size = new System.Drawing.Size(807, 177);
@@ -360,78 +432,6 @@
             this.txtMaLuanVan.TabIndex = 22;
             this.txtMaLuanVan.Text = "LV001";
             // 
-            // lbGVHD2
-            // 
-            this.lbGVHD2.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGVHD2.Image = global::Quan_Li_Luan_Van.Properties.Resources.lecture;
-            this.lbGVHD2.Location = new System.Drawing.Point(531, 110);
-            this.lbGVHD2.Name = "lbGVHD2";
-            this.lbGVHD2.Size = new System.Drawing.Size(74, 60);
-            this.lbGVHD2.TabIndex = 46;
-            this.lbGVHD2.Text = "  ";
-            // 
-            // lbGioKT
-            // 
-            this.lbGioKT.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGioKT.ForeColor = System.Drawing.Color.Blue;
-            this.lbGioKT.Image = global::Quan_Li_Luan_Van.Properties.Resources.start1;
-            this.lbGioKT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbGioKT.Location = new System.Drawing.Point(555, 273);
-            this.lbGioKT.Name = "lbGioKT";
-            this.lbGioKT.Size = new System.Drawing.Size(53, 58);
-            this.lbGioKT.TabIndex = 45;
-            this.lbGioKT.Text = "  end";
-            this.lbGioKT.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // lbNgayKT
-            // 
-            this.lbNgayKT.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNgayKT.ForeColor = System.Drawing.Color.Blue;
-            this.lbNgayKT.Image = global::Quan_Li_Luan_Van.Properties.Resources.date1;
-            this.lbNgayKT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbNgayKT.Location = new System.Drawing.Point(93, 276);
-            this.lbNgayKT.Name = "lbNgayKT";
-            this.lbNgayKT.Size = new System.Drawing.Size(49, 58);
-            this.lbNgayKT.TabIndex = 44;
-            this.lbNgayKT.Text = "  end";
-            this.lbNgayKT.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // lbGioBD
-            // 
-            this.lbGioBD.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGioBD.ForeColor = System.Drawing.Color.Blue;
-            this.lbGioBD.Image = global::Quan_Li_Luan_Van.Properties.Resources.start1;
-            this.lbGioBD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbGioBD.Location = new System.Drawing.Point(555, 183);
-            this.lbGioBD.Name = "lbGioBD";
-            this.lbGioBD.Size = new System.Drawing.Size(70, 64);
-            this.lbGioBD.TabIndex = 43;
-            this.lbGioBD.Text = "  start";
-            this.lbGioBD.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // lbNgayBD
-            // 
-            this.lbNgayBD.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNgayBD.ForeColor = System.Drawing.Color.Blue;
-            this.lbNgayBD.Image = global::Quan_Li_Luan_Van.Properties.Resources.date1;
-            this.lbNgayBD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbNgayBD.Location = new System.Drawing.Point(94, 177);
-            this.lbNgayBD.Name = "lbNgayBD";
-            this.lbNgayBD.Size = new System.Drawing.Size(73, 72);
-            this.lbNgayBD.TabIndex = 42;
-            this.lbNgayBD.Text = "  start";
-            this.lbNgayBD.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // lbSoLuong
-            // 
-            this.lbSoLuong.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSoLuong.Image = global::Quan_Li_Luan_Van.Properties.Resources.people;
-            this.lbSoLuong.Location = new System.Drawing.Point(533, 352);
-            this.lbSoLuong.Name = "lbSoLuong";
-            this.lbSoLuong.Size = new System.Drawing.Size(80, 60);
-            this.lbSoLuong.TabIndex = 32;
-            this.lbSoLuong.Text = "  ";
-            // 
             // lbTrangThai
             // 
             this.lbTrangThai.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -456,7 +456,7 @@
             // 
             this.lbMoTaChiTiet.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMoTaChiTiet.Image = global::Quan_Li_Luan_Van.Properties.Resources.decribe1;
-            this.lbMoTaChiTiet.Location = new System.Drawing.Point(64, 410);
+            this.lbMoTaChiTiet.Location = new System.Drawing.Point(64, 428);
             this.lbMoTaChiTiet.Name = "lbMoTaChiTiet";
             this.lbMoTaChiTiet.Size = new System.Drawing.Size(89, 60);
             this.lbMoTaChiTiet.TabIndex = 16;
@@ -486,7 +486,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1064, 659);
+            this.ClientSize = new System.Drawing.Size(1064, 702);
             this.Controls.Add(this.panel2);
             this.Name = "FChiTietLuanVan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

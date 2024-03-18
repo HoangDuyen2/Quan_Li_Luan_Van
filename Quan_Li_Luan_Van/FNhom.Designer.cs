@@ -41,7 +41,7 @@
             this.PanelTieuDe.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelTieuDe.Location = new System.Drawing.Point(0, 0);
             this.PanelTieuDe.Name = "PanelTieuDe";
-            this.PanelTieuDe.Size = new System.Drawing.Size(1050, 58);
+            this.PanelTieuDe.Size = new System.Drawing.Size(1064, 58);
             this.PanelTieuDe.TabIndex = 0;
             // 
             // label1
@@ -61,13 +61,13 @@
             this.flpanelDSNhom.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.flpanelDSNhom.Location = new System.Drawing.Point(0, 64);
             this.flpanelDSNhom.Name = "flpanelDSNhom";
-            this.flpanelDSNhom.Size = new System.Drawing.Size(1038, 561);
+            this.flpanelDSNhom.Size = new System.Drawing.Size(1064, 579);
             this.flpanelDSNhom.TabIndex = 1;
             // 
             // btnThem
             // 
             this.btnThem.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
-            this.btnThem.Location = new System.Drawing.Point(857, 629);
+            this.btnThem.Location = new System.Drawing.Point(895, 660);
             this.btnThem.Name = "btnThem";
             this.btnThem.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
             this.btnThem.Size = new System.Drawing.Size(169, 40);
@@ -78,7 +78,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1050, 659);
+            this.ClientSize = new System.Drawing.Size(1064, 702);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.flpanelDSNhom);
             this.Controls.Add(this.PanelTieuDe);
