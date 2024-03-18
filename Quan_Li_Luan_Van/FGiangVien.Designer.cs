@@ -42,7 +42,7 @@
             this.panelTenTruong = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.picboxUser = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnDangXuat = new System.Windows.Forms.Button();
             this.btnDSNhom = new System.Windows.Forms.Button();
             this.btnLuanVanCuaToi = new System.Windows.Forms.Button();
             this.btnDuyetLV = new System.Windows.Forms.Button();
@@ -180,7 +180,7 @@
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
             this.panelMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelMenu.Controls.Add(this.button2);
+            this.panelMenu.Controls.Add(this.btnDangXuat);
             this.panelMenu.Controls.Add(this.btnDSNhom);
             this.panelMenu.Controls.Add(this.btnLuanVanCuaToi);
             this.panelMenu.Controls.Add(this.btnDuyetLV);
@@ -206,24 +206,25 @@
             this.picboxUser.TabStop = false;
             this.picboxUser.Click += new System.EventHandler(this.picboxUser_Click);
             // 
-            // button2
+            // btnDangXuat
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::Quan_Li_Luan_Van.Properties.Resources.dang_xuat;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 645);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(252, 63);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "  Đăng xuất";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDangXuat.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDangXuat.FlatAppearance.BorderSize = 0;
+            this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangXuat.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnDangXuat.ForeColor = System.Drawing.Color.White;
+            this.btnDangXuat.Image = global::Quan_Li_Luan_Van.Properties.Resources.dang_xuat;
+            this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDangXuat.Location = new System.Drawing.Point(0, 645);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnDangXuat.Size = new System.Drawing.Size(252, 63);
+            this.btnDangXuat.TabIndex = 10;
+            this.btnDangXuat.Text = "  Đăng xuất";
+            this.btnDangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDangXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDangXuat.UseVisualStyleBackColor = true;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
             // btnDSNhom
             // 
@@ -395,6 +396,6 @@
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.PictureBox picboxUser;
         private System.Windows.Forms.Button btnDSNhom;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnDangXuat;
     }
 }
