@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelTieuDe = new System.Windows.Forms.Label();
             this.panelChucnang = new System.Windows.Forms.Panel();
             this.cboxTrangThai = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.lblTrangThai = new System.Windows.Forms.Label();
@@ -39,26 +38,16 @@
             this.txtTimkiem = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.lblThongbao = new System.Windows.Forms.Label();
             this.flpanelDSThongBao = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblTieuDe = new System.Windows.Forms.Label();
             this.panelChucnang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cboxTrangThai)).BeginInit();
             this.SuspendLayout();
-            // 
-            // labelTieuDe
-            // 
-            this.labelTieuDe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
-            this.labelTieuDe.Font = new System.Drawing.Font("Book Antiqua", 18F, System.Drawing.FontStyle.Bold);
-            this.labelTieuDe.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelTieuDe.Location = new System.Drawing.Point(12, 9);
-            this.labelTieuDe.Name = "labelTieuDe";
-            this.labelTieuDe.Size = new System.Drawing.Size(234, 41);
-            this.labelTieuDe.TabIndex = 3;
-            this.labelTieuDe.Text = "TRANG CHỦ";
-            this.labelTieuDe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelChucnang
             // 
             this.panelChucnang.BackColor = System.Drawing.SystemColors.Control;
             this.panelChucnang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelChucnang.Controls.Add(this.lblTieuDe);
             this.panelChucnang.Controls.Add(this.cboxTrangThai);
             this.panelChucnang.Controls.Add(this.lblTrangThai);
             this.panelChucnang.Controls.Add(this.dtNgayThang);
@@ -67,7 +56,6 @@
             this.panelChucnang.Controls.Add(this.lblChonngay);
             this.panelChucnang.Controls.Add(this.txtTimkiem);
             this.panelChucnang.Controls.Add(this.lblThongbao);
-            this.panelChucnang.Controls.Add(this.labelTieuDe);
             this.panelChucnang.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelChucnang.Location = new System.Drawing.Point(0, 0);
             this.panelChucnang.Name = "panelChucnang";
@@ -230,6 +218,18 @@
             this.flpanelDSThongBao.Size = new System.Drawing.Size(1050, 532);
             this.flpanelDSThongBao.TabIndex = 6;
             // 
+            // lblTieuDe
+            // 
+            this.lblTieuDe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
+            this.lblTieuDe.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTieuDe.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.lblTieuDe.Location = new System.Drawing.Point(14, 4);
+            this.lblTieuDe.Name = "lblTieuDe";
+            this.lblTieuDe.Size = new System.Drawing.Size(232, 41);
+            this.lblTieuDe.TabIndex = 54;
+            this.lblTieuDe.Text = "TRANG CHỦ";
+            this.lblTieuDe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FTrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -248,7 +248,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label labelTieuDe;
         private System.Windows.Forms.Panel panelChucnang;
         private System.Windows.Forms.Label lblThongbao;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtTimkiem;
@@ -259,5 +258,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dtNgayThang;
         private System.Windows.Forms.Label lblTrangThai;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox cboxTrangThai;
+        private System.Windows.Forms.Label lblTieuDe;
     }
 }

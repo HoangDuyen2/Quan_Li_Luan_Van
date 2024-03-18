@@ -72,17 +72,19 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
-            this.label1.Font = new System.Drawing.Font("Book Antiqua", 18F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label1.Location = new System.Drawing.Point(6, 9);
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(379, 35);
+            this.label1.Size = new System.Drawing.Size(301, 41);
             this.label1.TabIndex = 1;
             this.label1.Text = "ĐĂNG KÝ LUẬN VĂN";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtMaMon
             // 
-            this.txtMaMon.Location = new System.Drawing.Point(524, 29);
+            this.txtMaMon.Location = new System.Drawing.Point(524, 28);
             this.txtMaMon.Name = "txtMaMon";
             this.txtMaMon.Size = new System.Drawing.Size(297, 36);
             this.txtMaMon.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -111,7 +113,7 @@
             this.groupBoxTraCuuLuanVan.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.groupBoxTraCuuLuanVan.Location = new System.Drawing.Point(0, 58);
             this.groupBoxTraCuuLuanVan.Name = "groupBoxTraCuuLuanVan";
-            this.groupBoxTraCuuLuanVan.Size = new System.Drawing.Size(1182, 81);
+            this.groupBoxTraCuuLuanVan.Size = new System.Drawing.Size(1182, 77);
             this.groupBoxTraCuuLuanVan.TabIndex = 17;
             this.groupBoxTraCuuLuanVan.TabStop = false;
             this.groupBoxTraCuuLuanVan.Text = "Tra cứu luận văn";
@@ -122,7 +124,7 @@
             this.comboxLoaiTraCuu.Items.AddRange(new object[] {
             "Có thể đăng ký",
             "Không thể đăng ký"});
-            this.comboxLoaiTraCuu.Location = new System.Drawing.Point(135, 29);
+            this.comboxLoaiTraCuu.Location = new System.Drawing.Point(135, 28);
             this.comboxLoaiTraCuu.Name = "comboxLoaiTraCuu";
             this.comboxLoaiTraCuu.Size = new System.Drawing.Size(273, 39);
             this.comboxLoaiTraCuu.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Blue;
@@ -150,7 +152,7 @@
             // 
             this.labelLoaiTraCuu.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold);
             this.labelLoaiTraCuu.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.labelLoaiTraCuu.Location = new System.Drawing.Point(26, 40);
+            this.labelLoaiTraCuu.Location = new System.Drawing.Point(26, 39);
             this.labelLoaiTraCuu.Name = "labelLoaiTraCuu";
             this.labelLoaiTraCuu.Size = new System.Drawing.Size(103, 24);
             this.labelLoaiTraCuu.TabIndex = 16;
@@ -164,7 +166,7 @@
             this.buttonTimKiem.ForeColor = System.Drawing.SystemColors.Highlight;
             this.buttonTimKiem.Image = global::Quan_Li_Luan_Van.Properties.Resources.find;
             this.buttonTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonTimKiem.Location = new System.Drawing.Point(894, 26);
+            this.buttonTimKiem.Location = new System.Drawing.Point(894, 25);
             this.buttonTimKiem.Name = "buttonTimKiem";
             this.buttonTimKiem.Size = new System.Drawing.Size(158, 42);
             this.buttonTimKiem.TabIndex = 15;
@@ -177,7 +179,7 @@
             // 
             this.labelThongTinMonHoc.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold);
             this.labelThongTinMonHoc.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.labelThongTinMonHoc.Location = new System.Drawing.Point(436, 35);
+            this.labelThongTinMonHoc.Location = new System.Drawing.Point(436, 34);
             this.labelThongTinMonHoc.Name = "labelThongTinMonHoc";
             this.labelThongTinMonHoc.Size = new System.Drawing.Size(82, 29);
             this.labelThongTinMonHoc.TabIndex = 13;
@@ -187,9 +189,9 @@
             // flPanelDSLV
             // 
             this.flPanelDSLV.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.flPanelDSLV.Location = new System.Drawing.Point(0, 141);
+            this.flPanelDSLV.Location = new System.Drawing.Point(0, 132);
             this.flPanelDSLV.Name = "flPanelDSLV";
-            this.flPanelDSLV.Size = new System.Drawing.Size(1067, 498);
+            this.flPanelDSLV.Size = new System.Drawing.Size(1052, 507);
             this.flPanelDSLV.TabIndex = 22;
             // 
             // FDangKyLuanVan

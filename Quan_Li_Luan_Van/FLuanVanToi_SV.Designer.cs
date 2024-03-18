@@ -33,6 +33,7 @@
             this.comboxLoaiTraCuu = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.labelLoaiTraCuu = new System.Windows.Forms.Label();
             this.buttonTimKiem = new System.Windows.Forms.Button();
+            this.labelTieuDe = new System.Windows.Forms.Label();
             this.groupBoxTraCuuLuanVan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboxLoaiTraCuu)).BeginInit();
             this.SuspendLayout();
@@ -40,13 +41,14 @@
             // flPanelDSTask
             // 
             this.flPanelDSTask.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.flPanelDSTask.Location = new System.Drawing.Point(0, 103);
+            this.flPanelDSTask.Location = new System.Drawing.Point(0, 123);
             this.flPanelDSTask.Name = "flPanelDSTask";
-            this.flPanelDSTask.Size = new System.Drawing.Size(1067, 559);
+            this.flPanelDSTask.Size = new System.Drawing.Size(1067, 580);
             this.flPanelDSTask.TabIndex = 30;
             // 
             // groupBoxTraCuuLuanVan
             // 
+            this.groupBoxTraCuuLuanVan.Controls.Add(this.labelTieuDe);
             this.groupBoxTraCuuLuanVan.Controls.Add(this.comboxLoaiTraCuu);
             this.groupBoxTraCuuLuanVan.Controls.Add(this.labelLoaiTraCuu);
             this.groupBoxTraCuuLuanVan.Controls.Add(this.buttonTimKiem);
@@ -54,7 +56,7 @@
             this.groupBoxTraCuuLuanVan.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.groupBoxTraCuuLuanVan.Location = new System.Drawing.Point(-6, 5);
             this.groupBoxTraCuuLuanVan.Name = "groupBoxTraCuuLuanVan";
-            this.groupBoxTraCuuLuanVan.Size = new System.Drawing.Size(1073, 95);
+            this.groupBoxTraCuuLuanVan.Size = new System.Drawing.Size(1073, 121);
             this.groupBoxTraCuuLuanVan.TabIndex = 29;
             this.groupBoxTraCuuLuanVan.TabStop = false;
             // 
@@ -65,7 +67,7 @@
             "Chưa nộp task",
             "Đợi chấm điểm",
             "Đã chấm điểm"});
-            this.comboxLoaiTraCuu.Location = new System.Drawing.Point(170, 46);
+            this.comboxLoaiTraCuu.Location = new System.Drawing.Point(145, 64);
             this.comboxLoaiTraCuu.Name = "comboxLoaiTraCuu";
             this.comboxLoaiTraCuu.Size = new System.Drawing.Size(228, 39);
             this.comboxLoaiTraCuu.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Blue;
@@ -91,13 +93,13 @@
             // 
             // labelLoaiTraCuu
             // 
-            this.labelLoaiTraCuu.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLoaiTraCuu.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold);
             this.labelLoaiTraCuu.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.labelLoaiTraCuu.Location = new System.Drawing.Point(27, 52);
+            this.labelLoaiTraCuu.Location = new System.Drawing.Point(42, 73);
             this.labelLoaiTraCuu.Name = "labelLoaiTraCuu";
-            this.labelLoaiTraCuu.Size = new System.Drawing.Size(127, 33);
+            this.labelLoaiTraCuu.Size = new System.Drawing.Size(105, 25);
             this.labelLoaiTraCuu.TabIndex = 16;
-            this.labelLoaiTraCuu.Text = "Tình trạng";
+            this.labelLoaiTraCuu.Text = "Trạng thái";
             // 
             // buttonTimKiem
             // 
@@ -106,13 +108,25 @@
             this.buttonTimKiem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.buttonTimKiem.ForeColor = System.Drawing.SystemColors.Highlight;
             this.buttonTimKiem.Image = global::Quan_Li_Luan_Van.Properties.Resources.find;
-            this.buttonTimKiem.Location = new System.Drawing.Point(421, 45);
+            this.buttonTimKiem.Location = new System.Drawing.Point(389, 64);
             this.buttonTimKiem.Name = "buttonTimKiem";
-            this.buttonTimKiem.Size = new System.Drawing.Size(43, 42);
+            this.buttonTimKiem.Size = new System.Drawing.Size(43, 39);
             this.buttonTimKiem.TabIndex = 15;
             this.buttonTimKiem.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonTimKiem.UseVisualStyleBackColor = false;
+            // 
+            // labelTieuDe
+            // 
+            this.labelTieuDe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
+            this.labelTieuDe.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTieuDe.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.labelTieuDe.Location = new System.Drawing.Point(18, 4);
+            this.labelTieuDe.Name = "labelTieuDe";
+            this.labelTieuDe.Size = new System.Drawing.Size(269, 41);
+            this.labelTieuDe.TabIndex = 18;
+            this.labelTieuDe.Text = "LUẬN VĂN CỦA TÔI";
+            this.labelTieuDe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FLuanVanToi_SV
             // 
@@ -137,5 +151,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox comboxLoaiTraCuu;
         private System.Windows.Forms.Label labelLoaiTraCuu;
         private System.Windows.Forms.Button buttonTimKiem;
+        private System.Windows.Forms.Label labelTieuDe;
     }
 }
