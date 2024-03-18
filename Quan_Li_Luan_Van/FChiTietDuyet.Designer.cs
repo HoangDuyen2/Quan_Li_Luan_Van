@@ -285,7 +285,7 @@
             this.btnTuChoi.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnTuChoi.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnTuChoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTuChoi.Location = new System.Drawing.Point(651, 605);
+            this.btnTuChoi.Location = new System.Drawing.Point(651, 648);
             this.btnTuChoi.Name = "btnTuChoi";
             this.btnTuChoi.Size = new System.Drawing.Size(158, 42);
             this.btnTuChoi.TabIndex = 59;
@@ -301,7 +301,7 @@
             this.btnChapNhan.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnChapNhan.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnChapNhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChapNhan.Location = new System.Drawing.Point(856, 605);
+            this.btnChapNhan.Location = new System.Drawing.Point(853, 648);
             this.btnChapNhan.Name = "btnChapNhan";
             this.btnChapNhan.Size = new System.Drawing.Size(158, 42);
             this.btnChapNhan.TabIndex = 60;
@@ -428,7 +428,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1064, 659);
+            this.ClientSize = new System.Drawing.Size(1064, 702);
             this.Controls.Add(this.txtGhiChu);
             this.Controls.Add(this.lbGhiChu);
             this.Controls.Add(this.btnChapNhan);

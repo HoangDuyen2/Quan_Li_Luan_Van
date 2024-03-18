@@ -30,13 +30,13 @@
         {
             this.lbTienTrinh = new System.Windows.Forms.Label();
             this.lbTenLV = new System.Windows.Forms.Label();
-            this.pictureBoxNen = new System.Windows.Forms.PictureBox();
-            this.btnChinhSua = new System.Windows.Forms.Button();
-            this.buttonXoa = new System.Windows.Forms.Button();
-            this.btnChiTiet = new System.Windows.Forms.Button();
             this.lbSoTienTrinh = new System.Windows.Forms.Label();
             this.lbTT = new System.Windows.Forms.Label();
             this.lbTrangThai = new System.Windows.Forms.Label();
+            this.btnChinhSua = new System.Windows.Forms.Button();
+            this.buttonXoa = new System.Windows.Forms.Button();
+            this.btnChiTiet = new System.Windows.Forms.Button();
+            this.pictureBoxNen = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,14 +64,41 @@
             this.lbTenLV.Text = "Thiết kế UI";
             this.lbTenLV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBoxNen
+            // lbSoTienTrinh
             // 
-            this.pictureBoxNen.Image = global::Quan_Li_Luan_Van.Properties.Resources.anhSubject;
-            this.pictureBoxNen.Location = new System.Drawing.Point(31, 12);
-            this.pictureBoxNen.Name = "pictureBoxNen";
-            this.pictureBoxNen.Size = new System.Drawing.Size(78, 76);
-            this.pictureBoxNen.TabIndex = 22;
-            this.pictureBoxNen.TabStop = false;
+            this.lbSoTienTrinh.AutoSize = true;
+            this.lbSoTienTrinh.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSoTienTrinh.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.lbSoTienTrinh.Location = new System.Drawing.Point(209, 59);
+            this.lbSoTienTrinh.Name = "lbSoTienTrinh";
+            this.lbSoTienTrinh.Size = new System.Drawing.Size(43, 23);
+            this.lbSoTienTrinh.TabIndex = 31;
+            this.lbSoTienTrinh.Text = "40%";
+            this.lbSoTienTrinh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbTT
+            // 
+            this.lbTT.AutoSize = true;
+            this.lbTT.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTT.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lbTT.Location = new System.Drawing.Point(795, 12);
+            this.lbTT.Name = "lbTT";
+            this.lbTT.Size = new System.Drawing.Size(91, 23);
+            this.lbTT.TabIndex = 33;
+            this.lbTT.Text = "Trạng thái:";
+            this.lbTT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbTrangThai
+            // 
+            this.lbTrangThai.AutoSize = true;
+            this.lbTrangThai.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTrangThai.ForeColor = System.Drawing.Color.Red;
+            this.lbTrangThai.Location = new System.Drawing.Point(901, 12);
+            this.lbTrangThai.Name = "lbTrangThai";
+            this.lbTrangThai.Size = new System.Drawing.Size(133, 23);
+            this.lbTrangThai.TabIndex = 32;
+            this.lbTrangThai.Text = "Chờ chấm điểm";
+            this.lbTrangThai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnChinhSua
             // 
@@ -121,41 +148,14 @@
             this.btnChiTiet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnChiTiet.UseVisualStyleBackColor = false;
             // 
-            // lbSoTienTrinh
+            // pictureBoxNen
             // 
-            this.lbSoTienTrinh.AutoSize = true;
-            this.lbSoTienTrinh.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSoTienTrinh.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.lbSoTienTrinh.Location = new System.Drawing.Point(209, 59);
-            this.lbSoTienTrinh.Name = "lbSoTienTrinh";
-            this.lbSoTienTrinh.Size = new System.Drawing.Size(43, 23);
-            this.lbSoTienTrinh.TabIndex = 31;
-            this.lbSoTienTrinh.Text = "40%";
-            this.lbSoTienTrinh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbTT
-            // 
-            this.lbTT.AutoSize = true;
-            this.lbTT.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTT.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lbTT.Location = new System.Drawing.Point(795, 12);
-            this.lbTT.Name = "lbTT";
-            this.lbTT.Size = new System.Drawing.Size(91, 23);
-            this.lbTT.TabIndex = 33;
-            this.lbTT.Text = "Trạng thái:";
-            this.lbTT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbTrangThai
-            // 
-            this.lbTrangThai.AutoSize = true;
-            this.lbTrangThai.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTrangThai.ForeColor = System.Drawing.Color.Red;
-            this.lbTrangThai.Location = new System.Drawing.Point(901, 12);
-            this.lbTrangThai.Name = "lbTrangThai";
-            this.lbTrangThai.Size = new System.Drawing.Size(133, 23);
-            this.lbTrangThai.TabIndex = 32;
-            this.lbTrangThai.Text = "Chờ chấm điểm";
-            this.lbTrangThai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pictureBoxNen.Image = global::Quan_Li_Luan_Van.Properties.Resources.anhSubject;
+            this.pictureBoxNen.Location = new System.Drawing.Point(31, 12);
+            this.pictureBoxNen.Name = "pictureBoxNen";
+            this.pictureBoxNen.Size = new System.Drawing.Size(78, 76);
+            this.pictureBoxNen.TabIndex = 22;
+            this.pictureBoxNen.TabStop = false;
             // 
             // UCTask
             // 
@@ -173,7 +173,7 @@
             this.Controls.Add(this.lbTenLV);
             this.Controls.Add(this.pictureBoxNen);
             this.Name = "UCTask";
-            this.Size = new System.Drawing.Size(1058, 98);
+            this.Size = new System.Drawing.Size(1060, 100);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

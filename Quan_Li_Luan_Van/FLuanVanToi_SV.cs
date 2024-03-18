@@ -16,5 +16,11 @@ namespace Quan_Li_Luan_Van
         {
             InitializeComponent();
         }
+
+        private void FLuanVanToi_SV_Load(object sender, EventArgs e)
+        {
+            UCTask uCTask = new UCTask();
+            flPanelDSTask.Controls.Add(uCTask); 
+        }
     }
 }

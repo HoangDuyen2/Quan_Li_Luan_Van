@@ -68,9 +68,9 @@
             this.btnDSTV.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnDSTV.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnDSTV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDSTV.Location = new System.Drawing.Point(581, 49);
+            this.btnDSTV.Location = new System.Drawing.Point(594, 48);
             this.btnDSTV.Name = "btnDSTV";
-            this.btnDSTV.Size = new System.Drawing.Size(157, 42);
+            this.btnDSTV.Size = new System.Drawing.Size(186, 42);
             this.btnDSTV.TabIndex = 19;
             this.btnDSTV.Text = "DS Thành viên";
             this.btnDSTV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -93,7 +93,7 @@
             this.btnTienTrinh.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnTienTrinh.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnTienTrinh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTienTrinh.Location = new System.Drawing.Point(751, 49);
+            this.btnTienTrinh.Location = new System.Drawing.Point(786, 48);
             this.btnTienTrinh.Name = "btnTienTrinh";
             this.btnTienTrinh.Size = new System.Drawing.Size(128, 42);
             this.btnTienTrinh.TabIndex = 20;
@@ -108,7 +108,7 @@
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.SystemColors.Highlight;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(892, 49);
+            this.button2.Location = new System.Drawing.Point(920, 48);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(126, 42);
             this.button2.TabIndex = 21;
@@ -121,6 +121,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnTienTrinh);
             this.Controls.Add(this.btnDSTV);
@@ -128,7 +129,7 @@
             this.Controls.Add(this.lbTenLV);
             this.Controls.Add(this.pictureBoxNen);
             this.Name = "UCNhom";
-            this.Size = new System.Drawing.Size(1050, 100);
+            this.Size = new System.Drawing.Size(1058, 98);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

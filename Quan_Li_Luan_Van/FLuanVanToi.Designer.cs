@@ -34,8 +34,8 @@
             this.groupBoxTraCuuLuanVan = new System.Windows.Forms.GroupBox();
             this.comboxLoaiTraCuu = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.labelLoaiTraCuu = new System.Windows.Forms.Label();
-            this.flPanelDSLV = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonTimKiem = new System.Windows.Forms.Button();
+            this.flPanelDSLV = new System.Windows.Forms.FlowLayoutPanel();
             this.panelTitle.SuspendLayout();
             this.groupBoxTraCuuLuanVan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboxLoaiTraCuu)).BeginInit();
@@ -48,7 +48,7 @@
             this.btnDangKi.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnDangKi.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnDangKi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangKi.Location = new System.Drawing.Point(878, 614);
+            this.btnDangKi.Location = new System.Drawing.Point(880, 660);
             this.btnDangKi.Name = "btnDangKi";
             this.btnDangKi.Size = new System.Drawing.Size(184, 42);
             this.btnDangKi.TabIndex = 25;
@@ -130,14 +130,6 @@
             this.labelLoaiTraCuu.TabIndex = 16;
             this.labelLoaiTraCuu.Text = "Tình trạng";
             // 
-            // flPanelDSLV
-            // 
-            this.flPanelDSLV.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.flPanelDSLV.Location = new System.Drawing.Point(0, 150);
-            this.flPanelDSLV.Name = "flPanelDSLV";
-            this.flPanelDSLV.Size = new System.Drawing.Size(1064, 458);
-            this.flPanelDSLV.TabIndex = 26;
-            // 
             // buttonTimKiem
             // 
             this.buttonTimKiem.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -153,11 +145,19 @@
             this.buttonTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonTimKiem.UseVisualStyleBackColor = false;
             // 
+            // flPanelDSLV
+            // 
+            this.flPanelDSLV.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.flPanelDSLV.Location = new System.Drawing.Point(0, 150);
+            this.flPanelDSLV.Name = "flPanelDSLV";
+            this.flPanelDSLV.Size = new System.Drawing.Size(1064, 504);
+            this.flPanelDSLV.TabIndex = 26;
+            // 
             // FLuanVanToi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1064, 659);
+            this.ClientSize = new System.Drawing.Size(1064, 702);
             this.Controls.Add(this.btnDangKi);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.groupBoxTraCuuLuanVan);

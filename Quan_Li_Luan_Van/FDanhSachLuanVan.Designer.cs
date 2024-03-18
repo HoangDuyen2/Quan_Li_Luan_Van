@@ -32,12 +32,12 @@
             this.lbChuyenNganh = new System.Windows.Forms.Label();
             this.comboxChuyenNganh = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.panelPhanCach = new System.Windows.Forms.Panel();
+            this.flowPanelLuanVan = new System.Windows.Forms.FlowLayoutPanel();
             this.lbMaLuanVan = new System.Windows.Forms.Label();
             this.lbTrangThai = new System.Windows.Forms.Label();
             this.comboxLoaiTraCuu = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.txthongTinMonHoc = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.labelTieuDe = new System.Windows.Forms.Label();
-            this.flowPanelLuanVan = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonTimKiem = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboxChuyenNganh)).BeginInit();
@@ -116,6 +116,13 @@
             this.panelPhanCach.Name = "panelPhanCach";
             this.panelPhanCach.Size = new System.Drawing.Size(1085, 527);
             this.panelPhanCach.TabIndex = 14;
+            // 
+            // flowPanelLuanVan
+            // 
+            this.flowPanelLuanVan.Location = new System.Drawing.Point(-1, 0);
+            this.flowPanelLuanVan.Name = "flowPanelLuanVan";
+            this.flowPanelLuanVan.Size = new System.Drawing.Size(1059, 520);
+            this.flowPanelLuanVan.TabIndex = 0;
             // 
             // lbMaLuanVan
             // 
@@ -208,13 +215,6 @@
             this.labelTieuDe.TabIndex = 12;
             this.labelTieuDe.Text = "DANH SÁCH LUẬN VĂN";
             // 
-            // flowPanelLuanVan
-            // 
-            this.flowPanelLuanVan.Location = new System.Drawing.Point(-1, 0);
-            this.flowPanelLuanVan.Name = "flowPanelLuanVan";
-            this.flowPanelLuanVan.Size = new System.Drawing.Size(1059, 520);
-            this.flowPanelLuanVan.TabIndex = 0;
-            // 
             // buttonTimKiem
             // 
             this.buttonTimKiem.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -236,7 +236,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1064, 659);
+            this.ClientSize = new System.Drawing.Size(1064, 702);
             this.Controls.Add(this.labelTieuDe);
             this.Controls.Add(this.panel2);
             this.Name = "FDanhSachLuanVan";

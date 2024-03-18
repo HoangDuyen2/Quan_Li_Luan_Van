@@ -118,11 +118,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1064, 659);
+            this.ClientSize = new System.Drawing.Size(1064, 702);
             this.Controls.Add(this.flPanelDSTask);
             this.Controls.Add(this.groupBoxTraCuuLuanVan);
             this.Name = "FLuanVanToi_SV";
             this.Text = "FLuanVanToi_SV";
+            this.Load += new System.EventHandler(this.FLuanVanToi_SV_Load);
             this.groupBoxTraCuuLuanVan.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.comboxLoaiTraCuu)).EndInit();
             this.ResumeLayout(false);

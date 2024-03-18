@@ -38,11 +38,9 @@
             this.comboxTrangThai = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.dtGioKT = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.dtGioBD = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.lbGioKT = new System.Windows.Forms.Label();
             this.dtNgayBD = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.dtNgayKT = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
-            this.labelTieuDe = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbGioKT = new System.Windows.Forms.Label();
             this.lbTienDo = new System.Windows.Forms.Label();
             this.lbGioBD = new System.Windows.Forms.Label();
             this.lbNgayKT = new System.Windows.Forms.Label();
@@ -52,6 +50,8 @@
             this.lbMoTaChiTiet = new System.Windows.Forms.Label();
             this.lbTenLuanVan = new System.Windows.Forms.Label();
             this.lbMaLuanVan = new System.Windows.Forms.Label();
+            this.labelTieuDe = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboxTienTrinh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboxTrangThai)).BeginInit();
@@ -62,7 +62,7 @@
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdd.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.buttonAdd.ForeColor = System.Drawing.Color.Black;
-            this.buttonAdd.Location = new System.Drawing.Point(521, 534);
+            this.buttonAdd.Location = new System.Drawing.Point(514, 585);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(105, 39);
             this.buttonAdd.TabIndex = 9;
@@ -162,7 +162,7 @@
             this.panel2.Controls.Add(this.lbMaLuanVan);
             this.panel2.Location = new System.Drawing.Point(-9, 57);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1075, 599);
+            this.panel2.Size = new System.Drawing.Size(1075, 647);
             this.panel2.TabIndex = 5;
             // 
             // comboxTienTrinh
@@ -222,7 +222,7 @@
             this.checkListBoxChuyenNganh.ItemStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorOverflow;
             this.checkListBoxChuyenNganh.Location = new System.Drawing.Point(160, 393);
             this.checkListBoxChuyenNganh.Name = "checkListBoxChuyenNganh";
-            this.checkListBoxChuyenNganh.Size = new System.Drawing.Size(856, 123);
+            this.checkListBoxChuyenNganh.Size = new System.Drawing.Size(856, 161);
             this.checkListBoxChuyenNganh.StateCheckedNormal.Item.Content.LongText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkListBoxChuyenNganh.StateCheckedNormal.Item.Content.ShortText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkListBoxChuyenNganh.StateCheckedPressed.Item.Content.LongText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -326,6 +326,19 @@
             this.dtGioBD.TabIndex = 37;
             this.dtGioBD.ValueNullable = new System.DateTime(2024, 3, 10, 0, 0, 0, 0);
             // 
+            // lbGioKT
+            // 
+            this.lbGioKT.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGioKT.ForeColor = System.Drawing.Color.Blue;
+            this.lbGioKT.Image = global::Quan_Li_Luan_Van.Properties.Resources.start1;
+            this.lbGioKT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbGioKT.Location = new System.Drawing.Point(579, 231);
+            this.lbGioKT.Name = "lbGioKT";
+            this.lbGioKT.Size = new System.Drawing.Size(53, 58);
+            this.lbGioKT.TabIndex = 36;
+            this.lbGioKT.Text = "  end";
+            this.lbGioKT.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
             // dtNgayBD
             // 
             this.dtNgayBD.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -363,43 +376,6 @@
             this.dtNgayKT.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtNgayKT.TabIndex = 34;
             this.dtNgayKT.ValueNullable = new System.DateTime(2024, 3, 10, 0, 0, 0, 0);
-            // 
-            // labelTieuDe
-            // 
-            this.labelTieuDe.AutoSize = true;
-            this.labelTieuDe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
-            this.labelTieuDe.Font = new System.Drawing.Font("Book Antiqua", 18F, System.Drawing.FontStyle.Bold);
-            this.labelTieuDe.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelTieuDe.Location = new System.Drawing.Point(-9, -38);
-            this.labelTieuDe.Name = "labelTieuDe";
-            this.labelTieuDe.Size = new System.Drawing.Size(281, 35);
-            this.labelTieuDe.TabIndex = 3;
-            this.labelTieuDe.Text = "THÊM LUẬN VĂN";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
-            this.label1.Font = new System.Drawing.Font("Book Antiqua", 18F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label1.Location = new System.Drawing.Point(2, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(281, 35);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "THÊM LUẬN VĂN";
-            // 
-            // lbGioKT
-            // 
-            this.lbGioKT.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGioKT.ForeColor = System.Drawing.Color.Blue;
-            this.lbGioKT.Image = global::Quan_Li_Luan_Van.Properties.Resources.start1;
-            this.lbGioKT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbGioKT.Location = new System.Drawing.Point(579, 231);
-            this.lbGioKT.Name = "lbGioKT";
-            this.lbGioKT.Size = new System.Drawing.Size(53, 58);
-            this.lbGioKT.TabIndex = 36;
-            this.lbGioKT.Text = "  end";
-            this.lbGioKT.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // lbTienDo
             // 
@@ -500,11 +476,35 @@
             this.lbMaLuanVan.TabIndex = 14;
             this.lbMaLuanVan.Text = "  ";
             // 
+            // labelTieuDe
+            // 
+            this.labelTieuDe.AutoSize = true;
+            this.labelTieuDe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
+            this.labelTieuDe.Font = new System.Drawing.Font("Book Antiqua", 18F, System.Drawing.FontStyle.Bold);
+            this.labelTieuDe.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.labelTieuDe.Location = new System.Drawing.Point(-9, -38);
+            this.labelTieuDe.Name = "labelTieuDe";
+            this.labelTieuDe.Size = new System.Drawing.Size(281, 35);
+            this.labelTieuDe.TabIndex = 3;
+            this.labelTieuDe.Text = "THÊM LUẬN VĂN";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
+            this.label1.Font = new System.Drawing.Font("Book Antiqua", 18F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label1.Location = new System.Drawing.Point(2, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(281, 35);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "THÊM LUẬN VĂN";
+            // 
             // FThemLuanVan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1064, 659);
+            this.ClientSize = new System.Drawing.Size(1064, 702);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.labelTieuDe);

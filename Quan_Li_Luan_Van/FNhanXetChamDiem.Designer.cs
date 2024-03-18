@@ -199,7 +199,7 @@
             // 
             this.txtNhanXet.Location = new System.Drawing.Point(146, 464);
             this.txtNhanXet.Name = "txtNhanXet";
-            this.txtNhanXet.Size = new System.Drawing.Size(825, 146);
+            this.txtNhanXet.Size = new System.Drawing.Size(825, 183);
             this.txtNhanXet.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.txtNhanXet.StateCommon.Border.Color2 = System.Drawing.Color.Blue;
             this.txtNhanXet.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -225,7 +225,7 @@
             // btnThem
             // 
             this.btnThem.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
-            this.btnThem.Location = new System.Drawing.Point(939, 616);
+            this.btnThem.Location = new System.Drawing.Point(941, 661);
             this.btnThem.Name = "btnThem";
             this.btnThem.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
             this.btnThem.Size = new System.Drawing.Size(123, 40);
@@ -333,7 +333,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1064, 659);
+            this.ClientSize = new System.Drawing.Size(1064, 702);
             this.Controls.Add(this.ComboxXepLoai);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnThem);
