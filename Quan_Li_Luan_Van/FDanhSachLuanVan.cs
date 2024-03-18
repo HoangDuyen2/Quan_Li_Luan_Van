@@ -32,12 +32,12 @@ namespace Quan_Li_Luan_Van
                 SqlDataReader dataReader = cmd.ExecuteReader();
                 while (dataReader.Read())
                 {
-                    UCLV uclv = new UCLV();
+                    UCLV_GV uclv = new UCLV_GV();
 
-                    uclv.LbTenLV.Text = dataReader["TenLV"].ToString();
-                    uclv.LbChuyenNganh.Text = dataReader["ChuyenNganh"].ToString();
+                    uclv.LblTenLV.Text = dataReader["TenLV"].ToString();
+                    uclv.LblChuyenNganh.Text = dataReader["ChuyenNganh"].ToString();
                     uclv.LblTenGV.Text = dataReader["TenGV"].ToString();
-                    uclv.LbSoLuong.Text = dataReader["SoLuongConLai"].ToString();
+                    uclv.LblSoLuong.Text = dataReader["SoLuongConLai"].ToString();
 
                     flowPanelLuanVan.Controls.Add(uclv);
                 }

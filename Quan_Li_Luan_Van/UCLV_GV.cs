@@ -16,11 +16,11 @@ namespace Quan_Li_Luan_Van
         {
             InitializeComponent();
         }
-        public Label LbChuyenNganh { get => lblChuyenNganh; set => lblChuyenNganh = value; }
-        public Label LbTenLV { get => lblTenLV; set => lblTenLV = value; }
+        public Label LblChuyenNganh { get => lblChuyenNganh; set => lblChuyenNganh = value; }
+        public Label LblTenLV { get => lblTenLV; set => lblTenLV = value; }
         public PictureBox PictureBoxNen { get => pictureBoxNen; set => pictureBoxNen = value; }
-        public Label LbSoLuong { get => lblSoLuong; set => lblSoLuong = value; }
-        public Button ButtonChiTiet { get => btnChiTiet; set => btnChiTiet = value; }
+        public Label LblSoLuong { get => lblSoLuong; set => lblSoLuong = value; }
+        public Button BtnChiTiet { get => btnChiTiet; set => btnChiTiet = value; }
         public Label LblSLCL { get => lblSLCL; set => lblSLCL = value; }
         public Label LblGVHD { get => lblGVHD; set => lblGVHD = value; }
         public Label LblTenGV { get => lblTenGV; set => lblTenGV = value; }
