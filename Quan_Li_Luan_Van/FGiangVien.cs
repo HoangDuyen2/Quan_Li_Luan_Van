@@ -55,7 +55,7 @@ namespace Quan_Li_Luan_Van
 
         private void picboxUser_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FThongTinCaNhan(), sender);
+            OpenChildForm(new FThongTinCaNhan_GV(), sender);
         }
 
         private void btnLuanVanCuaToi_Click(object sender, EventArgs e)

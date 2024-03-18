@@ -166,11 +166,17 @@
     <Compile Include="FThemThongBao.Designer.cs">
       <DependentUpon>FThemThongBao.cs</DependentUpon>
     </Compile>
-    <Compile Include="FThongTinCaNhan.cs">
+    <Compile Include="FThongTinCaNhan_GV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FThongTinCaNhan.Designer.cs">
-      <DependentUpon>FThongTinCaNhan.cs</DependentUpon>
+    <Compile Include="FThongTinCaNhan_GV.Designer.cs">
+      <DependentUpon>FThongTinCaNhan_GV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FThongTinCaNhan_SV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThongTinCaNhan_SV.Designer.cs">
+      <DependentUpon>FThongTinCaNhan_SV.cs</DependentUpon>
     </Compile>
     <Compile Include="FTrangChu.cs">
       <SubType>Form</SubType>
@@ -233,6 +239,12 @@
     <Compile Include="UCThongBao.Designer.cs">
       <DependentUpon>UCThongBao.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCThongTinCaNhan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCThongTinCaNhan.Designer.cs">
+      <DependentUpon>UCThongTinCaNhan.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FBaoCaoTienDo.resx">
       <DependentUpon>FBaoCaoTienDo.cs</DependentUpon>
     </EmbeddedResource>
@@ -281,8 +293,11 @@
     <EmbeddedResource Include="FThemThongBao.resx">
       <DependentUpon>FThemThongBao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FThongTinCaNhan.resx">
-      <DependentUpon>FThongTinCaNhan.cs</DependentUpon>
+    <EmbeddedResource Include="FThongTinCaNhan_GV.resx">
+      <DependentUpon>FThongTinCaNhan_GV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThongTinCaNhan_SV.resx">
+      <DependentUpon>FThongTinCaNhan_SV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FTrangChu.resx">
       <DependentUpon>FTrangChu.cs</DependentUpon>
@@ -320,6 +335,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCThongBao.resx">
       <DependentUpon>UCThongBao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCThongTinCaNhan.resx">
+      <DependentUpon>UCThongTinCaNhan.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
