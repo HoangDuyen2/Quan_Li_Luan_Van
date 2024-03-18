@@ -17,7 +17,7 @@ namespace Quan_Li_Luan_Van
             InitializeComponent();
         }
         public Label LblChuyenNganh { get => lblChuyenNganh; set => lblChuyenNganh = value; }
-        public Label LblTenLV { get => lblTenLV; set => lblTenLV = value; }
+        public Label LblTenLV { get => lblTenLV; set => LblTenLV = value; }
         public PictureBox PictureBoxNen { get => pictureBoxNen; set => pictureBoxNen = value; }
         public Label LblSoLuong { get => lblSoLuong; set => lblSoLuong = value; }
         public Button BtnChiTiet { get => btnChiTiet; set => btnChiTiet = value; }
