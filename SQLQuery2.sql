@@ -71,8 +71,9 @@ CREATE TABLE TaiKhoan(
 GO
 INSERT INTO TaiKhoan (Username, Pass, ChucVu)
 VALUES 
-('22110001','123456',N'Sinh viên'),
-('GV001','123456',N'Giảng viên')
+('22110001','123456',N'Sinh vien'),
+('GV001','123456',N'Giang vien')
+
 
 go
 CREATE TRIGGER Trig_TaiKhoan_GV_SV

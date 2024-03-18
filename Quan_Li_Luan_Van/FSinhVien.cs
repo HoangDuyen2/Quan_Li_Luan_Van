@@ -88,7 +88,7 @@ namespace Quan_Li_Luan_Van
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FThongTinCaNhan(), sender);
+            OpenChildForm(new FThongTinCaNhan_GV(), sender);
         }
     }
 }
