@@ -31,7 +31,7 @@
             this.lbChuyenNganh = new System.Windows.Forms.Label();
             this.lbTenLV = new System.Windows.Forms.Label();
             this.lbSoLuong = new System.Windows.Forms.Label();
-            this.buttonChiTiet = new System.Windows.Forms.Button();
+            this.btnChiTiet = new System.Windows.Forms.Button();
             this.btnDangKi = new System.Windows.Forms.Button();
             this.lblSLCL = new System.Windows.Forms.Label();
             this.lblGVHD = new System.Windows.Forms.Label();
@@ -76,22 +76,22 @@
             this.lbSoLuong.Text = "1";
             this.lbSoLuong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // buttonChiTiet
+            // btnChiTiet
             // 
-            this.buttonChiTiet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
-            this.buttonChiTiet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonChiTiet.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.buttonChiTiet.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.buttonChiTiet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonChiTiet.Location = new System.Drawing.Point(931, 51);
-            this.buttonChiTiet.Name = "buttonChiTiet";
-            this.buttonChiTiet.Size = new System.Drawing.Size(114, 42);
-            this.buttonChiTiet.TabIndex = 11;
-            this.buttonChiTiet.Text = "Chi tiết";
-            this.buttonChiTiet.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonChiTiet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonChiTiet.UseVisualStyleBackColor = false;
-            this.buttonChiTiet.Click += new System.EventHandler(this.buttonChiTiet_Click);
+            this.btnChiTiet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
+            this.btnChiTiet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChiTiet.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnChiTiet.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnChiTiet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChiTiet.Location = new System.Drawing.Point(931, 51);
+            this.btnChiTiet.Name = "btnChiTiet";
+            this.btnChiTiet.Size = new System.Drawing.Size(114, 42);
+            this.btnChiTiet.TabIndex = 11;
+            this.btnChiTiet.Text = "Chi tiết";
+            this.btnChiTiet.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnChiTiet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnChiTiet.UseVisualStyleBackColor = false;
+            this.btnChiTiet.Click += new System.EventHandler(this.buttonChiTiet_Click);
             // 
             // btnDangKi
             // 
@@ -144,7 +144,6 @@
             this.lblTenGV.TabIndex = 15;
             this.lblTenGV.Text = "Đinh Công Đoan";
             this.lblTenGV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblTenGV.Click += new System.EventHandler(this.lblTenGV_Click);
             // 
             // pictureBoxNen
             // 
@@ -165,7 +164,7 @@
             this.Controls.Add(this.lblGVHD);
             this.Controls.Add(this.lblSLCL);
             this.Controls.Add(this.btnDangKi);
-            this.Controls.Add(this.buttonChiTiet);
+            this.Controls.Add(this.btnChiTiet);
             this.Controls.Add(this.lbSoLuong);
             this.Controls.Add(this.lbChuyenNganh);
             this.Controls.Add(this.lbTenLV);
@@ -184,7 +183,7 @@
         private System.Windows.Forms.Label lbTenLV;
         private System.Windows.Forms.PictureBox pictureBoxNen;
         private System.Windows.Forms.Label lbSoLuong;
-        private System.Windows.Forms.Button buttonChiTiet;
+        private System.Windows.Forms.Button btnChiTiet;
         private System.Windows.Forms.Button btnDangKi;
         private System.Windows.Forms.Label lblSLCL;
         private System.Windows.Forms.Label lblGVHD;

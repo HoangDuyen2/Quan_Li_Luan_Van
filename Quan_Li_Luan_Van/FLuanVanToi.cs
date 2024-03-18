@@ -56,5 +56,11 @@ namespace Quan_Li_Luan_Van
                 conn.Close(); 
             }
         }
+
+        private void btnDangKi_Click(object sender, EventArgs e)
+        {
+            FThemLuanVan fThemLuanVan = new FThemLuanVan();
+            fThemLuanVan.ShowDialog();
+        }
     }
 }

@@ -222,6 +222,12 @@
     <Compile Include="UCLVCuaToi.Designer.cs">
       <DependentUpon>UCLVCuaToi.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCLV_GV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCLV_GV.Designer.cs">
+      <DependentUpon>UCLV_GV.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCNhom.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -327,6 +333,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCLVCuaToi.resx">
       <DependentUpon>UCLVCuaToi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCLV_GV.resx">
+      <DependentUpon>UCLV_GV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCNhom.resx">
       <DependentUpon>UCNhom.cs</DependentUpon>

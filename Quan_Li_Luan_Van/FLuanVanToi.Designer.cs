@@ -56,6 +56,7 @@
             this.btnDangKi.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnDangKi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDangKi.UseVisualStyleBackColor = false;
+            this.btnDangKi.Click += new System.EventHandler(this.btnDangKi_Click);
             // 
             // panelTitle
             // 
