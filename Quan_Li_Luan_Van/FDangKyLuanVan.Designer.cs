@@ -174,6 +174,7 @@
             this.buttonTimKiem.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonTimKiem.UseVisualStyleBackColor = false;
+            this.buttonTimKiem.Click += new System.EventHandler(this.buttonTimKiem_Click);
             // 
             // labelThongTinMonHoc
             // 

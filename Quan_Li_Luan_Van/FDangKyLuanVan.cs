@@ -58,5 +58,53 @@ namespace Quan_Li_Luan_Van
             FDangKyLuanVanMoi dklvmoi = new FDangKyLuanVanMoi();
             dklvmoi.ShowDialog();
         }
+
+        private void buttonTimKiem_Click(object sender, EventArgs e)
+        {
+            string filterCondition = string.Empty;
+
+            switch (comboxLoaiTraCuu.SelectedIndex)
+            {
+                case 0: // "Có thể đăng ký"
+                    filterCondition = "AND LuanVan.SoLuongConLai > 0";
+                    break;
+                case 1: // "Không thể đăng ký"
+                    filterCondition = "AND LuanVan.SoLuongConLai = 0";
+                    break;
+                default:
+                    MessageBox.Show("Vui lòng chọn một loại tra cứu.");
+                    return;
+            }
+
+            try
+            {
+                conn.Open();
+                flPanelDSLV.Controls.Clear();
+
+                
+                SqlCommand cmd = new SqlCommand(query + " WHERE 1=1 " + filterCondition, conn);
+                SqlDataReader dataReader = cmd.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    UCLV uclv = new UCLV();
+
+                    uclv.LbTenLV.Text = dataReader["TenLV"].ToString();
+                    uclv.LbChuyenNganh.Text = dataReader["ChuyenNganh"].ToString();
+                    uclv.LblTenGV.Text = dataReader["TenGV"].ToString();
+                    uclv.LbSoLuong.Text = dataReader["SoLuongConLai"].ToString();
+
+                    flPanelDSLV.Controls.Add(uclv);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
     }
 }
