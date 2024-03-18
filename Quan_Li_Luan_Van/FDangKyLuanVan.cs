@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,10 @@ namespace Quan_Li_Luan_Van
 {
     public partial class FDangKyLuanVan : Form
     {
+        SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
+        string query = "SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, GiangVien.TenGV, LuanVan.SoLuongConLai " +
+                                   "FROM LuanVan " +
+                                   "JOIN GiangVien ON LuanVan.MaGV = GiangVien.MaGV ";
         public FDangKyLuanVan()
         {
             InitializeComponent();
@@ -19,8 +24,33 @@ namespace Quan_Li_Luan_Van
 
         private void FDKLV_Load(object sender, EventArgs e)
         {
-            UCLV uCLV = new UCLV();
-            flPanelDSLV.Controls.Add(uCLV);
+            try
+            {
+                conn.Open();
+                flPanelDSLV.Controls.Clear();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader dataReader = cmd.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    UCLV uclv = new UCLV();
+
+                    uclv.LbTenLV.Text = dataReader["TenLV"].ToString();
+                    uclv.LbChuyenNganh.Text = dataReader["ChuyenNganh"].ToString();
+                    uclv.LblTenGV.Text = dataReader["TenGV"].ToString();
+                    uclv.LbSoLuong.Text = dataReader["SoLuongConLai"].ToString();
+
+                    flPanelDSLV.Controls.Add(uclv);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         private void btnDangKi_Click(object sender, EventArgs e)
