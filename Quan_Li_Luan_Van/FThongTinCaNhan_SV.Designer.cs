@@ -52,12 +52,13 @@
             this.kryptonPalette2 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.txtDiem = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.lbScore = new System.Windows.Forms.Label();
+            this.btnOK = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxUser)).BeginInit();
             this.SuspendLayout();
             // 
             // btnChinhSua
             // 
-            this.btnChinhSua.Location = new System.Drawing.Point(839, 641);
+            this.btnChinhSua.Location = new System.Drawing.Point(845, 651);
             this.btnChinhSua.Name = "btnChinhSua";
             this.btnChinhSua.Size = new System.Drawing.Size(220, 51);
             this.btnChinhSua.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -437,11 +438,31 @@
             this.lbScore.TabIndex = 76;
             this.lbScore.Text = "  ";
             // 
+            // btnOK
+            // 
+            this.btnOK.Location = new System.Drawing.Point(845, 651);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(220, 51);
+            this.btnOK.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnOK.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnOK.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnOK.StateCommon.Border.Rounding = 16;
+            this.btnOK.StateCommon.Border.Width = 1;
+            this.btnOK.StateCommon.Content.LongText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOK.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.MidnightBlue;
+            this.btnOK.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOK.TabIndex = 78;
+            this.btnOK.Values.Text = "OK";
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
             // FThongTinCaNhan_SV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1064, 702);
+            this.ClientSize = new System.Drawing.Size(1077, 714);
+            this.Controls.Add(this.btnOK);
             this.Controls.Add(this.txtDiem);
             this.Controls.Add(this.lbScore);
             this.Controls.Add(this.btnChinhSua);
@@ -497,5 +518,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette2;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtDiem;
         private System.Windows.Forms.Label lbScore;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnOK;
     }
 }

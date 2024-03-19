@@ -204,6 +204,7 @@
     </Compile>
     <Compile Include="SinhVien.cs" />
     <Compile Include="TaiKhoan.cs" />
+    <Compile Include="TaiKhoanDAO.cs" />
     <Compile Include="UCDuyet.cs">
       <SubType>UserControl</SubType>
     </Compile>
