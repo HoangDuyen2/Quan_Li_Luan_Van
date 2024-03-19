@@ -70,6 +70,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DSNhomDAO.cs" />
+    <Compile Include="DuyetLuanVanDAO.cs" />
     <Compile Include="FBaoCaoTienDo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,7 +188,7 @@
     </Compile>
     <Compile Include="GiangVien.cs" />
     <Compile Include="LuanVan.cs" />
-    <Compile Include="LUANVANDAO.cs" />
+    <Compile Include="DSLuanVanDAO.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -205,6 +207,8 @@
     <Compile Include="SinhVien.cs" />
     <Compile Include="TaiKhoan.cs" />
     <Compile Include="TaiKhoanDAO.cs" />
+    <Compile Include="TrangChuGVDAO.cs" />
+    <Compile Include="TrangChuSVDAO.cs" />
     <Compile Include="UCDuyet.cs">
       <SubType>UserControl</SubType>
     </Compile>

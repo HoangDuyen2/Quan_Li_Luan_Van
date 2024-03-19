@@ -21,16 +21,13 @@ namespace Quan_Li_Luan_Van
 
         private void buttonChiTiet_Click(object sender, EventArgs e)
         {
-            FChiTietLuanVan ctlv = new FChiTietLuanVan(LbTenLV.Text);
+            FChiTietLuanVan ctlv = new FChiTietLuanVan(LblTenLV.Text);
             ctlv.ShowDialog();
         }
-        public Label LbChuyenNganh { get => lbChuyenNganh; set => lbChuyenNganh = value; }
-        public Label LbTenLV { get => lbTenLV; set => lbTenLV = value; }
+        public Label LblChuyenNganh { get => lblChuyenNganh; set => lblChuyenNganh = value; }
+        public Label LblTenLV { get => lblTenLV; set => lblTenLV = value; }
         public PictureBox PictureBoxNen { get => pictureBoxNen; set => pictureBoxNen = value; }
-        public Label LbSoLuong { get => lbSoLuong; set => lbSoLuong = value; }
         public Button ButtonChiTiet { get => btnChiTiet; set => btnChiTiet = value; }
-        public Button BtnDangKi { get => btnDangKi; set => btnDangKi = value; }
-        public Label LblSLCL { get => lblSLCL; set => lblSLCL = value; }
         public Label LblGVHD { get => lblGVHD; set => lblGVHD = value; }
         public Label LblTenGV { get => lblTenGV; set => lblTenGV = value; }
     }

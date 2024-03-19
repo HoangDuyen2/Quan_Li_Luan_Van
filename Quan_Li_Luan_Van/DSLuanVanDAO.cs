@@ -9,14 +9,14 @@ using System.Windows.Forms;
 namespace Quan_Li_Luan_Van
 {
 
-    internal class LUANVANDAO
+    internal class DSLuanVanDAO
     {
         static string conString = "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=Quan_Li_Luan_Van;Integrated Security=True;Encrypt=True";
         SqlCommand cmd;
         SqlConnection conn;
         SqlDataReader reader;
 
-        public LUANVANDAO() 
+        public DSLuanVanDAO() 
         {
             conn = new SqlConnection(conString);
             cmd = new SqlCommand();
@@ -67,11 +67,10 @@ namespace Quan_Li_Luan_Van
 
                     UCLV uclv = new UCLV();
 
-                    uclv.LbTenLV.Text = tenLV;
-                    uclv.LbChuyenNganh.Text = chuyenNganh;
+                    uclv.LblTenLV.Text = tenLV;
+                    uclv.LblChuyenNganh.Text = chuyenNganh;
                     uclv.LblTenGV.Text = tenGV;
-                    uclv.LbSoLuong.Text = SoLuong;
-
+                    
 
                     if(tenLV != string.Empty)
                     {

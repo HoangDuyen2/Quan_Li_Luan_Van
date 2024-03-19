@@ -34,10 +34,9 @@ namespace Quan_Li_Luan_Van
                 {
                     UCLV uclv = new UCLV();
 
-                    uclv.LbTenLV.Text = dataReader["TenLV"].ToString();
-                    uclv.LbChuyenNganh.Text = dataReader["ChuyenNganh"].ToString();
+                    uclv.LblTenLV.Text = dataReader["TenLV"].ToString();
+                    uclv.LblChuyenNganh.Text = dataReader["ChuyenNganh"].ToString();
                     uclv.LblTenGV.Text = dataReader["TenGV"].ToString();
-                    uclv.LbSoLuong.Text = dataReader["SoLuongConLai"].ToString();
 
                     flPanelDSLV.Controls.Add(uclv);
                 }
@@ -88,10 +87,10 @@ namespace Quan_Li_Luan_Van
                 {
                     UCLV uclv = new UCLV();
 
-                    uclv.LbTenLV.Text = dataReader["TenLV"].ToString();
-                    uclv.LbChuyenNganh.Text = dataReader["ChuyenNganh"].ToString();
+                    uclv.LblTenLV.Text = dataReader["TenLV"].ToString();
+                    uclv.LblChuyenNganh.Text = dataReader["ChuyenNganh"].ToString();
                     uclv.LblTenGV.Text = dataReader["TenGV"].ToString();
-                    uclv.LbSoLuong.Text = dataReader["SoLuongConLai"].ToString();
+                    
 
                     flPanelDSLV.Controls.Add(uclv);
                 }
