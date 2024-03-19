@@ -43,10 +43,10 @@ namespace Quan_Li_Luan_Van
                 {
                     txtMaLuanVan.Text = dataReader["MaLV"].ToString();
                     txtTenLuanVan.Text = dataReader["TenLV"].ToString();
-                    txtChuyenNganh.Text = dataReader["ChuyenNganh"].ToString();
+                    txtLinhVuc.Text = dataReader["ChuyenNganh"].ToString();
                     txtGVHD.Text = dataReader["TenGV"].ToString();
-                    txtMota.Text = dataReader["MoTaChiTiet"].ToString();
-                    txtSoLuong.Text = dataReader["SoLuongConLai"].ToString();
+                    txtYeuCau.Text = dataReader["MoTaChiTiet"].ToString();
+                    txtTVien1.Text = dataReader["SoLuongConLai"].ToString();
                 }
             }
             catch (Exception ex)
