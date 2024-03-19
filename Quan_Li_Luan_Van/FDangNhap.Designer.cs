@@ -83,7 +83,9 @@
             this.txtMatKhau.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
             this.txtMatKhau.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtMatKhau.TabIndex = 8;
+            this.txtMatKhau.Text = "111111";
             this.txtMatKhau.UseSystemPasswordChar = true;
+
             // 
             // btnDangNhap
             // 
@@ -132,6 +134,7 @@
             this.txtTK.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
             this.txtTK.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtTK.TabIndex = 3;
+            this.txtTK.Text = "Username";
             // 
             // rbtnGV
             // 
