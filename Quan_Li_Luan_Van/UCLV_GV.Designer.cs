@@ -106,11 +106,11 @@
             // lblChuyenNganh
             // 
             this.lblChuyenNganh.AutoSize = true;
-            this.lblChuyenNganh.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChuyenNganh.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChuyenNganh.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.lblChuyenNganh.Location = new System.Drawing.Point(107, 61);
+            this.lblChuyenNganh.Location = new System.Drawing.Point(107, 63);
             this.lblChuyenNganh.Name = "lblChuyenNganh";
-            this.lblChuyenNganh.Size = new System.Drawing.Size(186, 23);
+            this.lblChuyenNganh.Size = new System.Drawing.Size(189, 23);
             this.lblChuyenNganh.TabIndex = 18;
             this.lblChuyenNganh.Text = "Công nghệ phần mềm";
             this.lblChuyenNganh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -140,6 +140,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.lblTenGV);
             this.Controls.Add(this.lblGVHD);
             this.Controls.Add(this.lblSLCL);
@@ -149,7 +150,7 @@
             this.Controls.Add(this.lblTenLV);
             this.Controls.Add(this.pictureBoxNen);
             this.Name = "UCLV_GV";
-            this.Size = new System.Drawing.Size(1058, 98);
+            this.Size = new System.Drawing.Size(1056, 96);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
