@@ -62,7 +62,7 @@ namespace Quan_Li_Luan_Van
         {
             string filterCondition = string.Empty;
 
-            switch (comboxLoaiTraCuu.SelectedIndex)
+            switch (cbboxChuyenNganh.SelectedIndex)
             {
                 case 0: // "Có thể đăng ký"
                     filterCondition = "AND LuanVan.SoLuongConLai > 0";
@@ -104,6 +104,5 @@ namespace Quan_Li_Luan_Van
                 conn.Close();
             }
         }
-
     }
 }

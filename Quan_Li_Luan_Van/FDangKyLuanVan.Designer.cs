@@ -31,16 +31,16 @@
             this.btnDangKi = new System.Windows.Forms.Button();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtMaMon = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtTenGV = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.groupBoxTraCuuLuanVan = new System.Windows.Forms.GroupBox();
-            this.comboxLoaiTraCuu = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.labelLoaiTraCuu = new System.Windows.Forms.Label();
+            this.cbboxChuyenNganh = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.lblTraTenGV = new System.Windows.Forms.Label();
             this.buttonTimKiem = new System.Windows.Forms.Button();
-            this.labelThongTinMonHoc = new System.Windows.Forms.Label();
+            this.lblTraChuyenNganh = new System.Windows.Forms.Label();
             this.flPanelDSLV = new System.Windows.Forms.FlowLayoutPanel();
             this.panelTitle.SuspendLayout();
             this.groupBoxTraCuuLuanVan.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboxLoaiTraCuu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbboxChuyenNganh)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDangKi
@@ -82,33 +82,33 @@
             this.label1.Text = "ĐĂNG KÝ LUẬN VĂN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtMaMon
+            // txtTenGV
             // 
-            this.txtMaMon.Location = new System.Drawing.Point(524, 28);
-            this.txtMaMon.Name = "txtMaMon";
-            this.txtMaMon.Size = new System.Drawing.Size(297, 36);
-            this.txtMaMon.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.txtMaMon.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
-            this.txtMaMon.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.txtMaMon.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtTenGV.Location = new System.Drawing.Point(88, 29);
+            this.txtTenGV.Name = "txtTenGV";
+            this.txtTenGV.Size = new System.Drawing.Size(302, 36);
+            this.txtTenGV.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.txtTenGV.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
+            this.txtTenGV.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.txtTenGV.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtMaMon.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtMaMon.StateCommon.Border.Rounding = 16;
-            this.txtMaMon.StateCommon.Border.Width = 1;
-            this.txtMaMon.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtMaMon.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaMon.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.txtMaMon.TabIndex = 14;
-            this.txtMaMon.Text = "EN035524";
+            this.txtTenGV.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtTenGV.StateCommon.Border.Rounding = 16;
+            this.txtTenGV.StateCommon.Border.Width = 1;
+            this.txtTenGV.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.txtTenGV.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenGV.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.txtTenGV.TabIndex = 14;
+            this.txtTenGV.Text = "Tất cả";
             // 
             // groupBoxTraCuuLuanVan
             // 
-            this.groupBoxTraCuuLuanVan.Controls.Add(this.comboxLoaiTraCuu);
-            this.groupBoxTraCuuLuanVan.Controls.Add(this.labelLoaiTraCuu);
+            this.groupBoxTraCuuLuanVan.Controls.Add(this.cbboxChuyenNganh);
+            this.groupBoxTraCuuLuanVan.Controls.Add(this.lblTraTenGV);
             this.groupBoxTraCuuLuanVan.Controls.Add(this.buttonTimKiem);
-            this.groupBoxTraCuuLuanVan.Controls.Add(this.txtMaMon);
-            this.groupBoxTraCuuLuanVan.Controls.Add(this.labelThongTinMonHoc);
+            this.groupBoxTraCuuLuanVan.Controls.Add(this.txtTenGV);
+            this.groupBoxTraCuuLuanVan.Controls.Add(this.lblTraChuyenNganh);
             this.groupBoxTraCuuLuanVan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxTraCuuLuanVan.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.groupBoxTraCuuLuanVan.Location = new System.Drawing.Point(0, 58);
@@ -118,45 +118,51 @@
             this.groupBoxTraCuuLuanVan.TabStop = false;
             this.groupBoxTraCuuLuanVan.Text = "Tra cứu luận văn";
             // 
-            // comboxLoaiTraCuu
+            // cbboxChuyenNganh
             // 
-            this.comboxLoaiTraCuu.DropDownWidth = 261;
-            this.comboxLoaiTraCuu.Items.AddRange(new object[] {
-            "Có thể đăng ký",
-            "Không thể đăng ký"});
-            this.comboxLoaiTraCuu.Location = new System.Drawing.Point(135, 28);
-            this.comboxLoaiTraCuu.Name = "comboxLoaiTraCuu";
-            this.comboxLoaiTraCuu.Size = new System.Drawing.Size(273, 39);
-            this.comboxLoaiTraCuu.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Blue;
-            this.comboxLoaiTraCuu.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.Blue;
-            this.comboxLoaiTraCuu.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.cbboxChuyenNganh.DropDownWidth = 261;
+            this.cbboxChuyenNganh.Items.AddRange(new object[] {
+            "Tất cả",
+            "Phát triển phần mềm",
+            "Khoa học dữ liệu",
+            "An ninh mạng",
+            "Trí tuệ nhân tạo",
+            "Phát triển Trò chơi",
+            "Kỹ thuật ứng dụng"});
+            this.cbboxChuyenNganh.Location = new System.Drawing.Point(532, 25);
+            this.cbboxChuyenNganh.Name = "cbboxChuyenNganh";
+            this.cbboxChuyenNganh.Size = new System.Drawing.Size(273, 39);
+            this.cbboxChuyenNganh.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Blue;
+            this.cbboxChuyenNganh.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.Blue;
+            this.cbboxChuyenNganh.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.comboxLoaiTraCuu.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.comboxLoaiTraCuu.StateCommon.ComboBox.Border.Rounding = 20;
-            this.comboxLoaiTraCuu.StateCommon.ComboBox.Border.Width = 1;
-            this.comboxLoaiTraCuu.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Gray;
-            this.comboxLoaiTraCuu.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboxLoaiTraCuu.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(1);
-            this.comboxLoaiTraCuu.StateCommon.DropBack.Color1 = System.Drawing.Color.White;
-            this.comboxLoaiTraCuu.StateCommon.DropBack.Color2 = System.Drawing.Color.White;
-            this.comboxLoaiTraCuu.StateCommon.Item.Border.Color1 = System.Drawing.Color.White;
-            this.comboxLoaiTraCuu.StateCommon.Item.Border.Color2 = System.Drawing.Color.White;
-            this.comboxLoaiTraCuu.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.cbboxChuyenNganh.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.cbboxChuyenNganh.StateCommon.ComboBox.Border.Rounding = 20;
+            this.cbboxChuyenNganh.StateCommon.ComboBox.Border.Width = 1;
+            this.cbboxChuyenNganh.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Gray;
+            this.cbboxChuyenNganh.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbboxChuyenNganh.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(1);
+            this.cbboxChuyenNganh.StateCommon.DropBack.Color1 = System.Drawing.Color.White;
+            this.cbboxChuyenNganh.StateCommon.DropBack.Color2 = System.Drawing.Color.White;
+            this.cbboxChuyenNganh.StateCommon.Item.Border.Color1 = System.Drawing.Color.White;
+            this.cbboxChuyenNganh.StateCommon.Item.Border.Color2 = System.Drawing.Color.White;
+            this.cbboxChuyenNganh.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.comboxLoaiTraCuu.TabIndex = 17;
-            this.comboxLoaiTraCuu.Text = "Tất cả";
+            this.cbboxChuyenNganh.TabIndex = 17;
+            this.cbboxChuyenNganh.Text = "Tất cả";
             // 
-            // labelLoaiTraCuu
+            // lblTraTenGV
             // 
-            this.labelLoaiTraCuu.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold);
-            this.labelLoaiTraCuu.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.labelLoaiTraCuu.Location = new System.Drawing.Point(26, 39);
-            this.labelLoaiTraCuu.Name = "labelLoaiTraCuu";
-            this.labelLoaiTraCuu.Size = new System.Drawing.Size(103, 24);
-            this.labelLoaiTraCuu.TabIndex = 16;
-            this.labelLoaiTraCuu.Text = "Trạng thái";
+            this.lblTraTenGV.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblTraTenGV.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblTraTenGV.Location = new System.Drawing.Point(6, 35);
+            this.lblTraTenGV.Name = "lblTraTenGV";
+            this.lblTraTenGV.Size = new System.Drawing.Size(82, 24);
+            this.lblTraTenGV.TabIndex = 16;
+            this.lblTraTenGV.Text = "Tên GV";
+            this.lblTraTenGV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonTimKiem
             // 
@@ -176,16 +182,16 @@
             this.buttonTimKiem.UseVisualStyleBackColor = false;
             this.buttonTimKiem.Click += new System.EventHandler(this.buttonTimKiem_Click);
             // 
-            // labelThongTinMonHoc
+            // lblTraChuyenNganh
             // 
-            this.labelThongTinMonHoc.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold);
-            this.labelThongTinMonHoc.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.labelThongTinMonHoc.Location = new System.Drawing.Point(436, 34);
-            this.labelThongTinMonHoc.Name = "labelThongTinMonHoc";
-            this.labelThongTinMonHoc.Size = new System.Drawing.Size(82, 29);
-            this.labelThongTinMonHoc.TabIndex = 13;
-            this.labelThongTinMonHoc.Text = "Mã môn";
-            this.labelThongTinMonHoc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTraChuyenNganh.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblTraChuyenNganh.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblTraChuyenNganh.Location = new System.Drawing.Point(396, 33);
+            this.lblTraChuyenNganh.Name = "lblTraChuyenNganh";
+            this.lblTraChuyenNganh.Size = new System.Drawing.Size(130, 29);
+            this.lblTraChuyenNganh.TabIndex = 13;
+            this.lblTraChuyenNganh.Text = "Chuyên ngành";
+            this.lblTraChuyenNganh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // flPanelDSLV
             // 
@@ -210,7 +216,7 @@
             this.panelTitle.ResumeLayout(false);
             this.groupBoxTraCuuLuanVan.ResumeLayout(false);
             this.groupBoxTraCuuLuanVan.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboxLoaiTraCuu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbboxChuyenNganh)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -223,11 +229,11 @@
         private System.Windows.Forms.Button btnDangKi;
         private System.Windows.Forms.Panel panelTitle;
         private System.Windows.Forms.Label label1;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtMaMon;
-        private System.Windows.Forms.Label labelThongTinMonHoc;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtTenGV;
+        private System.Windows.Forms.Label lblTraChuyenNganh;
         private System.Windows.Forms.GroupBox groupBoxTraCuuLuanVan;
         private System.Windows.Forms.FlowLayoutPanel flPanelDSLV;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox comboxLoaiTraCuu;
-        private System.Windows.Forms.Label labelLoaiTraCuu;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox cbboxChuyenNganh;
+        private System.Windows.Forms.Label lblTraTenGV;
     }
 }
