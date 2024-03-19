@@ -29,16 +29,13 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtChuyenNganh = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.lbGVHD2 = new System.Windows.Forms.Label();
-            this.lbGioKT = new System.Windows.Forms.Label();
             this.lbNgayKT = new System.Windows.Forms.Label();
-            this.lbGioBD = new System.Windows.Forms.Label();
             this.lbNgayBD = new System.Windows.Forms.Label();
             this.comboxTrangThai = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.txtGVhd = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.comboxSoLuong = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.dtGioKT = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
-            this.dtGioBD = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.dtNgayKT = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.dtNgayBD = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.lbSoLuong = new System.Windows.Forms.Label();
@@ -50,7 +47,10 @@
             this.lbMoTaChiTiet = new System.Windows.Forms.Label();
             this.lbTenLuanVan = new System.Windows.Forms.Label();
             this.lbMaLuanVan = new System.Windows.Forms.Label();
-            this.txtChuyenNganh = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.dtGioBD = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.dtGioKT = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.lbGioBD = new System.Windows.Forms.Label();
+            this.lbGioKT = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboxTrangThai)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboxSoLuong)).BeginInit();
@@ -85,6 +85,27 @@
             this.panel2.Size = new System.Drawing.Size(1065, 678);
             this.panel2.TabIndex = 6;
             // 
+            // txtChuyenNganh
+            // 
+            this.txtChuyenNganh.Enabled = false;
+            this.txtChuyenNganh.Location = new System.Drawing.Point(631, 122);
+            this.txtChuyenNganh.Name = "txtChuyenNganh";
+            this.txtChuyenNganh.Size = new System.Drawing.Size(344, 36);
+            this.txtChuyenNganh.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.txtChuyenNganh.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
+            this.txtChuyenNganh.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.txtChuyenNganh.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtChuyenNganh.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtChuyenNganh.StateCommon.Border.Rounding = 16;
+            this.txtChuyenNganh.StateCommon.Border.Width = 1;
+            this.txtChuyenNganh.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.txtChuyenNganh.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtChuyenNganh.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.txtChuyenNganh.TabIndex = 47;
+            this.txtChuyenNganh.Text = "Công nghệ phần mềm";
+            // 
             // lbGVHD2
             // 
             this.lbGVHD2.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -94,19 +115,6 @@
             this.lbGVHD2.Size = new System.Drawing.Size(74, 60);
             this.lbGVHD2.TabIndex = 46;
             this.lbGVHD2.Text = "  ";
-            // 
-            // lbGioKT
-            // 
-            this.lbGioKT.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGioKT.ForeColor = System.Drawing.Color.Blue;
-            this.lbGioKT.Image = global::Quan_Li_Luan_Van.Properties.Resources.start1;
-            this.lbGioKT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbGioKT.Location = new System.Drawing.Point(555, 273);
-            this.lbGioKT.Name = "lbGioKT";
-            this.lbGioKT.Size = new System.Drawing.Size(53, 58);
-            this.lbGioKT.TabIndex = 45;
-            this.lbGioKT.Text = "  end";
-            this.lbGioKT.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // lbNgayKT
             // 
@@ -120,19 +128,6 @@
             this.lbNgayKT.TabIndex = 44;
             this.lbNgayKT.Text = "  end";
             this.lbNgayKT.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // lbGioBD
-            // 
-            this.lbGioBD.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGioBD.ForeColor = System.Drawing.Color.Blue;
-            this.lbGioBD.Image = global::Quan_Li_Luan_Van.Properties.Resources.start1;
-            this.lbGioBD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbGioBD.Location = new System.Drawing.Point(555, 183);
-            this.lbGioBD.Name = "lbGioBD";
-            this.lbGioBD.Size = new System.Drawing.Size(70, 64);
-            this.lbGioBD.TabIndex = 43;
-            this.lbGioBD.Text = "  start";
-            this.lbGioBD.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // lbNgayBD
             // 
@@ -248,46 +243,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.comboxSoLuong.TabIndex = 39;
             this.comboxSoLuong.Text = "Số lượng";
-            // 
-            // dtGioKT
-            // 
-            this.dtGioKT.Enabled = false;
-            this.dtGioKT.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtGioKT.Location = new System.Drawing.Point(631, 278);
-            this.dtGioKT.Name = "dtGioKT";
-            this.dtGioKT.Size = new System.Drawing.Size(344, 39);
-            this.dtGioKT.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
-            this.dtGioKT.StateCommon.Border.Color2 = System.Drawing.Color.Blue;
-            this.dtGioKT.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.dtGioKT.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.dtGioKT.StateCommon.Border.Rounding = 16;
-            this.dtGioKT.StateCommon.Border.Width = 1;
-            this.dtGioKT.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.dtGioKT.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtGioKT.TabIndex = 38;
-            this.dtGioKT.ValueNullable = new System.DateTime(2024, 3, 10, 0, 0, 0, 0);
-            // 
-            // dtGioBD
-            // 
-            this.dtGioBD.Enabled = false;
-            this.dtGioBD.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtGioBD.Location = new System.Drawing.Point(631, 198);
-            this.dtGioBD.Name = "dtGioBD";
-            this.dtGioBD.Size = new System.Drawing.Size(344, 39);
-            this.dtGioBD.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
-            this.dtGioBD.StateCommon.Border.Color2 = System.Drawing.Color.Blue;
-            this.dtGioBD.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.dtGioBD.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.dtGioBD.StateCommon.Border.Rounding = 16;
-            this.dtGioBD.StateCommon.Border.Width = 1;
-            this.dtGioBD.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.dtGioBD.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtGioBD.TabIndex = 37;
-            this.dtGioBD.ValueNullable = new System.DateTime(2024, 3, 10, 0, 0, 0, 0);
             // 
             // dtNgayKT
             // 
@@ -461,26 +416,71 @@
             this.lbMaLuanVan.TabIndex = 14;
             this.lbMaLuanVan.Text = "  ";
             // 
-            // txtChuyenNganh
+            // dtGioBD
             // 
-            this.txtChuyenNganh.Enabled = false;
-            this.txtChuyenNganh.Location = new System.Drawing.Point(631, 122);
-            this.txtChuyenNganh.Name = "txtChuyenNganh";
-            this.txtChuyenNganh.Size = new System.Drawing.Size(344, 36);
-            this.txtChuyenNganh.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.txtChuyenNganh.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
-            this.txtChuyenNganh.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.txtChuyenNganh.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.dtGioBD.Enabled = false;
+            this.dtGioBD.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtGioBD.Location = new System.Drawing.Point(631, 198);
+            this.dtGioBD.Name = "dtGioBD";
+            this.dtGioBD.Size = new System.Drawing.Size(344, 39);
+            this.dtGioBD.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
+            this.dtGioBD.StateCommon.Border.Color2 = System.Drawing.Color.Blue;
+            this.dtGioBD.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtChuyenNganh.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtChuyenNganh.StateCommon.Border.Rounding = 16;
-            this.txtChuyenNganh.StateCommon.Border.Width = 1;
-            this.txtChuyenNganh.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtChuyenNganh.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtChuyenNganh.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.txtChuyenNganh.TabIndex = 47;
-            this.txtChuyenNganh.Text = "Công nghệ phần mềm";
+            this.dtGioBD.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.dtGioBD.StateCommon.Border.Rounding = 16;
+            this.dtGioBD.StateCommon.Border.Width = 1;
+            this.dtGioBD.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.dtGioBD.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtGioBD.TabIndex = 37;
+            this.dtGioBD.ValueNullable = new System.DateTime(2024, 3, 10, 0, 0, 0, 0);
+            // 
+            // dtGioKT
+            // 
+            this.dtGioKT.Enabled = false;
+            this.dtGioKT.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtGioKT.Location = new System.Drawing.Point(631, 278);
+            this.dtGioKT.Name = "dtGioKT";
+            this.dtGioKT.Size = new System.Drawing.Size(344, 39);
+            this.dtGioKT.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
+            this.dtGioKT.StateCommon.Border.Color2 = System.Drawing.Color.Blue;
+            this.dtGioKT.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.dtGioKT.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.dtGioKT.StateCommon.Border.Rounding = 16;
+            this.dtGioKT.StateCommon.Border.Width = 1;
+            this.dtGioKT.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.dtGioKT.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtGioKT.TabIndex = 38;
+            this.dtGioKT.ValueNullable = new System.DateTime(2024, 3, 10, 0, 0, 0, 0);
+            // 
+            // lbGioBD
+            // 
+            this.lbGioBD.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGioBD.ForeColor = System.Drawing.Color.Blue;
+            this.lbGioBD.Image = global::Quan_Li_Luan_Van.Properties.Resources.start1;
+            this.lbGioBD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbGioBD.Location = new System.Drawing.Point(555, 183);
+            this.lbGioBD.Name = "lbGioBD";
+            this.lbGioBD.Size = new System.Drawing.Size(70, 64);
+            this.lbGioBD.TabIndex = 43;
+            this.lbGioBD.Text = "  start";
+            this.lbGioBD.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // lbGioKT
+            // 
+            this.lbGioKT.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGioKT.ForeColor = System.Drawing.Color.Blue;
+            this.lbGioKT.Image = global::Quan_Li_Luan_Van.Properties.Resources.start1;
+            this.lbGioKT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbGioKT.Location = new System.Drawing.Point(555, 273);
+            this.lbGioKT.Name = "lbGioKT";
+            this.lbGioKT.Size = new System.Drawing.Size(53, 58);
+            this.lbGioKT.TabIndex = 45;
+            this.lbGioKT.Text = "  end";
+            this.lbGioKT.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // FChiTietLuanVan
             // 
@@ -503,8 +503,6 @@
 
         private System.Windows.Forms.Panel panel2;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox comboxSoLuong;
-        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dtGioKT;
-        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dtGioBD;
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dtNgayKT;
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dtNgayBD;
         private System.Windows.Forms.Label lbSoLuong;
@@ -519,10 +517,12 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtGVhd;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox comboxTrangThai;
         private System.Windows.Forms.Label lbNgayBD;
-        private System.Windows.Forms.Label lbGioBD;
         private System.Windows.Forms.Label lbNgayKT;
-        private System.Windows.Forms.Label lbGioKT;
         private System.Windows.Forms.Label lbGVHD2;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtChuyenNganh;
+        private System.Windows.Forms.Label lbGioKT;
+        private System.Windows.Forms.Label lbGioBD;
+        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dtGioKT;
+        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dtGioBD;
     }
 }
