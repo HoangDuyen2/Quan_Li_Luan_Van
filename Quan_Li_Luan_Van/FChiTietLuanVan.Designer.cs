@@ -356,6 +356,7 @@
             this.Name = "FChiTietLuanVan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi tiết Luận Văn";
+            this.Load += new System.EventHandler(this.FChiTietLuanVan_Load);
             this.panelNoiDung.ResumeLayout(false);
             this.panelNoiDung.PerformLayout();
             this.ResumeLayout(false);
