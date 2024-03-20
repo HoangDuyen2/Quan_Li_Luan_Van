@@ -29,6 +29,16 @@
         private void InitializeComponent()
         {
             this.panelNoiDung = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtChucNang = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtChuyenNganh = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtTVien2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtCongNghe = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtNgonNgu = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtTVien1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.lbSoLuong = new System.Windows.Forms.Label();
             this.txtLinhVuc = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -42,17 +52,7 @@
             this.lbTenLuanVan = new System.Windows.Forms.Label();
             this.lbMaLuanVan = new System.Windows.Forms.Label();
             this.lblCTLV = new System.Windows.Forms.Label();
-            this.btnThem = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.txtNgonNgu = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.txtCongNghe = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.txtTVien2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtChuyenNganh = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtChucNang = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.btnDangKy = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panelNoiDung.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,6 +85,161 @@
             this.panelNoiDung.Name = "panelNoiDung";
             this.panelNoiDung.Size = new System.Drawing.Size(1062, 579);
             this.panelNoiDung.TabIndex = 0;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Image = global::Quan_Li_Luan_Van.Properties.Resources.major1;
+            this.label7.Location = new System.Drawing.Point(629, 292);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(24, 27);
+            this.label7.TabIndex = 81;
+            this.label7.Text = "  ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Image = global::Quan_Li_Luan_Van.Properties.Resources.major1;
+            this.label6.Location = new System.Drawing.Point(629, 226);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(24, 27);
+            this.label6.TabIndex = 80;
+            this.label6.Text = "  ";
+            // 
+            // txtChucNang
+            // 
+            this.txtChucNang.Location = new System.Drawing.Point(114, 217);
+            this.txtChucNang.Multiline = true;
+            this.txtChucNang.Name = "txtChucNang";
+            this.txtChucNang.Size = new System.Drawing.Size(489, 111);
+            this.txtChucNang.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.txtChucNang.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
+            this.txtChucNang.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.txtChucNang.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtChucNang.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtChucNang.StateCommon.Border.Rounding = 16;
+            this.txtChucNang.StateCommon.Border.Width = 1;
+            this.txtChucNang.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.txtChucNang.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtChucNang.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.txtChucNang.TabIndex = 79;
+            this.txtChucNang.Text = "Chức năng";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Image = global::Quan_Li_Luan_Van.Properties.Resources.major1;
+            this.label5.Location = new System.Drawing.Point(629, 151);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(24, 27);
+            this.label5.TabIndex = 78;
+            this.label5.Text = "  ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Image = global::Quan_Li_Luan_Van.Properties.Resources.major1;
+            this.label4.Location = new System.Drawing.Point(58, 158);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(24, 27);
+            this.label4.TabIndex = 77;
+            this.label4.Text = "  ";
+            // 
+            // txtChuyenNganh
+            // 
+            this.txtChuyenNganh.Location = new System.Drawing.Point(114, 151);
+            this.txtChuyenNganh.Name = "txtChuyenNganh";
+            this.txtChuyenNganh.Size = new System.Drawing.Size(355, 36);
+            this.txtChuyenNganh.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.txtChuyenNganh.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
+            this.txtChuyenNganh.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.txtChuyenNganh.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtChuyenNganh.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtChuyenNganh.StateCommon.Border.Rounding = 16;
+            this.txtChuyenNganh.StateCommon.Border.Width = 1;
+            this.txtChuyenNganh.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.txtChuyenNganh.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtChuyenNganh.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.txtChuyenNganh.TabIndex = 76;
+            this.txtChuyenNganh.Text = "Chuyên ngành";
+            // 
+            // txtTVien2
+            // 
+            this.txtTVien2.Location = new System.Drawing.Point(645, 511);
+            this.txtTVien2.Name = "txtTVien2";
+            this.txtTVien2.Size = new System.Drawing.Size(283, 36);
+            this.txtTVien2.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.txtTVien2.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
+            this.txtTVien2.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.txtTVien2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtTVien2.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtTVien2.StateCommon.Border.Rounding = 16;
+            this.txtTVien2.StateCommon.Border.Width = 1;
+            this.txtTVien2.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.txtTVien2.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTVien2.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.txtTVien2.TabIndex = 75;
+            this.txtTVien2.Text = "MSSV Thành viên 2 (Nếu có)";
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Image = global::Quan_Li_Luan_Van.Properties.Resources.people;
+            this.label3.Location = new System.Drawing.Point(598, 515);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(24, 27);
+            this.label3.TabIndex = 74;
+            this.label3.Text = "  ";
+            // 
+            // txtCongNghe
+            // 
+            this.txtCongNghe.Location = new System.Drawing.Point(679, 217);
+            this.txtCongNghe.Name = "txtCongNghe";
+            this.txtCongNghe.Size = new System.Drawing.Size(316, 36);
+            this.txtCongNghe.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.txtCongNghe.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
+            this.txtCongNghe.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.txtCongNghe.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtCongNghe.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtCongNghe.StateCommon.Border.Rounding = 16;
+            this.txtCongNghe.StateCommon.Border.Width = 1;
+            this.txtCongNghe.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.txtCongNghe.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCongNghe.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.txtCongNghe.TabIndex = 72;
+            this.txtCongNghe.Text = "Công nghệ";
+            // 
+            // txtNgonNgu
+            // 
+            this.txtNgonNgu.Location = new System.Drawing.Point(679, 283);
+            this.txtNgonNgu.Name = "txtNgonNgu";
+            this.txtNgonNgu.Size = new System.Drawing.Size(316, 36);
+            this.txtNgonNgu.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.txtNgonNgu.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
+            this.txtNgonNgu.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.txtNgonNgu.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtNgonNgu.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtNgonNgu.StateCommon.Border.Rounding = 16;
+            this.txtNgonNgu.StateCommon.Border.Width = 1;
+            this.txtNgonNgu.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.txtNgonNgu.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgonNgu.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.txtNgonNgu.TabIndex = 71;
+            this.txtNgonNgu.Text = "Ngôn ngữ";
             // 
             // txtTVien1
             // 
@@ -287,177 +442,22 @@
             this.lblCTLV.TabIndex = 11;
             this.lblCTLV.Text = "CHI TIẾT LUẬN VĂN";
             // 
-            // btnThem
+            // btnDangKy
             // 
-            this.btnThem.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
-            this.btnThem.Location = new System.Drawing.Point(445, 654);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
-            this.btnThem.Size = new System.Drawing.Size(169, 40);
-            this.btnThem.TabIndex = 12;
-            this.btnThem.Values.Text = "Đăng ký";
-            // 
-            // txtNgonNgu
-            // 
-            this.txtNgonNgu.Location = new System.Drawing.Point(679, 283);
-            this.txtNgonNgu.Name = "txtNgonNgu";
-            this.txtNgonNgu.Size = new System.Drawing.Size(316, 36);
-            this.txtNgonNgu.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.txtNgonNgu.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
-            this.txtNgonNgu.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.txtNgonNgu.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtNgonNgu.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtNgonNgu.StateCommon.Border.Rounding = 16;
-            this.txtNgonNgu.StateCommon.Border.Width = 1;
-            this.txtNgonNgu.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtNgonNgu.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNgonNgu.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.txtNgonNgu.TabIndex = 71;
-            this.txtNgonNgu.Text = "Ngôn ngữ";
-            // 
-            // txtCongNghe
-            // 
-            this.txtCongNghe.Location = new System.Drawing.Point(679, 217);
-            this.txtCongNghe.Name = "txtCongNghe";
-            this.txtCongNghe.Size = new System.Drawing.Size(316, 36);
-            this.txtCongNghe.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.txtCongNghe.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
-            this.txtCongNghe.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.txtCongNghe.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtCongNghe.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtCongNghe.StateCommon.Border.Rounding = 16;
-            this.txtCongNghe.StateCommon.Border.Width = 1;
-            this.txtCongNghe.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtCongNghe.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCongNghe.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.txtCongNghe.TabIndex = 72;
-            this.txtCongNghe.Text = "Công nghệ";
-            // 
-            // txtTVien2
-            // 
-            this.txtTVien2.Location = new System.Drawing.Point(645, 511);
-            this.txtTVien2.Name = "txtTVien2";
-            this.txtTVien2.Size = new System.Drawing.Size(283, 36);
-            this.txtTVien2.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.txtTVien2.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
-            this.txtTVien2.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.txtTVien2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtTVien2.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtTVien2.StateCommon.Border.Rounding = 16;
-            this.txtTVien2.StateCommon.Border.Width = 1;
-            this.txtTVien2.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtTVien2.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTVien2.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.txtTVien2.TabIndex = 75;
-            this.txtTVien2.Text = "MSSV Thành viên 2 (Nếu có)";
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Image = global::Quan_Li_Luan_Van.Properties.Resources.people;
-            this.label3.Location = new System.Drawing.Point(598, 515);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(24, 27);
-            this.label3.TabIndex = 74;
-            this.label3.Text = "  ";
-            // 
-            // txtChuyenNganh
-            // 
-            this.txtChuyenNganh.Location = new System.Drawing.Point(114, 151);
-            this.txtChuyenNganh.Name = "txtChuyenNganh";
-            this.txtChuyenNganh.Size = new System.Drawing.Size(355, 36);
-            this.txtChuyenNganh.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.txtChuyenNganh.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
-            this.txtChuyenNganh.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.txtChuyenNganh.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtChuyenNganh.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtChuyenNganh.StateCommon.Border.Rounding = 16;
-            this.txtChuyenNganh.StateCommon.Border.Width = 1;
-            this.txtChuyenNganh.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtChuyenNganh.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtChuyenNganh.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.txtChuyenNganh.TabIndex = 76;
-            this.txtChuyenNganh.Text = "Chuyên ngành";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Image = global::Quan_Li_Luan_Van.Properties.Resources.major1;
-            this.label4.Location = new System.Drawing.Point(58, 158);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(24, 27);
-            this.label4.TabIndex = 77;
-            this.label4.Text = "  ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Image = global::Quan_Li_Luan_Van.Properties.Resources.major1;
-            this.label5.Location = new System.Drawing.Point(629, 151);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(24, 27);
-            this.label5.TabIndex = 78;
-            this.label5.Text = "  ";
-            // 
-            // txtChucNang
-            // 
-            this.txtChucNang.Location = new System.Drawing.Point(114, 217);
-            this.txtChucNang.Multiline = true;
-            this.txtChucNang.Name = "txtChucNang";
-            this.txtChucNang.Size = new System.Drawing.Size(489, 111);
-            this.txtChucNang.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.txtChucNang.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
-            this.txtChucNang.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.txtChucNang.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtChucNang.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtChucNang.StateCommon.Border.Rounding = 16;
-            this.txtChucNang.StateCommon.Border.Width = 1;
-            this.txtChucNang.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtChucNang.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtChucNang.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.txtChucNang.TabIndex = 79;
-            this.txtChucNang.Text = "Chức năng";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Image = global::Quan_Li_Luan_Van.Properties.Resources.major1;
-            this.label6.Location = new System.Drawing.Point(629, 226);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(24, 27);
-            this.label6.TabIndex = 80;
-            this.label6.Text = "  ";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Image = global::Quan_Li_Luan_Van.Properties.Resources.major1;
-            this.label7.Location = new System.Drawing.Point(629, 292);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(24, 27);
-            this.label7.TabIndex = 81;
-            this.label7.Text = "  ";
+            this.btnDangKy.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
+            this.btnDangKy.Location = new System.Drawing.Point(445, 654);
+            this.btnDangKy.Name = "btnDangKy";
+            this.btnDangKy.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
+            this.btnDangKy.Size = new System.Drawing.Size(169, 40);
+            this.btnDangKy.TabIndex = 12;
+            this.btnDangKy.Values.Text = "Đăng ký";
             // 
             // FChiTietLuanVan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 702);
-            this.Controls.Add(this.btnThem);
+            this.Controls.Add(this.btnDangKy);
             this.Controls.Add(this.lblCTLV);
             this.Controls.Add(this.panelNoiDung);
             this.Name = "FChiTietLuanVan";
@@ -475,7 +475,7 @@
 
         private System.Windows.Forms.Panel panelNoiDung;
         private System.Windows.Forms.Label lblCTLV;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnThem;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnDangKy;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtGVHD;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
