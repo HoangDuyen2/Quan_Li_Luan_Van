@@ -27,7 +27,7 @@ namespace Quan_Li_Luan_Van
             try
             {
                 conn.Open();
-                flowPanelLuanVan.Controls.Clear();
+                flPanelDSLV.Controls.Clear();
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataReader dataReader = cmd.ExecuteReader();
                 while (dataReader.Read())
@@ -37,9 +37,9 @@ namespace Quan_Li_Luan_Van
                     uclv.LblTenLV.Text = dataReader["TenLV"].ToString();
                     uclv.LblChuyenNganh.Text = dataReader["ChuyenNganh"].ToString();
                     uclv.LblTenGV.Text = dataReader["TenGV"].ToString();
-                    uclv.LblSoLuong.Text = dataReader["SoLuongConLai"].ToString();
 
-                    flowPanelLuanVan.Controls.Add(uclv);
+
+                    flPanelDSLV.Controls.Add(uclv);
                 }
 
             }

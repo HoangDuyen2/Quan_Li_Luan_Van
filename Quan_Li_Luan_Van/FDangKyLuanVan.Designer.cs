@@ -35,7 +35,7 @@
             this.groupBoxTraCuuLuanVan = new System.Windows.Forms.GroupBox();
             this.cbboxChuyenNganh = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.lblTraTenGV = new System.Windows.Forms.Label();
-            this.buttonTimKiem = new System.Windows.Forms.Button();
+            this.btnTimKiem = new System.Windows.Forms.Button();
             this.lblTraChuyenNganh = new System.Windows.Forms.Label();
             this.flPanelDSLV = new System.Windows.Forms.FlowLayoutPanel();
             this.panelTitle.SuspendLayout();
@@ -106,7 +106,7 @@
             // 
             this.groupBoxTraCuuLuanVan.Controls.Add(this.cbboxChuyenNganh);
             this.groupBoxTraCuuLuanVan.Controls.Add(this.lblTraTenGV);
-            this.groupBoxTraCuuLuanVan.Controls.Add(this.buttonTimKiem);
+            this.groupBoxTraCuuLuanVan.Controls.Add(this.btnTimKiem);
             this.groupBoxTraCuuLuanVan.Controls.Add(this.txtTenGV);
             this.groupBoxTraCuuLuanVan.Controls.Add(this.lblTraChuyenNganh);
             this.groupBoxTraCuuLuanVan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -164,23 +164,23 @@
             this.lblTraTenGV.Text = "Tên GV";
             this.lblTraTenGV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // buttonTimKiem
+            // btnTimKiem
             // 
-            this.buttonTimKiem.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.buttonTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTimKiem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.buttonTimKiem.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.buttonTimKiem.Image = global::Quan_Li_Luan_Van.Properties.Resources.find;
-            this.buttonTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonTimKiem.Location = new System.Drawing.Point(894, 25);
-            this.buttonTimKiem.Name = "buttonTimKiem";
-            this.buttonTimKiem.Size = new System.Drawing.Size(158, 42);
-            this.buttonTimKiem.TabIndex = 15;
-            this.buttonTimKiem.Text = "Tìm kiếm";
-            this.buttonTimKiem.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonTimKiem.UseVisualStyleBackColor = false;
-            this.buttonTimKiem.Click += new System.EventHandler(this.buttonTimKiem_Click);
+            this.btnTimKiem.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnTimKiem.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnTimKiem.Image = global::Quan_Li_Luan_Van.Properties.Resources.find;
+            this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimKiem.Location = new System.Drawing.Point(894, 25);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(158, 42);
+            this.btnTimKiem.TabIndex = 15;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.buttonTimKiem_Click);
             // 
             // lblTraChuyenNganh
             // 
@@ -223,7 +223,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button buttonTimKiem;
+        private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.BindingSource qLLUANVANDataSetBindingSource;
         //private QLLUANVANDataSet qLLUANVANDataSet;
         private System.Windows.Forms.Button btnDangKi;

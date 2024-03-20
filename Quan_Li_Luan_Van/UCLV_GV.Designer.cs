@@ -30,12 +30,11 @@
         {
             this.lblTenGV = new System.Windows.Forms.Label();
             this.lblGVHD = new System.Windows.Forms.Label();
-            this.lblSLCL = new System.Windows.Forms.Label();
             this.btnChiTiet = new System.Windows.Forms.Button();
-            this.lblSoLuong = new System.Windows.Forms.Label();
             this.lblChuyenNganh = new System.Windows.Forms.Label();
             this.lblTenLV = new System.Windows.Forms.Label();
             this.pictureBoxNen = new System.Windows.Forms.PictureBox();
+            this.lblTrangThai = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,7 +43,7 @@
             this.lblTenGV.AutoSize = true;
             this.lblTenGV.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenGV.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblTenGV.Location = new System.Drawing.Point(373, 61);
+            this.lblTenGV.Location = new System.Drawing.Point(731, 70);
             this.lblTenGV.Name = "lblTenGV";
             this.lblTenGV.Size = new System.Drawing.Size(140, 23);
             this.lblTenGV.TabIndex = 24;
@@ -56,24 +55,12 @@
             this.lblGVHD.AutoSize = true;
             this.lblGVHD.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGVHD.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblGVHD.Location = new System.Drawing.Point(310, 61);
+            this.lblGVHD.Location = new System.Drawing.Point(663, 70);
             this.lblGVHD.Name = "lblGVHD";
             this.lblGVHD.Size = new System.Drawing.Size(62, 23);
             this.lblGVHD.TabIndex = 23;
             this.lblGVHD.Text = "GVHD:";
             this.lblGVHD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblSLCL
-            // 
-            this.lblSLCL.AutoSize = true;
-            this.lblSLCL.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSLCL.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblSLCL.Location = new System.Drawing.Point(845, 6);
-            this.lblSLCL.Name = "lblSLCL";
-            this.lblSLCL.Size = new System.Drawing.Size(143, 23);
-            this.lblSLCL.TabIndex = 22;
-            this.lblSLCL.Text = "Số lượng còn lại: ";
-            this.lblSLCL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnChiTiet
             // 
@@ -82,7 +69,7 @@
             this.btnChiTiet.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnChiTiet.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnChiTiet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChiTiet.Location = new System.Drawing.Point(921, 51);
+            this.btnChiTiet.Location = new System.Drawing.Point(931, 51);
             this.btnChiTiet.Name = "btnChiTiet";
             this.btnChiTiet.Size = new System.Drawing.Size(114, 42);
             this.btnChiTiet.TabIndex = 20;
@@ -90,18 +77,6 @@
             this.btnChiTiet.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnChiTiet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnChiTiet.UseVisualStyleBackColor = false;
-            // 
-            // lblSoLuong
-            // 
-            this.lblSoLuong.AutoSize = true;
-            this.lblSoLuong.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoLuong.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblSoLuong.Location = new System.Drawing.Point(1007, 6);
-            this.lblSoLuong.Name = "lblSoLuong";
-            this.lblSoLuong.Size = new System.Drawing.Size(17, 23);
-            this.lblSoLuong.TabIndex = 19;
-            this.lblSoLuong.Text = "1";
-            this.lblSoLuong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblChuyenNganh
             // 
@@ -136,6 +111,18 @@
             this.pictureBoxNen.TabIndex = 16;
             this.pictureBoxNen.TabStop = false;
             // 
+            // lblTrangThai
+            // 
+            this.lblTrangThai.AutoSize = true;
+            this.lblTrangThai.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrangThai.ForeColor = System.Drawing.Color.Crimson;
+            this.lblTrangThai.Location = new System.Drawing.Point(929, 5);
+            this.lblTrangThai.Name = "lblTrangThai";
+            this.lblTrangThai.Size = new System.Drawing.Size(105, 23);
+            this.lblTrangThai.TabIndex = 19;
+            this.lblTrangThai.Text = "Đã có nhóm";
+            this.lblTrangThai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // UCLV_GV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -143,9 +130,8 @@
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.lblTenGV);
             this.Controls.Add(this.lblGVHD);
-            this.Controls.Add(this.lblSLCL);
             this.Controls.Add(this.btnChiTiet);
-            this.Controls.Add(this.lblSoLuong);
+            this.Controls.Add(this.lblTrangThai);
             this.Controls.Add(this.lblChuyenNganh);
             this.Controls.Add(this.lblTenLV);
             this.Controls.Add(this.pictureBoxNen);
@@ -161,11 +147,10 @@
 
         private System.Windows.Forms.Label lblTenGV;
         private System.Windows.Forms.Label lblGVHD;
-        private System.Windows.Forms.Label lblSLCL;
         private System.Windows.Forms.Button btnChiTiet;
-        private System.Windows.Forms.Label lblSoLuong;
         private System.Windows.Forms.Label lblChuyenNganh;
         private System.Windows.Forms.Label lblTenLV;
         private System.Windows.Forms.PictureBox pictureBoxNen;
+        private System.Windows.Forms.Label lblTrangThai;
     }
 }

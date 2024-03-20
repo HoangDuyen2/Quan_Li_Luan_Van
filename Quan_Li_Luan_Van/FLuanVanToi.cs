@@ -41,7 +41,6 @@ namespace Quan_Li_Luan_Van
                     uclv.LblTenLV.Text = dataReader["TenLV"].ToString();
                     uclv.LblChuyenNganh.Text = dataReader["ChuyenNganh"].ToString();
                     uclv.LblTenGV.Text = dataReader["TenGV"].ToString();
-                    uclv.LblSoLuong.Text = dataReader["SoLuongConLai"].ToString();
 
                     flPanelDSLV.Controls.Add(uclv);
                 }
