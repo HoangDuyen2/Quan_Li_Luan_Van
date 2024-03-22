@@ -16,7 +16,7 @@ namespace Quan_Li_Luan_Van
     public partial class FDangNhap : Form
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
-        
+
         public FDangNhap()
         {
             InitializeComponent();
@@ -30,14 +30,12 @@ namespace Quan_Li_Luan_Van
         {
             KryptonTextBox textBox = (KryptonTextBox)sender;
             textBox.Text = "";
-            
         }
 
         private void txtTK_GetFocus(object sender, EventArgs e)
         {
             KryptonTextBox textBox = (KryptonTextBox)sender;
             textBox.Text = "";
-            
         }
 
         private void txtTK_LostFocus(object sender, EventArgs e)
@@ -91,21 +89,34 @@ namespace Quan_Li_Luan_Van
                 cmd.Parameters.AddWithValue("@Username", txtTK.Text);
                 cmd.Parameters.AddWithValue("@Password", txtMatKhau.Text);
 
+                Boolean check = false;
+
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)
                 {
-                    this.Hide();
-                    if (chucVu == "Sinh vien")
+                    while (reader.Read())
                     {
-                        FSinhVien sv = new FSinhVien();
-                        sv.ShowDialog();
+                        if (reader[2].ToString() == "Sinh viên")
+                        {
+                            check = true;
+                            this.Hide();
+                            FSinhVien sv = new FSinhVien();
+                            sv.ShowDialog();
+                            this.Close();
+                        }
+                        if (reader[2].ToString() == "Giảng viên")
+                        {
+                            check |= true;
+                            this.Hide();
+                            FGiangVien gv = new FGiangVien();
+                            gv.ShowDialog();
+                            this.Close();
+                        }
                     }
-                    else
+                    if(!check)
                     {
-                        FGiangVien gv = new FGiangVien();
-                        gv.ShowDialog();
+                        MessageBox.Show("Invalid username, password, or role.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    this.Close();
                 }
                 else
                 {
@@ -133,4 +144,4 @@ namespace Quan_Li_Luan_Van
         }
     }
 }
-        
+

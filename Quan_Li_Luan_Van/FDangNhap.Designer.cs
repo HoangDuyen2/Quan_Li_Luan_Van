@@ -85,7 +85,6 @@
             this.txtMatKhau.TabIndex = 8;
             this.txtMatKhau.Text = "111111";
             this.txtMatKhau.UseSystemPasswordChar = true;
-
             // 
             // btnDangNhap
             // 
