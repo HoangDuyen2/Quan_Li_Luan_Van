@@ -70,6 +70,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBConnection.cs" />
     <Compile Include="DSNhomDAO.cs" />
     <Compile Include="DuyetLuanVanDAO.cs" />
     <Compile Include="FBaoCaoTienDo.cs">

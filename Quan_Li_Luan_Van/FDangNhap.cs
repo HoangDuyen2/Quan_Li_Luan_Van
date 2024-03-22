@@ -16,6 +16,7 @@ namespace Quan_Li_Luan_Van
     public partial class FDangNhap : Form
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
+        TaiKhoanDAO taiKhoan = new TaiKhoanDAO();
 
         public FDangNhap()
         {
@@ -57,22 +58,7 @@ namespace Quan_Li_Luan_Van
         }
         private void FLogin_Load(object sender, EventArgs e)
         {
-            try
-            {
-                conn.Open();
-                string sqlStr = string.Format("SELECT * FROM TaiKhoan");
-                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
-                DataTable dtSinhVien = new DataTable();
-                adapter.Fill(dtSinhVien);
-            }
-            catch (Exception exc)
-            {
-                MessageBox.Show(exc.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
+            taiKhoan.Load();
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
@@ -80,59 +66,8 @@ namespace Quan_Li_Luan_Van
             string chucVu = "";
             if (rbtnSV.Checked) chucVu = "Sinh viên";
             else chucVu = "Giảng viên";
-            try
-            {
-                conn.Open();
-
-                string sqlStr = "SELECT * FROM TaiKhoan WHERE Username = @Username AND Pass = @Password";
-                SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                cmd.Parameters.AddWithValue("@Username", txtTK.Text);
-                cmd.Parameters.AddWithValue("@Password", txtMatKhau.Text);
-
-                Boolean check = false;
-
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        if (reader[2].ToString() == "Sinh viên"&&chucVu == "Sinh viên")
-                        {
-                            check = true;
-                            this.Hide();
-                            FSinhVien sv = new FSinhVien();
-                            sv.ShowDialog();
-                            this.Close();
-                        }
-                        if (reader[2].ToString() == "Giảng viên" && chucVu == "Giảng viên")
-                        {
-                            check |= true;
-                            this.Hide();
-                            FGiangVien gv = new FGiangVien();
-                            gv.ShowDialog();
-                            this.Close();
-                        }
-                    }
-                    if(!check)
-                    {
-                        MessageBox.Show("Invalid username, password, or role.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Invalid username, password, or role.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-                reader.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                conn.Close();
-            }
+            if (taiKhoan.DangNhap(taiKhoan.createTaiKhoan(txtTK.Text, txtMatKhau.Text, chucVu)))
+                this.Close();
         }
 
         private void txtMatKhau_MouseCaptureChanged(object sender, EventArgs e)
