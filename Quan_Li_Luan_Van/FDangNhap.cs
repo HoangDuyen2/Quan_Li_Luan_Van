@@ -78,8 +78,8 @@ namespace Quan_Li_Luan_Van
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             string chucVu = "";
-            if (rbtnSV.Checked) chucVu = "Sinh vien";
-            else chucVu = "Giang vien";
+            if (rbtnSV.Checked) chucVu = "Sinh viên";
+            else chucVu = "Giảng viên";
             try
             {
                 conn.Open();
@@ -96,7 +96,7 @@ namespace Quan_Li_Luan_Van
                 {
                     while (reader.Read())
                     {
-                        if (reader[2].ToString() == "Sinh viên")
+                        if (reader[2].ToString() == "Sinh viên"&&chucVu == "Sinh viên")
                         {
                             check = true;
                             this.Hide();
@@ -104,7 +104,7 @@ namespace Quan_Li_Luan_Van
                             sv.ShowDialog();
                             this.Close();
                         }
-                        if (reader[2].ToString() == "Giảng viên")
+                        if (reader[2].ToString() == "Giảng viên" && chucVu == "Giảng viên")
                         {
                             check |= true;
                             this.Hide();
