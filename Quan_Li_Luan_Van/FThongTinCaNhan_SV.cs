@@ -14,103 +14,28 @@ namespace Quan_Li_Luan_Van
 {
     public partial class FThongTinCaNhan_SV : Form
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
-        string query = "SELECT *" +
-                       "FROM SinhVien " +
-                       "WHERE MSSV = '22110001'";
-        public FThongTinCaNhan_SV()
+        Person person = null;
+        public FThongTinCaNhan_SV(Person person)
         {
             InitializeComponent();
+            this.person = person;
+            ucThongTinCaNhan1.BtnChinhSua.Click += btnChinhSua_Click;
+            ucThongTinCaNhan1.BtnOK.Click += btnOK_Click;
         }
 
         private void btnChinhSua_Click(object sender, EventArgs e)
         {
-            txtCCCD.Enabled = true;
-            txtDiaChi.Enabled = true;
-            txtEmail.Enabled = true;
-            txtHoTen.Enabled = true;
-            txtPhone.Enabled = true;
-            rbNam.Enabled = true;
-            rbNu.Enabled = true;
-            dtBirth.Enabled = true;
-            btnChinhSua.Hide();
-            btnOK.Show();
+            ucThongTinCaNhan1.TruyCap(person);
         }
 
         private void FThongTinCaNhan_SV_Load(object sender, EventArgs e)
         {
-            btnOK.Hide();
-            try
-            {
-                conn.Open();
-
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader dataReader = cmd.ExecuteReader();
-                if (dataReader.Read())
-                {
-                    txtID.Text = dataReader["MSSV"].ToString();
-                    txtHoTen.Text = dataReader["TenSV"].ToString();
-                    if (dataReader["GioiTinh"].ToString() == "Nam")
-                        rbNam.Checked = true;
-                    else rbNu.Checked = true;
-                    txtDiaChi.Text = dataReader["DiaChi"].ToString();
-                    txtCCCD.Text = dataReader["CCCD"].ToString();
-                    string day1 = Convert.ToString(dataReader["NgaySinh"]);
-                    DateTime selectedDate;
-                    if (DateTime.TryParse(day1, out selectedDate))
-                    {
-                        dtBirth.Value = selectedDate;
-                    }
-                    txtPhone.Text = dataReader["SDT"].ToString();
-                    txtEmail.Text = dataReader["Email"].ToString();
-                    txtDiem.Text = dataReader["Diem"].ToString();
-                }
-            }
-            catch (Exception exc)
-            {
-                MessageBox.Show(exc.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-
+            ucThongTinCaNhan1.KhongTruyCap(person);
         }
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            try
-            {
-                // Ket noi
-                conn.Open();
-                string sex = "";
-                if (rbNam.Checked) sex = "Nam";
-                else sex = "Nu";
-                string sqlStr = string.Format("UPDATE SinhVien SET TenSV = '{0}', GioiTinh = '{1}', DiaChi = '{3}', " +
-                "CCCD = '{3}', NgaySinh = '{4}', SDT = '{5}', Email = '{6}' WHERE MSSV = '{7}'", txtHoTen.Text, sex,
-                    txtDiaChi.Text, txtCCCD.Text, dtBirth.Value.ToShortDateString(), txtPhone.Text, txtEmail.Text, txtID.Text);
-                SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                if (cmd.ExecuteNonQuery() > 0)
-                    MessageBox.Show("Sửa thành công");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Sửa thất bại" + ex);
-            }
-            finally
-            {
-                conn.Close();
-            }
-            btnOK.Hide();
-            txtCCCD.Enabled = false;
-            txtDiaChi.Enabled = false;
-            txtEmail.Enabled = false;
-            txtHoTen.Enabled = false;
-            txtPhone.Enabled = false;
-            rbNam.Enabled = false;
-            rbNu.Enabled = false;
-            dtBirth.Enabled = false;
-            btnChinhSua.Show();
+            person = ucThongTinCaNhan1.capNhat(person);
         }
     }
 }

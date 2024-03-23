@@ -19,6 +19,7 @@ namespace Quan_Li_Luan_Van
     {
         TaiKhoan taiKhoan;
         TrangChinhDAO trangChinh = new TrangChinhDAO();
+        Person person = null;
         public FSinhVien(TaiKhoan taiKhoan)
         {
             InitializeComponent();
@@ -68,7 +69,7 @@ namespace Quan_Li_Luan_Van
 
         private void FSinhVien_Load(object sender, EventArgs e)
         {
-            Person person = trangChinh.LoadLabel(taiKhoan);
+            person = trangChinh.LoadLabel(taiKhoan);
             labelMSSV.Text = person.getMaso();
             labelTen.Text = person.getHoTen();
             labelChucVu.Text = taiKhoan.getChucVu();
@@ -77,16 +78,19 @@ namespace Quan_Li_Luan_Van
         private void buttonHome_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FTrangChu(), sender);
+            FSinhVien_Load(sender, e);
         }
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FDangKyLuanVan(), sender);
+            FSinhVien_Load(sender, e);
         }
 
         private void btnLuanVan_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FLuanVanToi_SV(),sender);
+            FSinhVien_Load(sender, e);
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
@@ -99,7 +103,8 @@ namespace Quan_Li_Luan_Van
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FThongTinCaNhan_GV(), sender);
+            OpenChildForm(new FThongTinCaNhan_SV(person), sender);
+            FSinhVien_Load(sender, e);
         }
     }
 }
