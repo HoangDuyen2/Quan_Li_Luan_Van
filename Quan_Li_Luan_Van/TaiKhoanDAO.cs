@@ -22,41 +22,53 @@ namespace Quan_Li_Luan_Van
         {
             bool check = false;
 
-            string sqlStr = "SELECT * FROM TaiKhoan WHERE Username = @Username AND Pass = @Password";
-            SqlCommand cmd = new SqlCommand(sqlStr, conn);
-            cmd.Parameters.AddWithValue("@Username", taiKhoan.getUsername());
-            cmd.Parameters.AddWithValue("@Password", taiKhoan.getPassword());
-
-            SqlDataReader reader = cmd.ExecuteReader();
-            if (reader.HasRows)
+            try
             {
-                while (reader.Read())
+                conn.Open();
+                string sqlStr = "SELECT * FROM TaiKhoan WHERE Username = @Username AND Pass = @Password";
+                SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                cmd.Parameters.AddWithValue("@Username", taiKhoan.getUsername());
+                cmd.Parameters.AddWithValue("@Password", taiKhoan.getPassword());
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
                 {
-                    if (reader[2].ToString() == "Sinh viên" && taiKhoan.getChucVu() == "Sinh viên")
+                    while (reader.Read())
                     {
-                        check = true;
-                        FSinhVien sv = new FSinhVien();
-                        sv.ShowDialog();
+                        if (reader[2].ToString() == "Sinh viên" && taiKhoan.getChucVu() == "Sinh viên")
+                        {
+                            check = true;
+                            FSinhVien sv = new FSinhVien();
+                            sv.ShowDialog();
+                        }
+                        if (reader[2].ToString() == "Giảng viên" && taiKhoan.getChucVu() == "Giảng viên")
+                        {
+                            check |= true;
+                            FGiangVien gv = new FGiangVien();
+                            gv.ShowDialog();
+                        }
                     }
-                    if (reader[2].ToString() == "Giảng viên" && taiKhoan.getChucVu() == "Giảng viên")
+                    if (!check)
                     {
-                        check |= true;
-                        FGiangVien gv = new FGiangVien();
-                        gv.ShowDialog();
+                        MessageBox.Show("Invalid username, password, or role.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                if (!check)
+                else
                 {
                     MessageBox.Show("Invalid username, password, or role.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
-            else
-            {
-                MessageBox.Show("Invalid username, password, or role.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            reader.Close();
-            dBConnection.ThucThi(sqlStr);
+                reader.Close();
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+           
             return check;
         } 
         public TaiKhoan createTaiKhoan(string username, string password,string chucVu)
