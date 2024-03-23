@@ -19,6 +19,11 @@ namespace Quan_Li_Luan_Van
     public partial class FThongTinCaNhan_GV : KryptonForm
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
+        TaiKhoan taiKhoan1;
+        public FThongTinCaNhan_GV(TaiKhoan taiKhoan) : this()
+        {
+            taiKhoan1 = taiKhoan;
+        }
         string query = "SELECT *" +
                        "FROM GiangVien " +
                        "WHERE MaGV = 'GV001'";

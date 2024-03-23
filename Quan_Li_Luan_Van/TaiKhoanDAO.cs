@@ -38,13 +38,13 @@ namespace Quan_Li_Luan_Van
                         if (reader[2].ToString() == "Sinh viên" && taiKhoan.getChucVu() == "Sinh viên")
                         {
                             check = true;
-                            FSinhVien sv = new FSinhVien();
+                            FSinhVien sv = new FSinhVien(taiKhoan);
                             sv.ShowDialog();
                         }
                         if (reader[2].ToString() == "Giảng viên" && taiKhoan.getChucVu() == "Giảng viên")
                         {
-                            check |= true;
-                            FGiangVien gv = new FGiangVien();
+                            check = true;
+                            FGiangVien gv = new FGiangVien(taiKhoan);
                             gv.ShowDialog();
                         }
                     }
@@ -68,10 +68,10 @@ namespace Quan_Li_Luan_Van
             {
                 conn.Close();
             }
-           
+
             return check;
-        } 
-        public TaiKhoan createTaiKhoan(string username, string password,string chucVu)
+        }
+        public TaiKhoan createTaiKhoan(string username, string password, string chucVu)
         {
             TaiKhoan taiKhoan = new TaiKhoan(username, password, chucVu);
             return taiKhoan;

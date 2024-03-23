@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,13 +13,20 @@ namespace Quan_Li_Luan_Van
 {
     public partial class FGiangVien : Form
     {
-        public FGiangVien()
+        TaiKhoan taiKhoan;
+        TrangChinhDAO trangChinh = new TrangChinhDAO();
+        public FGiangVien(TaiKhoan taiKhoan)
         {
             InitializeComponent();
+            this.taiKhoan = taiKhoan;
         }
 
         private void FGiangVien_Load(object sender, EventArgs e)
         {
+            Person person = trangChinh.LoadLabel(taiKhoan);
+            labelMSSV.Text = person.getMaso();
+            labelTen.Text = person.getHoTen();
+            labelChucVu.Text = taiKhoan.getChucVu();
 
         }
 

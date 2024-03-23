@@ -2,8 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
+using System.Data.SqlClient;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
+using System.Net.NetworkInformation;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,9 +17,12 @@ namespace Quan_Li_Luan_Van
 {
     public partial class FSinhVien : Form
     {
-        public FSinhVien()
+        TaiKhoan taiKhoan;
+        TrangChinhDAO trangChinh = new TrangChinhDAO();
+        public FSinhVien(TaiKhoan taiKhoan)
         {
             InitializeComponent();
+            this.taiKhoan = taiKhoan;
         }
 
         //private Button currentButton;
@@ -60,7 +68,10 @@ namespace Quan_Li_Luan_Van
 
         private void FSinhVien_Load(object sender, EventArgs e)
         {
-
+            Person person = trangChinh.LoadLabel(taiKhoan);
+            labelMSSV.Text = person.getMaso();
+            labelTen.Text = person.getHoTen();
+            labelChucVu.Text = taiKhoan.getChucVu();
         }
 
         private void buttonHome_Click(object sender, EventArgs e)

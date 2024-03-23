@@ -15,7 +15,6 @@ namespace Quan_Li_Luan_Van
 {
     public partial class FDangNhap : Form
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
         TaiKhoanDAO taiKhoan = new TaiKhoanDAO();
 
         public FDangNhap()

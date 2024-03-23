@@ -151,6 +151,7 @@
     <Compile Include="FNhom.Designer.cs">
       <DependentUpon>FNhom.cs</DependentUpon>
     </Compile>
+    <Compile Include="TrangChinhDAO.cs" />
     <Compile Include="FSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>

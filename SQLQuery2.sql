@@ -120,3 +120,7 @@ END
 SELECT MaGV, TenGV, GioiTinh, DiaChi, CCCD, NgaySinh, SDT, Email
 FROM GiangVien
 WHERE MaGV = 'GV001'
+
+SELECT *
+FROM SinhVien
+WHERE MSSV = '22110001'
