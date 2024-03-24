@@ -16,7 +16,7 @@ namespace Quan_Li_Luan_Van
     public partial class FDangNhap : Form
     {
         TaiKhoanDAO taiKhoan = new TaiKhoanDAO();
-
+        Hide_Show hide = new Hide_Show();
         public FDangNhap()
         {
             InitializeComponent();
@@ -28,32 +28,22 @@ namespace Quan_Li_Luan_Van
 
         private void TxtMatKhau_GetFocus(object sender, EventArgs e)
         {
-            KryptonTextBox textBox = (KryptonTextBox)sender;
-            textBox.Text = "";
+            hide.Hide(sender,e);
         }
 
         private void txtTK_GetFocus(object sender, EventArgs e)
         {
-            KryptonTextBox textBox = (KryptonTextBox)sender;
-            textBox.Text = "";
+            hide.Hide(sender, e);
         }
 
         private void txtTK_LostFocus(object sender, EventArgs e)
         {
-            KryptonTextBox textBox = (KryptonTextBox)sender;
-            if (string.IsNullOrWhiteSpace(textBox.Text))
-            {
-                txtTK.Text = "Username";
-            }
+            hide.Show(sender, e);
         }
 
         private void txtMatKhau_LostFocus(object sender, EventArgs e)
         {
-            KryptonTextBox textBox = (KryptonTextBox)sender;
-            if (string.IsNullOrWhiteSpace(textBox.Text))
-            {
-                textBox.Text = "111111";
-            }
+            hide.Show(sender, e);
         }
         private void FLogin_Load(object sender, EventArgs e)
         {
@@ -80,14 +70,6 @@ namespace Quan_Li_Luan_Van
                 gv.ShowDialog();
             }
             this.Close();
-        }
-
-        private void txtMatKhau_MouseCaptureChanged(object sender, EventArgs e)
-        {
-            if (txtTK.Text == "Username")  // here you can also use txtSearch.Text != "Poduct Name", but it could affect your search code possibly 
-            {
-                txtTK.Text = "";
-            }
         }
     }
 }

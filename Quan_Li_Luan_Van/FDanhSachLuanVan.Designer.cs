@@ -127,6 +127,7 @@
             this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // lblTraChuyenNganh
             // 
