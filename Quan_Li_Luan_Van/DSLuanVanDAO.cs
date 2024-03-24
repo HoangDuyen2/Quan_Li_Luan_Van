@@ -11,80 +11,43 @@ namespace Quan_Li_Luan_Van
 
     internal class DSLuanVanDAO
     {
-        static string conString = "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=Quan_Li_Luan_Van;Integrated Security=True;Encrypt=True";
-        SqlCommand cmd;
-        SqlConnection conn;
-        SqlDataReader reader;
+        SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
 
         public DSLuanVanDAO() 
         {
-            conn = new SqlConnection(conString);
-            cmd = new SqlCommand();
+            
         }
-        public bool connect ()
+        public void getInfo(string query, FlowLayoutPanel panel)
         {
             try
             {
                 conn.Open();
-                return true; 
+                panel.Controls.Clear();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader dataReader = cmd.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    UCLV_GV uclv = new UCLV_GV();
+
+                    uclv.LblTenLV.Text = dataReader["TenLV"].ToString();
+                    uclv.LblChuyenNganh.Text = dataReader["ChuyenNganh"].ToString();
+                    uclv.LblTenGV.Text = dataReader["TenGV"].ToString();
+                    if (dataReader["TrangThai"].ToString() == "Chưa có nhóm")
+                        uclv.LblTrangThai.ForeColor = System.Drawing.Color.Green;
+                    uclv.LblTrangThai.Text = dataReader["TrangThai"].ToString();
+
+                    panel.Controls.Add(uclv);
+                }
+
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return false;
-                throw;
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
             }
-        }
-        public bool disconnection()
-        {
-            try
+            finally
             {
                 conn.Close();
-                return true;
             }
-            catch (Exception)
-            {
-                return false;
-                throw;
-            }
-        }
-        public string getInfo(string query, FlowLayoutPanel panel)
-        {
-            string res="";
-            try
-            {
-                cmd.Connection = conn;
-                cmd.CommandText = query.ToLower();
-                connect();
-
-                reader = cmd.ExecuteReader();
-                string tenLV, chuyenNganh, tenGV, SoLuong;
-                while (reader.Read())
-                {
-                    tenLV = reader[0].ToString();
-                    chuyenNganh = reader[1].ToString();
-                    tenGV = reader[2].ToString();
-                    SoLuong = reader[3].ToString();
-
-                    UCLV uclv = new UCLV();
-
-                    uclv.LblTenLV.Text = tenLV;
-                    uclv.LblChuyenNganh.Text = chuyenNganh;
-                    uclv.LblTenGV.Text = tenGV;
-                    
-
-                    if(tenLV != string.Empty)
-                    {
-                        panel.Controls.Add(uclv);
-                    }
-                }
-                res = "v";
-            }
-            catch(Exception ex) 
-            {
-                res = ex.Message;
-                throw;
-            }
-            return res;
         }
     }
 }

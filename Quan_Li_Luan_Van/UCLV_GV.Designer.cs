@@ -117,8 +117,9 @@
             this.lblTrangThai.AutoSize = true;
             this.lblTrangThai.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTrangThai.ForeColor = System.Drawing.Color.Crimson;
-            this.lblTrangThai.Location = new System.Drawing.Point(948, 0);
+            this.lblTrangThai.Location = new System.Drawing.Point(925, 0);
             this.lblTrangThai.Name = "lblTrangThai";
+            this.lblTrangThai.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblTrangThai.Size = new System.Drawing.Size(105, 23);
             this.lblTrangThai.TabIndex = 19;
             this.lblTrangThai.Text = "Đã có nhóm";

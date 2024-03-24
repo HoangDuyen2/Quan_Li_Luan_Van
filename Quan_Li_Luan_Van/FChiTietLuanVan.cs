@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,13 +28,42 @@ namespace Quan_Li_Luan_Van
         {
             InitializeComponent();
         }
+        public void ThanhVienNhom()
+        {
+            string query1 = "SELECT LuanVan.MaLV, LuanVan.TenLV, DSThanhVien.MSSV1, " +
+                            "DSThanhVien.MSSV2, DSThanhVien.MSSV3 " +
+                            "FROM LuanVan, DSThanhVien " +
+                           "WHERE LuanVan.MaLV = DSThanhVien.MaLV and TenLV = N'" + _message + "'";
+            try
+            {
+                conn.Open();
+                SqlCommand cmd1 = new SqlCommand(query1, conn);
+                SqlDataReader dataReader1 = cmd1.ExecuteReader();
+                if (dataReader1.Read())
+                {
+                    txtTVien1.Text = dataReader1["MSSV1"].ToString();
+                    txtTVien2.Text = dataReader1["MSSV2"].ToString();
+                }
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            
+        }
         private void FChiTietLuanVan_Load(object sender, EventArgs e)
         {
-            string query = "SELECT LuanVan.MaLV, LuanVan.TenLV, LuanVan.ChuyenNganh, GiangVien.TenGV , LuanVan.SoLuongConLai, LuanVan.NgayBD, LuanVan.NgayKT, LuanVan.MoTaChiTiet " +
-                           "FROM LuanVan " +
-                           "JOIN GiangVien ON LuanVan.MaGV = GiangVien.MaGV " +
-                           "WHERE TenLV = N'" + _message + "'";
+            ThanhVienNhom();
+            string query = "SELECT LuanVan.MaLV, LuanVan.TenLV, GiangVien.TenGV, " +
+                            "LuanVan.ChuyenNganh, LuanVan.LinhVuc, LuanVan.ChucNang, LuanVan.CongNghe, " +
+                            " LuanVan.NgonNgu, LuanVan.YeuCau " +
+                           "FROM LuanVan, GiangVien " +
+                           "WHERE LuanVan.MaGV = GiangVien.MaGV and TenLV = N'" + _message + "'";
             try
             {
                 conn.Open();
@@ -49,10 +79,9 @@ namespace Quan_Li_Luan_Van
                     txtChucNang.Text = dataReader["ChucNang"].ToString();
                     txtCongNghe.Text = dataReader["CongNghe"].ToString();
                     txtNgonNgu.Text = dataReader["NgonNgu"].ToString();
-                    txtYeuCau.Text = dataReader["MoTaChiTiet"].ToString();
-                    txtTVien1.Text = dataReader["MSSV1"].ToString();
-                    txtTVien2.Text = dataReader["MSSV2"].ToString();
+                    txtYeuCau.Text = dataReader["YeuCau"].ToString();
                 }
+                
             }
             catch (Exception ex)
             {
@@ -62,6 +91,20 @@ namespace Quan_Li_Luan_Van
             {
                 conn.Close();
             }
+        }
+        public void KhongTruyCap()
+        {
+            txtChucNang.Enabled = false;
+            txtChuyenNganh.Enabled = false;
+            txtCongNghe.Enabled = false;
+            txtNgonNgu.Enabled = false;
+            txtYeuCau.Enabled = false;
+            txtGVHD.Enabled = false;
+            txtLinhVuc.Enabled = false;
+            txtMaLuanVan.Enabled = false;
+            txtTVien2.Enabled = false;
+            txtTVien1.Enabled = false;
+            txtTenLuanVan.Enabled=false;
         }
     }
 
