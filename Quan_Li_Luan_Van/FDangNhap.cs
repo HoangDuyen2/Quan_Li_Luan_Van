@@ -57,7 +57,7 @@ namespace Quan_Li_Luan_Van
         }
         private void FLogin_Load(object sender, EventArgs e)
         {
-            taiKhoan.Load();
+ //           taiKhoan.Load();
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
@@ -71,12 +71,12 @@ namespace Quan_Li_Luan_Van
                         }*/
             if (rbtnSV.Checked)
             {
-                FSinhVien sv = new FSinhVien(taiKhoan.createTaiKhoan(txtTK.Text, txtMatKhau.Text, chucVu));
+                FSinhVien sv = new FSinhVien();
                 sv.ShowDialog();
             }
             else
             {
-                FGiangVien gv = new FGiangVien(taiKhoan.createTaiKhoan(txtTK.Text, txtMatKhau.Text, chucVu));
+                FGiangVien gv = new FGiangVien();
                 gv.ShowDialog();
             }
             this.Close();

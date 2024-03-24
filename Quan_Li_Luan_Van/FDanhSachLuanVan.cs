@@ -14,7 +14,7 @@ namespace Quan_Li_Luan_Van
     public partial class FDanhSachLuanVan : Form
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
-        string query = "SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, GiangVien.TenGV, LuanVan.SoLuongConLai " +
+        string query = "SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, GiangVien.TenGV " +
                                    "FROM LuanVan " +
                                    "JOIN GiangVien ON LuanVan.MaGV = GiangVien.MaGV ";
         public FDanhSachLuanVan()
@@ -51,6 +51,22 @@ namespace Quan_Li_Luan_Van
             {
                 conn.Close();
             }
+        }
+
+        private void ChonChuyenNganh(object sender, EventArgs e)
+        {
+            string text = comboxChuyenNganh.SelectedItem.ToString();
+            if (text != "Tất cả")
+            {
+                query = "SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, GiangVien.TenGV, LuanVan.TrangThai " +
+                        "FROM LuanVan " +
+                        "JOIN GiangVien ON LuanVan.MaGV = GiangVien.MaGV " +
+                        "WHERE LuanVan.ChuyenNganh = N'" + text + "'";
+            }
+            else query = "SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, GiangVien.TenGV, LuanVan.TrangThai " +
+                        "FROM LuanVan " +
+                        "JOIN GiangVien ON LuanVan.MaGV = GiangVien.MaGV ";
+            TraCuu_Load(sender, e);
         }
     }
 }

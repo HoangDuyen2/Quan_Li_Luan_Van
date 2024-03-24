@@ -26,6 +26,11 @@ namespace Quan_Li_Luan_Van
             this.taiKhoan = taiKhoan;
         }
 
+        public FSinhVien()
+        {
+            InitializeComponent();
+        }
+
         //private Button currentButton;
         private Form activeForm;
 
