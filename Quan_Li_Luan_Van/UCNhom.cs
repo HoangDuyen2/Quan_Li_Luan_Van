@@ -22,5 +22,16 @@ namespace Quan_Li_Luan_Van
         public Button BtnDSTV { get => btnDSTV; set => btnDSTV = value; }
         public Button BtnTienTrinh { get => btnTienTrinh; set => btnTienTrinh = value; }
         public Button BtnThemNV { get => btnThemNV; set => btnThemNV = value; }
+
+        private void btnTienTrinh_Click(object sender, EventArgs e)
+        {
+            FChiTietTask chiTietTask = new FChiTietTask(LbTenLV.Text);
+            chiTietTask.Show();
+        }
+
+        private void btnThemNV_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

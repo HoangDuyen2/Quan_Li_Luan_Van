@@ -100,6 +100,7 @@
             this.btnTienTrinh.Text = "Tiến trình";
             this.btnTienTrinh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTienTrinh.UseVisualStyleBackColor = false;
+            this.btnTienTrinh.Click += new System.EventHandler(this.btnTienTrinh_Click);
             // 
             // btnThemNV
             // 
@@ -115,6 +116,7 @@
             this.btnThemNV.Text = "Thêm NV";
             this.btnThemNV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThemNV.UseVisualStyleBackColor = false;
+            this.btnThemNV.Click += new System.EventHandler(this.btnThemNV_Click);
             // 
             // UCNhom
             // 
