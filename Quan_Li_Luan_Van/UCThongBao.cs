@@ -22,5 +22,11 @@ namespace Quan_Li_Luan_Van
             FChiTietThongBao tb = new FChiTietThongBao();
             tb.ShowDialog();
         }
+        public PictureBox PicBoxUser { get => picBoxUser; set => picBoxUser = value; }
+        public Label LblGV { get => lblGV; set => lblGV = value; }
+        public Label LbNoiDungTB { get => lbNoiDungTB; set => lbNoiDungTB = value; }
+        public Button BtnXem { get => btnXem; set => btnXem = value; }
+        public Label LblThoiGian { get => lblThoiGian; set => lblThoiGian = value; }
+        public Label LblTrangThai { get => lblTrangThai; set => lblTrangThai = value; }
     }
 }

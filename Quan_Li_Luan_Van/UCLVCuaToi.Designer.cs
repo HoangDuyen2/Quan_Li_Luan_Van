@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbTenGVHD = new System.Windows.Forms.Label();
+            this.lbGVHD = new System.Windows.Forms.Label();
+            this.lbSoLuongConLai = new System.Windows.Forms.Label();
             this.lbSoLuong = new System.Windows.Forms.Label();
             this.lbChuyenNganh = new System.Windows.Forms.Label();
             this.lbTenLV = new System.Windows.Forms.Label();
@@ -40,41 +40,41 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNen)).BeginInit();
             this.SuspendLayout();
             // 
-            // label3
+            // lbTenGVHD
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label3.Location = new System.Drawing.Point(369, 61);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 23);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Đinh Công Đoan";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbTenGVHD.AutoSize = true;
+            this.lbTenGVHD.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenGVHD.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lbTenGVHD.Location = new System.Drawing.Point(369, 61);
+            this.lbTenGVHD.Name = "lbTenGVHD";
+            this.lbTenGVHD.Size = new System.Drawing.Size(140, 23);
+            this.lbTenGVHD.TabIndex = 24;
+            this.lbTenGVHD.Text = "Đinh Công Đoan";
+            this.lbTenGVHD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // lbGVHD
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label2.Location = new System.Drawing.Point(306, 61);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 23);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "GVHD:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbGVHD.AutoSize = true;
+            this.lbGVHD.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGVHD.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lbGVHD.Location = new System.Drawing.Point(306, 61);
+            this.lbGVHD.Name = "lbGVHD";
+            this.lbGVHD.Size = new System.Drawing.Size(62, 23);
+            this.lbGVHD.TabIndex = 23;
+            this.lbGVHD.Text = "GVHD:";
+            this.lbGVHD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // lbSoLuongConLai
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label1.Location = new System.Drawing.Point(841, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 23);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Số lượng còn lại: ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbSoLuongConLai.AutoSize = true;
+            this.lbSoLuongConLai.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSoLuongConLai.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lbSoLuongConLai.Location = new System.Drawing.Point(841, 6);
+            this.lbSoLuongConLai.Name = "lbSoLuongConLai";
+            this.lbSoLuongConLai.Size = new System.Drawing.Size(143, 23);
+            this.lbSoLuongConLai.TabIndex = 22;
+            this.lbSoLuongConLai.Text = "Số lượng còn lại: ";
+            this.lbSoLuongConLai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbSoLuong
             // 
@@ -159,9 +159,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbTenGVHD);
+            this.Controls.Add(this.lbGVHD);
+            this.Controls.Add(this.lbSoLuongConLai);
             this.Controls.Add(this.btnDangKi);
             this.Controls.Add(this.buttonChiTiet);
             this.Controls.Add(this.lbSoLuong);
@@ -178,9 +178,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbTenGVHD;
+        private System.Windows.Forms.Label lbGVHD;
+        private System.Windows.Forms.Label lbSoLuongConLai;
         private System.Windows.Forms.Label lbSoLuong;
         private System.Windows.Forms.Label lbChuyenNganh;
         private System.Windows.Forms.Label lbTenLV;

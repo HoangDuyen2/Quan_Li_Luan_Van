@@ -33,7 +33,7 @@
             this.btnDSTV = new System.Windows.Forms.Button();
             this.pictureBoxNen = new System.Windows.Forms.PictureBox();
             this.btnTienTrinh = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnThemNV = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,20 +101,20 @@
             this.btnTienTrinh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTienTrinh.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnThemNV
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(920, 48);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(126, 42);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "Thêm NV";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnThemNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
+            this.btnThemNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThemNV.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnThemNV.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnThemNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThemNV.Location = new System.Drawing.Point(920, 48);
+            this.btnThemNV.Name = "btnThemNV";
+            this.btnThemNV.Size = new System.Drawing.Size(126, 42);
+            this.btnThemNV.TabIndex = 21;
+            this.btnThemNV.Text = "Thêm NV";
+            this.btnThemNV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThemNV.UseVisualStyleBackColor = false;
             // 
             // UCNhom
             // 
@@ -122,7 +122,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnThemNV);
             this.Controls.Add(this.btnTienTrinh);
             this.Controls.Add(this.btnDSTV);
             this.Controls.Add(this.lbChuyenNganh);
@@ -143,6 +143,6 @@
         private System.Windows.Forms.PictureBox pictureBoxNen;
         private System.Windows.Forms.Button btnDSTV;
         private System.Windows.Forms.Button btnTienTrinh;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnThemNV;
     }
 }
