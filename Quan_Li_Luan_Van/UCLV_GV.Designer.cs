@@ -69,7 +69,7 @@
             this.btnChiTiet.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnChiTiet.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnChiTiet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChiTiet.Location = new System.Drawing.Point(931, 51);
+            this.btnChiTiet.Location = new System.Drawing.Point(944, 55);
             this.btnChiTiet.Name = "btnChiTiet";
             this.btnChiTiet.Size = new System.Drawing.Size(114, 42);
             this.btnChiTiet.TabIndex = 20;
@@ -117,7 +117,7 @@
             this.lblTrangThai.AutoSize = true;
             this.lblTrangThai.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTrangThai.ForeColor = System.Drawing.Color.Crimson;
-            this.lblTrangThai.Location = new System.Drawing.Point(929, 5);
+            this.lblTrangThai.Location = new System.Drawing.Point(948, 0);
             this.lblTrangThai.Name = "lblTrangThai";
             this.lblTrangThai.Size = new System.Drawing.Size(105, 23);
             this.lblTrangThai.TabIndex = 19;
@@ -128,6 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.lblTenGV);
             this.Controls.Add(this.lblGVHD);
@@ -137,7 +138,7 @@
             this.Controls.Add(this.lblTenLV);
             this.Controls.Add(this.pictureBoxNen);
             this.Name = "UCLV_GV";
-            this.Size = new System.Drawing.Size(1056, 96);
+            this.Size = new System.Drawing.Size(1060, 100);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

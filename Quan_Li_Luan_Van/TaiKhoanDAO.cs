@@ -33,15 +33,15 @@ namespace Quan_Li_Luan_Van
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)
                 {
-                    while (reader.Read())
+                    if (reader.Read())
                     {
-                        if (reader[2].ToString() == "Sinh viên" && taiKhoan.getChucVu() == "Sinh viên")
+                        if (reader[2].ToString() == "Sinh Viên" && taiKhoan.getChucVu() == "Sinh viên")
                         {
                             check = true;
                             FSinhVien sv = new FSinhVien(taiKhoan);
                             sv.ShowDialog();
                         }
-                        if (reader[2].ToString() == "Giảng viên" && taiKhoan.getChucVu() == "Giảng viên")
+                        if (reader[2].ToString() == "Giảng Viên" && taiKhoan.getChucVu() == "Giảng viên")
                         {
                             check = true;
                             FGiangVien gv = new FGiangVien(taiKhoan);
@@ -57,8 +57,6 @@ namespace Quan_Li_Luan_Van
                 {
                     MessageBox.Show("Invalid username, password, or role.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                reader.Close();
-
             }
             catch (Exception ex)
             {

@@ -95,7 +95,7 @@
             this.groupBoxTraCuuLuanVan.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.groupBoxTraCuuLuanVan.Location = new System.Drawing.Point(-4, 64);
             this.groupBoxTraCuuLuanVan.Name = "groupBoxTraCuuLuanVan";
-            this.groupBoxTraCuuLuanVan.Size = new System.Drawing.Size(1182, 77);
+            this.groupBoxTraCuuLuanVan.Size = new System.Drawing.Size(1076, 77);
             this.groupBoxTraCuuLuanVan.TabIndex = 23;
             this.groupBoxTraCuuLuanVan.TabStop = false;
             this.groupBoxTraCuuLuanVan.Text = "Tra cứu luận văn";
@@ -104,7 +104,7 @@
             // 
             this.cbboxChuyenNganh.DropDownWidth = 261;
             this.cbboxChuyenNganh.Items.AddRange(new object[] {
-            "Tất cả",
+            "-- Tất cả --",
             "Phát triển phần mềm",
             "Khoa học dữ liệu",
             "An ninh mạng",
@@ -132,8 +132,12 @@
             this.cbboxChuyenNganh.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.cbboxChuyenNganh.StateCommon.Item.Content.LongText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbboxChuyenNganh.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbboxChuyenNganh.StateNormal.Item.Content.LongText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbboxChuyenNganh.StateNormal.Item.Content.ShortText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbboxChuyenNganh.TabIndex = 17;
-            this.cbboxChuyenNganh.Text = "Tất cả";
+            this.cbboxChuyenNganh.Text = "-- Tất cả --";
             // 
             // lblTraTenGV
             // 
@@ -154,7 +158,7 @@
             this.btnTimKiem.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnTimKiem.Image = global::Quan_Li_Luan_Van.Properties.Resources.find;
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiem.Location = new System.Drawing.Point(894, 25);
+            this.btnTimKiem.Location = new System.Drawing.Point(908, 25);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(158, 42);
             this.btnTimKiem.TabIndex = 15;

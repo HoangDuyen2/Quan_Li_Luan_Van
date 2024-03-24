@@ -65,8 +65,21 @@ namespace Quan_Li_Luan_Van
             string chucVu = "";
             if (rbtnSV.Checked) chucVu = "Sinh viên";
             else chucVu = "Giảng viên";
-            if (taiKhoan.DangNhap(taiKhoan.createTaiKhoan(txtTK.Text, txtMatKhau.Text, chucVu)))
-                this.Close();
+            /*            if (taiKhoan.DangNhap(taiKhoan.createTaiKhoan(txtTK.Text, txtMatKhau.Text, chucVu)) == true)
+                        {
+                            this.Close();
+                        }*/
+            if (rbtnSV.Checked)
+            {
+                FSinhVien sv = new FSinhVien(taiKhoan.createTaiKhoan(txtTK.Text, txtMatKhau.Text, chucVu));
+                sv.ShowDialog();
+            }
+            else
+            {
+                FGiangVien gv = new FGiangVien(taiKhoan.createTaiKhoan(txtTK.Text, txtMatKhau.Text, chucVu));
+                gv.ShowDialog();
+            }
+            this.Close();
         }
 
         private void txtMatKhau_MouseCaptureChanged(object sender, EventArgs e)
