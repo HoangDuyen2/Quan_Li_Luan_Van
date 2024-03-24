@@ -30,10 +30,9 @@
         {
             this.lbChuyenNganh = new System.Windows.Forms.Label();
             this.lbTenLV = new System.Windows.Forms.Label();
-            this.btnDSTV = new System.Windows.Forms.Button();
-            this.pictureBoxNen = new System.Windows.Forms.PictureBox();
-            this.btnTienTrinh = new System.Windows.Forms.Button();
             this.btnThemNV = new System.Windows.Forms.Button();
+            this.pictureBoxNen = new System.Windows.Forms.PictureBox();
+            this.btnChiTiet = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,47 +60,6 @@
             this.lbTenLV.Text = "Quản lí khách sạn";
             this.lbTenLV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnDSTV
-            // 
-            this.btnDSTV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
-            this.btnDSTV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDSTV.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnDSTV.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnDSTV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDSTV.Location = new System.Drawing.Point(594, 48);
-            this.btnDSTV.Name = "btnDSTV";
-            this.btnDSTV.Size = new System.Drawing.Size(186, 42);
-            this.btnDSTV.TabIndex = 19;
-            this.btnDSTV.Text = "DS Thành viên";
-            this.btnDSTV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDSTV.UseVisualStyleBackColor = false;
-            // 
-            // pictureBoxNen
-            // 
-            this.pictureBoxNen.Image = global::Quan_Li_Luan_Van.Properties.Resources.anhSubject;
-            this.pictureBoxNen.Location = new System.Drawing.Point(19, 14);
-            this.pictureBoxNen.Name = "pictureBoxNen";
-            this.pictureBoxNen.Size = new System.Drawing.Size(78, 76);
-            this.pictureBoxNen.TabIndex = 16;
-            this.pictureBoxNen.TabStop = false;
-            // 
-            // btnTienTrinh
-            // 
-            this.btnTienTrinh.AutoSize = true;
-            this.btnTienTrinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
-            this.btnTienTrinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTienTrinh.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnTienTrinh.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnTienTrinh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTienTrinh.Location = new System.Drawing.Point(786, 48);
-            this.btnTienTrinh.Name = "btnTienTrinh";
-            this.btnTienTrinh.Size = new System.Drawing.Size(128, 42);
-            this.btnTienTrinh.TabIndex = 20;
-            this.btnTienTrinh.Text = "Tiến trình";
-            this.btnTienTrinh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTienTrinh.UseVisualStyleBackColor = false;
-            this.btnTienTrinh.Click += new System.EventHandler(this.btnTienTrinh_Click);
-            // 
             // btnThemNV
             // 
             this.btnThemNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
@@ -118,15 +76,39 @@
             this.btnThemNV.UseVisualStyleBackColor = false;
             this.btnThemNV.Click += new System.EventHandler(this.btnThemNV_Click);
             // 
+            // pictureBoxNen
+            // 
+            this.pictureBoxNen.Image = global::Quan_Li_Luan_Van.Properties.Resources.anhSubject;
+            this.pictureBoxNen.Location = new System.Drawing.Point(19, 14);
+            this.pictureBoxNen.Name = "pictureBoxNen";
+            this.pictureBoxNen.Size = new System.Drawing.Size(78, 76);
+            this.pictureBoxNen.TabIndex = 16;
+            this.pictureBoxNen.TabStop = false;
+            // 
+            // btnChiTiet
+            // 
+            this.btnChiTiet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
+            this.btnChiTiet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChiTiet.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnChiTiet.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnChiTiet.Image = global::Quan_Li_Luan_Van.Properties.Resources.decribe1;
+            this.btnChiTiet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChiTiet.Location = new System.Drawing.Point(786, 48);
+            this.btnChiTiet.Name = "btnChiTiet";
+            this.btnChiTiet.Size = new System.Drawing.Size(128, 42);
+            this.btnChiTiet.TabIndex = 29;
+            this.btnChiTiet.Text = "Chi tiết";
+            this.btnChiTiet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnChiTiet.UseVisualStyleBackColor = false;
+            // 
             // UCNhom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.btnChiTiet);
             this.Controls.Add(this.btnThemNV);
-            this.Controls.Add(this.btnTienTrinh);
-            this.Controls.Add(this.btnDSTV);
             this.Controls.Add(this.lbChuyenNganh);
             this.Controls.Add(this.lbTenLV);
             this.Controls.Add(this.pictureBoxNen);
@@ -143,8 +125,7 @@
         private System.Windows.Forms.Label lbChuyenNganh;
         private System.Windows.Forms.Label lbTenLV;
         private System.Windows.Forms.PictureBox pictureBoxNen;
-        private System.Windows.Forms.Button btnDSTV;
-        private System.Windows.Forms.Button btnTienTrinh;
         private System.Windows.Forms.Button btnThemNV;
+        private System.Windows.Forms.Button btnChiTiet;
     }
 }

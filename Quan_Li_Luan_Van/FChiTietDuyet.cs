@@ -12,11 +12,16 @@ namespace Quan_Li_Luan_Van
 {
     public partial class FChiTietDuyet : Form
     {
+        private string mssv, maLV;
         public FChiTietDuyet()
         {
             InitializeComponent();
         }
-
+        public FChiTietDuyet(string mssv, string maLV) : this()
+        {
+            this.mssv = mssv;
+            this.maLV = maLV;
+        }
         private void FChiTietDuyet_Load(object sender, EventArgs e)
         {
 

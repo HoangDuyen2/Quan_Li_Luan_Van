@@ -94,6 +94,7 @@
             this.buttonChiTiet.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonChiTiet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonChiTiet.UseVisualStyleBackColor = false;
+            this.buttonChiTiet.Click += new System.EventHandler(this.buttonChiTiet_Click);
             // 
             // lbChuyenNganh
             // 

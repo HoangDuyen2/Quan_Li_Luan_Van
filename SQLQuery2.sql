@@ -13,21 +13,25 @@ CREATE TABLE GiangVien(
 GO
 CREATE TABLE LuanVan(
 	MaLV VARCHAR(10) PRIMARY KEY,
+    MaGV VARCHAR(10) FOREIGN KEY REFERENCES GiangVien(MaGV),
 	TenLV NVARCHAR(255) NOT NULL,
-	NgayBD Date,
-	NgayKT Date,
 	ChuyenNganh VARCHAR(255),
+    LinhVuc NVARCHAR(255),
+    ChucNang NVARCHAR(255),
 	TrangThai VARCHAR(100),
 	MoTaChiTiet NVARCHAR(MAX),
     TienTrinh int,
 	SoLuongConLai int,
-    MaGV VARCHAR(10) FOREIGN KEY REFERENCES GiangVien(MaGV)
 )
+
+drop table LuanVan
 
 GO
 CREATE TABLE Nhom(
 	MaNhom VARCHAR(10) PRIMARY KEY
 )
+
+drop table Nhom
 
 GO
 CREATE TABLE SinhVien (
@@ -39,12 +43,13 @@ CREATE TABLE SinhVien (
     NgaySinh DATE,
     SDT VARCHAR(11) UNIQUE,
     Email VARCHAR(255) UNIQUE,
-    Diem FLOAT,
     MaLV VARCHAR(10),
     MaNhom VARCHAR(10),
     FOREIGN KEY (MaLV) REFERENCES LuanVan(MaLV),
     FOREIGN KEY (MaNhom) REFERENCES Nhom(MaNhom)
 );
+
+DROP TABLE SinhVien
 
 CREATE TABLE TaiKhoan(
     Username VARCHAR(10) PRIMARY KEY,

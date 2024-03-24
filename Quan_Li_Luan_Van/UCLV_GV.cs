@@ -23,5 +23,11 @@ namespace Quan_Li_Luan_Van
         public Label LblTenLV { get => lblTenLV; set => lblTenLV = value; }
         public PictureBox PictureBoxNen1 { get => pictureBoxNen; set => pictureBoxNen = value; }
         public Label LblTrangThai { get => lblTrangThai; set => lblTrangThai = value; }
+
+        private void btnChiTiet_Click(object sender, EventArgs e)
+        {
+            FChiTietLuanVan chiTietLuanVan = new FChiTietLuanVan(LblTenLV.Text);
+            chiTietLuanVan.Show();
+        }
     }
 }

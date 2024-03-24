@@ -19,8 +19,7 @@ namespace Quan_Li_Luan_Van
         public Label LbChuyenNganh { get => lbChuyenNganh; set => lbChuyenNganh = value; }
         public Label LbTenLV { get => lbTenLV; set => lbTenLV = value; }
         public PictureBox PictureBoxNen { get => pictureBoxNen; set => pictureBoxNen = value; }
-        public Button BtnDSTV { get => btnDSTV; set => btnDSTV = value; }
-        public Button BtnTienTrinh { get => btnTienTrinh; set => btnTienTrinh = value; }
+
         public Button BtnThemNV { get => btnThemNV; set => btnThemNV = value; }
 
         private void btnTienTrinh_Click(object sender, EventArgs e)
@@ -31,7 +30,9 @@ namespace Quan_Li_Luan_Van
 
         private void btnThemNV_Click(object sender, EventArgs e)
         {
-
+            FChiTietLuanVan chiTietLuanVan = new FChiTietLuanVan(LbTenLV.Text);
+            chiTietLuanVan.Show();
         }
+
     }
 }

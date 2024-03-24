@@ -152,6 +152,7 @@
             this.btnDangKi.Text = "Chỉnh sửa";
             this.btnDangKi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDangKi.UseVisualStyleBackColor = false;
+            this.btnDangKi.Click += new System.EventHandler(this.btnDangKi_Click);
             // 
             // UCLVCuaToi
             // 

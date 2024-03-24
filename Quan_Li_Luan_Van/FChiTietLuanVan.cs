@@ -42,11 +42,16 @@ namespace Quan_Li_Luan_Van
                 if (dataReader.Read())
                 {
                     txtMaLuanVan.Text = dataReader["MaLV"].ToString();
-                    txtTenLuanVan.Text = dataReader["TenLV"].ToString();
-                    txtLinhVuc.Text = dataReader["ChuyenNganh"].ToString();
                     txtGVHD.Text = dataReader["TenGV"].ToString();
+                    txtTenLuanVan.Text = dataReader["TenLV"].ToString();
+                    txtChuyenNganh.Text = dataReader["ChuyenNganh"].ToString();
+                    txtLinhVuc.Text = dataReader["LinhVuc"].ToString();
+                    txtChucNang.Text = dataReader["ChucNang"].ToString();
+                    txtCongNghe.Text = dataReader["CongNghe"].ToString();
+                    txtNgonNgu.Text = dataReader["NgonNgu"].ToString();
                     txtYeuCau.Text = dataReader["MoTaChiTiet"].ToString();
-                    txtTVien1.Text = dataReader["SoLuongConLai"].ToString();
+                    txtTVien1.Text = dataReader["MSSV1"].ToString();
+                    txtTVien2.Text = dataReader["MSSV2"].ToString();
                 }
             }
             catch (Exception ex)

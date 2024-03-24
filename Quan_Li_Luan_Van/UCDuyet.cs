@@ -24,5 +24,11 @@ namespace Quan_Li_Luan_Van
         public Label LbTenLV { get => lbTenLV; set => lbTenLV = value; }
         public PictureBox PictureBoxNen { get => pictureBoxNen; set => pictureBoxNen = value; }
         public Label LbTenSV { get => lbTenSV; set => lbTenSV = value; }
+
+        private void buttonChiTiet_Click(object sender, EventArgs e)
+        {
+            FChiTietDuyet chiTietDuyet = new FChiTietDuyet(LbMSSV.Text, LbTenLV.Text);
+            chiTietDuyet.Show();
+        }
     }
 }
