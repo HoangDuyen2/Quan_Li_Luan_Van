@@ -25,7 +25,7 @@ namespace Quan_Li_Luan_Van
         private void FThemLuanVan_Load(object sender, EventArgs e)
         {
 
-
         }
+
     }
 }

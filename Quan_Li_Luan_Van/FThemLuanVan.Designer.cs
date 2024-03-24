@@ -47,10 +47,7 @@
             this.lbMaLuanVan = new System.Windows.Forms.Label();
             this.lblThemLV = new System.Windows.Forms.Label();
             this.panelNoiDung = new System.Windows.Forms.Panel();
-            this.lbLSoLuong = new System.Windows.Forms.Label();
-            this.comboxSoLuong = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.panelNoiDung.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboxSoLuong)).BeginInit();
             this.SuspendLayout();
             // 
             // btnThem
@@ -331,8 +328,6 @@
             // panelNoiDung
             // 
             this.panelNoiDung.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panelNoiDung.Controls.Add(this.comboxSoLuong);
-            this.panelNoiDung.Controls.Add(this.lbLSoLuong);
             this.panelNoiDung.Controls.Add(this.label7);
             this.panelNoiDung.Controls.Add(this.label6);
             this.panelNoiDung.Controls.Add(this.txtChucNang);
@@ -354,57 +349,6 @@
             this.panelNoiDung.Size = new System.Drawing.Size(1062, 579);
             this.panelNoiDung.TabIndex = 13;
             // 
-            // lbLSoLuong
-            // 
-            this.lbLSoLuong.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLSoLuong.Image = global::Quan_Li_Luan_Van.Properties.Resources.people;
-            this.lbLSoLuong.Location = new System.Drawing.Point(629, 22);
-            this.lbLSoLuong.Name = "lbLSoLuong";
-            this.lbLSoLuong.Size = new System.Drawing.Size(24, 27);
-            this.lbLSoLuong.TabIndex = 82;
-            this.lbLSoLuong.Text = "  ";
-            // 
-            // comboxSoLuong
-            // 
-            this.comboxSoLuong.DropDownWidth = 261;
-            this.comboxSoLuong.Enabled = false;
-            this.comboxSoLuong.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3"});
-            this.comboxSoLuong.Location = new System.Drawing.Point(679, 16);
-            this.comboxSoLuong.Name = "comboxSoLuong";
-            this.comboxSoLuong.Size = new System.Drawing.Size(316, 39);
-            this.comboxSoLuong.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
-            this.comboxSoLuong.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Blue;
-            this.comboxSoLuong.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.Blue;
-            this.comboxSoLuong.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.comboxSoLuong.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.comboxSoLuong.StateCommon.ComboBox.Border.Rounding = 20;
-            this.comboxSoLuong.StateCommon.ComboBox.Border.Width = 1;
-            this.comboxSoLuong.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Gray;
-            this.comboxSoLuong.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboxSoLuong.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(1);
-            this.comboxSoLuong.StateCommon.DropBack.Color1 = System.Drawing.Color.White;
-            this.comboxSoLuong.StateCommon.DropBack.Color2 = System.Drawing.Color.White;
-            this.comboxSoLuong.StateCommon.Item.Back.Color1 = System.Drawing.Color.White;
-            this.comboxSoLuong.StateCommon.Item.Back.Color2 = System.Drawing.Color.White;
-            this.comboxSoLuong.StateCommon.Item.Border.Color1 = System.Drawing.Color.White;
-            this.comboxSoLuong.StateCommon.Item.Border.Color2 = System.Drawing.Color.White;
-            this.comboxSoLuong.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.comboxSoLuong.StateNormal.ComboBox.Back.Color1 = System.Drawing.Color.White;
-            this.comboxSoLuong.StateNormal.ComboBox.Border.Color1 = System.Drawing.Color.White;
-            this.comboxSoLuong.StateNormal.ComboBox.Border.Color2 = System.Drawing.Color.White;
-            this.comboxSoLuong.StateNormal.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.comboxSoLuong.TabIndex = 83;
-            this.comboxSoLuong.Text = "Số lượng";
-            // 
             // FThemLuanVan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -419,7 +363,6 @@
             this.Load += new System.EventHandler(this.FThemLuanVan_Load);
             this.panelNoiDung.ResumeLayout(false);
             this.panelNoiDung.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboxSoLuong)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -446,7 +389,5 @@
         private System.Windows.Forms.Label lbMaLuanVan;
         private System.Windows.Forms.Label lblThemLV;
         private System.Windows.Forms.Panel panelNoiDung;
-        private System.Windows.Forms.Label lbLSoLuong;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox comboxSoLuong;
     }
 }
