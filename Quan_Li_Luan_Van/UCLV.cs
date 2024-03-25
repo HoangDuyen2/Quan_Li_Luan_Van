@@ -21,7 +21,7 @@ namespace Quan_Li_Luan_Van
 
         private void buttonChiTiet_Click(object sender, EventArgs e)
         {
-            FChiTietLuanVan ctlv = new FChiTietLuanVan(LblTenLV.Text);
+            FChiTietLuanVan_SV ctlv = new FChiTietLuanVan_SV(LblTenLV.Text);
             ctlv.ShowDialog();
         }
         public Label LblChuyenNganh { get => lblChuyenNganh; set => lblChuyenNganh = value; }

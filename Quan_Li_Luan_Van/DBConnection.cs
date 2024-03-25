@@ -41,7 +41,11 @@ namespace Quan_Li_Luan_Van
 
                 SqlCommand cmd = new SqlCommand(sqlStr, conn);
 
-                if (cmd.ExecuteNonQuery() > 0) ;
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+//                    MessageBox.Show("Thực thi dữ liệu thành công", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
             }
             catch (Exception ex)
             {
