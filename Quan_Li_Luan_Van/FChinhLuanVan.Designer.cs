@@ -420,7 +420,7 @@
             this.lblChiTietLuanVan.TabIndex = 17;
             this.lblChiTietLuanVan.Text = "CHI TIẾT LUẬN VĂN";
             // 
-            // FChinhSuaLuanVan
+            // FChinhLuanVan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -428,7 +428,8 @@
             this.Controls.Add(this.panelNoiDung);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.lblChiTietLuanVan);
-            this.Name = "FChinhSuaLuanVan";
+            this.Name = "FChinhLuanVan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FChinhSuaLuanVan";
             this.Load += new System.EventHandler(this.FChinhSuaLuanVan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cbboxNgonNgu)).EndInit();

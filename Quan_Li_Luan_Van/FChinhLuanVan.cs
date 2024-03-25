@@ -21,14 +21,14 @@ namespace Quan_Li_Luan_Van
             InitializeComponent();
         }
 
-        public FChinhLuanVan(string tenLV)
+        public FChinhLuanVan(string tenLV) : this()
         {
             this.tenLV = tenLV;
         }
 
         private void FChinhSuaLuanVan_Load(object sender, EventArgs e)
         {
-            string query = "SELECT *" +
+            string query = "SELECT * " +
                            "FROM LuanVan " +                         
                            "WHERE TenLV = N'" + tenLV + "'";
             try
@@ -40,10 +40,10 @@ namespace Quan_Li_Luan_Van
                 {
                     txtMaLuanVan.Text = dataReader["MaLV"].ToString();
                     txtTenLuanVan.Text = dataReader["TenLV"].ToString();
-                    cbboxChuyenNganh.SelectedItem = dataReader["ChuyenNganh"].ToString();
-                    cbboxCongNghe.SelectedItem = dataReader["CongNghe"].ToString();
                     txtChucNang.Text = dataReader["ChucNang"].ToString();
                     txtYeuCau.Text = dataReader["YeuCau"].ToString();
+                    cbboxChuyenNganh.SelectedItem = dataReader["ChuyenNganh"].ToString();
+                    cbboxCongNghe.SelectedItem = dataReader["CongNghe"].ToString();                   
                     cbboxLinhVuc.SelectedItem = dataReader["LinhVuc"].ToString();
                     cbboxNgonNgu.SelectedItem = dataReader["NgonNgu"].ToString();
                 }
