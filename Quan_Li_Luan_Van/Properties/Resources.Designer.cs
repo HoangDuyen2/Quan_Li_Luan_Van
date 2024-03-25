@@ -133,6 +133,16 @@ namespace Quan_Li_Luan_Van.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap approve1 {
+            get {
+                object obj = ResourceManager.GetObject("approve1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap birthday {
             get {
                 object obj = ResourceManager.GetObject("birthday", resourceCulture);
@@ -516,6 +526,16 @@ namespace Quan_Li_Luan_Van.Properties {
         internal static System.Drawing.Bitmap progress1 {
             get {
                 object obj = ResourceManager.GetObject("progress1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reject {
+            get {
+                object obj = ResourceManager.GetObject("reject", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

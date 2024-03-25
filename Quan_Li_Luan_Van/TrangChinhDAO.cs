@@ -11,9 +11,7 @@ namespace Quan_Li_Luan_Van
 {
     public class TrangChinhDAO
     {
-        TaiKhoan taiKhoan;
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
-        Person person;
         public Person LoadLabel(TaiKhoan taiKhoan)
         {
             string chucVu, ma;

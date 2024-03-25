@@ -34,7 +34,6 @@
             this.comboxLoaiTraCuu = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.labelLoaiTraCuu = new System.Windows.Forms.Label();
             this.flPanelDSLV = new System.Windows.Forms.FlowLayoutPanel();
-            this.buttonTimKiem = new System.Windows.Forms.Button();
             this.panelTitle.SuspendLayout();
             this.groupBoxTraCuu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboxLoaiTraCuu)).BeginInit();
@@ -64,7 +63,6 @@
             // 
             this.groupBoxTraCuu.Controls.Add(this.comboxLoaiTraCuu);
             this.groupBoxTraCuu.Controls.Add(this.labelLoaiTraCuu);
-            this.groupBoxTraCuu.Controls.Add(this.buttonTimKiem);
             this.groupBoxTraCuu.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxTraCuu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.groupBoxTraCuu.Location = new System.Drawing.Point(5, 49);
@@ -79,7 +77,8 @@
             this.comboxLoaiTraCuu.Items.AddRange(new object[] {
             "Đang chờ duyệt",
             "Đã duyệt",
-            "Bị từ chối"});
+            "Từ chối",
+            "Tất cả"});
             this.comboxLoaiTraCuu.Location = new System.Drawing.Point(146, 34);
             this.comboxLoaiTraCuu.Name = "comboxLoaiTraCuu";
             this.comboxLoaiTraCuu.Size = new System.Drawing.Size(273, 39);
@@ -103,6 +102,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.comboxLoaiTraCuu.TabIndex = 17;
             this.comboxLoaiTraCuu.Text = "-- Chờ duyệt --";
+            this.comboxLoaiTraCuu.SelectedIndexChanged += new System.EventHandler(this.Chon_Tinh_Trang);
             // 
             // labelLoaiTraCuu
             // 
@@ -121,21 +121,6 @@
             this.flPanelDSLV.Name = "flPanelDSLV";
             this.flPanelDSLV.Size = new System.Drawing.Size(1064, 509);
             this.flPanelDSLV.TabIndex = 26;
-            // 
-            // buttonTimKiem
-            // 
-            this.buttonTimKiem.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.buttonTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTimKiem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.buttonTimKiem.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.buttonTimKiem.Image = global::Quan_Li_Luan_Van.Properties.Resources.find;
-            this.buttonTimKiem.Location = new System.Drawing.Point(439, 34);
-            this.buttonTimKiem.Name = "buttonTimKiem";
-            this.buttonTimKiem.Size = new System.Drawing.Size(49, 42);
-            this.buttonTimKiem.TabIndex = 15;
-            this.buttonTimKiem.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonTimKiem.UseVisualStyleBackColor = false;
             // 
             // FDuyetLuanVan
             // 
@@ -162,7 +147,6 @@
         private System.Windows.Forms.GroupBox groupBoxTraCuu;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox comboxLoaiTraCuu;
         private System.Windows.Forms.Label labelLoaiTraCuu;
-        private System.Windows.Forms.Button buttonTimKiem;
         private System.Windows.Forms.FlowLayoutPanel flPanelDSLV;
     }
 }

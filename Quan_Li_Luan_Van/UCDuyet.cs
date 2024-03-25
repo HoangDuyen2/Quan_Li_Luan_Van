@@ -16,18 +16,17 @@ namespace Quan_Li_Luan_Van
         {
             InitializeComponent();
         }
-        public Label LbMSSV { get => lbMSSV; set => lbMSSV = value; }
-        public Label LblMSSV { get => lblMSSV; set => lblMSSV = value; }
+
         public Button BtnDangKi { get => btnDangKi; set => btnDangKi = value; }
         public Button ButtonChiTiet { get => buttonChiTiet; set => buttonChiTiet = value; }
         public Label LbChuyenNganh { get => lbChuyenNganh; set => lbChuyenNganh = value; }
         public Label LbTenLV { get => lbTenLV; set => lbTenLV = value; }
+        public Label LBTrangThai { get => lbTrangThai; set => lbTrangThai = value; }
         public PictureBox PictureBoxNen { get => pictureBoxNen; set => pictureBoxNen = value; }
-        public Label LbTenSV { get => lbTenSV; set => lbTenSV = value; }
 
         private void buttonChiTiet_Click(object sender, EventArgs e)
         {
-            FChiTietDuyet chiTietDuyet = new FChiTietDuyet(LbMSSV.Text, LbTenLV.Text);
+            FChiTietDuyet chiTietDuyet = new FChiTietDuyet(LbTenLV.Text);
             chiTietDuyet.Show();
         }
     }

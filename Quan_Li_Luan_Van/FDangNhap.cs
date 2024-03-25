@@ -59,6 +59,7 @@ namespace Quan_Li_Luan_Van
                         {
                             this.Close();
                         }*/
+            
             if (rbtnSV.Checked)
             {
                 FSinhVien sv = new FSinhVien();
