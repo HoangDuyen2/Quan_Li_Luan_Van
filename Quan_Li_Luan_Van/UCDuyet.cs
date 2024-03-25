@@ -17,7 +17,6 @@ namespace Quan_Li_Luan_Van
             InitializeComponent();
         }
 
-        public Button BtnDangKi { get => btnDangKi; set => btnDangKi = value; }
         public Button ButtonChiTiet { get => buttonChiTiet; set => buttonChiTiet = value; }
         public Label LbChuyenNganh { get => lbChuyenNganh; set => lbChuyenNganh = value; }
         public Label LbTenLV { get => lbTenLV; set => lbTenLV = value; }
