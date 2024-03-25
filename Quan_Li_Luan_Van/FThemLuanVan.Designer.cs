@@ -43,15 +43,15 @@
             this.lbMaLuanVan = new System.Windows.Forms.Label();
             this.lblThemLV = new System.Windows.Forms.Label();
             this.panelNoiDung = new System.Windows.Forms.Panel();
-            this.cbboxChuyenNganh = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.cbboxLinhVuc = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.cbboxCongNghe = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.cbboxNgonNgu = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.cbboxCongNghe = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.cbboxLinhVuc = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.cbboxChuyenNganh = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.panelNoiDung.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbboxChuyenNganh)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbboxLinhVuc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbboxCongNghe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbboxNgonNgu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbboxCongNghe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbboxLinhVuc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbboxChuyenNganh)).BeginInit();
             this.SuspendLayout();
             // 
             // btnThem
@@ -63,6 +63,7 @@
             this.btnThem.Size = new System.Drawing.Size(169, 40);
             this.btnThem.TabIndex = 15;
             this.btnThem.Values.Text = "Thêm luận văn";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label7
             // 
@@ -273,39 +274,78 @@
             this.panelNoiDung.Size = new System.Drawing.Size(1062, 579);
             this.panelNoiDung.TabIndex = 13;
             // 
-            // cbboxChuyenNganh
+            // cbboxNgonNgu
             // 
-            this.cbboxChuyenNganh.DropDownWidth = 261;
-            this.cbboxChuyenNganh.Items.AddRange(new object[] {
-            "Phát triển phần mềm",
-            "Khoa học dữ liệu",
-            "An ninh mạng",
-            "Trí tuệ nhân tạo",
-            "Phát triển Trò chơi",
-            "Kỹ thuật ứng dụng"});
-            this.cbboxChuyenNganh.Location = new System.Drawing.Point(114, 151);
-            this.cbboxChuyenNganh.Name = "cbboxChuyenNganh";
-            this.cbboxChuyenNganh.Size = new System.Drawing.Size(273, 39);
-            this.cbboxChuyenNganh.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Blue;
-            this.cbboxChuyenNganh.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.Blue;
-            this.cbboxChuyenNganh.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.cbboxNgonNgu.DropDownWidth = 261;
+            this.cbboxNgonNgu.Items.AddRange(new object[] {
+            "Java",
+            "Python",
+            "JavaScript",
+            "C++",
+            "C#",
+            "PHP",
+            "Swift",
+            "Ruby",
+            "Tùy chọn"});
+            this.cbboxNgonNgu.Location = new System.Drawing.Point(677, 289);
+            this.cbboxNgonNgu.Name = "cbboxNgonNgu";
+            this.cbboxNgonNgu.Size = new System.Drawing.Size(318, 39);
+            this.cbboxNgonNgu.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Blue;
+            this.cbboxNgonNgu.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.Blue;
+            this.cbboxNgonNgu.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.cbboxChuyenNganh.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.cbboxChuyenNganh.StateCommon.ComboBox.Border.Rounding = 20;
-            this.cbboxChuyenNganh.StateCommon.ComboBox.Border.Width = 1;
-            this.cbboxChuyenNganh.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Gray;
-            this.cbboxChuyenNganh.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbboxChuyenNganh.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(1);
-            this.cbboxChuyenNganh.StateCommon.DropBack.Color1 = System.Drawing.Color.White;
-            this.cbboxChuyenNganh.StateCommon.DropBack.Color2 = System.Drawing.Color.White;
-            this.cbboxChuyenNganh.StateCommon.Item.Border.Color1 = System.Drawing.Color.White;
-            this.cbboxChuyenNganh.StateCommon.Item.Border.Color2 = System.Drawing.Color.White;
-            this.cbboxChuyenNganh.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.cbboxNgonNgu.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.cbboxNgonNgu.StateCommon.ComboBox.Border.Rounding = 20;
+            this.cbboxNgonNgu.StateCommon.ComboBox.Border.Width = 1;
+            this.cbboxNgonNgu.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Gray;
+            this.cbboxNgonNgu.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbboxNgonNgu.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(1);
+            this.cbboxNgonNgu.StateCommon.DropBack.Color1 = System.Drawing.Color.White;
+            this.cbboxNgonNgu.StateCommon.DropBack.Color2 = System.Drawing.Color.White;
+            this.cbboxNgonNgu.StateCommon.Item.Border.Color1 = System.Drawing.Color.White;
+            this.cbboxNgonNgu.StateCommon.Item.Border.Color2 = System.Drawing.Color.White;
+            this.cbboxNgonNgu.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.cbboxChuyenNganh.TabIndex = 82;
-            this.cbboxChuyenNganh.Text = "-- Chọn chuyên ngành --";
+            this.cbboxNgonNgu.TabIndex = 85;
+            this.cbboxNgonNgu.Text = "--Chọn ngôn ngữ --";
+            // 
+            // cbboxCongNghe
+            // 
+            this.cbboxCongNghe.DropDownWidth = 261;
+            this.cbboxCongNghe.Items.AddRange(new object[] {
+            "ASP.NET",
+            ".NET Framework/.NET Core",
+            "Node.js",
+            "React",
+            "Angular",
+            "Spring Boot",
+            "Django",
+            "Ruby on Rails"});
+            this.cbboxCongNghe.Location = new System.Drawing.Point(677, 220);
+            this.cbboxCongNghe.Name = "cbboxCongNghe";
+            this.cbboxCongNghe.Size = new System.Drawing.Size(318, 39);
+            this.cbboxCongNghe.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Blue;
+            this.cbboxCongNghe.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.Blue;
+            this.cbboxCongNghe.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.cbboxCongNghe.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.cbboxCongNghe.StateCommon.ComboBox.Border.Rounding = 20;
+            this.cbboxCongNghe.StateCommon.ComboBox.Border.Width = 1;
+            this.cbboxCongNghe.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Gray;
+            this.cbboxCongNghe.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbboxCongNghe.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(1);
+            this.cbboxCongNghe.StateCommon.DropBack.Color1 = System.Drawing.Color.White;
+            this.cbboxCongNghe.StateCommon.DropBack.Color2 = System.Drawing.Color.White;
+            this.cbboxCongNghe.StateCommon.Item.Border.Color1 = System.Drawing.Color.White;
+            this.cbboxCongNghe.StateCommon.Item.Border.Color2 = System.Drawing.Color.White;
+            this.cbboxCongNghe.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.cbboxCongNghe.TabIndex = 84;
+            this.cbboxCongNghe.Text = "-- Chọn công nghệ --";
             // 
             // cbboxLinhVuc
             // 
@@ -347,78 +387,39 @@
             this.cbboxLinhVuc.TabIndex = 83;
             this.cbboxLinhVuc.Text = "-- Chọn lĩnh vực --";
             // 
-            // cbboxCongNghe
+            // cbboxChuyenNganh
             // 
-            this.cbboxCongNghe.DropDownWidth = 261;
-            this.cbboxCongNghe.Items.AddRange(new object[] {
-            "ASP.NET",
-            ".NET Framework/.NET Core",
-            "Node.js",
-            "React",
-            "Angular",
-            "Spring Boot",
-            "Django",
-            "Ruby on Rails"});
-            this.cbboxCongNghe.Location = new System.Drawing.Point(677, 220);
-            this.cbboxCongNghe.Name = "cbboxCongNghe";
-            this.cbboxCongNghe.Size = new System.Drawing.Size(318, 39);
-            this.cbboxCongNghe.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Blue;
-            this.cbboxCongNghe.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.Blue;
-            this.cbboxCongNghe.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.cbboxChuyenNganh.DropDownWidth = 261;
+            this.cbboxChuyenNganh.Items.AddRange(new object[] {
+            "Phát triển phần mềm",
+            "Khoa học dữ liệu",
+            "An ninh mạng",
+            "Trí tuệ nhân tạo",
+            "Phát triển Trò chơi",
+            "Kỹ thuật ứng dụng"});
+            this.cbboxChuyenNganh.Location = new System.Drawing.Point(114, 151);
+            this.cbboxChuyenNganh.Name = "cbboxChuyenNganh";
+            this.cbboxChuyenNganh.Size = new System.Drawing.Size(273, 39);
+            this.cbboxChuyenNganh.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Blue;
+            this.cbboxChuyenNganh.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.Blue;
+            this.cbboxChuyenNganh.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.cbboxCongNghe.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.cbboxCongNghe.StateCommon.ComboBox.Border.Rounding = 20;
-            this.cbboxCongNghe.StateCommon.ComboBox.Border.Width = 1;
-            this.cbboxCongNghe.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Gray;
-            this.cbboxCongNghe.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbboxCongNghe.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(1);
-            this.cbboxCongNghe.StateCommon.DropBack.Color1 = System.Drawing.Color.White;
-            this.cbboxCongNghe.StateCommon.DropBack.Color2 = System.Drawing.Color.White;
-            this.cbboxCongNghe.StateCommon.Item.Border.Color1 = System.Drawing.Color.White;
-            this.cbboxCongNghe.StateCommon.Item.Border.Color2 = System.Drawing.Color.White;
-            this.cbboxCongNghe.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.cbboxChuyenNganh.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.cbboxChuyenNganh.StateCommon.ComboBox.Border.Rounding = 20;
+            this.cbboxChuyenNganh.StateCommon.ComboBox.Border.Width = 1;
+            this.cbboxChuyenNganh.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Gray;
+            this.cbboxChuyenNganh.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbboxChuyenNganh.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(1);
+            this.cbboxChuyenNganh.StateCommon.DropBack.Color1 = System.Drawing.Color.White;
+            this.cbboxChuyenNganh.StateCommon.DropBack.Color2 = System.Drawing.Color.White;
+            this.cbboxChuyenNganh.StateCommon.Item.Border.Color1 = System.Drawing.Color.White;
+            this.cbboxChuyenNganh.StateCommon.Item.Border.Color2 = System.Drawing.Color.White;
+            this.cbboxChuyenNganh.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.cbboxCongNghe.TabIndex = 84;
-            this.cbboxCongNghe.Text = "-- Chọn công nghệ --";
-            // 
-            // cbboxNgonNgu
-            // 
-            this.cbboxNgonNgu.DropDownWidth = 261;
-            this.cbboxNgonNgu.Items.AddRange(new object[] {
-            "Java",
-            "Python",
-            "JavaScript",
-            "C++",
-            "C#",
-            "PHP",
-            "Swift",
-            "Ruby",
-            "Tùy chọn"});
-            this.cbboxNgonNgu.Location = new System.Drawing.Point(677, 289);
-            this.cbboxNgonNgu.Name = "cbboxNgonNgu";
-            this.cbboxNgonNgu.Size = new System.Drawing.Size(318, 39);
-            this.cbboxNgonNgu.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Blue;
-            this.cbboxNgonNgu.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.Blue;
-            this.cbboxNgonNgu.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.cbboxNgonNgu.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.cbboxNgonNgu.StateCommon.ComboBox.Border.Rounding = 20;
-            this.cbboxNgonNgu.StateCommon.ComboBox.Border.Width = 1;
-            this.cbboxNgonNgu.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Gray;
-            this.cbboxNgonNgu.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbboxNgonNgu.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(1);
-            this.cbboxNgonNgu.StateCommon.DropBack.Color1 = System.Drawing.Color.White;
-            this.cbboxNgonNgu.StateCommon.DropBack.Color2 = System.Drawing.Color.White;
-            this.cbboxNgonNgu.StateCommon.Item.Border.Color1 = System.Drawing.Color.White;
-            this.cbboxNgonNgu.StateCommon.Item.Border.Color2 = System.Drawing.Color.White;
-            this.cbboxNgonNgu.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.cbboxNgonNgu.TabIndex = 85;
-            this.cbboxNgonNgu.Text = "--Chọn ngôn ngữ --";
+            this.cbboxChuyenNganh.TabIndex = 82;
+            this.cbboxChuyenNganh.Text = "-- Chọn chuyên ngành --";
             // 
             // FThemLuanVan
             // 
@@ -434,10 +435,10 @@
             this.Load += new System.EventHandler(this.FThemLuanVan_Load);
             this.panelNoiDung.ResumeLayout(false);
             this.panelNoiDung.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbboxChuyenNganh)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbboxLinhVuc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbboxCongNghe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbboxNgonNgu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbboxCongNghe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbboxLinhVuc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbboxChuyenNganh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

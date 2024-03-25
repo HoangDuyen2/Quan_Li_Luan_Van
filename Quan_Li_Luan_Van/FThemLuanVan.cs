@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,8 @@ namespace Quan_Li_Luan_Van
     {
         private string maGiangVien;
         Hide_Show hide_Show = new Hide_Show();
+        ThemLuanVanDAO lvDao = new ThemLuanVanDAO();
+        SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
 
         public FThemLuanVan()
         {
@@ -76,6 +79,33 @@ namespace Quan_Li_Luan_Van
         private void TxtYeuCau_LostFocus(object sender, EventArgs e)
         {
             hide_Show.Show(sender, e);
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            LuanVan lv = TaoLuanVan();
+            if (lv.KiemTraNull())
+            {
+                MessageBox.Show("Vui lòng điền đủ thông tin");
+            }
+            else
+            {
+                lvDao.ThemLuanVan(lv);
+            }
+        }
+        private LuanVan TaoLuanVan()
+        {
+            return new LuanVan(
+                txtMaLuanVan.Text,
+                txtTenLuanVan.Text,
+                maGiangVien,
+                cbboxChuyenNganh.SelectedItem.ToString(),
+                cbboxLinhVuc.SelectedItem.ToString(),
+                txtChucNang.Text,
+                cbboxCongNghe.SelectedItem.ToString(),
+                cbboxNgonNgu.SelectedItem.ToString(),
+                txtYeuCau.Text,
+                "Chưa có nhóm");
         }
     }
 }

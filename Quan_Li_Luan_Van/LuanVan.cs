@@ -10,35 +10,50 @@ namespace Quan_Li_Luan_Van
     {
         private string maLV;
         private string tenLV;
-        private string MoTaChiTiet;
-        private DateTime NgayBD;
-        private DateTime NgayKT;
-        private string GioBD;
-        private string GioKT;
-        private string chuyenNganh;
-        private int soLuong;
         private string maGV;
-        public LuanVan(string maLV, string tenLV, string moTaChiTiet, DateTime ngayBD, DateTime ngayKT, string gioBD, string gioKT, string chuyenNganh, int soLuong, string maGV)
+        private string chuyenNganh;
+        private string linhVuc;
+        private string chucNang;
+        private string congNghe;
+        private string ngonNgu;
+        private string yeuCau;
+        private string trangThai;      
+        public LuanVan(string maLV, string tenLV, string maGV, string chuyenNganh, string linhVuc, string chucNang,
+                        string congNghe, string ngonNgu, string yeuCau, string trangThai)
         {
             this.maLV = maLV;
             this.tenLV = tenLV;
-            MoTaChiTiet = moTaChiTiet;
-            NgayBD = ngayBD;
-            NgayKT = ngayKT;
-            GioBD = gioBD;
-            GioKT = gioKT;
-            this.chuyenNganh = chuyenNganh;
-            this.soLuong = soLuong;
             this.maGV = maGV;
+            this.chuyenNganh = chuyenNganh;
+            this.linhVuc = linhVuc;
+            this.chucNang= chucNang;
+            this.congNghe = congNghe;
+            this.ngonNgu = ngonNgu;
+            this.yeuCau = yeuCau;
+            this.trangThai = trangThai;
         }
-        public string getMaLV() {  return maLV; }
-        public string getTenLV() { return tenLV; }
-        public string getMoTaChiTiet() { return MoTaChiTiet; }
-        public DateTime getNgayBD() {  return NgayBD; }
-        public DateTime getNgayKT() {  return NgayKT; }
-        public string getGioBD() {  return GioBD; }
-        public string getChuyenNganh() {  return chuyenNganh; }
-        public int getSoLuong() {  return soLuong; }
-        public string getMaGV() {  return maGV; }
+        public bool KiemTraNull()
+        {
+            foreach (var prop in typeof(LuanVan).GetProperties())
+            {
+                if (prop.GetValue(this) == null)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
+        public string MaLV { get => maLV; set => maLV = value; }
+        public string TenLV { get => tenLV; set => tenLV = value; }
+        public string MaGV { get => maGV; set => maGV = value; }
+        public string ChuyenNganh { get => chuyenNganh; set => chuyenNganh = value; }
+        public string LinhVuc { get => linhVuc; set => linhVuc = value; }
+        public string ChucNang { get => chucNang; set => chucNang = value; }
+        public string CongNghe { get => congNghe; set => congNghe = value; }
+        public string NgonNgu { get => ngonNgu; set => ngonNgu = value; }
+        public string YeuCau { get => yeuCau; set => yeuCau = value; }
+        public string TrangThai { get => trangThai; set => trangThai = value; }
     }
 }
