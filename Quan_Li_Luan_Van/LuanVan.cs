@@ -37,7 +37,7 @@ namespace Quan_Li_Luan_Van
         {
             foreach (var prop in typeof(LuanVan).GetProperties())
             {
-                if (prop.GetValue(this) == null)
+                if (prop.GetValue(this) == "")
                 {
                     return true;
                 }
