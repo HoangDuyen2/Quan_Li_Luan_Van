@@ -34,6 +34,8 @@ namespace Quan_Li_Luan_Van
                         ucd.LBTrangThai.ForeColor = System.Drawing.Color.Green;
                     if (dataReader["TinhTrang"].ToString() == "Từ chối")
                         ucd.LBTrangThai.ForeColor = System.Drawing.Color.Black;
+                    if (dataReader["TinhTrang"].ToString() == "Đã duyệt")
+                        ucd.LBTrangThai.ForeColor = System.Drawing.Color.Red;
                     ucd.LBTrangThai.Text = dataReader["TinhTrang"].ToString();
                     panel.Controls.Add(ucd);
                 }
