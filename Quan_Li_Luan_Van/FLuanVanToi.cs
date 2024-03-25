@@ -14,12 +14,14 @@ namespace Quan_Li_Luan_Van
 {
     public partial class FLuanVanToi : Form
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
-        string query = "SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, GiangVien.TenGV, LuanVan.SoLuongConLai " +
+        
+        private string baseQuery = "SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, GiangVien.TenGV, LuanVan.TrangThai " +
                                    "FROM LuanVan " +
                                    "JOIN GiangVien ON LuanVan.MaGV = GiangVien.MaGV " +
                                    "WHERE LuanVan.MaGV = 'GV001'";
+        private string query;
 
+        LuanVanToiDAO luanvan = new LuanVanToiDAO();
         public FLuanVanToi()
         {
             InitializeComponent();
@@ -27,39 +29,28 @@ namespace Quan_Li_Luan_Van
 
         private void FLuanVanToi_Load(object sender, EventArgs e)
         {
-    
-            try
-            {
-                conn.Open();
-                flPanelDSLV.Controls.Clear();
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader dataReader = cmd.ExecuteReader();
-                while (dataReader.Read())
-                {
-                    UCLV_GV uclv = new UCLV_GV();
-
-                    uclv.LblTenLV.Text = dataReader["TenLV"].ToString();
-                    uclv.LblChuyenNganh.Text = dataReader["ChuyenNganh"].ToString();
-                    uclv.LblTenGV.Text = dataReader["TenGV"].ToString();
-
-                    flPanelDSLV.Controls.Add(uclv);
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
-            }
-            finally 
-            {
-                conn.Close(); 
-            }
+            luanvan.getInfo(baseQuery, flPanelDSLV);
+        }
+        private void LoadListUC ()
+        {
+            luanvan.getInfo(query, flPanelDSLV);
+        }
+        private void btnThemLuanVan_Click(object sender, EventArgs e)
+        {
+            FThemLuanVan fThemLuanVan = new FThemLuanVan("GV001");
+            fThemLuanVan.ShowDialog();
         }
 
-        private void btnDangKi_Click(object sender, EventArgs e)
+        private void ChonTinhTrang(object sender, EventArgs e)
         {
-            FThemLuanVan fThemLuanVan = new FThemLuanVan();
-            fThemLuanVan.ShowDialog();
+            query = baseQuery;
+            string text = cbboxTrangThai.SelectedItem.ToString();
+            if (text != "Tất cả")
+            {
+                string chuyenNganh = " AND LuanVan.TrangThai =N'" + text + "'";
+                query = query + chuyenNganh;
+            }
+            LoadListUC();
         }
     }
 }
