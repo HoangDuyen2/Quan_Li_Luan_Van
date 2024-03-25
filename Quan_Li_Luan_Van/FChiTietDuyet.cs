@@ -16,7 +16,7 @@ namespace Quan_Li_Luan_Van
     {
         private string _message;
         ChiTietLuanVanDAO chiTiet = new ChiTietLuanVanDAO();
-        LuanVan luanVan = new LuanVan();
+        LuanVanDuyet luanVan = new LuanVanDuyet();
         DBConnection connection = new DBConnection();
         public FChiTietDuyet(string message) : this()
         {
