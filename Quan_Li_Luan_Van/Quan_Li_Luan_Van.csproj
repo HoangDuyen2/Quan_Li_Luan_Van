@@ -70,6 +70,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChinhLuanVanDAO.cs" />
     <Compile Include="ChiTietLuanVanDAO.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="DSNhomDAO.cs" />
@@ -79,6 +80,12 @@
     </Compile>
     <Compile Include="FBaoCaoTienDo.Designer.cs">
       <DependentUpon>FBaoCaoTienDo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FChinhLuanVan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FChinhLuanVan.Designer.cs">
+      <DependentUpon>FChinhLuanVan.cs</DependentUpon>
     </Compile>
     <Compile Include="FChiTietDuyet.cs">
       <SubType>Form</SubType>
@@ -278,6 +285,9 @@
     </Compile>
     <EmbeddedResource Include="FBaoCaoTienDo.resx">
       <DependentUpon>FBaoCaoTienDo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FChinhLuanVan.resx">
+      <DependentUpon>FChinhLuanVan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FChiTietDuyet.resx">
       <DependentUpon>FChiTietDuyet.cs</DependentUpon>

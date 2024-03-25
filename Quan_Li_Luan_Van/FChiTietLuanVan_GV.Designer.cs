@@ -449,6 +449,7 @@
             this.Controls.Add(this.lblCTLV);
             this.Controls.Add(this.panelNoiDung);
             this.Name = "FChiTietLuanVan_GV";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FChiTietLuanVan_GV";
             this.Load += new System.EventHandler(this.FChiTietLuanVan_GV_Load);
             this.panelNoiDung.ResumeLayout(false);

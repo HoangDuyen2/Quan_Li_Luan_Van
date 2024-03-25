@@ -133,6 +133,7 @@
             // 
             // flPanelDSLV
             // 
+            this.flPanelDSLV.AutoScroll = true;
             this.flPanelDSLV.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.flPanelDSLV.Location = new System.Drawing.Point(0, 150);
             this.flPanelDSLV.Name = "flPanelDSLV";

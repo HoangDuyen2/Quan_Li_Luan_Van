@@ -26,11 +26,10 @@ namespace Quan_Li_Luan_Van
                 SqlDataReader dataReader = cmd.ExecuteReader();
                 while (dataReader.Read())
                 {
-                    UCLV_GV uclv = new UCLV_GV();
+                    UCLVCuaToi uclv  = new UCLVCuaToi();
 
                     uclv.LblTenLV.Text = dataReader["TenLV"].ToString();
                     uclv.LblChuyenNganh.Text = dataReader["ChuyenNganh"].ToString();
-                    uclv.LblTenGV.Text = dataReader["TenGV"].ToString();
                     uclv.LblTrangThai.Text = dataReader["TrangThai"].ToString();
 
                     panel.Controls.Add(uclv);
