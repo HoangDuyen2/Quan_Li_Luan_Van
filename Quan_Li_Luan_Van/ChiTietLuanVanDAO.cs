@@ -12,7 +12,7 @@ namespace Quan_Li_Luan_Van
     public class ChiTietLuanVanDAO
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
-        LuanVan luanVan = new LuanVan();
+        LuanVanDuyet luanVan = new LuanVanDuyet();
         public void DSThanhVien(string sql)
         {
             try
@@ -37,7 +37,7 @@ namespace Quan_Li_Luan_Van
                 conn.Close();
             }
         }
-        public LuanVan Load(string sqlStr,string sql)
+        public LuanVanDuyet Load(string sqlStr,string sql)
         {
             DSThanhVien(sql);
             try
