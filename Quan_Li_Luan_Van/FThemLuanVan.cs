@@ -95,17 +95,17 @@ namespace Quan_Li_Luan_Van
         }
         private LuanVan TaoLuanVan()
         {
-            return new LuanVan(
-                txtMaLuanVan.Text,
-                txtTenLuanVan.Text,
-                maGiangVien,
-                cbboxChuyenNganh.SelectedItem.ToString(),
-                cbboxLinhVuc.SelectedItem.ToString(),
-                txtChucNang.Text,
-                cbboxCongNghe.SelectedItem.ToString(),
-                cbboxNgonNgu.SelectedItem.ToString(),
-                txtYeuCau.Text,
-                "Chưa có nhóm");
+            string maLuanVan = txtMaLuanVan.Text;
+            string tenLuanVan = txtTenLuanVan.Text;
+            string chuyenNganh = cbboxChuyenNganh.SelectedItem != null ? cbboxChuyenNganh.SelectedItem.ToString() : "";
+            string linhVuc = cbboxLinhVuc.SelectedItem != null ? cbboxLinhVuc.SelectedItem.ToString() : "";
+            string chucNang = txtChucNang.Text;
+            string congNghe = cbboxCongNghe.SelectedItem != null ? cbboxCongNghe.SelectedItem.ToString() : "";
+            string ngonNgu = cbboxNgonNgu.SelectedItem != null ? cbboxNgonNgu.SelectedItem.ToString() : "";
+            string yeuCau = txtYeuCau.Text;
+
+            return new LuanVan(maLuanVan, tenLuanVan, maGiangVien, chuyenNganh, linhVuc, chucNang, congNghe, ngonNgu, yeuCau, "Chưa có nhóm");
         }
+
     }
 }

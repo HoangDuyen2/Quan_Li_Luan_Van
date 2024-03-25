@@ -62,13 +62,17 @@ namespace Quan_Li_Luan_Van
             
             if (rbtnSV.Checked)
             {
+                this.Hide();
                 FSinhVien sv = new FSinhVien();
                 sv.ShowDialog();
+                this.Close();
             }
             else
             {
+                this.Hide();
                 FGiangVien gv = new FGiangVien();
                 gv.ShowDialog();
+                this.Close();
             }
             this.Close();
         }

@@ -412,6 +412,7 @@
             this.Controls.Add(this.lbTenLuanVan);
             this.Controls.Add(this.lbMaLuanVan);
             this.Name = "FChiTietDuyet";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi tiết duyệt";
             this.Load += new System.EventHandler(this.FChiTietDuyet_Load);
             this.ResumeLayout(false);
