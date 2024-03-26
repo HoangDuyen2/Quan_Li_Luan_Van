@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,45 +14,29 @@ namespace Quan_Li_Luan_Van
 {
     public partial class FDangKyLuanVan : Form
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
-        string query = "SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, GiangVien.TenGV, LuanVan.TrangThai " +
-                                   "FROM LuanVan " +
-                                   "JOIN GiangVien ON LuanVan.MaGV = GiangVien.MaGV "+
-                                   "WHERE LuanVan.TrangThai = N'Chưa có nhóm'";
+        Hide_Show hide = new Hide_Show();
+        DangKyLuanVan_SVDAO dangKy = new DangKyLuanVan_SVDAO();
+        DBConnection connection = new DBConnection();
         public FDangKyLuanVan()
         {
             InitializeComponent();
+            txtTenGV.Enter += TxtTenGV_Click;
+            txtTenGV.LostFocus += TxtTenGV_LostFocus;
+        }
+
+        private void TxtTenGV_LostFocus(object sender, EventArgs e)
+        {
+            hide.Show(sender,e);
+        }
+
+        private void TxtTenGV_Click(object sender, EventArgs e)
+        {
+            hide.Hide(sender, e);
         }
 
         private void FDKLV_Load(object sender, EventArgs e)
         {
-            try
-            {
-                conn.Open();
-                flPanelDSLV.Controls.Clear();
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader dataReader = cmd.ExecuteReader();
-                while (dataReader.Read())
-                {
-                    UCLV uclv = new UCLV();
-
-                    uclv.LblTenLV.Text = dataReader["TenLV"].ToString();
-                    uclv.LblChuyenNganh.Text = dataReader["ChuyenNganh"].ToString();
-                    uclv.LblTenGV.Text = dataReader["TenGV"].ToString();
-                    uclv.LblTrangThai.Text = dataReader["TrangThai"].ToString();
-
-                    flPanelDSLV.Controls.Add(uclv);
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
+            dangKy.Load_UC_Con(flPanelDSLV,dangKy.Load());
         }
 
         private void btnDangKi_Click(object sender, EventArgs e)
@@ -62,7 +47,14 @@ namespace Quan_Li_Luan_Van
 
         private void buttonTimKiem_Click(object sender, EventArgs e)
         {
+            dangKy.Load_UC_Con(flPanelDSLV, dangKy.traCuuTenGV(txtTenGV.Text));
+        }
+
+        private void Chon_Chuyen_Nganh(object sender, EventArgs e)
+        {
+            string text = cbboxChuyenNganh.SelectedItem.ToString();
             
+            dangKy.Load_UC_Con(flPanelDSLV, dangKy.TraCuuChuyenNganh(text));
         }
     }
 }

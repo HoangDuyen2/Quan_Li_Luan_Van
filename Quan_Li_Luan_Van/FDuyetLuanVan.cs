@@ -16,7 +16,7 @@ namespace Quan_Li_Luan_Van
         string quenry;
         string query = "SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, DuyetDangKy.TinhTrang " +
                                    "FROM LuanVan " +
-                                   "JOIN DuyetDangKy ON LuanVan.MaLV = DuyetDangKy.MaLV ";
+                                   "JOIN DuyetDangKy ON LuanVan.MaLV = DuyetDangKy.MaLV and LuanVan.MaGV = 'GV001'";
         public FDuyetLuanVan()
         {
             InitializeComponent();
@@ -32,12 +32,7 @@ namespace Quan_Li_Luan_Van
         private void Chon_Tinh_Trang(object sender, EventArgs e)
         {
             string text = comboxLoaiTraCuu.SelectedItem.ToString();
-            if (text != "Tất cả")
-            {
-                string tracuu = "WHERE TinhTrang = N'" + text + "'";
-                quenry = query + tracuu;
-            }
-            else quenry = query;
+            duyetLuanVan.traCuu(text);
             FDuyetLuanVan_Load(sender, e);
         }
     }

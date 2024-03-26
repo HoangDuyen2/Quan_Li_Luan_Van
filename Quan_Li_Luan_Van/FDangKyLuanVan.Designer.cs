@@ -124,8 +124,9 @@
             this.cbboxChuyenNganh.Items.AddRange(new object[] {
             "Tất cả",
             "Phát triển phần mềm",
-            "Khoa học dữ liệu",
+            "Khoa học dữ liệu và Phân tích dữ liệu",
             "An ninh mạng",
+            "Quản lý hạ tầng",
             "Trí tuệ nhân tạo",
             "Phát triển Trò chơi",
             "Kỹ thuật ứng dụng"});
@@ -152,6 +153,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.cbboxChuyenNganh.TabIndex = 17;
             this.cbboxChuyenNganh.Text = "Tất cả";
+            this.cbboxChuyenNganh.SelectedIndexChanged += new System.EventHandler(this.Chon_Chuyen_Nganh);
             // 
             // lblTraTenGV
             // 

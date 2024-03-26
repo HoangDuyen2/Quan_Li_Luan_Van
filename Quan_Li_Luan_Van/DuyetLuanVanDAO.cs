@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Quan_Li_Luan_Van
 {
@@ -12,7 +13,7 @@ namespace Quan_Li_Luan_Van
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
         DBConnection connection = new DBConnection();
-        LuanVanDuyet luanVan = new LuanVanDuyet();
+
         public DuyetLuanVanDAO()
         {
 
@@ -78,6 +79,20 @@ namespace Quan_Li_Luan_Van
             connection.ThucThi(query);
             connection.ThucThi(query1);
             connection.ThucThi(query2);
+        }
+        public void traCuu(string text)
+        {
+            string quenry;
+            string query = "SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, DuyetDangKy.TinhTrang " +
+                                       "FROM LuanVan " +
+                                       "JOIN DuyetDangKy ON LuanVan.MaLV = DuyetDangKy.MaLV ";
+            if (text != "Tất cả")
+            {
+                string tracuu = "WHERE TinhTrang = N'" + text + "'";
+                quenry = query + tracuu;
+            }
+            else quenry = query;
+            connection.ThucThi(quenry);
         }
     }
 }
