@@ -17,10 +17,15 @@ namespace Quan_Li_Luan_Van
             InitializeComponent();
         }
 
+        DSNhomDAO nhomDAO = new DSNhomDAO();
+        string query = "SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, GiangVien.TenGV, LuanVan.TrangThai " +
+                    "FROM LuanVan " +
+                    "JOIN GiangVien ON LuanVan.MaGV = GiangVien.MaGV " +
+                    "WHERE LuanVan.MaGV = 'GV001'" + " AND LuanVan.TrangThai = N'Đã có nhóm'";
         private void FNhom_Load(object sender, EventArgs e)
         {
-            UCNhom uCDuyet = new UCNhom();
-            flpanelDSNhom.Controls.Add(uCDuyet);
+            nhomDAO.getInfo(query, flpanelDSNhom);
         }
+
     }
 }

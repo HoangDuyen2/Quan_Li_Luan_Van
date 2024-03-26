@@ -31,7 +31,6 @@
             this.PanelTieuDe = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.flpanelDSNhom = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnThem = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.PanelTieuDe.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,22 +63,11 @@
             this.flpanelDSNhom.Size = new System.Drawing.Size(1064, 579);
             this.flpanelDSNhom.TabIndex = 1;
             // 
-            // btnThem
-            // 
-            this.btnThem.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
-            this.btnThem.Location = new System.Drawing.Point(895, 660);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
-            this.btnThem.Size = new System.Drawing.Size(169, 40);
-            this.btnThem.TabIndex = 9;
-            this.btnThem.Values.Text = "Thêm nhiệm vụ";
-            // 
             // FNhom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 702);
-            this.Controls.Add(this.btnThem);
             this.Controls.Add(this.flpanelDSNhom);
             this.Controls.Add(this.PanelTieuDe);
             this.Name = "FNhom";
@@ -96,6 +84,5 @@
         private System.Windows.Forms.Panel PanelTieuDe;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flpanelDSNhom;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnThem;
     }
 }
