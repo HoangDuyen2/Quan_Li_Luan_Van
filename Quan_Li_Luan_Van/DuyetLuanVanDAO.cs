@@ -11,7 +11,8 @@ namespace Quan_Li_Luan_Van
     public class DuyetLuanVanDAO
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
-
+        DBConnection connection = new DBConnection();
+        LuanVanDuyet luanVan = new LuanVanDuyet();
         public DuyetLuanVanDAO()
         {
 
@@ -49,6 +50,34 @@ namespace Quan_Li_Luan_Van
             {
                 conn.Close();
             }
+        }
+        public void ChapNhan(LuanVanDuyet luanVan)
+        {
+            string query = string.Format("UPDATE DuyetDangKy SET TinhTrang = N'{0}' WHERE MaLV = '{1}'", "Đã duyệt", luanVan.getMaLV());
+            string query1 = string.Format("UPDATE LuanVan SET TrangThai = N'{0}' WHERE MaLV = '{1}'", "Đã có nhóm", luanVan.getMaLV());
+            string query2;
+            if (luanVan.getMSSV3() == "")
+            {
+                query2 = string.Format("INSERT INTO DSThanhVien (MaLV, MSSV1, MSSV2, MSSV3) " + "VALUES ('{0}','{1}','{2}',NULL)",
+                luanVan.getMaLV(), luanVan.getMSSV1(), luanVan.getMSSV2());
+            }
+            else
+            {
+                query2 = string.Format("INSERT INTO DSThanhVien (MaLV, MSSV1, MSSV2, MSSV3) " + "VALUES ('{0}','{1}','{2}','{3}')",
+                luanVan.getMaLV(), luanVan.getMSSV1(), luanVan.getMSSV2(), luanVan.getMSSV3());
+            }
+            connection.ThucThi(query);
+            connection.ThucThi(query1);
+            connection.ThucThi(query2);
+        }
+        public void TuChoi(LuanVanDuyet luanVan)
+        {
+            string query1 = string.Format("DELETE FROM DSThanhVien WHERE MaLV = '{0}'", luanVan.getMaLV());
+            string query2 = string.Format("UPDATE LuanVan SET TrangThai = N'{0}' WHERE MaLV = '{1}'", "Chưa có nhóm", luanVan.getMaLV());
+            string query = string.Format("UPDATE DuyetDangKy SET TinhTrang = N'{0}' WHERE MaLV = '{1}'", "Từ chối", luanVan.getMaLV());
+            connection.ThucThi(query);
+            connection.ThucThi(query1);
+            connection.ThucThi(query2);
         }
     }
 }

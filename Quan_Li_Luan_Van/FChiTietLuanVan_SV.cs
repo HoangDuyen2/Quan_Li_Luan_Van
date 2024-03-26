@@ -16,95 +16,63 @@ namespace Quan_Li_Luan_Van
     public partial class FChiTietLuanVan_SV : Form
     {
         private string _message;
-
+        Hide_Show hide = new Hide_Show();
+        LuanVanDuyet luanVan = new LuanVanDuyet();
+        ChiTietLuanVanDAO chiTiet = new ChiTietLuanVanDAO();
+        DangKyLuanVan_SVDAO dangKy = new DangKyLuanVan_SVDAO();
         public FChiTietLuanVan_SV(string message) : this()
         {
             _message = message;
         }
 
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
-
         public FChiTietLuanVan_SV()
         {
             InitializeComponent();
+            ucChiTietLuanVan1.TxtTVien1.Enter += txtTVien1_GetFocus;
+            ucChiTietLuanVan1.TxtTVien2.Enter += txtTVien2_GetFocus;
+            ucChiTietLuanVan1.TxtTVien1.LostFocus += txtTVien1_LostFocus;
+            ucChiTietLuanVan1.TxtTVien2.LostFocus += txtTVien2_LostFocus;
         }
-        public void ThanhVienNhom()
-        {
-            string query1 = "SELECT LuanVan.MaLV, LuanVan.TenLV, DSThanhVien.MSSV1, " +
-                            "DSThanhVien.MSSV2, DSThanhVien.MSSV3 " +
-                            "FROM LuanVan, DSThanhVien " +
-                           "WHERE LuanVan.MaLV = DSThanhVien.MaLV and TenLV = N'" + _message + "'";
-            try
-            {
-                conn.Open();
-                SqlCommand cmd1 = new SqlCommand(query1, conn);
-                SqlDataReader dataReader1 = cmd1.ExecuteReader();
-                if (dataReader1.Read())
-                {
-                    txtTVien1.Text = dataReader1["MSSV1"].ToString();
-                    txtTVien2.Text = dataReader1["MSSV2"].ToString();
-                }
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-            
+        private void txtTVien2_LostFocus(object sender, EventArgs e)
+        {
+            hide.Show(sender,e);
         }
+
+        private void txtTVien1_LostFocus(object sender, EventArgs e)
+        {
+            hide.Show(sender, e);
+        }
+
+        private void txtTVien2_GetFocus(object sender, EventArgs e)
+        {
+            hide.Hide(sender, e);
+        }
+
+        private void txtTVien1_GetFocus(object sender, EventArgs e)
+        {
+            hide.Hide(sender, e);
+        }
+
         private void FChiTietLuanVan_Load(object sender, EventArgs e)
         {
-            ThanhVienNhom();
-            string query = "SELECT LuanVan.MaLV, LuanVan.TenLV, GiangVien.TenGV, " +
-                            "LuanVan.ChuyenNganh, LuanVan.LinhVuc, LuanVan.ChucNang, LuanVan.CongNghe, " +
-                            " LuanVan.NgonNgu, LuanVan.YeuCau " +
-                           "FROM LuanVan, GiangVien " +
-                           "WHERE LuanVan.MaGV = GiangVien.MaGV and TenLV = N'" + _message + "'";
-            try
-            {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader dataReader = cmd.ExecuteReader();
-                if (dataReader.Read())
-                {
-                    txtMaLuanVan.Text = dataReader["MaLV"].ToString();
-                    txtGVHD.Text = dataReader["TenGV"].ToString();
-                    txtTenLuanVan.Text = dataReader["TenLV"].ToString();
-                    txtChuyenNganh.Text = dataReader["ChuyenNganh"].ToString();
-                    txtLinhVuc.Text = dataReader["LinhVuc"].ToString();
-                    txtChucNang.Text = dataReader["ChucNang"].ToString();
-                    txtCongNghe.Text = dataReader["CongNghe"].ToString();
-                    txtNgonNgu.Text = dataReader["NgonNgu"].ToString();
-                    txtYeuCau.Text = dataReader["YeuCau"].ToString();
-                }
-                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
+            CapNhatDuLieu();
+            ucChiTietLuanVan1.ThongTin(luanVan);
+            ucChiTietLuanVan1.KhongTruyCap();
         }
-        public void KhongTruyCap()
+
+        private void CapNhatDuLieu()
         {
-            txtChucNang.Enabled = false;
-            txtChuyenNganh.Enabled = false;
-            txtCongNghe.Enabled = false;
-            txtNgonNgu.Enabled = false;
-            txtYeuCau.Enabled = false;
-            txtGVHD.Enabled = false;
-            txtLinhVuc.Enabled = false;
-            txtMaLuanVan.Enabled = false;
-            txtTVien2.Enabled = false;
-            txtTVien1.Enabled = false;
-            txtTenLuanVan.Enabled=false;
+            luanVan = chiTiet.Load(_message, "Luận văn");
+        }
+
+        private void btnChapNhan_Click(object sender, EventArgs e)
+        {
+            luanVan.setMSSV1(ucChiTietLuanVan1.TxtTVien1.Text);
+            luanVan.setMSSV2(ucChiTietLuanVan1.TxtTVien2.Text);
+            luanVan.setMSSV3("");
+            dangKy.DangKy(luanVan);
+            this.Close();
         }
     }
 

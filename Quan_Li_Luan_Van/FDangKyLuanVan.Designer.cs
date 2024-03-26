@@ -66,7 +66,7 @@
             this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitle.Location = new System.Drawing.Point(0, 0);
             this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(1050, 52);
+            this.panelTitle.Size = new System.Drawing.Size(1058, 52);
             this.panelTitle.TabIndex = 19;
             // 
             // label1
@@ -205,7 +205,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1050, 659);
+            this.ClientSize = new System.Drawing.Size(1058, 686);
             this.Controls.Add(this.flPanelDSLV);
             this.Controls.Add(this.btnDangKi);
             this.Controls.Add(this.panelTitle);

@@ -13,7 +13,7 @@ namespace Quan_Li_Luan_Van
 {
     public partial class UCLV : UserControl
     {
-        
+        ChiTietLuanVanDAO luanVan = new ChiTietLuanVanDAO();
         public UCLV()
         {
             InitializeComponent();
@@ -30,5 +30,6 @@ namespace Quan_Li_Luan_Van
         public Button ButtonChiTiet { get => btnChiTiet; set => btnChiTiet = value; }
         public Label LblGVHD { get => lblGVHD; set => lblGVHD = value; }
         public Label LblTenGV { get => lblTenGV; set => lblTenGV = value; }
+        public Label LblTrangThai { get => lblTrangThai; set => lblTrangThai = value;}
     }
 }

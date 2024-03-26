@@ -25,8 +25,7 @@ namespace Quan_Li_Luan_Van
             txtTenGV.Enter += TxtTenGV_GetFocus;
             txtTenGV.LostFocus += TxtTenGV_LostFocus;
             quenry = query;
-        }
-
+        } 
         private void TxtTenGV_GetFocus(object sender, EventArgs e)
         {
             hide_Show.Hide(sender,e);

@@ -34,6 +34,7 @@
             this.lblGVHD = new System.Windows.Forms.Label();
             this.lblTenGV = new System.Windows.Forms.Label();
             this.pictureBoxNen = new System.Windows.Forms.PictureBox();
+            this.lblTrangThai = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,7 +84,7 @@
             this.lblGVHD.AutoSize = true;
             this.lblGVHD.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGVHD.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblGVHD.Location = new System.Drawing.Point(687, 66);
+            this.lblGVHD.Location = new System.Drawing.Point(570, 67);
             this.lblGVHD.Name = "lblGVHD";
             this.lblGVHD.Size = new System.Drawing.Size(62, 23);
             this.lblGVHD.TabIndex = 14;
@@ -95,7 +96,7 @@
             this.lblTenGV.AutoSize = true;
             this.lblTenGV.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenGV.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblTenGV.Location = new System.Drawing.Point(746, 66);
+            this.lblTenGV.Location = new System.Drawing.Point(629, 67);
             this.lblTenGV.Name = "lblTenGV";
             this.lblTenGV.Size = new System.Drawing.Size(140, 23);
             this.lblTenGV.TabIndex = 15;
@@ -111,12 +112,26 @@
             this.pictureBoxNen.TabIndex = 5;
             this.pictureBoxNen.TabStop = false;
             // 
+            // lblTrangThai
+            // 
+            this.lblTrangThai.AutoSize = true;
+            this.lblTrangThai.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrangThai.ForeColor = System.Drawing.Color.Green;
+            this.lblTrangThai.Location = new System.Drawing.Point(929, 0);
+            this.lblTrangThai.Name = "lblTrangThai";
+            this.lblTrangThai.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblTrangThai.Size = new System.Drawing.Size(123, 23);
+            this.lblTrangThai.TabIndex = 20;
+            this.lblTrangThai.Text = "Chưa có nhóm";
+            this.lblTrangThai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // UCLV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.lblTrangThai);
             this.Controls.Add(this.lblTenGV);
             this.Controls.Add(this.lblGVHD);
             this.Controls.Add(this.btnChiTiet);
@@ -124,7 +139,7 @@
             this.Controls.Add(this.lblTenLV);
             this.Controls.Add(this.pictureBoxNen);
             this.Name = "UCLV";
-            this.Size = new System.Drawing.Size(1058, 98);
+            this.Size = new System.Drawing.Size(1060, 100);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -139,5 +154,6 @@
         private System.Windows.Forms.Button btnChiTiet;
         private System.Windows.Forms.Label lblGVHD;
         private System.Windows.Forms.Label lblTenGV;
+        private System.Windows.Forms.Label lblTrangThai;
     }
 }

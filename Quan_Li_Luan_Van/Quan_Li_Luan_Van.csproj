@@ -72,6 +72,7 @@
   <ItemGroup>
     <Compile Include="ChinhLuanVanDAO.cs" />
     <Compile Include="ChiTietLuanVanDAO.cs" />
+    <Compile Include="DangKyLuanVan_SVDAO.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="DSNhomDAO.cs" />
     <Compile Include="DuyetLuanVanDAO.cs" />
@@ -235,6 +236,12 @@
     <Compile Include="TaiKhoanDAO.cs" />
     <Compile Include="TrangChuGVDAO.cs" />
     <Compile Include="TrangChuSVDAO.cs" />
+    <Compile Include="UCChiTietLuanVan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCChiTietLuanVan.Designer.cs">
+      <DependentUpon>UCChiTietLuanVan.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCDuyet.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -364,6 +371,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FThemLuanVan.resx">
       <DependentUpon>FThemLuanVan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCChiTietLuanVan.resx">
+      <DependentUpon>UCChiTietLuanVan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCDuyet.resx">
       <DependentUpon>UCDuyet.cs</DependentUpon>
@@ -606,6 +616,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\reject.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\approve2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
