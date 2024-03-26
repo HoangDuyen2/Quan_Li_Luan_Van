@@ -69,7 +69,7 @@
             this.btnChiTiet.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnChiTiet.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnChiTiet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChiTiet.Location = new System.Drawing.Point(944, 55);
+            this.btnChiTiet.Location = new System.Drawing.Point(936, 54);
             this.btnChiTiet.Name = "btnChiTiet";
             this.btnChiTiet.Size = new System.Drawing.Size(114, 42);
             this.btnChiTiet.TabIndex = 20;
@@ -84,7 +84,7 @@
             this.lblChuyenNganh.AutoSize = true;
             this.lblChuyenNganh.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChuyenNganh.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.lblChuyenNganh.Location = new System.Drawing.Point(107, 63);
+            this.lblChuyenNganh.Location = new System.Drawing.Point(103, 63);
             this.lblChuyenNganh.Name = "lblChuyenNganh";
             this.lblChuyenNganh.Size = new System.Drawing.Size(189, 23);
             this.lblChuyenNganh.TabIndex = 18;
@@ -96,7 +96,7 @@
             this.lblTenLV.AutoSize = true;
             this.lblTenLV.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenLV.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblTenLV.Location = new System.Drawing.Point(105, 19);
+            this.lblTenLV.Location = new System.Drawing.Point(101, 19);
             this.lblTenLV.Name = "lblTenLV";
             this.lblTenLV.Size = new System.Drawing.Size(191, 27);
             this.lblTenLV.TabIndex = 17;
@@ -106,7 +106,7 @@
             // pictureBoxNen
             // 
             this.pictureBoxNen.Image = global::Quan_Li_Luan_Van.Properties.Resources.anhSubject;
-            this.pictureBoxNen.Location = new System.Drawing.Point(23, 14);
+            this.pictureBoxNen.Location = new System.Drawing.Point(18, 14);
             this.pictureBoxNen.Name = "pictureBoxNen";
             this.pictureBoxNen.Size = new System.Drawing.Size(78, 76);
             this.pictureBoxNen.TabIndex = 16;
@@ -139,7 +139,7 @@
             this.Controls.Add(this.lblTenLV);
             this.Controls.Add(this.pictureBoxNen);
             this.Name = "UCLV_GV";
-            this.Size = new System.Drawing.Size(1060, 100);
+            this.Size = new System.Drawing.Size(1058, 98);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -55,6 +55,8 @@ namespace Quan_Li_Luan_Van
             else
             {
                 lvDAO.ChinhSua(lv, lv.MaLV);
+                MessageBox.Show("Lưu thành công");
+                this.Close();
             }
 
         }

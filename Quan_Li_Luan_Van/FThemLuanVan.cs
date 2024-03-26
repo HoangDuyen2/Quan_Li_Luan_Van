@@ -16,7 +16,6 @@ namespace Quan_Li_Luan_Van
         private string maGiangVien;
         Hide_Show hide_Show = new Hide_Show();
         ThemLuanVanDAO lvDao = new ThemLuanVanDAO();
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
 
         public FThemLuanVan()
         {
@@ -91,6 +90,8 @@ namespace Quan_Li_Luan_Van
             else
             {
                 lvDao.ThemLuanVan(lv);
+                MessageBox.Show("Thêm thành công");
+                this.Hide();
             }
         }
         private LuanVan TaoLuanVan()
