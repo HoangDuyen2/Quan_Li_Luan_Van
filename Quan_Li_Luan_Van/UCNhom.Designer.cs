@@ -30,7 +30,7 @@
         {
             this.lblChuyenNganh = new System.Windows.Forms.Label();
             this.lblTenLV = new System.Windows.Forms.Label();
-            this.btnThemNV = new System.Windows.Forms.Button();
+            this.btnTienTrinh = new System.Windows.Forms.Button();
             this.pictureBoxNen = new System.Windows.Forms.PictureBox();
             this.btnChiTiet = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNen)).BeginInit();
@@ -60,21 +60,21 @@
             this.lblTenLV.Text = "Quản lí khách sạn";
             this.lblTenLV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnThemNV
+            // btnTienTrinh
             // 
-            this.btnThemNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
-            this.btnThemNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThemNV.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnThemNV.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnThemNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThemNV.Location = new System.Drawing.Point(920, 48);
-            this.btnThemNV.Name = "btnThemNV";
-            this.btnThemNV.Size = new System.Drawing.Size(126, 42);
-            this.btnThemNV.TabIndex = 21;
-            this.btnThemNV.Text = "Thêm NV";
-            this.btnThemNV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnThemNV.UseVisualStyleBackColor = false;
-            this.btnThemNV.Click += new System.EventHandler(this.btnThemNV_Click);
+            this.btnTienTrinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
+            this.btnTienTrinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTienTrinh.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnTienTrinh.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnTienTrinh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTienTrinh.Location = new System.Drawing.Point(920, 48);
+            this.btnTienTrinh.Name = "btnTienTrinh";
+            this.btnTienTrinh.Size = new System.Drawing.Size(126, 42);
+            this.btnTienTrinh.TabIndex = 21;
+            this.btnTienTrinh.Text = "Tiến trình";
+            this.btnTienTrinh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTienTrinh.UseVisualStyleBackColor = false;
+            this.btnTienTrinh.Click += new System.EventHandler(this.btnTienTrinh_Click);
             // 
             // pictureBoxNen
             // 
@@ -109,7 +109,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.btnChiTiet);
-            this.Controls.Add(this.btnThemNV);
+            this.Controls.Add(this.btnTienTrinh);
             this.Controls.Add(this.lblChuyenNganh);
             this.Controls.Add(this.lblTenLV);
             this.Controls.Add(this.pictureBoxNen);
@@ -127,7 +127,7 @@
         private System.Windows.Forms.Label lblChuyenNganh;
         private System.Windows.Forms.Label lblTenLV;
         private System.Windows.Forms.PictureBox pictureBoxNen;
-        private System.Windows.Forms.Button btnThemNV;
+        private System.Windows.Forms.Button btnTienTrinh;
         private System.Windows.Forms.Button btnChiTiet;
     }
 }

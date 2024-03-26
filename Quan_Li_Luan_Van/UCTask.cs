@@ -21,8 +21,8 @@ namespace Quan_Li_Luan_Van
         public PictureBox PictureBoxNen { get => pictureBoxNen; set => pictureBoxNen = value; }
         public Button BtnChiTiet { get => btnChiTiet; set => btnChiTiet = value; }
         public Label LbSoTienTrinh { get => lbSoTienTrinh; set => lbSoTienTrinh = value; }
-        public Label LbTT { get => lbTT; set => lbTT = value; }
-        public Label LbTrangThai { get => lbTrangThai; set => lbTrangThai = value; }
+        //public Label LbTT { get => lbTT; set => lbTT = value; }
+        //public Label LbTrangThai { get => lbTrangThai; set => lbTrangThai = value; }
 
         private void btnChiTiet_Click(object sender, EventArgs e)
         {
