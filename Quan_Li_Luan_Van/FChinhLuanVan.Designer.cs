@@ -45,7 +45,7 @@
             this.txtMaLuanVan = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.lbTenLuanVan = new System.Windows.Forms.Label();
             this.lbMaLuanVan = new System.Windows.Forms.Label();
-            this.btnThem = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnLuu = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.lblChiTietLuanVan = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.cbboxNgonNgu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbboxCongNghe)).BeginInit();
@@ -399,15 +399,16 @@
             this.lbMaLuanVan.TabIndex = 50;
             this.lbMaLuanVan.Text = "  ";
             // 
-            // btnThem
+            // btnLuu
             // 
-            this.btnThem.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
-            this.btnThem.Location = new System.Drawing.Point(461, 650);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
-            this.btnThem.Size = new System.Drawing.Size(169, 40);
-            this.btnThem.TabIndex = 18;
-            this.btnThem.Values.Text = "Lưu";
+            this.btnLuu.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
+            this.btnLuu.Location = new System.Drawing.Point(461, 650);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
+            this.btnLuu.Size = new System.Drawing.Size(169, 40);
+            this.btnLuu.TabIndex = 18;
+            this.btnLuu.Values.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // lblChiTietLuanVan
             // 
@@ -426,7 +427,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 702);
             this.Controls.Add(this.panelNoiDung);
-            this.Controls.Add(this.btnThem);
+            this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.lblChiTietLuanVan);
             this.Name = "FChinhLuanVan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -462,7 +463,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtMaLuanVan;
         private System.Windows.Forms.Label lbTenLuanVan;
         private System.Windows.Forms.Label lbMaLuanVan;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnThem;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnLuu;
         private System.Windows.Forms.Label lblChiTietLuanVan;
     }
 }

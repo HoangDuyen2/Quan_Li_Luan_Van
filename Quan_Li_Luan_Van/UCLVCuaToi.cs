@@ -23,7 +23,7 @@ namespace Quan_Li_Luan_Van
 
         private void btnChinhSua_Click(object sender, EventArgs e)
         {
-            FChinhLuanVan chinhlv = new FChinhLuanVan(LblTenLV.Text);
+            FChinhLuanVan chinhlv = new FChinhLuanVan(LblTenLV.Text,"GV001");
             chinhlv.ShowDialog();
             
         }

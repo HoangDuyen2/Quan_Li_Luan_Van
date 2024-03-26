@@ -54,6 +54,12 @@ namespace Quan_Li_Luan_Van
             }
             return sualv;
         }
-        
+        public void ChinhSua(LuanVan luanvan, string maLV)
+        {
+            string query = string.Format("UPDATE LuanVan SET TenLV = N'{0}', ChuyenNganh = N'{1}', ChucNang = N'{2}', YeuCau = N'{3}', CongNghe = N'{4}', LinhVuc = N'{5}', NgonNgu = N'{6}' WHERE MaLV = '{7}'",
+            luanvan.TenLV, luanvan.ChuyenNganh, luanvan.ChucNang, luanvan.YeuCau, luanvan.CongNghe, luanvan.LinhVuc, luanvan.NgonNgu, luanvan.MaLV );
+            dbConnection.ThucThi(query);
+        }
+
     }
 }
