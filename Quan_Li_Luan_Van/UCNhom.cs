@@ -18,28 +18,20 @@ namespace Quan_Li_Luan_Van
         }
         public Label LblChuyenNganh { get => lblChuyenNganh; set => lblChuyenNganh = value; }
         public Label LblTenLV { get => lblTenLV; set => lblTenLV = value; }
-        
-
-        private void btnTienTrinh_Click(object sender, EventArgs e)
-        {
-            FChiTietTask chiTietTask = new FChiTietTask(lblTenLV.Text);
-            chiTietTask.Show();
-        }
-
-        private void btnThemNV_Click(object sender, EventArgs e)
-        {
-            FChiTietLuanVan_SV chiTietLuanVan = new FChiTietLuanVan_SV(lblTenLV.Text);
-            chiTietLuanVan.Show();
-        }
-
-        private void btnChiTiet_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void UCNhom_Load(object sender, EventArgs e)
         {
 
+        }
+        private void btnChiTiet_Click(object sender, EventArgs e)
+        {
+            FChiTietLuanVan_GV ctlv = new FChiTietLuanVan_GV(LblTenLV.Text);
+            ctlv.ShowDialog();
+        }
+        private void btnTienTrinh_Click(object sender, EventArgs e)
+        {
+            FTienTrinh_GV task = new FTienTrinh_GV();
+            task.Show();
         }
     }
 }
