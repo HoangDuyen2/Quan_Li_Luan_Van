@@ -16,6 +16,8 @@ namespace Quan_Li_Luan_Van
     {
         private string tenLV;
         protected SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
+        ChinhLuanVanDAO lvDAO = new ChinhLuanVanDAO();
+        LuanVan lv = new LuanVan();
         public FChinhLuanVan()
         {
             InitializeComponent();
@@ -28,34 +30,17 @@ namespace Quan_Li_Luan_Van
 
         private void FChinhSuaLuanVan_Load(object sender, EventArgs e)
         {
-            string query = "SELECT * " +
-                           "FROM LuanVan " +                         
-                           "WHERE TenLV = N'" + tenLV + "'";
-            try
-            {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader dataReader = cmd.ExecuteReader();
-                if (dataReader.Read())
-                {
-                    txtMaLuanVan.Text = dataReader["MaLV"].ToString();
-                    txtTenLuanVan.Text = dataReader["TenLV"].ToString();
-                    txtChucNang.Text = dataReader["ChucNang"].ToString();
-                    txtYeuCau.Text = dataReader["YeuCau"].ToString();
-                    cbboxChuyenNganh.SelectedItem = dataReader["ChuyenNganh"].ToString();
-                    cbboxCongNghe.SelectedItem = dataReader["CongNghe"].ToString();                   
-                    cbboxLinhVuc.SelectedItem = dataReader["LinhVuc"].ToString();
-                    cbboxNgonNgu.SelectedItem = dataReader["NgonNgu"].ToString();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
+            
+            lv = lvDAO.getLuanVan(tenLV);
+            txtMaLuanVan.Text = lv.MaLV.ToString();
+            txtTenLuanVan.Text = lv.TenLV.ToString();
+            txtChucNang.Text = lv.ChucNang.ToString();
+            txtYeuCau.Text = lv.YeuCau.ToString();
+            cbboxChuyenNganh.SelectedItem = lv.ChuyenNganh;
+            cbboxCongNghe.SelectedItem = lv.CongNghe;
+            cbboxLinhVuc.SelectedItem = lv.LinhVuc;
+            cbboxNgonNgu.SelectedItem = lv.NgonNgu;
+
         }
     }
 }

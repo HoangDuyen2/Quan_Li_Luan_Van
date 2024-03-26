@@ -27,5 +27,11 @@ namespace Quan_Li_Luan_Van
             chinhlv.ShowDialog();
             
         }
+
+        private void btnChiTiet_Click(object sender, EventArgs e)
+        {
+            FChiTietLuanVan_GV ctlv = new FChiTietLuanVan_GV(LblTenLV.Text);
+            ctlv.ShowDialog();
+        }
     }
 }

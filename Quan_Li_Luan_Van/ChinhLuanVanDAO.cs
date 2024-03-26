@@ -13,13 +13,14 @@ namespace Quan_Li_Luan_Van
     {
         protected SqlConnection conn;
         protected DBConnection dbConnection;
+        LuanVan sualv = new LuanVan();
         public ChinhLuanVanDAO()
         {
             conn = new SqlConnection(Properties.Settings.Default.cnnStr);
             dbConnection = new DBConnection();
         }
 
-        public void getInfo(string tenLV)
+        public LuanVan getLuanVan(string tenLV)
         {
             string query = "SELECT * " +
                            "FROM LuanVan " +            
@@ -31,13 +32,16 @@ namespace Quan_Li_Luan_Van
                 SqlDataReader dataReader = cmd.ExecuteReader();
                 if (dataReader.Read())
                 {
-                    /*txtMaLuanVan.Text = dataReader["MaLV"].ToString();
-                    txtTenLuanVan.Text = dataReader["TenLV"].ToString();
-                    txtChuyenNganh.Text = dataReader["ChuyenNganh"].ToString();
-                    txtGVHD.Text = dataReader["TenGV"].ToString();
-                    txtMota.Text = dataReader["MoTaChiTiet"].ToString();
-                    txtSoLuong.Text = dataReader["SoLuongConLai"].ToString();
-                    */
+                    
+                    sualv.MaLV = dataReader["MaLV"].ToString();
+                    sualv.TenLV = dataReader["TenLV"].ToString();
+                    sualv.ChuyenNganh = dataReader["ChuyenNganh"].ToString();
+                    sualv.ChucNang = dataReader["ChucNang"].ToString();
+                    sualv.YeuCau = dataReader["YeuCau"].ToString();
+                    sualv.ChuyenNganh = dataReader["ChuyenNganh"].ToString();
+                    sualv.CongNghe = dataReader["CongNghe"].ToString();
+                    sualv.LinhVuc = dataReader["LinhVuc"].ToString();
+                    sualv.NgonNgu = dataReader["NgonNgu"].ToString();
                 }
             }
             catch (Exception ex)
@@ -48,6 +52,7 @@ namespace Quan_Li_Luan_Van
             {
                 conn.Close();
             }
+            return sualv;
         }
         
     }
