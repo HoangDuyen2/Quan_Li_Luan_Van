@@ -42,35 +42,8 @@ namespace Quan_Li_Luan_Van
                 conn.Close();
             }
         }
-        public void DSThanhVienChuaDuyet(string _message)
-        {
-            string query1 = "SELECT LuanVan.MaLV, LuanVan.TenLV, DuyetDangKy.MSSV1, " +
-                            "DuyetDangKy.MSSV2, DuyetDangKy.MSSV3 " +
-                            "FROM LuanVan, DuyetDangKy " +
-                            "WHERE LuanVan.MaLV = DuyetDangKy.MaLV and TenLV = N'" + _message + "'";
-            try
-            {
-                conn.Open();
-                SqlCommand cmd1 = new SqlCommand(query1, conn);
-                SqlDataReader dataReader1 = cmd1.ExecuteReader();
-                if (dataReader1.Read())
-                {
-                    luanVan.setMSSV1(dataReader1["MSSV1"].ToString());
-                    luanVan.setMSSV2(dataReader1["MSSV2"].ToString());
-                    luanVan.setMSSV3(dataReader1["MSSV3"].ToString());
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
-        public LuanVanDuyet Load(string _message,string table)
+        
+        public LuanVanDuyet Load(string _message)
         {
             string query = "SELECT LuanVan.MaLV, LuanVan.TenLV, GiangVien.TenGV, " +
                             "LuanVan.ChuyenNganh, LuanVan.LinhVuc, LuanVan.ChucNang, LuanVan.CongNghe, " +
@@ -104,9 +77,7 @@ namespace Quan_Li_Luan_Van
             {
                 conn.Close();
             }
-            if (luanVan.getTrangThai() != "Đã duyệt")
-                DSThanhVienChuaDuyet(_message);
-            else DSThanhVien(_message);
+            DSThanhVien(_message);
             return luanVan;
         }
     }

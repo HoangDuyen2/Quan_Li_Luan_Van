@@ -16,7 +16,6 @@ namespace Quan_Li_Luan_Van
     {
         Hide_Show hide = new Hide_Show();
         DangKyLuanVan_SVDAO dangKy = new DangKyLuanVan_SVDAO();
-        DBConnection connection = new DBConnection();
         public FDangKyLuanVan()
         {
             InitializeComponent();

@@ -133,7 +133,6 @@
             this.lbNameGVHD.TabIndex = 52;
             this.lbNameGVHD.Text = "Giảng Viên HD";
             this.lbNameGVHD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbNameGVHD.Click += new System.EventHandler(this.lbNameGVHD_Click);
             // 
             // txtTenLuanVan
             // 
@@ -219,6 +218,7 @@
             this.btnGuiYC.Size = new System.Drawing.Size(169, 40);
             this.btnGuiYC.TabIndex = 11;
             this.btnGuiYC.Values.Text = "GỬI YÊU CẦU";
+            this.btnGuiYC.Click += new System.EventHandler(this.btnGuiYC_Click);
             // 
             // lblThemTB
             // 

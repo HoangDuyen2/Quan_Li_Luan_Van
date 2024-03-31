@@ -63,7 +63,7 @@ namespace Quan_Li_Luan_Van
 
         private void CapNhatDuLieu()
         {
-            luanVan = chiTiet.Load(_message, "Luận văn");
+            luanVan = chiTiet.Load(_message);
         }
 
         private void btnChapNhan_Click(object sender, EventArgs e)

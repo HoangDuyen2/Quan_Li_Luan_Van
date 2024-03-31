@@ -12,12 +12,13 @@ namespace Quan_Li_Luan_Van
 {
     public partial class FDangKyLuanVanMoi : Form
     {
+        DangKyLuanVan_SVDAO dangKy = new DangKyLuanVan_SVDAO();
         public FDangKyLuanVanMoi()
         {
             InitializeComponent();
         }
 
-        private void lbNameGVHD_Click(object sender, EventArgs e)
+        private void btnGuiYC_Click(object sender, EventArgs e)
         {
 
         }
