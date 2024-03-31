@@ -71,7 +71,8 @@ namespace Quan_Li_Luan_Van
             luanVan.setMSSV1(ucChiTietLuanVan1.TxtTVien1.Text);
             luanVan.setMSSV2(ucChiTietLuanVan1.TxtTVien2.Text);
             luanVan.setMSSV3("");
-            dangKy.DangKy(luanVan);
+            if(dangKy.checkNguoiDangKy(luanVan))
+                dangKy.DangKy(luanVan);
             this.Close();
         }
     }
