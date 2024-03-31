@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 namespace Quan_Li_Luan_Van
 {
 
@@ -13,9 +14,37 @@ namespace Quan_Li_Luan_Van
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
 
+        string quenry;
+        string query = "SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, GiangVien.TenGV, LuanVan.TrangThai " +
+                                   "FROM LuanVan " +
+                                   "JOIN GiangVien ON LuanVan.MaGV = GiangVien.MaGV ";
         public DSLuanVanDAO() 
         {
-            
+            quenry = query;
+        }
+        public string Load()
+        {
+            return quenry;
+        }
+        public string chonChuyenNganh(string text)
+        {
+            if (text != "Tất cả")
+            {
+                string chuyenNganh = "WHERE LuanVan.ChuyenNganh = N'" + text + "'";
+                quenry = query + chuyenNganh;
+            }
+            else quenry = query;
+            return quenry;
+        }
+        public string timKiem(string text)
+        {
+            if (text != "")
+            {
+                string tenGV = "WHERE GiangVien.TenGV = N'" + text + "'";
+                quenry = query + tenGV;
+            }
+            else quenry = query;
+            return quenry;
         }
         public void getInfo(string query, FlowLayoutPanel panel)
         {

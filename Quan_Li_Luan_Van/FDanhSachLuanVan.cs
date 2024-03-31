@@ -15,16 +15,13 @@ namespace Quan_Li_Luan_Van
     {
         Hide_Show hide_Show = new Hide_Show();
         DSLuanVanDAO dSLuanVan = new DSLuanVanDAO();
-        string quenry;
-        string query = "SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, GiangVien.TenGV, LuanVan.TrangThai " +
-                                   "FROM LuanVan " +
-                                   "JOIN GiangVien ON LuanVan.MaGV = GiangVien.MaGV ";
+        string quenry = "";
         public FDanhSachLuanVan()
         {
             InitializeComponent();
             txtTenGV.Enter += TxtTenGV_GetFocus;
             txtTenGV.LostFocus += TxtTenGV_LostFocus;
-            quenry = query;
+            quenry = dSLuanVan.Load();
         } 
         private void TxtTenGV_GetFocus(object sender, EventArgs e)
         {
@@ -44,23 +41,13 @@ namespace Quan_Li_Luan_Van
         private void ChonChuyenNganh(object sender, EventArgs e)
         {
             string text = comboxChuyenNganh.SelectedItem.ToString();
-            if (text != "Tất cả")
-            {
-                string chuyenNganh = "WHERE LuanVan.ChuyenNganh = N'" + text + "'";
-                quenry = query + chuyenNganh;
-            }
-            else quenry = query;
+            quenry = dSLuanVan.chonChuyenNganh(text);
             TraCuu_Load(sender, e);
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            if(txtTenGV.Text != "")
-            {
-                string tenGV = "WHERE GiangVien.TenGV = N'" + txtTenGV.Text + "'";
-                quenry = query + tenGV;
-            }
-            else quenry = query;
+            quenry = dSLuanVan.timKiem(txtTenGV.Text);
             TraCuu_Load(sender, e);
         }
     }

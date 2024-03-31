@@ -29,5 +29,11 @@ namespace Quan_Li_Luan_Van
             FChiTietTask fChiTiet = new FChiTietTask(LbTenLV.Text);
             fChiTiet.Show();
         }
+
+        private void btnChiTiet_Click_1(object sender, EventArgs e)
+        {
+            FChiTietTask task = new FChiTietTask();
+            task.Show();
+        }
     }
 }

@@ -36,6 +36,8 @@
             this.btnChiTiet = new System.Windows.Forms.Button();
             this.btnChinhSua = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.lblTenGV = new System.Windows.Forms.Label();
+            this.lblGVHD = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,6 +101,7 @@
             this.btnChiTiet.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnChiTiet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnChiTiet.UseVisualStyleBackColor = false;
+            this.btnChiTiet.Click += new System.EventHandler(this.btnChiTiet_Click_1);
             // 
             // btnChinhSua
             // 
@@ -128,12 +131,38 @@
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // lblTenGV
+            // 
+            this.lblTenGV.AutoSize = true;
+            this.lblTenGV.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenGV.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lblTenGV.Location = new System.Drawing.Point(591, 67);
+            this.lblTenGV.Name = "lblTenGV";
+            this.lblTenGV.Size = new System.Drawing.Size(141, 23);
+            this.lblTenGV.TabIndex = 36;
+            this.lblTenGV.Text = "Nguyễn Thủy An";
+            this.lblTenGV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblGVHD
+            // 
+            this.lblGVHD.AutoSize = true;
+            this.lblGVHD.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGVHD.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lblGVHD.Location = new System.Drawing.Point(486, 69);
+            this.lblGVHD.Name = "lblGVHD";
+            this.lblGVHD.Size = new System.Drawing.Size(99, 23);
+            this.lblGVHD.TabIndex = 35;
+            this.lblGVHD.Text = "Người giao:";
+            this.lblGVHD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // UCTask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.lblTenGV);
+            this.Controls.Add(this.lblGVHD);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnChinhSua);
             this.Controls.Add(this.btnChiTiet);
@@ -157,5 +186,7 @@
         private System.Windows.Forms.Button btnChiTiet;
         private System.Windows.Forms.Button btnChinhSua;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblTenGV;
+        private System.Windows.Forms.Label lblGVHD;
     }
 }
