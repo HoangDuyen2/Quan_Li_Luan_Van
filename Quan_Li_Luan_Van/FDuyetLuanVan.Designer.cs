@@ -75,10 +75,10 @@
             // 
             this.comboxLoaiTraCuu.DropDownWidth = 261;
             this.comboxLoaiTraCuu.Items.AddRange(new object[] {
+            "Tất cả",
             "Đang chờ duyệt",
             "Đã duyệt",
-            "Từ chối",
-            "Tất cả"});
+            "Từ chối"});
             this.comboxLoaiTraCuu.Location = new System.Drawing.Point(146, 34);
             this.comboxLoaiTraCuu.Name = "comboxLoaiTraCuu";
             this.comboxLoaiTraCuu.Size = new System.Drawing.Size(273, 39);

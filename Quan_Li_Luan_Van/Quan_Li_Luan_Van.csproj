@@ -72,6 +72,7 @@
   <ItemGroup>
     <Compile Include="ChinhLuanVanDAO.cs" />
     <Compile Include="ChiTietLuanVanDAO.cs" />
+    <Compile Include="ChiTietLuanVanDuyetDAO.cs" />
     <Compile Include="DangKyLuanVan_SVDAO.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="DSNhomDAO.cs" />

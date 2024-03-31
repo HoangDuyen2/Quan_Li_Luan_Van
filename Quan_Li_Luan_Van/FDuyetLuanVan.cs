@@ -13,16 +13,12 @@ namespace Quan_Li_Luan_Van
     public partial class FDuyetLuanVan : Form
     {
         DuyetLuanVanDAO duyetLuanVan = new DuyetLuanVanDAO();
-        string quenry;
-        string query = "SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, DuyetDangKy.TinhTrang " +
-                                   "FROM LuanVan " +
-                                   "JOIN DuyetDangKy ON LuanVan.MaLV = DuyetDangKy.MaLV and LuanVan.MaGV = 'GV001'";
+        string quenry = "";
         public FDuyetLuanVan()
         {
             InitializeComponent();
-            quenry = query;
+            quenry = duyetLuanVan.Load();
         }
-
 
         private void FDuyetLuanVan_Load(object sender, EventArgs e)
         {
@@ -32,7 +28,7 @@ namespace Quan_Li_Luan_Van
         private void Chon_Tinh_Trang(object sender, EventArgs e)
         {
             string text = comboxLoaiTraCuu.SelectedItem.ToString();
-            duyetLuanVan.traCuu(text);
+            quenry = duyetLuanVan.traCuu(text);
             FDuyetLuanVan_Load(sender, e);
         }
     }

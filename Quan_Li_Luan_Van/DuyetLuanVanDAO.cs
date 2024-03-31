@@ -13,10 +13,17 @@ namespace Quan_Li_Luan_Van
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
         DBConnection connection = new DBConnection();
-
+        string quenry;
+        string query = "SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, DuyetDangKy.TinhTrang " +
+                                   "FROM LuanVan " +
+                                   "JOIN DuyetDangKy ON LuanVan.MaLV = DuyetDangKy.MaLV and LuanVan.MaGV = 'GV001'";
         public DuyetLuanVanDAO()
         {
-
+            quenry = query;
+        }
+        public string Load()
+        {
+            return quenry;
         }
         public void getInfo(string query, FlowLayoutPanel panel)
         {
@@ -80,12 +87,8 @@ namespace Quan_Li_Luan_Van
             connection.ThucThi(query1);
             connection.ThucThi(query2);
         }
-        public void traCuu(string text)
+        public string traCuu(string text)
         {
-            string quenry;
-            string query = "SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, DuyetDangKy.TinhTrang " +
-                                       "FROM LuanVan " +
-                                       "JOIN DuyetDangKy ON LuanVan.MaLV = DuyetDangKy.MaLV ";
             if (text != "Tất cả")
             {
                 string tracuu = "WHERE TinhTrang = N'" + text + "'";
@@ -93,6 +96,7 @@ namespace Quan_Li_Luan_Van
             }
             else quenry = query;
             connection.ThucThi(quenry);
+            return quenry;
         }
     }
 }
