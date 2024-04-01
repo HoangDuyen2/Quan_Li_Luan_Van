@@ -77,6 +77,7 @@
             this.Name = "FTienTrinh_GV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lí hoạt động nhóm";
+            this.Load += new System.EventHandler(this.FTienTrinh_GV_Load);
             this.ResumeLayout(false);
 
         }

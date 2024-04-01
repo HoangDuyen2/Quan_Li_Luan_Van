@@ -38,5 +38,10 @@ namespace Quan_Li_Luan_Van
         {
             luanVan = chiTiet.Load(_message);
         }
+
+        private void ucChiTietLuanVan1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

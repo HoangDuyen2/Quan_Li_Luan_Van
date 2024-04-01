@@ -29,53 +29,51 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCTask));
-            this.lbTienTrinh = new System.Windows.Forms.Label();
-            this.lbTenLV = new System.Windows.Forms.Label();
-            this.lbSoTienTrinh = new System.Windows.Forms.Label();
+            this.lblText = new System.Windows.Forms.Label();
+            this.lblTenNV = new System.Windows.Forms.Label();
+            this.lblTienTrinh = new System.Windows.Forms.Label();
             this.pictureBoxNen = new System.Windows.Forms.PictureBox();
             this.btnChiTiet = new System.Windows.Forms.Button();
             this.btnChinhSua = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.lblTenGV = new System.Windows.Forms.Label();
-            this.lblGVHD = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNen)).BeginInit();
             this.SuspendLayout();
             // 
-            // lbTienTrinh
+            // lblText
             // 
-            this.lbTienTrinh.AutoSize = true;
-            this.lbTienTrinh.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTienTrinh.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.lbTienTrinh.Location = new System.Drawing.Point(115, 65);
-            this.lbTienTrinh.Name = "lbTienTrinh";
-            this.lbTienTrinh.Size = new System.Drawing.Size(88, 23);
-            this.lbTienTrinh.TabIndex = 24;
-            this.lbTienTrinh.Text = "Tiến trình:";
-            this.lbTienTrinh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblText.AutoSize = true;
+            this.lblText.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblText.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblText.Location = new System.Drawing.Point(115, 65);
+            this.lblText.Name = "lblText";
+            this.lblText.Size = new System.Drawing.Size(88, 23);
+            this.lblText.TabIndex = 24;
+            this.lblText.Text = "Tiến trình:";
+            this.lblText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbTenLV
+            // lblTenNV
             // 
-            this.lbTenLV.AutoSize = true;
-            this.lbTenLV.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenLV.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbTenLV.Location = new System.Drawing.Point(113, 17);
-            this.lbTenLV.Name = "lbTenLV";
-            this.lbTenLV.Size = new System.Drawing.Size(123, 27);
-            this.lbTenLV.TabIndex = 23;
-            this.lbTenLV.Text = "Thiết kế UI";
-            this.lbTenLV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTenNV.AutoSize = true;
+            this.lblTenNV.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenNV.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lblTenNV.Location = new System.Drawing.Point(113, 17);
+            this.lblTenNV.Name = "lblTenNV";
+            this.lblTenNV.Size = new System.Drawing.Size(123, 27);
+            this.lblTenNV.TabIndex = 23;
+            this.lblTenNV.Text = "Thiết kế UI";
+            this.lblTenNV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbSoTienTrinh
+            // lblTienTrinh
             // 
-            this.lbSoTienTrinh.AutoSize = true;
-            this.lbSoTienTrinh.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSoTienTrinh.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.lbSoTienTrinh.Location = new System.Drawing.Point(209, 65);
-            this.lbSoTienTrinh.Name = "lbSoTienTrinh";
-            this.lbSoTienTrinh.Size = new System.Drawing.Size(43, 23);
-            this.lbSoTienTrinh.TabIndex = 31;
-            this.lbSoTienTrinh.Text = "40%";
-            this.lbSoTienTrinh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTienTrinh.AutoSize = true;
+            this.lblTienTrinh.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTienTrinh.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblTienTrinh.Location = new System.Drawing.Point(199, 65);
+            this.lblTienTrinh.Name = "lblTienTrinh";
+            this.lblTienTrinh.Size = new System.Drawing.Size(43, 23);
+            this.lblTienTrinh.TabIndex = 31;
+            this.lblTienTrinh.Text = "40%";
+            this.lblTienTrinh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBoxNen
             // 
@@ -136,44 +134,18 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // lblTenGV
-            // 
-            this.lblTenGV.AutoSize = true;
-            this.lblTenGV.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenGV.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblTenGV.Location = new System.Drawing.Point(591, 67);
-            this.lblTenGV.Name = "lblTenGV";
-            this.lblTenGV.Size = new System.Drawing.Size(141, 23);
-            this.lblTenGV.TabIndex = 36;
-            this.lblTenGV.Text = "Nguyễn Thủy An";
-            this.lblTenGV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblGVHD
-            // 
-            this.lblGVHD.AutoSize = true;
-            this.lblGVHD.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGVHD.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblGVHD.Location = new System.Drawing.Point(486, 69);
-            this.lblGVHD.Name = "lblGVHD";
-            this.lblGVHD.Size = new System.Drawing.Size(99, 23);
-            this.lblGVHD.TabIndex = 35;
-            this.lblGVHD.Text = "Người giao:";
-            this.lblGVHD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // UCTask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.lblTenGV);
-            this.Controls.Add(this.lblGVHD);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnChinhSua);
             this.Controls.Add(this.btnChiTiet);
-            this.Controls.Add(this.lbSoTienTrinh);
-            this.Controls.Add(this.lbTienTrinh);
-            this.Controls.Add(this.lbTenLV);
+            this.Controls.Add(this.lblTienTrinh);
+            this.Controls.Add(this.lblText);
+            this.Controls.Add(this.lblTenNV);
             this.Controls.Add(this.pictureBoxNen);
             this.Name = "UCTask";
             this.Size = new System.Drawing.Size(1060, 100);
@@ -184,14 +156,12 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label lbTienTrinh;
-        private System.Windows.Forms.Label lbTenLV;
+        private System.Windows.Forms.Label lblText;
+        private System.Windows.Forms.Label lblTenNV;
         private System.Windows.Forms.PictureBox pictureBoxNen;
-        private System.Windows.Forms.Label lbSoTienTrinh;
+        private System.Windows.Forms.Label lblTienTrinh;
         private System.Windows.Forms.Button btnChiTiet;
         private System.Windows.Forms.Button btnChinhSua;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label lblTenGV;
-        private System.Windows.Forms.Label lblGVHD;
     }
 }
