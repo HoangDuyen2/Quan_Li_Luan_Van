@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCNhom));
             this.lblChuyenNganh = new System.Windows.Forms.Label();
             this.lblTenLV = new System.Windows.Forms.Label();
             this.btnTienTrinh = new System.Windows.Forms.Button();
@@ -63,15 +64,15 @@
             // btnTienTrinh
             // 
             this.btnTienTrinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
+            this.btnTienTrinh.FlatAppearance.BorderSize = 0;
             this.btnTienTrinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTienTrinh.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnTienTrinh.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnTienTrinh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTienTrinh.Location = new System.Drawing.Point(920, 48);
+            this.btnTienTrinh.Image = ((System.Drawing.Image)(resources.GetObject("btnTienTrinh.Image")));
+            this.btnTienTrinh.Location = new System.Drawing.Point(940, 52);
             this.btnTienTrinh.Name = "btnTienTrinh";
-            this.btnTienTrinh.Size = new System.Drawing.Size(126, 42);
+            this.btnTienTrinh.Size = new System.Drawing.Size(46, 41);
             this.btnTienTrinh.TabIndex = 21;
-            this.btnTienTrinh.Text = "Tiến trình";
             this.btnTienTrinh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTienTrinh.UseVisualStyleBackColor = false;
             this.btnTienTrinh.Click += new System.EventHandler(this.btnTienTrinh_Click);
@@ -88,16 +89,15 @@
             // btnChiTiet
             // 
             this.btnChiTiet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
+            this.btnChiTiet.FlatAppearance.BorderSize = 0;
             this.btnChiTiet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChiTiet.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnChiTiet.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnChiTiet.Image = global::Quan_Li_Luan_Van.Properties.Resources.decribe1;
-            this.btnChiTiet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChiTiet.Location = new System.Drawing.Point(786, 48);
+            this.btnChiTiet.Image = ((System.Drawing.Image)(resources.GetObject("btnChiTiet.Image")));
+            this.btnChiTiet.Location = new System.Drawing.Point(992, 52);
             this.btnChiTiet.Name = "btnChiTiet";
-            this.btnChiTiet.Size = new System.Drawing.Size(128, 42);
+            this.btnChiTiet.Size = new System.Drawing.Size(55, 40);
             this.btnChiTiet.TabIndex = 29;
-            this.btnChiTiet.Text = "Chi tiết";
             this.btnChiTiet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnChiTiet.UseVisualStyleBackColor = false;
             this.btnChiTiet.Click += new System.EventHandler(this.btnChiTiet_Click);

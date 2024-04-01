@@ -89,15 +89,16 @@
             // btnChiTiet
             // 
             this.btnChiTiet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
+            this.btnChiTiet.FlatAppearance.BorderSize = 0;
             this.btnChiTiet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChiTiet.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnChiTiet.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnChiTiet.Image = ((System.Drawing.Image)(resources.GetObject("btnChiTiet.Image")));
             this.btnChiTiet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChiTiet.Location = new System.Drawing.Point(943, 55);
+            this.btnChiTiet.Location = new System.Drawing.Point(1003, 52);
             this.btnChiTiet.Name = "btnChiTiet";
-            this.btnChiTiet.Size = new System.Drawing.Size(114, 42);
+            this.btnChiTiet.Size = new System.Drawing.Size(46, 42);
             this.btnChiTiet.TabIndex = 32;
-            this.btnChiTiet.Text = "Chi tiết";
             this.btnChiTiet.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnChiTiet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnChiTiet.UseVisualStyleBackColor = false;
@@ -106,30 +107,34 @@
             // btnChinhSua
             // 
             this.btnChinhSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
+            this.btnChinhSua.FlatAppearance.BorderSize = 0;
             this.btnChinhSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChinhSua.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnChinhSua.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnChinhSua.Image = global::Quan_Li_Luan_Van.Properties.Resources.edit;
-            this.btnChinhSua.Location = new System.Drawing.Point(839, 55);
+            this.btnChinhSua.Location = new System.Drawing.Point(899, 52);
             this.btnChinhSua.Name = "btnChinhSua";
             this.btnChinhSua.Size = new System.Drawing.Size(46, 42);
             this.btnChinhSua.TabIndex = 33;
             this.btnChinhSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnChinhSua.UseVisualStyleBackColor = false;
+            this.btnChinhSua.Click += new System.EventHandler(this.btnChinhSua_Click);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
+            this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(891, 55);
+            this.button1.Location = new System.Drawing.Point(951, 52);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(46, 42);
             this.button1.TabIndex = 34;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblTenGV
             // 

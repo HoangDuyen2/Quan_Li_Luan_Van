@@ -47,7 +47,7 @@
             this.btnThemLuanVan.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnThemLuanVan.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnThemLuanVan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThemLuanVan.Location = new System.Drawing.Point(880, 660);
+            this.btnThemLuanVan.Location = new System.Drawing.Point(854, 660);
             this.btnThemLuanVan.Name = "btnThemLuanVan";
             this.btnThemLuanVan.Size = new System.Drawing.Size(184, 42);
             this.btnThemLuanVan.TabIndex = 25;

@@ -16,7 +16,6 @@ namespace Quan_Li_Luan_Van
     {
         private string tenLV;
         private string maGV;
-        //protected SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
         ChinhLuanVanDAO lvDAO = new ChinhLuanVanDAO();
         LuanVan lv = new LuanVan();
         public FChinhLuanVan()
@@ -35,6 +34,7 @@ namespace Quan_Li_Luan_Van
             
             lv = lvDAO.getLuanVan(tenLV);
             txtMaLuanVan.Text = lv.MaLV.ToString();
+            txtMaLuanVan.Enabled = false;
             txtTenLuanVan.Text = lv.TenLV.ToString();
             txtChucNang.Text = lv.ChucNang.ToString();
             txtYeuCau.Text = lv.YeuCau.ToString();
@@ -44,7 +44,6 @@ namespace Quan_Li_Luan_Van
             cbboxNgonNgu.SelectedItem = lv.NgonNgu;
 
         }
-
         private void btnLuu_Click(object sender, EventArgs e)
         {
             LuanVan lv = TaoLuanVan();
@@ -70,7 +69,6 @@ namespace Quan_Li_Luan_Van
             string congNghe = cbboxCongNghe.SelectedItem != null ? cbboxCongNghe.SelectedItem.ToString() : "";
             string ngonNgu = cbboxNgonNgu.SelectedItem != null ? cbboxNgonNgu.SelectedItem.ToString() : "";
             string yeuCau = txtYeuCau.Text;
-
             return new LuanVan(maLuanVan, tenLuanVan, maGV, chuyenNganh, linhVuc, chucNang, congNghe, ngonNgu, yeuCau, "Chưa có nhóm");
         }
     }

@@ -35,5 +35,15 @@ namespace Quan_Li_Luan_Van
             FChiTietTask task = new FChiTietTask();
             task.Show();
         }
+
+        private void btnChinhSua_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
