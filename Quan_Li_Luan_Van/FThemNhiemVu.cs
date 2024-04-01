@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Quan_Li_Luan_Van
 {
-    public partial class FBaoCaoTienDo : Form
+    public partial class FThemNhiemVu : Form
     {
-        public FBaoCaoTienDo()
+        public FThemNhiemVu()
         {
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void FThemNhiemVu_Load(object sender, EventArgs e)
         {
 
         }

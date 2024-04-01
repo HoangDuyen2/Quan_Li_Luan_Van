@@ -173,6 +173,12 @@
     <Compile Include="FNhom.Designer.cs">
       <DependentUpon>FNhom.cs</DependentUpon>
     </Compile>
+    <Compile Include="FThemNhiemVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThemNhiemVu.Designer.cs">
+      <DependentUpon>FThemNhiemVu.cs</DependentUpon>
+    </Compile>
     <Compile Include="FTienTrinh_GV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -351,6 +357,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FTask.resx">
       <DependentUpon>FTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThemNhiemVu.resx">
+      <DependentUpon>FThemNhiemVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FThemThongBao.resx">
       <DependentUpon>FThemThongBao.cs</DependentUpon>

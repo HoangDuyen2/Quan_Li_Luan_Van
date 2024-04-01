@@ -65,6 +65,7 @@
             this.btnThemLuanVan.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnThemLuanVan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThemLuanVan.UseVisualStyleBackColor = false;
+            this.btnThemLuanVan.Click += new System.EventHandler(this.btnThemLuanVan_Click);
             // 
             // FTienTrinh_GV
             // 

@@ -34,5 +34,11 @@ namespace Quan_Li_Luan_Van
         {
             tientrinh.getInfo(tenLV, flPanelDSTask);
         }
+
+        private void btnThemLuanVan_Click(object sender, EventArgs e)
+        {
+            FThemNhiemVu fThemNhiemVu = new FThemNhiemVu();
+            fThemNhiemVu.ShowDialog();
+        }
     }
 }
