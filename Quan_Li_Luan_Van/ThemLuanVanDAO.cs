@@ -24,6 +24,5 @@ namespace Quan_Li_Luan_Van
                 luanVan.MaLV, luanVan.TenLV, luanVan.MaGV, luanVan.ChuyenNganh, luanVan.LinhVuc, luanVan.ChucNang, luanVan.CongNghe, luanVan.NgonNgu, luanVan.YeuCau, luanVan.TrangThai);
             dbConnection.ThucThi(sqlThem);
         }
-
     }
 }

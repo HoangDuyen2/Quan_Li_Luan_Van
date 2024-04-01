@@ -188,7 +188,9 @@
     <Compile Include="Hide_Show.cs" />
     <Compile Include="LuanVanDuyet.cs" />
     <Compile Include="LuanVanToiDAO.cs" />
+    <Compile Include="NhiemVu.cs" />
     <Compile Include="ThemLuanVanDAO.cs" />
+    <Compile Include="ThemNhiemVuDAO.cs" />
     <Compile Include="TienTrinh_GVDAO.cs" />
     <Compile Include="TrangChinhDAO.cs" />
     <Compile Include="FSinhVien.cs">
