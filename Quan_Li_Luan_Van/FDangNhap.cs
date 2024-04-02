@@ -47,7 +47,7 @@ namespace Quan_Li_Luan_Van
         }
         private void FLogin_Load(object sender, EventArgs e)
         {
- //           taiKhoan.Load();
+            taiKhoan.Load();
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
@@ -55,25 +55,25 @@ namespace Quan_Li_Luan_Van
             string chucVu = "";
             if (rbtnSV.Checked) chucVu = "Sinh viên";
             else chucVu = "Giảng viên";
-            /*            if (taiKhoan.DangNhap(taiKhoan.createTaiKhoan(txtTK.Text, txtMatKhau.Text, chucVu)) == true)
+            if (taiKhoan.DangNhap(taiKhoan.createTaiKhoan(txtTK.Text, txtMatKhau.Text, chucVu)) == true)
+            {
+                this.Close();
+            }
+
+            /*            if (rbtnSV.Checked)
                         {
+                            this.Hide();
+                            FSinhVien sv = new FSinhVien();
+                            sv.ShowDialog();
+                            this.Close();
+                        }
+                        else
+                        {
+                            this.Hide();
+                            FGiangVien gv = new FGiangVien();
+                            gv.ShowDialog();
                             this.Close();
                         }*/
-            
-            if (rbtnSV.Checked)
-            {
-                this.Hide();
-                FSinhVien sv = new FSinhVien();
-                sv.ShowDialog();
-                this.Close();
-            }
-            else
-            {
-                this.Hide();
-                FGiangVien gv = new FGiangVien();
-                gv.ShowDialog();
-                this.Close();
-            }
             this.Close();
         }
     }

@@ -34,29 +34,6 @@ namespace Quan_Li_Luan_Van
         //private Button currentButton;
         private Form activeForm;
 
-        /*private void ActivateButton(object btnSender)
-        {
-            if (btnSender != null)
-            {
-                if (currentButton != (Button)btnSender)
-                {
-                    DisableButton();
-                    currentButton = (Button)btnSender;
-                }
-            }
-        }
-        private void DisableButton()
-        {
-            foreach (Control previousBtn in panelMenu.Controls)
-            {
-                if (previousBtn.GetType() == typeof(Button))
-                {
-                    previousBtn.BackColor = Color.FromArgb(51, 51, 76);
-                    previousBtn.ForeColor = Color.Gainsboro;
-                    previousBtn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                }
-            }
-        }*/
         private void OpenChildForm(Form childForm, object btnSender)
         {
             if (activeForm != null)
@@ -74,28 +51,28 @@ namespace Quan_Li_Luan_Van
 
         private void FSinhVien_Load(object sender, EventArgs e)
         {
-/*            person = trangChinh.LoadLabel(taiKhoan);
+            person = trangChinh.LoadLabel(taiKhoan);
             labelMSSV.Text = person.getMaso();
             labelTen.Text = person.getHoTen();
-            labelChucVu.Text = taiKhoan.getChucVu();*/
+            labelChucVu.Text = taiKhoan.getChucVu();
         }
 
         private void buttonHome_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FTrangChu(), sender);
-//            FSinhVien_Load(sender, e);
+            FSinhVien_Load(sender, e);
         }
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FDangKyLuanVan(), sender);
-//            FSinhVien_Load(sender, e);
+            FSinhVien_Load(sender, e);
         }
 
         private void btnLuanVan_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FLuanVanToi_SV(),sender);
-//            FSinhVien_Load(sender, e);
+            OpenChildForm(new FLuanVanToi_SV(person),sender);
+            FSinhVien_Load(sender, e);
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
@@ -109,7 +86,7 @@ namespace Quan_Li_Luan_Van
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FThongTinCaNhan_SV(person), sender);
- //           FSinhVien_Load(sender, e);
+            FSinhVien_Load(sender, e);
         }
     }
 }

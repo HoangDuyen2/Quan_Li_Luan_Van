@@ -186,6 +186,7 @@
       <DependentUpon>FTienTrinh_GV.cs</DependentUpon>
     </Compile>
     <Compile Include="Hide_Show.cs" />
+    <Compile Include="LuanVanCuaToiSVDAO.cs" />
     <Compile Include="LuanVanDuyet.cs" />
     <Compile Include="LuanVanToiDAO.cs" />
     <Compile Include="NhiemVu.cs" />

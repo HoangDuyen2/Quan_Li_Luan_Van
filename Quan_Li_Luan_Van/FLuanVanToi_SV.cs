@@ -12,16 +12,17 @@ namespace Quan_Li_Luan_Van
 {
     public partial class FLuanVanToi_SV : Form
     {
-
-        public FLuanVanToi_SV()
+        Person person = null;
+        LuanVanCuaToiSVDAO luanVan = new LuanVanCuaToiSVDAO();
+        public FLuanVanToi_SV(Person person)
         {
             InitializeComponent();
+            this.person = person;
         }
 
         private void FLuanVanToi_SV_Load(object sender, EventArgs e)
         {
-            UCTask uCTask = new UCTask();
-            flPanelDSTask.Controls.Add(uCTask); 
+            luanVan.Load(person,flPanelDSTask);
         }
     }
 }
