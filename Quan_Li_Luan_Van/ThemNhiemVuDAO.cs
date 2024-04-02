@@ -20,7 +20,7 @@ namespace Quan_Li_Luan_Van
         public void ThemNhiemVu(NhiemVu nhiemvu)
         {
             string sqlThem = string.Format("INSERT INTO NhiemVu(MaNV, TenNV, NoiDung, TienTrinh, TrangThai, MaLV) " +
-                "VALUES ('{0}', N'{1}', N'{2}', '{3}', N'{4}', '{5}')",
+                "VALUES (N'{0}', N'{1}', N'{2}', '{3}', N'{4}', '{5}')",
                 nhiemvu.MaNV, nhiemvu.TenNV, nhiemvu.NoiDung, nhiemvu.TienTrinh, nhiemvu.TrangThai, nhiemvu.MaLV);
             dbConnection.ThucThi(sqlThem);
         }

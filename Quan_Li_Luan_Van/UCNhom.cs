@@ -12,12 +12,14 @@ namespace Quan_Li_Luan_Van
 {
     public partial class UCNhom : UserControl
     {
+        private string maLV;
         public UCNhom()
         {
             InitializeComponent();
         }
         public Label LblChuyenNganh { get => lblChuyenNganh; set => lblChuyenNganh = value; }
         public Label LblTenLV { get => lblTenLV; set => lblTenLV = value; }
+        public string MaLV { get => maLV; set => maLV = value; }
 
         private void UCNhom_Load(object sender, EventArgs e)
         {
@@ -30,7 +32,8 @@ namespace Quan_Li_Luan_Van
         }
         private void btnTienTrinh_Click(object sender, EventArgs e)
         {
-            FTienTrinh_GV task = new FTienTrinh_GV(LblTenLV.Text);
+            //MessageBox.Show(MaLV);
+            FTienTrinh_GV task = new FTienTrinh_GV(maLV);
             task.Show();
         }
     }

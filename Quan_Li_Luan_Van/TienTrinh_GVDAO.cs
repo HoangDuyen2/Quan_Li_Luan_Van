@@ -15,12 +15,12 @@ namespace Quan_Li_Luan_Van
         {
             conn = new SqlConnection(Properties.Settings.Default.cnnStr);
         }
-        public void getInfo(string tenLV, FlowLayoutPanel panel)
+        public void getInfo(string maLV, FlowLayoutPanel panel)
         {
             string query = "SELECT * " +
                     "FROM NhiemVu " +
                     "JOIN LuanVan ON NhiemVu.MaLV = LuanVan.MaLV " +
-                     "WHERE  TenLV = N'" + tenLV + "'";
+                     "WHERE  NhiemVu.MaLV = N'" + maLV + "'";
 
             try
             {
@@ -31,10 +31,9 @@ namespace Quan_Li_Luan_Van
                 while (dataReader.Read())
                 {
                     UCTask uctask = new UCTask();
-                    
+                    uctask.MaLV = maLV;
                     uctask.LblTenNV.Text = dataReader["TenNV"].ToString();
                     uctask.LblTienTrinh.Text = dataReader["TienTrinh"].ToString();
-
                     panel.Controls.Add(uctask);
                 }
             }

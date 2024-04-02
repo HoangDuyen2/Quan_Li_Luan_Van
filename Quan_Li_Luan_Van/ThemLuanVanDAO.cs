@@ -17,7 +17,6 @@ namespace Quan_Li_Luan_Van
             conn = new SqlConnection(Properties.Settings.Default.cnnStr);
             dbConnection = new DBConnection();
         }
-
         public void ThemLuanVan(LuanVan luanVan)
         {
             string sqlThem = string.Format("INSERT INTO LuanVan(MaLV, TenLV, MaGV, ChuyenNganh, LinhVuc, ChucNang, CongNghe,NgonNgu, YeuCau, TrangThai) VALUES ('{0}', N'{1}', '{2}', N'{3}', N'{4}', N'{5}', N'{6}', N'{7}', N'{8}', N'{9}')",

@@ -13,18 +13,17 @@ namespace Quan_Li_Luan_Van
 {
     public partial class FThemNhiemVu : Form
     {
-        private static int countNV = 0; 
-        private string tenLV;
-        TienTrinh_GVDAO nvDAO = new TienTrinh_GVDAO();
+        private string maLV;
+        ThemNhiemVuDAO nvDao = new ThemNhiemVuDAO();
 
         public FThemNhiemVu()
         {
             InitializeComponent();
         }
 
-        public FThemNhiemVu(string tenLV) : this()
+        public FThemNhiemVu(string maLV) : this()
         {
-            this.tenLV = tenLV;
+            this.maLV = maLV;
         }
 
         private void FThemNhiemVu_Load(object sender, EventArgs e)
@@ -34,11 +33,25 @@ namespace Quan_Li_Luan_Van
 
         private NhiemVu ThemNhiemVu()
         {
-            string maNV = "NV" + countNV.ToString().PadLeft(5, '0'); 
-            string tenNV = txtTenNV.ToString();
-            string noiDung = txtNoiDungNV.ToString();
-            string maLV = "LV001";
+            string maNV = txtMaNV.Text;
+            string tenNV = txtTenNV.Text;
+            string noiDung = txtNoiDungNV.Text;
             return new NhiemVu(maNV, tenNV, noiDung, 0, "Chưa hoàn thành", maLV);
+        }
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            NhiemVu nv = ThemNhiemVu();
+
+            if (nv.KiemTraNull())
+            {
+                MessageBox.Show("Vui lòng điền đủ thông tin");
+            }
+            else
+            {
+                nvDao.ThemNhiemVu(nv);
+                MessageBox.Show("Thêm thành công");
+                this.Hide();
+            }
         }
     }
 }

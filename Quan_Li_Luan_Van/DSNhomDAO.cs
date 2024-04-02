@@ -12,14 +12,16 @@ namespace Quan_Li_Luan_Van
     internal class DSNhomDAO
     {
         protected SqlConnection conn;
-        private string query;
         public DSNhomDAO()
         {
             conn = new SqlConnection(Properties.Settings.Default.cnnStr);
         }
-        public void getInfo( string query, FlowLayoutPanel panel)
+        public void LoadDSNhom( FlowLayoutPanel panel)
         {
-            
+            string query = "SELECT LuanVan.MaLV, LuanVan.TenLV, LuanVan.ChuyenNganh, GiangVien.TenGV, LuanVan.TrangThai " +
+                    "FROM LuanVan " +
+                    "JOIN GiangVien ON LuanVan.MaGV = GiangVien.MaGV " +
+                    "WHERE LuanVan.MaGV = 'GV001'" + " AND LuanVan.TrangThai = N'Đã có nhóm'";
 
             try
             {
@@ -30,6 +32,7 @@ namespace Quan_Li_Luan_Van
                 while (dataReader.Read())
                 {
                     UCNhom uclv = new UCNhom();
+                    uclv.MaLV = dataReader["MaLV"].ToString();
                     uclv.LblTenLV.Text = dataReader["TenLV"].ToString();
                     uclv.LblChuyenNganh.Text = dataReader["ChuyenNganh"].ToString();
                     panel.Controls.Add(uclv);

@@ -35,12 +35,16 @@
             this.lblTenNV = new System.Windows.Forms.Label();
             this.btnThem = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.lblThemNV = new System.Windows.Forms.Label();
+            this.txtMaNV = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.lblMaNV = new System.Windows.Forms.Label();
             this.panelNoidung.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelNoidung
             // 
             this.panelNoidung.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panelNoidung.Controls.Add(this.txtMaNV);
+            this.panelNoidung.Controls.Add(this.lblMaNV);
             this.panelNoidung.Controls.Add(this.txtNoiDungNV);
             this.panelNoidung.Controls.Add(this.lblNDTB);
             this.panelNoidung.Controls.Add(this.txtTenNV);
@@ -48,12 +52,12 @@
             this.panelNoidung.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.panelNoidung.Location = new System.Drawing.Point(19, 59);
             this.panelNoidung.Name = "panelNoidung";
-            this.panelNoidung.Size = new System.Drawing.Size(583, 326);
+            this.panelNoidung.Size = new System.Drawing.Size(589, 375);
             this.panelNoidung.TabIndex = 15;
             // 
             // txtNoiDungNV
             // 
-            this.txtNoiDungNV.Location = new System.Drawing.Point(13, 140);
+            this.txtNoiDungNV.Location = new System.Drawing.Point(16, 201);
             this.txtNoiDungNV.Name = "txtNoiDungNV";
             this.txtNoiDungNV.Size = new System.Drawing.Size(555, 166);
             this.txtNoiDungNV.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
@@ -73,7 +77,7 @@
             this.lblNDTB.AutoSize = true;
             this.lblNDTB.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNDTB.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblNDTB.Location = new System.Drawing.Point(11, 100);
+            this.lblNDTB.Location = new System.Drawing.Point(15, 170);
             this.lblNDTB.Name = "lblNDTB";
             this.lblNDTB.Size = new System.Drawing.Size(166, 28);
             this.lblNDTB.TabIndex = 26;
@@ -81,7 +85,7 @@
             // 
             // txtTenNV
             // 
-            this.txtTenNV.Location = new System.Drawing.Point(13, 62);
+            this.txtTenNV.Location = new System.Drawing.Point(16, 112);
             this.txtTenNV.Name = "txtTenNV";
             this.txtTenNV.Size = new System.Drawing.Size(555, 35);
             this.txtTenNV.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -111,7 +115,7 @@
             this.lblTenNV.AutoSize = true;
             this.lblTenNV.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenNV.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblTenNV.Location = new System.Drawing.Point(11, 17);
+            this.lblTenNV.Location = new System.Drawing.Point(15, 81);
             this.lblTenNV.Name = "lblTenNV";
             this.lblTenNV.Size = new System.Drawing.Size(136, 28);
             this.lblTenNV.TabIndex = 0;
@@ -120,12 +124,13 @@
             // btnThem
             // 
             this.btnThem.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
-            this.btnThem.Location = new System.Drawing.Point(225, 412);
+            this.btnThem.Location = new System.Drawing.Point(236, 440);
             this.btnThem.Name = "btnThem";
             this.btnThem.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
             this.btnThem.Size = new System.Drawing.Size(169, 40);
             this.btnThem.TabIndex = 14;
             this.btnThem.Values.Text = "Thêm Nhiệm Vụ";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // lblThemNV
             // 
@@ -138,11 +143,49 @@
             this.lblThemNV.TabIndex = 13;
             this.lblThemNV.Text = "THÊM NHIỆM VỤ";
             // 
+            // txtMaNV
+            // 
+            this.txtMaNV.Location = new System.Drawing.Point(16, 43);
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.Size = new System.Drawing.Size(555, 35);
+            this.txtMaNV.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.txtMaNV.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
+            this.txtMaNV.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.txtMaNV.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtMaNV.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtMaNV.StateCommon.Border.Rounding = 16;
+            this.txtMaNV.StateCommon.Border.Width = 1;
+            this.txtMaNV.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.txtMaNV.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaNV.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.txtMaNV.StateDisabled.Border.Color1 = System.Drawing.Color.Blue;
+            this.txtMaNV.StateDisabled.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.txtMaNV.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtMaNV.StateDisabled.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtMaNV.StateDisabled.Border.Rounding = 16;
+            this.txtMaNV.StateDisabled.Border.Width = 1;
+            this.txtMaNV.TabIndex = 31;
+            // 
+            // lblMaNV
+            // 
+            this.lblMaNV.AutoSize = true;
+            this.lblMaNV.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaNV.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblMaNV.Location = new System.Drawing.Point(18, 10);
+            this.lblMaNV.Name = "lblMaNV";
+            this.lblMaNV.Size = new System.Drawing.Size(132, 28);
+            this.lblMaNV.TabIndex = 30;
+            this.lblMaNV.Text = "Mã nhiệm vụ";
+            // 
             // FThemNhiemVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(614, 464);
+            this.ClientSize = new System.Drawing.Size(620, 478);
             this.Controls.Add(this.panelNoidung);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.lblThemNV);
@@ -166,5 +209,7 @@
         private System.Windows.Forms.Label lblTenNV;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnThem;
         private System.Windows.Forms.Label lblThemNV;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtMaNV;
+        private System.Windows.Forms.Label lblMaNV;
     }
 }
