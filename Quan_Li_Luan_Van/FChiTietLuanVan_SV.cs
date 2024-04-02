@@ -20,9 +20,11 @@ namespace Quan_Li_Luan_Van
         LuanVanDuyet luanVan = new LuanVanDuyet();
         ChiTietLuanVanDAO chiTiet = new ChiTietLuanVanDAO();
         DangKyLuanVan_SVDAO dangKy = new DangKyLuanVan_SVDAO();
-        public FChiTietLuanVan_SV(string message) : this()
+        Person person = null;
+        public FChiTietLuanVan_SV(string message,Person person) : this()
         {
             _message = message;
+            this.person = person;
         }
 
         public FChiTietLuanVan_SV()
@@ -68,9 +70,10 @@ namespace Quan_Li_Luan_Van
 
         private void btnChapNhan_Click(object sender, EventArgs e)
         {
-            luanVan.setMSSV1(ucChiTietLuanVan1.TxtTVien1.Text);
-            luanVan.setMSSV2(ucChiTietLuanVan1.TxtTVien2.Text);
-            luanVan.setMSSV3("");
+            luanVan.setMSSV1(person.getMaso());
+            luanVan.setMSSV2(ucChiTietLuanVan1.TxtTVien1.Text);
+            luanVan.setMSSV3(ucChiTietLuanVan1.TxtTVien2.Text);
+            
             if(dangKy.checkNguoiDangKy(luanVan))
                 dangKy.DangKy(luanVan);
             this.Close();

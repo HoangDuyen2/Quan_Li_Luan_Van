@@ -15,12 +15,14 @@ namespace Quan_Li_Luan_Van
     public partial class FDangKyLuanVan : Form
     {
         Hide_Show hide = new Hide_Show();
+        Person person = null;
         DangKyLuanVan_SVDAO dangKy = new DangKyLuanVan_SVDAO();
-        public FDangKyLuanVan()
+        public FDangKyLuanVan(Person person)
         {
             InitializeComponent();
             txtTenGV.Enter += TxtTenGV_Click;
             txtTenGV.LostFocus += TxtTenGV_LostFocus;
+            this.person = person;
         }
 
         private void TxtTenGV_LostFocus(object sender, EventArgs e)
@@ -35,7 +37,7 @@ namespace Quan_Li_Luan_Van
 
         private void FDKLV_Load(object sender, EventArgs e)
         {
-            dangKy.Load_UC_Con(flPanelDSLV,dangKy.Load());
+            dangKy.Load_UC_Con(flPanelDSLV,dangKy.Load(),person);
         }
 
         private void btnDangKi_Click(object sender, EventArgs e)
@@ -46,14 +48,14 @@ namespace Quan_Li_Luan_Van
 
         private void buttonTimKiem_Click(object sender, EventArgs e)
         {
-            dangKy.Load_UC_Con(flPanelDSLV, dangKy.traCuuTenGV(txtTenGV.Text));
+            dangKy.Load_UC_Con(flPanelDSLV, dangKy.traCuuTenGV(txtTenGV.Text),person);
         }
 
         private void Chon_Chuyen_Nganh(object sender, EventArgs e)
         {
             string text = cbboxChuyenNganh.SelectedItem.ToString();
             
-            dangKy.Load_UC_Con(flPanelDSLV, dangKy.TraCuuChuyenNganh(text));
+            dangKy.Load_UC_Con(flPanelDSLV, dangKy.TraCuuChuyenNganh(text),person);
         }
     }
 }
