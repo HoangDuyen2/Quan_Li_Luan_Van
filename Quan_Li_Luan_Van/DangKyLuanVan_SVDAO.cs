@@ -49,7 +49,7 @@ namespace Quan_Li_Luan_Van
         {
             return query;
         }
-        public void Load_UC_Con(FlowLayoutPanel flPanelDSLV, string truyVan)
+        public void Load_UC_Con(FlowLayoutPanel flPanelDSLV, string truyVan,Person person)
         {
             
             try
@@ -60,7 +60,7 @@ namespace Quan_Li_Luan_Van
                 SqlDataReader dataReader = cmd.ExecuteReader();
                 while (dataReader.Read())
                 {
-                    UCLV uclv = new UCLV();
+                    UCLV uclv = new UCLV(person);
 
                     uclv.LblTenLV.Text = dataReader["TenLV"].ToString();
                     uclv.LblChuyenNganh.Text = dataReader["ChuyenNganh"].ToString();

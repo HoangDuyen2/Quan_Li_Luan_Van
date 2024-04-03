@@ -13,15 +13,16 @@ namespace Quan_Li_Luan_Van
 {
     public partial class UCLV : UserControl
     {
-        ChiTietLuanVanDAO luanVan = new ChiTietLuanVanDAO();
-        public UCLV()
+        Person person = null;
+        public UCLV(Person person)
         {
             InitializeComponent();
+            this.person = person;
         }
 
         private void buttonChiTiet_Click(object sender, EventArgs e)
         {
-            FChiTietLuanVan_SV ctlv = new FChiTietLuanVan_SV(LblTenLV.Text);
+            FChiTietLuanVan_SV ctlv = new FChiTietLuanVan_SV(LblTenLV.Text,person);
             ctlv.ShowDialog();
         }
         public Label LblChuyenNganh { get => lblChuyenNganh; set => lblChuyenNganh = value; }

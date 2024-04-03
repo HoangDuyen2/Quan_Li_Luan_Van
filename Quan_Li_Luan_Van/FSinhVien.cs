@@ -65,7 +65,7 @@ namespace Quan_Li_Luan_Van
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FDangKyLuanVan(), sender);
+            OpenChildForm(new FDangKyLuanVan(person), sender);
             FSinhVien_Load(sender, e);
         }
 
