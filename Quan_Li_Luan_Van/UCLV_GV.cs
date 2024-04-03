@@ -29,5 +29,10 @@ namespace Quan_Li_Luan_Van
             FChiTietLuanVan_GV chiTietLuanVan = new FChiTietLuanVan_GV(LblTenLV.Text);
             chiTietLuanVan.Show();
         }
+
+        private void UCLV_GV_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

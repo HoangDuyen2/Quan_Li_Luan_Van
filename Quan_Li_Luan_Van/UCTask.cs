@@ -44,5 +44,10 @@ namespace Quan_Li_Luan_Van
         {
 
         }
+
+        private void UCTask_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

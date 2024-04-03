@@ -14,22 +14,26 @@ namespace Quan_Li_Luan_Van
 {
     public partial class FLuanVanToi : Form
     {
+        private string maGV;
+        private LuanVanToiDAO luanvan;
+        private string query = "";
         
-        private string baseQuery = "SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, GiangVien.TenGV, LuanVan.TrangThai " +
-                                   "FROM LuanVan " +
-                                   "JOIN GiangVien ON LuanVan.MaGV = GiangVien.MaGV " +
-                                   "WHERE LuanVan.MaGV = 'GV001'";
-        private string query;
-
-        LuanVanToiDAO luanvan = new LuanVanToiDAO();
         public FLuanVanToi()
         {
             InitializeComponent();
         }
+        public FLuanVanToi(string maGV) :this()
+        {
+            this.maGV = maGV;
+            this.luanvan = new LuanVanToiDAO(this.maGV);
+            this.query = luanvan.Load();
+
+        }
+
 
         private void FLuanVanToi_Load(object sender, EventArgs e)
         {
-            luanvan.getInfo(baseQuery, flPanelDSLV);
+            luanvan.getInfo(query, flPanelDSLV);
         }
         private void LoadListUC ()
         {
@@ -37,13 +41,13 @@ namespace Quan_Li_Luan_Van
         }
         private void btnThemLuanVan_Click(object sender, EventArgs e)
         {
-            FThemLuanVan fThemLuanVan = new FThemLuanVan("GV001");
+            FThemLuanVan fThemLuanVan = new FThemLuanVan(maGV);
             fThemLuanVan.ShowDialog();
         }
 
         private void ChonTinhTrang(object sender, EventArgs e)
         {
-            query = baseQuery;
+            query = luanvan.Load();
             string text = cbboxTrangThai.SelectedItem.ToString();
             if (text != "Tất cả")
             {

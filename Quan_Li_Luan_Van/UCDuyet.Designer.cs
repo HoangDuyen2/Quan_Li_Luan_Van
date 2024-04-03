@@ -111,6 +111,7 @@
             this.Controls.Add(this.pictureBoxNen);
             this.Name = "UCDuyet";
             this.Size = new System.Drawing.Size(1058, 98);
+            this.Load += new System.EventHandler(this.UCDuyet_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

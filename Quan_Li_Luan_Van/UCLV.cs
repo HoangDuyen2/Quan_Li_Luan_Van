@@ -31,5 +31,10 @@ namespace Quan_Li_Luan_Van
         public Label LblGVHD { get => lblGVHD; set => lblGVHD = value; }
         public Label LblTenGV { get => lblTenGV; set => lblTenGV = value; }
         public Label LblTrangThai { get => lblTrangThai; set => lblTrangThai = value;}
+
+        private void UCLV_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

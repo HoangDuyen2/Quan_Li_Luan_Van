@@ -140,6 +140,7 @@
             this.Controls.Add(this.pictureBoxNen);
             this.Name = "UCLV_GV";
             this.Size = new System.Drawing.Size(1058, 98);
+            this.Load += new System.EventHandler(this.UCLV_GV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -28,5 +28,10 @@ namespace Quan_Li_Luan_Van
             FChiTietDuyet chiTietDuyet = new FChiTietDuyet(LbTenLV.Text);
             chiTietDuyet.Show();
         }
+
+        private void UCDuyet_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

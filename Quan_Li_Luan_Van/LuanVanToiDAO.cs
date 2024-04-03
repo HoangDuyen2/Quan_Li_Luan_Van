@@ -10,11 +10,22 @@ namespace Quan_Li_Luan_Van
 {
     internal class LuanVanToiDAO
     {
-        protected SqlConnection conn;
-        public LuanVanToiDAO()
+        private string maGV;
+        SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
+        DBConnection connection = new DBConnection();
+        string quenry;
+        public LuanVanToiDAO() { }
+        public LuanVanToiDAO(string maGV)
         {
-            conn = new SqlConnection(Properties.Settings.Default.cnnStr);
-
+            this.maGV = maGV;
+            this.quenry =  $"SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, GiangVien.TenGV, LuanVan.TrangThai " +
+                $"FROM LuanVan JOIN GiangVien ON LuanVan.MaGV = GiangVien.MaGV " +
+                $"WHERE LuanVan.MaGV = '{maGV}'";
+        }
+        public string MaGV { get => maGV; set => maGV = value; }
+        public string Load()
+        {
+            return quenry;
         }
         public void getInfo(string query, FlowLayoutPanel panel)
         {
@@ -34,7 +45,6 @@ namespace Quan_Li_Luan_Van
 
                     panel.Controls.Add(uclv);
                 }
-
             }
             catch (Exception ex)
             {
@@ -45,8 +55,20 @@ namespace Quan_Li_Luan_Van
                 conn.Close();
             }
         }
-
-
+        public string traCuu(string text)
+        {
+            string query = "SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, DuyetDangKy.TinhTrang " +
+           "FROM LuanVan " +
+           "JOIN DuyetDangKy ON LuanVan.MaLV = DuyetDangKy.MaLV and LuanVan.MaGV = '" + MaGV + "'";
+            if (text != "Tất cả")
+            {
+                string tracuu = "WHERE TinhTrang = N'" + text + "'";
+                quenry = query + tracuu;
+            }
+            else quenry = query;
+            connection.ThucThi(quenry);
+            return quenry;
+        }
     }
 
 }

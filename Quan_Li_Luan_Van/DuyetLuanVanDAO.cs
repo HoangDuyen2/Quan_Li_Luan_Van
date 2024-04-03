@@ -11,16 +11,19 @@ namespace Quan_Li_Luan_Van
 {
     public class DuyetLuanVanDAO
     {
+        private string maGV;
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
         DBConnection connection = new DBConnection();
         string quenry;
-        string query = "SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, DuyetDangKy.TinhTrang " +
-                                   "FROM LuanVan " +
-                                   "JOIN DuyetDangKy ON LuanVan.MaLV = DuyetDangKy.MaLV and LuanVan.MaGV = 'GV001'";
-        public DuyetLuanVanDAO()
+        public DuyetLuanVanDAO() { }
+        public DuyetLuanVanDAO(string maGV)
         {
-            quenry = query;
+            this.MaGV = maGV;
+            this.quenry = $"SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, DuyetDangKy.TinhTrang " +
+                          $"FROM LuanVan JOIN DuyetDangKy ON " +
+                          $"LuanVan.MaLV = DuyetDangKy.MaLV and LuanVan.MaGV = '{maGV}'";
         }
+        public string MaGV { get => maGV; set => maGV = value; }
         public string Load()
         {
             return quenry;
@@ -89,6 +92,9 @@ namespace Quan_Li_Luan_Van
         }
         public string traCuu(string text)
         {
+            string query = "SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, DuyetDangKy.TinhTrang " +
+           "FROM LuanVan " +
+           "JOIN DuyetDangKy ON LuanVan.MaLV = DuyetDangKy.MaLV and LuanVan.MaGV = '" + MaGV + "'";
             if (text != "Tất cả")
             {
                 string tracuu = "WHERE TinhTrang = N'" + text + "'";

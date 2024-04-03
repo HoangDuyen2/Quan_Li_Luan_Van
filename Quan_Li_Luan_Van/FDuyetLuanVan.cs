@@ -12,24 +12,44 @@ namespace Quan_Li_Luan_Van
 {
     public partial class FDuyetLuanVan : Form
     {
-        DuyetLuanVanDAO duyetLuanVan = new DuyetLuanVanDAO();
-        string quenry = "";
+        private string maGV;
+        private DuyetLuanVanDAO duyetLuanVan;
+        private string query = "";
+
         public FDuyetLuanVan()
         {
             InitializeComponent();
-            quenry = duyetLuanVan.Load();
+        }
+
+        public FDuyetLuanVan(string maGV) : this()
+        {
+            this.maGV = maGV;
+            this.duyetLuanVan = new DuyetLuanVanDAO(this.maGV);
+            this.query = duyetLuanVan.Load();
         }
 
         private void FDuyetLuanVan_Load(object sender, EventArgs e)
         {
-            duyetLuanVan.getInfo(quenry, flPanelDSLV);
+            
+            LoadData();
+        }
+
+        private void LoadData()
+        {
+            if (!string.IsNullOrEmpty(query))
+            {
+                duyetLuanVan.getInfo(query, flPanelDSLV);
+            }
         }
 
         private void Chon_Tinh_Trang(object sender, EventArgs e)
         {
-            string text = comboxLoaiTraCuu.SelectedItem.ToString();
-            quenry = duyetLuanVan.traCuu(text);
-            FDuyetLuanVan_Load(sender, e);
+            if (comboxLoaiTraCuu.SelectedItem != null)
+            {
+                string text = comboxLoaiTraCuu.SelectedItem.ToString();
+                query = duyetLuanVan.traCuu(text);
+                LoadData(); 
+            }
         }
     }
 }

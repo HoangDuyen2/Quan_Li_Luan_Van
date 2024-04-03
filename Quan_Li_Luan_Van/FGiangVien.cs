@@ -40,7 +40,7 @@ namespace Quan_Li_Luan_Van
         {
             if (activeForm != null)
                 activeForm.Close();
-            //ActivateButton(btnSender);
+
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -65,9 +65,8 @@ namespace Quan_Li_Luan_Van
 
         private void btnLuanVan_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FDuyetLuanVan(), sender);
+            OpenChildForm(new FDuyetLuanVan(person.getMaso()), sender);
             FGiangVien_Load(sender, e);
-
         }
 
 
@@ -80,7 +79,7 @@ namespace Quan_Li_Luan_Van
 
         private void btnLuanVanCuaToi_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FLuanVanToi(), sender);
+            OpenChildForm(new FLuanVanToi(person.getMaso()), sender);
             FGiangVien_Load(sender, e);
         }
 

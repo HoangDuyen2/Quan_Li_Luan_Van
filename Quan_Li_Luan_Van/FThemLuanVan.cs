@@ -13,13 +13,18 @@ namespace Quan_Li_Luan_Van
 {
     public partial class FThemLuanVan : Form
     {
-        private string maGiangVien;
+        private string maGV;
         Hide_Show hide_Show = new Hide_Show();
         ThemLuanVanDAO lvDao = new ThemLuanVanDAO();
 
         public FThemLuanVan()
         {
             InitializeComponent();
+        }
+
+        public FThemLuanVan(string maGV) : this()
+        {
+            this.maGV = maGV;
             txtMaLuanVan.Enter += TxtMaLuanVan_GetFocus;
             txtMaLuanVan.LostFocus += TxtMaLuanVan_LostFocus;
             txtTenLuanVan.Enter += TxtTenLuanVan_GetFocus;
@@ -28,11 +33,6 @@ namespace Quan_Li_Luan_Van
             txtChucNang.LostFocus += TxtChucNang_LostFocus;
             txtYeuCau.Enter += TxtYeuCau_GetFocus;
             txtYeuCau.LostFocus += TxtYeuCau_LostFocus;
-        }
-
-        public FThemLuanVan(string maGV) : this()
-        {
-            maGiangVien = maGV;
         }
 
         private void FThemLuanVan_Load(object sender, EventArgs e)
@@ -105,7 +105,7 @@ namespace Quan_Li_Luan_Van
             string ngonNgu = cbboxNgonNgu.SelectedItem != null ? cbboxNgonNgu.SelectedItem.ToString() : "";
             string yeuCau = txtYeuCau.Text;
 
-            return new LuanVan(maLuanVan, tenLuanVan, maGiangVien, chuyenNganh, linhVuc, chucNang, congNghe, ngonNgu, yeuCau, "Chưa có nhóm");
+            return new LuanVan(maLuanVan, tenLuanVan, maGV, chuyenNganh, linhVuc, chucNang, congNghe, ngonNgu, yeuCau, "Chưa có nhóm");
         }
 
     }
