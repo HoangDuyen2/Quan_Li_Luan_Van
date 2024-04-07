@@ -15,7 +15,7 @@ namespace Quan_Li_Luan_Van
         {
             conn = new SqlConnection(Properties.Settings.Default.cnnStr);
         }
-        public void getInfo(string maLV, FlowLayoutPanel panel)
+        public void LoadDSTask(string maLV, FlowLayoutPanel panel)
         {
             string query = "SELECT * " +
                     "FROM NhiemVu " +
@@ -46,6 +46,34 @@ namespace Quan_Li_Luan_Van
                 conn.Close();
             }
         }
-
+        public string GetTenLV(string maLV)
+        {
+            string tenLV = "";
+            string query = "SELECT TenLV FROM LuanVan WHERE MaLV = @maLV";
+            try
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@maLV", maLV);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            tenLV = reader["TenLV"].ToString();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi khi lấy tên luận văn: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return tenLV;
+        }
     }
 }

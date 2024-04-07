@@ -27,18 +27,24 @@ namespace Quan_Li_Luan_Van
         
         private void FTienTrinh_GV_Load(object sender, EventArgs e)
         {           
-            tientrinh.getInfo(maLV, flPanelDSTask);
+            tientrinh.LoadDSTask(maLV, flPanelDSTask);
+            lblTenLV.Text = tientrinh.GetTenLV(maLV);
         }
 
         public void LoadDSTask()
         {
-            tientrinh.getInfo(maLV, flPanelDSTask);
+            tientrinh.LoadDSTask(maLV, flPanelDSTask);
         }
 
         private void btnThemLuanVan_Click(object sender, EventArgs e)
         {
             FThemNhiemVu fThemNhiemVu = new FThemNhiemVu(maLV);
             fThemNhiemVu.ShowDialog();
+        }
+
+        private void lblTenLV_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

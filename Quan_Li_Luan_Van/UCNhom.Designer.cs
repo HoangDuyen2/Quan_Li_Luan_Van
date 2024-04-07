@@ -69,9 +69,9 @@
             this.btnTienTrinh.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnTienTrinh.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnTienTrinh.Image = ((System.Drawing.Image)(resources.GetObject("btnTienTrinh.Image")));
-            this.btnTienTrinh.Location = new System.Drawing.Point(940, 52);
+            this.btnTienTrinh.Location = new System.Drawing.Point(942, 50);
             this.btnTienTrinh.Name = "btnTienTrinh";
-            this.btnTienTrinh.Size = new System.Drawing.Size(46, 41);
+            this.btnTienTrinh.Size = new System.Drawing.Size(55, 40);
             this.btnTienTrinh.TabIndex = 21;
             this.btnTienTrinh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTienTrinh.UseVisualStyleBackColor = false;
@@ -94,7 +94,7 @@
             this.btnChiTiet.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnChiTiet.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnChiTiet.Image = ((System.Drawing.Image)(resources.GetObject("btnChiTiet.Image")));
-            this.btnChiTiet.Location = new System.Drawing.Point(992, 52);
+            this.btnChiTiet.Location = new System.Drawing.Point(1000, 50);
             this.btnChiTiet.Name = "btnChiTiet";
             this.btnChiTiet.Size = new System.Drawing.Size(55, 40);
             this.btnChiTiet.TabIndex = 29;

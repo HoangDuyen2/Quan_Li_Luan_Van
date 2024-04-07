@@ -92,12 +92,10 @@
             this.btnChiTiet.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnChiTiet.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnChiTiet.Image = ((System.Drawing.Image)(resources.GetObject("btnChiTiet.Image")));
-            this.btnChiTiet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChiTiet.Location = new System.Drawing.Point(1003, 52);
+            this.btnChiTiet.Location = new System.Drawing.Point(1001, 52);
             this.btnChiTiet.Name = "btnChiTiet";
             this.btnChiTiet.Size = new System.Drawing.Size(46, 42);
             this.btnChiTiet.TabIndex = 32;
-            this.btnChiTiet.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnChiTiet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnChiTiet.UseVisualStyleBackColor = false;
             this.btnChiTiet.Click += new System.EventHandler(this.btnChiTiet_Click_1);
@@ -125,8 +123,8 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(951, 52);
+            this.button1.Image = global::Quan_Li_Luan_Van.Properties.Resources.delete;
+            this.button1.Location = new System.Drawing.Point(947, 52);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(46, 42);
             this.button1.TabIndex = 34;
