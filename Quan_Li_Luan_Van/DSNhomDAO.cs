@@ -11,18 +11,27 @@ namespace Quan_Li_Luan_Van
 {
     internal class DSNhomDAO
     {
-        protected SqlConnection conn;
-        public DSNhomDAO()
-        {
-            conn = new SqlConnection(Properties.Settings.Default.cnnStr);
-        }
-        public void LoadDSNhom( FlowLayoutPanel panel)
-        {
-            string query = "SELECT LuanVan.MaLV, LuanVan.TenLV, LuanVan.ChuyenNganh, GiangVien.TenGV, LuanVan.TrangThai " +
-                    "FROM LuanVan " +
-                    "JOIN GiangVien ON LuanVan.MaGV = GiangVien.MaGV " +
-                    "WHERE LuanVan.MaGV = 'GV001'" + " AND LuanVan.TrangThai = N'Đã có nhóm'";
+        private string maGV;
+        SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
+        DBConnection connection = new DBConnection();
+        private string query;
+        public DSNhomDAO() { }
 
+        public DSNhomDAO(string maGV)
+        {
+            this.maGV = maGV;
+            this.query = $"SELECT LuanVan.MaLV, LuanVan.TenLV, LuanVan.ChuyenNganh, GiangVien.TenGV, LuanVan.TrangThai " +
+                    $"FROM LuanVan " +
+                    $"JOIN GiangVien ON LuanVan.MaGV = GiangVien.MaGV " +
+                    $"WHERE LuanVan.MaGV = '{maGV}'" + " AND LuanVan.TrangThai = N'Đã có nhóm'";
+        }
+        public string Load()
+        {
+            return query;
+        }
+        public string MaGV { get => maGV; set => maGV = value; }
+        public void LoadDSNhom(string query, FlowLayoutPanel panel)
+        {           
             try
             {
                 conn.Open();
@@ -37,7 +46,6 @@ namespace Quan_Li_Luan_Van
                     uclv.LblChuyenNganh.Text = dataReader["ChuyenNganh"].ToString();
                     panel.Controls.Add(uclv);
                 }
-
             }
             catch (Exception ex)
             {

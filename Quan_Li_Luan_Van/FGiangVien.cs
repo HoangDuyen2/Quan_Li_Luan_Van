@@ -85,7 +85,7 @@ namespace Quan_Li_Luan_Van
 
         private void btnDSNhom_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FNhom(), sender);
+            OpenChildForm(new FNhom(person.getMaso()), sender);
             FGiangVien_Load(sender, e);
         }
 
