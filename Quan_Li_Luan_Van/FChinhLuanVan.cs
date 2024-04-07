@@ -14,7 +14,7 @@ namespace Quan_Li_Luan_Van
 {
     public partial class FChinhLuanVan : Form
     {
-        private string tenLV;
+        private string maLV;
         private string maGV;
         ChinhLuanVanDAO lvDAO = new ChinhLuanVanDAO();
         LuanVan lv = new LuanVan();
@@ -23,16 +23,16 @@ namespace Quan_Li_Luan_Van
             InitializeComponent();
         }
 
-        public FChinhLuanVan(string tenLV, string maGV) : this()
+        public FChinhLuanVan(string maLV, string maGV) : this()
         {
-            this.tenLV = tenLV;
+            this.maLV = maLV;
             this.maGV = maGV;
         }
 
         private void FChinhSuaLuanVan_Load(object sender, EventArgs e)
         {
             
-            lv = lvDAO.getLuanVan(tenLV);
+            lv = lvDAO.getLuanVan(maLV);
             txtMaLuanVan.Text = lv.MaLV.ToString();
             txtMaLuanVan.Enabled = false;
             txtTenLuanVan.Text = lv.TenLV.ToString();

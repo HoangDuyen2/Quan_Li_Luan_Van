@@ -18,7 +18,7 @@ namespace Quan_Li_Luan_Van
         public LuanVanToiDAO(string maGV)
         {
             this.maGV = maGV;
-            this.quenry =  $"SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, GiangVien.TenGV, LuanVan.TrangThai " +
+            this.quenry =  $"SELECT LuanVan.MaLV, LuanVan.TenLV, LuanVan.ChuyenNganh, GiangVien.TenGV, LuanVan.TrangThai " +
                 $"FROM LuanVan JOIN GiangVien ON LuanVan.MaGV = GiangVien.MaGV " +
                 $"WHERE LuanVan.MaGV = '{maGV}'";
         }
@@ -38,11 +38,15 @@ namespace Quan_Li_Luan_Van
                 while (dataReader.Read())
                 {
                     UCLVCuaToi uclv  = new UCLVCuaToi();
-
+                    uclv.MaGV = MaGV;
+                    uclv.MaLV = dataReader["MaLV"].ToString();
                     uclv.LblTenLV.Text = dataReader["TenLV"].ToString();
                     uclv.LblChuyenNganh.Text = dataReader["ChuyenNganh"].ToString();
                     uclv.LblTrangThai.Text = dataReader["TrangThai"].ToString();
-
+                    if (uclv.LblTrangThai.Text == "Đã có nhóm")
+                    {
+                        uclv.BtnDelete.Enabled = false;
+                    }
                     panel.Controls.Add(uclv);
                 }
             }
@@ -68,7 +72,6 @@ namespace Quan_Li_Luan_Van
             else quenry = query;
             connection.ThucThi(quenry);
             return quenry;
-        }
+        }    
     }
-
 }

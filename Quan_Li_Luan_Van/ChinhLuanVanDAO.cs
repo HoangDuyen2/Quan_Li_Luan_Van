@@ -20,11 +20,11 @@ namespace Quan_Li_Luan_Van
             dbConnection = new DBConnection();
         }
 
-        public LuanVan getLuanVan(string tenLV)
+        public LuanVan getLuanVan(string maLV)
         {
             string query = "SELECT * " +
                            "FROM LuanVan " +            
-                           "WHERE TenLV = N'" + tenLV + "'";
+                           "WHERE MaLV = N'" + maLV + "'";
             try
             {
                 conn.Open();

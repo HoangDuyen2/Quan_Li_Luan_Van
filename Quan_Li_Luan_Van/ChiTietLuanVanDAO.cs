@@ -19,7 +19,7 @@ namespace Quan_Li_Luan_Van
             string query = "SELECT LuanVan.MaLV, LuanVan.TenLV, DSThanhVien.MSSV1, " +
                             "DSThanhVien.MSSV2, DSThanhVien.MSSV3 " +
                             "FROM LuanVan, DSThanhVien " +
-                            "WHERE LuanVan.MaLV = DSThanhVien.MaLV and LuanVan.TenLV = N'" + _message + "'";
+                            "WHERE LuanVan.MaLV = DSThanhVien.MaLV and LuanVan.MaLV = N'" + _message + "'";
             try
             {
                 conn.Open();
@@ -49,7 +49,7 @@ namespace Quan_Li_Luan_Van
                             "LuanVan.ChuyenNganh, LuanVan.LinhVuc, LuanVan.ChucNang, LuanVan.CongNghe, " +
                             " LuanVan.NgonNgu, LuanVan.YeuCau, LuanVan.TrangThai " +
                             "FROM LuanVan, GiangVien " +
-                            "WHERE LuanVan.MaGV = GiangVien.MaGV and TenLV = N'" + _message + "'";
+                            "WHERE LuanVan.MaGV = GiangVien.MaGV and MaLV = N'" + _message + "'";
             try
             {
                 conn.Open();
