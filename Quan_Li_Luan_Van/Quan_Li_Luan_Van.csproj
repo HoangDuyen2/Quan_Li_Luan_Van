@@ -73,6 +73,7 @@
     <Compile Include="ChinhLuanVanDAO.cs" />
     <Compile Include="ChiTietLuanVanDAO.cs" />
     <Compile Include="ChiTietLuanVanDuyetDAO.cs" />
+    <Compile Include="XoaLuanVanDAO.cs" />
     <Compile Include="DangKyLuanVan_SVDAO.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="DSNhomDAO.cs" />
@@ -184,6 +185,12 @@
     </Compile>
     <Compile Include="FTienTrinh_GV.Designer.cs">
       <DependentUpon>FTienTrinh_GV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FXoaLuanVan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FXoaLuanVan.Designer.cs">
+      <DependentUpon>FXoaLuanVan.cs</DependentUpon>
     </Compile>
     <Compile Include="Hide_Show.cs" />
     <Compile Include="LuanVanCuaToiSVDAO.cs" />
@@ -378,6 +385,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FTrangChu.resx">
       <DependentUpon>FTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FXoaLuanVan.resx">
+      <DependentUpon>FXoaLuanVan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -47,7 +47,8 @@ namespace Quan_Li_Luan_Van
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-
+            FXoaLuanVan xoalv = new FXoaLuanVan(maLV); 
+            xoalv.ShowDialog();
         }
     }
 }
