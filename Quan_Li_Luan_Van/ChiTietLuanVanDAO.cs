@@ -14,12 +14,12 @@ namespace Quan_Li_Luan_Van
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
         LuanVanDuyet luanVan = new LuanVanDuyet();
-        public void DSThanhVien(string _message)
+        public void DSThanhVien(string maLV)
         {
             string query = "SELECT LuanVan.MaLV, LuanVan.TenLV, DSThanhVien.MSSV1, " +
                             "DSThanhVien.MSSV2, DSThanhVien.MSSV3 " +
                             "FROM LuanVan, DSThanhVien " +
-                            "WHERE LuanVan.MaLV = DSThanhVien.MaLV and LuanVan.TenLV = N'" + _message + "'";
+                            "WHERE LuanVan.MaLV = DSThanhVien.MaLV and LuanVan.MaLV = N'" + maLV + "'";
             try
             {
                 conn.Open();
@@ -42,14 +42,14 @@ namespace Quan_Li_Luan_Van
             }
         }
         
-        public LuanVanDuyet Load(string _message)
+        public LuanVanDuyet Load(string maLV)
         {
-            DSThanhVien(_message);
+            DSThanhVien(maLV);
             string query = "SELECT LuanVan.MaLV, LuanVan.TenLV, GiangVien.TenGV, " +
                             "LuanVan.ChuyenNganh, LuanVan.LinhVuc, LuanVan.ChucNang, LuanVan.CongNghe, " +
                             " LuanVan.NgonNgu, LuanVan.YeuCau, LuanVan.TrangThai " +
                             "FROM LuanVan, GiangVien " +
-                            "WHERE LuanVan.MaGV = GiangVien.MaGV and TenLV = N'" + _message + "'";
+                            "WHERE LuanVan.MaGV = GiangVien.MaGV and MaLV = N'" + maLV + "'";
             try
             {
                 conn.Open();
