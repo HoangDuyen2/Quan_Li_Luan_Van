@@ -33,11 +33,10 @@
             // 
             // ucChiTietLuanVan1
             // 
-            this.ucChiTietLuanVan1.Location = new System.Drawing.Point(-3, -26);
+            this.ucChiTietLuanVan1.Location = new System.Drawing.Point(3, -1);
             this.ucChiTietLuanVan1.Name = "ucChiTietLuanVan1";
-            this.ucChiTietLuanVan1.Size = new System.Drawing.Size(1068, 730);
+            this.ucChiTietLuanVan1.Size = new System.Drawing.Size(1060, 716);
             this.ucChiTietLuanVan1.TabIndex = 0;
-            this.ucChiTietLuanVan1.Load += new System.EventHandler(this.ucChiTietLuanVan1_Load);
             // 
             // FChiTietLuanVan_GV
             // 

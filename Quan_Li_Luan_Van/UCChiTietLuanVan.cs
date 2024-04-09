@@ -42,6 +42,7 @@ namespace Quan_Li_Luan_Van
             txtMaLuanVan.Text = luanVan.getMaLV();
             txtTVien2.Text = luanVan.getMSSV1();
             txtTVien1.Text = luanVan.getMSSV2();
+            txtTV3.Text = luanVan.getMSSV3();
             txtTenLuanVan.Text = luanVan.getTenLV();
         }
         public Label Label7 { get => label7; set => label7 = value; }
@@ -62,6 +63,7 @@ namespace Quan_Li_Luan_Van
         public KryptonTextBox TxtCongNghe { get => txtCongNghe; set => txtCongNghe = value; }
         public KryptonTextBox TxtNgonNgu { get => txtNgonNgu; set => txtNgonNgu = value; }
         public KryptonTextBox TxtTVien1 { get => txtTVien1; set => txtTVien1 = value; }
+        public KryptonTextBox TxtTV3 { get => txtTV3; set => txtTV3 = value; }
         public KryptonTextBox TxtLinhVuc { get => txtLinhVuc; set => txtLinhVuc = value; }
         public KryptonTextBox TxtGVHD { get => txtGVHD; set => txtGVHD = value; }
         public KryptonTextBox TxtYeuCau { get => txtYeuCau; set => txtYeuCau = value; }

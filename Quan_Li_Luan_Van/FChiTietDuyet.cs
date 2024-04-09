@@ -41,6 +41,7 @@ namespace Quan_Li_Luan_Van
             txtChuyenNganh.Enabled = false;
             txtMSSV1.Enabled = false;
             txtMSSV2.Enabled = false;
+            txtMSSV3.Enabled = false;
             txtLinhVuc.Enabled = false;
             txtCongNghe.Enabled = false;
             txtNgonNgu.Enabled = false;
@@ -53,6 +54,7 @@ namespace Quan_Li_Luan_Van
             txtChuyenNganh.Text = luanVan.getChuyenNganh();
             txtMSSV1.Text = luanVan.getMSSV1();
             txtMSSV2.Text = luanVan.getMSSV2();
+            txtMSSV3.Text = luanVan.getMSSV3();
             txtLinhVuc.Text = luanVan.getLinhVuc();
             txtCongNghe.Text = luanVan.getCongNghe();
             txtNgonNgu.Text = luanVan.getNgonNgu();
