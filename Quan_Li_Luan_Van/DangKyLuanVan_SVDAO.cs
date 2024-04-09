@@ -15,7 +15,7 @@ namespace Quan_Li_Luan_Van
     {
         DBConnection dbConnection = new DBConnection();
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
-        string query = "SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, GiangVien.TenGV, LuanVan.TrangThai " +
+        string query = "SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, GiangVien.TenGV, LuanVan.TrangThai, LuanVan.MaLV " +
                                    "FROM LuanVan " +
                                    "JOIN GiangVien ON LuanVan.MaGV = GiangVien.MaGV " +
                                    "WHERE LuanVan.TrangThai = N'Chưa có nhóm' ";
@@ -61,7 +61,7 @@ namespace Quan_Li_Luan_Van
                 while (dataReader.Read())
                 {
                     UCLV uclv = new UCLV(person);
-
+                    uclv.MaLV = dataReader["MaLV"].ToString();
                     uclv.LblTenLV.Text = dataReader["TenLV"].ToString();
                     uclv.LblChuyenNganh.Text = dataReader["ChuyenNganh"].ToString();
                     uclv.LblTenGV.Text = dataReader["TenGV"].ToString();
