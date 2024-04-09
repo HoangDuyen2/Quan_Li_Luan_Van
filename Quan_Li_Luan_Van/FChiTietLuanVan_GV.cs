@@ -33,6 +33,7 @@ namespace Quan_Li_Luan_Van
             ucChiTietLuanVan1.KhongTruyCap();
             ucChiTietLuanVan1.TxtTVien1.Enabled = false;
             ucChiTietLuanVan1.TxtTVien2.Enabled = false;
+            ucChiTietLuanVan1.TxtTV3.Enabled = false;
         }
         private void CapNhatDuLieu()
         {

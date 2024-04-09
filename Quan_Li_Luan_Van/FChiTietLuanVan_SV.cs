@@ -32,8 +32,15 @@ namespace Quan_Li_Luan_Van
             InitializeComponent();
             ucChiTietLuanVan1.TxtTVien1.Enter += txtTVien1_GetFocus;
             ucChiTietLuanVan1.TxtTVien2.Enter += txtTVien2_GetFocus;
+            ucChiTietLuanVan1.TxtTV3.Enter += txtTV3_GetFocus;
             ucChiTietLuanVan1.TxtTVien1.LostFocus += txtTVien1_LostFocus;
             ucChiTietLuanVan1.TxtTVien2.LostFocus += txtTVien2_LostFocus;
+            ucChiTietLuanVan1.TxtTV3.LostFocus += txtTV3_LostFocus;
+        }
+
+        private void txtTV3_LostFocus(object sender, EventArgs e)
+        {
+            hide.Show(sender, e);
         }
 
         private void txtTVien2_LostFocus(object sender, EventArgs e)
@@ -52,6 +59,11 @@ namespace Quan_Li_Luan_Van
         }
 
         private void txtTVien1_GetFocus(object sender, EventArgs e)
+        {
+            hide.Hide(sender, e);
+        }
+
+        private void txtTV3_GetFocus(object sender, EventArgs e)
         {
             hide.Hide(sender, e);
         }

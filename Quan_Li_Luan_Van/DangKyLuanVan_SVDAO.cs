@@ -22,7 +22,7 @@ namespace Quan_Li_Luan_Van
         string quenry = "";
         public void DangKy(LuanVanDuyet luanVan)
         {
-            string query1 = "";
+            string query1;
             if (luanVan.getMSSV3() == "")
             {
                 query1 = string.Format("INSERT INTO DuyetDangKy (MaLV, MSSV1, MSSV2, MSSV3, TinhTrang) " + "VALUES ('{0}','{1}','{2}',NULL,N'Đang chờ duyệt')",
@@ -90,70 +90,48 @@ namespace Quan_Li_Luan_Van
             else quenry = query;
             return quenry;
         }
+        public bool checkTungNguoiDangKy(string MSSV)
+        {
+
+            string sqlStr = string.Format("SELECT * FROM DSThanhVien WHERE MSSV1 = '{0}' OR MSSV2 = '{1}' OR MSSV3 = '{2}'", MSSV, MSSV, MSSV);
+            if (KiemTra(sqlStr))
+            {
+                return true;
+            }
+            string sqlStr3 = string.Format("SELECT * FROM DuyetDangKy WHERE MSSV1 = '{0}' OR MSSV2 = '{1}' OR MSSV3 = '{2}' AND TinhTrang = N'Đang chờ duyệt'", MSSV, MSSV, MSSV);
+            if (KiemTra(sqlStr3))
+            {
+                return true;
+            }
+            return false;
+        }
         public bool checkNguoiDangKy(LuanVanDuyet luanVan)
         {
-            bool check = true;
-            bool kTra = false;
-            if (luanVan.getMSSV1() != "")
+            if(luanVan.getMSSV1() != "")
             {
-                string sqlStr = string.Format("SELECT * FROM DSThanhVien WHERE MSSV1 = '{0}' OR MSSV2 = '{1}' OR MSSV3 = '{2}'", luanVan.getMSSV1(), luanVan.getMSSV1(), luanVan.getMSSV1());
-                if (KiemTra(sqlStr))
-                {
-                    check = false;
-                    kTra = true;
-                }
-                string sqlStr3 = string.Format("SELECT * FROM DuyetDangKy WHERE MSSV1 = '{0}' OR MSSV2 = '{1}' OR MSSV3 = '{2}'", luanVan.getMSSV1(), luanVan.getMSSV1(), luanVan.getMSSV1());
-                if (KiemTra(sqlStr3))
-                {
-                    check = false;
-                    kTra = true;
-                }
-                if (kTra)
+                if (checkTungNguoiDangKy(luanVan.getMSSV1()))
                 {
                     MessageBox.Show("MSSV1 đã có nhóm");
+                    return false;
                 }
             }
-            kTra = false;
             if (luanVan.getMSSV2() != "")
             {
-                string sqlStr1 = string.Format("SELECT * FROM DSThanhVien WHERE MSSV1 = '{0}' OR MSSV2 = '{1}' OR MSSV3 = '{2}'", luanVan.getMSSV2(), luanVan.getMSSV2(), luanVan.getMSSV2());
-                if (KiemTra(sqlStr1))
-                {
-                    check = false;
-                    kTra = true;
-                }
-                string sqlStr4 = string.Format("SELECT * FROM DuyetDangKy WHERE MSSV1 = '{0}' OR MSSV2 = '{1}' OR MSSV3 = '{2}'", luanVan.getMSSV2(), luanVan.getMSSV2(), luanVan.getMSSV2());
-                if (KiemTra(sqlStr4))
-                {
-                    check = false;
-                    kTra = true;
-                }
-                if (kTra)
+                if (checkTungNguoiDangKy(luanVan.getMSSV2()))
                 {
                     MessageBox.Show("MSSV2 đã có nhóm");
+                    return false;
                 }
             }
-            kTra = false;
             if (luanVan.getMSSV3() != "")
             {
-                string sqlStr2 = string.Format("SELECT * FROM DSThanhVien WHERE MSSV1 = '{0}' OR MSSV2 = '{1}' OR MSSV3 = '{2}'", luanVan.getMSSV3(), luanVan.getMSSV3(), luanVan.getMSSV3());
-                if (KiemTra(sqlStr2))
-                {
-                    check = false;
-                    kTra = true;
-                }
-                string sqlStr5 = string.Format("SELECT * FROM DuyetDangKy WHERE MSSV1 = '{0}' OR MSSV2 = '{1}' OR MSSV3 = '{2}'", luanVan.getMSSV3(), luanVan.getMSSV3(), luanVan.getMSSV3());
-                if (KiemTra(sqlStr5))
-                {
-                    check = false;
-                    kTra = true;
-                }
-                if (kTra)
+                if (checkTungNguoiDangKy(luanVan.getMSSV3()))
                 {
                     MessageBox.Show("MSSV3 đã có nhóm");
+                    return false;
                 }
             }
-            return check;
+            return true;
         }
         public bool KiemTra(string sqlStr)
         {

@@ -33,7 +33,6 @@
             this.txtMaLuanVan = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtChuyenNganh = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtMSSV1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.txtMSSV2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtCongNghe = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtNgonNgu = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtLinhVuc = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -42,13 +41,16 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.lblmssv2 = new System.Windows.Forms.Label();
             this.btnChapNhan = new System.Windows.Forms.Button();
             this.btnTuChoi = new System.Windows.Forms.Button();
             this.lbID = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbTenLuanVan = new System.Windows.Forms.Label();
             this.lbMaLuanVan = new System.Windows.Forms.Label();
+            this.lblmssv2 = new System.Windows.Forms.Label();
+            this.txtMSSV2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtMSSV3 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.LBMSSV3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtTenLuanVan
@@ -125,9 +127,9 @@
             // txtMSSV1
             // 
             this.txtMSSV1.Enabled = false;
-            this.txtMSSV1.Location = new System.Drawing.Point(630, 202);
+            this.txtMSSV1.Location = new System.Drawing.Point(179, 390);
             this.txtMSSV1.Name = "txtMSSV1";
-            this.txtMSSV1.Size = new System.Drawing.Size(357, 36);
+            this.txtMSSV1.Size = new System.Drawing.Size(177, 36);
             this.txtMSSV1.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -149,36 +151,9 @@
             this.txtMSSV1.TabIndex = 50;
             this.txtMSSV1.Text = "123456";
             // 
-            // txtMSSV2
-            // 
-            this.txtMSSV2.Enabled = false;
-            this.txtMSSV2.Location = new System.Drawing.Point(162, 302);
-            this.txtMSSV2.Name = "txtMSSV2";
-            this.txtMSSV2.Size = new System.Drawing.Size(324, 36);
-            this.txtMSSV2.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtMSSV2.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.txtMSSV2.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
-            this.txtMSSV2.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.txtMSSV2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtMSSV2.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtMSSV2.StateCommon.Border.Rounding = 16;
-            this.txtMSSV2.StateCommon.Border.Width = 1;
-            this.txtMSSV2.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtMSSV2.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMSSV2.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.txtMSSV2.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtMSSV2.TabIndex = 64;
-            this.txtMSSV2.Text = "123456";
-            // 
             // txtCongNghe
             // 
-            this.txtCongNghe.Location = new System.Drawing.Point(630, 402);
+            this.txtCongNghe.Location = new System.Drawing.Point(630, 202);
             this.txtCongNghe.Name = "txtCongNghe";
             this.txtCongNghe.Size = new System.Drawing.Size(357, 36);
             this.txtCongNghe.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -198,9 +173,9 @@
             // 
             // txtNgonNgu
             // 
-            this.txtNgonNgu.Location = new System.Drawing.Point(630, 302);
+            this.txtNgonNgu.Location = new System.Drawing.Point(162, 297);
             this.txtNgonNgu.Name = "txtNgonNgu";
-            this.txtNgonNgu.Size = new System.Drawing.Size(357, 36);
+            this.txtNgonNgu.Size = new System.Drawing.Size(324, 36);
             this.txtNgonNgu.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtNgonNgu.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.txtNgonNgu.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -218,9 +193,9 @@
             // 
             // txtLinhVuc
             // 
-            this.txtLinhVuc.Location = new System.Drawing.Point(162, 402);
+            this.txtLinhVuc.Location = new System.Drawing.Point(630, 296);
             this.txtLinhVuc.Name = "txtLinhVuc";
-            this.txtLinhVuc.Size = new System.Drawing.Size(324, 36);
+            this.txtLinhVuc.Size = new System.Drawing.Size(357, 36);
             this.txtLinhVuc.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtLinhVuc.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.txtLinhVuc.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -272,7 +247,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Image = global::Quan_Li_Luan_Van.Properties.Resources.major1;
-            this.label7.Location = new System.Drawing.Point(564, 302);
+            this.label7.Location = new System.Drawing.Point(102, 296);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(24, 27);
             this.label7.TabIndex = 87;
@@ -283,7 +258,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Image = global::Quan_Li_Luan_Van.Properties.Resources.major1;
-            this.label6.Location = new System.Drawing.Point(564, 402);
+            this.label6.Location = new System.Drawing.Point(564, 202);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(24, 27);
             this.label6.TabIndex = 86;
@@ -294,21 +269,11 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Image = global::Quan_Li_Luan_Van.Properties.Resources.major1;
-            this.label5.Location = new System.Drawing.Point(101, 402);
+            this.label5.Location = new System.Drawing.Point(564, 296);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(24, 27);
             this.label5.TabIndex = 85;
             this.label5.Text = "  ";
-            // 
-            // lblmssv2
-            // 
-            this.lblmssv2.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmssv2.Image = global::Quan_Li_Luan_Van.Properties.Resources.StudentCode;
-            this.lblmssv2.Location = new System.Drawing.Point(84, 285);
-            this.lblmssv2.Name = "lblmssv2";
-            this.lblmssv2.Size = new System.Drawing.Size(65, 60);
-            this.lblmssv2.TabIndex = 63;
-            this.lblmssv2.Text = "  ";
             // 
             // btnChapNhan
             // 
@@ -350,7 +315,7 @@
             // 
             this.lbID.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbID.Image = global::Quan_Li_Luan_Van.Properties.Resources.StudentCode;
-            this.lbID.Location = new System.Drawing.Point(547, 186);
+            this.lbID.Location = new System.Drawing.Point(99, 374);
             this.lbID.Name = "lbID";
             this.lbID.Size = new System.Drawing.Size(65, 60);
             this.lbID.TabIndex = 48;
@@ -386,11 +351,87 @@
             this.lbMaLuanVan.TabIndex = 25;
             this.lbMaLuanVan.Text = "  ";
             // 
+            // lblmssv2
+            // 
+            this.lblmssv2.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmssv2.Image = global::Quan_Li_Luan_Van.Properties.Resources.StudentCode;
+            this.lblmssv2.Location = new System.Drawing.Point(394, 373);
+            this.lblmssv2.Name = "lblmssv2";
+            this.lblmssv2.Size = new System.Drawing.Size(65, 60);
+            this.lblmssv2.TabIndex = 63;
+            this.lblmssv2.Text = "  ";
+            // 
+            // txtMSSV2
+            // 
+            this.txtMSSV2.Enabled = false;
+            this.txtMSSV2.Location = new System.Drawing.Point(472, 390);
+            this.txtMSSV2.Name = "txtMSSV2";
+            this.txtMSSV2.Size = new System.Drawing.Size(177, 36);
+            this.txtMSSV2.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtMSSV2.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.txtMSSV2.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
+            this.txtMSSV2.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.txtMSSV2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtMSSV2.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtMSSV2.StateCommon.Border.Rounding = 16;
+            this.txtMSSV2.StateCommon.Border.Width = 1;
+            this.txtMSSV2.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.txtMSSV2.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMSSV2.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.txtMSSV2.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtMSSV2.TabIndex = 64;
+            this.txtMSSV2.Text = "123456";
+            // 
+            // txtMSSV3
+            // 
+            this.txtMSSV3.Enabled = false;
+            this.txtMSSV3.Location = new System.Drawing.Point(781, 390);
+            this.txtMSSV3.Name = "txtMSSV3";
+            this.txtMSSV3.Size = new System.Drawing.Size(177, 36);
+            this.txtMSSV3.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtMSSV3.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.txtMSSV3.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
+            this.txtMSSV3.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.txtMSSV3.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtMSSV3.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtMSSV3.StateCommon.Border.Rounding = 16;
+            this.txtMSSV3.StateCommon.Border.Width = 1;
+            this.txtMSSV3.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.txtMSSV3.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMSSV3.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.txtMSSV3.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtMSSV3.TabIndex = 91;
+            this.txtMSSV3.Text = "123456";
+            // 
+            // LBMSSV3
+            // 
+            this.LBMSSV3.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBMSSV3.Image = global::Quan_Li_Luan_Van.Properties.Resources.StudentCode;
+            this.LBMSSV3.Location = new System.Drawing.Point(703, 373);
+            this.LBMSSV3.Name = "LBMSSV3";
+            this.LBMSSV3.Size = new System.Drawing.Size(65, 60);
+            this.LBMSSV3.TabIndex = 90;
+            this.LBMSSV3.Text = "  ";
+            // 
             // FChiTietDuyet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 702);
+            this.Controls.Add(this.txtMSSV3);
+            this.Controls.Add(this.LBMSSV3);
             this.Controls.Add(this.txtChucNang);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label7);
@@ -432,8 +473,6 @@
         private System.Windows.Forms.Label lbID;
         private System.Windows.Forms.Button btnTuChoi;
         private System.Windows.Forms.Button btnChapNhan;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtMSSV2;
-        private System.Windows.Forms.Label lblmssv2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -442,6 +481,10 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtLinhVuc;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtChucNang;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblmssv2;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtMSSV2;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtMSSV3;
+        private System.Windows.Forms.Label LBMSSV3;
     }
     #region Windows Form Designer generated code
 
