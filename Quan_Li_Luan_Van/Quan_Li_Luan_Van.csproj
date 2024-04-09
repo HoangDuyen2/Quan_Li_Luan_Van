@@ -85,6 +85,7 @@
     <Compile Include="FXoaNhiemVu.Designer.cs">
       <DependentUpon>FXoaNhiemVu.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThongTinCaNhanDAO.cs" />
     <Compile Include="XoaLuanVanDAO.cs" />
     <Compile Include="DangKyLuanVan_SVDAO.cs" />
     <Compile Include="DBConnection.cs" />
