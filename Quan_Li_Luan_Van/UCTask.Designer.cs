@@ -35,7 +35,7 @@
             this.pictureBoxNen = new System.Windows.Forms.PictureBox();
             this.btnChiTiet = new System.Windows.Forms.Button();
             this.btnChinhSua = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,21 +116,21 @@
             this.btnChinhSua.UseVisualStyleBackColor = false;
             this.btnChinhSua.Click += new System.EventHandler(this.btnChinhSua_Click);
             // 
-            // button1
+            // btnXoa
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.button1.Image = global::Quan_Li_Luan_Van.Properties.Resources.delete;
-            this.button1.Location = new System.Drawing.Point(947, 52);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(46, 42);
-            this.button1.TabIndex = 34;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
+            this.btnXoa.FlatAppearance.BorderSize = 0;
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnXoa.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnXoa.Image = global::Quan_Li_Luan_Van.Properties.Resources.delete;
+            this.btnXoa.Location = new System.Drawing.Point(947, 52);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(46, 42);
+            this.btnXoa.TabIndex = 34;
+            this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // UCTask
             // 
@@ -138,7 +138,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnChinhSua);
             this.Controls.Add(this.btnChiTiet);
             this.Controls.Add(this.lblTienTrinh);
@@ -161,6 +161,6 @@
         private System.Windows.Forms.Label lblTienTrinh;
         private System.Windows.Forms.Button btnChiTiet;
         private System.Windows.Forms.Button btnChinhSua;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnXoa;
     }
 }

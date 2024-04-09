@@ -10,15 +10,9 @@ using System.Windows.Forms;
 
 namespace Quan_Li_Luan_Van
 {
-    public partial class FChiTietTask : Form
+    public partial class FXoaNhiemVu : Form
     {
-        private string maNV;
-        public FChiTietTask(string MaNV) : this()
-        {
-            this.maNV = MaNV;
-        }
-
-        public FChiTietTask()
+        public FXoaNhiemVu()
         {
             InitializeComponent();
         }

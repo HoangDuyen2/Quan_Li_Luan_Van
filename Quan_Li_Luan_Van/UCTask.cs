@@ -23,6 +23,11 @@ namespace Quan_Li_Luan_Van
         public Label LblTienTrinh { get => lblTienTrinh; set => lblTienTrinh = value; }
         public string MaLV { get => maLV; set => maLV = value; }
 
+                private void UCTask_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnChiTiet_Click(object sender, EventArgs e)
         {
             FChiTietTask fChiTiet = new FChiTietTask(LblTenNV.Text);
@@ -37,15 +42,12 @@ namespace Quan_Li_Luan_Van
 
         private void btnChinhSua_Click(object sender, EventArgs e)
         {
-
+            FChinhSuaTask task = new FChinhSuaTask();
+            task.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void UCTask_Load(object sender, EventArgs e)
+        private void btnXoa_Click(object sender, EventArgs e)
         {
 
         }
