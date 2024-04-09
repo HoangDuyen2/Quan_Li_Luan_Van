@@ -13,8 +13,7 @@ namespace Quan_Li_Luan_Van
 {
     public partial class UCThongTinCaNhan : UserControl
     {
-        Person person = null;
-        DBConnection conn = new DBConnection();
+        ThongTinCaNhanDAO thongTinCaNhan = new ThongTinCaNhanDAO();
         public UCThongTinCaNhan()
         {
             InitializeComponent();
@@ -65,12 +64,9 @@ namespace Quan_Li_Luan_Van
             string sex = "";
             if (RbNam.Checked) sex = "Nam";
             else sex = "Nu";
-            string sqlStr = string.Format("UPDATE SinhVien SET TenSV = '{0}', GioiTinh = '{1}', DiaChi = '{3}', " +
-            "CCCD = '{3}', NgaySinh = '{4}', SDT = '{5}', Email = '{6}' WHERE MSSV = '{7}'", TxtHoTen.Text, sex,
-                TxtDiaChi.Text, TxtCCCD.Text, DtBirth.Value.ToShortDateString(), TxtPhone.Text, TxtEmail.Text, TxtID.Text);
-            conn.ThucThi(sqlStr);
             person = new Person(TxtID.Text,TxtHoTen.Text, sex, TxtDiaChi.Text, TxtCCCD.Text, DtBirth.Value.ToShortDateString(),
                 TxtPhone.Text, TxtEmail.Text);
+            thongTinCaNhan.CapNhatThongTin(person);
             BtnChinhSua.Show();
             KhongTruyCap(person);
             return person;
