@@ -37,21 +37,14 @@ namespace Quan_Li_Luan_Van
                     {
                         if (reader[2].ToString() == "Sinh Viên" && taiKhoan.getChucVu() == "Sinh viên")
                         {
-                            check = true;
-                            FSinhVien sv = new FSinhVien(taiKhoan);
-                            sv.ShowDialog();
+                            return true;
                         }
                         if (reader[2].ToString() == "Giảng Viên" && taiKhoan.getChucVu() == "Giảng viên")
                         {
-                            check = true;
-                            FGiangVien gv = new FGiangVien(taiKhoan);
-                            gv.ShowDialog();
+                            return true;
                         }
                     }
-                    if (!check)
-                    {
-                        MessageBox.Show("Invalid username, password, or role.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+ 
                 }
                 else
                 {
@@ -67,7 +60,7 @@ namespace Quan_Li_Luan_Van
                 conn.Close();
             }
 
-            return check;
+            return false;
         }
         public TaiKhoan createTaiKhoan(string username, string password, string chucVu)
         {
