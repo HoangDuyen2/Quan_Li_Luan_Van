@@ -57,7 +57,7 @@ namespace Quan_Li_Luan_Van
                 while (dataReader.Read())
                 {
                     UCLV_GV uclv = new UCLV_GV();
-                    uclv.MaLV = dataReader["MaLV"].ToString();
+ //                   uclv.MaLV = dataReader["MaLV"].ToString();
                     uclv.LblTenLV.Text = dataReader["TenLV"].ToString();
                     uclv.LblChuyenNganh.Text = dataReader["ChuyenNganh"].ToString();
                     uclv.LblTenGV.Text = dataReader["TenGV"].ToString();

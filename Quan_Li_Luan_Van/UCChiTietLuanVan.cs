@@ -20,6 +20,7 @@ namespace Quan_Li_Luan_Van
         }
         public void KhongTruyCap()
         {
+            TxtTVien1.Enabled = false; 
             TxtChucNang.Enabled = false;
             TxtChuyenNganh.Enabled = false;
             TxtCongNghe.Enabled = false;
@@ -40,8 +41,8 @@ namespace Quan_Li_Luan_Van
             txtGVHD.Text = luanVan.getTenGV();
             txtLinhVuc.Text = luanVan.getLinhVuc();
             txtMaLuanVan.Text = luanVan.getMaLV();
-            txtTVien2.Text = luanVan.getMSSV1();
-            txtTVien1.Text = luanVan.getMSSV2();
+            txtTVien2.Text = luanVan.getMSSV2();
+            txtTVien1.Text = luanVan.getMSSV1();
             txtTV3.Text = luanVan.getMSSV3();
             txtTenLuanVan.Text = luanVan.getTenLV();
         }
