@@ -12,6 +12,7 @@ namespace Quan_Li_Luan_Van
 {
     public partial class UCLV_GV : UserControl
     {
+        private string maLV;
         public UCLV_GV()
         {
             InitializeComponent();
@@ -23,10 +24,11 @@ namespace Quan_Li_Luan_Van
         public Label LblTenLV { get => lblTenLV; set => lblTenLV = value; }
         public PictureBox PictureBoxNen1 { get => pictureBoxNen; set => pictureBoxNen = value; }
         public Label LblTrangThai { get => lblTrangThai; set => lblTrangThai = value; }
+        public string MaLV { get => maLV; set => maLV = value; }
 
         private void btnChiTiet_Click(object sender, EventArgs e)
         {
-            FChiTietLuanVan_GV chiTietLuanVan = new FChiTietLuanVan_GV(LblTenLV.Text);
+            FChiTietLuanVan_GV chiTietLuanVan = new FChiTietLuanVan_GV(maLV);
             chiTietLuanVan.Show();
         }
 
