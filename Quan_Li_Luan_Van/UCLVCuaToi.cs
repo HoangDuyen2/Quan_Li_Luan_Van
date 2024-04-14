@@ -50,5 +50,11 @@ namespace Quan_Li_Luan_Van
             FXoaLuanVan_TB xoalv = new FXoaLuanVan_TB(maLV); 
             xoalv.ShowDialog();
         }
+
+        private void btnChamDiem_Click(object sender, EventArgs e)
+        {
+            FChamDiem fChamDiem = new FChamDiem();
+            fChamDiem.ShowDialog();
+        }
     }
 }

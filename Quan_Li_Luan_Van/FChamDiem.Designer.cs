@@ -73,27 +73,33 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Quan_Li_Luan_Van.Properties.Resources.icons8_student_48;
-            this.pictureBox3.Location = new System.Drawing.Point(6, 247);
+            this.pictureBox3.Location = new System.Drawing.Point(6, 245);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(43, 39);
+            this.pictureBox3.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox3.TabIndex = 59;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Quan_Li_Luan_Van.Properties.Resources.icons8_student_48;
-            this.pictureBox2.Location = new System.Drawing.Point(6, 155);
+            this.pictureBox2.Location = new System.Drawing.Point(6, 151);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(43, 39);
+            this.pictureBox2.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox2.TabIndex = 58;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::Quan_Li_Luan_Van.Properties.Resources.icons8_student_48;
-            this.pictureBox1.Location = new System.Drawing.Point(5, 53);
+            this.pictureBox1.Location = new System.Drawing.Point(5, 48);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(43, 39);
+            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 57;
             this.pictureBox1.TabStop = false;
             // 
@@ -101,7 +107,7 @@
             // 
             this.txtDiem3.Location = new System.Drawing.Point(278, 247);
             this.txtDiem3.Name = "txtDiem3";
-            this.txtDiem3.Size = new System.Drawing.Size(140, 36);
+            this.txtDiem3.Size = new System.Drawing.Size(140, 35);
             this.txtDiem3.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtDiem3.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.txtDiem3.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -115,13 +121,12 @@
             this.txtDiem3.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiem3.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtDiem3.TabIndex = 56;
-            this.txtDiem3.Text = "Nhập điểm";
             // 
             // txtDiem2
             // 
             this.txtDiem2.Location = new System.Drawing.Point(278, 148);
             this.txtDiem2.Name = "txtDiem2";
-            this.txtDiem2.Size = new System.Drawing.Size(140, 36);
+            this.txtDiem2.Size = new System.Drawing.Size(140, 35);
             this.txtDiem2.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtDiem2.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.txtDiem2.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -135,13 +140,12 @@
             this.txtDiem2.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiem2.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtDiem2.TabIndex = 55;
-            this.txtDiem2.Text = "Nhập điểm";
             // 
             // txtDiem1
             // 
             this.txtDiem1.Location = new System.Drawing.Point(278, 53);
             this.txtDiem1.Name = "txtDiem1";
-            this.txtDiem1.Size = new System.Drawing.Size(140, 36);
+            this.txtDiem1.Size = new System.Drawing.Size(140, 35);
             this.txtDiem1.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtDiem1.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.txtDiem1.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -155,13 +159,12 @@
             this.txtDiem1.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiem1.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtDiem1.TabIndex = 54;
-            this.txtDiem1.Text = "Nhập điểm";
             // 
             // lblTenSV3
             // 
             this.lblTenSV3.AutoSize = true;
             this.lblTenSV3.Font = new System.Drawing.Font("Leelawadee UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenSV3.Location = new System.Drawing.Point(55, 272);
+            this.lblTenSV3.Location = new System.Drawing.Point(64, 272);
             this.lblTenSV3.Name = "lblTenSV3";
             this.lblTenSV3.Size = new System.Drawing.Size(170, 23);
             this.lblTenSV3.TabIndex = 6;
@@ -171,7 +174,7 @@
             // 
             this.lblTenSV2.AutoSize = true;
             this.lblTenSV2.Font = new System.Drawing.Font("Leelawadee UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenSV2.Location = new System.Drawing.Point(55, 178);
+            this.lblTenSV2.Location = new System.Drawing.Point(64, 178);
             this.lblTenSV2.Name = "lblTenSV2";
             this.lblTenSV2.Size = new System.Drawing.Size(170, 23);
             this.lblTenSV2.TabIndex = 5;
@@ -181,7 +184,7 @@
             // 
             this.lblTenSV1.AutoSize = true;
             this.lblTenSV1.Font = new System.Drawing.Font("Leelawadee UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenSV1.Location = new System.Drawing.Point(55, 78);
+            this.lblTenSV1.Location = new System.Drawing.Point(64, 78);
             this.lblTenSV1.Name = "lblTenSV1";
             this.lblTenSV1.Size = new System.Drawing.Size(170, 23);
             this.lblTenSV1.TabIndex = 4;
@@ -191,7 +194,7 @@
             // 
             this.lblMSSV3.AutoSize = true;
             this.lblMSSV3.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMSSV3.Location = new System.Drawing.Point(55, 240);
+            this.lblMSSV3.Location = new System.Drawing.Point(64, 240);
             this.lblMSSV3.Name = "lblMSSV3";
             this.lblMSSV3.Size = new System.Drawing.Size(81, 20);
             this.lblMSSV3.TabIndex = 3;
@@ -201,7 +204,7 @@
             // 
             this.lblMSSV2.AutoSize = true;
             this.lblMSSV2.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMSSV2.Location = new System.Drawing.Point(55, 148);
+            this.lblMSSV2.Location = new System.Drawing.Point(64, 148);
             this.lblMSSV2.Name = "lblMSSV2";
             this.lblMSSV2.Size = new System.Drawing.Size(81, 20);
             this.lblMSSV2.TabIndex = 2;
@@ -211,7 +214,7 @@
             // 
             this.lblMSSV1.AutoSize = true;
             this.lblMSSV1.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMSSV1.Location = new System.Drawing.Point(55, 44);
+            this.lblMSSV1.Location = new System.Drawing.Point(64, 44);
             this.lblMSSV1.Name = "lblMSSV1";
             this.lblMSSV1.Size = new System.Drawing.Size(81, 20);
             this.lblMSSV1.TabIndex = 1;
@@ -237,6 +240,7 @@
             this.btnThem.Size = new System.Drawing.Size(125, 40);
             this.btnThem.TabIndex = 16;
             this.btnThem.Values.Text = "Lưu Điểm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnThoat
             // 
@@ -247,6 +251,7 @@
             this.btnThoat.Size = new System.Drawing.Size(125, 40);
             this.btnThoat.TabIndex = 17;
             this.btnThoat.Values.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // FChamDiem
             // 
@@ -260,6 +265,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FChamDiem";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FChamDiem";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

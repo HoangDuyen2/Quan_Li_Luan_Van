@@ -92,6 +92,7 @@
             this.btnChamDiem.TabIndex = 28;
             this.btnChamDiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnChamDiem.UseVisualStyleBackColor = false;
+            this.btnChamDiem.Click += new System.EventHandler(this.btnChamDiem_Click);
             // 
             // btnXoa
             // 

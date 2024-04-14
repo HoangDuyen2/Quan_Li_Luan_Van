@@ -34,6 +34,7 @@
             this.btnTienTrinh = new System.Windows.Forms.Button();
             this.pictureBoxNen = new System.Windows.Forms.PictureBox();
             this.btnChiTiet = new System.Windows.Forms.Button();
+            this.btnThongBao = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,13 +64,14 @@
             // 
             // btnTienTrinh
             // 
+            this.btnTienTrinh.AutoSize = true;
             this.btnTienTrinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
             this.btnTienTrinh.FlatAppearance.BorderSize = 0;
             this.btnTienTrinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTienTrinh.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnTienTrinh.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnTienTrinh.Image = ((System.Drawing.Image)(resources.GetObject("btnTienTrinh.Image")));
-            this.btnTienTrinh.Location = new System.Drawing.Point(942, 50);
+            this.btnTienTrinh.Location = new System.Drawing.Point(883, 49);
             this.btnTienTrinh.Name = "btnTienTrinh";
             this.btnTienTrinh.Size = new System.Drawing.Size(55, 40);
             this.btnTienTrinh.TabIndex = 21;
@@ -94,7 +96,7 @@
             this.btnChiTiet.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnChiTiet.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnChiTiet.Image = ((System.Drawing.Image)(resources.GetObject("btnChiTiet.Image")));
-            this.btnChiTiet.Location = new System.Drawing.Point(1000, 50);
+            this.btnChiTiet.Location = new System.Drawing.Point(1000, 49);
             this.btnChiTiet.Name = "btnChiTiet";
             this.btnChiTiet.Size = new System.Drawing.Size(55, 40);
             this.btnChiTiet.TabIndex = 29;
@@ -102,12 +104,29 @@
             this.btnChiTiet.UseVisualStyleBackColor = false;
             this.btnChiTiet.Click += new System.EventHandler(this.btnChiTiet_Click);
             // 
+            // btnThongBao
+            // 
+            this.btnThongBao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
+            this.btnThongBao.FlatAppearance.BorderSize = 0;
+            this.btnThongBao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThongBao.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnThongBao.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnThongBao.Image = global::Quan_Li_Luan_Van.Properties.Resources.icons8_chat_38;
+            this.btnThongBao.Location = new System.Drawing.Point(939, 49);
+            this.btnThongBao.Name = "btnThongBao";
+            this.btnThongBao.Size = new System.Drawing.Size(55, 40);
+            this.btnThongBao.TabIndex = 30;
+            this.btnThongBao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThongBao.UseVisualStyleBackColor = false;
+            this.btnThongBao.Click += new System.EventHandler(this.btnThongBao_Click);
+            // 
             // UCNhom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.btnThongBao);
             this.Controls.Add(this.btnChiTiet);
             this.Controls.Add(this.btnTienTrinh);
             this.Controls.Add(this.lblChuyenNganh);
@@ -129,5 +148,6 @@
         private System.Windows.Forms.PictureBox pictureBoxNen;
         private System.Windows.Forms.Button btnTienTrinh;
         private System.Windows.Forms.Button btnChiTiet;
+        private System.Windows.Forms.Button btnThongBao;
     }
 }

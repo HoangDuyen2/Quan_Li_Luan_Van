@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace Quan_Li_Luan_Van
 {
-    public partial class FChamDiem : Form
+    public partial class FGuiThongBao_TB : Form
     {
-        public FChamDiem()
+        public FGuiThongBao_TB()
         {
             InitializeComponent();
-        }
-
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            FLuuDiem_TB fLuuDiem_TB = new FLuuDiem_TB();
-            fLuuDiem_TB.ShowDialog();   
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

@@ -1,6 +1,6 @@
 ﻿namespace Quan_Li_Luan_Van
 {
-    partial class FXoaNhiemVu_TB
+    partial class FGuiThongBao_TB
     {
         /// <summary>
         /// Required designer variable.
@@ -43,17 +43,17 @@
             this.panelNoiDung.Location = new System.Drawing.Point(2, 28);
             this.panelNoiDung.Name = "panelNoiDung";
             this.panelNoiDung.Size = new System.Drawing.Size(337, 123);
-            this.panelNoiDung.TabIndex = 3;
+            this.panelNoiDung.TabIndex = 6;
             // 
             // lblText
             // 
             this.lblText.AutoSize = true;
             this.lblText.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblText.Location = new System.Drawing.Point(3, 46);
+            this.lblText.Location = new System.Drawing.Point(24, 46);
             this.lblText.Name = "lblText";
-            this.lblText.Size = new System.Drawing.Size(329, 25);
+            this.lblText.Size = new System.Drawing.Size(286, 25);
             this.lblText.TabIndex = 0;
-            this.lblText.Text = "Bạn chắc chắn muốn xóa nhiệm vụ này !";
+            this.lblText.Text = "Bạn chắc chắn gửi thông báo này !";
             // 
             // btnThoat
             // 
@@ -61,7 +61,7 @@
             this.btnThoat.Location = new System.Drawing.Point(194, 177);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(81, 26);
-            this.btnThoat.TabIndex = 5;
+            this.btnThoat.TabIndex = 8;
             this.btnThoat.Text = "Từ chối";
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
@@ -72,12 +72,11 @@
             this.btnXoa.Location = new System.Drawing.Point(66, 177);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(81, 26);
-            this.btnXoa.TabIndex = 4;
+            this.btnXoa.TabIndex = 7;
             this.btnXoa.Text = "Chấp nhận";
             this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // FXoaNhiemVu_TB
+            // FGuiThongBao_TB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -87,9 +86,9 @@
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnXoa);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FXoaNhiemVu_TB";
+            this.Name = "FGuiThongBao_TB";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FXoaNhiemVu";
+            this.Text = "FGuiThongBao_TB";
             this.panelNoiDung.ResumeLayout(false);
             this.panelNoiDung.PerformLayout();
             this.ResumeLayout(false);

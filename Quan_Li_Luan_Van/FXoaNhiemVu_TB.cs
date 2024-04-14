@@ -16,5 +16,14 @@ namespace Quan_Li_Luan_Van
         {
             InitializeComponent();
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

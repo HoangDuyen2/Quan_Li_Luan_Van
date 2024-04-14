@@ -35,5 +35,11 @@ namespace Quan_Li_Luan_Van
             FTienTrinh_GV task = new FTienTrinh_GV(maLV);
             task.Show();
         }
+
+        private void btnThongBao_Click(object sender, EventArgs e)
+        {
+            FThemThongBao fThemThongBao = new FThemThongBao();
+            fThemThongBao.ShowDialog();
+        }
     }
 }

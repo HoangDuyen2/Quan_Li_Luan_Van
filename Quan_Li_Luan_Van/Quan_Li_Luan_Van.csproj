@@ -85,6 +85,12 @@
     <Compile Include="FChinhSuaTask.Designer.cs">
       <DependentUpon>FChinhSuaTask.cs</DependentUpon>
     </Compile>
+    <Compile Include="FGuiThongBao_TB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FGuiThongBao_TB.Designer.cs">
+      <DependentUpon>FGuiThongBao_TB.cs</DependentUpon>
+    </Compile>
     <Compile Include="FLuuDiem_TB.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -383,6 +389,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FDangNhap.resx">
       <DependentUpon>FDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FGuiThongBao_TB.resx">
+      <DependentUpon>FGuiThongBao_TB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FLuanVanToi.resx">
       <DependentUpon>FLuanVanToi.cs</DependentUpon>
@@ -698,6 +707,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-student-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-chat-38.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -343,6 +343,16 @@ namespace Quan_Li_Luan_Van.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_chat_38 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-chat-38", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_grade_38 {
             get {
                 object obj = ResourceManager.GetObject("icons8-grade-38", resourceCulture);
