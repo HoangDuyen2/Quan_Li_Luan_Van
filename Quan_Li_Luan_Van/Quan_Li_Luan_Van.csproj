@@ -97,6 +97,9 @@
     <Compile Include="FXoaNhiemVu_TB.Designer.cs">
       <DependentUpon>FXoaNhiemVu_TB.cs</DependentUpon>
     </Compile>
+    <Compile Include="GiaoVienDAO.cs" />
+    <Compile Include="PersonDAO.cs" />
+    <Compile Include="SinhVienDAO.cs" />
     <Compile Include="ThongTinCaNhanDAO.cs" />
     <Compile Include="XoaLuanVanDAO.cs" />
     <Compile Include="DangKyLuanVan_SVDAO.cs" />
