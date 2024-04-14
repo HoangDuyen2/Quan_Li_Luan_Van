@@ -1,6 +1,6 @@
 ﻿namespace Quan_Li_Luan_Van
 {
-    partial class FXoaNhiemVu
+    partial class FXoaNhiemVu_TB
     {
         /// <summary>
         /// Required designer variable.

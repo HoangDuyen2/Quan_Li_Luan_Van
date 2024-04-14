@@ -73,17 +73,29 @@
     <Compile Include="ChinhLuanVanDAO.cs" />
     <Compile Include="ChiTietLuanVanDAO.cs" />
     <Compile Include="ChiTietLuanVanDuyetDAO.cs" />
+    <Compile Include="FChamDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FChamDiem.Designer.cs">
+      <DependentUpon>FChamDiem.cs</DependentUpon>
+    </Compile>
     <Compile Include="FChinhSuaTask.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FChinhSuaTask.Designer.cs">
       <DependentUpon>FChinhSuaTask.cs</DependentUpon>
     </Compile>
-    <Compile Include="FXoaNhiemVu.cs">
+    <Compile Include="FLuuDiem_TB.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FXoaNhiemVu.Designer.cs">
-      <DependentUpon>FXoaNhiemVu.cs</DependentUpon>
+    <Compile Include="FLuuDiem_TB.Designer.cs">
+      <DependentUpon>FLuuDiem_TB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FXoaNhiemVu_TB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FXoaNhiemVu_TB.Designer.cs">
+      <DependentUpon>FXoaNhiemVu_TB.cs</DependentUpon>
     </Compile>
     <Compile Include="ThongTinCaNhanDAO.cs" />
     <Compile Include="XoaLuanVanDAO.cs" />
@@ -199,11 +211,11 @@
     <Compile Include="FTienTrinh_GV.Designer.cs">
       <DependentUpon>FTienTrinh_GV.cs</DependentUpon>
     </Compile>
-    <Compile Include="FXoaLuanVan.cs">
+    <Compile Include="FXoaLuanVan_TB.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FXoaLuanVan.Designer.cs">
-      <DependentUpon>FXoaLuanVan.cs</DependentUpon>
+    <Compile Include="FXoaLuanVan_TB.Designer.cs">
+      <DependentUpon>FXoaLuanVan_TB.cs</DependentUpon>
     </Compile>
     <Compile Include="Hide_Show.cs" />
     <Compile Include="LuanVanCuaToiSVDAO.cs" />
@@ -330,6 +342,9 @@
     <EmbeddedResource Include="FBaoCaoTienDo.resx">
       <DependentUpon>FBaoCaoTienDo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FChamDiem.resx">
+      <DependentUpon>FChamDiem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FChinhLuanVan.resx">
       <DependentUpon>FChinhLuanVan.cs</DependentUpon>
     </EmbeddedResource>
@@ -372,6 +387,9 @@
     <EmbeddedResource Include="FLuanVanToi_SV.resx">
       <DependentUpon>FLuanVanToi_SV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FLuuDiem_TB.resx">
+      <DependentUpon>FLuuDiem_TB.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FNhanXetChamDiem.resx">
       <DependentUpon>FNhanXetChamDiem.cs</DependentUpon>
     </EmbeddedResource>
@@ -402,11 +420,11 @@
     <EmbeddedResource Include="FTrangChu.resx">
       <DependentUpon>FTrangChu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FXoaLuanVan.resx">
-      <DependentUpon>FXoaLuanVan.cs</DependentUpon>
+    <EmbeddedResource Include="FXoaLuanVan_TB.resx">
+      <DependentUpon>FXoaLuanVan_TB.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FXoaNhiemVu.resx">
-      <DependentUpon>FXoaNhiemVu.cs</DependentUpon>
+    <EmbeddedResource Include="FXoaNhiemVu_TB.resx">
+      <DependentUpon>FXoaNhiemVu_TB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -674,6 +692,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-grade-38.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-student-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

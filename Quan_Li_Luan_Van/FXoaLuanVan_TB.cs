@@ -10,15 +10,15 @@ using System.Windows.Forms;
 
 namespace Quan_Li_Luan_Van
 {
-    public partial class FXoaLuanVan : Form
+    public partial class FXoaLuanVan_TB : Form
     {
         private string maLV;
         XoaLuanVanDAO xoaLV = new XoaLuanVanDAO();
-        public FXoaLuanVan()
+        public FXoaLuanVan_TB()
         {
             InitializeComponent();
         }
-        public FXoaLuanVan(string maLV):this()
+        public FXoaLuanVan_TB(string maLV):this()
         {
             this.maLV = maLV;
         }

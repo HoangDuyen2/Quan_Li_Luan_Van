@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Quan_Li_Luan_Van
 {
-    public partial class FXoaNhiemVu : Form
+    public partial class FLuuDiem_TB : Form
     {
-        public FXoaNhiemVu()
+        public FLuuDiem_TB()
         {
             InitializeComponent();
         }
