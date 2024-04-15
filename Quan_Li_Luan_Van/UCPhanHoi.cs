@@ -10,16 +10,26 @@ using System.Windows.Forms;
 
 namespace Quan_Li_Luan_Van
 {
-    public partial class FTienTrinh_GV : Form
+    public partial class UCPhanHoi : UserControl
     {
-        public FTienTrinh_GV()
+        public UCPhanHoi()
         {
             InitializeComponent();
         }
 
-        private void btnThoat_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
-            this.Close();
+
+        }
+
+        private void txtPhanHoi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UCPhanHoi_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

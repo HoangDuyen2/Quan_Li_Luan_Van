@@ -23,21 +23,9 @@ namespace Quan_Li_Luan_Van
         public Label LblTienTrinh { get => lblTienTrinh; set => lblTienTrinh = value; }
         public string MaLV { get => maLV; set => maLV = value; }
 
-                private void UCTask_Load(object sender, EventArgs e)
+        private void UCTask_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void btnChiTiet_Click(object sender, EventArgs e)
-        {
-            FChiTietTask fChiTiet = new FChiTietTask(LblTenNV.Text);
-            fChiTiet.Show();
-        }
-
-        private void btnChiTiet_Click_1(object sender, EventArgs e)
-        {
-            FChiTietTask task = new FChiTietTask();
-            task.Show();
         }
 
         private void btnChinhSua_Click(object sender, EventArgs e)
@@ -46,10 +34,16 @@ namespace Quan_Li_Luan_Van
             task.Show();
         }
 
-
-        private void btnXoa_Click(object sender, EventArgs e)
+        private void btnTienTrinh_Click(object sender, EventArgs e)
         {
+            FTienTrinh_GV fTienTrinh_GV = new FTienTrinh_GV();
+            fTienTrinh_GV.ShowDialog();
+        }
 
+        private void btnChiTiet_Click(object sender, EventArgs e)
+        {
+            FChiTietTask_All fChiTietTask_GV = new FChiTietTask_All();
+            fChiTietTask_GV.ShowDialog();
         }
     }
 }

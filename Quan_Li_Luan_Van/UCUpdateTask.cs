@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace Quan_Li_Luan_Van
 {
-    public partial class FChiTietTask : Form
+    public partial class UCUpdateTask : UserControl
     {
-        private string maNV;
-        public FChiTietTask(string MaNV) : this()
-        {
-            this.maNV = MaNV;
-        }
-
-        public FChiTietTask()
+        public UCUpdateTask()
         {
             InitializeComponent();
+        }
+
+        private void lblTienTrinh_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

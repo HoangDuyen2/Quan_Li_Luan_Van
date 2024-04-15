@@ -32,7 +32,7 @@
             this.lblText = new System.Windows.Forms.Label();
             this.lblTenNV = new System.Windows.Forms.Label();
             this.lblTienTrinh = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnTienTrinh = new System.Windows.Forms.Button();
             this.btnChinhSua = new System.Windows.Forms.Button();
             this.btnChiTiet = new System.Windows.Forms.Button();
             this.pictureBoxNen = new System.Windows.Forms.PictureBox();
@@ -75,21 +75,22 @@
             this.lblTienTrinh.Text = "40%";
             this.lblTienTrinh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // btnTienTrinh
             // 
-            this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.button1.Image = global::Quan_Li_Luan_Van.Properties.Resources.icons8_analytics_38;
-            this.button1.Location = new System.Drawing.Point(952, 46);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(46, 44);
-            this.button1.TabIndex = 34;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnTienTrinh.AutoSize = true;
+            this.btnTienTrinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
+            this.btnTienTrinh.FlatAppearance.BorderSize = 0;
+            this.btnTienTrinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTienTrinh.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnTienTrinh.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnTienTrinh.Image = global::Quan_Li_Luan_Van.Properties.Resources.icons8_analytics_38;
+            this.btnTienTrinh.Location = new System.Drawing.Point(952, 46);
+            this.btnTienTrinh.Name = "btnTienTrinh";
+            this.btnTienTrinh.Size = new System.Drawing.Size(46, 44);
+            this.btnTienTrinh.TabIndex = 34;
+            this.btnTienTrinh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTienTrinh.UseVisualStyleBackColor = false;
+            this.btnTienTrinh.Click += new System.EventHandler(this.btnTienTrinh_Click);
             // 
             // btnChinhSua
             // 
@@ -123,7 +124,7 @@
             this.btnChiTiet.TabIndex = 32;
             this.btnChiTiet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnChiTiet.UseVisualStyleBackColor = false;
-            this.btnChiTiet.Click += new System.EventHandler(this.btnChiTiet_Click_1);
+            this.btnChiTiet.Click += new System.EventHandler(this.btnChiTiet_Click);
             // 
             // pictureBoxNen
             // 
@@ -140,7 +141,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnTienTrinh);
             this.Controls.Add(this.btnChinhSua);
             this.Controls.Add(this.btnChiTiet);
             this.Controls.Add(this.lblTienTrinh);
@@ -163,6 +164,6 @@
         private System.Windows.Forms.Label lblTienTrinh;
         private System.Windows.Forms.Button btnChiTiet;
         private System.Windows.Forms.Button btnChinhSua;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnTienTrinh;
     }
 }

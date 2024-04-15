@@ -32,7 +32,7 @@ namespace Quan_Li_Luan_Van
         }
         private void btnTienTrinh_Click(object sender, EventArgs e)
         {
-            FTienTrinh_GV task = new FTienTrinh_GV(maLV);
+            FNhiemVu_GV task = new FNhiemVu_GV(maLV);
             task.Show();
         }
 
