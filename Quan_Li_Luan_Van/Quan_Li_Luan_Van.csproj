@@ -113,6 +113,7 @@
     <Compile Include="GiaoVienDAO.cs" />
     <Compile Include="PersonDAO.cs" />
     <Compile Include="SinhVienDAO.cs" />
+    <Compile Include="ThongBao.cs" />
     <Compile Include="ThongTinCaNhanDAO.cs" />
     <Compile Include="UCPhanHoi.cs">
       <SubType>UserControl</SubType>

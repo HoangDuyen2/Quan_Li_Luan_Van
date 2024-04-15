@@ -18,6 +18,8 @@ namespace Quan_Li_Luan_Van
         }
         public void Xoa(string maLV)
         {
+            string XoaDuyet = string.Format("Delete From DuyetDangKy WHERE MaLV = '{0}'", maLV);
+            dbConnection.ThucThi(XoaDuyet);
             string sqlXoa = string.Format("DELETE FROM LuanVan WHERE MaLV = '{0}'", maLV);
             dbConnection.ThucThi(sqlXoa);
         }
