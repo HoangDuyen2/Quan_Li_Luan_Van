@@ -25,7 +25,7 @@ namespace Quan_Li_Luan_Van
             this.MaLV = maLV;
         }
 
-        public ThongBao(string tieuDe, string noiDung, string thoiGian, string maLV, string maGV)
+        public ThongBao(string tieuDe, string noiDung, string thoiGian, string maLV)
         {
             this.TieuDe = tieuDe;
             this.NoiDung = noiDung;
