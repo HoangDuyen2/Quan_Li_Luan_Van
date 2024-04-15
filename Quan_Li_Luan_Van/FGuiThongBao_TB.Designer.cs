@@ -75,6 +75,7 @@
             this.btnXoa.TabIndex = 7;
             this.btnXoa.Text = "Chấp nhận";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // FGuiThongBao_TB
             // 

@@ -38,7 +38,7 @@ namespace Quan_Li_Luan_Van
 
         private void btnThongBao_Click(object sender, EventArgs e)
         {
-            FThemThongBao fThemThongBao = new FThemThongBao();
+            FThemThongBao fThemThongBao = new FThemThongBao(MaLV);
             fThemThongBao.ShowDialog();
         }
     }

@@ -107,6 +107,5 @@ namespace Quan_Li_Luan_Van
 
             return new LuanVan(maLuanVan, tenLuanVan, maGV, chuyenNganh, linhVuc, chucNang, congNghe, ngonNgu, yeuCau, "Chưa có nhóm");
         }
-
     }
 }

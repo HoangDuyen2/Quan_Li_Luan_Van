@@ -81,12 +81,11 @@
             // 
             this.cbboxTieuDe.DropDownWidth = 261;
             this.cbboxTieuDe.Items.AddRange(new object[] {
-            "Meeting online",
-            "Update task"});
-            this.cbboxTieuDe.Location = new System.Drawing.Point(105, 31);
+            "Metting Online",
+            "Cập nhật tiến độ"});
+            this.cbboxTieuDe.Location = new System.Drawing.Point(119, 34);
             this.cbboxTieuDe.Name = "cbboxTieuDe";
-            this.cbboxTieuDe.Size = new System.Drawing.Size(331, 39);
-            this.cbboxTieuDe.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
+            this.cbboxTieuDe.Size = new System.Drawing.Size(273, 39);
             this.cbboxTieuDe.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Blue;
             this.cbboxTieuDe.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.Blue;
             this.cbboxTieuDe.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -100,20 +99,13 @@
             this.cbboxTieuDe.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(1);
             this.cbboxTieuDe.StateCommon.DropBack.Color1 = System.Drawing.Color.White;
             this.cbboxTieuDe.StateCommon.DropBack.Color2 = System.Drawing.Color.White;
-            this.cbboxTieuDe.StateCommon.Item.Back.Color1 = System.Drawing.Color.White;
-            this.cbboxTieuDe.StateCommon.Item.Back.Color2 = System.Drawing.Color.White;
             this.cbboxTieuDe.StateCommon.Item.Border.Color1 = System.Drawing.Color.White;
             this.cbboxTieuDe.StateCommon.Item.Border.Color2 = System.Drawing.Color.White;
             this.cbboxTieuDe.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.cbboxTieuDe.StateNormal.ComboBox.Back.Color1 = System.Drawing.Color.White;
-            this.cbboxTieuDe.StateNormal.ComboBox.Border.Color1 = System.Drawing.Color.White;
-            this.cbboxTieuDe.StateNormal.ComboBox.Border.Color2 = System.Drawing.Color.White;
-            this.cbboxTieuDe.StateNormal.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.cbboxTieuDe.TabIndex = 53;
+            this.cbboxTieuDe.TabIndex = 83;
+            this.cbboxTieuDe.Text = "--Chọn tiêu đề--";
             // 
             // txtNoiDungTB
             // 
