@@ -22,7 +22,6 @@ namespace Quan_Li_Luan_Van
 
         public FThemThongBao(string maLV) :this()
         {
-            InitializeComponent();
             this.maLV = maLV;
         }
 
@@ -30,13 +29,15 @@ namespace Quan_Li_Luan_Van
         private void btnThem_Click(object sender, EventArgs e)
         {
             ThongBao tb = TaoThongBao();
-            if (tb == null)
+            if (!tb.checkNullThongBao())
             {
                 MessageBox.Show("Vui lòng điền đủ thông tin");
             }
             else
             {
                 GiaoVienDAO.ThemThongBao(tb);
+                MessageBox.Show("Thêm thành công");
+                this.Close();
             }
         }
 
@@ -46,20 +47,12 @@ namespace Quan_Li_Luan_Van
         }
         private ThongBao TaoThongBao()
         {
-            string tieuDe = cbboxTieuDe.SelectedItem.ToString();
-            MessageBox.Show(tieuDe);
-            string noiDung = txtNoiDungTB?.Text;
+            string tieuDe = cbboxTieuDe.SelectedItem != null ? cbboxTieuDe.SelectedItem.ToString() : "";
+            string noiDung = txtNoiDungTB.Text;
             DateTime thoiGian = DateTime.Now;
             string chuoiThoiGian = thoiGian.ToString("yyyy-MM-dd HH:mm:ss");
 
-            if (tieuDe != null && noiDung != null) 
-            {
-                return new ThongBao(tieuDe, noiDung, chuoiThoiGian, maLV);
-            }
-            else
-            {
-                return null;
-            }
+            return new ThongBao(tieuDe, noiDung, chuoiThoiGian, maLV);
         }
     }
 }
