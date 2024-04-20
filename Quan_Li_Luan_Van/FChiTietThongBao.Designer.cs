@@ -213,6 +213,7 @@
             this.btnThem.Size = new System.Drawing.Size(169, 40);
             this.btnThem.TabIndex = 11;
             this.btnThem.Values.Text = "Đã Xem";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // lblTB
             // 
@@ -236,6 +237,7 @@
             this.Name = "FChiTietThongBao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi Tiết Thông Báo";
+            this.Load += new System.EventHandler(this.FChiTietThongBao_Load);
             this.panelNoidung.ResumeLayout(false);
             this.panelNoidung.PerformLayout();
             this.ResumeLayout(false);

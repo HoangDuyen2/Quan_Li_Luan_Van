@@ -28,25 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblGV = new System.Windows.Forms.Label();
+            this.lblTieuDe = new System.Windows.Forms.Label();
             this.lbNoiDungTB = new System.Windows.Forms.Label();
             this.btnXem = new System.Windows.Forms.Button();
             this.lblThoiGian = new System.Windows.Forms.Label();
-            this.lblTrangThai = new System.Windows.Forms.Label();
             this.picBoxUser = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxUser)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblGV
+            // lblTieuDe
             // 
-            this.lblGV.AutoSize = true;
-            this.lblGV.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lblGV.Location = new System.Drawing.Point(112, 21);
-            this.lblGV.Name = "lblGV";
-            this.lblGV.Size = new System.Drawing.Size(157, 24);
-            this.lblGV.TabIndex = 3;
-            this.lblGV.Text = "Nguyễn Thủy An";
+            this.lblTieuDe.AutoSize = true;
+            this.lblTieuDe.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTieuDe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.lblTieuDe.Location = new System.Drawing.Point(112, 21);
+            this.lblTieuDe.Name = "lblTieuDe";
+            this.lblTieuDe.Size = new System.Drawing.Size(123, 24);
+            this.lblTieuDe.TabIndex = 3;
+            this.lblTieuDe.Text = "Họp Meeting";
             // 
             // lbNoiDungTB
             // 
@@ -86,17 +85,6 @@
             this.lblThoiGian.TabIndex = 13;
             this.lblThoiGian.Text = "17/03/2024 10:41:22";
             // 
-            // lblTrangThai
-            // 
-            this.lblTrangThai.AutoSize = true;
-            this.lblTrangThai.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrangThai.ForeColor = System.Drawing.Color.Black;
-            this.lblTrangThai.Location = new System.Drawing.Point(967, 8);
-            this.lblTrangThai.Name = "lblTrangThai";
-            this.lblTrangThai.Size = new System.Drawing.Size(63, 20);
-            this.lblTrangThai.TabIndex = 14;
-            this.lblTrangThai.Text = "Đã xem";
-            // 
             // picBoxUser
             // 
             this.picBoxUser.Image = global::Quan_Li_Luan_Van.Properties.Resources.user1;
@@ -113,11 +101,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.lblTrangThai);
             this.Controls.Add(this.lblThoiGian);
             this.Controls.Add(this.btnXem);
             this.Controls.Add(this.lbNoiDungTB);
-            this.Controls.Add(this.lblGV);
+            this.Controls.Add(this.lblTieuDe);
             this.Controls.Add(this.picBoxUser);
             this.Name = "UCThongBao";
             this.Size = new System.Drawing.Size(1060, 100);
@@ -130,10 +117,9 @@
         #endregion
 
         private System.Windows.Forms.PictureBox picBoxUser;
-        private System.Windows.Forms.Label lblGV;
+        private System.Windows.Forms.Label lblTieuDe;
         private System.Windows.Forms.Label lbNoiDungTB;
         private System.Windows.Forms.Button btnXem;
         private System.Windows.Forms.Label lblThoiGian;
-        private System.Windows.Forms.Label lblTrangThai;
     }
 }

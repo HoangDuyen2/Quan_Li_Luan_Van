@@ -12,6 +12,7 @@ namespace Quan_Li_Luan_Van
 {
     public partial class UCThongBao : UserControl
     {
+        private string ID_TB;
         public UCThongBao()
         {
             InitializeComponent();
@@ -19,14 +20,14 @@ namespace Quan_Li_Luan_Van
 
         private void buttonThongBao_Click(object sender, EventArgs e)
         {
-            FChiTietThongBao tb = new FChiTietThongBao();
+            FChiTietThongBao tb = new FChiTietThongBao(ID_TB);
             tb.ShowDialog();
         }
         public PictureBox PicBoxUser { get => picBoxUser; set => picBoxUser = value; }
-        public Label LblGV { get => lblGV; set => lblGV = value; }
+        public Label LblTieuDe { get => lblTieuDe; set => lblTieuDe = value; }
         public Label LbNoiDungTB { get => lbNoiDungTB; set => lbNoiDungTB = value; }
         public Button BtnXem { get => btnXem; set => btnXem = value; }
         public Label LblThoiGian { get => lblThoiGian; set => lblThoiGian = value; }
-        public Label LblTrangThai { get => lblTrangThai; set => lblTrangThai = value; }
+        public string ID_TB1 { get => ID_TB; set => ID_TB = value; }
     }
 }

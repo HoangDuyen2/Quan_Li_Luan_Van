@@ -105,7 +105,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.cbboxTieuDe.TabIndex = 83;
-            this.cbboxTieuDe.Text = "--Chọn tiêu đề--";
+            this.cbboxTieuDe.Text = "Metting Online";
             // 
             // txtNoiDungTB
             // 

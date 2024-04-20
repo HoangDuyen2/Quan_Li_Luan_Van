@@ -7,13 +7,14 @@ using System.Windows.Forms;
 
 namespace Quan_Li_Luan_Van
 {
-    internal class ThongBao
+    public class ThongBao
     {
         private int id;
         private string tieuDe;
         private string noiDung;
         private string thoiGian;
         private string maLV; // Nhóm được gửi đến
+        private string nguoiGui;
 
         public ThongBao() { }
         public ThongBao(int id, string tieuDe, string noiDung, string thoiGian,  string maLV)
@@ -65,6 +66,7 @@ namespace Quan_Li_Luan_Van
         public string NoiDung { get => noiDung; set => noiDung = value; }
         public string ThoiGian { get => thoiGian; set => thoiGian = value; }
         public string MaLV { get => maLV; set => maLV = value; }
+        public string NguoiGui { get => nguoiGui; set => nguoiGui = value; }
 
     }
 }

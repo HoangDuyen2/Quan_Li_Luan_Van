@@ -30,7 +30,7 @@ namespace Quan_Li_Luan_Van
         private void btnThem_Click(object sender, EventArgs e)
         {
             ThongBao tb = TaoThongBao();
-            if (tb.checkNullThongBao())
+            if (tb == null)
             {
                 MessageBox.Show("Vui lòng điền đủ thông tin");
             }
@@ -46,11 +46,20 @@ namespace Quan_Li_Luan_Van
         }
         private ThongBao TaoThongBao()
         {
-            string tieuDe = cbboxTieuDe.SelectedItem != null ? cbboxTieuDe.SelectedItem.ToString() : "";
-            string noiDung = txtNoiDungTB.ToString();
+            string tieuDe = cbboxTieuDe.SelectedItem.ToString();
+            MessageBox.Show(tieuDe);
+            string noiDung = txtNoiDungTB?.Text;
             DateTime thoiGian = DateTime.Now;
             string chuoiThoiGian = thoiGian.ToString("yyyy-MM-dd HH:mm:ss");
-            return new ThongBao(tieuDe, noiDung, chuoiThoiGian, maLV);
+
+            if (tieuDe != null && noiDung != null) 
+            {
+                return new ThongBao(tieuDe, noiDung, chuoiThoiGian, maLV);
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

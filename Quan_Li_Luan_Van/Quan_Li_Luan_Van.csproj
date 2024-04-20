@@ -74,6 +74,7 @@
     <Compile Include="ChinhLuanVanDAO.cs" />
     <Compile Include="ChiTietLuanVanDAO.cs" />
     <Compile Include="ChiTietLuanVanDuyetDAO.cs" />
+    <Compile Include="ChiTietThongBaoDAO.cs" />
     <Compile Include="FChamDiem.cs">
       <SubType>Form</SubType>
     </Compile>

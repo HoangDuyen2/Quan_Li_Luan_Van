@@ -52,7 +52,7 @@ namespace Quan_Li_Luan_Van
         }
         private void buttonHome_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FTrangChu(), sender);
+            OpenChildForm(new FTrangChu(person), sender);
             FGiangVien_Load(sender,e);
         }
 

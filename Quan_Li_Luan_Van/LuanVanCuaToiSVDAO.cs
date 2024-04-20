@@ -57,7 +57,7 @@ namespace Quan_Li_Luan_Van
         }
         public bool KiemTra(Person person)
         {
-            bool check = true;
+            bool check = false;
             string sqlStr = string.Format("SELECT * FROM DSThanhVien WHERE MSSV1 = '{0}' OR MSSV2 = '{1}' OR MSSV3 = '{2}'", person.getMaso(), person.getMaso(), person.getMaso());
             try
             {
@@ -69,10 +69,6 @@ namespace Quan_Li_Luan_Van
                 if (reader.HasRows)
                 {
                     check = true;
-                }
-                else
-                {
-                    check = false;
                 }
                 while(reader.Read())
                 {
