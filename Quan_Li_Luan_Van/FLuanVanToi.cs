@@ -35,14 +35,17 @@ namespace Quan_Li_Luan_Van
         {
             luanvan.getInfo(query, flPanelDSLV);
         }
-        private void LoadListUC ()
+        private void LoadDSLuanVan()
         {
             luanvan.getInfo(query, flPanelDSLV);
         }
         private void btnThemLuanVan_Click(object sender, EventArgs e)
         {
             FThemLuanVan fThemLuanVan = new FThemLuanVan(maGV);
-            fThemLuanVan.ShowDialog();
+            if (fThemLuanVan.ShowDialog() == DialogResult.OK)
+            {
+                LoadDSLuanVan();
+            }
         }
 
         private void ChonTinhTrang(object sender, EventArgs e)
@@ -54,7 +57,7 @@ namespace Quan_Li_Luan_Van
                 string chuyenNganh = " AND LuanVan.TrangThai =N'" + text + "'";
                 query = query + chuyenNganh;
             }
-            LoadListUC();
+            LoadDSLuanVan();
         }
     }
 }

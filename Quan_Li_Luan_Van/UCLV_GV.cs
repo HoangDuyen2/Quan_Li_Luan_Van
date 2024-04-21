@@ -36,5 +36,10 @@ namespace Quan_Li_Luan_Van
         {
 
         }
+
+        private void lblGVHD_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

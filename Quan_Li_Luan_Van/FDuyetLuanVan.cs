@@ -44,11 +44,16 @@ namespace Quan_Li_Luan_Van
 
         private void Chon_Tinh_Trang(object sender, EventArgs e)
         {
-            if (comboxLoaiTraCuu.SelectedItem != null)
+            
+        }
+
+        private void cbbLoaiTraCuu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbbLoaiTraCuu.SelectedItem != null)
             {
-                string text = comboxLoaiTraCuu.SelectedItem.ToString();
+                string text = cbbLoaiTraCuu.SelectedItem.ToString();
                 query = duyetLuanVan.traCuu(text);
-                LoadData(); 
+                LoadData();
             }
         }
     }

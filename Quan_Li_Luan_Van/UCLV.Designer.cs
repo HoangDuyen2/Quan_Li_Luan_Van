@@ -82,11 +82,11 @@
             // lblGVHD
             // 
             this.lblGVHD.AutoSize = true;
-            this.lblGVHD.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGVHD.Font = new System.Drawing.Font("Leelawadee UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGVHD.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblGVHD.Location = new System.Drawing.Point(570, 67);
+            this.lblGVHD.Location = new System.Drawing.Point(686, 67);
             this.lblGVHD.Name = "lblGVHD";
-            this.lblGVHD.Size = new System.Drawing.Size(62, 23);
+            this.lblGVHD.Size = new System.Drawing.Size(64, 23);
             this.lblGVHD.TabIndex = 14;
             this.lblGVHD.Text = "GVHD:";
             this.lblGVHD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -94,11 +94,11 @@
             // lblTenGV
             // 
             this.lblTenGV.AutoSize = true;
-            this.lblTenGV.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenGV.Font = new System.Drawing.Font("Leelawadee UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenGV.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblTenGV.Location = new System.Drawing.Point(629, 67);
+            this.lblTenGV.Location = new System.Drawing.Point(756, 67);
             this.lblTenGV.Name = "lblTenGV";
-            this.lblTenGV.Size = new System.Drawing.Size(140, 23);
+            this.lblTenGV.Size = new System.Drawing.Size(142, 23);
             this.lblTenGV.TabIndex = 15;
             this.lblTenGV.Text = "Đinh Công Đoan";
             this.lblTenGV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -115,12 +115,12 @@
             // lblTrangThai
             // 
             this.lblTrangThai.AutoSize = true;
-            this.lblTrangThai.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrangThai.Font = new System.Drawing.Font("Leelawadee UI Semilight", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTrangThai.ForeColor = System.Drawing.Color.Green;
-            this.lblTrangThai.Location = new System.Drawing.Point(929, 0);
+            this.lblTrangThai.Location = new System.Drawing.Point(926, 4);
             this.lblTrangThai.Name = "lblTrangThai";
             this.lblTrangThai.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblTrangThai.Size = new System.Drawing.Size(123, 23);
+            this.lblTrangThai.Size = new System.Drawing.Size(119, 23);
             this.lblTrangThai.TabIndex = 20;
             this.lblTrangThai.Text = "Chưa có nhóm";
             this.lblTrangThai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

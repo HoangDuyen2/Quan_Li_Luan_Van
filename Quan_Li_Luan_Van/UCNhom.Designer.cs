@@ -41,11 +41,11 @@
             // lblChuyenNganh
             // 
             this.lblChuyenNganh.AutoSize = true;
-            this.lblChuyenNganh.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChuyenNganh.Font = new System.Drawing.Font("Leelawadee UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChuyenNganh.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.lblChuyenNganh.Location = new System.Drawing.Point(103, 61);
             this.lblChuyenNganh.Name = "lblChuyenNganh";
-            this.lblChuyenNganh.Size = new System.Drawing.Size(186, 23);
+            this.lblChuyenNganh.Size = new System.Drawing.Size(183, 23);
             this.lblChuyenNganh.TabIndex = 18;
             this.lblChuyenNganh.Text = "Công nghệ phần mềm";
             this.lblChuyenNganh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -53,11 +53,11 @@
             // lblTenLV
             // 
             this.lblTenLV.AutoSize = true;
-            this.lblTenLV.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenLV.Font = new System.Drawing.Font("Leelawadee UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenLV.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblTenLV.Location = new System.Drawing.Point(101, 19);
+            this.lblTenLV.Location = new System.Drawing.Point(101, 16);
             this.lblTenLV.Name = "lblTenLV";
-            this.lblTenLV.Size = new System.Drawing.Size(191, 27);
+            this.lblTenLV.Size = new System.Drawing.Size(203, 31);
             this.lblTenLV.TabIndex = 17;
             this.lblTenLV.Text = "Quản lí khách sạn";
             this.lblTenLV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

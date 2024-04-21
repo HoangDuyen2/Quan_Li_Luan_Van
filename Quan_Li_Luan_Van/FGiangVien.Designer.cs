@@ -49,7 +49,6 @@
             this.btnLuanVanCuaToi = new System.Windows.Forms.Button();
             this.btnDuyetLV = new System.Windows.Forms.Button();
             this.btnDanhSachLV = new System.Windows.Forms.Button();
-            this.buttonHome = new System.Windows.Forms.Button();
             this.panelChucNang.SuspendLayout();
             this.panelTTGiangVien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).BeginInit();
@@ -217,7 +216,6 @@
             this.panelMenu.Controls.Add(this.btnLuanVanCuaToi);
             this.panelMenu.Controls.Add(this.btnDuyetLV);
             this.panelMenu.Controls.Add(this.btnDanhSachLV);
-            this.panelMenu.Controls.Add(this.buttonHome);
             this.panelMenu.Controls.Add(this.panelChucNang);
             this.panelMenu.Controls.Add(this.panelTTGiangVien);
             this.panelMenu.Controls.Add(this.panelLogo);
@@ -237,7 +235,7 @@
             this.btnDangXuat.ForeColor = System.Drawing.Color.White;
             this.btnDangXuat.Image = global::Quan_Li_Luan_Van.Properties.Resources.dang_xuat;
             this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangXuat.Location = new System.Drawing.Point(0, 645);
+            this.btnDangXuat.Location = new System.Drawing.Point(0, 582);
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.btnDangXuat.Size = new System.Drawing.Size(252, 63);
@@ -257,7 +255,7 @@
             this.btnDSNhom.ForeColor = System.Drawing.Color.White;
             this.btnDSNhom.Image = global::Quan_Li_Luan_Van.Properties.Resources.people_in_white1;
             this.btnDSNhom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDSNhom.Location = new System.Drawing.Point(0, 582);
+            this.btnDSNhom.Location = new System.Drawing.Point(0, 519);
             this.btnDSNhom.Name = "btnDSNhom";
             this.btnDSNhom.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.btnDSNhom.Size = new System.Drawing.Size(252, 63);
@@ -277,7 +275,7 @@
             this.btnLuanVanCuaToi.ForeColor = System.Drawing.Color.White;
             this.btnLuanVanCuaToi.Image = global::Quan_Li_Luan_Van.Properties.Resources.education;
             this.btnLuanVanCuaToi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuanVanCuaToi.Location = new System.Drawing.Point(0, 519);
+            this.btnLuanVanCuaToi.Location = new System.Drawing.Point(0, 456);
             this.btnLuanVanCuaToi.Name = "btnLuanVanCuaToi";
             this.btnLuanVanCuaToi.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.btnLuanVanCuaToi.Size = new System.Drawing.Size(252, 63);
@@ -297,7 +295,7 @@
             this.btnDuyetLV.ForeColor = System.Drawing.Color.White;
             this.btnDuyetLV.Image = global::Quan_Li_Luan_Van.Properties.Resources.approve;
             this.btnDuyetLV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDuyetLV.Location = new System.Drawing.Point(0, 456);
+            this.btnDuyetLV.Location = new System.Drawing.Point(0, 393);
             this.btnDuyetLV.Name = "btnDuyetLV";
             this.btnDuyetLV.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.btnDuyetLV.Size = new System.Drawing.Size(252, 63);
@@ -316,7 +314,7 @@
             this.btnDanhSachLV.ForeColor = System.Drawing.Color.White;
             this.btnDanhSachLV.Image = global::Quan_Li_Luan_Van.Properties.Resources.list;
             this.btnDanhSachLV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDanhSachLV.Location = new System.Drawing.Point(0, 393);
+            this.btnDanhSachLV.Location = new System.Drawing.Point(0, 330);
             this.btnDanhSachLV.Name = "btnDanhSachLV";
             this.btnDanhSachLV.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.btnDanhSachLV.Size = new System.Drawing.Size(252, 63);
@@ -326,26 +324,6 @@
             this.btnDanhSachLV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDanhSachLV.UseVisualStyleBackColor = true;
             this.btnDanhSachLV.Click += new System.EventHandler(this.btnDangKy_Click);
-            // 
-            // buttonHome
-            // 
-            this.buttonHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonHome.FlatAppearance.BorderSize = 0;
-            this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonHome.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.buttonHome.ForeColor = System.Drawing.Color.White;
-            this.buttonHome.Image = global::Quan_Li_Luan_Van.Properties.Resources.home;
-            this.buttonHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonHome.Location = new System.Drawing.Point(0, 330);
-            this.buttonHome.Name = "buttonHome";
-            this.buttonHome.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.buttonHome.Size = new System.Drawing.Size(252, 63);
-            this.buttonHome.TabIndex = 5;
-            this.buttonHome.Text = "  Trang chủ";
-            this.buttonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonHome.UseVisualStyleBackColor = true;
-            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
             // 
             // FGiangVien
             // 
@@ -380,7 +358,6 @@
         private System.Windows.Forms.Button btnLuanVanCuaToi;
         private System.Windows.Forms.Button btnDuyetLV;
         private System.Windows.Forms.Button btnDanhSachLV;
-        private System.Windows.Forms.Button buttonHome;
         private System.Windows.Forms.Panel panelChucNang;
         private System.Windows.Forms.Label labelChucNang;
         private System.Windows.Forms.Panel panelTTGiangVien;

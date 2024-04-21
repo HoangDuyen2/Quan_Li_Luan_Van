@@ -30,13 +30,13 @@
         {
             this.panelTitle = new System.Windows.Forms.Panel();
             this.lblDuyet = new System.Windows.Forms.Label();
-            this.groupBoxTraCuu = new System.Windows.Forms.GroupBox();
-            this.comboxLoaiTraCuu = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.labelLoaiTraCuu = new System.Windows.Forms.Label();
             this.flPanelDSLV = new System.Windows.Forms.FlowLayoutPanel();
+            this.groupBoxTraCuuDuyet = new System.Windows.Forms.GroupBox();
+            this.cbbLoaiTraCuu = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.lblTrangThai = new System.Windows.Forms.Label();
             this.panelTitle.SuspendLayout();
-            this.groupBoxTraCuu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboxLoaiTraCuu)).BeginInit();
+            this.groupBoxTraCuuDuyet.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbLoaiTraCuu)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTitle
@@ -59,83 +59,86 @@
             this.lblDuyet.TabIndex = 1;
             this.lblDuyet.Text = "DUYỆT LUẬN VĂN";
             // 
-            // groupBoxTraCuu
+            // flPanelDSLV
             // 
-            this.groupBoxTraCuu.Controls.Add(this.comboxLoaiTraCuu);
-            this.groupBoxTraCuu.Controls.Add(this.labelLoaiTraCuu);
-            this.groupBoxTraCuu.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxTraCuu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBoxTraCuu.Location = new System.Drawing.Point(5, 49);
-            this.groupBoxTraCuu.Name = "groupBoxTraCuu";
-            this.groupBoxTraCuu.Size = new System.Drawing.Size(1062, 95);
-            this.groupBoxTraCuu.TabIndex = 23;
-            this.groupBoxTraCuu.TabStop = false;
+            this.flPanelDSLV.AutoScroll = true;
+            this.flPanelDSLV.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.flPanelDSLV.Location = new System.Drawing.Point(0, 141);
+            this.flPanelDSLV.Name = "flPanelDSLV";
+            this.flPanelDSLV.Size = new System.Drawing.Size(1064, 563);
+            this.flPanelDSLV.TabIndex = 26;
             // 
-            // comboxLoaiTraCuu
+            // groupBoxTraCuuDuyet
             // 
-            this.comboxLoaiTraCuu.DropDownWidth = 261;
-            this.comboxLoaiTraCuu.Items.AddRange(new object[] {
+            this.groupBoxTraCuuDuyet.Controls.Add(this.cbbLoaiTraCuu);
+            this.groupBoxTraCuuDuyet.Controls.Add(this.lblTrangThai);
+            this.groupBoxTraCuuDuyet.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxTraCuuDuyet.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.groupBoxTraCuuDuyet.Location = new System.Drawing.Point(0, 58);
+            this.groupBoxTraCuuDuyet.Name = "groupBoxTraCuuDuyet";
+            this.groupBoxTraCuuDuyet.Size = new System.Drawing.Size(1064, 77);
+            this.groupBoxTraCuuDuyet.TabIndex = 27;
+            this.groupBoxTraCuuDuyet.TabStop = false;
+            this.groupBoxTraCuuDuyet.Text = "Tra cứu duyệt luận văn";
+            // 
+            // cbbLoaiTraCuu
+            // 
+            this.cbbLoaiTraCuu.DropDownWidth = 261;
+            this.cbbLoaiTraCuu.Items.AddRange(new object[] {
             "Tất cả",
             "Đang chờ duyệt",
             "Đã duyệt",
             "Từ chối"});
-            this.comboxLoaiTraCuu.Location = new System.Drawing.Point(146, 34);
-            this.comboxLoaiTraCuu.Name = "comboxLoaiTraCuu";
-            this.comboxLoaiTraCuu.Size = new System.Drawing.Size(273, 39);
-            this.comboxLoaiTraCuu.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Blue;
-            this.comboxLoaiTraCuu.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.Blue;
-            this.comboxLoaiTraCuu.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.cbbLoaiTraCuu.Location = new System.Drawing.Point(148, 29);
+            this.cbbLoaiTraCuu.Name = "cbbLoaiTraCuu";
+            this.cbbLoaiTraCuu.Size = new System.Drawing.Size(233, 39);
+            this.cbbLoaiTraCuu.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Blue;
+            this.cbbLoaiTraCuu.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.Blue;
+            this.cbbLoaiTraCuu.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.comboxLoaiTraCuu.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.comboxLoaiTraCuu.StateCommon.ComboBox.Border.Rounding = 20;
-            this.comboxLoaiTraCuu.StateCommon.ComboBox.Border.Width = 1;
-            this.comboxLoaiTraCuu.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Gray;
-            this.comboxLoaiTraCuu.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboxLoaiTraCuu.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(1);
-            this.comboxLoaiTraCuu.StateCommon.DropBack.Color1 = System.Drawing.Color.White;
-            this.comboxLoaiTraCuu.StateCommon.DropBack.Color2 = System.Drawing.Color.White;
-            this.comboxLoaiTraCuu.StateCommon.Item.Border.Color1 = System.Drawing.Color.White;
-            this.comboxLoaiTraCuu.StateCommon.Item.Border.Color2 = System.Drawing.Color.White;
-            this.comboxLoaiTraCuu.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.cbbLoaiTraCuu.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.cbbLoaiTraCuu.StateCommon.ComboBox.Border.Rounding = 20;
+            this.cbbLoaiTraCuu.StateCommon.ComboBox.Border.Width = 1;
+            this.cbbLoaiTraCuu.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Gray;
+            this.cbbLoaiTraCuu.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbLoaiTraCuu.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(1);
+            this.cbbLoaiTraCuu.StateCommon.DropBack.Color1 = System.Drawing.Color.White;
+            this.cbbLoaiTraCuu.StateCommon.DropBack.Color2 = System.Drawing.Color.White;
+            this.cbbLoaiTraCuu.StateCommon.Item.Border.Color1 = System.Drawing.Color.White;
+            this.cbbLoaiTraCuu.StateCommon.Item.Border.Color2 = System.Drawing.Color.White;
+            this.cbbLoaiTraCuu.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.comboxLoaiTraCuu.TabIndex = 17;
-            this.comboxLoaiTraCuu.Text = "-- Chờ duyệt --";
-            this.comboxLoaiTraCuu.SelectedIndexChanged += new System.EventHandler(this.Chon_Tinh_Trang);
+            this.cbbLoaiTraCuu.TabIndex = 18;
+            this.cbbLoaiTraCuu.Text = "-- Tất cả --";
+            this.cbbLoaiTraCuu.SelectedIndexChanged += new System.EventHandler(this.cbbLoaiTraCuu_SelectedIndexChanged);
             // 
-            // labelLoaiTraCuu
+            // lblTrangThai
             // 
-            this.labelLoaiTraCuu.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLoaiTraCuu.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.labelLoaiTraCuu.Location = new System.Drawing.Point(23, 41);
-            this.labelLoaiTraCuu.Name = "labelLoaiTraCuu";
-            this.labelLoaiTraCuu.Size = new System.Drawing.Size(128, 39);
-            this.labelLoaiTraCuu.TabIndex = 16;
-            this.labelLoaiTraCuu.Text = "Tình trạng";
-            // 
-            // flPanelDSLV
-            // 
-            this.flPanelDSLV.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.flPanelDSLV.Location = new System.Drawing.Point(0, 150);
-            this.flPanelDSLV.Name = "flPanelDSLV";
-            this.flPanelDSLV.Size = new System.Drawing.Size(1064, 509);
-            this.flPanelDSLV.TabIndex = 26;
+            this.lblTrangThai.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblTrangThai.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblTrangThai.Location = new System.Drawing.Point(12, 36);
+            this.lblTrangThai.Name = "lblTrangThai";
+            this.lblTrangThai.Size = new System.Drawing.Size(130, 29);
+            this.lblTrangThai.TabIndex = 13;
+            this.lblTrangThai.Text = "Trạng thái";
+            this.lblTrangThai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FDuyetLuanVan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 702);
+            this.Controls.Add(this.groupBoxTraCuuDuyet);
             this.Controls.Add(this.panelTitle);
-            this.Controls.Add(this.groupBoxTraCuu);
             this.Controls.Add(this.flPanelDSLV);
             this.Name = "FDuyetLuanVan";
             this.Text = "FDuyetLuanVan";
             this.Load += new System.EventHandler(this.FDuyetLuanVan_Load);
             this.panelTitle.ResumeLayout(false);
-            this.groupBoxTraCuu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.comboxLoaiTraCuu)).EndInit();
+            this.groupBoxTraCuuDuyet.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cbbLoaiTraCuu)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -144,9 +147,9 @@
 
         private System.Windows.Forms.Panel panelTitle;
         private System.Windows.Forms.Label lblDuyet;
-        private System.Windows.Forms.GroupBox groupBoxTraCuu;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox comboxLoaiTraCuu;
-        private System.Windows.Forms.Label labelLoaiTraCuu;
         private System.Windows.Forms.FlowLayoutPanel flPanelDSLV;
+        private System.Windows.Forms.GroupBox groupBoxTraCuuDuyet;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox cbbLoaiTraCuu;
+        private System.Windows.Forms.Label lblTrangThai;
     }
 }

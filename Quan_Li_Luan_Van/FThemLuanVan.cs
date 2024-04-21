@@ -91,6 +91,7 @@ namespace Quan_Li_Luan_Van
             {
                 lvDao.ThemLuanVan(lv);
                 MessageBox.Show("Thêm thành công");
+                this.DialogResult = DialogResult.OK;
                 this.Hide();
             }
         }

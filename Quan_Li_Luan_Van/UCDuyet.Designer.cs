@@ -56,11 +56,11 @@
             // lbChuyenNganh
             // 
             this.lbChuyenNganh.AutoSize = true;
-            this.lbChuyenNganh.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbChuyenNganh.Font = new System.Drawing.Font("Leelawadee UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbChuyenNganh.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.lbChuyenNganh.Location = new System.Drawing.Point(103, 61);
             this.lbChuyenNganh.Name = "lbChuyenNganh";
-            this.lbChuyenNganh.Size = new System.Drawing.Size(186, 23);
+            this.lbChuyenNganh.Size = new System.Drawing.Size(183, 23);
             this.lbChuyenNganh.TabIndex = 18;
             this.lbChuyenNganh.Text = "Công nghệ phần mềm";
             this.lbChuyenNganh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -68,11 +68,11 @@
             // lbTenLV
             // 
             this.lbTenLV.AutoSize = true;
-            this.lbTenLV.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenLV.Font = new System.Drawing.Font("Leelawadee UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTenLV.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbTenLV.Location = new System.Drawing.Point(101, 19);
+            this.lbTenLV.Location = new System.Drawing.Point(101, 13);
             this.lbTenLV.Name = "lbTenLV";
-            this.lbTenLV.Size = new System.Drawing.Size(191, 27);
+            this.lbTenLV.Size = new System.Drawing.Size(203, 31);
             this.lbTenLV.TabIndex = 17;
             this.lbTenLV.Text = "Quản lí khách sạn";
             this.lbTenLV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -89,11 +89,11 @@
             // lbTrangThai
             // 
             this.lbTrangThai.AutoSize = true;
-            this.lbTrangThai.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTrangThai.Font = new System.Drawing.Font("Leelawadee UI Semilight", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTrangThai.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lbTrangThai.Location = new System.Drawing.Point(886, 0);
+            this.lbTrangThai.Location = new System.Drawing.Point(918, 14);
             this.lbTrangThai.Name = "lbTrangThai";
-            this.lbTrangThai.Size = new System.Drawing.Size(135, 23);
+            this.lbTrangThai.Size = new System.Drawing.Size(128, 23);
             this.lbTrangThai.TabIndex = 24;
             this.lbTrangThai.Text = "Đang chờ duyệt";
             this.lbTrangThai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
