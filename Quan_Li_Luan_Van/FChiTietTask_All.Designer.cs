@@ -31,9 +31,10 @@
             this.panelNoidung = new System.Windows.Forms.Panel();
             this.lblChat = new System.Windows.Forms.Label();
             this.fpnChat = new System.Windows.Forms.FlowLayoutPanel();
+            this.ucPhanHoi1 = new Quan_Li_Luan_Van.UCPhanHoi();
             this.txtPhanHoi = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
             this.lblPhanHoi = new System.Windows.Forms.Label();
-            this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtTienTrinh = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.lblTienTrinh = new System.Windows.Forms.Label();
             this.txtNoiDungNV = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
             this.lblNDTB = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@
             this.btnPhanHoi = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.lblThemNV = new System.Windows.Forms.Label();
             this.btnThoat = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.ucPhanHoi1 = new Quan_Li_Luan_Van.UCPhanHoi();
             this.panelNoidung.SuspendLayout();
             this.fpnChat.SuspendLayout();
             this.SuspendLayout();
@@ -54,7 +54,7 @@
             this.panelNoidung.Controls.Add(this.fpnChat);
             this.panelNoidung.Controls.Add(this.txtPhanHoi);
             this.panelNoidung.Controls.Add(this.lblPhanHoi);
-            this.panelNoidung.Controls.Add(this.kryptonTextBox1);
+            this.panelNoidung.Controls.Add(this.txtTienTrinh);
             this.panelNoidung.Controls.Add(this.lblTienTrinh);
             this.panelNoidung.Controls.Add(this.txtNoiDungNV);
             this.panelNoidung.Controls.Add(this.lblNDTB);
@@ -86,6 +86,14 @@
             this.fpnChat.Size = new System.Drawing.Size(561, 228);
             this.fpnChat.TabIndex = 36;
             // 
+            // ucPhanHoi1
+            // 
+            this.ucPhanHoi1.BackColor = System.Drawing.Color.LavenderBlush;
+            this.ucPhanHoi1.Location = new System.Drawing.Point(3, 3);
+            this.ucPhanHoi1.Name = "ucPhanHoi1";
+            this.ucPhanHoi1.Size = new System.Drawing.Size(555, 93);
+            this.ucPhanHoi1.TabIndex = 0;
+            // 
             // txtPhanHoi
             // 
             this.txtPhanHoi.Location = new System.Drawing.Point(12, 483);
@@ -113,34 +121,33 @@
             this.lblPhanHoi.Size = new System.Drawing.Size(95, 28);
             this.lblPhanHoi.TabIndex = 34;
             this.lblPhanHoi.Text = "Nhận xét";
-            this.lblPhanHoi.Click += new System.EventHandler(this.label1_Click);
             // 
-            // kryptonTextBox1
+            // txtTienTrinh
             // 
-            this.kryptonTextBox1.Location = new System.Drawing.Point(464, 33);
-            this.kryptonTextBox1.Name = "kryptonTextBox1";
-            this.kryptonTextBox1.Size = new System.Drawing.Size(119, 35);
-            this.kryptonTextBox1.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonTextBox1.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
-            this.kryptonTextBox1.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.kryptonTextBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtTienTrinh.Location = new System.Drawing.Point(464, 33);
+            this.txtTienTrinh.Name = "txtTienTrinh";
+            this.txtTienTrinh.Size = new System.Drawing.Size(119, 35);
+            this.txtTienTrinh.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.txtTienTrinh.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
+            this.txtTienTrinh.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.txtTienTrinh.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox1.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonTextBox1.StateCommon.Border.Rounding = 16;
-            this.kryptonTextBox1.StateCommon.Border.Width = 1;
-            this.kryptonTextBox1.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonTextBox1.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.kryptonTextBox1.StateDisabled.Border.Color1 = System.Drawing.Color.Blue;
-            this.kryptonTextBox1.StateDisabled.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.kryptonTextBox1.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtTienTrinh.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtTienTrinh.StateCommon.Border.Rounding = 16;
+            this.txtTienTrinh.StateCommon.Border.Width = 1;
+            this.txtTienTrinh.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.txtTienTrinh.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTienTrinh.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.txtTienTrinh.StateDisabled.Border.Color1 = System.Drawing.Color.Blue;
+            this.txtTienTrinh.StateDisabled.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.txtTienTrinh.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox1.StateDisabled.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonTextBox1.StateDisabled.Border.Rounding = 16;
-            this.kryptonTextBox1.StateDisabled.Border.Width = 1;
-            this.kryptonTextBox1.TabIndex = 33;
+            this.txtTienTrinh.StateDisabled.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtTienTrinh.StateDisabled.Border.Rounding = 16;
+            this.txtTienTrinh.StateDisabled.Border.Width = 1;
+            this.txtTienTrinh.TabIndex = 33;
             // 
             // lblTienTrinh
             // 
@@ -169,7 +176,6 @@
             this.txtNoiDungNV.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F);
             this.txtNoiDungNV.TabIndex = 29;
             this.txtNoiDungNV.Text = "";
-            this.txtNoiDungNV.TextChanged += new System.EventHandler(this.txtNoiDungNV_TextChanged);
             // 
             // lblNDTB
             // 
@@ -181,7 +187,6 @@
             this.lblNDTB.Size = new System.Drawing.Size(166, 28);
             this.lblNDTB.TabIndex = 26;
             this.lblNDTB.Text = "Nội dung chi tiết";
-            this.lblNDTB.Click += new System.EventHandler(this.lblNDTB_Click);
             // 
             // txtTenNV
             // 
@@ -220,7 +225,6 @@
             this.lblTenNV.Size = new System.Drawing.Size(136, 28);
             this.lblTenNV.TabIndex = 0;
             this.lblTenNV.Text = "Tên nhiệm vụ";
-            this.lblTenNV.Click += new System.EventHandler(this.lblTenNV_Click);
             // 
             // btnPhanHoi
             // 
@@ -254,14 +258,6 @@
             this.btnThoat.Values.Text = "Thoát";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // ucPhanHoi1
-            // 
-            this.ucPhanHoi1.BackColor = System.Drawing.Color.LavenderBlush;
-            this.ucPhanHoi1.Location = new System.Drawing.Point(3, 3);
-            this.ucPhanHoi1.Name = "ucPhanHoi1";
-            this.ucPhanHoi1.Size = new System.Drawing.Size(555, 93);
-            this.ucPhanHoi1.TabIndex = 0;
-            // 
             // FChiTietTask_All
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -275,7 +271,6 @@
             this.Name = "FChiTietTask_All";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi tiết nhiệm vụ";
-            this.Load += new System.EventHandler(this.FChiTietTask_GV_Load);
             this.panelNoidung.ResumeLayout(false);
             this.panelNoidung.PerformLayout();
             this.fpnChat.ResumeLayout(false);
@@ -293,7 +288,7 @@
         private System.Windows.Forms.Label lblTenNV;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnPhanHoi;
         private System.Windows.Forms.Label lblThemNV;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtTienTrinh;
         private System.Windows.Forms.Label lblTienTrinh;
         private ComponentFactory.Krypton.Toolkit.KryptonRichTextBox txtPhanHoi;
         private System.Windows.Forms.Label lblPhanHoi;

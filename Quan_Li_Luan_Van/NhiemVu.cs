@@ -15,6 +15,7 @@ namespace Quan_Li_Luan_Van
         private string trangThai;
         private string maLV;
 
+        public NhiemVu() { }
         public NhiemVu(string maNV, string tenNV, string noiDung, int tienTrinh, string trangThai, string maLV)
         {
             this.MaNV = maNV;

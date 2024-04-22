@@ -13,9 +13,11 @@ namespace Quan_Li_Luan_Van
     public partial class FChiTietTask_All : Form
     {
         private string maNV;
+        
         public FChiTietTask_All(string MaNV) : this()
         {
             this.maNV = MaNV;
+            LoadInfoTask();
         }
 
         public FChiTietTask_All()
@@ -23,31 +25,23 @@ namespace Quan_Li_Luan_Van
             InitializeComponent();
         }
 
-        private void FChiTietTask_GV_Load(object sender, EventArgs e)
+        public void LoadInfoTask()
+        {
+            ChiTietTaskDao taskDao = new ChiTietTaskDao(this.maNV);
+            NhiemVu nhiemVu = taskDao.GetTask(this.maNV);
+
+            if (nhiemVu != null && !nhiemVu.KiemTraNull())
+            {
+                txtTenNV.Text = nhiemVu.TenNV;
+                txtTienTrinh.Text = nhiemVu.TienTrinh.ToString() + "%";
+                txtNoiDungNV.Text = nhiemVu.NoiDung;
+            }
+        }
+
+        public void LoadPhanHoi()
         {
 
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTenNV_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblNDTB_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNoiDungNV_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();

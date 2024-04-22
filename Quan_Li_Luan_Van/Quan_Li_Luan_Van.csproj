@@ -74,6 +74,7 @@
     <Compile Include="ChinhLuanVanDAO.cs" />
     <Compile Include="ChiTietLuanVanDAO.cs" />
     <Compile Include="ChiTietLuanVanDuyetDAO.cs" />
+    <Compile Include="ChiTietTaskDao.cs" />
     <Compile Include="ChiTietThongBaoDAO.cs" />
     <Compile Include="FChamDiem.cs">
       <SubType>Form</SubType>
@@ -113,6 +114,7 @@
     </Compile>
     <Compile Include="GiaoVienDAO.cs" />
     <Compile Include="PersonDAO.cs" />
+    <Compile Include="PhanHoi.cs" />
     <Compile Include="SinhVienDAO.cs" />
     <Compile Include="ThongBao.cs" />
     <Compile Include="ThongTinCaNhanDAO.cs" />

@@ -13,6 +13,7 @@ namespace Quan_Li_Luan_Van
     public partial class UCTask : UserControl
     {
         private string maLV;
+        private string maNV;
         public UCTask()
         {
             InitializeComponent();
@@ -22,6 +23,7 @@ namespace Quan_Li_Luan_Van
         public Button BtnChiTiet { get => btnChiTiet; set => btnChiTiet = value; }
         public Label LblTienTrinh { get => lblTienTrinh; set => lblTienTrinh = value; }
         public string MaLV { get => maLV; set => maLV = value; }
+        public string MaNV { get => maNV; set => maNV = value; }
 
         private void UCTask_Load(object sender, EventArgs e)
         {
@@ -42,7 +44,7 @@ namespace Quan_Li_Luan_Van
 
         private void btnChiTiet_Click(object sender, EventArgs e)
         {
-            FChiTietTask_All fChiTietTask_GV = new FChiTietTask_All();
+            FChiTietTask_All fChiTietTask_GV = new FChiTietTask_All(maNV);
             fChiTietTask_GV.ShowDialog();
         }
     }

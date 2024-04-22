@@ -82,7 +82,6 @@
             this.txtTenGV.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenGV.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtTenGV.TabIndex = 14;
-            this.txtTenGV.Text = "Tất cả";
             // 
             // groupBoxTraCuuLuanVan
             // 

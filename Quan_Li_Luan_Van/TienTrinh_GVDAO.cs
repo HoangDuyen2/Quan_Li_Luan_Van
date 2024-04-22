@@ -31,6 +31,7 @@ namespace Quan_Li_Luan_Van
                 while (dataReader.Read())
                 {
                     UCTask uctask = new UCTask();
+                    uctask.MaNV = dataReader["MaNV"].ToString();
                     uctask.MaLV = maLV;
                     uctask.LblTenNV.Text = dataReader["TenNV"].ToString();
                     uctask.LblTienTrinh.Text = dataReader["TienTrinh"].ToString();

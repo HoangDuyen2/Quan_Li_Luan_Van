@@ -36,15 +36,10 @@ namespace Quan_Li_Luan_Van
             tientrinh.LoadDSTask(maLV, flPanelDSTask);
         }
 
-        private void btnThemLuanVan_Click(object sender, EventArgs e)
+        private void btnThemNhiemVu_Click(object sender, EventArgs e)
         {
             FThemNhiemVu fThemNhiemVu = new FThemNhiemVu(maLV);
             fThemNhiemVu.ShowDialog();
-        }
-
-        private void lblTenLV_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
