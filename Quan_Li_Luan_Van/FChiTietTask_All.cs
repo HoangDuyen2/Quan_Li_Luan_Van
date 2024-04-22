@@ -18,6 +18,7 @@ namespace Quan_Li_Luan_Van
         {
             this.maNV = MaNV;
             LoadInfoTask();
+            LoadPhanHoi();
         }
 
         public FChiTietTask_All()
@@ -40,11 +41,39 @@ namespace Quan_Li_Luan_Van
 
         public void LoadPhanHoi()
         {
-
+            ChiTietTaskDao taskDao = new ChiTietTaskDao(this.maNV);
+            taskDao.LoadListPhanHoi(this.maNV, fpnChat);
         }
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnPhanHoi_Click(object sender, EventArgs e)
+        {
+            ChiTietTaskDao taskDao = new ChiTietTaskDao(this.maNV);
+            PhanHoi ph = TaoPhanHoi();
+            if (!ph.checkNullPhanHoi())
+            {
+                MessageBox.Show("Vui lòng điền đủ thông tin");
+            }
+            else
+            {
+                taskDao.ThemPhanHoi(ph);
+                MessageBox.Show("Thêm thành công");
+                this.Close();
+            }
+
+        }
+
+        private PhanHoi TaoPhanHoi()
+        {
+            string ten = "Nguyễn Thùy An";
+            string noiDung = txtPhanHoi.Text;
+            DateTime thoiGian = DateTime.Now;
+            string chuoiThoiGian = thoiGian.ToString("yyyy-MM-dd HH:mm:ss");
+
+            return new PhanHoi(ten, chuoiThoiGian, noiDung, this.maNV);
         }
     }
 }

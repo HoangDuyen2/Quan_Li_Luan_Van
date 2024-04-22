@@ -235,6 +235,7 @@
             this.btnPhanHoi.Size = new System.Drawing.Size(169, 40);
             this.btnPhanHoi.TabIndex = 17;
             this.btnPhanHoi.Values.Text = "Gửi nhận xét";
+            this.btnPhanHoi.Click += new System.EventHandler(this.btnPhanHoi_Click);
             // 
             // lblThemNV
             // 

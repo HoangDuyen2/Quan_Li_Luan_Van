@@ -28,33 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblTenSV = new System.Windows.Forms.Label();
+            this.lblThoiGian = new System.Windows.Forms.Label();
+            this.lblTen = new System.Windows.Forms.Label();
             this.txtPhanHoi = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
             this.SuspendLayout();
             // 
-            // label3
+            // lblThoiGian
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Leelawadee UI Semilight", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label3.Location = new System.Drawing.Point(418, 6);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 17);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "09-04-2024 15:48:00";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.lblThoiGian.AutoSize = true;
+            this.lblThoiGian.Font = new System.Drawing.Font("Leelawadee UI Semilight", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThoiGian.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblThoiGian.Location = new System.Drawing.Point(418, 6);
+            this.lblThoiGian.Name = "lblThoiGian";
+            this.lblThoiGian.Size = new System.Drawing.Size(124, 17);
+            this.lblThoiGian.TabIndex = 6;
+            this.lblThoiGian.Text = "09-04-2024 15:48:00";
             // 
-            // lblTenSV
+            // lblTen
             // 
-            this.lblTenSV.AutoSize = true;
-            this.lblTenSV.Font = new System.Drawing.Font("Leelawadee UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenSV.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblTenSV.Location = new System.Drawing.Point(7, 6);
-            this.lblTenSV.Name = "lblTenSV";
-            this.lblTenSV.Size = new System.Drawing.Size(137, 17);
-            this.lblTenSV.TabIndex = 4;
-            this.lblTenSV.Text = "Lê Đức Minh Vương ";
+            this.lblTen.AutoSize = true;
+            this.lblTen.Font = new System.Drawing.Font("Leelawadee UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTen.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblTen.Location = new System.Drawing.Point(7, 6);
+            this.lblTen.Name = "lblTen";
+            this.lblTen.Size = new System.Drawing.Size(137, 17);
+            this.lblTen.TabIndex = 4;
+            this.lblTen.Text = "Lê Đức Minh Vương ";
             // 
             // txtPhanHoi
             // 
@@ -72,7 +71,6 @@
             this.txtPhanHoi.StateCommon.Content.Font = new System.Drawing.Font("Leelawadee UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhanHoi.TabIndex = 36;
             this.txtPhanHoi.Text = "Chức năng này có vai trò như thế nào";
-            this.txtPhanHoi.TextChanged += new System.EventHandler(this.txtPhanHoi_TextChanged);
             // 
             // UCPhanHoi
             // 
@@ -80,19 +78,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LavenderBlush;
             this.Controls.Add(this.txtPhanHoi);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.lblTenSV);
+            this.Controls.Add(this.lblThoiGian);
+            this.Controls.Add(this.lblTen);
             this.Name = "UCPhanHoi";
             this.Size = new System.Drawing.Size(555, 90);
-            this.Load += new System.EventHandler(this.UCPhanHoi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblTenSV;
+        private System.Windows.Forms.Label lblThoiGian;
+        private System.Windows.Forms.Label lblTen;
         private ComponentFactory.Krypton.Toolkit.KryptonRichTextBox txtPhanHoi;
     }
 }
