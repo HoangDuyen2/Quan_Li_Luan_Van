@@ -32,7 +32,6 @@
             this.lblChuyenNganh = new System.Windows.Forms.Label();
             this.lblTenLV = new System.Windows.Forms.Label();
             this.lblTrangThai = new System.Windows.Forms.Label();
-            this.btnChamDiem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnChiTiet = new System.Windows.Forms.Button();
             this.btnChinhSua = new System.Windows.Forms.Button();
@@ -77,22 +76,6 @@
             this.lblTrangThai.TabIndex = 25;
             this.lblTrangThai.Text = "Đã có nhóm";
             this.lblTrangThai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnChamDiem
-            // 
-            this.btnChamDiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
-            this.btnChamDiem.FlatAppearance.BorderSize = 0;
-            this.btnChamDiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChamDiem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnChamDiem.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnChamDiem.Image = global::Quan_Li_Luan_Van.Properties.Resources.icons8_grade_38;
-            this.btnChamDiem.Location = new System.Drawing.Point(816, 46);
-            this.btnChamDiem.Name = "btnChamDiem";
-            this.btnChamDiem.Size = new System.Drawing.Size(48, 42);
-            this.btnChamDiem.TabIndex = 28;
-            this.btnChamDiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnChamDiem.UseVisualStyleBackColor = false;
-            this.btnChamDiem.Click += new System.EventHandler(this.btnChamDiem_Click);
             // 
             // btnXoa
             // 
@@ -157,7 +140,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.btnChamDiem);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnChiTiet);
             this.Controls.Add(this.lblTrangThai);
@@ -182,6 +164,5 @@
         private System.Windows.Forms.Label lblTrangThai;
         private System.Windows.Forms.Button btnChiTiet;
         private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnChamDiem;
     }
 }

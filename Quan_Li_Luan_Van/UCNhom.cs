@@ -41,5 +41,11 @@ namespace Quan_Li_Luan_Van
             FThemThongBao fThemThongBao = new FThemThongBao(MaLV);
             fThemThongBao.ShowDialog();
         }
+
+        private void btnChamDiem_Click(object sender, EventArgs e)
+        {
+            FChamDiem fChamDiem = new FChamDiem();
+            fChamDiem.ShowDialog();
+        }
     }
 }
