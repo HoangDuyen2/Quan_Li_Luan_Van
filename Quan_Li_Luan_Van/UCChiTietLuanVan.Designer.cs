@@ -437,7 +437,7 @@
             this.lbTenMSSV2.Name = "lbTenMSSV2";
             this.lbTenMSSV2.Size = new System.Drawing.Size(110, 16);
             this.lbTenMSSV2.TabIndex = 85;
-            this.lbTenMSSV2.Text = "Tên Thành viên 1";
+            this.lbTenMSSV2.Text = "Tên Thành viên 2";
             // 
             // lbTenMSSV1
             // 
