@@ -20,56 +20,63 @@ namespace Quan_Li_Luan_Van
         }
         public void KhongTruyCap()
         {
-            TxtTVien1.Enabled = false; 
-            TxtChucNang.Enabled = false;
-            TxtChuyenNganh.Enabled = false;
-            TxtCongNghe.Enabled = false;
-            TxtNgonNgu.Enabled = false;
-            TxtYeuCau.Enabled = false;
-            TxtGVHD.Enabled = false;
-            TxtLinhVuc.Enabled = false;
-            TxtMaLuanVan.Enabled = false;
-            TxtTenLuanVan.Enabled = false;
+            TxtTVien11.Enabled = false; 
+            txtChucNang.Enabled = false;
+            txtChuyenNganh.Enabled = false;
+            txtCongNghe.Enabled = false;
+            txtNgonNgu.Enabled = false;
+            txtYeuCau.Enabled = false;
+            txtGVHD.Enabled = false;
+            txtLinhVuc.Enabled = false;
+            txtMaLuanVan.Enabled = false;
+            txtTenLuanVan.Enabled = false;
         }
         public void ThongTin(LuanVanDuyet luanVan)
         {
-            txtChucNang.Text = luanVan.getChucNang();
-            txtChuyenNganh.Text = luanVan.getChuyenNganh();
-            txtCongNghe.Text = luanVan.getCongNghe();
-            txtNgonNgu.Text = luanVan.getNgonNgu();
-            txtYeuCau.Text = luanVan.getYeuCau();
-            txtGVHD.Text = luanVan.getTenGV();
-            txtLinhVuc.Text = luanVan.getLinhVuc();
-            txtMaLuanVan.Text = luanVan.getMaLV();
-            txtTVien2.Text = luanVan.getMSSV2();
-            txtTVien1.Text = luanVan.getMSSV1();
-            txtTV3.Text = luanVan.getMSSV3();
-            txtTenLuanVan.Text = luanVan.getTenLV();
+            TxtChucNang1.Text = luanVan.ChucNang;
+            TxtChuyenNganh1.Text = luanVan.ChuyenNganh;
+            TxtCongNghe1.Text = luanVan.CongNghe;
+            TxtNgonNgu1.Text = luanVan.NgonNgu;
+            TxtYeuCau1.Text = luanVan.YeuCau;
+            TxtGVHD1.Text = luanVan.TenGV;
+            TxtLinhVuc1.Text = luanVan.LinhVuc;
+            TxtMaLuanVan1.Text = luanVan.MaLV;
+            TxtTVien21.Text = luanVan.MSSV21;
+            TxtTVien11.Text = luanVan.MSSV11;
+            TxtTV31.Text = luanVan.MSSV31;
+            TxtTenLuanVan1.Text = luanVan.TenLV;
+            LbTenMSSV1.Text = luanVan.TenMSSV1;
+            LbTenMSSV2.Text = luanVan.TenMSSV2;
+            LbTenMSSV3.Text = luanVan.TenMSSV3;
         }
-        public Label Label7 { get => label7; set => label7 = value; }
-        public Label Label6 { get => label6; set => label6 = value; }
-        public Label Label5 { get => label5; set => label5 = value; }
-        public Label Label4 { get => label4; set => label4 = value; }
-        public Label Label3 { get => label3; set => label3 = value; }
-        public Label LbSoLuong { get => lbSoLuong; set => lbSoLuong = value; }
-        public Label Label1 { get => label1; set => label1 = value; }
-        public Label Label2 { get => label2; set => label2 = value; }
-        public Label LbMoTaChiTiet { get => lbMoTaChiTiet; set => lbMoTaChiTiet = value; }
-        public Label LbMaLuanVan { get => lbMaLuanVan; set => lbMaLuanVan = value; }
-        public Label LbTenLuanVan { get => lbTenLuanVan; set => lbTenLuanVan = value; }
-        public Label LblCTLV { get => lblCTLV; set => lblCTLV = value; }
-        public KryptonTextBox TxtChucNang { get => txtChucNang; set => txtChucNang = value; }
-        public KryptonTextBox TxtChuyenNganh { get => txtChuyenNganh; set => txtChuyenNganh = value; }
-        public KryptonTextBox TxtTVien2 { get => txtTVien2; set => txtTVien2 = value; }
-        public KryptonTextBox TxtCongNghe { get => txtCongNghe; set => txtCongNghe = value; }
-        public KryptonTextBox TxtNgonNgu { get => txtNgonNgu; set => txtNgonNgu = value; }
-        public KryptonTextBox TxtTVien1 { get => txtTVien1; set => txtTVien1 = value; }
-        public KryptonTextBox TxtTV3 { get => txtTV3; set => txtTV3 = value; }
-        public KryptonTextBox TxtLinhVuc { get => txtLinhVuc; set => txtLinhVuc = value; }
-        public KryptonTextBox TxtGVHD { get => txtGVHD; set => txtGVHD = value; }
-        public KryptonTextBox TxtYeuCau { get => txtYeuCau; set => txtYeuCau = value; }
-        public KryptonTextBox TxtTenLuanVan { get => txtTenLuanVan; set => txtTenLuanVan = value; }
-        public KryptonTextBox TxtMaLuanVan { get => txtMaLuanVan; set => txtMaLuanVan = value; }
-        public Panel PanelNoiDung { get => panelNoiDung; set => panelNoiDung = value; }
+        public Label LbNgonNgu { get => lbNgonNgu; set => lbNgonNgu = value; }
+        public Label LbCongNghe { get => lbCongNghe; set => lbCongNghe = value; }
+        public Label LbLinhVuc { get => lbLinhVuc; set => lbLinhVuc = value; }
+        public Label LbChuyenNganh { get => lbChuyenNganh; set => lbChuyenNganh = value; }
+        public Label LbMSSV1 { get => lbMSSV1; set => lbMSSV1 = value; }
+        public Label LbChucNang { get => lbChucNang; set => lbChucNang = value; }
+        public Label LbTenGVHD { get => lbTenGVHD; set => lbTenGVHD = value; }
+        public Label LbMoTaChiTiet1 { get => lbMoTaChiTiet; set => lbMoTaChiTiet = value; }
+        public Label LbMaLuanVan1 { get => lbMaLuanVan; set => lbMaLuanVan = value; }
+        public Label LbTenLuanVan1 { get => lbTenLuanVan; set => lbTenLuanVan = value; }
+        public Label LblCTLV1 { get => lblCTLV; set => lblCTLV = value; }
+        public KryptonTextBox TxtChucNang1 { get => txtChucNang; set => txtChucNang = value; }
+        public KryptonTextBox TxtChuyenNganh1 { get => txtChuyenNganh; set => txtChuyenNganh = value; }
+        public KryptonTextBox TxtCongNghe1 { get => txtCongNghe; set => txtCongNghe = value; }
+        public KryptonTextBox TxtNgonNgu1 { get => txtNgonNgu; set => txtNgonNgu = value; }
+        public KryptonTextBox TxtTVien11 { get => txtTVien1; set => txtTVien1 = value; }
+        public KryptonTextBox TxtLinhVuc1 { get => txtLinhVuc; set => txtLinhVuc = value; }
+        public KryptonTextBox TxtGVHD1 { get => txtGVHD; set => txtGVHD = value; }
+        public KryptonTextBox TxtYeuCau1 { get => txtYeuCau; set => txtYeuCau = value; }
+        public KryptonTextBox TxtTenLuanVan1 { get => txtTenLuanVan; set => txtTenLuanVan = value; }
+        public KryptonTextBox TxtMaLuanVan1 { get => txtMaLuanVan; set => txtMaLuanVan = value; }
+        public Panel PanelNoiDung1 { get => panelNoiDung; set => panelNoiDung = value; }
+        public KryptonTextBox TxtTV31 { get => txtTV3; set => txtTV3 = value; }
+        public Label LbMSSV3 { get => lbMSSV3; set => lbMSSV3 = value; }
+        public KryptonTextBox TxtTVien21 { get => txtTVien2; set => txtTVien2 = value; }
+        public Label LbMSSV2 { get => lbMSSV2; set => lbMSSV2 = value; }
+        public Label LbTenMSSV2 { get => lbTenMSSV2; set => lbTenMSSV2 = value; }
+        public Label LbTenMSSV1 { get => lbTenMSSV1; set => lbTenMSSV1 = value; }
+        public Label LbTenMSSV3 { get => lbTenMSSV3; set => lbTenMSSV3 = value; }
     }
 }

@@ -49,16 +49,19 @@ namespace Quan_Li_Luan_Van
         }
         public void ThongTin()
         {
-            txtMaLuanVan.Text = luanVan.getMaLV();
-            txtTenLuanVan.Text = luanVan.getTenLV();
-            txtChuyenNganh.Text = luanVan.getChuyenNganh();
-            txtMSSV1.Text = luanVan.getMSSV1();
-            txtMSSV2.Text = luanVan.getMSSV2();
-            txtMSSV3.Text = luanVan.getMSSV3();
-            txtLinhVuc.Text = luanVan.getLinhVuc();
-            txtCongNghe.Text = luanVan.getCongNghe();
-            txtNgonNgu.Text = luanVan.getNgonNgu();
-            txtChucNang.Text = luanVan.getChucNang();
+            txtMaLuanVan.Text = luanVan.MaLV;
+            txtTenLuanVan.Text = luanVan.TenLV;
+            txtChuyenNganh.Text = luanVan.ChuyenNganh;
+            txtMSSV1.Text = luanVan.MSSV11;
+            txtMSSV2.Text = luanVan.MSSV21;
+            txtMSSV3.Text = luanVan.MSSV31;
+            txtLinhVuc.Text = luanVan.LinhVuc;
+            txtCongNghe.Text = luanVan.CongNghe;
+            txtNgonNgu.Text = luanVan.NgonNgu;
+            txtChucNang.Text = luanVan.ChucNang;
+            lbTenSV1.Text = luanVan.TenMSSV1;
+            lbTenSV2.Text = luanVan.TenMSSV2;
+            lbTenSV3.Text = luanVan.TenMSSV3;
         }
 
         private void CapNhatDuLieu()

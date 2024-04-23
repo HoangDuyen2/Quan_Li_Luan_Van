@@ -27,9 +27,9 @@ namespace Quan_Li_Luan_Van
                 SqlDataReader dataReader = cmd.ExecuteReader();
                 if (dataReader.Read())
                 {
-                    luanVan.setMSSV1(dataReader["MSSV1"].ToString());
-                    luanVan.setMSSV2(dataReader["MSSV2"].ToString());
-                    luanVan.setMSSV3(dataReader["MSSV3"].ToString());
+                    luanVan.MSSV11 = dataReader["MSSV1"].ToString();
+                    luanVan.MSSV21 = dataReader["MSSV2"].ToString();
+                    luanVan.MSSV31 = dataReader["MSSV3"].ToString();
                 }
             }
             catch (Exception ex)
@@ -41,10 +41,41 @@ namespace Quan_Li_Luan_Van
                 conn.Close();
             }
         }
-        
+        public void TenThanhVien(string MSSV)
+        {
+            string quenry = "SELECT TenSV " +
+                            "FROM SinhVien " +
+                            "WHERE MSSV = '" + MSSV + "'";
+            try
+            {
+                conn.Open();
+                SqlCommand cmd1 = new SqlCommand(quenry, conn);
+                SqlDataReader dataReader1 = cmd1.ExecuteReader();
+                if (dataReader1.Read())
+                {
+                    if (luanVan.TenMSSV1 == null)
+                        luanVan.TenMSSV1 = dataReader1["TenSV"].ToString();
+                    else if (luanVan.TenMSSV2 == null)
+                        luanVan.TenMSSV2 = dataReader1["TenSV"].ToString();
+                    else luanVan.TenMSSV3 = dataReader1["TenSV"].ToString();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
         public LuanVanDuyet Load(string maLV)
         {
             DSThanhVien(maLV);
+            TenThanhVien(luanVan.MSSV11);
+            TenThanhVien(luanVan.MSSV21);
+            TenThanhVien(luanVan.MSSV31);
             string query = "SELECT LuanVan.MaLV, LuanVan.TenLV, GiangVien.TenGV, " +
                             "LuanVan.ChuyenNganh, LuanVan.LinhVuc, LuanVan.ChucNang, LuanVan.CongNghe, " +
                             " LuanVan.NgonNgu, LuanVan.YeuCau, LuanVan.TrangThai " +
@@ -57,16 +88,16 @@ namespace Quan_Li_Luan_Van
                 SqlDataReader dataReader = cmd.ExecuteReader();
                 if (dataReader.Read())
                 {
-                    luanVan.setMaLV(dataReader["MaLV"].ToString());
-                    luanVan.setTenGV(dataReader["TenGV"].ToString());
-                    luanVan.setTenLV(dataReader["TenLV"].ToString());
-                    luanVan.setCongNghe(dataReader["CongNghe"].ToString());
-                    luanVan.setChuyenNganh(dataReader["ChuyenNganh"].ToString());
-                    luanVan.setLinhVuc(dataReader["LinhVuc"].ToString());
-                    luanVan.setChucNang(dataReader["ChucNang"].ToString());
-                    luanVan.setNgonNgu(dataReader["NgonNgu"].ToString());
-                    luanVan.setYeuCau(dataReader["YeuCau"].ToString());
-                    luanVan.setTrangThai(dataReader["TrangThai"].ToString());
+                    luanVan.MaLV = dataReader["MaLV"].ToString();
+                    luanVan.TenGV = dataReader["TenGV"].ToString();
+                    luanVan.TenLV = dataReader["TenLV"].ToString();
+                    luanVan.CongNghe = dataReader["CongNghe"].ToString();
+                    luanVan.ChuyenNganh = dataReader["ChuyenNganh"].ToString();
+                    luanVan.LinhVuc = dataReader["LinhVuc"].ToString();
+                    luanVan.ChucNang = dataReader["ChucNang"].ToString();
+                    luanVan.NgonNgu = dataReader["NgonNgu"].ToString();
+                    luanVan.YeuCau = dataReader["YeuCau"].ToString();
+                    luanVan.TrangThai = dataReader["TrangThai"].ToString();
                 }
             }
             catch (Exception ex)

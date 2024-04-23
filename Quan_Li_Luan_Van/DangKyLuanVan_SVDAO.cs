@@ -23,15 +23,15 @@ namespace Quan_Li_Luan_Van
         public void DangKy(LuanVanDuyet luanVan)
         {
             string query1;
-            if (luanVan.getMSSV3() == "")
+            if (luanVan.MSSV31 == "")
             {
                 query1 = string.Format("INSERT INTO DuyetDangKy (MaLV, MSSV1, MSSV2, MSSV3, TinhTrang) " + "VALUES ('{0}','{1}','{2}',NULL,N'Đang chờ duyệt')",
-                luanVan.getMaLV(), luanVan.getMSSV1(), luanVan.getMSSV2());
+                luanVan.MaLV, luanVan.MSSV11, luanVan.MSSV21);
             }
             else
             {
                 query1 = string.Format("INSERT INTO DuyetDangKy (MaLV, MSSV1, MSSV2, MSSV3, TinhTrang) " + "VALUES ('{0}','{1}','{2}','{3}',N'Đang chờ duyệt')",
-                luanVan.getMaLV(), luanVan.getMSSV1(), luanVan.getMSSV2(), luanVan.getMSSV3());
+                luanVan.MaLV, luanVan.MSSV11, luanVan.MSSV21, luanVan.MSSV31);
             }
             dbConnection.ThucThi(query1);
         }
@@ -107,25 +107,25 @@ namespace Quan_Li_Luan_Van
         }
         public bool checkNguoiDangKy(LuanVanDuyet luanVan)
         {
-            if(luanVan.getMSSV1() != "")
+            if(luanVan.MSSV11 != "")
             {
-                if (checkTungNguoiDangKy(luanVan.getMSSV1()))
+                if (checkTungNguoiDangKy(luanVan.MSSV11))
                 {
                     MessageBox.Show("MSSV1 đã có nhóm");
                     return false;
                 }
             }
-            if (luanVan.getMSSV2() != "")
+            if (luanVan.MSSV21 != "")
             {
-                if (checkTungNguoiDangKy(luanVan.getMSSV2()))
+                if (checkTungNguoiDangKy(luanVan.MSSV21))
                 {
                     MessageBox.Show("MSSV2 đã có nhóm");
                     return false;
                 }
             }
-            if (luanVan.getMSSV3() != "")
+            if (luanVan.MSSV31 != "")
             {
-                if (checkTungNguoiDangKy(luanVan.getMSSV3()))
+                if (checkTungNguoiDangKy(luanVan.MSSV31))
                 {
                     MessageBox.Show("MSSV3 đã có nhóm");
                     return false;

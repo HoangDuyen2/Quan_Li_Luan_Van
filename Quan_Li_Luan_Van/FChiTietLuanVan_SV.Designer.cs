@@ -40,7 +40,7 @@
             this.btnChapNhan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnChapNhan.Image = global::Quan_Li_Luan_Van.Properties.Resources.approve1;
             this.btnChapNhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChapNhan.Location = new System.Drawing.Point(485, 662);
+            this.btnChapNhan.Location = new System.Drawing.Point(495, 702);
             this.btnChapNhan.Name = "btnChapNhan";
             this.btnChapNhan.Size = new System.Drawing.Size(146, 42);
             this.btnChapNhan.TabIndex = 61;
@@ -54,16 +54,16 @@
             // 
             this.ucChiTietLuanVan1.Location = new System.Drawing.Point(3, -17);
             this.ucChiTietLuanVan1.Name = "ucChiTietLuanVan1";
-            this.ucChiTietLuanVan1.Size = new System.Drawing.Size(1060, 715);
+            this.ucChiTietLuanVan1.Size = new System.Drawing.Size(1060, 716);
             this.ucChiTietLuanVan1.TabIndex = 62;
             // 
             // FChiTietLuanVan_SV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1064, 702);
-            this.Controls.Add(this.btnChapNhan);
+            this.ClientSize = new System.Drawing.Size(1064, 745);
             this.Controls.Add(this.ucChiTietLuanVan1);
+            this.Controls.Add(this.btnChapNhan);
             this.Name = "FChiTietLuanVan_SV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi tiết Luận Văn";

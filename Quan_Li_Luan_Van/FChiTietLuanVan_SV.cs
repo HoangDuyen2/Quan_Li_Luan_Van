@@ -30,20 +30,22 @@ namespace Quan_Li_Luan_Van
         public FChiTietLuanVan_SV()
         {
             InitializeComponent();
-            ucChiTietLuanVan1.TxtTVien2.Enter += txtTVien2_GetFocus;
-            ucChiTietLuanVan1.TxtTV3.Enter += txtTV3_GetFocus;
-            ucChiTietLuanVan1.TxtTVien2.LostFocus += txtTVien2_LostFocus;
-            ucChiTietLuanVan1.TxtTV3.LostFocus += txtTV3_LostFocus;
+            ucChiTietLuanVan1.TxtTVien21.Enter += txtTVien2_GetFocus;
+            ucChiTietLuanVan1.TxtTV31.Enter += txtTV3_GetFocus;
+            ucChiTietLuanVan1.TxtTVien21.LostFocus += txtTVien2_LostFocus;
+            ucChiTietLuanVan1.TxtTV31.LostFocus += txtTV3_LostFocus;
         }
 
         private void txtTV3_LostFocus(object sender, EventArgs e)
         {
             hide.Show(sender, e);
+            ucChiTietLuanVan1.LbTenMSSV3.Text = luanVan.TenMSSV3;
         }
 
         private void txtTVien2_LostFocus(object sender, EventArgs e)
         {
             hide.Show(sender,e);
+            ucChiTietLuanVan1.LbTenMSSV2.Text = luanVan.TenMSSV2;
         }
 
 
@@ -62,7 +64,8 @@ namespace Quan_Li_Luan_Van
         {
             CapNhatDuLieu();
             ucChiTietLuanVan1.ThongTin(luanVan);
-            ucChiTietLuanVan1.TxtTVien1.Text = person.getMaso();
+            ucChiTietLuanVan1.TxtTVien11.Text = person.getMaso();
+            ucChiTietLuanVan1.LbTenMSSV1.Text = luanVan.TenMSSV1;
             ucChiTietLuanVan1.KhongTruyCap();
         }
 
@@ -73,9 +76,9 @@ namespace Quan_Li_Luan_Van
 
         private void btnChapNhan_Click(object sender, EventArgs e)
         {
-            luanVan.setMSSV1(person.getMaso());
-            luanVan.setMSSV2(ucChiTietLuanVan1.TxtTVien2.Text);
-            luanVan.setMSSV3(ucChiTietLuanVan1.TxtTV3.Text);
+            luanVan.MSSV11 = person.getMaso();
+            luanVan.MSSV21 = ucChiTietLuanVan1.TxtTVien21.Text;
+            luanVan.MSSV31 = ucChiTietLuanVan1.TxtTV31.Text;
             
             if(dangKy.checkNguoiDangKy(luanVan))
                 dangKy.DangKy(luanVan);

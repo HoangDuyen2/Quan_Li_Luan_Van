@@ -38,19 +38,22 @@
             this.txtLinhVuc = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtChucNang = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbNgonNgu = new System.Windows.Forms.Label();
+            this.lbCongNghe = new System.Windows.Forms.Label();
+            this.lbLinhVuc = new System.Windows.Forms.Label();
             this.btnChapNhan = new System.Windows.Forms.Button();
             this.btnTuChoi = new System.Windows.Forms.Button();
             this.lbID = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbChuyenNganh = new System.Windows.Forms.Label();
             this.lbTenLuanVan = new System.Windows.Forms.Label();
             this.lbMaLuanVan = new System.Windows.Forms.Label();
             this.lblmssv2 = new System.Windows.Forms.Label();
             this.txtMSSV2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtMSSV3 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.LBMSSV3 = new System.Windows.Forms.Label();
+            this.lbTenSV1 = new System.Windows.Forms.Label();
+            this.lbTenSV2 = new System.Windows.Forms.Label();
+            this.lbTenSV3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtTenLuanVan
@@ -242,38 +245,38 @@
             this.label2.TabIndex = 88;
             this.label2.Text = "  ";
             // 
-            // label7
+            // lbNgonNgu
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Image = global::Quan_Li_Luan_Van.Properties.Resources.major1;
-            this.label7.Location = new System.Drawing.Point(102, 296);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(24, 27);
-            this.label7.TabIndex = 87;
-            this.label7.Text = "  ";
+            this.lbNgonNgu.AutoSize = true;
+            this.lbNgonNgu.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNgonNgu.Image = global::Quan_Li_Luan_Van.Properties.Resources.major1;
+            this.lbNgonNgu.Location = new System.Drawing.Point(102, 296);
+            this.lbNgonNgu.Name = "lbNgonNgu";
+            this.lbNgonNgu.Size = new System.Drawing.Size(24, 27);
+            this.lbNgonNgu.TabIndex = 87;
+            this.lbNgonNgu.Text = "  ";
             // 
-            // label6
+            // lbCongNghe
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Image = global::Quan_Li_Luan_Van.Properties.Resources.major1;
-            this.label6.Location = new System.Drawing.Point(564, 202);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(24, 27);
-            this.label6.TabIndex = 86;
-            this.label6.Text = "  ";
+            this.lbCongNghe.AutoSize = true;
+            this.lbCongNghe.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCongNghe.Image = global::Quan_Li_Luan_Van.Properties.Resources.major1;
+            this.lbCongNghe.Location = new System.Drawing.Point(564, 202);
+            this.lbCongNghe.Name = "lbCongNghe";
+            this.lbCongNghe.Size = new System.Drawing.Size(24, 27);
+            this.lbCongNghe.TabIndex = 86;
+            this.lbCongNghe.Text = "  ";
             // 
-            // label5
+            // lbLinhVuc
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Image = global::Quan_Li_Luan_Van.Properties.Resources.major1;
-            this.label5.Location = new System.Drawing.Point(564, 296);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(24, 27);
-            this.label5.TabIndex = 85;
-            this.label5.Text = "  ";
+            this.lbLinhVuc.AutoSize = true;
+            this.lbLinhVuc.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLinhVuc.Image = global::Quan_Li_Luan_Van.Properties.Resources.major1;
+            this.lbLinhVuc.Location = new System.Drawing.Point(564, 296);
+            this.lbLinhVuc.Name = "lbLinhVuc";
+            this.lbLinhVuc.Size = new System.Drawing.Size(24, 27);
+            this.lbLinhVuc.TabIndex = 85;
+            this.lbLinhVuc.Text = "  ";
             // 
             // btnChapNhan
             // 
@@ -321,15 +324,15 @@
             this.lbID.TabIndex = 48;
             this.lbID.Text = "  ";
             // 
-            // label1
+            // lbChuyenNganh
             // 
-            this.label1.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Image = global::Quan_Li_Luan_Van.Properties.Resources.major1;
-            this.label1.Location = new System.Drawing.Point(89, 195);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 43);
-            this.label1.TabIndex = 46;
-            this.label1.Text = "  ";
+            this.lbChuyenNganh.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbChuyenNganh.Image = global::Quan_Li_Luan_Van.Properties.Resources.major1;
+            this.lbChuyenNganh.Location = new System.Drawing.Point(89, 195);
+            this.lbChuyenNganh.Name = "lbChuyenNganh";
+            this.lbChuyenNganh.Size = new System.Drawing.Size(54, 43);
+            this.lbChuyenNganh.TabIndex = 46;
+            this.lbChuyenNganh.Text = "  ";
             // 
             // lbTenLuanVan
             // 
@@ -425,18 +428,48 @@
             this.LBMSSV3.TabIndex = 90;
             this.LBMSSV3.Text = "  ";
             // 
+            // lbTenSV1
+            // 
+            this.lbTenSV1.AutoSize = true;
+            this.lbTenSV1.Location = new System.Drawing.Point(179, 433);
+            this.lbTenSV1.Name = "lbTenSV1";
+            this.lbTenSV1.Size = new System.Drawing.Size(44, 16);
+            this.lbTenSV1.TabIndex = 92;
+            this.lbTenSV1.Text = "label3";
+            // 
+            // lbTenSV2
+            // 
+            this.lbTenSV2.AutoSize = true;
+            this.lbTenSV2.Location = new System.Drawing.Point(480, 433);
+            this.lbTenSV2.Name = "lbTenSV2";
+            this.lbTenSV2.Size = new System.Drawing.Size(44, 16);
+            this.lbTenSV2.TabIndex = 93;
+            this.lbTenSV2.Text = "label4";
+            // 
+            // lbTenSV3
+            // 
+            this.lbTenSV3.AutoSize = true;
+            this.lbTenSV3.Location = new System.Drawing.Point(778, 433);
+            this.lbTenSV3.Name = "lbTenSV3";
+            this.lbTenSV3.Size = new System.Drawing.Size(44, 16);
+            this.lbTenSV3.TabIndex = 94;
+            this.lbTenSV3.Text = "label8";
+            // 
             // FChiTietDuyet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 702);
+            this.Controls.Add(this.lbTenSV3);
+            this.Controls.Add(this.lbTenSV2);
+            this.Controls.Add(this.lbTenSV1);
             this.Controls.Add(this.txtMSSV3);
             this.Controls.Add(this.LBMSSV3);
             this.Controls.Add(this.txtChucNang);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lbNgonNgu);
+            this.Controls.Add(this.lbCongNghe);
+            this.Controls.Add(this.lbLinhVuc);
             this.Controls.Add(this.txtCongNghe);
             this.Controls.Add(this.txtNgonNgu);
             this.Controls.Add(this.txtLinhVuc);
@@ -447,7 +480,7 @@
             this.Controls.Add(this.txtMSSV1);
             this.Controls.Add(this.lbID);
             this.Controls.Add(this.txtChuyenNganh);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbChuyenNganh);
             this.Controls.Add(this.txtTenLuanVan);
             this.Controls.Add(this.txtMaLuanVan);
             this.Controls.Add(this.lbTenLuanVan);
@@ -468,14 +501,14 @@
         private System.Windows.Forms.Label lbTenLuanVan;
         private System.Windows.Forms.Label lbMaLuanVan;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtChuyenNganh;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbChuyenNganh;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtMSSV1;
         private System.Windows.Forms.Label lbID;
         private System.Windows.Forms.Button btnTuChoi;
         private System.Windows.Forms.Button btnChapNhan;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbNgonNgu;
+        private System.Windows.Forms.Label lbCongNghe;
+        private System.Windows.Forms.Label lbLinhVuc;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtCongNghe;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtNgonNgu;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtLinhVuc;
@@ -485,6 +518,9 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtMSSV2;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtMSSV3;
         private System.Windows.Forms.Label LBMSSV3;
+        private System.Windows.Forms.Label lbTenSV1;
+        private System.Windows.Forms.Label lbTenSV2;
+        private System.Windows.Forms.Label lbTenSV3;
     }
     #region Windows Form Designer generated code
 
