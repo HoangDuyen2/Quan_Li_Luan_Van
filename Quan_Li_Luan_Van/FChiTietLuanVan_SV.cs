@@ -18,8 +18,8 @@ namespace Quan_Li_Luan_Van
         private string _message;
         Hide_Show hide = new Hide_Show();
         LuanVanDuyet luanVan = new LuanVanDuyet();
-        ChiTietLuanVanDAO chiTiet = new ChiTietLuanVanDAO();
-        DangKyLuanVan_SVDAO dangKy = new DangKyLuanVan_SVDAO();
+        PersonDAO chiTiet = new PersonDAO();
+        SinhVienDAO dangKy = new SinhVienDAO();
         Person person = null;
         public FChiTietLuanVan_SV(string message,Person person) : this()
         {
@@ -67,6 +67,8 @@ namespace Quan_Li_Luan_Van
             ucChiTietLuanVan1.TxtTVien11.Text = person.getMaso();
             ucChiTietLuanVan1.LbTenMSSV1.Text = luanVan.TenMSSV1;
             ucChiTietLuanVan1.KhongTruyCap();
+            if(dangKy.checkTungNguoiDangKy(person.getMaso()))
+                btnChapNhan.Enabled = false;
         }
 
         private void CapNhatDuLieu()

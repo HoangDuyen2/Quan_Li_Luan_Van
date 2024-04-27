@@ -13,7 +13,7 @@ namespace Quan_Li_Luan_Van
     public partial class FTrangChu : Form
     {
         Person personChinh = null;
-        TrangChuSVDAO sVDAO = new TrangChuSVDAO();
+        SinhVienDAO sVDAO = new SinhVienDAO();
         string maLV = "";
 
         public FTrangChu(Person person)

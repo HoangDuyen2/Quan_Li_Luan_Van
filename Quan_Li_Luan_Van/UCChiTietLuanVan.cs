@@ -20,7 +20,7 @@ namespace Quan_Li_Luan_Van
         }
         public void KhongTruyCap()
         {
-            TxtTVien11.Enabled = false; 
+            TxtTVien11.Enabled = false;
             txtChucNang.Enabled = false;
             txtChuyenNganh.Enabled = false;
             txtCongNghe.Enabled = false;

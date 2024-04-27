@@ -16,7 +16,7 @@ namespace Quan_Li_Luan_Van
     {
         Hide_Show hide = new Hide_Show();
         Person person = null;
-        DangKyLuanVan_SVDAO dangKy = new DangKyLuanVan_SVDAO();
+        SinhVienDAO dangKy = new SinhVienDAO();
         public FDangKyLuanVan(Person person)
         {
             InitializeComponent();
@@ -37,13 +37,7 @@ namespace Quan_Li_Luan_Van
 
         private void FDKLV_Load(object sender, EventArgs e)
         {
-            dangKy.Load_UC_Con(flPanelDSLV,dangKy.Load(),person);
-        }
-
-        private void btnDangKi_Click(object sender, EventArgs e)
-        {
-            FDangKyLuanVanMoi dklvmoi = new FDangKyLuanVanMoi();
-            dklvmoi.ShowDialog();
+            dangKy.Load_UC_Con(flPanelDSLV,dangKy.LoadDKLV(),person);
         }
 
         private void buttonTimKiem_Click(object sender, EventArgs e)

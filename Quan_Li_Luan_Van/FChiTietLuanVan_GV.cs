@@ -14,7 +14,7 @@ namespace Quan_Li_Luan_Van
     public partial class FChiTietLuanVan_GV : Form
     {
         private string _message;
-        ChiTietLuanVanDAO chiTiet = new ChiTietLuanVanDAO();
+        PersonDAO chiTiet = new PersonDAO();
         LuanVanDuyet luanVan = new LuanVanDuyet();
         public FChiTietLuanVan_GV(string message) : this()
         {

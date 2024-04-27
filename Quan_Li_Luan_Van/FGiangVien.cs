@@ -14,7 +14,7 @@ namespace Quan_Li_Luan_Van
     public partial class FGiangVien : Form
     {
         TaiKhoan taiKhoan;
-        TrangChinhDAO trangChinh = new TrangChinhDAO();
+        PersonDAO trangChinh = new PersonDAO();
         Person person = null;
         public FGiangVien(TaiKhoan taiKhoan)
         {
@@ -50,12 +50,6 @@ namespace Quan_Li_Luan_Van
             childForm.BringToFront();
             childForm.Show();
         }
-        private void buttonHome_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FTrangChu(person), sender);
-            FGiangVien_Load(sender,e);
-        }
-
         private void btnDangKy_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FDanhSachLuanVan(), sender);

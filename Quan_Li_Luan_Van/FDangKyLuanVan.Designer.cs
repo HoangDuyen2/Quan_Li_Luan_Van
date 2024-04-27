@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnDangKi = new System.Windows.Forms.Button();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTenGV = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -42,23 +41,6 @@
             this.groupBoxTraCuuLuanVan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbboxChuyenNganh)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnDangKi
-            // 
-            this.btnDangKi.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnDangKi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDangKi.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnDangKi.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnDangKi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangKi.Location = new System.Drawing.Point(802, 645);
-            this.btnDangKi.Name = "btnDangKi";
-            this.btnDangKi.Size = new System.Drawing.Size(250, 38);
-            this.btnDangKi.TabIndex = 21;
-            this.btnDangKi.Text = "Đăng ký luận văn mới";
-            this.btnDangKi.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnDangKi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDangKi.UseVisualStyleBackColor = false;
-            this.btnDangKi.Click += new System.EventHandler(this.btnDangKi_Click);
             // 
             // panelTitle
             // 
@@ -209,7 +191,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1058, 686);
             this.Controls.Add(this.flPanelDSLV);
-            this.Controls.Add(this.btnDangKi);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.groupBoxTraCuuLuanVan);
             this.Name = "FDangKyLuanVan";
@@ -227,8 +208,6 @@
 
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.BindingSource qLLUANVANDataSetBindingSource;
-        //private QLLUANVANDataSet qLLUANVANDataSet;
-        private System.Windows.Forms.Button btnDangKi;
         private System.Windows.Forms.Panel panelTitle;
         private System.Windows.Forms.Label label1;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtTenGV;

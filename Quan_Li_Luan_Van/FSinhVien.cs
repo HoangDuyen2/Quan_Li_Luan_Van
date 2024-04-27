@@ -18,7 +18,7 @@ namespace Quan_Li_Luan_Van
     public partial class FSinhVien : Form
     {
         TaiKhoan taiKhoan;
-        TrangChinhDAO trangChinh = new TrangChinhDAO();
+        PersonDAO trangChinh = new PersonDAO();
         Person person = null;
         public FSinhVien(TaiKhoan taiKhoan)
         {

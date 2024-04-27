@@ -5,30 +5,91 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace Quan_Li_Luan_Van
 {
-    public class DuyetLuanVanDAO
+    public class GiangVienDAO
     {
-        private string maGV;
+        DBConnection dBConnection = new DBConnection();
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
-        DBConnection connection = new DBConnection();
-        string quenry;
-        public DuyetLuanVanDAO() { }
-        public DuyetLuanVanDAO(string maGV)
+        string sqlQuery;
+        public void ThemThongBao(ThongBao tb)
         {
-            this.MaGV = maGV;
-            this.quenry = $"SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, DuyetDangKy.TinhTrang " +
-                          $"FROM LuanVan JOIN DuyetDangKy ON " +
-                          $"LuanVan.MaLV = DuyetDangKy.MaLV and LuanVan.MaGV = '{maGV}'";
+            sqlQuery = string.Format("INSERT INTO ThongBao(TieuDe, NoiDung, ThoiGian, MaLV) VALUES (N'{0}', N'{1}', '{2}', '{3}')", tb.TieuDe, tb.NoiDung, tb.ThoiGian, tb.MaLV);
+            dBConnection.ThucThi(sqlQuery);
         }
-        public string MaGV { get => maGV; set => maGV = value; }
+        #region Form Danh sách các luận văn
+        string queryDSLV = "SELECT LuanVan.MaLV, LuanVan.TenLV, LuanVan.ChuyenNganh, GiangVien.TenGV, LuanVan.TrangThai " +
+                                   "FROM LuanVan " +
+                                   "JOIN GiangVien ON LuanVan.MaGV = GiangVien.MaGV ";
         public string Load()
         {
-            return quenry;
+            
+            return queryDSLV;
+        }
+        public string chonChuyenNganh(string text)
+        {
+            if (text != "Tất cả")
+            {
+                string chuyenNganh = "WHERE LuanVan.ChuyenNganh = N'" + text + "'";
+                return queryDSLV+chuyenNganh;
+            }
+            return queryDSLV;
+        }
+        public string timKiem(string text)
+        {
+            if (text != "")
+            {
+                string tenGV = "WHERE GiangVien.TenGV LIKE N'%" + text + "%'";
+                return queryDSLV + tenGV;
+            }
+            return queryDSLV;
         }
         public void getInfo(string query, FlowLayoutPanel panel)
+        {
+            try
+            {
+                conn.Open();
+                panel.Controls.Clear();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader dataReader = cmd.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    UCLV_GV uclv = new UCLV_GV();
+                    uclv.MaLV = dataReader["MaLV"].ToString();
+                    uclv.LblTenLV.Text = dataReader["TenLV"].ToString();
+                    uclv.LblChuyenNganh.Text = dataReader["ChuyenNganh"].ToString();
+                    uclv.LblTenGV.Text = dataReader["TenGV"].ToString();
+                    if (dataReader["TrangThai"].ToString() == "Chưa có nhóm")
+                        uclv.LblTrangThai.ForeColor = System.Drawing.Color.Green;
+                    uclv.LblTrangThai.Text = dataReader["TrangThai"].ToString();
+
+                    panel.Controls.Add(uclv);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        #endregion
+        #region Form Duyệt luận văn
+        private string maGV;
+        public string MaGV { get => maGV; set => maGV = value; }
+        public string LoadDLV(string maGV)
+        {
+            MaGV = maGV;
+            string quenry = "SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, DuyetDangKy.TinhTrang " +
+                          "FROM LuanVan JOIN DuyetDangKy ON " +
+                          "LuanVan.MaLV = DuyetDangKy.MaLV and LuanVan.MaGV = '" + maGV + "'";
+            return quenry;
+        }
+        public void getInfoDLV(string query, FlowLayoutPanel panel)
         {
             try
             {
@@ -77,20 +138,20 @@ namespace Quan_Li_Luan_Van
                 query2 = string.Format("INSERT INTO DSThanhVien (MaLV, MSSV1, MSSV2, MSSV3) " + "VALUES ('{0}','{1}','{2}','{3}')",
                 luanVan.MaLV, luanVan.MSSV11, luanVan.MSSV21, luanVan.MSSV31);
             }
-            connection.ThucThi(query);
-            connection.ThucThi(query1);
-            connection.ThucThi(query2);
+            dBConnection.ThucThi(query);
+            dBConnection.ThucThi(query1);
+            dBConnection.ThucThi(query2);
         }
         public void TuChoi(LuanVanDuyet luanVan)
         {
             string query1 = string.Format("DELETE FROM DSThanhVien WHERE MaLV = '{0}'", luanVan.MaLV);
             string query2 = string.Format("UPDATE LuanVan SET TrangThai = N'{0}' WHERE MaLV = '{1}'", "Chưa có nhóm", luanVan.MaLV);
             string query = string.Format("UPDATE DuyetDangKy SET TinhTrang = N'{0}' WHERE MaLV = '{1}'", "Từ chối", luanVan.MaLV);
-            connection.ThucThi(query);
-            connection.ThucThi(query1);
-            connection.ThucThi(query2);
+            dBConnection.ThucThi(query);
+            dBConnection.ThucThi(query1);
+            dBConnection.ThucThi(query2);
         }
-        public string traCuu(string text)
+        public string traCuu(string text, string quenry)
         {
             string query = "SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, DuyetDangKy.TinhTrang " +
            "FROM LuanVan " +
@@ -101,8 +162,9 @@ namespace Quan_Li_Luan_Van
                 quenry = query + tracuu;
             }
             else quenry = query;
-            connection.ThucThi(quenry);
+            dBConnection.ThucThi(quenry);
             return quenry;
         }
+        #endregion
     }
 }

@@ -14,7 +14,7 @@ namespace Quan_Li_Luan_Van
     public partial class FThemThongBao : Form
     {
         private string maLV;
-        GiaoVienDAO GiaoVienDAO = new GiaoVienDAO();
+        GiangVienDAO GiaoVienDAO = new GiangVienDAO();
         public FThemThongBao()
         {
             InitializeComponent();

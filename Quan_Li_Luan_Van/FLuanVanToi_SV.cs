@@ -13,7 +13,7 @@ namespace Quan_Li_Luan_Van
     public partial class FLuanVanToi_SV : Form
     {
         Person person = null;
-        LuanVanCuaToiSVDAO luanVan = new LuanVanCuaToiSVDAO();
+        SinhVienDAO luanVan = new SinhVienDAO();
         public FLuanVanToi_SV(Person person)
         {
             InitializeComponent();
@@ -22,7 +22,12 @@ namespace Quan_Li_Luan_Van
 
         private void FLuanVanToi_SV_Load(object sender, EventArgs e)
         {
-            luanVan.Load(person,flPanelDSTask);
+            string maLV = luanVan.getMaLV(person.getMaso());
+            if (maLV != null)
+            {
+                luanVan.ShowData(flPanelDSTask, luanVan.LoadLVCT(maLV));
+            }
+            else MessageBox.Show("Sinh viên hiện chưa tham gia vào luận văn nào. Vui lòng đăng kí luận văn trước", "Thông báo");
         }
     }
 }

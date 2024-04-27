@@ -15,7 +15,7 @@ namespace Quan_Li_Luan_Van
 {
     public partial class FDangNhap : Form
     {
-        TaiKhoanDAO taiKhoan = new TaiKhoanDAO();
+        PersonDAO taiKhoan = new PersonDAO();
         Hide_Show hide = new Hide_Show();
         public FDangNhap()
         {
@@ -47,7 +47,7 @@ namespace Quan_Li_Luan_Van
         }
         private void FLogin_Load(object sender, EventArgs e)
         {
-            taiKhoan.Load();
+            taiKhoan.LoadTK();
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
@@ -74,20 +74,6 @@ namespace Quan_Li_Luan_Van
 
             }
 
-            /*            if (rbtnSV.Checked)
-                        {
-                            this.Hide();
-                            FSinhVien sv = new FSinhVien();
-                            sv.ShowDialog();
-                            this.Close();
-                        }
-                        else
-                        {
-                            this.Hide();
-                            FGiangVien gv = new FGiangVien();
-                            gv.ShowDialog();
-                            this.Close();
-                        }*/
         }
     }
 }

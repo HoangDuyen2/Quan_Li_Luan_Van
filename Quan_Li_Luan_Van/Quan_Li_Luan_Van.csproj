@@ -72,7 +72,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChinhLuanVanDAO.cs" />
-    <Compile Include="ChiTietLuanVanDAO.cs" />
     <Compile Include="ChiTietLuanVanDuyetDAO.cs" />
     <Compile Include="ChiTietTaskDao.cs" />
     <Compile Include="ChiTietThongBaoDAO.cs" />
@@ -112,12 +111,17 @@
     <Compile Include="FXoaNhiemVu_TB.Designer.cs">
       <DependentUpon>FXoaNhiemVu_TB.cs</DependentUpon>
     </Compile>
-    <Compile Include="GiaoVienDAO.cs" />
+    <Compile Include="GiangVienDAO.cs" />
     <Compile Include="PersonDAO.cs" />
     <Compile Include="PhanHoi.cs" />
     <Compile Include="SinhVienDAO.cs" />
     <Compile Include="ThongBao.cs" />
-    <Compile Include="ThongTinCaNhanDAO.cs" />
+    <Compile Include="UCChiTietLuanVan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCChiTietLuanVan.Designer.cs">
+      <DependentUpon>UCChiTietLuanVan.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCPhanHoi.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -131,10 +135,8 @@
       <DependentUpon>UCUpdateTask.cs</DependentUpon>
     </Compile>
     <Compile Include="XoaLuanVanDAO.cs" />
-    <Compile Include="DangKyLuanVan_SVDAO.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="DSNhomDAO.cs" />
-    <Compile Include="DuyetLuanVanDAO.cs" />
     <Compile Include="FBaoCaoTienDo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,12 +184,6 @@
     </Compile>
     <Compile Include="FDangKyLuanVan.Designer.cs">
       <DependentUpon>FDangKyLuanVan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FDangKyLuanVanMoi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FDangKyLuanVanMoi.Designer.cs">
-      <DependentUpon>FDangKyLuanVanMoi.cs</DependentUpon>
     </Compile>
     <Compile Include="FDuyetLuanVan.cs">
       <SubType>Form</SubType>
@@ -250,14 +246,12 @@
       <DependentUpon>FXoaLuanVan_TB.cs</DependentUpon>
     </Compile>
     <Compile Include="Hide_Show.cs" />
-    <Compile Include="LuanVanCuaToiSVDAO.cs" />
     <Compile Include="LuanVanDuyet.cs" />
     <Compile Include="LuanVanToiDAO.cs" />
     <Compile Include="NhiemVu.cs" />
     <Compile Include="ThemLuanVanDAO.cs" />
     <Compile Include="ThemNhiemVuDAO.cs" />
     <Compile Include="TienTrinh_GVDAO.cs" />
-    <Compile Include="TrangChinhDAO.cs" />
     <Compile Include="FSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -296,7 +290,6 @@
     </Compile>
     <Compile Include="GiangVien.cs" />
     <Compile Include="LuanVan.cs" />
-    <Compile Include="DSLuanVanDAO.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -314,15 +307,6 @@
     </Compile>
     <Compile Include="SinhVien.cs" />
     <Compile Include="TaiKhoan.cs" />
-    <Compile Include="TaiKhoanDAO.cs" />
-    <Compile Include="TrangChuGVDAO.cs" />
-    <Compile Include="TrangChuSVDAO.cs" />
-    <Compile Include="UCChiTietLuanVan.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UCChiTietLuanVan.Designer.cs">
-      <DependentUpon>UCChiTietLuanVan.cs</DependentUpon>
-    </Compile>
     <Compile Include="UCDuyet.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -401,9 +385,6 @@
     <EmbeddedResource Include="FDangKyLuanVan.resx">
       <DependentUpon>FDangKyLuanVan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FDangKyLuanVanMoi.resx">
-      <DependentUpon>FDangKyLuanVanMoi.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FDuyetLuanVan.resx">
       <DependentUpon>FDuyetLuanVan.cs</DependentUpon>
     </EmbeddedResource>
@@ -479,9 +460,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FThemLuanVan.resx">
       <DependentUpon>FThemLuanVan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UCChiTietLuanVan.resx">
-      <DependentUpon>UCChiTietLuanVan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCDuyet.resx">
       <DependentUpon>UCDuyet.cs</DependentUpon>
