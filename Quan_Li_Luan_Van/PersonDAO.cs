@@ -265,7 +265,7 @@ namespace Quan_Li_Luan_Van
         }
         public void chinhSuaNhiemVu(NhiemVu nhiemvu)
         {
-            string sqlSua = string.Format("UPDATE NhiemVu SET TenNV = '{0}', NoiDung = '{1}' WHERE MaNV = '{2}' "
+            string sqlSua = string.Format("UPDATE NhiemVu SET TenNV = N'{0}', NoiDung = N'{1}' WHERE MaNV = '{2}' "
                 , nhiemvu.TenNV, nhiemvu.NoiDung, nhiemvu.MaNV);
             dBConnection.ThucThi(sqlSua);
         }
