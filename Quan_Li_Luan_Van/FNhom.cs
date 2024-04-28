@@ -28,7 +28,7 @@ namespace Quan_Li_Luan_Van
         
         private void FNhom_Load(object sender, EventArgs e)
         {
-            dsnhom.LoadDSNhom(query,flpanelDSNhom);
+            dsnhom.LoadDSNhom(query,flpanelDSNhom,maGV);
         }
     }
 }

@@ -30,7 +30,7 @@ namespace Quan_Li_Luan_Van
             return query;
         }
         public string MaGV { get => maGV; set => maGV = value; }
-        public void LoadDSNhom(string query, FlowLayoutPanel panel)
+        public void LoadDSNhom(string query, FlowLayoutPanel panel,string maGV)
         {           
             try
             {
@@ -41,6 +41,7 @@ namespace Quan_Li_Luan_Van
                 while (dataReader.Read())
                 {
                     UCNhom uclv = new UCNhom();
+                    uclv.MaGV = maGV;
                     uclv.MaLV = dataReader["MaLV"].ToString();
                     uclv.LblTenLV.Text = dataReader["TenLV"].ToString();
                     uclv.LblChuyenNganh.Text = dataReader["ChuyenNganh"].ToString();

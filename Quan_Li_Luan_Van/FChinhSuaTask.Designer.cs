@@ -57,6 +57,7 @@
             // 
             // txtMaNV
             // 
+            this.txtMaNV.Enabled = false;
             this.txtMaNV.Location = new System.Drawing.Point(16, 43);
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(555, 35);
@@ -168,6 +169,7 @@
             this.btnThem.Size = new System.Drawing.Size(169, 40);
             this.btnThem.TabIndex = 17;
             this.btnThem.Values.Text = "Lưu Chỉnh Sửa";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // lblThemNV
             // 

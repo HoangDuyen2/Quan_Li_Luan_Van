@@ -15,7 +15,7 @@ namespace Quan_Li_Luan_Van
         {
             conn = new SqlConnection(Properties.Settings.Default.cnnStr);
         }
-        public void LoadDSTask(string maLV, FlowLayoutPanel panel)
+        public void LoadDSTask(string maLV, FlowLayoutPanel panel,string maGV)
         {
             string query = "SELECT * " +
                     "FROM NhiemVu " +
@@ -31,6 +31,7 @@ namespace Quan_Li_Luan_Van
                 while (dataReader.Read())
                 {
                     UCTask uctask = new UCTask();
+                    uctask.MaNguoi = maGV;
                     uctask.MaNV = dataReader["MaNV"].ToString();
                     uctask.MaLV = maLV;
                     uctask.LblTenNV.Text = dataReader["TenNV"].ToString();

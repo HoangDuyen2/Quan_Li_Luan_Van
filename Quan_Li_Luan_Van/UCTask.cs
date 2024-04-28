@@ -14,6 +14,7 @@ namespace Quan_Li_Luan_Van
     {
         private string maLV;
         private string maNV;
+        private string maNguoi;
         public UCTask()
         {
             InitializeComponent();
@@ -24,6 +25,7 @@ namespace Quan_Li_Luan_Van
         public Label LblTienTrinh { get => lblTienTrinh; set => lblTienTrinh = value; }
         public string MaLV { get => maLV; set => maLV = value; }
         public string MaNV { get => maNV; set => maNV = value; }
+        public string MaNguoi { get => maNguoi; set => maNguoi = value; }
 
         private void UCTask_Load(object sender, EventArgs e)
         {
@@ -32,8 +34,8 @@ namespace Quan_Li_Luan_Van
 
         private void btnChinhSua_Click(object sender, EventArgs e)
         {
-            FChinhSuaTask task = new FChinhSuaTask();
-            task.Show();
+            FChinhSuaTask task = new FChinhSuaTask(MaNV,MaNguoi);
+            task.ShowDialog();
         }
 
         private void btnTienTrinh_Click(object sender, EventArgs e)

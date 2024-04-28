@@ -246,7 +246,7 @@ namespace Quan_Li_Luan_Van
         {
             if (maLV != "")
             {
-                string quenry = "SELECT LuanVan.MaLV, NhiemVu.TenNV, NhiemVu.TienTrinh " +
+                string quenry = "SELECT LuanVan.MaLV, NhiemVu.TenNV, NhiemVu.TienTrinh, NhiemVu.MaNV, NhiemVu.MaNguoiTao " +
                          "FROM NhiemVu, LuanVan " +
                          "WHERE NhiemVu.MaLV = LuanVan.MaLV AND LuanVan.MaLV = '" + maLV + "'";
                 return quenry;
@@ -264,7 +264,8 @@ namespace Quan_Li_Luan_Van
                 while (dataReader.Read())
                 {
                     UCTask uclv = new UCTask();
-
+                    uclv.MaNV = dataReader["MaNV"].ToString();
+                    uclv.MaNguoi = dataReader["MaNguoiTao"].ToString();
                     uclv.LblTenNV.Text = dataReader["TenNV"].ToString();
                     uclv.LblTienTrinh.Text = dataReader["TienTrinh"].ToString();
 

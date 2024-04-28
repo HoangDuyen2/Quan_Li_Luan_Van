@@ -14,16 +14,17 @@ namespace Quan_Li_Luan_Van
     public partial class FThemNhiemVu : Form
     {
         private string maLV;
-        ThemNhiemVuDAO nvDao = new ThemNhiemVuDAO();
-
+        private string maGV;
+        PersonDAO nvDao = new PersonDAO();
         public FThemNhiemVu()
         {
             InitializeComponent();
         }
 
-        public FThemNhiemVu(string maLV) : this()
+        public FThemNhiemVu(string maLV,string maGV) : this()
         {
             this.maLV = maLV;
+            this.maGV = maGV;
         }
 
         private void FThemNhiemVu_Load(object sender, EventArgs e)
@@ -36,7 +37,8 @@ namespace Quan_Li_Luan_Van
             string maNV = txtMaNV.Text;
             string tenNV = txtTenNV.Text;
             string noiDung = txtNoiDungNV.Text;
-            return new NhiemVu(maNV, tenNV, noiDung, 0, "Chưa hoàn thành", maLV);
+            string maNguoiTao = maGV;
+            return new NhiemVu(maNV, tenNV, noiDung, 0, "Chưa hoàn thành", maNguoiTao, maLV);
         }
         private void btnThem_Click(object sender, EventArgs e)
         {

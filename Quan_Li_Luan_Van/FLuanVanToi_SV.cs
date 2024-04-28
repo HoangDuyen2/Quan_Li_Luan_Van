@@ -29,5 +29,11 @@ namespace Quan_Li_Luan_Van
             }
             else MessageBox.Show("Sinh viên hiện chưa tham gia vào luận văn nào. Vui lòng đăng kí luận văn trước", "Thông báo");
         }
+
+        private void btnThemNhiemVu_Click(object sender, EventArgs e)
+        {
+            FThemNhiemVu fThemNhiemVu = new FThemNhiemVu(luanVan.getMaLV(person.getMaso()), person.getMaso());
+            fThemNhiemVu.ShowDialog();
+        }
     }
 }

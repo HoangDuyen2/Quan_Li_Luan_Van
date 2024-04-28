@@ -32,9 +32,9 @@
             this.panelTitle = new System.Windows.Forms.Panel();
             this.lblDSLuanVanCuaToi = new System.Windows.Forms.Label();
             this.groupBoxTraCuuLuanVan = new System.Windows.Forms.GroupBox();
+            this.lblTrangThai = new System.Windows.Forms.Label();
             this.cbboxTrangThai = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.flPanelDSLV = new System.Windows.Forms.FlowLayoutPanel();
-            this.lblTrangThai = new System.Windows.Forms.Label();
             this.panelTitle.SuspendLayout();
             this.groupBoxTraCuuLuanVan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbboxTrangThai)).BeginInit();
@@ -47,7 +47,7 @@
             this.btnThemLuanVan.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnThemLuanVan.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnThemLuanVan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThemLuanVan.Location = new System.Drawing.Point(854, 660);
+            this.btnThemLuanVan.Location = new System.Drawing.Point(880, 660);
             this.btnThemLuanVan.Name = "btnThemLuanVan";
             this.btnThemLuanVan.Size = new System.Drawing.Size(184, 42);
             this.btnThemLuanVan.TabIndex = 25;
@@ -90,6 +90,17 @@
             this.groupBoxTraCuuLuanVan.TabStop = false;
             this.groupBoxTraCuuLuanVan.Text = "Tra cứu luận văn";
             // 
+            // lblTrangThai
+            // 
+            this.lblTrangThai.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblTrangThai.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblTrangThai.Location = new System.Drawing.Point(1, 40);
+            this.lblTrangThai.Name = "lblTrangThai";
+            this.lblTrangThai.Size = new System.Drawing.Size(130, 29);
+            this.lblTrangThai.TabIndex = 18;
+            this.lblTrangThai.Text = "Trạng thái";
+            this.lblTrangThai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // cbboxTrangThai
             // 
             this.cbboxTrangThai.DropDownWidth = 261;
@@ -130,17 +141,6 @@
             this.flPanelDSLV.Name = "flPanelDSLV";
             this.flPanelDSLV.Size = new System.Drawing.Size(1064, 517);
             this.flPanelDSLV.TabIndex = 26;
-            // 
-            // lblTrangThai
-            // 
-            this.lblTrangThai.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblTrangThai.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblTrangThai.Location = new System.Drawing.Point(1, 40);
-            this.lblTrangThai.Name = "lblTrangThai";
-            this.lblTrangThai.Size = new System.Drawing.Size(130, 29);
-            this.lblTrangThai.TabIndex = 18;
-            this.lblTrangThai.Text = "Trạng thái";
-            this.lblTrangThai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FLuanVanToi
             // 

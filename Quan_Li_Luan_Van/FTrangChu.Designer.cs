@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.panelChucnang = new System.Windows.Forms.Panel();
+            this.lbNoiDungTB = new System.Windows.Forms.Label();
+            this.btnTimKiem = new System.Windows.Forms.Button();
             this.lblTieuDe = new System.Windows.Forms.Label();
             this.dtNgayThang = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.lblChonngay = new System.Windows.Forms.Label();
             this.txtTimkiem = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.lblThongbao = new System.Windows.Forms.Label();
             this.flpanelDSThongBao = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnTimKiem = new System.Windows.Forms.Button();
-            this.lbNoiDungTB = new System.Windows.Forms.Label();
             this.panelChucnang.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +56,36 @@
             this.panelChucnang.Name = "panelChucnang";
             this.panelChucnang.Size = new System.Drawing.Size(1050, 127);
             this.panelChucnang.TabIndex = 5;
+            // 
+            // lbNoiDungTB
+            // 
+            this.lbNoiDungTB.AutoSize = true;
+            this.lbNoiDungTB.BackColor = System.Drawing.SystemColors.Control;
+            this.lbNoiDungTB.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNoiDungTB.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbNoiDungTB.Location = new System.Drawing.Point(424, 90);
+            this.lbNoiDungTB.Name = "lbNoiDungTB";
+            this.lbNoiDungTB.Size = new System.Drawing.Size(80, 19);
+            this.lbNoiDungTB.TabIndex = 56;
+            this.lbNoiDungTB.Text = "Nội dung";
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnTimKiem.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnTimKiem.Image = global::Quan_Li_Luan_Van.Properties.Resources.find;
+            this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimKiem.Location = new System.Drawing.Point(858, 75);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(158, 42);
+            this.btnTimKiem.TabIndex = 55;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // lblTieuDe
             // 
@@ -97,7 +127,7 @@
             this.lblChonngay.BackColor = System.Drawing.SystemColors.Control;
             this.lblChonngay.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChonngay.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblChonngay.Location = new System.Drawing.Point(29, 90);
+            this.lblChonngay.Location = new System.Drawing.Point(27, 90);
             this.lblChonngay.Name = "lblChonngay";
             this.lblChonngay.Size = new System.Drawing.Size(91, 19);
             this.lblChonngay.TabIndex = 16;
@@ -136,42 +166,13 @@
             // 
             // flpanelDSThongBao
             // 
+            this.flpanelDSThongBao.AutoScroll = true;
             this.flpanelDSThongBao.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.flpanelDSThongBao.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpanelDSThongBao.Location = new System.Drawing.Point(0, 127);
             this.flpanelDSThongBao.Name = "flpanelDSThongBao";
             this.flpanelDSThongBao.Size = new System.Drawing.Size(1050, 532);
             this.flpanelDSThongBao.TabIndex = 6;
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnTimKiem.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnTimKiem.Image = global::Quan_Li_Luan_Van.Properties.Resources.find;
-            this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiem.Location = new System.Drawing.Point(858, 75);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(158, 42);
-            this.btnTimKiem.TabIndex = 55;
-            this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTimKiem.UseVisualStyleBackColor = false;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
-            // 
-            // lbNoiDungTB
-            // 
-            this.lbNoiDungTB.AutoSize = true;
-            this.lbNoiDungTB.BackColor = System.Drawing.SystemColors.Control;
-            this.lbNoiDungTB.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNoiDungTB.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbNoiDungTB.Location = new System.Drawing.Point(428, 90);
-            this.lbNoiDungTB.Name = "lbNoiDungTB";
-            this.lbNoiDungTB.Size = new System.Drawing.Size(80, 19);
-            this.lbNoiDungTB.TabIndex = 56;
-            this.lbNoiDungTB.Text = "Nội dung";
             // 
             // FTrangChu
             // 

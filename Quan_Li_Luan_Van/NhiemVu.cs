@@ -14,15 +14,16 @@ namespace Quan_Li_Luan_Van
         private int tienTrinh;
         private string trangThai;
         private string maLV;
-
+        private string maNguoiTao;
         public NhiemVu() { }
-        public NhiemVu(string maNV, string tenNV, string noiDung, int tienTrinh, string trangThai, string maLV)
+        public NhiemVu(string maNV, string tenNV, string noiDung, int tienTrinh, string trangThai, string maNguoiTao, string maLV)
         {
             this.MaNV = maNV;
             this.TenNV = tenNV;
             this.NoiDung = noiDung;
             this.TienTrinh = tienTrinh;
             this.TrangThai = trangThai;
+            this.maNguoiTao = maNguoiTao;
             this.MaLV = maLV;
         }
 
@@ -43,6 +44,7 @@ namespace Quan_Li_Luan_Van
         public string NoiDung { get => noiDung; set => noiDung = value; }
         public int TienTrinh { get => tienTrinh; set => tienTrinh = value; }
         public string TrangThai { get => trangThai; set => trangThai = value; }
+        public string MaNguoiTao { get => maNguoiTao; set => maNguoiTao = value; }
         public string MaLV { get => maLV; set => maLV = value; }
 
     }

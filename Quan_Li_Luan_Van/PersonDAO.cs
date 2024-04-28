@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -214,6 +215,98 @@ namespace Quan_Li_Luan_Van
         {
             TaiKhoan taiKhoan = new TaiKhoan(username, password, chucVu);
             return taiKhoan;
+        }
+        #endregion
+        #region Form Nhiệm vụ
+        public NhiemVu LoadNhiemVu(string maNV)
+        {
+            string query = "SELECT * " +
+                           "FROM NhiemVu " +
+                           "WHERE MaNV = @MaNV";
+
+            try
+            {
+                conn.Open();
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@MaNV", maNV);
+
+                SqlDataReader dataReader = cmd.ExecuteReader();
+                if (dataReader.Read())
+                {
+                    int tienTrinh;
+                    if (!int.TryParse(dataReader[3].ToString(), out tienTrinh))
+                        tienTrinh = 0;
+
+                    return new NhiemVu(dataReader[0].ToString(), dataReader[1].ToString(), dataReader[2].ToString(), tienTrinh,
+                        dataReader[4].ToString(), dataReader[5].ToString(), dataReader[6].ToString());
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        public void ThemNhiemVu(NhiemVu nhiemvu)
+        {
+            string sqlThem = string.Format("INSERT INTO NhiemVu(MaNV, TenNV, NoiDung, TienTrinh, TrangThai, MaNguoiTao, MaLV) " +
+                "VALUES (N'{0}', N'{1}', N'{2}', '{3}', N'{4}', '{5}', '{6}')",
+                nhiemvu.MaNV, nhiemvu.TenNV, nhiemvu.NoiDung, nhiemvu.TienTrinh, nhiemvu.TrangThai, nhiemvu.MaNguoiTao, nhiemvu.MaLV);
+            dBConnection.ThucThi(sqlThem);
+        }
+        public void chinhSuaNhiemVu(NhiemVu nhiemvu)
+        {
+            string sqlSua = string.Format("UPDATE NhiemVu SET TenNV = '{0}', NoiDung = '{1}' WHERE MaNV = '{2}' "
+                , nhiemvu.TenNV, nhiemvu.NoiDung, nhiemvu.MaNV);
+            dBConnection.ThucThi(sqlSua);
+        }
+        public bool checkMaNguoi(string maNguoi)
+        {
+            string sqlStr = string.Format("SELECT * FROM NhiemVu WHERE MaNguoiTao = '{0}'", maNguoi);
+            if (KiemTra(sqlStr))
+            {
+                return true;
+            }
+            return false;
+        }
+        public bool KiemTra(string sqlStr)
+        {
+            bool check = true;
+            try
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand(sqlStr, conn);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    check = true;
+                }
+                else
+                {
+                    check = false;
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return check;
         }
         #endregion
     }

@@ -30,20 +30,22 @@
         {
             this.flPanelDSTask = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBoxTraCuuLuanVan = new System.Windows.Forms.GroupBox();
+            this.labelTieuDe = new System.Windows.Forms.Label();
             this.comboxLoaiTraCuu = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.labelLoaiTraCuu = new System.Windows.Forms.Label();
             this.buttonTimKiem = new System.Windows.Forms.Button();
-            this.labelTieuDe = new System.Windows.Forms.Label();
+            this.btnThemNhiemVu = new System.Windows.Forms.Button();
             this.groupBoxTraCuuLuanVan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboxLoaiTraCuu)).BeginInit();
             this.SuspendLayout();
             // 
             // flPanelDSTask
             // 
+            this.flPanelDSTask.AutoScroll = true;
             this.flPanelDSTask.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.flPanelDSTask.Location = new System.Drawing.Point(0, 123);
             this.flPanelDSTask.Name = "flPanelDSTask";
-            this.flPanelDSTask.Size = new System.Drawing.Size(1067, 580);
+            this.flPanelDSTask.Size = new System.Drawing.Size(1067, 535);
             this.flPanelDSTask.TabIndex = 30;
             // 
             // groupBoxTraCuuLuanVan
@@ -59,6 +61,18 @@
             this.groupBoxTraCuuLuanVan.Size = new System.Drawing.Size(1073, 121);
             this.groupBoxTraCuuLuanVan.TabIndex = 29;
             this.groupBoxTraCuuLuanVan.TabStop = false;
+            // 
+            // labelTieuDe
+            // 
+            this.labelTieuDe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
+            this.labelTieuDe.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTieuDe.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.labelTieuDe.Location = new System.Drawing.Point(18, 4);
+            this.labelTieuDe.Name = "labelTieuDe";
+            this.labelTieuDe.Size = new System.Drawing.Size(269, 41);
+            this.labelTieuDe.TabIndex = 18;
+            this.labelTieuDe.Text = "LUẬN VĂN CỦA TÔI";
+            this.labelTieuDe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // comboxLoaiTraCuu
             // 
@@ -116,23 +130,29 @@
             this.buttonTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonTimKiem.UseVisualStyleBackColor = false;
             // 
-            // labelTieuDe
+            // btnThemNhiemVu
             // 
-            this.labelTieuDe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
-            this.labelTieuDe.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTieuDe.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelTieuDe.Location = new System.Drawing.Point(18, 4);
-            this.labelTieuDe.Name = "labelTieuDe";
-            this.labelTieuDe.Size = new System.Drawing.Size(269, 41);
-            this.labelTieuDe.TabIndex = 18;
-            this.labelTieuDe.Text = "LUẬN VĂN CỦA TÔI";
-            this.labelTieuDe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnThemNhiemVu.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnThemNhiemVu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThemNhiemVu.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnThemNhiemVu.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnThemNhiemVu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThemNhiemVu.Location = new System.Drawing.Point(883, 659);
+            this.btnThemNhiemVu.Name = "btnThemNhiemVu";
+            this.btnThemNhiemVu.Size = new System.Drawing.Size(184, 42);
+            this.btnThemNhiemVu.TabIndex = 31;
+            this.btnThemNhiemVu.Text = "Thêm Nhiệm Vụ";
+            this.btnThemNhiemVu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnThemNhiemVu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThemNhiemVu.UseVisualStyleBackColor = false;
+            this.btnThemNhiemVu.Click += new System.EventHandler(this.btnThemNhiemVu_Click);
             // 
             // FLuanVanToi_SV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 702);
+            this.Controls.Add(this.btnThemNhiemVu);
             this.Controls.Add(this.flPanelDSTask);
             this.Controls.Add(this.groupBoxTraCuuLuanVan);
             this.Name = "FLuanVanToi_SV";
@@ -152,5 +172,6 @@
         private System.Windows.Forms.Label labelLoaiTraCuu;
         private System.Windows.Forms.Button buttonTimKiem;
         private System.Windows.Forms.Label labelTieuDe;
+        private System.Windows.Forms.Button btnThemNhiemVu;
     }
 }

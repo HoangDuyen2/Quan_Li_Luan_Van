@@ -33,6 +33,7 @@ namespace Quan_Li_Luan_Van
                 conn.Close();
             }
         }
+
         public void ThucThi(string sqlStr)
         {
             try

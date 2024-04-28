@@ -431,29 +431,35 @@
             // lbTenSV1
             // 
             this.lbTenSV1.AutoSize = true;
+            this.lbTenSV1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F);
+            this.lbTenSV1.ForeColor = System.Drawing.Color.Gray;
             this.lbTenSV1.Location = new System.Drawing.Point(179, 433);
             this.lbTenSV1.Name = "lbTenSV1";
-            this.lbTenSV1.Size = new System.Drawing.Size(44, 16);
+            this.lbTenSV1.Size = new System.Drawing.Size(107, 24);
             this.lbTenSV1.TabIndex = 92;
-            this.lbTenSV1.Text = "label3";
+            this.lbTenSV1.Text = "Tên MSSV1";
             // 
             // lbTenSV2
             // 
             this.lbTenSV2.AutoSize = true;
+            this.lbTenSV2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F);
+            this.lbTenSV2.ForeColor = System.Drawing.Color.Gray;
             this.lbTenSV2.Location = new System.Drawing.Point(480, 433);
             this.lbTenSV2.Name = "lbTenSV2";
-            this.lbTenSV2.Size = new System.Drawing.Size(44, 16);
+            this.lbTenSV2.Size = new System.Drawing.Size(107, 24);
             this.lbTenSV2.TabIndex = 93;
-            this.lbTenSV2.Text = "label4";
+            this.lbTenSV2.Text = "Tên MSSV2";
             // 
             // lbTenSV3
             // 
             this.lbTenSV3.AutoSize = true;
-            this.lbTenSV3.Location = new System.Drawing.Point(778, 433);
+            this.lbTenSV3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F);
+            this.lbTenSV3.ForeColor = System.Drawing.Color.Gray;
+            this.lbTenSV3.Location = new System.Drawing.Point(791, 433);
             this.lbTenSV3.Name = "lbTenSV3";
-            this.lbTenSV3.Size = new System.Drawing.Size(44, 16);
+            this.lbTenSV3.Size = new System.Drawing.Size(107, 24);
             this.lbTenSV3.TabIndex = 94;
-            this.lbTenSV3.Text = "label8";
+            this.lbTenSV3.Text = "Tên MSSV3";
             // 
             // FChiTietDuyet
             // 
