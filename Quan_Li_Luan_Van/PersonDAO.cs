@@ -269,9 +269,9 @@ namespace Quan_Li_Luan_Van
                 , nhiemvu.TenNV, nhiemvu.NoiDung, nhiemvu.MaNV);
             dBConnection.ThucThi(sqlSua);
         }
-        public bool checkMaNguoi(string maNguoi)
+        public bool checkMaNguoi(string maNguoi, string maNV)
         {
-            string sqlStr = string.Format("SELECT * FROM NhiemVu WHERE MaNguoiTao = '{0}'", maNguoi);
+            string sqlStr = string.Format("SELECT * FROM NhiemVu WHERE MaNguoiTao = '{0}' AND MaNV = '{1}' ", maNguoi, maNV);
             if (KiemTra(sqlStr))
             {
                 return true;

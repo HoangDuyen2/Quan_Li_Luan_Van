@@ -35,7 +35,7 @@
             this.lblNDTB = new System.Windows.Forms.Label();
             this.txtTenNV = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.lblTenNV = new System.Windows.Forms.Label();
-            this.btnThem = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnChinhSua = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.lblThemNV = new System.Windows.Forms.Label();
             this.panelNoidung.SuspendLayout();
             this.SuspendLayout();
@@ -160,16 +160,16 @@
             this.lblTenNV.TabIndex = 0;
             this.lblTenNV.Text = "Tên nhiệm vụ";
             // 
-            // btnThem
+            // btnChinhSua
             // 
-            this.btnThem.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
-            this.btnThem.Location = new System.Drawing.Point(233, 435);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
-            this.btnThem.Size = new System.Drawing.Size(169, 40);
-            this.btnThem.TabIndex = 17;
-            this.btnThem.Values.Text = "Lưu Chỉnh Sửa";
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            this.btnChinhSua.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
+            this.btnChinhSua.Location = new System.Drawing.Point(233, 435);
+            this.btnChinhSua.Name = "btnChinhSua";
+            this.btnChinhSua.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
+            this.btnChinhSua.Size = new System.Drawing.Size(169, 40);
+            this.btnChinhSua.TabIndex = 17;
+            this.btnChinhSua.Values.Text = "Lưu Chỉnh Sửa";
+            this.btnChinhSua.Click += new System.EventHandler(this.btnChinhSua_Click);
             // 
             // lblThemNV
             // 
@@ -188,7 +188,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(620, 478);
             this.Controls.Add(this.panelNoidung);
-            this.Controls.Add(this.btnThem);
+            this.Controls.Add(this.btnChinhSua);
             this.Controls.Add(this.lblThemNV);
             this.Name = "FChinhSuaTask";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -209,7 +209,7 @@
         private System.Windows.Forms.Label lblNDTB;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtTenNV;
         private System.Windows.Forms.Label lblTenNV;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnThem;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnChinhSua;
         private System.Windows.Forms.Label lblThemNV;
     }
 }

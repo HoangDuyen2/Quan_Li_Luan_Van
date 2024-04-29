@@ -15,15 +15,15 @@ namespace Quan_Li_Luan_Van
 {
     public partial class FChiTietLuanVan_SV : Form
     {
-        private string _message;
+        private string maLV;
         Hide_Show hide = new Hide_Show();
         LuanVanDuyet luanVan = new LuanVanDuyet();
         PersonDAO chiTiet = new PersonDAO();
         SinhVienDAO dangKy = new SinhVienDAO();
         Person person = null;
-        public FChiTietLuanVan_SV(string message,Person person) : this()
+        public FChiTietLuanVan_SV(string maLV,Person person) : this()
         {
-            _message = message;
+            this.maLV = maLV;
             this.person = person;
         }
 
@@ -68,12 +68,12 @@ namespace Quan_Li_Luan_Van
             ucChiTietLuanVan1.LbTenMSSV1.Text = luanVan.TenMSSV1;
             ucChiTietLuanVan1.KhongTruyCap();
             if(dangKy.checkTungNguoiDangKy(person.getMaso()))
-                btnChapNhan.Enabled = false;
+                btnDangKy.Enabled = false;
         }
 
         private void CapNhatDuLieu()
         {
-            luanVan = chiTiet.Load(_message);
+            luanVan = chiTiet.Load(maLV);
         }
 
         private void btnChapNhan_Click(object sender, EventArgs e)
@@ -85,6 +85,11 @@ namespace Quan_Li_Luan_Van
             if(dangKy.checkNguoiDangKy(luanVan))
                 dangKy.DangKy(luanVan);
             this.Close();
+        }
+
+        private void btnDang_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

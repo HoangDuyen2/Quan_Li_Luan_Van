@@ -28,27 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnChapNhan = new System.Windows.Forms.Button();
+            this.btnDangKy = new System.Windows.Forms.Button();
             this.ucChiTietLuanVan1 = new Quan_Li_Luan_Van.UCChiTietLuanVan();
             this.SuspendLayout();
             // 
-            // btnChapNhan
+            // btnDangKy
             // 
-            this.btnChapNhan.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnChapNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChapNhan.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnChapNhan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnChapNhan.Image = global::Quan_Li_Luan_Van.Properties.Resources.approve1;
-            this.btnChapNhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChapNhan.Location = new System.Drawing.Point(495, 702);
-            this.btnChapNhan.Name = "btnChapNhan";
-            this.btnChapNhan.Size = new System.Drawing.Size(146, 42);
-            this.btnChapNhan.TabIndex = 61;
-            this.btnChapNhan.Text = "  Đăng kí";
-            this.btnChapNhan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnChapNhan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnChapNhan.UseVisualStyleBackColor = false;
-            this.btnChapNhan.Click += new System.EventHandler(this.btnChapNhan_Click);
+            this.btnDangKy.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnDangKy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangKy.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnDangKy.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDangKy.Image = global::Quan_Li_Luan_Van.Properties.Resources.approve1;
+            this.btnDangKy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDangKy.Location = new System.Drawing.Point(459, 702);
+            this.btnDangKy.Name = "btnDangKy";
+            this.btnDangKy.Size = new System.Drawing.Size(146, 42);
+            this.btnDangKy.TabIndex = 61;
+            this.btnDangKy.Text = "  Đăng kí";
+            this.btnDangKy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDangKy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDangKy.UseVisualStyleBackColor = false;
+            this.btnDangKy.Click += new System.EventHandler(this.btnDang_Click);
             // 
             // ucChiTietLuanVan1
             // 
@@ -63,7 +63,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 745);
             this.Controls.Add(this.ucChiTietLuanVan1);
-            this.Controls.Add(this.btnChapNhan);
+            this.Controls.Add(this.btnDangKy);
             this.Name = "FChiTietLuanVan_SV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi tiết Luận Văn";
@@ -73,7 +73,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnChapNhan;
+        private System.Windows.Forms.Button btnDangKy;
         private UCChiTietLuanVan ucChiTietLuanVan1;
     }
 }
