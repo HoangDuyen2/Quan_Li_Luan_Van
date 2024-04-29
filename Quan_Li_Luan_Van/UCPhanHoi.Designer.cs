@@ -38,7 +38,7 @@
             this.lblThoiGian.AutoSize = true;
             this.lblThoiGian.Font = new System.Drawing.Font("Leelawadee UI Semilight", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThoiGian.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblThoiGian.Location = new System.Drawing.Point(418, 6);
+            this.lblThoiGian.Location = new System.Drawing.Point(379, 6);
             this.lblThoiGian.Name = "lblThoiGian";
             this.lblThoiGian.Size = new System.Drawing.Size(124, 17);
             this.lblThoiGian.TabIndex = 6;
@@ -59,9 +59,9 @@
             // 
             this.txtPhanHoi.Location = new System.Drawing.Point(3, 26);
             this.txtPhanHoi.Name = "txtPhanHoi";
-            this.txtPhanHoi.Size = new System.Drawing.Size(549, 61);
-            this.txtPhanHoi.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
-            this.txtPhanHoi.StateCommon.Border.Color2 = System.Drawing.Color.Blue;
+            this.txtPhanHoi.Size = new System.Drawing.Size(520, 49);
+            this.txtPhanHoi.StateCommon.Border.Color1 = System.Drawing.Color.GhostWhite;
+            this.txtPhanHoi.StateCommon.Border.Color2 = System.Drawing.Color.AliceBlue;
             this.txtPhanHoi.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -81,7 +81,7 @@
             this.Controls.Add(this.lblThoiGian);
             this.Controls.Add(this.lblTen);
             this.Name = "UCPhanHoi";
-            this.Size = new System.Drawing.Size(555, 90);
+            this.Size = new System.Drawing.Size(528, 78);
             this.ResumeLayout(false);
             this.PerformLayout();
 

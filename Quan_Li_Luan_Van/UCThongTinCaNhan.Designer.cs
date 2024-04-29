@@ -55,7 +55,7 @@
             // 
             // btnChinhSua
             // 
-            this.btnChinhSua.Location = new System.Drawing.Point(849, 675);
+            this.btnChinhSua.Location = new System.Drawing.Point(795, 613);
             this.btnChinhSua.Name = "btnChinhSua";
             this.btnChinhSua.Size = new System.Drawing.Size(220, 51);
             this.btnChinhSua.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -107,7 +107,7 @@
             this.rbNu.Enabled = false;
             this.rbNu.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.rbNu.ForeColor = System.Drawing.Color.Black;
-            this.rbNu.Location = new System.Drawing.Point(533, 355);
+            this.rbNu.Location = new System.Drawing.Point(513, 348);
             this.rbNu.Name = "rbNu";
             this.rbNu.Size = new System.Drawing.Size(56, 28);
             this.rbNu.TabIndex = 34;
@@ -121,7 +121,7 @@
             this.rbNam.Enabled = false;
             this.rbNam.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.rbNam.ForeColor = System.Drawing.Color.Black;
-            this.rbNam.Location = new System.Drawing.Point(393, 355);
+            this.rbNam.Location = new System.Drawing.Point(373, 348);
             this.rbNam.Name = "rbNam";
             this.rbNam.Size = new System.Drawing.Size(72, 28);
             this.rbNam.TabIndex = 33;
@@ -381,7 +381,7 @@
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(849, 675);
+            this.btnOK.Location = new System.Drawing.Point(795, 613);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(220, 51);
             this.btnOK.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -422,7 +422,7 @@
             this.Controls.Add(this.lbName);
             this.Controls.Add(this.lbID);
             this.Name = "UCThongTinCaNhan";
-            this.Size = new System.Drawing.Size(1082, 749);
+            this.Size = new System.Drawing.Size(1082, 691);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -304,6 +305,7 @@ namespace Quan_Li_Luan_Van
             sqlQuery = string.Format("INSERT INTO ThongBao(TieuDe, NoiDung, ThoiGian, MaLV) VALUES (N'{0}', N'{1}', '{2}', '{3}')", tb.TieuDe, tb.NoiDung, tb.ThoiGian, tb.MaLV);
             dBConnection.ThucThi(sqlQuery);
         }
+
         public void LoadDSTask(string maLV, FlowLayoutPanel panel, string maGV)
         {
             string query = $"SELECT * FROM NhiemVu JOIN LuanVan ON NhiemVu.MaLV = LuanVan.MaLV WHERE NhiemVu.MaLV = N'{maLV}'";
@@ -363,9 +365,92 @@ namespace Quan_Li_Luan_Van
             }
             return tenLV;
         }
-        
 
+        public string GetTenGV(string maGV)
+        {
+            string tenGV = "";
+            string query = "SELECT TenGV FROM GiangVien WHERE MaGV = @maGV";
+            try
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@maGV", maGV);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            tenGV = reader["TenGV"].ToString();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi khi lấy tên giảng viên: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return tenGV;
+        }
 
+        public NhiemVu GetTask(string maNV)
+        {
+            NhiemVu nhiemvu = new NhiemVu();
+            string query = "SELECT * FROM NhiemVu " +
+                           " WHERE MaNV  = N'" + maNV + "'";
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader dataReader = cmd.ExecuteReader();
+                if (dataReader.Read())
+                {
+                    nhiemvu.TenNV = dataReader["TenNV"].ToString();
+                    nhiemvu.TienTrinh = dataReader["TienTrinh"].GetHashCode();
+                    nhiemvu.NoiDung = dataReader["NoiDung"].ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return nhiemvu;
+        }
+        public void LoadListPhanHoi(string maNV, FlowLayoutPanel panel)
+        {
+            string query = "Select *From PhanHoi " +
+                    " WHERE MaNV  = N'" + maNV + "'";
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader dataReader = cmd.ExecuteReader();
+                panel.Controls.Clear();
+                while (dataReader.Read())
+                {
+                    UCPhanHoi uCPhanHoi = new UCPhanHoi();
+                    uCPhanHoi.LblTen.Text = dataReader["TenNguoiGui"].ToString();
+                    uCPhanHoi.LblThoiGian.Text = dataReader["ThoiGianGui"].ToString();
+                    uCPhanHoi.TxtNoiDung.Text = dataReader["NoiDung"].ToString();
+                    panel.Controls.Add(uCPhanHoi);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
         #endregion
 
     }

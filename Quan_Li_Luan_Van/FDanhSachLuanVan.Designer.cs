@@ -68,7 +68,7 @@
             // 
             this.txtTenGV.Location = new System.Drawing.Point(88, 29);
             this.txtTenGV.Name = "txtTenGV";
-            this.txtTenGV.Size = new System.Drawing.Size(302, 35);
+            this.txtTenGV.Size = new System.Drawing.Size(284, 35);
             this.txtTenGV.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtTenGV.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.txtTenGV.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -153,7 +153,7 @@
             this.btnTimKiem.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnTimKiem.Image = global::Quan_Li_Luan_Van.Properties.Resources.find;
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiem.Location = new System.Drawing.Point(908, 25);
+            this.btnTimKiem.Location = new System.Drawing.Point(820, 23);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(158, 42);
             this.btnTimKiem.TabIndex = 15;
@@ -178,9 +178,9 @@
             // 
             this.flPanelDSLV.AutoScroll = true;
             this.flPanelDSLV.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.flPanelDSLV.Location = new System.Drawing.Point(-4, 137);
+            this.flPanelDSLV.Location = new System.Drawing.Point(0, 137);
             this.flPanelDSLV.Name = "flPanelDSLV";
-            this.flPanelDSLV.Size = new System.Drawing.Size(1068, 553);
+            this.flPanelDSLV.Size = new System.Drawing.Size(1062, 553);
             this.flPanelDSLV.TabIndex = 26;
             // 
             // FDanhSachLuanVan

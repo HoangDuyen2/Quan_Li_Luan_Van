@@ -85,7 +85,7 @@
             this.lblChuyenNganh.AutoSize = true;
             this.lblChuyenNganh.Font = new System.Drawing.Font("Leelawadee UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChuyenNganh.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.lblChuyenNganh.Location = new System.Drawing.Point(103, 63);
+            this.lblChuyenNganh.Location = new System.Drawing.Point(103, 61);
             this.lblChuyenNganh.Name = "lblChuyenNganh";
             this.lblChuyenNganh.Size = new System.Drawing.Size(183, 23);
             this.lblChuyenNganh.TabIndex = 18;
@@ -97,7 +97,7 @@
             this.lblTenLV.AutoSize = true;
             this.lblTenLV.Font = new System.Drawing.Font("Leelawadee UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenLV.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblTenLV.Location = new System.Drawing.Point(101, 17);
+            this.lblTenLV.Location = new System.Drawing.Point(101, 14);
             this.lblTenLV.Name = "lblTenLV";
             this.lblTenLV.Size = new System.Drawing.Size(203, 31);
             this.lblTenLV.TabIndex = 17;
@@ -107,7 +107,7 @@
             // pictureBoxNen
             // 
             this.pictureBoxNen.Image = global::Quan_Li_Luan_Van.Properties.Resources.anhSubject;
-            this.pictureBoxNen.Location = new System.Drawing.Point(18, 14);
+            this.pictureBoxNen.Location = new System.Drawing.Point(18, 11);
             this.pictureBoxNen.Name = "pictureBoxNen";
             this.pictureBoxNen.Size = new System.Drawing.Size(78, 76);
             this.pictureBoxNen.TabIndex = 16;

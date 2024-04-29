@@ -15,9 +15,11 @@ namespace Quan_Li_Luan_Van
         private string maNV;
         private string maGV;
         
-        public FChiTietTask_All(string MaNV) : this()
+        
+        public FChiTietTask_All(string MaNV, string maGV) : this()
         {
             this.maNV = MaNV;
+            this.maGV = maGV;
             LoadInfoTask();
             LoadPhanHoi();
         }
@@ -29,8 +31,8 @@ namespace Quan_Li_Luan_Van
 
         public void LoadInfoTask()
         {
-            ChiTietTaskDao taskDao = new ChiTietTaskDao(this.maNV);
-            NhiemVu nhiemVu = taskDao.GetTask(this.maNV);
+            GiangVienDAO task = new GiangVienDAO();
+            NhiemVu nhiemVu = task.GetTask(this.maNV);
 
             if (nhiemVu != null && !nhiemVu.KiemTraNull())
             {
@@ -42,12 +44,8 @@ namespace Quan_Li_Luan_Van
 
         public void LoadPhanHoi()
         {
-            ChiTietTaskDao taskDao = new ChiTietTaskDao(this.maNV);
-            taskDao.LoadListPhanHoi(this.maNV, fpnChat);
-        }
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            GiangVienDAO task = new GiangVienDAO();
+            task.LoadListPhanHoi(this.maNV, fpnChat);
         }
 
         private void btnPhanHoi_Click(object sender, EventArgs e)
@@ -62,19 +60,25 @@ namespace Quan_Li_Luan_Van
             {
                 taskDao.ThemPhanHoi(ph);
                 MessageBox.Show("Thêm thành công");
-                this.Close();
+                txtPhanHoi.Text = "";
+                LoadPhanHoi();
             }
 
         }
-
         private PhanHoi TaoPhanHoi()
         {
-            string tenNguoiGui = "Nguyễn Thùy An";
+            GiangVienDAO ph = new GiangVienDAO();
+
+            string tenNguoiGui = ph.GetTenGV(maGV);
             string noiDung = txtPhanHoi.Text;
             DateTime thoiGian = DateTime.Now;
             string chuoiThoiGian = thoiGian.ToString("yyyy-MM-dd HH:mm:ss");
 
             return new PhanHoi(tenNguoiGui, chuoiThoiGian, noiDung, this.maNV);
+        }
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
