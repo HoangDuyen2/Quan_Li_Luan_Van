@@ -52,6 +52,7 @@ namespace Quan_Li_Luan_Van
             {
                 nvDao.ThemNhiemVu(nv);
                 MessageBox.Show("Thêm thành công");
+                this.DialogResult = DialogResult.OK;
                 this.Hide();
             }
         }

@@ -73,7 +73,7 @@ namespace Quan_Li_Luan_Van
 
         private void btnLuanVanCuaToi_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FLuanVanToi(person.getMaso()), sender);
+            OpenChildForm(new FLuanVanCuaToi_GV(person.getMaso()), sender);
             FGiangVien_Load(sender, e);
         }
 

@@ -103,7 +103,7 @@
             this.Name = "FNhiemVu_GV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lí hoạt động nhóm";
-            this.Load += new System.EventHandler(this.FTienTrinh_GV_Load);
+            this.Load += new System.EventHandler(this.FNhiemVu_GV_Load);
             this.panelThongTin.ResumeLayout(false);
             this.panelThongTin.PerformLayout();
             this.ResumeLayout(false);

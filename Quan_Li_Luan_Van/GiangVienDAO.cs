@@ -13,11 +13,7 @@ namespace Quan_Li_Luan_Van
         DBConnection dBConnection = new DBConnection();
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
         string sqlQuery;
-        public void ThemThongBao(ThongBao tb)
-        {
-            sqlQuery = string.Format("INSERT INTO ThongBao(TieuDe, NoiDung, ThoiGian, MaLV) VALUES (N'{0}', N'{1}', '{2}', '{3}')", tb.TieuDe, tb.NoiDung, tb.ThoiGian, tb.MaLV);
-            dBConnection.ThucThi(sqlQuery);
-        }
+
         #region Form Danh sách các luận văn
         string queryDSLV = "SELECT LuanVan.MaLV, LuanVan.TenLV, LuanVan.ChuyenNganh, GiangVien.TenGV, LuanVan.TrangThai " +
                                    "FROM LuanVan " +
@@ -165,6 +161,209 @@ namespace Quan_Li_Luan_Van
             dBConnection.ThucThi(quenry);
             return quenry;
         }
+
         #endregion
+
+        #region Chỉnh luận văn
+        public LuanVan getLuanVan(string maLV)
+        {
+            LuanVan sualv = new LuanVan();
+            string query = "SELECT * FROM LuanVan WHERE MaLV = N'" + maLV + "'";
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader dataReader = cmd.ExecuteReader();
+                if (dataReader.Read())
+                {
+                    sualv.MaLV = dataReader["MaLV"].ToString();
+                    sualv.TenLV = dataReader["TenLV"].ToString();
+                    sualv.ChuyenNganh = dataReader["ChuyenNganh"].ToString();
+                    sualv.ChucNang = dataReader["ChucNang"].ToString();
+                    sualv.YeuCau = dataReader["YeuCau"].ToString();
+                    sualv.CongNghe = dataReader["CongNghe"].ToString();
+                    sualv.LinhVuc = dataReader["LinhVuc"].ToString();
+                    sualv.NgonNgu = dataReader["NgonNgu"].ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return sualv;
+        }
+
+        public void ChinhSua(LuanVan luanvan, string maLV)
+        {
+            string query = $"UPDATE LuanVan SET TenLV = N'{luanvan.TenLV}', ChuyenNganh = N'{luanvan.ChuyenNganh}', ChucNang = N'{luanvan.ChucNang}', YeuCau = N'{luanvan.YeuCau}', CongNghe = N'{luanvan.CongNghe}', LinhVuc = N'{luanvan.LinhVuc}', NgonNgu = N'{luanvan.NgonNgu}' WHERE MaLV = '{luanvan.MaLV}'";
+            dBConnection.ThucThi(query);
+        }
+        #endregion
+
+        #region Luận Văn Của Tôi
+        public string LoadMyTheses(string maGV)
+        {
+            this.maGV = maGV;
+            string query = $"SELECT LuanVan.MaLV, LuanVan.TenLV, LuanVan.ChuyenNganh, GiangVien.TenGV, LuanVan.TrangThai " +
+                           $"FROM LuanVan JOIN GiangVien ON LuanVan.MaGV = GiangVien.MaGV " +
+                           $"WHERE LuanVan.MaGV = '{maGV}'";
+            return query;
+        }
+
+        public void GetMyThesesInfo(string query, FlowLayoutPanel panel)
+        {
+            try
+            {
+                conn.Open();
+                panel.Controls.Clear();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader dataReader = cmd.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    UCLVCuaToi uclv = new UCLVCuaToi();
+                    uclv.MaGV = MaGV;
+                    uclv.MaLV = dataReader["MaLV"].ToString();
+                    uclv.LblTenLV.Text = dataReader["TenLV"].ToString();
+                    uclv.LblChuyenNganh.Text = dataReader["ChuyenNganh"].ToString();
+                    uclv.LblTrangThai.Text = dataReader["TrangThai"].ToString();
+                    if (uclv.LblTrangThai.Text == "Đã có nhóm")
+                    {
+                        uclv.BtnDelete.Enabled = false;
+                    }
+                    panel.Controls.Add(uclv);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public string QueryMyTheses(string text)
+        {
+            string baseQuery = $"SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, DuyetDangKy.TinhTrang " +
+                               $"FROM LuanVan JOIN DuyetDangKy ON LuanVan.MaLV = DuyetDangKy.MaLV AND LuanVan.MaGV = '{MaGV}'";
+            if (text != "Tất cả")
+            {
+                baseQuery += $" WHERE TinhTrang = N'{text}'";
+            }
+            return baseQuery;
+        }
+
+        #endregion
+
+        #region Quản lí nhóm luận văn
+        public string LoadDSNhom(string maGV)
+        {
+            this.maGV = maGV;
+            string query = $"SELECT LuanVan.MaLV, LuanVan.TenLV, LuanVan.ChuyenNganh, GiangVien.TenGV, LuanVan.TrangThai " +
+                           $"FROM LuanVan " +
+                           $"JOIN GiangVien ON LuanVan.MaGV = GiangVien.MaGV " +
+                           $"WHERE LuanVan.MaGV = '{maGV}' AND LuanVan.TrangThai = N'Đã có nhóm'";
+            return query;
+        }
+
+        public void DSNhomInfo(string query, FlowLayoutPanel panel)
+        {
+            try
+            {
+                conn.Open();
+                panel.Controls.Clear();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader dataReader = cmd.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    UCNhom ucnhom = new UCNhom();
+                    ucnhom.MaGV = this.maGV;
+                    ucnhom.MaLV = dataReader["MaLV"].ToString();
+                    ucnhom.LblTenLV.Text = dataReader["TenLV"].ToString();
+                    ucnhom.LblChuyenNganh.Text = dataReader["ChuyenNganh"].ToString();
+                    panel.Controls.Add(ucnhom);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        public void ThemThongBao(ThongBao tb)
+        {
+            sqlQuery = string.Format("INSERT INTO ThongBao(TieuDe, NoiDung, ThoiGian, MaLV) VALUES (N'{0}', N'{1}', '{2}', '{3}')", tb.TieuDe, tb.NoiDung, tb.ThoiGian, tb.MaLV);
+            dBConnection.ThucThi(sqlQuery);
+        }
+        public void LoadDSTask(string maLV, FlowLayoutPanel panel, string maGV)
+        {
+            string query = $"SELECT * FROM NhiemVu JOIN LuanVan ON NhiemVu.MaLV = LuanVan.MaLV WHERE NhiemVu.MaLV = N'{maLV}'";
+            try
+            {
+                conn.Open();
+                panel.Controls.Clear();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader dataReader = cmd.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    UCTask uctask = new UCTask();
+                    uctask.MaNguoi = maGV;
+                    uctask.MaNV = dataReader["MaNV"].ToString();
+                    uctask.MaLV = maLV;
+                    uctask.LblTenNV.Text = dataReader["TenNV"].ToString();
+                    uctask.LblTienTrinh.Text = dataReader["TienTrinh"].ToString();
+                    panel.Controls.Add(uctask);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public string GetTenLV(string maLV)
+        {
+            string tenLV = "";
+            string query = "SELECT TenLV FROM LuanVan WHERE MaLV = @maLV";
+            try
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@maLV", maLV);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            tenLV = reader["TenLV"].ToString();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi khi lấy tên luận văn: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return tenLV;
+        }
+
+        #endregion
+
     }
 }

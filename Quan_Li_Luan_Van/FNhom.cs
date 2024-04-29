@@ -14,21 +14,23 @@ namespace Quan_Li_Luan_Van
     {
         private string maGV;
         private string query;
-        private DSNhomDAO dsnhom;
+        private GiangVienDAO giangVienDao;
+
         public FNhom()
         {
             InitializeComponent();
-        } 
-        public FNhom(string maGV) :this()
+        }
+
+        public FNhom(string maGV) : this()
         {
             this.maGV = maGV;
-            dsnhom = new DSNhomDAO(this.maGV);
-            this.query = dsnhom.Load();
+            giangVienDao = new GiangVienDAO();
+            this.query = giangVienDao.LoadDSNhom(maGV);
         }
-        
+
         private void FNhom_Load(object sender, EventArgs e)
         {
-            dsnhom.LoadDSNhom(query,flpanelDSNhom,maGV);
+            giangVienDao.DSNhomInfo(query, flpanelDSNhom);
         }
     }
 }

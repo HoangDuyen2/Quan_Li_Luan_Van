@@ -12,33 +12,34 @@ using System.Data.SqlClient;
 
 namespace Quan_Li_Luan_Van
 {
-    public partial class FLuanVanToi : Form
+    public partial class FLuanVanCuaToi_GV : Form
     {
         private string maGV;
-        private LuanVanToiDAO luanvan;
+        GiangVienDAO luanvan;
         private string query = "";
         
-        public FLuanVanToi()
+        public FLuanVanCuaToi_GV()
         {
             InitializeComponent();
         }
-        public FLuanVanToi(string maGV) :this()
+        public FLuanVanCuaToi_GV(string maGV) :this()
         {
             this.maGV = maGV;
-            this.luanvan = new LuanVanToiDAO(this.maGV);
-            this.query = luanvan.Load();
-
+            this.luanvan = new GiangVienDAO();
+            this.query = luanvan.LoadMyTheses(maGV);
         }
 
 
         private void FLuanVanToi_Load(object sender, EventArgs e)
         {
-            luanvan.getInfo(query, flPanelDSLV);
+            luanvan.GetMyThesesInfo(query, flPanelDSLV);
         }
+
         private void LoadDSLuanVan()
         {
-            luanvan.getInfo(query, flPanelDSLV);
+            luanvan.GetMyThesesInfo(query, flPanelDSLV);
         }
+
         private void btnThemLuanVan_Click(object sender, EventArgs e)
         {
             FThemLuanVan fThemLuanVan = new FThemLuanVan(maGV);
@@ -50,12 +51,11 @@ namespace Quan_Li_Luan_Van
 
         private void ChonTinhTrang(object sender, EventArgs e)
         {
-            query = luanvan.Load();
+            query = luanvan.LoadMyTheses(maGV);
             string text = cbboxTrangThai.SelectedItem.ToString();
             if (text != "Tất cả")
             {
-                string chuyenNganh = " AND LuanVan.TrangThai =N'" + text + "'";
-                query = query + chuyenNganh;
+                query += $" AND LuanVan.TrangThai = N'{text}'";
             }
             LoadDSLuanVan();
         }

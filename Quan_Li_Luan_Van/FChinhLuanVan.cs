@@ -16,7 +16,8 @@ namespace Quan_Li_Luan_Van
     {
         private string maLV;
         private string maGV;
-        ChinhLuanVanDAO lvDAO = new ChinhLuanVanDAO();
+        //ChinhLuanVanDAO lvDAO = new ChinhLuanVanDAO();
+        GiangVienDAO lvDAO = new GiangVienDAO();
         LuanVan lv = new LuanVan();
         public FChinhLuanVan()
         {

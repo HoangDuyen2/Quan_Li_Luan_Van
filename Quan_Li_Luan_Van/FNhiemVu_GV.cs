@@ -15,28 +15,35 @@ namespace Quan_Li_Luan_Van
     {
         private string maLV;
         private string maGV;
-        TienTrinh_GVDAO tientrinh = new TienTrinh_GVDAO();
+        GiangVienDAO luanvan;  
+
         public FNhiemVu_GV()
         {
             InitializeComponent();
         }
 
-        public FNhiemVu_GV(string maLV,string maGV) : this()
+        public FNhiemVu_GV(string maLV, string maGV) : this()
         {
             this.maLV = maLV;
             this.maGV = maGV;
+            this.luanvan = new GiangVienDAO(); 
         }
-        
-        private void FTienTrinh_GV_Load(object sender, EventArgs e)
-        {           
-            tientrinh.LoadDSTask(maLV, flPanelDSTask,maGV);
-            lblTenLV.Text = tientrinh.GetTenLV(maLV);
+
+        private void FNhiemVu_GV_Load(object sender, EventArgs e)
+        {
+            // Using the giangVienDao to load tasks and get the thesis title
+            luanvan.LoadDSTask(maLV, flPanelDSTask, maGV);
+            lblTenLV.Text = luanvan.GetTenLV(maLV);
         }
+
         private void btnThemNhiemVu_Click(object sender, EventArgs e)
         {
-            FThemNhiemVu fThemNhiemVu = new FThemNhiemVu(maLV,maGV);
-            fThemNhiemVu.ShowDialog();
-            FTienTrinh_GV_Load(sender,e);
+            FThemNhiemVu fThemNhiemVu = new FThemNhiemVu(maLV, maGV);
+            if (fThemNhiemVu.ShowDialog() == DialogResult.OK)
+            {
+                FNhiemVu_GV_Load(sender, e);
+            }
         }
     }
+
 }

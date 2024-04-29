@@ -1,6 +1,6 @@
 ﻿namespace Quan_Li_Luan_Van
 {
-    partial class FLuanVanToi
+    partial class FLuanVanCuaToi_GV
     {
         /// <summary>
         /// Required designer variable.

@@ -199,11 +199,11 @@
     <Compile Include="FDangNhap.Designer.cs">
       <DependentUpon>FDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="FLuanVanToi.cs">
+    <Compile Include="FLuanVanCuaToi_GV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FLuanVanToi.Designer.cs">
-      <DependentUpon>FLuanVanToi.cs</DependentUpon>
+    <Compile Include="FLuanVanCuaToi_GV.Designer.cs">
+      <DependentUpon>FLuanVanCuaToi_GV.cs</DependentUpon>
     </Compile>
     <Compile Include="FLuanVanToi_SV.cs">
       <SubType>Form</SubType>
@@ -392,8 +392,8 @@
     <EmbeddedResource Include="FGuiThongBao_TB.resx">
       <DependentUpon>FGuiThongBao_TB.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FLuanVanToi.resx">
-      <DependentUpon>FLuanVanToi.cs</DependentUpon>
+    <EmbeddedResource Include="FLuanVanCuaToi_GV.resx">
+      <DependentUpon>FLuanVanCuaToi_GV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FLuanVanToi_SV.resx">
       <DependentUpon>FLuanVanToi_SV.cs</DependentUpon>
