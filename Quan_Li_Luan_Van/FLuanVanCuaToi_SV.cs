@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Quan_Li_Luan_Van
 {
-    public partial class FLuanVanToi_SV : Form
+    public partial class FLuanVanCuaToi_SV : Form
     {
         Person person = null;
         SinhVienDAO luanVan = new SinhVienDAO();
-        public FLuanVanToi_SV(Person person)
+        public FLuanVanCuaToi_SV(Person person)
         {
             InitializeComponent();
             this.person = person;

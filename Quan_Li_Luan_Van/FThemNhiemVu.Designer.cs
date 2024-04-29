@@ -192,7 +192,6 @@
             this.Name = "FThemNhiemVu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FThemNhiemVu";
-            this.Load += new System.EventHandler(this.FThemNhiemVu_Load);
             this.panelNoidung.ResumeLayout(false);
             this.panelNoidung.PerformLayout();
             this.ResumeLayout(false);

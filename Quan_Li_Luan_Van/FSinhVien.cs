@@ -71,7 +71,7 @@ namespace Quan_Li_Luan_Van
 
         private void btnLuanVan_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FLuanVanToi_SV(person),sender);
+            OpenChildForm(new FLuanVanCuaToi_SV(person),sender);
             FSinhVien_Load(sender, e);
         }
 

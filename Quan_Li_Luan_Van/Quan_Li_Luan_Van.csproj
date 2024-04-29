@@ -205,11 +205,11 @@
     <Compile Include="FLuanVanCuaToi_GV.Designer.cs">
       <DependentUpon>FLuanVanCuaToi_GV.cs</DependentUpon>
     </Compile>
-    <Compile Include="FLuanVanToi_SV.cs">
+    <Compile Include="FLuanVanCuaToi_SV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FLuanVanToi_SV.Designer.cs">
-      <DependentUpon>FLuanVanToi_SV.cs</DependentUpon>
+    <Compile Include="FLuanVanCuaToi_SV.Designer.cs">
+      <DependentUpon>FLuanVanCuaToi_SV.cs</DependentUpon>
     </Compile>
     <Compile Include="FNhanXetChamDiem.cs">
       <SubType>Form</SubType>
@@ -395,8 +395,8 @@
     <EmbeddedResource Include="FLuanVanCuaToi_GV.resx">
       <DependentUpon>FLuanVanCuaToi_GV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FLuanVanToi_SV.resx">
-      <DependentUpon>FLuanVanToi_SV.cs</DependentUpon>
+    <EmbeddedResource Include="FLuanVanCuaToi_SV.resx">
+      <DependentUpon>FLuanVanCuaToi_SV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FLuuDiem_TB.resx">
       <DependentUpon>FLuuDiem_TB.cs</DependentUpon>
