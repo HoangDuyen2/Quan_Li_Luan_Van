@@ -233,6 +233,7 @@ namespace Quan_Li_Luan_Van
                     if (uclv.LblTrangThai.Text == "Đã có nhóm")
                     {
                         uclv.BtnDelete.Enabled = false;
+                        uclv.BtnUpdate.Enabled = false;
                     }
                     panel.Controls.Add(uclv);
                 }
@@ -261,7 +262,7 @@ namespace Quan_Li_Luan_Van
         #endregion
 
         #region Quản lí nhóm luận văn
-        public string LoadDSNhom(string maGV)
+        public string TruyVanDSNhom(string maGV)
         {
             this.maGV = maGV;
             string query = $"SELECT LuanVan.MaLV, LuanVan.TenLV, LuanVan.ChuyenNganh, GiangVien.TenGV, LuanVan.TrangThai " +
@@ -316,8 +317,8 @@ namespace Quan_Li_Luan_Van
                 {
                     UCTask uctask = new UCTask();
                     uctask.MaNguoi = maGV;
-                    uctask.MaNV = dataReader["MaNV"].ToString();
                     uctask.MaLV = maLV;
+                    uctask.MaNV = dataReader["MaNV"].ToString();
                     uctask.LblTenNV.Text = dataReader["TenNV"].ToString();
                     uctask.LblTienTrinh.Text = dataReader["TienTrinh"].ToString();
                     panel.Controls.Add(uctask);
@@ -362,6 +363,8 @@ namespace Quan_Li_Luan_Van
             }
             return tenLV;
         }
+        
+
 
         #endregion
 

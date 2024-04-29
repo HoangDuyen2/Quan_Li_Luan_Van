@@ -69,6 +69,7 @@
             // 
             // flPanelDSTask
             // 
+            this.flPanelDSTask.AutoScroll = true;
             this.flPanelDSTask.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.flPanelDSTask.Location = new System.Drawing.Point(0, 82);
             this.flPanelDSTask.Name = "flPanelDSTask";

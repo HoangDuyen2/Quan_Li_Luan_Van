@@ -23,10 +23,6 @@ namespace Quan_Li_Luan_Van
         public string MaGV { get => maGV; set => maGV = value; }
         public string MaLV { get => maLV; set => maLV = value; }
 
-        private void UCNhom_Load(object sender, EventArgs e)
-        {
-
-        }
         private void btnChiTiet_Click(object sender, EventArgs e)
         {
             FChiTietLuanVan_GV ctlv = new FChiTietLuanVan_GV(maLV);

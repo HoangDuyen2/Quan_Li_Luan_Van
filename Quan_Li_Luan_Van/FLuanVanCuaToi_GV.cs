@@ -14,7 +14,7 @@ namespace Quan_Li_Luan_Van
 {
     public partial class FLuanVanCuaToi_GV : Form
     {
-        private string maGV;
+        private Person gv;
         GiangVienDAO luanvan;
         private string query = "";
         
@@ -22,11 +22,11 @@ namespace Quan_Li_Luan_Van
         {
             InitializeComponent();
         }
-        public FLuanVanCuaToi_GV(string maGV) :this()
+        public FLuanVanCuaToi_GV(Person gv) :this()
         {
-            this.maGV = maGV;
+            this.gv = gv;
             this.luanvan = new GiangVienDAO();
-            this.query = luanvan.LoadMyTheses(maGV);
+            this.query = luanvan.LoadMyTheses(gv.getMaso());
         }
 
 
@@ -42,7 +42,7 @@ namespace Quan_Li_Luan_Van
 
         private void btnThemLuanVan_Click(object sender, EventArgs e)
         {
-            FThemLuanVan fThemLuanVan = new FThemLuanVan(maGV);
+            FThemLuanVan fThemLuanVan = new FThemLuanVan(gv.getMaso());
             if (fThemLuanVan.ShowDialog() == DialogResult.OK)
             {
                 LoadDSLuanVan();
@@ -51,7 +51,7 @@ namespace Quan_Li_Luan_Van
 
         private void ChonTinhTrang(object sender, EventArgs e)
         {
-            query = luanvan.LoadMyTheses(maGV);
+            query = luanvan.LoadMyTheses(gv.getMaso());
             string text = cbboxTrangThai.SelectedItem.ToString();
             if (text != "Tất cả")
             {

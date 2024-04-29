@@ -149,7 +149,6 @@
             this.Controls.Add(this.pictureBoxNen);
             this.Name = "UCLVCuaToi";
             this.Size = new System.Drawing.Size(1033, 98);
-            this.Load += new System.EventHandler(this.UCLVCuaToi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

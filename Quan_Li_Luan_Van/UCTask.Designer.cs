@@ -150,7 +150,6 @@
             this.Controls.Add(this.pictureBoxNen);
             this.Name = "UCTask";
             this.Size = new System.Drawing.Size(1060, 100);
-            this.Load += new System.EventHandler(this.UCTask_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

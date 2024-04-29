@@ -152,7 +152,6 @@
             this.Controls.Add(this.pictureBoxNen);
             this.Name = "UCNhom";
             this.Size = new System.Drawing.Size(1058, 98);
-            this.Load += new System.EventHandler(this.UCNhom_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

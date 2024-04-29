@@ -15,7 +15,7 @@ namespace Quan_Li_Luan_Van
     {
         TaiKhoan taiKhoan;
         PersonDAO trangChinh = new PersonDAO();
-        Person person = null;
+        Person gv ;
         public FGiangVien(TaiKhoan taiKhoan)
         {
             InitializeComponent();
@@ -28,9 +28,9 @@ namespace Quan_Li_Luan_Van
 
         private void FGiangVien_Load(object sender, EventArgs e)
         {
-            person = trangChinh.LoadLabel(taiKhoan);
-            labelMSSV.Text = person.getMaso();
-            labelTen.Text = person.getHoTen();
+            gv = trangChinh.LoadLabel(taiKhoan);
+            labelMSSV.Text = gv.getMaso();
+            labelTen.Text = gv.getHoTen();
             labelChucVu.Text = taiKhoan.getChucVu();
 
         }
@@ -59,27 +59,27 @@ namespace Quan_Li_Luan_Van
 
         private void btnLuanVan_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FDuyetLuanVan(person.getMaso()), sender);
+            OpenChildForm(new FDuyetLuanVan(gv.getMaso()), sender);
             FGiangVien_Load(sender, e);
         }
 
 
         private void picboxUser_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FThongTinCaNhan_GV(person), sender);
+            OpenChildForm(new FThongTinCaNhan_GV(gv), sender);
             FGiangVien_Load(sender, e);
 
         }
 
         private void btnLuanVanCuaToi_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FLuanVanCuaToi_GV(person.getMaso()), sender);
+            OpenChildForm(new FLuanVanCuaToi_GV(gv), sender);
             FGiangVien_Load(sender, e);
         }
 
         private void btnDSNhom_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FNhom(person.getMaso()), sender);
+            OpenChildForm(new FNhom(gv), sender);
             FGiangVien_Load(sender, e);
         }
 

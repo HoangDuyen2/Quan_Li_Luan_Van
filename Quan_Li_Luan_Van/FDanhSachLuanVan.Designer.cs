@@ -68,7 +68,7 @@
             // 
             this.txtTenGV.Location = new System.Drawing.Point(88, 29);
             this.txtTenGV.Name = "txtTenGV";
-            this.txtTenGV.Size = new System.Drawing.Size(302, 36);
+            this.txtTenGV.Size = new System.Drawing.Size(302, 35);
             this.txtTenGV.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtTenGV.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.txtTenGV.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -132,7 +132,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.comboxChuyenNganh.TabIndex = 18;
-            this.comboxChuyenNganh.Text = "-- Tất cả --";
             this.comboxChuyenNganh.SelectedIndexChanged += new System.EventHandler(this.ChonChuyenNganh);
             // 
             // lblTraTenGV

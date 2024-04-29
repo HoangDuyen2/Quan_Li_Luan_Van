@@ -24,25 +24,20 @@ namespace Quan_Li_Luan_Van
         public Label LblTenLV { get => lblTenLV; set => lblTenLV = value; }        
         public Label LblTrangThai { get => lblTrangThai; set => lblTrangThai = value;}
         public Button BtnDelete { get => btnXoa; set => btnXoa = value; }
+        public Button BtnUpdate { get => btnChinhSua; set => btnChinhSua = value; }
         public string MaLV { get => maLV; set => maLV = value; }
         public string MaGV { get => maGV; set => maGV = value; }
 
         private void btnChinhSua_Click(object sender, EventArgs e)
         {
             FChinhLuanVan chinhlv = new FChinhLuanVan(maLV,maGV);
-            chinhlv.ShowDialog();
-            
+            chinhlv.ShowDialog();            
         }
 
         private void btnChiTiet_Click(object sender, EventArgs e)
         {
             FChiTietLuanVan_GV ctlv = new FChiTietLuanVan_GV(maLV);
             ctlv.ShowDialog();
-        }
-
-        private void UCLVCuaToi_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

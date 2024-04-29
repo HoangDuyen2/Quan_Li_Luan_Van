@@ -89,7 +89,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.cbboxNgonNgu.TabIndex = 85;
-            this.cbboxNgonNgu.Text = "--Chọn ngôn ngữ --";
             // 
             // cbboxCongNghe
             // 
@@ -125,7 +124,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.cbboxCongNghe.TabIndex = 84;
-            this.cbboxCongNghe.Text = "-- Chọn công nghệ --";
             // 
             // cbboxLinhVuc
             // 
@@ -165,7 +163,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.cbboxLinhVuc.TabIndex = 83;
-            this.cbboxLinhVuc.Text = "-- Chọn lĩnh vực --";
             // 
             // cbboxChuyenNganh
             // 
@@ -199,7 +196,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.cbboxChuyenNganh.TabIndex = 82;
-            this.cbboxChuyenNganh.Text = "-- Chọn chuyên ngành --";
             // 
             // label7
             // 
@@ -295,7 +291,7 @@
             this.txtYeuCau.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtYeuCau.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtYeuCau.TabIndex = 59;
-            this.txtYeuCau.Text = "Yêu cầu";
+            this.txtYeuCau.TextChanged += new System.EventHandler(this.txtYeuCau_TextChanged);
             // 
             // lbMoTaChiTiet
             // 
@@ -335,7 +331,7 @@
             // 
             this.txtTenLuanVan.Location = new System.Drawing.Point(114, 83);
             this.txtTenLuanVan.Name = "txtTenLuanVan";
-            this.txtTenLuanVan.Size = new System.Drawing.Size(881, 36);
+            this.txtTenLuanVan.Size = new System.Drawing.Size(881, 35);
             this.txtTenLuanVan.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtTenLuanVan.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.txtTenLuanVan.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -357,7 +353,6 @@
             this.txtTenLuanVan.StateDisabled.Border.Rounding = 16;
             this.txtTenLuanVan.StateDisabled.Border.Width = 1;
             this.txtTenLuanVan.TabIndex = 54;
-            this.txtTenLuanVan.Text = "Tên đề tài";
             // 
             // txtMaLuanVan
             // 

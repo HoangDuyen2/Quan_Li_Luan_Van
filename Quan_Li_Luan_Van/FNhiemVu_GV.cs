@@ -31,7 +31,7 @@ namespace Quan_Li_Luan_Van
 
         private void FNhiemVu_GV_Load(object sender, EventArgs e)
         {
-            // Using the giangVienDao to load tasks and get the thesis title
+            
             luanvan.LoadDSTask(maLV, flPanelDSTask, maGV);
             lblTenLV.Text = luanvan.GetTenLV(maLV);
         }
