@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -451,7 +452,62 @@ namespace Quan_Li_Luan_Van
                 conn.Close();
             }
         }
-        #endregion
+        public void LoadListCapNhatTienTrinh(string maNV, FlowLayoutPanel panel)
+        {
+            string query = @"
+                            SELECT sv.TenSV, cnt.ThoiGian, cnt.PhanTramCapNhat, cnt.TienTrinh
+                            FROM SinhVien sv
+                            JOIN CapNhatTienTrinh cnt ON sv.MSSV = cnt.MSSV
+                            WHERE cnt.MaNV = @maNV
+                            ORDER BY cnt.ThoiGian DESC;";
 
+            try
+            {
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@maNV", maNV);
+                conn.Open();
+                SqlDataReader dataReader = cmd.ExecuteReader();
+                panel.Controls.Clear();
+                while (dataReader.Read())
+                {
+                    UCUpdateTask uCUpdateTask = new UCUpdateTask();
+                    uCUpdateTask.LblTenSV.Text = dataReader["TenSV"].ToString();
+                    uCUpdateTask.LblThoiGian.Text = dataReader["ThoiGianGui"].ToString();
+                    uCUpdateTask.LblTienTrinh.Text = dataReader["TienTrinh"].ToString();
+                    panel.Controls.Add(uCUpdateTask);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        public DataTable GetStudentProgressData(string maNV)
+        {
+            DataTable dataTable = new DataTable();
+            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr))
+            {
+                conn.Open();
+                string query = @" SELECT sv.TenSV, SUM(ct.PhanTramCapNhat) AS TongPhanTramCapNhat                                
+                                FROM NhiemVu nv
+                                JOIN LuanVan lv ON nv.MaLV = lv.MaLV
+                                JOIN DSThanhVien dstv ON lv.MaLV = dstv.MaLV
+                                LEFT JOIN SinhVien sv ON sv.MSSV = dstv.MSSV1 OR sv.MSSV = dstv.MSSV2 OR sv.MSSV = dstv.MSSV3
+                                LEFT JOIN CapNhatTienTrinh ct ON sv.MSSV = ct.MSSV
+                                WHERE nv.MaNV = @MaNV
+                                GROUP BY sv.TenSV";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@MaNV", maNV);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dataTable);
+            }
+            return dataTable;
+        }
+
+        #endregion
     }
 }

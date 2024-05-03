@@ -343,7 +343,6 @@
             this.btnLuu.Size = new System.Drawing.Size(90, 40);
             this.btnLuu.TabIndex = 24;
             this.btnLuu.Values.Text = "Cập nhật";
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // label1
             // 

@@ -16,10 +16,8 @@ namespace Quan_Li_Luan_Van
         {
             InitializeComponent();
         }
-
-        private void lblTienTrinh_Click(object sender, EventArgs e)
-        {
-
-        }
+        public Label LblTenSV { get => lblTenSV; set => lblTenSV = value; }
+        public Label LblTienTrinh { get => lblTienTrinh; set => lblTienTrinh = value; }
+        public Label LblThoiGian { get => lblThoiGian; set => lblThoiGian = value; }
     }
 }
