@@ -25,7 +25,7 @@ namespace Quan_Li_Luan_Van
             string maLV = luanVan.getMaLV(person.getMaso());
             if (maLV != null)
             {
-                luanVan.ShowData(flPanelDSTask, luanVan.LoadLVCT(maLV));
+                luanVan.ShowData(flPanelDSTask, luanVan.LoadLVCT(maLV),person.getMaso());
             }
             else MessageBox.Show("Sinh viên hiện chưa tham gia vào luận văn nào. Vui lòng đăng kí luận văn trước", "Thông báo");
         }

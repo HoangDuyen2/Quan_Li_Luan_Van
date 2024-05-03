@@ -52,6 +52,7 @@
             this.btnChinhSua.TabIndex = 39;
             this.btnChinhSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnChinhSua.UseVisualStyleBackColor = false;
+            this.btnChinhSua.Click += new System.EventHandler(this.btnChinhSua_Click);
             // 
             // btnChiTiet
             // 
@@ -68,6 +69,7 @@
             this.btnChiTiet.TabIndex = 38;
             this.btnChiTiet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnChiTiet.UseVisualStyleBackColor = false;
+            this.btnChiTiet.Click += new System.EventHandler(this.btnChiTiet_Click);
             // 
             // lblTienTrinh
             // 

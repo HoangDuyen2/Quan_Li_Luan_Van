@@ -63,7 +63,6 @@ namespace Quan_Li_Luan_Van
 
             chartTienDo.ChartAreas[0].RecalculateAxesScale();
         }
-
         public void LoadInfoTask()
         {
             GiangVienDAO task = new GiangVienDAO();
@@ -76,22 +75,19 @@ namespace Quan_Li_Luan_Van
                 txtNoiDungNV.Text = nhiemVu.NoiDung;
             }
         }
-
         public void LoadCapNhatTienTrinh()
         {
             GiangVienDAO tientrinh = new GiangVienDAO();
             tientrinh.LoadListCapNhatTienTrinh(this.maNV, fpnUpdateTask);
         }
-
         public void LoadPhanHoi()
         {
             GiangVienDAO task = new GiangVienDAO();
             task.LoadListPhanHoi(this.maNV, fpnChat);
         }
-
         private void btnPhanHoi_Click(object sender, EventArgs e)
         {
-            ChiTietTaskDao taskDao = new ChiTietTaskDao(this.maNV);
+            GiangVienDAO taskDao = new GiangVienDAO();
             PhanHoi ph = TaoPhanHoi();
             if (!ph.checkNullPhanHoi())
             {
