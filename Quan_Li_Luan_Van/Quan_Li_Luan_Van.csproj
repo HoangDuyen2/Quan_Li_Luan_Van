@@ -131,6 +131,12 @@
     <Compile Include="UCPhanHoi.Designer.cs">
       <DependentUpon>UCPhanHoi.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCTask_SV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTask_SV.Designer.cs">
+      <DependentUpon>UCTask_SV.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCUpdateTask.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -486,6 +492,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCTask.resx">
       <DependentUpon>UCTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCTask_SV.resx">
+      <DependentUpon>UCTask_SV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCThongBao.resx">
       <DependentUpon>UCThongBao.cs</DependentUpon>

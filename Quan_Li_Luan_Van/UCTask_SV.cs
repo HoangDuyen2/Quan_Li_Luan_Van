@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace Quan_Li_Luan_Van
 {
-    public partial class UCTask : UserControl
+    public partial class UCTask_SV : UserControl
     {
         private string maLV;
         private string maNV;
         private string maNguoi;
 
-        public UCTask()
+        public UCTask_SV()
         {
             InitializeComponent();
         }
@@ -30,14 +30,14 @@ namespace Quan_Li_Luan_Van
 
         private void btnChinhSua_Click(object sender, EventArgs e)
         {
-            FChinhSuaTask task = new FChinhSuaTask(MaNV,MaNguoi);
+            FChinhSuaTask task = new FChinhSuaTask(MaNV, MaNguoi);
             task.ShowDialog();
         }
 
         private void btnChiTiet_Click(object sender, EventArgs e)
         {
-            FChiTietTask_All fChiTietTask_GV = new FChiTietTask_All(maNV,maNguoi);
-            fChiTietTask_GV.ShowDialog();
+            FCapNhatTienTrinh fCapNhatTienTrinh = new FCapNhatTienTrinh(maNV, maNguoi);
+            fCapNhatTienTrinh.ShowDialog();
         }
 
         private void UCTask_Load(object sender, EventArgs e)
@@ -46,3 +46,4 @@ namespace Quan_Li_Luan_Van
         }
     }
 }
+
