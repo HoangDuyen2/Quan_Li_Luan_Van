@@ -472,7 +472,7 @@ namespace Quan_Li_Luan_Van
                 {
                     UCUpdateTask uCUpdateTask = new UCUpdateTask();
                     uCUpdateTask.LblTenSV.Text = dataReader["TenSV"].ToString();
-                    uCUpdateTask.LblThoiGian.Text = dataReader["ThoiGianGui"].ToString();
+                    uCUpdateTask.LblThoiGian.Text = dataReader["ThoiGian"].ToString();
                     uCUpdateTask.LblTienTrinh.Text = dataReader["TienTrinh"].ToString();
                     panel.Controls.Add(uCUpdateTask);
                 }

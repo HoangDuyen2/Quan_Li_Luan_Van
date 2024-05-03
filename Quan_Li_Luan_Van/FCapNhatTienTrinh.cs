@@ -13,7 +13,7 @@ namespace Quan_Li_Luan_Van
     public partial class FCapNhatTienTrinh : Form
     {
         private string maNV;
-        private string maSV;
+        private string MSSV;
         public FCapNhatTienTrinh()
         {
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace Quan_Li_Luan_Van
         public FCapNhatTienTrinh(string maNV, string maSV) :this()
         {
             this.maNV = maNV;
-            this.maSV = maSV;
+            this.MSSV = maSV;
             LoadInfoTask();
             LoadCapNhatTienTrinh();
             LoadPhanHoi();
@@ -30,13 +30,13 @@ namespace Quan_Li_Luan_Van
         }
         public void LoadInfoTask()
         {
-            GiangVienDAO task = new GiangVienDAO(); // Có thể sài chung
+            GiangVienDAO task = new GiangVienDAO();
             NhiemVu nhiemVu = task.GetTask(this.maNV);
 
             if (nhiemVu != null && !nhiemVu.KiemTraNull())
             {
                 txtTenNV.Text = nhiemVu.TenNV;
-                txtTienTrinh.Text = nhiemVu.TienTrinh.ToString() + "%";
+                txtTienTrinh.Text = nhiemVu.TienTrinh.ToString();
                 txtNoiDungNV.Text = nhiemVu.NoiDung;
                 TrackTienTrinh.Value = nhiemVu.TienTrinh;
             }
@@ -104,7 +104,7 @@ namespace Quan_Li_Luan_Van
         {
             SinhVienDAO ph = new SinhVienDAO();
 
-            string tenNguoiGui = ph.GetTenSV(maSV);
+            string tenNguoiGui = ph.GetTenSV(MSSV);
             string noiDung = txtPhanHoi.Text;
             DateTime thoiGian = DateTime.Now;
             string chuoiThoiGian = thoiGian.ToString("yyyy-MM-dd HH:mm:ss");
@@ -115,7 +115,7 @@ namespace Quan_Li_Luan_Van
         {
 
         }
-        /*private void btnLuu_Click(object sender, EventArgs e)
+        private void btnCapNhat_Click(object sender, EventArgs e)
         {
             CapNhatTienTrinh update = TaoCapNhatTienTrinh();
             if (update == null)
@@ -127,15 +127,18 @@ namespace Quan_Li_Luan_Van
             if (result)
             {
                 MessageBox.Show("Cập nhật thành công!");
+                LoadDataChart();
+                LoadCapNhatTienTrinh();
+                LoadInfoTask();
             }
             else
             {
                 MessageBox.Show("Cập nhật thất bại. Vui lòng thử lại.");
             }
-        }*/
+        }
         private CapNhatTienTrinh TaoCapNhatTienTrinh()
         {
-            int tienTrinhCu = int.Parse(txtTienTrinh.Text.Replace("%", "").Trim());
+            int tienTrinhCu = int.Parse(txtTienTrinh.Text.Trim());
             int tienTrinhMoi = TrackTienTrinh.Value;
 
             if (tienTrinhMoi <= tienTrinhCu)
@@ -148,7 +151,7 @@ namespace Quan_Li_Luan_Van
             DateTime thoiGian = DateTime.Now;
             string chuoiThoiGian = thoiGian.ToString("yyyy-MM-dd HH:mm:ss");
 
-            return new CapNhatTienTrinh(this.maNV, this.maSV, capNhat, tienTrinhMoi, chuoiThoiGian);
+            return new CapNhatTienTrinh(this.maNV, this.MSSV, capNhat, tienTrinhMoi, chuoiThoiGian);
         }
         private void btnThoat_Click(object sender, EventArgs e)
         {

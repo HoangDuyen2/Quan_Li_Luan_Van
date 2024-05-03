@@ -120,6 +120,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
             this.Controls.Add(this.btnChinhSua);
             this.Controls.Add(this.btnChiTiet);
             this.Controls.Add(this.lblTienTrinh);
@@ -128,6 +129,7 @@
             this.Controls.Add(this.pictureBoxNen);
             this.Name = "UCTask_SV";
             this.Size = new System.Drawing.Size(1034, 94);
+            this.Load += new System.EventHandler(this.UCTask_SV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

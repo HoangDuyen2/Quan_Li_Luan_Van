@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btnThoat = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.lblChat = new System.Windows.Forms.Label();
             this.chartTienDo = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -51,7 +51,7 @@
             this.txtTenNV = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.lblTenNV = new System.Windows.Forms.Label();
             this.panelNoidung = new System.Windows.Forms.Panel();
-            this.btnLuu = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnCapNhat = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.label1 = new System.Windows.Forms.Label();
             this.TrackTienTrinh = new ComponentFactory.Krypton.Toolkit.KryptonTrackBar();
             ((System.ComponentModel.ISupportInitialize)(this.chartTienDo)).BeginInit();
@@ -84,16 +84,16 @@
             // 
             // chartTienDo
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartTienDo.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartTienDo.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chartTienDo.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartTienDo.Legends.Add(legend2);
             this.chartTienDo.Location = new System.Drawing.Point(597, 38);
             this.chartTienDo.Name = "chartTienDo";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartTienDo.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartTienDo.Series.Add(series2);
             this.chartTienDo.Size = new System.Drawing.Size(406, 150);
             this.chartTienDo.TabIndex = 23;
             this.chartTienDo.Text = "chart1";
@@ -313,7 +313,7 @@
             // panelNoidung
             // 
             this.panelNoidung.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panelNoidung.Controls.Add(this.btnLuu);
+            this.panelNoidung.Controls.Add(this.btnCapNhat);
             this.panelNoidung.Controls.Add(this.label1);
             this.panelNoidung.Controls.Add(this.TrackTienTrinh);
             this.panelNoidung.Controls.Add(this.lblChat);
@@ -336,15 +336,16 @@
             this.panelNoidung.Size = new System.Drawing.Size(1025, 572);
             this.panelNoidung.TabIndex = 22;
             // 
-            // btnLuu
+            // btnCapNhat
             // 
-            this.btnLuu.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
-            this.btnLuu.Location = new System.Drawing.Point(928, 523);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
-            this.btnLuu.Size = new System.Drawing.Size(90, 40);
-            this.btnLuu.TabIndex = 24;
-            this.btnLuu.Values.Text = "Cập nhật";
+            this.btnCapNhat.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
+            this.btnCapNhat.Location = new System.Drawing.Point(928, 523);
+            this.btnCapNhat.Name = "btnCapNhat";
+            this.btnCapNhat.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
+            this.btnCapNhat.Size = new System.Drawing.Size(90, 40);
+            this.btnCapNhat.TabIndex = 24;
+            this.btnCapNhat.Values.Text = "Cập nhật";
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // label1
             // 
@@ -416,6 +417,6 @@
         private System.Windows.Forms.Panel panelNoidung;
         private System.Windows.Forms.Label label1;
         private ComponentFactory.Krypton.Toolkit.KryptonTrackBar TrackTienTrinh;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnLuu;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnCapNhat;
     }
 }
