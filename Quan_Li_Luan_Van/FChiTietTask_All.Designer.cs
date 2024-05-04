@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelNoidung = new System.Windows.Forms.Panel();
             this.lblChat = new System.Windows.Forms.Label();
             this.chartTienDo = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -93,16 +93,16 @@
             // 
             // chartTienDo
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartTienDo.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartTienDo.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.chartTienDo.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartTienDo.Legends.Add(legend3);
             this.chartTienDo.Location = new System.Drawing.Point(597, 38);
             this.chartTienDo.Name = "chartTienDo";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartTienDo.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chartTienDo.Series.Add(series3);
             this.chartTienDo.Size = new System.Drawing.Size(406, 150);
             this.chartTienDo.TabIndex = 23;
             this.chartTienDo.Text = "chart1";
@@ -110,11 +110,13 @@
             // fpnChat
             // 
             this.fpnChat.AutoScroll = true;
+            this.fpnChat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fpnChat.Controls.Add(this.ucPhanHoi1);
             this.fpnChat.Location = new System.Drawing.Point(20, 221);
             this.fpnChat.Name = "fpnChat";
             this.fpnChat.Size = new System.Drawing.Size(561, 228);
             this.fpnChat.TabIndex = 36;
+            this.fpnChat.Paint += new System.Windows.Forms.PaintEventHandler(this.fpnChat_Paint);
             // 
             // ucPhanHoi1
             // 
@@ -156,6 +158,7 @@
             // 
             this.fpnUpdateTask.AutoScroll = true;
             this.fpnUpdateTask.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.fpnUpdateTask.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fpnUpdateTask.Controls.Add(this.ucUpdateTask1);
             this.fpnUpdateTask.Location = new System.Drawing.Point(592, 221);
             this.fpnUpdateTask.Name = "fpnUpdateTask";

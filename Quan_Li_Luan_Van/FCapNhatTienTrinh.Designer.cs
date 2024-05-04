@@ -28,19 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btnThoat = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.lblChat = new System.Windows.Forms.Label();
             this.chartTienDo = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.fpnChat = new System.Windows.Forms.FlowLayoutPanel();
-            this.ucPhanHoi1 = new Quan_Li_Luan_Van.UCPhanHoi();
             this.btnPhanHoi = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.lblThongKe = new System.Windows.Forms.Label();
             this.txtPhanHoi = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
             this.fpnUpdateTask = new System.Windows.Forms.FlowLayoutPanel();
-            this.ucUpdateTask1 = new Quan_Li_Luan_Van.UCUpdateTask();
             this.lblCNTT = new System.Windows.Forms.Label();
             this.lblPhanHoi = new System.Windows.Forms.Label();
             this.lblUpdate = new System.Windows.Forms.Label();
@@ -54,6 +52,8 @@
             this.btnCapNhat = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.label1 = new System.Windows.Forms.Label();
             this.TrackTienTrinh = new ComponentFactory.Krypton.Toolkit.KryptonTrackBar();
+            this.ucPhanHoi1 = new Quan_Li_Luan_Van.UCPhanHoi();
+            this.ucUpdateTask1 = new Quan_Li_Luan_Van.UCUpdateTask();
             ((System.ComponentModel.ISupportInitialize)(this.chartTienDo)).BeginInit();
             this.fpnChat.SuspendLayout();
             this.fpnUpdateTask.SuspendLayout();
@@ -63,7 +63,7 @@
             // btnThoat
             // 
             this.btnThoat.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
-            this.btnThoat.Location = new System.Drawing.Point(684, 641);
+            this.btnThoat.Location = new System.Drawing.Point(675, 654);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
             this.btnThoat.Size = new System.Drawing.Size(169, 40);
@@ -76,7 +76,7 @@
             this.lblChat.AutoSize = true;
             this.lblChat.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChat.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblChat.Location = new System.Drawing.Point(15, 190);
+            this.lblChat.Location = new System.Drawing.Point(13, 218);
             this.lblChat.Name = "lblChat";
             this.lblChat.Size = new System.Drawing.Size(162, 28);
             this.lblChat.TabIndex = 37;
@@ -84,41 +84,35 @@
             // 
             // chartTienDo
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartTienDo.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartTienDo.Legends.Add(legend2);
-            this.chartTienDo.Location = new System.Drawing.Point(597, 38);
+            chartArea3.Name = "ChartArea1";
+            this.chartTienDo.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartTienDo.Legends.Add(legend3);
+            this.chartTienDo.Location = new System.Drawing.Point(569, 33);
             this.chartTienDo.Name = "chartTienDo";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartTienDo.Series.Add(series2);
-            this.chartTienDo.Size = new System.Drawing.Size(406, 150);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chartTienDo.Series.Add(series3);
+            this.chartTienDo.Size = new System.Drawing.Size(469, 191);
             this.chartTienDo.TabIndex = 23;
             this.chartTienDo.Text = "chart1";
             // 
             // fpnChat
             // 
             this.fpnChat.AutoScroll = true;
+            this.fpnChat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fpnChat.Controls.Add(this.ucPhanHoi1);
-            this.fpnChat.Location = new System.Drawing.Point(20, 221);
+            this.fpnChat.Location = new System.Drawing.Point(18, 249);
             this.fpnChat.Name = "fpnChat";
-            this.fpnChat.Size = new System.Drawing.Size(561, 228);
+            this.fpnChat.Size = new System.Drawing.Size(545, 228);
             this.fpnChat.TabIndex = 36;
-            // 
-            // ucPhanHoi1
-            // 
-            this.ucPhanHoi1.BackColor = System.Drawing.Color.LavenderBlush;
-            this.ucPhanHoi1.Location = new System.Drawing.Point(3, 3);
-            this.ucPhanHoi1.Name = "ucPhanHoi1";
-            this.ucPhanHoi1.Size = new System.Drawing.Size(555, 93);
-            this.ucPhanHoi1.TabIndex = 0;
+            this.fpnChat.Paint += new System.Windows.Forms.PaintEventHandler(this.fpnChat_Paint);
             // 
             // btnPhanHoi
             // 
             this.btnPhanHoi.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
-            this.btnPhanHoi.Location = new System.Drawing.Point(249, 641);
+            this.btnPhanHoi.Location = new System.Drawing.Point(250, 654);
             this.btnPhanHoi.Name = "btnPhanHoi";
             this.btnPhanHoi.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
             this.btnPhanHoi.Size = new System.Drawing.Size(169, 40);
@@ -139,9 +133,9 @@
             // 
             // txtPhanHoi
             // 
-            this.txtPhanHoi.Location = new System.Drawing.Point(15, 483);
+            this.txtPhanHoi.Location = new System.Drawing.Point(13, 506);
             this.txtPhanHoi.Name = "txtPhanHoi";
-            this.txtPhanHoi.Size = new System.Drawing.Size(569, 86);
+            this.txtPhanHoi.Size = new System.Drawing.Size(550, 86);
             this.txtPhanHoi.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.txtPhanHoi.StateCommon.Border.Color2 = System.Drawing.Color.Blue;
             this.txtPhanHoi.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -158,27 +152,19 @@
             // 
             this.fpnUpdateTask.AutoScroll = true;
             this.fpnUpdateTask.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.fpnUpdateTask.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fpnUpdateTask.Controls.Add(this.ucUpdateTask1);
-            this.fpnUpdateTask.Location = new System.Drawing.Point(592, 221);
+            this.fpnUpdateTask.Location = new System.Drawing.Point(597, 249);
             this.fpnUpdateTask.Name = "fpnUpdateTask";
-            this.fpnUpdateTask.Size = new System.Drawing.Size(421, 228);
+            this.fpnUpdateTask.Size = new System.Drawing.Size(407, 228);
             this.fpnUpdateTask.TabIndex = 21;
-            // 
-            // ucUpdateTask1
-            // 
-            this.ucUpdateTask1.BackColor = System.Drawing.Color.LavenderBlush;
-            this.ucUpdateTask1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.ucUpdateTask1.Location = new System.Drawing.Point(3, 3);
-            this.ucUpdateTask1.Name = "ucUpdateTask1";
-            this.ucUpdateTask1.Size = new System.Drawing.Size(400, 52);
-            this.ucUpdateTask1.TabIndex = 0;
             // 
             // lblCNTT
             // 
             this.lblCNTT.AutoSize = true;
             this.lblCNTT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCNTT.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblCNTT.Location = new System.Drawing.Point(437, 16);
+            this.lblCNTT.Location = new System.Drawing.Point(408, 16);
             this.lblCNTT.Name = "lblCNTT";
             this.lblCNTT.Size = new System.Drawing.Size(232, 28);
             this.lblCNTT.TabIndex = 20;
@@ -189,7 +175,7 @@
             this.lblPhanHoi.AutoSize = true;
             this.lblPhanHoi.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhanHoi.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblPhanHoi.Location = new System.Drawing.Point(15, 452);
+            this.lblPhanHoi.Location = new System.Drawing.Point(13, 480);
             this.lblPhanHoi.Name = "lblPhanHoi";
             this.lblPhanHoi.Size = new System.Drawing.Size(95, 28);
             this.lblPhanHoi.TabIndex = 34;
@@ -200,7 +186,7 @@
             this.lblUpdate.AutoSize = true;
             this.lblUpdate.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUpdate.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblUpdate.Location = new System.Drawing.Point(587, 193);
+            this.lblUpdate.Location = new System.Drawing.Point(585, 221);
             this.lblUpdate.Name = "lblUpdate";
             this.lblUpdate.Size = new System.Drawing.Size(213, 25);
             this.lblUpdate.TabIndex = 20;
@@ -208,7 +194,7 @@
             // 
             // txtTienTrinh
             // 
-            this.txtTienTrinh.Location = new System.Drawing.Point(464, 33);
+            this.txtTienTrinh.Location = new System.Drawing.Point(444, 33);
             this.txtTienTrinh.Name = "txtTienTrinh";
             this.txtTienTrinh.Size = new System.Drawing.Size(119, 35);
             this.txtTienTrinh.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -238,7 +224,7 @@
             this.lblTienTrinh.AutoSize = true;
             this.lblTienTrinh.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTienTrinh.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblTienTrinh.Location = new System.Drawing.Point(459, 5);
+            this.lblTienTrinh.Location = new System.Drawing.Point(440, 5);
             this.lblTienTrinh.Name = "lblTienTrinh";
             this.lblTienTrinh.Size = new System.Drawing.Size(123, 28);
             this.lblTienTrinh.TabIndex = 32;
@@ -248,7 +234,7 @@
             // 
             this.txtNoiDungNV.Location = new System.Drawing.Point(17, 108);
             this.txtNoiDungNV.Name = "txtNoiDungNV";
-            this.txtNoiDungNV.Size = new System.Drawing.Size(567, 80);
+            this.txtNoiDungNV.Size = new System.Drawing.Size(546, 80);
             this.txtNoiDungNV.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.txtNoiDungNV.StateCommon.Border.Color2 = System.Drawing.Color.Blue;
             this.txtNoiDungNV.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -276,7 +262,7 @@
             // 
             this.txtTenNV.Location = new System.Drawing.Point(16, 33);
             this.txtTenNV.Name = "txtTenNV";
-            this.txtTenNV.Size = new System.Drawing.Size(429, 35);
+            this.txtTenNV.Size = new System.Drawing.Size(418, 35);
             this.txtTenNV.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtTenNV.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.txtTenNV.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -331,15 +317,15 @@
             this.panelNoidung.Controls.Add(this.txtTenNV);
             this.panelNoidung.Controls.Add(this.lblTenNV);
             this.panelNoidung.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.panelNoidung.Location = new System.Drawing.Point(20, 50);
+            this.panelNoidung.Location = new System.Drawing.Point(4, 50);
             this.panelNoidung.Name = "panelNoidung";
-            this.panelNoidung.Size = new System.Drawing.Size(1025, 572);
+            this.panelNoidung.Size = new System.Drawing.Size(1041, 598);
             this.panelNoidung.TabIndex = 22;
             // 
             // btnCapNhat
             // 
             this.btnCapNhat.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
-            this.btnCapNhat.Location = new System.Drawing.Point(928, 523);
+            this.btnCapNhat.Location = new System.Drawing.Point(926, 555);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
             this.btnCapNhat.Size = new System.Drawing.Size(90, 40);
@@ -352,7 +338,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label1.Location = new System.Drawing.Point(590, 455);
+            this.label1.Location = new System.Drawing.Point(588, 483);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 25);
             this.label1.TabIndex = 39;
@@ -362,18 +348,36 @@
             // 
             this.TrackTienTrinh.DrawBackground = true;
             this.TrackTienTrinh.LargeChange = 100;
-            this.TrackTienTrinh.Location = new System.Drawing.Point(595, 483);
+            this.TrackTienTrinh.Location = new System.Drawing.Point(593, 511);
             this.TrackTienTrinh.Maximum = 100;
             this.TrackTienTrinh.Name = "TrackTienTrinh";
+            this.TrackTienTrinh.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.TrackTienTrinh.Size = new System.Drawing.Size(423, 34);
             this.TrackTienTrinh.TabIndex = 38;
             this.TrackTienTrinh.TrackBarSize = ComponentFactory.Krypton.Toolkit.PaletteTrackBarSize.Large;
+            // 
+            // ucPhanHoi1
+            // 
+            this.ucPhanHoi1.BackColor = System.Drawing.Color.LavenderBlush;
+            this.ucPhanHoi1.Location = new System.Drawing.Point(3, 3);
+            this.ucPhanHoi1.Name = "ucPhanHoi1";
+            this.ucPhanHoi1.Size = new System.Drawing.Size(555, 93);
+            this.ucPhanHoi1.TabIndex = 0;
+            // 
+            // ucUpdateTask1
+            // 
+            this.ucUpdateTask1.BackColor = System.Drawing.Color.LavenderBlush;
+            this.ucUpdateTask1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.ucUpdateTask1.Location = new System.Drawing.Point(3, 3);
+            this.ucUpdateTask1.Name = "ucUpdateTask1";
+            this.ucUpdateTask1.Size = new System.Drawing.Size(400, 52);
+            this.ucUpdateTask1.TabIndex = 0;
             // 
             // FCapNhatTienTrinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1064, 697);
+            this.ClientSize = new System.Drawing.Size(1048, 697);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnPhanHoi);
             this.Controls.Add(this.lblCNTT);
