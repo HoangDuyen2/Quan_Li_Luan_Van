@@ -59,31 +59,45 @@ namespace Quan_Li_Luan_Van
             chartTienDo.Series.Add("Progress");
             chartTienDo.Series["Progress"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
 
-
-            chartTienDo.Series["Progress"].Color = System.Drawing.Color.DodgerBlue;
-            chartTienDo.Series["Progress"].BorderWidth = 2;
-
             foreach (DataRow row in dt.Rows)
             {
-                int pointIndex = chartTienDo.Series["Progress"].Points.AddXY(row["TenSV"], row["TongPhanTramCapNhat"]);
-                chartTienDo.Series["Progress"].Points[pointIndex].Label = $"{row["TongPhanTramCapNhat"]}%";
+                string studentName = row["TenSV"].ToString();
+                int progress = 0;
+                if (!Convert.IsDBNull(row["TongPhanTramCapNhat"]))
+                {
+                    progress = Convert.ToInt32(row["TongPhanTramCapNhat"]);
+                }
+
+                int pointIndex = chartTienDo.Series["Progress"].Points.AddXY(studentName, progress);
+                chartTienDo.Series["Progress"].Points[pointIndex].Label = $"{progress}%";
+                chartTienDo.Series["Progress"].Points[pointIndex].Color = GetColorBasedOnProgress(progress);
             }
 
-
+            chartTienDo.Series["Progress"].BorderWidth = 2;
             chartTienDo.ChartAreas[0].AxisX.Interval = 1;
-            chartTienDo.ChartAreas[0].AxisX.LabelStyle.Angle = -45;
             chartTienDo.ChartAreas[0].AxisX.LabelStyle.Font = new System.Drawing.Font("Tahoma", 8);
             chartTienDo.ChartAreas[0].AxisY.Minimum = 0;
             chartTienDo.ChartAreas[0].AxisY.Maximum = 100;
             chartTienDo.ChartAreas[0].AxisY.Interval = 10;
+            chartTienDo.ChartAreas[0].AxisY.LabelStyle.Angle = 0;
 
-
-            chartTienDo.Titles.Clear();
-            chartTienDo.Titles.Add("Progress of Students");
-            chartTienDo.Titles[0].Font = new System.Drawing.Font("Microsoft Sans Serif", 10, System.Drawing.FontStyle.Bold);
+            chartTienDo.Legends[0].Enabled = false;
 
             chartTienDo.ChartAreas[0].RecalculateAxesScale();
         }
+
+        private Color GetColorBasedOnProgress(int progress)
+        {
+            if (progress < 30)
+                return System.Drawing.Color.Red;
+            else if (progress < 60)
+                return System.Drawing.Color.Orange;
+            else if (progress < 80)
+                return System.Drawing.Color.YellowGreen;
+            else
+                return System.Drawing.Color.Green;
+        }
+
         private void btnPhanHoi_Click(object sender, EventArgs e)
         {
             GiangVienDAO phanhoi = new GiangVienDAO();
@@ -156,6 +170,11 @@ namespace Quan_Li_Luan_Van
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();  
+        }
+
+        private void fpnChat_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

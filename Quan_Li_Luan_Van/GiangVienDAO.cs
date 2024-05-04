@@ -497,7 +497,7 @@ namespace Quan_Li_Luan_Van
                                 JOIN LuanVan lv ON nv.MaLV = lv.MaLV
                                 JOIN DSThanhVien dstv ON lv.MaLV = dstv.MaLV
                                 LEFT JOIN SinhVien sv ON sv.MSSV = dstv.MSSV1 OR sv.MSSV = dstv.MSSV2 OR sv.MSSV = dstv.MSSV3
-                                LEFT JOIN CapNhatTienTrinh ct ON sv.MSSV = ct.MSSV
+                                LEFT JOIN CapNhatTienTrinh ct ON sv.MSSV = ct.MSSV AND ct.MaNV = nv.MaNV
                                 WHERE nv.MaNV = @MaNV
                                 GROUP BY sv.TenSV";
                 SqlCommand cmd = new SqlCommand(query, conn);

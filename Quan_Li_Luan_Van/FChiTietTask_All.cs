@@ -116,5 +116,10 @@ namespace Quan_Li_Luan_Van
         {
             this.Close();
         }
+
+        private void fpnChat_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
