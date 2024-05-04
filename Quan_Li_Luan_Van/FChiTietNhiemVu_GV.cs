@@ -10,28 +10,29 @@ using System.Windows.Forms;
 
 namespace Quan_Li_Luan_Van
 {
-    public partial class FChamDiem : Form
+    public partial class FChiTietTask_All : Form
     {
-        private string maLV;
-        public FChamDiem()
+        private string maNV;
+        private string maGV;
+       
+        public FChiTietTask_All(string MaNV, string maGV) : this()
         {
-            InitializeComponent();
-        }
-        public FChamDiem(string maLV) : this()
-        {
-            this.maLV = maLV;
-            LoadDSThanhVien();
+            this.maNV = MaNV;
+            this.maGV = maGV;
+            LoadInfoTask();
+            LoadPhanHoi();
+            LoadCapNhatTienTrinh();
             LoadDataChart();
         }
-        public void LoadDSThanhVien()
+
+        public FChiTietTask_All()
         {
-            GiangVienDAO chamdiem = new GiangVienDAO();
-            chamdiem.LoadListThanhVien(this.maLV, flpDSThanhVien);
+            InitializeComponent();
         }
         public void LoadDataChart()
         {
             GiangVienDAO chartData = new GiangVienDAO();
-            DataTable dt = chartData.GetStudentProgressDataAll(this.maLV);
+            DataTable dt = chartData.GetStudentProgressData(this.maNV);
             chartTienDo.Series.Clear();
             chartTienDo.Series.Add("Progress");
             chartTienDo.Series["Progress"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
@@ -40,9 +41,9 @@ namespace Quan_Li_Luan_Van
             {
                 string studentName = row["TenSV"].ToString();
                 int progress = 0;
-                if (!Convert.IsDBNull(row["TongPhanTramHoanThanh"]))
+                if (!Convert.IsDBNull(row["TongPhanTramCapNhat"]))
                 {
-                    progress = Convert.ToInt32(row["TongPhanTramHoanThanh"]);
+                    progress = Convert.ToInt32(row["TongPhanTramCapNhat"]);
                 }
 
                 int pointIndex = chartTienDo.Series["Progress"].Points.AddXY(studentName, progress);
@@ -73,32 +74,55 @@ namespace Quan_Li_Luan_Van
             else
                 return System.Drawing.Color.Green;
         }
-
-        private void btnLuuDiem_Click(object sender, EventArgs e)
+        public void LoadInfoTask()
         {
-            bool allScoresValid = true;
-            foreach (UCChamDiem uc in flpDSThanhVien.Controls)
-            {
-                if (string.IsNullOrWhiteSpace(uc.TxtDiem.Text) || !float.TryParse(uc.TxtDiem.Text, out float score))
-                {
-                    MessageBox.Show("Please enter a valid score for all students.");
-                    allScoresValid = false;
-                    break;
-                }
-            }
+            GiangVienDAO task = new GiangVienDAO();
+            NhiemVu nhiemVu = task.GetTask(this.maNV);
 
-            if (allScoresValid)
+            if (nhiemVu != null && !nhiemVu.KiemTraNull())
             {
-                foreach (UCChamDiem uc in flpDSThanhVien.Controls)
-                {
-                    float score = float.Parse(uc.TxtDiem.Text);
-                    string mssv = uc.LblMSSV.Text;
-                    new GiangVienDAO().UpdateStudentScore(mssv, score);
-                }
-                MessageBox.Show("Scores updated successfully!");
+                txtTenNV.Text = nhiemVu.TenNV;
+                txtTienTrinh.Text = nhiemVu.TienTrinh.ToString() + "%";
+                txtNoiDungNV.Text = nhiemVu.NoiDung;
             }
         }
+        public void LoadCapNhatTienTrinh()
+        {
+            GiangVienDAO tientrinh = new GiangVienDAO();
+            tientrinh.LoadListCapNhatTienTrinh(this.maNV, fpnUpdateTask);
+        }
+        public void LoadPhanHoi()
+        {
+            GiangVienDAO task = new GiangVienDAO();
+            task.LoadListPhanHoi(this.maNV, fpnChat);
+        }
+        private void btnPhanHoi_Click(object sender, EventArgs e)
+        {
+            GiangVienDAO taskDao = new GiangVienDAO();
+            PhanHoi ph = TaoPhanHoi();
+            if (!ph.checkNullPhanHoi())
+            {
+                MessageBox.Show("Vui lòng điền đủ thông tin");
+            }
+            else
+            {
+                taskDao.ThemPhanHoi(ph);
+                MessageBox.Show("Thêm thành công");
+                txtPhanHoi.Text = "";
+                LoadPhanHoi();
+            }
+        }
+        private PhanHoi TaoPhanHoi()
+        {
+            GiangVienDAO ph = new GiangVienDAO();
 
+            string tenNguoiGui = ph.GetTenGV(maGV);
+            string noiDung = txtPhanHoi.Text;
+            DateTime thoiGian = DateTime.Now;
+            string chuoiThoiGian = thoiGian.ToString("yyyy-MM-dd HH:mm:ss");
+
+            return new PhanHoi(tenNguoiGui, chuoiThoiGian, noiDung, this.maNV);
+        }
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();

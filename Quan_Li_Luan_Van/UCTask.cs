@@ -35,16 +35,10 @@ namespace Quan_Li_Luan_Van
             FChinhSuaTask task = new FChinhSuaTask(MaNV,MaNguoiDangNhap);
             task.ShowDialog();
         }
-
         private void btnChiTiet_Click(object sender, EventArgs e)
         {
             FChiTietTask_All fChiTietTask_GV = new FChiTietTask_All(maNV,maNguoi);
             fChiTietTask_GV.ShowDialog();
-        }
-
-        private void UCTask_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
