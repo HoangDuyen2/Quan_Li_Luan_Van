@@ -20,6 +20,7 @@ namespace Quan_Li_Luan_Van
         TaiKhoan taiKhoan;
         SinhVienDAO trangChinh = new SinhVienDAO();
         SinhVien sinhVien = null;
+
         public FSinhVien(TaiKhoan taiKhoan)
         {
             InitializeComponent();
@@ -88,5 +89,7 @@ namespace Quan_Li_Luan_Van
             OpenChildForm(new FThongTinCaNhan_SV(sinhVien), sender);
             FSinhVien_Load(sender, e);
         }
+
     }
+
 }
