@@ -28,197 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtDiem3 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.txtDiem2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.txtDiem1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.lblTenSV3 = new System.Windows.Forms.Label();
-            this.lblTenSV2 = new System.Windows.Forms.Label();
-            this.lblTenSV1 = new System.Windows.Forms.Label();
-            this.lblMSSV3 = new System.Windows.Forms.Label();
-            this.lblMSSV2 = new System.Windows.Forms.Label();
-            this.lblMSSV1 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.lblChamDiem = new System.Windows.Forms.Label();
-            this.btnThem = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnLuDiem = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnThoat = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.chartTienDo = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.flpDSThanhVien = new System.Windows.Forms.FlowLayoutPanel();
+            this.ucChamDiem1 = new Quan_Li_Luan_Van.UCChamDiem();
+            ((System.ComponentModel.ISupportInitialize)(this.chartTienDo)).BeginInit();
+            this.flpDSThanhVien.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.txtDiem3);
-            this.panel1.Controls.Add(this.txtDiem2);
-            this.panel1.Controls.Add(this.txtDiem1);
-            this.panel1.Controls.Add(this.lblTenSV3);
-            this.panel1.Controls.Add(this.lblTenSV2);
-            this.panel1.Controls.Add(this.lblTenSV1);
-            this.panel1.Controls.Add(this.lblMSSV3);
-            this.panel1.Controls.Add(this.lblMSSV2);
-            this.panel1.Controls.Add(this.lblMSSV1);
-            this.panel1.Location = new System.Drawing.Point(11, 61);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(463, 345);
-            this.panel1.TabIndex = 0;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Quan_Li_Luan_Van.Properties.Resources.icons8_student_48;
-            this.pictureBox3.Location = new System.Drawing.Point(6, 245);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 59;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Quan_Li_Luan_Van.Properties.Resources.icons8_student_48;
-            this.pictureBox2.Location = new System.Drawing.Point(6, 151);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 58;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::Quan_Li_Luan_Van.Properties.Resources.icons8_student_48;
-            this.pictureBox1.Location = new System.Drawing.Point(5, 48);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 57;
-            this.pictureBox1.TabStop = false;
-            // 
-            // txtDiem3
-            // 
-            this.txtDiem3.Location = new System.Drawing.Point(278, 247);
-            this.txtDiem3.Name = "txtDiem3";
-            this.txtDiem3.Size = new System.Drawing.Size(140, 35);
-            this.txtDiem3.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.txtDiem3.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
-            this.txtDiem3.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.txtDiem3.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtDiem3.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtDiem3.StateCommon.Border.Rounding = 16;
-            this.txtDiem3.StateCommon.Border.Width = 1;
-            this.txtDiem3.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtDiem3.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiem3.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.txtDiem3.TabIndex = 56;
-            // 
-            // txtDiem2
-            // 
-            this.txtDiem2.Location = new System.Drawing.Point(278, 148);
-            this.txtDiem2.Name = "txtDiem2";
-            this.txtDiem2.Size = new System.Drawing.Size(140, 35);
-            this.txtDiem2.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.txtDiem2.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
-            this.txtDiem2.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.txtDiem2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtDiem2.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtDiem2.StateCommon.Border.Rounding = 16;
-            this.txtDiem2.StateCommon.Border.Width = 1;
-            this.txtDiem2.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtDiem2.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiem2.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.txtDiem2.TabIndex = 55;
-            // 
-            // txtDiem1
-            // 
-            this.txtDiem1.Location = new System.Drawing.Point(278, 53);
-            this.txtDiem1.Name = "txtDiem1";
-            this.txtDiem1.Size = new System.Drawing.Size(140, 35);
-            this.txtDiem1.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.txtDiem1.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
-            this.txtDiem1.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.txtDiem1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtDiem1.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtDiem1.StateCommon.Border.Rounding = 16;
-            this.txtDiem1.StateCommon.Border.Width = 1;
-            this.txtDiem1.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtDiem1.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiem1.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.txtDiem1.TabIndex = 54;
-            // 
-            // lblTenSV3
-            // 
-            this.lblTenSV3.AutoSize = true;
-            this.lblTenSV3.Font = new System.Drawing.Font("Leelawadee UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenSV3.Location = new System.Drawing.Point(64, 272);
-            this.lblTenSV3.Name = "lblTenSV3";
-            this.lblTenSV3.Size = new System.Drawing.Size(170, 23);
-            this.lblTenSV3.TabIndex = 6;
-            this.lblTenSV3.Text = "Lê Đức Minh Vương";
-            // 
-            // lblTenSV2
-            // 
-            this.lblTenSV2.AutoSize = true;
-            this.lblTenSV2.Font = new System.Drawing.Font("Leelawadee UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenSV2.Location = new System.Drawing.Point(64, 178);
-            this.lblTenSV2.Name = "lblTenSV2";
-            this.lblTenSV2.Size = new System.Drawing.Size(170, 23);
-            this.lblTenSV2.TabIndex = 5;
-            this.lblTenSV2.Text = "Lê Đức Minh Vương";
-            // 
-            // lblTenSV1
-            // 
-            this.lblTenSV1.AutoSize = true;
-            this.lblTenSV1.Font = new System.Drawing.Font("Leelawadee UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenSV1.Location = new System.Drawing.Point(64, 78);
-            this.lblTenSV1.Name = "lblTenSV1";
-            this.lblTenSV1.Size = new System.Drawing.Size(170, 23);
-            this.lblTenSV1.TabIndex = 4;
-            this.lblTenSV1.Text = "Lê Đức Minh Vương";
-            // 
-            // lblMSSV3
-            // 
-            this.lblMSSV3.AutoSize = true;
-            this.lblMSSV3.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMSSV3.Location = new System.Drawing.Point(64, 240);
-            this.lblMSSV3.Name = "lblMSSV3";
-            this.lblMSSV3.Size = new System.Drawing.Size(81, 20);
-            this.lblMSSV3.TabIndex = 3;
-            this.lblMSSV3.Text = "22110271";
-            // 
-            // lblMSSV2
-            // 
-            this.lblMSSV2.AutoSize = true;
-            this.lblMSSV2.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMSSV2.Location = new System.Drawing.Point(64, 148);
-            this.lblMSSV2.Name = "lblMSSV2";
-            this.lblMSSV2.Size = new System.Drawing.Size(81, 20);
-            this.lblMSSV2.TabIndex = 2;
-            this.lblMSSV2.Text = "22110271";
-            // 
-            // lblMSSV1
-            // 
-            this.lblMSSV1.AutoSize = true;
-            this.lblMSSV1.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMSSV1.Location = new System.Drawing.Point(64, 44);
-            this.lblMSSV1.Name = "lblMSSV1";
-            this.lblMSSV1.Size = new System.Drawing.Size(81, 20);
-            this.lblMSSV1.TabIndex = 1;
-            this.lblMSSV1.Text = "22110271";
             // 
             // lblChamDiem
             // 
@@ -231,21 +54,21 @@
             this.lblChamDiem.TabIndex = 15;
             this.lblChamDiem.Text = "CHẤM ĐIỂM";
             // 
-            // btnThem
+            // btnLuDiem
             // 
-            this.btnThem.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
-            this.btnThem.Location = new System.Drawing.Point(80, 417);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
-            this.btnThem.Size = new System.Drawing.Size(125, 40);
-            this.btnThem.TabIndex = 16;
-            this.btnThem.Values.Text = "Lưu Điểm";
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            this.btnLuDiem.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
+            this.btnLuDiem.Location = new System.Drawing.Point(80, 344);
+            this.btnLuDiem.Name = "btnLuDiem";
+            this.btnLuDiem.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
+            this.btnLuDiem.Size = new System.Drawing.Size(125, 40);
+            this.btnLuDiem.TabIndex = 16;
+            this.btnLuDiem.Values.Text = "Lưu Điểm";
+            this.btnLuDiem.Click += new System.EventHandler(this.btnLuuDiem_Click);
             // 
             // btnThoat
             // 
             this.btnThoat.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
-            this.btnThoat.Location = new System.Drawing.Point(269, 417);
+            this.btnThoat.Location = new System.Drawing.Point(269, 344);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
             this.btnThoat.Size = new System.Drawing.Size(125, 40);
@@ -253,47 +76,79 @@
             this.btnThoat.Values.Text = "Thoát";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label1.Location = new System.Drawing.Point(603, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 28);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "THỐNG KÊ ";
+            // 
+            // chartTienDo
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chartTienDo.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartTienDo.Legends.Add(legend1);
+            this.chartTienDo.Location = new System.Drawing.Point(455, 52);
+            this.chartTienDo.Name = "chartTienDo";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartTienDo.Series.Add(series1);
+            this.chartTienDo.Size = new System.Drawing.Size(495, 250);
+            this.chartTienDo.TabIndex = 24;
+            this.chartTienDo.Text = "chart1";
+            // 
+            // flpDSThanhVien
+            // 
+            this.flpDSThanhVien.Controls.Add(this.ucChamDiem1);
+            this.flpDSThanhVien.Location = new System.Drawing.Point(28, 83);
+            this.flpDSThanhVien.Name = "flpDSThanhVien";
+            this.flpDSThanhVien.Size = new System.Drawing.Size(421, 250);
+            this.flpDSThanhVien.TabIndex = 25;
+            // 
+            // ucChamDiem1
+            // 
+            this.ucChamDiem1.Location = new System.Drawing.Point(3, 3);
+            this.ucChamDiem1.Name = "ucChamDiem1";
+            this.ucChamDiem1.Size = new System.Drawing.Size(412, 78);
+            this.ucChamDiem1.TabIndex = 0;
+            // 
             // FChamDiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(484, 469);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(991, 391);
+            this.Controls.Add(this.flpDSThanhVien);
+            this.Controls.Add(this.chartTienDo);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.btnThem);
+            this.Controls.Add(this.btnLuDiem);
             this.Controls.Add(this.lblChamDiem);
-            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FChamDiem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FChamDiem";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartTienDo)).EndInit();
+            this.flpDSThanhVien.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblMSSV3;
-        private System.Windows.Forms.Label lblMSSV2;
-        private System.Windows.Forms.Label lblMSSV1;
-        private System.Windows.Forms.Label lblTenSV1;
         private System.Windows.Forms.Label lblChamDiem;
-        private System.Windows.Forms.Label lblTenSV3;
-        private System.Windows.Forms.Label lblTenSV2;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtDiem1;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtDiem3;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtDiem2;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnThem;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnLuDiem;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnThoat;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartTienDo;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.FlowLayoutPanel flpDSThanhVien;
+        private UCChamDiem ucChamDiem1;
     }
 }

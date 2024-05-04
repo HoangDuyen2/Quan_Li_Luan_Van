@@ -42,7 +42,7 @@ namespace Quan_Li_Luan_Van
 
         private void btnChamDiem_Click(object sender, EventArgs e)
         {
-            FChamDiem fChamDiem = new FChamDiem();
+            FChamDiem fChamDiem = new FChamDiem(MaLV);
             fChamDiem.ShowDialog();
         }
     }

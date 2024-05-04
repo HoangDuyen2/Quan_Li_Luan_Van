@@ -115,6 +115,12 @@
     <Compile Include="PhanHoi.cs" />
     <Compile Include="SinhVienDAO.cs" />
     <Compile Include="ThongBao.cs" />
+    <Compile Include="UCChamDiem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCChamDiem.Designer.cs">
+      <DependentUpon>UCChamDiem.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCChiTietLuanVan.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -463,6 +469,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FThemLuanVan.resx">
       <DependentUpon>FThemLuanVan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCChamDiem.resx">
+      <DependentUpon>UCChamDiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCDuyet.resx">
       <DependentUpon>UCDuyet.cs</DependentUpon>

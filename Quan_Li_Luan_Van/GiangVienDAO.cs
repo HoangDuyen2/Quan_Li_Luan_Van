@@ -515,12 +515,87 @@ namespace Quan_Li_Luan_Van
             }
             return dataTable;
         }
+        public DataTable GetStudentProgressDataAll(string maLV)
+        {
+            DataTable dataTable = new DataTable();
+            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr))
+            {
+                string query = @"
+                                SELECT sv.TenSV, 
+                                       COALESCE(CAST((ISNULL(SUM(cpt.PhanTramCapNhat), 0) * 100.0 / NULLIF(SUM(SUM(cpt.PhanTramCapNhat)) OVER(), 0)) AS DECIMAL(5,2)), 0) AS TongPhanTramHoanThanh
+                                FROM DSThanhVien dtv
+                                JOIN SinhVien sv ON sv.MSSV = dtv.MSSV1 OR sv.MSSV = dtv.MSSV2 OR sv.MSSV = dtv.MSSV3
+                                LEFT JOIN NhiemVu nv ON nv.MaLV = dtv.MaLV
+                                LEFT JOIN CapNhatTienTrinh cpt ON cpt.MaNV = nv.MaNV AND cpt.MSSV = sv.MSSV
+                                WHERE dtv.MaLV = @MaLV
+                                GROUP BY sv.TenSV";
 
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@MaLV", maLV);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dataTable);
+            }
+            return dataTable;
+        }
         public void ThemPhanHoi(PhanHoi ph)
         {
             string query = string.Format("INSERT INTO PhanHoi(TenNguoiGui, ThoiGianGui, NoiDung, MaNV) VALUES (N'{0}', N'{1}', N'{2}', '{3}')", ph.Name, ph.Thoigian, ph.Noidung, ph.NhiemVu);
             dBConnection.ThucThi(query);
         }
+        public void LoadListThanhVien(string maLV, FlowLayoutPanel panel)
+        {
+            string query = @"SELECT DISTINCT sv.MSSV, sv.TenSV
+                     FROM DSThanhVien dtv
+                     JOIN SinhVien sv ON sv.MSSV = dtv.MSSV1 OR sv.MSSV = dtv.MSSV2 OR sv.MSSV = dtv.MSSV3
+                     WHERE dtv.MaLV = @MaLV";
+            try
+            {
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@MaLV", maLV);
+                conn.Open();
+                SqlDataReader dataReader = cmd.ExecuteReader();
+                panel.Controls.Clear();
+                while (dataReader.Read())
+                {
+                    UCChamDiem uCChamDiem = new UCChamDiem();
+                    uCChamDiem.LblMSSV.Text = dataReader["MSSV"].ToString();
+                    uCChamDiem.LblTenSV.Text = dataReader["TenSV"].ToString();
+                    panel.Controls.Add(uCChamDiem);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        public void UpdateStudentScore(string mssv, float score)
+        {
+            string query = "UPDATE SinhVien SET Diem = @score WHERE MSSV = @mssv";
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr))
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@score", score);
+                        cmd.Parameters.AddWithValue("@mssv", mssv);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error updating score: " + ex.Message);
+            }
+        }
+
+
+
         #endregion
         #region Chi tiết luận văn
         public void DSThanhVienChuaDuyet(string _message, LuanVanDuyet luanVan)
