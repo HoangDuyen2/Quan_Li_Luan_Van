@@ -30,7 +30,7 @@ namespace Quan_Li_Luan_Van
         public string MaUser { get => mssvLogin; set => mssvLogin = value; }
         private void btnChinhSua_Click(object sender, EventArgs e)
         {
-            FChinhSuaTask task = new FChinhSuaTask(MaNV, maNguoiTao);
+            FChinhSuaTask task = new FChinhSuaTask(MaNV, mssvLogin);
             task.ShowDialog();
         }
         private void btnChiTiet_Click(object sender, EventArgs e)

@@ -68,10 +68,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CapNhatTienTrinh.cs" />
-    <Compile Include="ChinhLuanVanDAO.cs" />
-    <Compile Include="ChiTietLuanVanDuyetDAO.cs" />
-    <Compile Include="ChiTietTaskDao.cs" />
-    <Compile Include="ChiTietThongBaoDAO.cs" />
     <Compile Include="FCapNhatTienTrinh.cs">
       <SubType>Form</SubType>
     </Compile>

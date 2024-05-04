@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -165,7 +166,14 @@ namespace Quan_Li_Luan_Van
         }
 
         #endregion
-
+        #region Thêm luận văn
+        public void ThemLuanVan(LuanVan luanVan)
+        {
+            string sqlThem = string.Format("INSERT INTO LuanVan(MaLV, TenLV, MaGV, ChuyenNganh, LinhVuc, ChucNang, CongNghe,NgonNgu, YeuCau, TrangThai) VALUES ('{0}', N'{1}', '{2}', N'{3}', N'{4}', N'{5}', N'{6}', N'{7}', N'{8}', N'{9}')",
+                luanVan.MaLV, luanVan.TenLV, luanVan.MaGV, luanVan.ChuyenNganh, luanVan.LinhVuc, luanVan.ChucNang, luanVan.CongNghe, luanVan.NgonNgu, luanVan.YeuCau, luanVan.TrangThai);
+            dBConnection.ThucThi(sqlThem);
+        }
+        #endregion
         #region Chỉnh luận văn
         public LuanVan getLuanVan(string maLV)
         {
