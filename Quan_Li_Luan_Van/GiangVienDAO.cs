@@ -544,7 +544,7 @@ namespace Quan_Li_Luan_Van
         }
         public void LoadListThanhVien(string maLV, FlowLayoutPanel panel)
         {
-            string query = @"SELECT DISTINCT sv.MSSV, sv.TenSV
+            string query = @"SELECT DISTINCT sv.MSSV, sv.TenSV, sv.Diem
                      FROM DSThanhVien dtv
                      JOIN SinhVien sv ON sv.MSSV = dtv.MSSV1 OR sv.MSSV = dtv.MSSV2 OR sv.MSSV = dtv.MSSV3
                      WHERE dtv.MaLV = @MaLV";
@@ -560,6 +560,7 @@ namespace Quan_Li_Luan_Van
                     UCChamDiem uCChamDiem = new UCChamDiem();
                     uCChamDiem.LblMSSV.Text = dataReader["MSSV"].ToString();
                     uCChamDiem.LblTenSV.Text = dataReader["TenSV"].ToString();
+                    uCChamDiem.TxtDiem.Text = dataReader["Diem"].ToString();   
                     panel.Controls.Add(uCChamDiem);
                 }
             }
@@ -572,7 +573,7 @@ namespace Quan_Li_Luan_Van
                 conn.Close();
             }
         }
-        public void UpdateStudentScore(string mssv, float score)
+        public void UpdateStudentScore(string mssv, decimal score)
         {
             string query = "UPDATE SinhVien SET Diem = @score WHERE MSSV = @mssv";
             try

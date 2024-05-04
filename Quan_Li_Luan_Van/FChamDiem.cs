@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -79,7 +80,7 @@ namespace Quan_Li_Luan_Van
             bool allScoresValid = true;
             foreach (UCChamDiem uc in flpDSThanhVien.Controls)
             {
-                if (string.IsNullOrWhiteSpace(uc.TxtDiem.Text) || !float.TryParse(uc.TxtDiem.Text, out float score))
+                if (string.IsNullOrWhiteSpace(uc.TxtDiem.Text) || !decimal.TryParse(uc.TxtDiem.Text, NumberStyles.Any, CultureInfo.InvariantCulture, out decimal score))
                 {
                     MessageBox.Show("Please enter a valid score for all students.");
                     allScoresValid = false;
@@ -91,12 +92,14 @@ namespace Quan_Li_Luan_Van
             {
                 foreach (UCChamDiem uc in flpDSThanhVien.Controls)
                 {
-                    float score = float.Parse(uc.TxtDiem.Text);
+                    decimal score = decimal.Parse(uc.TxtDiem.Text, CultureInfo.InvariantCulture);
+                    score = Math.Round(score, 2);
                     string mssv = uc.LblMSSV.Text;
                     new GiangVienDAO().UpdateStudentScore(mssv, score);
                 }
                 MessageBox.Show("Scores updated successfully!");
             }
+
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
