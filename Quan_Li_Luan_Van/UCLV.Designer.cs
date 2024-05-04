@@ -69,7 +69,7 @@
             this.btnChiTiet.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnChiTiet.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnChiTiet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChiTiet.Location = new System.Drawing.Point(925, 55);
+            this.btnChiTiet.Location = new System.Drawing.Point(903, 55);
             this.btnChiTiet.Name = "btnChiTiet";
             this.btnChiTiet.Size = new System.Drawing.Size(107, 39);
             this.btnChiTiet.TabIndex = 11;
@@ -117,7 +117,7 @@
             this.lblTrangThai.AutoSize = true;
             this.lblTrangThai.Font = new System.Drawing.Font("Leelawadee UI Semilight", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTrangThai.ForeColor = System.Drawing.Color.Green;
-            this.lblTrangThai.Location = new System.Drawing.Point(880, 15);
+            this.lblTrangThai.Location = new System.Drawing.Point(873, 16);
             this.lblTrangThai.Name = "lblTrangThai";
             this.lblTrangThai.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblTrangThai.Size = new System.Drawing.Size(131, 23);
@@ -139,7 +139,7 @@
             this.Controls.Add(this.lblTenLV);
             this.Controls.Add(this.pictureBoxNen);
             this.Name = "UCLV";
-            this.Size = new System.Drawing.Size(1043, 100);
+            this.Size = new System.Drawing.Size(1025, 100);
             this.Load += new System.EventHandler(this.UCLV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNen)).EndInit();
             this.ResumeLayout(false);

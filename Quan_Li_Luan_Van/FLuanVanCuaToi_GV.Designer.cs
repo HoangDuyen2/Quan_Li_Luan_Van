@@ -47,7 +47,7 @@
             this.btnThemLuanVan.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnThemLuanVan.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnThemLuanVan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThemLuanVan.Location = new System.Drawing.Point(880, 660);
+            this.btnThemLuanVan.Location = new System.Drawing.Point(859, 660);
             this.btnThemLuanVan.Name = "btnThemLuanVan";
             this.btnThemLuanVan.Size = new System.Drawing.Size(184, 42);
             this.btnThemLuanVan.TabIndex = 25;
@@ -142,7 +142,7 @@
             this.flPanelDSLV.Size = new System.Drawing.Size(1064, 517);
             this.flPanelDSLV.TabIndex = 26;
             // 
-            // FLuanVanToi
+            // FLuanVanCuaToi_GV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -151,7 +151,7 @@
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.groupBoxTraCuuLuanVan);
             this.Controls.Add(this.flPanelDSLV);
-            this.Name = "FLuanVanToi";
+            this.Name = "FLuanVanCuaToi_GV";
             this.Text = "Luận Văn Của Tôi";
             this.Load += new System.EventHandler(this.FLuanVanToi_Load);
             this.panelTitle.ResumeLayout(false);

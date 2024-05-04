@@ -17,7 +17,6 @@ namespace Quan_Li_Luan_Van
         public FCapNhatTienTrinh()
         {
             InitializeComponent();
-
         }
         public FCapNhatTienTrinh(string maNV, string maSV) :this()
         {
@@ -27,6 +26,7 @@ namespace Quan_Li_Luan_Van
             LoadCapNhatTienTrinh();
             LoadPhanHoi();
             LoadDataChart();
+            InitializeProgressLabel();
         }
         public void LoadInfoTask()
         {
@@ -85,19 +85,24 @@ namespace Quan_Li_Luan_Van
 
             chartTienDo.ChartAreas[0].RecalculateAxesScale();
         }
-
         private Color GetColorBasedOnProgress(int progress)
         {
-            if (progress < 30)
+            if (progress < 10)
                 return System.Drawing.Color.Red;
-            else if (progress < 60)
+            else if (progress < 20)
                 return System.Drawing.Color.Orange;
-            else if (progress < 80)
+            else if (progress < 30)
                 return System.Drawing.Color.YellowGreen;
             else
                 return System.Drawing.Color.Green;
         }
-
+        private void InitializeProgressLabel()
+        {
+            if (txtTienTrinh != null && lblThanhTienDo != null)
+            {
+                lblThanhTienDo.Text = "Tiến độ: " + txtTienTrinh.Text + "%";
+            }
+        }
         private void btnPhanHoi_Click(object sender, EventArgs e)
         {
             GiangVienDAO phanhoi = new GiangVienDAO();
@@ -125,10 +130,6 @@ namespace Quan_Li_Luan_Van
 
             return new PhanHoi(tenNguoiGui, chuoiThoiGian, noiDung, this.maNV);
         }
-        private void FCapNhatTienTrinh_Load(object sender, EventArgs e)
-        {
-
-        }
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
             CapNhatTienTrinh update = TaoCapNhatTienTrinh();
@@ -155,6 +156,12 @@ namespace Quan_Li_Luan_Van
             int tienTrinhCu = int.Parse(txtTienTrinh.Text.Trim());
             int tienTrinhMoi = TrackTienTrinh.Value;
 
+            if (tienTrinhCu == 100)
+            {
+                MessageBox.Show("Nhiệm vụ này đã hoàn thành xong.", "Có thể chọn nhiệm vụ khác để làm", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+
             if (tienTrinhMoi <= tienTrinhCu)
             {
                 MessageBox.Show("Giá trị tiến trình mới phải lớn hơn giá trị tiến trình hiện tại.", "Vui lòng chọn lại", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -171,10 +178,12 @@ namespace Quan_Li_Luan_Van
         {
             this.Close();  
         }
-
-        private void fpnChat_Paint(object sender, PaintEventArgs e)
+        private void TrackTienTrinh_ValueChanged(object sender, EventArgs e)
         {
-
+            if (lblThanhTienDo != null)
+            {
+                lblThanhTienDo.Text = "Tiến độ: " + TrackTienTrinh.Value.ToString() + "%";
+            }
         }
     }
 }

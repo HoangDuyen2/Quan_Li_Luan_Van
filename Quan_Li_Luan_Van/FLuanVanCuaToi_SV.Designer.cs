@@ -137,7 +137,7 @@
             this.btnThemNhiemVu.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnThemNhiemVu.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnThemNhiemVu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThemNhiemVu.Location = new System.Drawing.Point(883, 659);
+            this.btnThemNhiemVu.Location = new System.Drawing.Point(870, 659);
             this.btnThemNhiemVu.Name = "btnThemNhiemVu";
             this.btnThemNhiemVu.Size = new System.Drawing.Size(184, 42);
             this.btnThemNhiemVu.TabIndex = 31;
@@ -147,7 +147,7 @@
             this.btnThemNhiemVu.UseVisualStyleBackColor = false;
             this.btnThemNhiemVu.Click += new System.EventHandler(this.btnThemNhiemVu_Click);
             // 
-            // FLuanVanToi_SV
+            // FLuanVanCuaToi_SV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -155,7 +155,7 @@
             this.Controls.Add(this.btnThemNhiemVu);
             this.Controls.Add(this.flPanelDSTask);
             this.Controls.Add(this.groupBoxTraCuuLuanVan);
-            this.Name = "FLuanVanToi_SV";
+            this.Name = "FLuanVanCuaToi_SV";
             this.Text = "FLuanVanToi_SV";
             this.Load += new System.EventHandler(this.FLuanVanToi_SV_Load);
             this.groupBoxTraCuuLuanVan.ResumeLayout(false);

@@ -58,7 +58,7 @@
             // 
             this.lblThoiGian.AutoSize = true;
             this.lblThoiGian.Font = new System.Drawing.Font("Leelawadee UI Semilight", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThoiGian.Location = new System.Drawing.Point(264, 4);
+            this.lblThoiGian.Location = new System.Drawing.Point(260, 4);
             this.lblThoiGian.Name = "lblThoiGian";
             this.lblThoiGian.Size = new System.Drawing.Size(124, 17);
             this.lblThoiGian.TabIndex = 2;
@@ -85,7 +85,7 @@
             this.Controls.Add(this.lblTenSV);
             this.ForeColor = System.Drawing.SystemColors.Highlight;
             this.Name = "UCUpdateTask";
-            this.Size = new System.Drawing.Size(400, 52);
+            this.Size = new System.Drawing.Size(407, 52);
             this.ResumeLayout(false);
             this.PerformLayout();
 
