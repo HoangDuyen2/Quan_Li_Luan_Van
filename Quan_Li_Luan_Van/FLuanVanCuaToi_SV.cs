@@ -23,11 +23,16 @@ namespace Quan_Li_Luan_Van
         private void FLuanVanToi_SV_Load(object sender, EventArgs e)
         {
             string maLV = luanVan.getMaLV(sinhVien.getMaso());
-            if (maLV != null)
+            if (maLV != "")
             {
-                luanVan.ShowData(flPanelDSTask, luanVan.LoadLVCT(maLV),sinhVien.getMaso());
+                luanVan.ShowData(flPanelDSTask, luanVan.LoadLVCT(maLV), sinhVien.getMaso());
             }
-            else MessageBox.Show("Sinh viên hiện chưa tham gia vào luận văn nào. Vui lòng đăng kí luận văn trước", "Thông báo");
+            else
+            {
+                btnThemNhiemVu.Enabled = false;
+                MessageBox.Show("Sinh viên hiện chưa tham gia vào luận văn nào. Vui lòng đăng kí luận văn trước", "Thông báo");
+            }
+
         }
 
         private void btnThemNhiemVu_Click(object sender, EventArgs e)
@@ -36,5 +41,7 @@ namespace Quan_Li_Luan_Van
             fThemNhiemVu.ShowDialog();
             FLuanVanToi_SV_Load(sender, e);
         }
+
     }
+
 }
