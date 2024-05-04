@@ -12,17 +12,17 @@ namespace Quan_Li_Luan_Van
 {
     public partial class FChinhSuaTask : Form
     {
-        private string maNguoi;
+        private string maNguoiDN;
         private string maNV;
         NhiemVu nv = null;
         PersonDAO personDAO = new PersonDAO();
         public FChinhSuaTask(string manhiemVu,string maNguoi):this()
         {
             this.maNV = manhiemVu;
-            this.maNguoi = maNguoi;
+            this.maNguoiDN = maNguoi;
             InitializeComponent();
             LoadNhiemVu();
-            if (!personDAO.checkMaNguoi(this.maNguoi, this.maNV))
+            if (!personDAO.checkMaNguoi(this.maNguoiDN, this.maNV))
                 btnChinhSua.Enabled = false;
         }
         public FChinhSuaTask()

@@ -15,7 +15,7 @@ namespace Quan_Li_Luan_Van
     {
         private string maGV;
         Hide_Show hide_Show = new Hide_Show();
-        ThemLuanVanDAO lvDao = new ThemLuanVanDAO();
+        GiangVienDAO lvDao = new GiangVienDAO();
 
         public FThemLuanVan()
         {
