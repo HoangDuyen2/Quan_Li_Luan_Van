@@ -13,10 +13,9 @@ using System.Windows.Forms;
 
 namespace Quan_Li_Luan_Van
 {
-    public class GiangVienDAO
+    public class GiangVienDAO:PersonDAO
     {
         DBConnection dBConnection = new DBConnection();
-        PersonDAO personDAO = new PersonDAO();
         string sqlQuery;
 
         #region Form Danh sách các luận văn
@@ -405,6 +404,14 @@ namespace Quan_Li_Luan_Van
                      FROM DSThanhVien dtv
                      JOIN SinhVien sv ON sv.MSSV = dtv.MSSV1 OR sv.MSSV = dtv.MSSV2 OR sv.MSSV = dtv.MSSV3
                      WHERE dtv.MaLV = @MaLV";
+
+            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(query);
+            foreach (var row in getMaLV)
+            {
+                luanVan.MSSV11 = (string)row["MSSV1"].ToString();
+                luanVan.MSSV21 = (string)row["MSSV2"].ToString();
+                luanVan.MSSV31 = (string)row["MSSV3"].ToString();
+            }
             try
             {
                 SqlCommand cmd = new SqlCommand(query, conn);

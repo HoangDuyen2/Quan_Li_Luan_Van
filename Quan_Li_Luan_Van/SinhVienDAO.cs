@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Quan_Li_Luan_Van
 {
-    public class SinhVienDAO
+    public class SinhVienDAO:PersonDAO
     {
         DBConnection dbConnection = new DBConnection();
         #region Load Form Trang chủ
