@@ -23,12 +23,18 @@ namespace Quan_Li_Luan_Van
             txtTimkiem.Enter += TxtTimKiem_GetFocus;
             txtTimkiem.LostFocus += TxtTimKiem_LostFocus;
             this.sinhVien = sinhvien;
-            maLV = sVDAO.getMaLV(sinhVien.getMaso());
         }
+
         private void FTrangChu_Load(object sender, EventArgs e)
         {
+            if (sVDAO.getMaLV(sinhVien.getMaso()) == "")
+            {
+                MessageBox.Show("Hiện bạn chưa tham gia bất kì một luận văn nào. Hãy tham gia luận văn để nhận các thông báo từ giảng viên", "Thông báo");
+            }
+            else maLV = sVDAO.getMaLV(sinhVien.getMaso());
             sVDAO.LoadDSTB(flpanelDSThongBao, sVDAO.LoadTrangChu(maLV));
         }
+
         private void TxtTimKiem_GetFocus(object sender, EventArgs e)
         {
             hide_Show.Hide(sender, e);
@@ -43,7 +49,6 @@ namespace Quan_Li_Luan_Van
         {
             FThemThongBao tb = new FThemThongBao();
             tb.ShowDialog();
-
         }
 
         private void dtNgayThang_ValueChanged(object sender, EventArgs e)
@@ -55,5 +60,7 @@ namespace Quan_Li_Luan_Van
         {
             sVDAO.LoadDSTB(flpanelDSThongBao, sVDAO.LoadTrangChu(maLV) + sVDAO.traCuuTheoNoiDung(txtTimkiem.Text));
         }
+
     }
+
 }
