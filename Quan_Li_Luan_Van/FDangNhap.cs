@@ -25,6 +25,7 @@ namespace Quan_Li_Luan_Van
             txtTK.LostFocus += txtTK_LostFocus;
             txtMatKhau.LostFocus += txtMatKhau_LostFocus;
         }
+
         #region Set txtMatKhau and txtTK
         private void TxtMatKhau_GetFocus(object sender, EventArgs e)
         {
@@ -64,7 +65,7 @@ namespace Quan_Li_Luan_Van
                     this.Hide();
                     sv.ShowDialog();
                 }
-                else
+                else 
                 {
                     FGiangVien gv = new FGiangVien(taiKhoan.createTaiKhoan(txtTK.Text, txtMatKhau.Text, chucVu));
                     this.Hide();
@@ -74,6 +75,8 @@ namespace Quan_Li_Luan_Van
             }
 
         }
+
     }
+
 }
 

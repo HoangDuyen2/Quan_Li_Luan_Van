@@ -15,9 +15,9 @@ namespace Quan_Li_Luan_Van
     {
         DBConnection dBConnection = new DBConnection();
         #region Load label ở form FSinhVien và FGiangVien
-        public Person LoadLabel(TaiKhoan taiKhoan)
+        public T LoadLabel<T>(TaiKhoan taiKhoan) where T : Person
         {
-            string chucVu, ma,name;
+            string chucVu, ma, name;
             if (taiKhoan.getChucVu() == "Sinh viên")
             {
                 chucVu = "SinhVien";
@@ -36,9 +36,18 @@ namespace Quan_Li_Luan_Van
             List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(query);
             foreach (var row in getMaLV)
             {
-                return new Person((string)row[ma].ToString(), (string)row[name].ToString(), (string)row["GioiTinh"].ToString(),
-                    (string)row["DiaChi"].ToString(),(string)row["CCCD"].ToString(), (string)row["NgaySinh"].ToString(),
-                    (string)row["SDT"].ToString(), (string)row["Email"].ToString());
+                if (typeof(T) == typeof(SinhVien))
+                {
+                    return new SinhVien((string)row[ma].ToString(), (string)row[name].ToString(), (string)row["GioiTinh"].ToString(),
+                        (string)row["DiaChi"].ToString(), (string)row["CCCD"].ToString(), (string)row["NgaySinh"].ToString(),
+                        (string)row["SDT"].ToString(), (string)row["Email"].ToString()) as T;
+                }
+                else if (typeof(T) == typeof(GiangVien))
+                {
+                    return new GiangVien((string)row[ma].ToString(), (string)row[name].ToString(), (string)row["GioiTinh"].ToString(),
+                        (string)row["DiaChi"].ToString(), (string)row["CCCD"].ToString(), (string)row["NgaySinh"].ToString(),
+                        (string)row["SDT"].ToString(), (string)row["Email"].ToString()) as T;
+                }
             }
             return null;
         }

@@ -16,6 +16,7 @@ namespace Quan_Li_Luan_Van
         private string NTNS;
         private string SDT;
         private string Email;
+        public Person() { }
         public Person(string maso, string hoTen, string gioiTinh, string diaChi, string cCCD, string nTNS, string sDT, string email)
         {
             Maso = maso;

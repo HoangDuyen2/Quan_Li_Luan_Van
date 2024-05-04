@@ -404,36 +404,18 @@ namespace Quan_Li_Luan_Van
                      FROM DSThanhVien dtv
                      JOIN SinhVien sv ON sv.MSSV = dtv.MSSV1 OR sv.MSSV = dtv.MSSV2 OR sv.MSSV = dtv.MSSV3
                      WHERE dtv.MaLV = @MaLV";
-
-            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(query);
-            foreach (var row in getMaLV)
+            panel.Controls.Clear();
+            SqlParameter[] lstParam =
             {
-                luanVan.MSSV11 = (string)row["MSSV1"].ToString();
-                luanVan.MSSV21 = (string)row["MSSV2"].ToString();
-                luanVan.MSSV31 = (string)row["MSSV3"].ToString();
-            }
-            try
+                new SqlParameter("@MaLV", SqlDbType.NVarChar) {Value = maLV},
+            };
+            List<Dictionary<string, object>> ds = dBConnection.ExecuteReaderData(query,lstParam);
+            foreach (var row in ds)
             {
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@MaLV", maLV);
-                conn.Open();
-                SqlDataReader dataReader = cmd.ExecuteReader();
-                panel.Controls.Clear();
-                while (dataReader.Read())
-                {
-                    UCChamDiem uCChamDiem = new UCChamDiem();
-                    uCChamDiem.LblMSSV.Text = dataReader["MSSV"].ToString();
-                    uCChamDiem.LblTenSV.Text = dataReader["TenSV"].ToString();
-                    panel.Controls.Add(uCChamDiem);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
+                UCChamDiem uCChamDiem = new UCChamDiem();
+                uCChamDiem.LblMSSV.Text = (string)row["MSSV"].ToString();
+                uCChamDiem.LblTenSV.Text = (string)row["TenSV"].ToString();
+                panel.Controls.Add(uCChamDiem);
             }
         }
         public void UpdateStudentScore(string mssv, float score)
@@ -457,9 +439,6 @@ namespace Quan_Li_Luan_Van
                 MessageBox.Show("Error updating score: " + ex.Message);
             }
         }
-
-
-
         #endregion
         #region Chi tiết luận văn
         public void DSThanhVienChuaDuyet(string maLV, LuanVanDuyet luanVan)
@@ -480,7 +459,7 @@ namespace Quan_Li_Luan_Van
         {
             LuanVanDuyet luanVan = new LuanVanDuyet();
             DSThanhVienChuaDuyet(maLV, luanVan);
-            personDAO.loadLuanVanDuyet(maLV, luanVan);
+            loadLuanVanDuyet(maLV, luanVan);
             return luanVan;
         }
         #endregion

@@ -15,7 +15,7 @@ namespace Quan_Li_Luan_Van
     {
         TaiKhoan taiKhoan;
         PersonDAO trangChinh = new PersonDAO();
-        Person gv ;
+        GiangVien gv ;
         public FGiangVien(TaiKhoan taiKhoan)
         {
             InitializeComponent();
@@ -28,7 +28,7 @@ namespace Quan_Li_Luan_Van
 
         private void FGiangVien_Load(object sender, EventArgs e)
         {
-            gv = trangChinh.LoadLabel(taiKhoan);
+            gv = trangChinh.LoadLabel<GiangVien>(taiKhoan);
             labelMSSV.Text = gv.getMaso();
             labelTen.Text = gv.getHoTen();
             labelChucVu.Text = taiKhoan.getChucVu();

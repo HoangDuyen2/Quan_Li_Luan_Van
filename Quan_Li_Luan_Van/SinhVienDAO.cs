@@ -60,7 +60,7 @@ namespace Quan_Li_Luan_Van
             }
             return "";
         }
-        public string Load(string maLV)
+        public string LoadTrangChu(string maLV)
         {
             string sql = " WHERE MaLV = '" + maLV + "'";
             return queryTrangChu + sql;
