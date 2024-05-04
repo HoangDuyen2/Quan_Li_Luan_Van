@@ -418,7 +418,7 @@ namespace Quan_Li_Luan_Van
                 panel.Controls.Add(uCChamDiem);
             }
         }
-        public void UpdateStudentScore(string mssv, float score)
+        public void UpdateStudentScore(string mssv, decimal score)
         {
             string query = "UPDATE SinhVien SET Diem = @score WHERE MSSV = @mssv";
             try
@@ -439,6 +439,7 @@ namespace Quan_Li_Luan_Van
                 MessageBox.Show("Error updating score: " + ex.Message);
             }
         }
+
         #endregion
         #region Chi tiết luận văn
         public void DSThanhVienChuaDuyet(string maLV, LuanVanDuyet luanVan)
