@@ -37,19 +37,21 @@ namespace Quan_Li_Luan_Van
 
         private void FDKLV_Load(object sender, EventArgs e)
         {
-            dangKy.Load_UC_Con(flPanelDSLV,dangKy.LoadDKLV(),sinhVien);
+            dangKy.LoadCTLVSV(flPanelDSLV,dangKy.LoadDKLV(),sinhVien);
         }
 
         private void buttonTimKiem_Click(object sender, EventArgs e)
         {
-            dangKy.Load_UC_Con(flPanelDSLV, dangKy.traCuuTenGV(txtTenGV.Text),sinhVien);
+            dangKy.LoadCTLVSV(flPanelDSLV, dangKy.traCuuTenGV(txtTenGV.Text),sinhVien);
         }
 
         private void Chon_Chuyen_Nganh(object sender, EventArgs e)
         {
             string text = cbboxChuyenNganh.SelectedItem.ToString();
             
-            dangKy.Load_UC_Con(flPanelDSLV, dangKy.TraCuuChuyenNganh(text),sinhVien);
+            dangKy.LoadCTLVSV(flPanelDSLV, dangKy.TraCuuChuyenNganh(text),sinhVien);
         }
+
     }
+
 }

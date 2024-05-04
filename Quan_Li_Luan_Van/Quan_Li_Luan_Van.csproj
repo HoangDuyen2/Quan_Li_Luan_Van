@@ -473,6 +473,9 @@
     <EmbeddedResource Include="UCChamDiem.resx">
       <DependentUpon>UCChamDiem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UCChiTietLuanVan.resx">
+      <DependentUpon>UCChiTietLuanVan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCDuyet.resx">
       <DependentUpon>UCDuyet.cs</DependentUpon>
     </EmbeddedResource>

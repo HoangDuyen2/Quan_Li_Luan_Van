@@ -29,29 +29,28 @@ namespace Quan_Li_Luan_Van
         public FChiTietLuanVan_SV()
         {
             InitializeComponent();
-            ucChiTietLuanVan1.TxtTVien21.Enter += txtTVien2_GetFocus;
-            ucChiTietLuanVan1.TxtTV31.Enter += txtTV3_GetFocus;
-            ucChiTietLuanVan1.TxtTVien21.LostFocus += txtTVien2_LostFocus;
-            ucChiTietLuanVan1.TxtTV31.LostFocus += txtTV3_LostFocus;
+            ucChiTietLuanVan1.TxtTVien2.Enter += txtTVien2_GetFocus;
+            ucChiTietLuanVan1.TxtTV3.Enter += txtTV3_GetFocus;
+            ucChiTietLuanVan1.TxtTVien2.LostFocus += txtTVien2_LostFocus;
+            ucChiTietLuanVan1.TxtTV3.LostFocus += txtTV3_LostFocus;
         }
+
         private void txtTV3_LostFocus(object sender, EventArgs e)
         {
             hide.Show(sender, e);
-            ucChiTietLuanVan1.LbTenMSSV3.Text = chiTiet.TenThanhVien(ucChiTietLuanVan1.TxtTV31.Text);
+            ucChiTietLuanVan1.LbTenMSSV3.Text = chiTiet.TenThanhVien(ucChiTietLuanVan1.TxtTV3.Text);
         }
 
         private void txtTVien2_LostFocus(object sender, EventArgs e)
         {
             hide.Show(sender,e);
-            ucChiTietLuanVan1.LbTenMSSV2.Text = chiTiet.TenThanhVien(ucChiTietLuanVan1.TxtTVien21.Text);
+            ucChiTietLuanVan1.LbTenMSSV2.Text = chiTiet.TenThanhVien(ucChiTietLuanVan1.TxtTVien2.Text);
         }
-
 
         private void txtTVien2_GetFocus(object sender, EventArgs e)
         {
             hide.Hide(sender, e);
         }
-
 
         private void txtTV3_GetFocus(object sender, EventArgs e)
         {
@@ -62,7 +61,7 @@ namespace Quan_Li_Luan_Van
         {
             CapNhatDuLieu();
             ucChiTietLuanVan1.ThongTin(luanVan);
-            ucChiTietLuanVan1.TxtTVien11.Text = sinhVien.getMaso();
+            ucChiTietLuanVan1.TxtTVien1.Text = sinhVien.getMaso();
             ucChiTietLuanVan1.LbTenMSSV1.Text = chiTiet.TenThanhVien(sinhVien.getMaso());
             ucChiTietLuanVan1.KhongTruyCap();
             if(chiTiet.checkTungNguoiDangKy(sinhVien.getMaso()))
@@ -77,12 +76,13 @@ namespace Quan_Li_Luan_Van
         private void btnChapNhan_Click(object sender, EventArgs e)
         {
             luanVan.MSSV11 = sinhVien.getMaso();
-            luanVan.MSSV21 = ucChiTietLuanVan1.TxtTVien21.Text;
-            luanVan.MSSV31 = ucChiTietLuanVan1.TxtTV31.Text;
+            luanVan.MSSV21 = ucChiTietLuanVan1.TxtTVien2.Text;
+            luanVan.MSSV31 = ucChiTietLuanVan1.TxtTV3.Text;
             if(chiTiet.checkNguoiDangKy(luanVan))
                 chiTiet.DangKy(luanVan);
             this.Close();
         }
+
     }
 
 }

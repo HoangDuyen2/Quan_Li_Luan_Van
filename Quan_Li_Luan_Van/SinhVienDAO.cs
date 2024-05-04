@@ -27,6 +27,7 @@ namespace Quan_Li_Luan_Van
             }
             return maLV;
         }
+
         public void LoadDSTB(FlowLayoutPanel panel, string truyVan)
         {
             panel.Controls.Clear();
@@ -41,6 +42,7 @@ namespace Quan_Li_Luan_Van
                 panel.Controls.Add(uctb);
             }
         }
+
         public string traCuuTheoNoiDung(string noidung)
         {
             if (!string.IsNullOrEmpty(noidung))
@@ -60,11 +62,13 @@ namespace Quan_Li_Luan_Van
             }
             return "";
         }
+
         public string LoadTrangChu(string maLV)
         {
             string sql = " WHERE MaLV = '" + maLV + "' ";
             return queryTrangChu + sql;
         }
+
         public ThongBao noiDungTB(string maTB)
         {
             string query = "SELECT ID_TB, TieuDe, ThoiGian, NoiDung, TenGV " +
@@ -84,6 +88,7 @@ namespace Quan_Li_Luan_Van
             }
             return tb;
         }
+
         #endregion
         #region Load form đăng kí luận văn
         string queryDKLV = "SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, GiangVien.TenGV, LuanVan.TrangThai, LuanVan.MaLV " +
@@ -105,6 +110,7 @@ namespace Quan_Li_Luan_Van
             }
             dbConnection.ThucThi(query1);
         }
+
         public string traCuuTenGV(string tenGV)
         {
             if (tenGV != "")
@@ -114,11 +120,13 @@ namespace Quan_Li_Luan_Van
             }
             return queryDKLV;
         }
+
         public string LoadDKLV()
         {
             return queryDKLV;
         }
-        public void Load_UC_Con(FlowLayoutPanel flPanelDSLV, string truyVan, SinhVien sinhVien)
+
+        public void LoadCTLVSV(FlowLayoutPanel flPanelDSLV, string truyVan, SinhVien sinhVien)
         {
             flPanelDSLV.Controls.Clear();
             List<Dictionary<string, object>> ds = dbConnection.ExecuteReaderData(truyVan);
@@ -133,8 +141,8 @@ namespace Quan_Li_Luan_Van
 
                 flPanelDSLV.Controls.Add(uclv);
             }
-
         }
+
         public string TraCuuChuyenNganh(string chuyenNganh)
         {
             if (chuyenNganh != "Tất cả")
@@ -144,6 +152,7 @@ namespace Quan_Li_Luan_Van
             }
             return queryDKLV;
         }
+
         public bool checkTungNguoiDangKy(string MSSV)
         {
 
@@ -159,6 +168,7 @@ namespace Quan_Li_Luan_Van
             }
             return false;
         }
+
         public bool checkNguoiDangKy(LuanVanDuyet luanVan)
         {
             if (luanVan.MSSV11 != "")
@@ -187,6 +197,7 @@ namespace Quan_Li_Luan_Van
             }
             return true;
         }
+
         #endregion
         #region Form luận văn của tôi
         public string LoadLVCT(string maLV)
@@ -200,6 +211,7 @@ namespace Quan_Li_Luan_Van
             }
             return "";
         }
+
         public void ShowData(FlowLayoutPanel panel, string truyVan, string User)
         {
             panel.Controls.Clear();
@@ -215,11 +227,13 @@ namespace Quan_Li_Luan_Van
                 panel.Controls.Add(task);
             }
         }
+
         public void ThemPhanHoi(PhanHoi ph)
         {
             string query = string.Format("INSERT INTO PhanHoi(TenNguoiGui, ThoiGianGui, NoiDung, MaNV) VALUES (N'{0}', N'{1}', N'{2}', '{3}')", ph.Name, ph.Thoigian, ph.Noidung, ph.NhiemVu);
             dbConnection.ThucThi(query);
         }
+
         public bool UpdateProgress(CapNhatTienTrinh update)
         {
             string queryInsertProgress = "INSERT INTO CapNhatTienTrinh (MaNV, MSSV, PhanTramCapNhat, TienTrinh, ThoiGian) VALUES (@MaNV, @MSSV, @PhanTramCapNhat, @TienTrinh, @ThoiGian)";
@@ -260,8 +274,10 @@ namespace Quan_Li_Luan_Van
             {
                 conn.Close();
             }
+
         }
 
         #endregion
     }
+
 }
