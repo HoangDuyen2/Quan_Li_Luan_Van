@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
+using System.Data.Odbc;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,7 +16,7 @@ namespace Quan_Li_Luan_Van
     public class GiangVienDAO
     {
         DBConnection dBConnection = new DBConnection();
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
+        PersonDAO personDAO = new PersonDAO();
         string sqlQuery;
 
         #region Form Danh sách các luận văn
@@ -46,34 +48,19 @@ namespace Quan_Li_Luan_Van
         }
         public void getInfo(string query, FlowLayoutPanel panel)
         {
-            try
+            panel.Controls.Clear();
+            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(query);
+            foreach (var row in getMaLV)
             {
-                conn.Open();
-                panel.Controls.Clear();
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader dataReader = cmd.ExecuteReader();
-                while (dataReader.Read())
-                {
-                    UCLV_GV uclv = new UCLV_GV();
-                    uclv.MaLV = dataReader["MaLV"].ToString();
-                    uclv.LblTenLV.Text = dataReader["TenLV"].ToString();
-                    uclv.LblChuyenNganh.Text = dataReader["ChuyenNganh"].ToString();
-                    uclv.LblTenGV.Text = dataReader["TenGV"].ToString();
-                    if (dataReader["TrangThai"].ToString() == "Chưa có nhóm")
-                        uclv.LblTrangThai.ForeColor = System.Drawing.Color.Green;
-                    uclv.LblTrangThai.Text = dataReader["TrangThai"].ToString();
-
-                    panel.Controls.Add(uclv);
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
+                UCLV_GV uclv = new UCLV_GV();
+                uclv.MaLV = (string)row["MaLV"].ToString();
+                uclv.LblTenLV.Text = (string)row["TenLV"].ToString();
+                uclv.LblChuyenNganh.Text = (string)row["ChuyenNganh"].ToString();
+                uclv.LblTenGV.Text = (string)row["TenGV"].ToString();
+                if ((string)row["TrangThai"].ToString() == "Chưa có nhóm")
+                    uclv.LblTrangThai.ForeColor = System.Drawing.Color.Green;
+                uclv.LblTrangThai.Text = (string)row["TrangThai"].ToString();
+                panel.Controls.Add(uclv);
             }
         }
         #endregion
@@ -83,43 +70,29 @@ namespace Quan_Li_Luan_Van
         public string LoadDLV(string maGV)
         {
             MaGV = maGV;
-            string quenry = "SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, DuyetDangKy.TinhTrang " +
+            string quenry = "SELECT LuanVan.MaLV, LuanVan.TenLV, LuanVan.ChuyenNganh, DuyetDangKy.TinhTrang " +
                           "FROM LuanVan JOIN DuyetDangKy ON " +
                           "LuanVan.MaLV = DuyetDangKy.MaLV and LuanVan.MaGV = '" + maGV + "'";
             return quenry;
         }
         public void getInfoDLV(string query, FlowLayoutPanel panel)
         {
-            try
+            panel.Controls.Clear();
+            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(query);
+            foreach (var row in getMaLV)
             {
-                conn.Open();
-                panel.Controls.Clear();
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader dataReader = cmd.ExecuteReader();
-                while (dataReader.Read())
-                {
-                    UCDuyet ucd = new UCDuyet();
-
-                    ucd.LbTenLV.Text = dataReader["TenLV"].ToString();
-                    ucd.LbChuyenNganh.Text = dataReader["ChuyenNganh"].ToString();
-                    if (dataReader["TinhTrang"].ToString() == "Đang chờ duyệt")
-                        ucd.LBTrangThai.ForeColor = System.Drawing.Color.Green;
-                    if (dataReader["TinhTrang"].ToString() == "Từ chối")
-                        ucd.LBTrangThai.ForeColor = System.Drawing.Color.Black;
-                    if (dataReader["TinhTrang"].ToString() == "Đã duyệt")
-                        ucd.LBTrangThai.ForeColor = System.Drawing.Color.Red;
-                    ucd.LBTrangThai.Text = dataReader["TinhTrang"].ToString();
-                    panel.Controls.Add(ucd);
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
+                UCDuyet ucd = new UCDuyet();
+                ucd.MaLV = (string)row["MaLV"].ToString();
+                ucd.LbTenLV.Text = (string)row["TenLV"].ToString();
+                ucd.LbChuyenNganh.Text = (string)row["ChuyenNganh"].ToString();
+                if ((string)row["TinhTrang"].ToString() == "Đang chờ duyệt")
+                    ucd.LBTrangThai.ForeColor = System.Drawing.Color.Green;
+                if ((string)row["TinhTrang"].ToString() == "Từ chối")
+                    ucd.LBTrangThai.ForeColor = System.Drawing.Color.Black;
+                if ((string)row["TinhTrang"].ToString() == "Đã duyệt")
+                    ucd.LBTrangThai.ForeColor = System.Drawing.Color.Red;
+                ucd.LBTrangThai.Text = (string)row["TinhTrang"].ToString();
+                panel.Controls.Add(ucd);
             }
         }
         public void ChapNhan(LuanVanDuyet luanVan)
@@ -179,41 +152,29 @@ namespace Quan_Li_Luan_Van
         {
             LuanVan sualv = new LuanVan();
             string query = "SELECT * FROM LuanVan WHERE MaLV = N'" + maLV + "'";
-            try
+            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(query);
+            foreach (var row in getMaLV)
             {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader dataReader = cmd.ExecuteReader();
-                if (dataReader.Read())
-                {
-                    sualv.MaLV = dataReader["MaLV"].ToString();
-                    sualv.TenLV = dataReader["TenLV"].ToString();
-                    sualv.ChuyenNganh = dataReader["ChuyenNganh"].ToString();
-                    sualv.ChucNang = dataReader["ChucNang"].ToString();
-                    sualv.YeuCau = dataReader["YeuCau"].ToString();
-                    sualv.CongNghe = dataReader["CongNghe"].ToString();
-                    sualv.LinhVuc = dataReader["LinhVuc"].ToString();
-                    sualv.NgonNgu = dataReader["NgonNgu"].ToString();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
+                sualv.MaLV = (string)row["MaLV"].ToString();
+                sualv.TenLV = (string)row["TenLV"].ToString();
+                sualv.ChuyenNganh = (string)row["ChuyenNganh"].ToString();
+                sualv.ChucNang = (string)row["ChucNang"].ToString();
+                sualv.YeuCau = (string)row["YeuCau"].ToString();
+                sualv.CongNghe = (string)row["CongNghe"].ToString();
+                sualv.LinhVuc = (string)row["LinhVuc"].ToString();
+                sualv.NgonNgu = (string)row["NgonNgu"].ToString();
             }
             return sualv;
         }
 
-        public void ChinhSua(LuanVan luanvan, string maLV)
+        public void ChinhSua(LuanVan luanvan)
         {
-            string query = $"UPDATE LuanVan SET TenLV = N'{luanvan.TenLV}', ChuyenNganh = N'{luanvan.ChuyenNganh}', ChucNang = N'{luanvan.ChucNang}', YeuCau = N'{luanvan.YeuCau}', CongNghe = N'{luanvan.CongNghe}', LinhVuc = N'{luanvan.LinhVuc}', NgonNgu = N'{luanvan.NgonNgu}' WHERE MaLV = '{luanvan.MaLV}'";
+            string query = $"UPDATE LuanVan SET TenLV = N'{luanvan.TenLV}', ChuyenNganh = N'{luanvan.ChuyenNganh}', " +
+                $"ChucNang = N'{luanvan.ChucNang}', YeuCau = N'{luanvan.YeuCau}', CongNghe = N'{luanvan.CongNghe}'," +
+                $" LinhVuc = N'{luanvan.LinhVuc}', NgonNgu = N'{luanvan.NgonNgu}' WHERE MaLV = '{luanvan.MaLV}'";
             dBConnection.ThucThi(query);
         }
         #endregion
-
         #region Luận Văn Của Tôi
         public string LoadMyTheses(string maGV)
         {
@@ -226,35 +187,22 @@ namespace Quan_Li_Luan_Van
 
         public void GetMyThesesInfo(string query, FlowLayoutPanel panel)
         {
-            try
+            panel.Controls.Clear();
+            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(query);
+            foreach (var row in getMaLV)
             {
-                conn.Open();
-                panel.Controls.Clear();
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader dataReader = cmd.ExecuteReader();
-                while (dataReader.Read())
+                UCLVCuaToi uclv = new UCLVCuaToi();
+                uclv.MaGV = MaGV;
+                uclv.MaLV = (string)row["MaLV"].ToString();
+                uclv.LblTenLV.Text = (string)row["TenLV"].ToString();
+                uclv.LblChuyenNganh.Text = (string)row["ChuyenNganh"].ToString();
+                uclv.LblTrangThai.Text = (string)row["TrangThai"].ToString();
+                if (uclv.LblTrangThai.Text == "Đã có nhóm")
                 {
-                    UCLVCuaToi uclv = new UCLVCuaToi();
-                    uclv.MaGV = MaGV;
-                    uclv.MaLV = dataReader["MaLV"].ToString();
-                    uclv.LblTenLV.Text = dataReader["TenLV"].ToString();
-                    uclv.LblChuyenNganh.Text = dataReader["ChuyenNganh"].ToString();
-                    uclv.LblTrangThai.Text = dataReader["TrangThai"].ToString();
-                    if (uclv.LblTrangThai.Text == "Đã có nhóm")
-                    {
-                        uclv.BtnDelete.Enabled = false;
-                        uclv.BtnUpdate.Enabled = false;
-                    }
-                    panel.Controls.Add(uclv);
+                    uclv.BtnDelete.Enabled = false;
+                    uclv.BtnUpdate.Enabled = false;
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
+                panel.Controls.Add(uclv);
             }
         }
 
@@ -270,7 +218,6 @@ namespace Quan_Li_Luan_Van
         }
 
         #endregion
-
         #region Quản lí nhóm luận văn
         public string TruyVanDSNhom(string maGV)
         {
@@ -284,29 +231,16 @@ namespace Quan_Li_Luan_Van
 
         public void DSNhomInfo(string query, FlowLayoutPanel panel)
         {
-            try
+            panel.Controls.Clear();
+            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(query);
+            foreach (var row in getMaLV)
             {
-                conn.Open();
-                panel.Controls.Clear();
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader dataReader = cmd.ExecuteReader();
-                while (dataReader.Read())
-                {
-                    UCNhom ucnhom = new UCNhom();
-                    ucnhom.MaGV = this.maGV;
-                    ucnhom.MaLV = dataReader["MaLV"].ToString();
-                    ucnhom.LblTenLV.Text = dataReader["TenLV"].ToString();
-                    ucnhom.LblChuyenNganh.Text = dataReader["ChuyenNganh"].ToString();
-                    panel.Controls.Add(ucnhom);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
+                UCNhom ucnhom = new UCNhom();
+                ucnhom.MaGV = this.maGV;
+                ucnhom.MaLV = (string)row["MaLV"].ToString();
+                ucnhom.LblTenLV.Text = (string)row["TenLV"].ToString();
+                ucnhom.LblChuyenNganh.Text = (string)row["ChuyenNganh"].ToString();
+                panel.Controls.Add(ucnhom);
             }
         }
         public void ThemThongBao(ThongBao tb)
@@ -317,31 +251,19 @@ namespace Quan_Li_Luan_Van
 
         public void LoadDSTask(string maLV, FlowLayoutPanel panel, string maGV)
         {
-            string query = $"SELECT * FROM NhiemVu JOIN LuanVan ON NhiemVu.MaLV = LuanVan.MaLV WHERE NhiemVu.MaLV = N'{maLV}'";
-            try
+            panel.Controls.Clear();
+            string query = "SELECT LuanVan.MaLV, NhiemVu.MaNV, NhiemVu.TenNV, NhiemVu.TienTrinh FROM NhiemVu JOIN LuanVan ON NhiemVu.MaLV = LuanVan.MaLV WHERE NhiemVu.MaLV = '" + maLV + "'";
+            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(query);
+            foreach (var row in getMaLV)
             {
-                conn.Open();
-                panel.Controls.Clear();
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader dataReader = cmd.ExecuteReader();
-                while (dataReader.Read())
-                {
-                    UCTask uctask = new UCTask();
-                    uctask.MaNguoi = maGV;
-                    uctask.MaLV = maLV;
-                    uctask.MaNV = dataReader["MaNV"].ToString();
-                    uctask.LblTenNV.Text = dataReader["TenNV"].ToString();
-                    uctask.LblTienTrinh.Text = dataReader["TienTrinh"].ToString();
-                    panel.Controls.Add(uctask);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
+                UCTask uctask = new UCTask();
+                uctask.MaNguoiDangNhap = maGV;
+
+                uctask.MaLV = maLV;
+                uctask.MaNV = (string)row["MaNV"].ToString();
+                uctask.LblTenNV.Text = (string)row["TenNV"].ToString();
+                uctask.LblTienTrinh.Text = (string)row["TienTrinh"].ToString();
+                panel.Controls.Add(uctask);
             }
         }
 
@@ -349,28 +271,14 @@ namespace Quan_Li_Luan_Van
         {
             string tenLV = "";
             string query = "SELECT TenLV FROM LuanVan WHERE MaLV = @maLV";
-            try
+            SqlParameter[] lstParam =
             {
-                conn.Open();
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@maLV", maLV);
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            tenLV = reader["TenLV"].ToString();
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
+                new SqlParameter("@maLV", SqlDbType.NVarChar) {Value = maLV},
+            };
+            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(query, lstParam);
+            foreach (var row in getMaLV)
             {
-                MessageBox.Show("Đã xảy ra lỗi khi lấy tên luận văn: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
+                tenLV = (string)row["TenLV"].ToString();
             }
             return tenLV;
         }
@@ -379,28 +287,14 @@ namespace Quan_Li_Luan_Van
         {
             string tenGV = "";
             string query = "SELECT TenGV FROM GiangVien WHERE MaGV = @maGV";
-            try
+            SqlParameter[] lstParam =
             {
-                conn.Open();
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@maGV", maGV);
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            tenGV = reader["TenGV"].ToString();
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
+                new SqlParameter("@maGV", SqlDbType.NVarChar) {Value = maGV},
+            };
+            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(query, lstParam);
+            foreach (var row in getMaLV)
             {
-                MessageBox.Show("Đã xảy ra lỗi khi lấy tên giảng viên: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
+                tenGV = (string)row["TenGV"].ToString();
             }
             return tenGV;
         }
@@ -410,54 +304,28 @@ namespace Quan_Li_Luan_Van
             NhiemVu nhiemvu = new NhiemVu();
             string query = "SELECT * FROM NhiemVu " +
                            " WHERE MaNV  = N'" + maNV + "'";
-            try
+            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(query);
+            foreach (var row in getMaLV)
             {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader dataReader = cmd.ExecuteReader();
-                if (dataReader.Read())
-                {
-                    nhiemvu.TenNV = dataReader["TenNV"].ToString();
-                    nhiemvu.TienTrinh = dataReader["TienTrinh"].GetHashCode();
-                    nhiemvu.NoiDung = dataReader["NoiDung"].ToString();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
+                nhiemvu.TenNV = (string)row["TenNV"].ToString();
+                nhiemvu.TienTrinh = (int)row["TienTrinh"].GetHashCode();
+                nhiemvu.NoiDung = (string)row["NoiDung"].ToString();
             }
             return nhiemvu;
         }
         public void LoadListPhanHoi(string maNV, FlowLayoutPanel panel)
         {
-            string query = "Select *From PhanHoi " +
-                    " WHERE MaNV  = N'" + maNV + "'";
-            try
+            panel.Controls.Clear();
+            string query = "Select * From PhanHoi " +
+                    " WHERE MaNV = N'" + maNV + "'";
+            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(query);
+            foreach (var row in getMaLV)
             {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader dataReader = cmd.ExecuteReader();
-                panel.Controls.Clear();
-                while (dataReader.Read())
-                {
-                    UCPhanHoi uCPhanHoi = new UCPhanHoi();
-                    uCPhanHoi.LblTen.Text = dataReader["TenNguoiGui"].ToString();
-                    uCPhanHoi.LblThoiGian.Text = dataReader["ThoiGianGui"].ToString();
-                    uCPhanHoi.TxtNoiDung.Text = dataReader["NoiDung"].ToString();
-                    panel.Controls.Add(uCPhanHoi);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
+                UCPhanHoi uCPhanHoi = new UCPhanHoi();
+                uCPhanHoi.LblTen.Text = (string)row["TenNguoiGui"].ToString();
+                uCPhanHoi.LblThoiGian.Text = (string)row["ThoiGianGui"].ToString();
+                uCPhanHoi.TxtNoiDung.Text = (string)row["NoiDung"].ToString();
+                panel.Controls.Add(uCPhanHoi);
             }
         }
         public void LoadListCapNhatTienTrinh(string maNV, FlowLayoutPanel panel)
@@ -468,30 +336,19 @@ namespace Quan_Li_Luan_Van
                             JOIN CapNhatTienTrinh cnt ON sv.MSSV = cnt.MSSV
                             WHERE cnt.MaNV = @maNV
                             ORDER BY cnt.ThoiGian DESC;";
-
-            try
+            panel.Controls.Clear();
+            SqlParameter[] lstParam =
             {
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@maNV", maNV);
-                conn.Open();
-                SqlDataReader dataReader = cmd.ExecuteReader();
-                panel.Controls.Clear();
-                while (dataReader.Read())
-                {
-                    UCUpdateTask uCUpdateTask = new UCUpdateTask();
-                    uCUpdateTask.LblTenSV.Text = dataReader["TenSV"].ToString();
-                    uCUpdateTask.LblThoiGian.Text = dataReader["ThoiGian"].ToString();
-                    uCUpdateTask.LblTienTrinh.Text = dataReader["TienTrinh"].ToString();
-                    panel.Controls.Add(uCUpdateTask);
-                }
-            }
-            catch (Exception ex)
+                new SqlParameter("@maNV", SqlDbType.NVarChar) {Value = maNV},
+            };
+            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(query,lstParam);
+            foreach (var row in getMaLV)
             {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
+                UCUpdateTask uCUpdateTask = new UCUpdateTask();
+                uCUpdateTask.LblTenSV.Text = (string)row["TenSV"].ToString();
+                uCUpdateTask.LblThoiGian.Text = (string)row["ThoiGian"].ToString();
+                uCUpdateTask.LblTienTrinh.Text = (string)row["TienTrinh"].ToString();
+                panel.Controls.Add(uCUpdateTask);
             }
         }
         public DataTable GetStudentProgressData(string maNV)
@@ -523,102 +380,25 @@ namespace Quan_Li_Luan_Van
         }
         #endregion
         #region Chi tiết luận văn
-        public void DSThanhVienChuaDuyet(string _message, LuanVanDuyet luanVan)
+        public void DSThanhVienChuaDuyet(string maLV, LuanVanDuyet luanVan)
         {
             string query1 = "SELECT LuanVan.MaLV, LuanVan.TenLV, DuyetDangKy.MSSV1, " +
                             "DuyetDangKy.MSSV2, DuyetDangKy.MSSV3 " +
                             "FROM LuanVan, DuyetDangKy " +
-                            "WHERE LuanVan.MaLV = DuyetDangKy.MaLV and TenLV = N'" + _message + "'";
-            try
+                            "WHERE LuanVan.MaLV = DuyetDangKy.MaLV and LuanVan.MaLV = N'" + maLV + "'";
+            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(query1);
+            foreach (var row in getMaLV)
             {
-                conn.Open();
-                SqlCommand cmd1 = new SqlCommand(query1, conn);
-                SqlDataReader dataReader1 = cmd1.ExecuteReader();
-                if (dataReader1.Read())
-                {
-                    luanVan.MSSV11 = dataReader1["MSSV1"].ToString();
-                    luanVan.MSSV21 = dataReader1["MSSV2"].ToString();
-                    luanVan.MSSV31 = dataReader1["MSSV3"].ToString();
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
+                luanVan.MSSV11 = (string)row["MSSV1"].ToString();
+                luanVan.MSSV21 = (string)row["MSSV2"].ToString();
+                luanVan.MSSV31 = (string)row["MSSV3"].ToString();
             }
         }
-        public void TenThanhVien(string MSSV, LuanVanDuyet luanVan)
+        public LuanVanDuyet LoadCTLV(string maLV)
         {
-            string quenry = "SELECT TenSV " +
-                            "FROM SinhVien " +
-                            "WHERE MSSV = '" + MSSV + "'";
-            try
-            {
-                conn.Open();
-                SqlCommand cmd1 = new SqlCommand(quenry, conn);
-                SqlDataReader dataReader1 = cmd1.ExecuteReader();
-                if (dataReader1.Read())
-                {
-                    if (luanVan.TenMSSV1 == null)
-                        luanVan.TenMSSV1 = dataReader1["TenSV"].ToString();
-                    else if (luanVan.TenMSSV2 == null)
-                        luanVan.TenMSSV2 = dataReader1["TenSV"].ToString();
-                    else luanVan.TenMSSV3 = dataReader1["TenSV"].ToString();
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
-        public LuanVanDuyet LoadCTLV(string _message)
-        {
-            string query = "SELECT LuanVan.MaLV, LuanVan.TenLV, GiangVien.TenGV, " +
-                            "LuanVan.ChuyenNganh, LuanVan.LinhVuc, LuanVan.ChucNang, LuanVan.CongNghe, " +
-                            " LuanVan.NgonNgu, LuanVan.YeuCau, LuanVan.TrangThai " +
-                            "FROM LuanVan, GiangVien " +
-                            "WHERE LuanVan.MaGV = GiangVien.MaGV and TenLV = N'" + _message + "'";
             LuanVanDuyet luanVan = new LuanVanDuyet();
-            try
-            {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader dataReader = cmd.ExecuteReader();
-                if (dataReader.Read())
-                {
-                    luanVan.MaLV = dataReader["MaLV"].ToString();
-                    luanVan.TenGV = dataReader["TenGV"].ToString();
-                    luanVan.TenLV = dataReader["TenLV"].ToString();
-                    luanVan.CongNghe = dataReader["CongNghe"].ToString();
-                    luanVan.ChuyenNganh = dataReader["ChuyenNganh"].ToString();
-                    luanVan.LinhVuc = dataReader["LinhVuc"].ToString();
-                    luanVan.ChucNang = dataReader["ChucNang"].ToString();
-                    luanVan.NgonNgu = dataReader["NgonNgu"].ToString();
-                    luanVan.YeuCau = dataReader["YeuCau"].ToString();
-                    luanVan.TrangThai = dataReader["TrangThai"].ToString();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-            DSThanhVienChuaDuyet(_message, luanVan);
-            TenThanhVien(luanVan.MSSV11,luanVan);
-            TenThanhVien(luanVan.MSSV21,luanVan);
-            TenThanhVien(luanVan.MSSV31, luanVan);
+            DSThanhVienChuaDuyet(maLV, luanVan);
+            personDAO.loadLuanVanDuyet(maLV, luanVan);
             return luanVan;
         }
         #endregion

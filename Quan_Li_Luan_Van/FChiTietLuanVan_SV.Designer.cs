@@ -48,7 +48,6 @@
             this.btnDangKy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDangKy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDangKy.UseVisualStyleBackColor = false;
-            this.btnDangKy.Click += new System.EventHandler(this.btnDang_Click);
             // 
             // ucChiTietLuanVan1
             // 

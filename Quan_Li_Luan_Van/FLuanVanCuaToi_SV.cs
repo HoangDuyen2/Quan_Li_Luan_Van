@@ -34,6 +34,7 @@ namespace Quan_Li_Luan_Van
         {
             FThemNhiemVu fThemNhiemVu = new FThemNhiemVu(luanVan.getMaLV(person.getMaso()), person.getMaso());
             fThemNhiemVu.ShowDialog();
+            FLuanVanToi_SV_Load(sender, e);
         }
     }
 }

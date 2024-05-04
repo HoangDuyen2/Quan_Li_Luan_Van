@@ -14,6 +14,7 @@ namespace Quan_Li_Luan_Van
     {
         private string maNV;
         private string MSSV;
+        PersonDAO personDAO = new PersonDAO();
         public FCapNhatTienTrinh()
         {
             InitializeComponent();
@@ -118,7 +119,7 @@ namespace Quan_Li_Luan_Van
         {
             SinhVienDAO ph = new SinhVienDAO();
 
-            string tenNguoiGui = ph.GetTenSV(MSSV);
+            string tenNguoiGui = personDAO.TenThanhVien(MSSV);
             string noiDung = txtPhanHoi.Text;
             DateTime thoiGian = DateTime.Now;
             string chuoiThoiGian = thoiGian.ToString("yyyy-MM-dd HH:mm:ss");
