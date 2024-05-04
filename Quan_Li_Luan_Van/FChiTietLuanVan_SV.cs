@@ -35,17 +35,16 @@ namespace Quan_Li_Luan_Van
             ucChiTietLuanVan1.TxtTVien21.LostFocus += txtTVien2_LostFocus;
             ucChiTietLuanVan1.TxtTV31.LostFocus += txtTV3_LostFocus;
         }
-
         private void txtTV3_LostFocus(object sender, EventArgs e)
         {
             hide.Show(sender, e);
-            ucChiTietLuanVan1.LbTenMSSV3.Text = luanVan.TenMSSV3;
+            ucChiTietLuanVan1.LbTenMSSV3.Text = chiTiet.TenThanhVien(ucChiTietLuanVan1.TxtTV31.Text);
         }
 
         private void txtTVien2_LostFocus(object sender, EventArgs e)
         {
             hide.Show(sender,e);
-            ucChiTietLuanVan1.LbTenMSSV2.Text = luanVan.TenMSSV2;
+            ucChiTietLuanVan1.LbTenMSSV2.Text = chiTiet.TenThanhVien(ucChiTietLuanVan1.TxtTVien21.Text);
         }
 
 
@@ -65,7 +64,7 @@ namespace Quan_Li_Luan_Van
             CapNhatDuLieu();
             ucChiTietLuanVan1.ThongTin(luanVan);
             ucChiTietLuanVan1.TxtTVien11.Text = person.getMaso();
-            ucChiTietLuanVan1.LbTenMSSV1.Text = luanVan.TenMSSV1;
+            ucChiTietLuanVan1.LbTenMSSV1.Text = chiTiet.TenThanhVien(person.getMaso());
             ucChiTietLuanVan1.KhongTruyCap();
             if(dangKy.checkTungNguoiDangKy(person.getMaso()))
                 btnDangKy.Enabled = false;
@@ -81,15 +80,9 @@ namespace Quan_Li_Luan_Van
             luanVan.MSSV11 = person.getMaso();
             luanVan.MSSV21 = ucChiTietLuanVan1.TxtTVien21.Text;
             luanVan.MSSV31 = ucChiTietLuanVan1.TxtTV31.Text;
-            
             if(dangKy.checkNguoiDangKy(luanVan))
                 dangKy.DangKy(luanVan);
             this.Close();
-        }
-
-        private void btnDang_Click(object sender, EventArgs e)
-        {
-
         }
     }
 

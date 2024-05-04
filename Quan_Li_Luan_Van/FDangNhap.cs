@@ -25,7 +25,7 @@ namespace Quan_Li_Luan_Van
             txtTK.LostFocus += txtTK_LostFocus;
             txtMatKhau.LostFocus += txtMatKhau_LostFocus;
         }
-
+        #region Set txtMatKhau and txtTK
         private void TxtMatKhau_GetFocus(object sender, EventArgs e)
         {
             hide.Hide(sender,e);
@@ -45,6 +45,7 @@ namespace Quan_Li_Luan_Van
         {
             hide.Show(sender, e);
         }
+        #endregion
         private void FLogin_Load(object sender, EventArgs e)
         {
             taiKhoan.LoadTK();
@@ -52,7 +53,7 @@ namespace Quan_Li_Luan_Van
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            string chucVu = "";
+            string chucVu;
             if (rbtnSV.Checked) chucVu = "Sinh viên";
             else chucVu = "Giảng viên";
             if (taiKhoan.DangNhap(taiKhoan.createTaiKhoan(txtTK.Text, txtMatKhau.Text, chucVu)))
@@ -62,14 +63,12 @@ namespace Quan_Li_Luan_Van
                     FSinhVien sv = new FSinhVien(taiKhoan.createTaiKhoan(txtTK.Text, txtMatKhau.Text, chucVu));
                     this.Hide();
                     sv.ShowDialog();
-                    this.Close();
                 }
                 else
                 {
                     FGiangVien gv = new FGiangVien(taiKhoan.createTaiKhoan(txtTK.Text, txtMatKhau.Text, chucVu));
                     this.Hide();
                     gv.ShowDialog();
-                    this.Close();
                 }
 
             }

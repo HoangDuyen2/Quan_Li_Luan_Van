@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
@@ -11,48 +13,34 @@ namespace Quan_Li_Luan_Van
 {
     public class PersonDAO
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
         DBConnection dBConnection = new DBConnection();
-
         #region Load label ở form FSinhVien và FGiangVien
         public Person LoadLabel(TaiKhoan taiKhoan)
         {
-            string chucVu, ma;
+            string chucVu, ma,name;
             if (taiKhoan.getChucVu() == "Sinh viên")
             {
                 chucVu = "SinhVien";
                 ma = "MSSV";
+                name = "TenSV";
             }
             else
             {
                 chucVu = "GiangVien";
                 ma = "MaGV";
+                name = "TenGV";
             }
             string query = "SELECT * " +
                            "FROM " + chucVu + " " +
                            "WHERE " + ma + " = '" + taiKhoan.getUsername() + "'";
-            try
+            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(query);
+            foreach (var row in getMaLV)
             {
-                conn.Open();
-
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader dataReader = cmd.ExecuteReader();
-                if (dataReader.Read())
-                {
-                    return new Person(dataReader[0].ToString(), dataReader[1].ToString(), dataReader[2].ToString(), dataReader[3].ToString(),
-                        dataReader[4].ToString(), dataReader[5].ToString(), dataReader[6].ToString(), dataReader[7].ToString());
-                }
-                else return null;
+                return new Person((string)row[ma].ToString(), (string)row[name].ToString(), (string)row["GioiTinh"].ToString(),
+                    (string)row["DiaChi"].ToString(),(string)row["CCCD"].ToString(), (string)row["NgaySinh"].ToString(),
+                    (string)row["SDT"].ToString(), (string)row["Email"].ToString());
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
-                return null;
-            }
-            finally
-            {
-                conn.Close();
-            }
+            return null;
         }
         #endregion
         #region Update dữ liệu trong form thông tin cá nhân
@@ -72,94 +60,56 @@ namespace Quan_Li_Luan_Van
                             "DSThanhVien.MSSV2, DSThanhVien.MSSV3 " +
                             "FROM LuanVan, DSThanhVien " +
                             "WHERE LuanVan.MaLV = DSThanhVien.MaLV and LuanVan.MaLV = N'" + maLV + "'";
-            try
+            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(query);
+            foreach (var row in getMaLV)
             {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader dataReader = cmd.ExecuteReader();
-                if (dataReader.Read())
-                {
-                    luanVan.MSSV11 = dataReader["MSSV1"].ToString();
-                    luanVan.MSSV21 = dataReader["MSSV2"].ToString();
-                    luanVan.MSSV31 = dataReader["MSSV3"].ToString();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
+                luanVan.MSSV11 = (string)row["MSSV1"].ToString();
+                luanVan.MSSV21 = (string)row["MSSV2"].ToString();
+                luanVan.MSSV31 = (string)row["MSSV3"].ToString();
             }
         }
-        public void TenThanhVien(string MSSV)
+        public string TenThanhVien(string MSSV)
         {
             string quenry = "SELECT TenSV " +
                             "FROM SinhVien " +
                             "WHERE MSSV = '" + MSSV + "'";
-            try
+            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(quenry);
+            foreach (var row in getMaLV)
             {
-                conn.Open();
-                SqlCommand cmd1 = new SqlCommand(quenry, conn);
-                SqlDataReader dataReader1 = cmd1.ExecuteReader();
-                if (dataReader1.Read())
-                {
-                    if (luanVan.TenMSSV1 == null)
-                        luanVan.TenMSSV1 = dataReader1["TenSV"].ToString();
-                    else if (luanVan.TenMSSV2 == null)
-                        luanVan.TenMSSV2 = dataReader1["TenSV"].ToString();
-                    else luanVan.TenMSSV3 = dataReader1["TenSV"].ToString();
-                }
-
+                return (string)row["TenSV"].ToString();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
+            return "";
         }
         public LuanVanDuyet Load(string maLV)
         {
             DSThanhVien(maLV);
-            TenThanhVien(luanVan.MSSV11);
-            TenThanhVien(luanVan.MSSV21);
-            TenThanhVien(luanVan.MSSV31);
+            luanVan = loadLuanVanDuyet(maLV, luanVan);
+            return luanVan;
+        }
+        public LuanVanDuyet loadLuanVanDuyet(string maLV, LuanVanDuyet luanVan)
+        {
             string query = "SELECT LuanVan.MaLV, LuanVan.TenLV, GiangVien.TenGV, " +
                             "LuanVan.ChuyenNganh, LuanVan.LinhVuc, LuanVan.ChucNang, LuanVan.CongNghe, " +
                             " LuanVan.NgonNgu, LuanVan.YeuCau, LuanVan.TrangThai " +
                             "FROM LuanVan, GiangVien " +
-                            "WHERE LuanVan.MaGV = GiangVien.MaGV and MaLV = N'" + maLV + "'";
-            try
+                            "WHERE LuanVan.MaGV = GiangVien.MaGV and MaLV = '" + maLV + "'";
+            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(query);
+            foreach (var row in getMaLV)
             {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader dataReader = cmd.ExecuteReader();
-                if (dataReader.Read())
-                {
-                    luanVan.MaLV = dataReader["MaLV"].ToString();
-                    luanVan.TenGV = dataReader["TenGV"].ToString();
-                    luanVan.TenLV = dataReader["TenLV"].ToString();
-                    luanVan.CongNghe = dataReader["CongNghe"].ToString();
-                    luanVan.ChuyenNganh = dataReader["ChuyenNganh"].ToString();
-                    luanVan.LinhVuc = dataReader["LinhVuc"].ToString();
-                    luanVan.ChucNang = dataReader["ChucNang"].ToString();
-                    luanVan.NgonNgu = dataReader["NgonNgu"].ToString();
-                    luanVan.YeuCau = dataReader["YeuCau"].ToString();
-                    luanVan.TrangThai = dataReader["TrangThai"].ToString();
-                }
+                luanVan.MaLV = (string)row["MaLV"].ToString();
+                luanVan.TenGV = (string)row["TenGV"].ToString();
+                luanVan.TenLV = (string)row["TenLV"].ToString();
+                luanVan.CongNghe = (string)row["CongNghe"].ToString();
+                luanVan.ChuyenNganh = (string)row["ChuyenNganh"].ToString();
+                luanVan.LinhVuc = (string)row["LinhVuc"].ToString();
+                luanVan.ChucNang = (string)row["ChucNang"].ToString();
+                luanVan.NgonNgu = (string)row["NgonNgu"].ToString();
+                luanVan.YeuCau = (string)row["YeuCau"].ToString();
+                luanVan.TrangThai = (string)row["TrangThai"].ToString();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
+            luanVan.TenMSSV1 = TenThanhVien(luanVan.MSSV11);
+            luanVan.TenMSSV2 = TenThanhVien(luanVan.MSSV21);
+            luanVan.TenMSSV3 = TenThanhVien(luanVan.MSSV31);
             return luanVan;
         }
         #endregion
@@ -171,44 +121,29 @@ namespace Quan_Li_Luan_Van
         }
         public bool DangNhap(TaiKhoan taiKhoan)
         {
-            try
+            string sqlStr = "SELECT * FROM TaiKhoan WHERE Username = @Username AND Pass = @Password";
+            SqlParameter[] lstParam =
             {
-                conn.Open();
-                string sqlStr = "SELECT * FROM TaiKhoan WHERE Username = @Username AND Pass = @Password";
-                SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                cmd.Parameters.AddWithValue("@Username", taiKhoan.getUsername());
-                cmd.Parameters.AddWithValue("@Password", taiKhoan.getPassword());
-
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.HasRows)
+                new SqlParameter("@Username", SqlDbType.NVarChar) {Value = taiKhoan.getUsername()},
+                new SqlParameter("@Password", SqlDbType.NVarChar) {Value = taiKhoan.getPassword()},
+            };
+            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(sqlStr, lstParam);
+            foreach (var row in getMaLV)
+            {
+                if ((string)row["ChucVu"].ToString() == "Sinh Viên" && taiKhoan.getChucVu() == "Sinh viên")
                 {
-                    if (reader.Read())
-                    {
-                        if (reader[2].ToString() == "Sinh Viên" && taiKhoan.getChucVu() == "Sinh viên")
-                        {
-                            return true;
-                        }
-                        if (reader[2].ToString() == "Giảng Viên" && taiKhoan.getChucVu() == "Giảng viên")
-                        {
-                            return true;
-                        }
-                    }
-
+                    return true;
+                }
+                else if ((string)row["ChucVu"].ToString() == "Giảng Viên" && taiKhoan.getChucVu() == "Giảng viên")
+                {
+                    return true;
                 }
                 else
                 {
                     MessageBox.Show("Invalid username, password, or role.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                conn.Close();
-            }
-
             return false;
         }
         public TaiKhoan createTaiKhoan(string username, string password, string chucVu)
@@ -223,37 +158,20 @@ namespace Quan_Li_Luan_Van
             string query = "SELECT * " +
                            "FROM NhiemVu " +
                            "WHERE MaNV = @MaNV";
-            try
+            SqlParameter[] lstParam =
             {
-                conn.Open();
-
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@MaNV", maNV);
-
-                SqlDataReader dataReader = cmd.ExecuteReader();
-                if (dataReader.Read())
-                {
-                    int tienTrinh;
-                    if (!int.TryParse(dataReader[3].ToString(), out tienTrinh))
-                        tienTrinh = 0;
-
-                    return new NhiemVu(dataReader[0].ToString(), dataReader[1].ToString(), dataReader[2].ToString(), tienTrinh,
-                        dataReader[4].ToString(), dataReader[5].ToString(), dataReader[6].ToString());
-                }
-                else
-                {
-                    return null;
-                }
-            }
-            catch (Exception ex)
+                new SqlParameter("@MaNV", SqlDbType.NVarChar) {Value = maNV},
+            };
+            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(query, lstParam);
+            foreach (var row in getMaLV)
             {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
-                return null;
+                int tienTrinh;
+                if (!int.TryParse((string)row["TienTrinh"].ToString(), out tienTrinh))
+                    tienTrinh = 0;
+                return new NhiemVu((string)row["MaNV"].ToString(), (string)row["TenNV"].ToString(), (string)row["NoiDung"].ToString(), tienTrinh,
+                        (string)row["TrangThai"].ToString(), (string)row["MaNguoiTao"].ToString(), (string)row["MaLV"].ToString());
             }
-            finally
-            {
-                conn.Close();
-            }
+            return null;
         }
         public void ThemNhiemVu(NhiemVu nhiemvu)
         {
@@ -271,42 +189,13 @@ namespace Quan_Li_Luan_Van
         public bool checkMaNguoi(string maNguoi, string maNV)
         {
             string sqlStr = string.Format("SELECT * FROM NhiemVu WHERE MaNguoiTao = '{0}' AND MaNV = '{1}' ", maNguoi, maNV);
-            if (KiemTra(sqlStr))
+            if (dBConnection.KiemTra(sqlStr))
             {
                 return true;
             }
             return false;
         }
-        public bool KiemTra(string sqlStr)
-        {
-            bool check = false;
-            try
-            {
-                conn.Open();
-                SqlCommand command = new SqlCommand(sqlStr, conn);
-
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    check = true;
-                }
-                else
-                {
-                    check = false;
-                }
-                reader.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-            finally
-            {
-                conn.Close();
-            }
-            return check;
-        }
+        
         #endregion
     }
 }

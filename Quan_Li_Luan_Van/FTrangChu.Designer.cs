@@ -105,7 +105,7 @@
             this.dtNgayThang.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtNgayThang.Location = new System.Drawing.Point(127, 78);
             this.dtNgayThang.Name = "dtNgayThang";
-            this.dtNgayThang.Size = new System.Drawing.Size(191, 39);
+            this.dtNgayThang.Size = new System.Drawing.Size(191, 43);
             this.dtNgayThang.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.dtNgayThang.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.dtNgayThang.StateCommon.Border.Color2 = System.Drawing.Color.Blue;
@@ -116,7 +116,7 @@
             this.dtNgayThang.StateCommon.Border.Rounding = 16;
             this.dtNgayThang.StateCommon.Border.Width = 1;
             this.dtNgayThang.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.dtNgayThang.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtNgayThang.StateCommon.Content.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtNgayThang.TabIndex = 20;
             this.dtNgayThang.ValueNullable = new System.DateTime(2024, 3, 10, 0, 0, 0, 0);
             this.dtNgayThang.ValueChanged += new System.EventHandler(this.dtNgayThang_ValueChanged);
