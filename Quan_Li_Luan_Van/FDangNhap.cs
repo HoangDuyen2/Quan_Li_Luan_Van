@@ -46,6 +46,7 @@ namespace Quan_Li_Luan_Van
         {
             hide.Show(sender, e);
         }
+
         #endregion
         private void FLogin_Load(object sender, EventArgs e)
         {
