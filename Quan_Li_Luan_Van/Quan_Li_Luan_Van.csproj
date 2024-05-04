@@ -67,6 +67,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CapNhatTienTrinh.cs" />
+    <Compile Include="ChinhLuanVanDAO.cs" />
+    <Compile Include="ChiTietLuanVanDuyetDAO.cs" />
+    <Compile Include="ChiTietTaskDao.cs" />
+    <Compile Include="ChiTietThongBaoDAO.cs" />
+    <Compile Include="FCapNhatTienTrinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCapNhatTienTrinh.Designer.cs">
+      <DependentUpon>FCapNhatTienTrinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="FChamDiem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +130,12 @@
     </Compile>
     <Compile Include="UCPhanHoi.Designer.cs">
       <DependentUpon>UCPhanHoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCTask_SV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTask_SV.Designer.cs">
+      <DependentUpon>UCTask_SV.cs</DependentUpon>
     </Compile>
     <Compile Include="UCUpdateTask.cs">
       <SubType>UserControl</SubType>
@@ -345,6 +362,9 @@
     <EmbeddedResource Include="FBaoCaoTienDo.resx">
       <DependentUpon>FBaoCaoTienDo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FCapNhatTienTrinh.resx">
+      <DependentUpon>FCapNhatTienTrinh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FChamDiem.resx">
       <DependentUpon>FChamDiem.cs</DependentUpon>
     </EmbeddedResource>
@@ -468,6 +488,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCTask.resx">
       <DependentUpon>UCTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCTask_SV.resx">
+      <DependentUpon>UCTask_SV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCThongBao.resx">
       <DependentUpon>UCThongBao.cs</DependentUpon>

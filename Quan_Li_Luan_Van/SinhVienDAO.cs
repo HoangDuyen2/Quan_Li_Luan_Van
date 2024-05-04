@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -284,7 +285,7 @@ namespace Quan_Li_Luan_Van
             }
             return "";
         }
-        public void ShowData(FlowLayoutPanel panel, string truyVan,string maNguoiDN)
+        public void ShowData(FlowLayoutPanel panel, string truyVan, string User)
         {
             try
             {
@@ -294,16 +295,14 @@ namespace Quan_Li_Luan_Van
                 SqlDataReader dataReader = cmd.ExecuteReader();
                 while (dataReader.Read())
                 {
-                    UCTask uclv = new UCTask();
-                    uclv.MaNV = dataReader["MaNV"].ToString();
-                    uclv.MaNguoi = dataReader["MaNguoiTao"].ToString();
-                    uclv.MaNguoiDangNhap = maNguoiDN;
-                    uclv.LblTenNV.Text = dataReader["TenNV"].ToString();
-                    uclv.LblTienTrinh.Text = dataReader["TienTrinh"].ToString();
-
-                    panel.Controls.Add(uclv);
+                    UCTask_SV task = new UCTask_SV();
+                    task.MaUser = User;
+                    task.MaNV = dataReader["MaNV"].ToString();
+                    task.MaNguoiTao = dataReader["MaNguoiTao"].ToString();
+                    task.LblTenNV.Text = dataReader["TenNV"].ToString();
+                    task.LblTienTrinh.Text = dataReader["TienTrinh"].ToString();
+                    panel.Controls.Add(task);
                 }
-
             }
             catch (Exception ex)
             {
@@ -314,6 +313,82 @@ namespace Quan_Li_Luan_Van
                 conn.Close();
             }
         }
+        public string GetTenSV(string MSSV)
+        {
+            string tenSV = "";
+            string query = "SELECT TenSV FROM SinhVien WHERE MSSV = @MSSV";
+            try
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@MSSV", MSSV);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            tenSV = reader["TenSV"].ToString();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi khi lấy tên giảng viên: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return tenSV;
+        }
+        public void ThemPhanHoi(PhanHoi ph)
+        {
+            string query = string.Format("INSERT INTO PhanHoi(TenNguoiGui, ThoiGianGui, NoiDung, MaNV) VALUES (N'{0}', N'{1}', N'{2}', '{3}')", ph.Name, ph.Thoigian, ph.Noidung, ph.NhiemVu);
+            dbConnection.ThucThi(query);
+        }
+        public bool UpdateProgress(CapNhatTienTrinh update)
+        {
+            string queryInsertProgress = "INSERT INTO CapNhatTienTrinh (MaNV, MSSV, PhanTramCapNhat, TienTrinh, ThoiGian) VALUES (@MaNV, @MSSV, @PhanTramCapNhat, @TienTrinh, @ThoiGian)";
+            string queryUpdateTask = "UPDATE NhiemVu SET TienTrinh = @TienTrinh WHERE MaNV = @MaNV";
+
+            SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
+            SqlTransaction transaction;
+
+            conn.Open();
+            transaction = conn.BeginTransaction();
+
+            try
+            {
+                SqlCommand cmdInsert = new SqlCommand(queryInsertProgress, conn, transaction);
+                cmdInsert.Parameters.AddWithValue("@MaNV", update.MaNV);
+                cmdInsert.Parameters.AddWithValue("@MSSV", update.MSSV);
+                cmdInsert.Parameters.AddWithValue("@PhanTramCapNhat", update.PhanTramCapNhat);
+                cmdInsert.Parameters.AddWithValue("@TienTrinh", update.TienTrinh);
+                cmdInsert.Parameters.AddWithValue("@ThoiGian", update.ThoiGian);
+                cmdInsert.ExecuteNonQuery();
+
+                SqlCommand cmdUpdate = new SqlCommand(queryUpdateTask, conn, transaction);
+                cmdUpdate.Parameters.AddWithValue("@MaNV", update.MaNV);
+                cmdUpdate.Parameters.AddWithValue("@TienTrinh", update.TienTrinh);
+                cmdUpdate.ExecuteNonQuery();
+
+                transaction.Commit();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                
+                transaction.Rollback();
+                MessageBox.Show("Cập nhật tiến trình thất bại: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
         #endregion
     }
 }

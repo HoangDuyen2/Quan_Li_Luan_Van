@@ -22,13 +22,47 @@ namespace Quan_Li_Luan_Van
             this.maGV = maGV;
             LoadInfoTask();
             LoadPhanHoi();
+            LoadCapNhatTienTrinh();
+            LoadDataChart();
         }
 
         public FChiTietTask_All()
         {
             InitializeComponent();
         }
+        public void LoadDataChart()
+        {
+            GiangVienDAO chartData = new GiangVienDAO();
+            DataTable dt = chartData.GetStudentProgressData(this.maNV);
+            chartTienDo.Series.Clear();
+            chartTienDo.Series.Add("Progress");
+            chartTienDo.Series["Progress"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
 
+            
+            chartTienDo.Series["Progress"].Color = System.Drawing.Color.DodgerBlue;
+            chartTienDo.Series["Progress"].BorderWidth = 2;
+
+            foreach (DataRow row in dt.Rows)
+            {
+                int pointIndex = chartTienDo.Series["Progress"].Points.AddXY(row["TenSV"], row["TongPhanTramCapNhat"]);
+                chartTienDo.Series["Progress"].Points[pointIndex].Label = $"{row["TongPhanTramCapNhat"]}%";
+            }
+
+            
+            chartTienDo.ChartAreas[0].AxisX.Interval = 1;
+            chartTienDo.ChartAreas[0].AxisX.LabelStyle.Angle = -45;
+            chartTienDo.ChartAreas[0].AxisX.LabelStyle.Font = new System.Drawing.Font("Tahoma", 8);
+            chartTienDo.ChartAreas[0].AxisY.Minimum = 0;
+            chartTienDo.ChartAreas[0].AxisY.Maximum = 100;
+            chartTienDo.ChartAreas[0].AxisY.Interval = 10;
+
+           
+            chartTienDo.Titles.Clear();
+            chartTienDo.Titles.Add("Progress of Students");
+            chartTienDo.Titles[0].Font = new System.Drawing.Font("Microsoft Sans Serif", 10, System.Drawing.FontStyle.Bold);
+
+            chartTienDo.ChartAreas[0].RecalculateAxesScale();
+        }
         public void LoadInfoTask()
         {
             GiangVienDAO task = new GiangVienDAO();
@@ -41,16 +75,19 @@ namespace Quan_Li_Luan_Van
                 txtNoiDungNV.Text = nhiemVu.NoiDung;
             }
         }
-
+        public void LoadCapNhatTienTrinh()
+        {
+            GiangVienDAO tientrinh = new GiangVienDAO();
+            tientrinh.LoadListCapNhatTienTrinh(this.maNV, fpnUpdateTask);
+        }
         public void LoadPhanHoi()
         {
             GiangVienDAO task = new GiangVienDAO();
             task.LoadListPhanHoi(this.maNV, fpnChat);
         }
-
         private void btnPhanHoi_Click(object sender, EventArgs e)
         {
-            ChiTietTaskDao taskDao = new ChiTietTaskDao(this.maNV);
+            GiangVienDAO taskDao = new GiangVienDAO();
             PhanHoi ph = TaoPhanHoi();
             if (!ph.checkNullPhanHoi())
             {
@@ -63,7 +100,6 @@ namespace Quan_Li_Luan_Van
                 txtPhanHoi.Text = "";
                 LoadPhanHoi();
             }
-
         }
         private PhanHoi TaoPhanHoi()
         {
