@@ -13,7 +13,7 @@ namespace Quan_Li_Luan_Van
     public partial class FChiTietThongBao : Form
     {
         private string ID_TB;
-        ChiTietThongBaoDAO cttb = new ChiTietThongBaoDAO();
+        SinhVienDAO cttb = new SinhVienDAO();
         public FChiTietThongBao(string ID)
         {
             InitializeComponent();

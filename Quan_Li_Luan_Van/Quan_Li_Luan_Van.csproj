@@ -67,10 +67,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChinhLuanVanDAO.cs" />
-    <Compile Include="ChiTietLuanVanDuyetDAO.cs" />
-    <Compile Include="ChiTietTaskDao.cs" />
-    <Compile Include="ChiTietThongBaoDAO.cs" />
     <Compile Include="FChamDiem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,7 +128,6 @@
     </Compile>
     <Compile Include="XoaLuanVanDAO.cs" />
     <Compile Include="DBConnection.cs" />
-    <Compile Include="DSNhomDAO.cs" />
     <Compile Include="FBaoCaoTienDo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,10 +238,7 @@
     </Compile>
     <Compile Include="Hide_Show.cs" />
     <Compile Include="LuanVanDuyet.cs" />
-    <Compile Include="LuanVanToiDAO.cs" />
     <Compile Include="NhiemVu.cs" />
-    <Compile Include="ThemLuanVanDAO.cs" />
-    <Compile Include="TienTrinh_GVDAO.cs" />
     <Compile Include="FSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>

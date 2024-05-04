@@ -223,7 +223,6 @@ namespace Quan_Li_Luan_Van
             string query = "SELECT * " +
                            "FROM NhiemVu " +
                            "WHERE MaNV = @MaNV";
-
             try
             {
                 conn.Open();
@@ -280,7 +279,7 @@ namespace Quan_Li_Luan_Van
         }
         public bool KiemTra(string sqlStr)
         {
-            bool check = true;
+            bool check = false;
             try
             {
                 conn.Open();

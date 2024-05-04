@@ -73,7 +73,7 @@ namespace Quan_Li_Luan_Van
         {
             if (!string.IsNullOrEmpty(noidung))
             {
-                string tracuu = " and NoiDung LIKE N'%" + noidung + "%'";
+                string tracuu = " and CONCAT(Tieude, NoiDung) LIKE N'%" + noidung + "%'";
                 return tracuu;
             }
             return "";
@@ -92,6 +92,37 @@ namespace Quan_Li_Luan_Van
         {
             string sql = " WHERE MaLV = '" + maLV + "'";
             return queryTrangChu + sql;
+        }
+        public ThongBao noiDungTB(string maTB)
+        {
+            string query = "SELECT ID_TB, TieuDe, ThoiGian, NoiDung, TenGV " +
+                    "FROM ThongBao INNER JOIN LuanVan ON LuanVan.MaLV = ThongBao.MaLV " +
+                    "INNER JOIN GiangVien ON LuanVan.MaGV = GiangVien.MaGV " +
+                     "WHERE ID_TB = N'" + maTB + "'";
+            ThongBao tb = new ThongBao();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader dataReader = cmd.ExecuteReader();
+                if (dataReader.Read())
+                {
+                    tb.TieuDe = dataReader["TieuDe"].ToString();
+                    tb.ThoiGian = dataReader["ThoiGian"].ToString();
+                    tb.NoiDung = dataReader["NoiDung"].ToString();
+                    tb.TieuDe = dataReader["TieuDe"].ToString();
+                    tb.NguoiGui = dataReader["TenGV"].ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return tb;
         }
         #endregion
         #region Load form đăng kí luận văn
@@ -118,7 +149,7 @@ namespace Quan_Li_Luan_Van
         {
             if (tenGV != "")
             {
-                string tracuu = " and TenGV LIKE N'%" + tenGV + "%'";
+                string tracuu = " and CONCAT(TenGV) LIKE N'%" + tenGV + "%'";
                 return queryDKLV + tracuu;
             }
             return queryDKLV;
@@ -162,7 +193,7 @@ namespace Quan_Li_Luan_Van
         {
             if (chuyenNganh != "Tất cả")
             {
-                string tracuu = " and ChuyenNganh = N'" + chuyenNganh + "'";
+                string tracuu = " and CONCAT(ChuyenNganh) = N'" + chuyenNganh + "'";
                 return queryDKLV + tracuu;
             }
             return queryDKLV;
@@ -253,7 +284,7 @@ namespace Quan_Li_Luan_Van
             }
             return "";
         }
-        public void ShowData(FlowLayoutPanel panel, string truyVan)
+        public void ShowData(FlowLayoutPanel panel, string truyVan,string maNguoiDN)
         {
             try
             {
@@ -266,6 +297,7 @@ namespace Quan_Li_Luan_Van
                     UCTask uclv = new UCTask();
                     uclv.MaNV = dataReader["MaNV"].ToString();
                     uclv.MaNguoi = dataReader["MaNguoiTao"].ToString();
+                    uclv.MaNguoiDangNhap = maNguoiDN;
                     uclv.LblTenNV.Text = dataReader["TenNV"].ToString();
                     uclv.LblTienTrinh.Text = dataReader["TienTrinh"].ToString();
 

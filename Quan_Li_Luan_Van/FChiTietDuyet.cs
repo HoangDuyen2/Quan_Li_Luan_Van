@@ -15,7 +15,7 @@ namespace Quan_Li_Luan_Van
     public partial class FChiTietDuyet : Form
     {
         private string _message;
-        ChiTietLuanVanDuyetDAO chiTiet = new ChiTietLuanVanDuyetDAO();
+        GiangVienDAO chiTiet = new GiangVienDAO();
         LuanVanDuyet luanVan = new LuanVanDuyet();
         GiangVienDAO duyet = new GiangVienDAO();
         public FChiTietDuyet(string message) : this()
@@ -66,7 +66,7 @@ namespace Quan_Li_Luan_Van
 
         private void CapNhatDuLieu()
         {
-            luanVan = chiTiet.Load(_message);
+            luanVan = chiTiet.LoadCTLV(_message);
         }
 
         private void btnTuChoi_Click(object sender, EventArgs e)

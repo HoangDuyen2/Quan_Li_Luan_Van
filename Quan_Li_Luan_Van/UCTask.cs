@@ -15,7 +15,7 @@ namespace Quan_Li_Luan_Van
         private string maLV;
         private string maNV;
         private string maNguoi;
-
+        private string maNguoiDN;
 
         public UCTask()
         {
@@ -28,10 +28,11 @@ namespace Quan_Li_Luan_Van
         public string MaLV { get => maLV; set => maLV = value; }
         public string MaNV { get => maNV; set => maNV = value; }
         public string MaNguoi { get => maNguoi; set => maNguoi = value; }
+        public string MaNguoiDangNhap { get => maNguoiDN; set => maNguoiDN = value; }
 
         private void btnChinhSua_Click(object sender, EventArgs e)
         {
-            FChinhSuaTask task = new FChinhSuaTask(MaNV,MaNguoi);
+            FChinhSuaTask task = new FChinhSuaTask(MaNV,MaNguoiDangNhap);
             task.ShowDialog();
         }
 
