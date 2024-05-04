@@ -45,7 +45,7 @@ namespace Quan_Li_Luan_Van
         {
             if (!string.IsNullOrEmpty(noidung))
             {
-                string tracuu = " and CONCAT(Tieude, NoiDung) LIKE N'%" + noidung + "%'";
+                string tracuu = " AND CONCAT(Tieude, NoiDung) LIKE N'%" + noidung + "%'";
                 return tracuu;
             }
             return "";
@@ -62,7 +62,7 @@ namespace Quan_Li_Luan_Van
         }
         public string LoadTrangChu(string maLV)
         {
-            string sql = " WHERE MaLV = '" + maLV + "'";
+            string sql = " WHERE MaLV = '" + maLV + "' ";
             return queryTrangChu + sql;
         }
         public ThongBao noiDungTB(string maTB)
@@ -118,13 +118,13 @@ namespace Quan_Li_Luan_Van
         {
             return queryDKLV;
         }
-        public void Load_UC_Con(FlowLayoutPanel flPanelDSLV, string truyVan, Person person)
+        public void Load_UC_Con(FlowLayoutPanel flPanelDSLV, string truyVan, SinhVien sinhVien)
         {
             flPanelDSLV.Controls.Clear();
             List<Dictionary<string, object>> ds = dbConnection.ExecuteReaderData(truyVan);
             foreach (var row in ds)
             {
-                UCLV uclv = new UCLV(person);
+                UCLV uclv = new UCLV(sinhVien);
                 uclv.MaLV = (string)row["MaLV"].ToString();
                 uclv.LblTenLV.Text = (string)row["TenLV"].ToString();
                 uclv.LblChuyenNganh.Text = (string)row["ChuyenNganh"].ToString();

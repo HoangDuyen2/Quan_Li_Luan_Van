@@ -13,12 +13,12 @@ namespace Quan_Li_Luan_Van
 {
     public partial class FChiTietLuanVan_GV : Form
     {
-        private string _message;
-        PersonDAO chiTiet = new PersonDAO();
+        private string maLV;
+        GiangVienDAO chiTiet = new GiangVienDAO();
         LuanVanDuyet luanVan = new LuanVanDuyet();
-        public FChiTietLuanVan_GV(string message) : this()
+        public FChiTietLuanVan_GV(string MaLV) : this()
         {
-            _message = message;
+            maLV = MaLV;
         }
 
         public FChiTietLuanVan_GV()
@@ -37,7 +37,7 @@ namespace Quan_Li_Luan_Van
         }
         private void CapNhatDuLieu()
         {
-            luanVan = chiTiet.Load(_message);
+            luanVan = chiTiet.LoadLVD(maLV);
         }
 
         private void ucChiTietLuanVan1_Load(object sender, EventArgs e)

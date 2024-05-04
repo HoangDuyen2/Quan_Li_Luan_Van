@@ -48,12 +48,12 @@ namespace Quan_Li_Luan_Van
 
         private void dtNgayThang_ValueChanged(object sender, EventArgs e)
         {
-            sVDAO.LoadDSTB(flpanelDSThongBao, sVDAO.Load(maLV)+sVDAO.TraCuuNgay(dtNgayThang.Value));
+            sVDAO.LoadDSTB(flpanelDSThongBao, sVDAO.LoadTrangChu(maLV)+sVDAO.TraCuuNgay(dtNgayThang.Value));
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            sVDAO.LoadDSTB(flpanelDSThongBao, sVDAO.Load(maLV) + sVDAO.traCuuTheoNoiDung(txtTimkiem.Text));
+            sVDAO.LoadDSTB(flpanelDSThongBao, sVDAO.LoadTrangChu(maLV) + sVDAO.traCuuTheoNoiDung(txtTimkiem.Text));
         }
     }
 }

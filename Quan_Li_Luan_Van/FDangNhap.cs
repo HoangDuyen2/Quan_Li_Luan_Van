@@ -64,12 +64,14 @@ namespace Quan_Li_Luan_Van
                     FSinhVien sv = new FSinhVien(taiKhoan.createTaiKhoan(txtTK.Text, txtMatKhau.Text, chucVu));
                     this.Hide();
                     sv.ShowDialog();
+                    this.Close();
                 }
                 else 
                 {
                     FGiangVien gv = new FGiangVien(taiKhoan.createTaiKhoan(txtTK.Text, txtMatKhau.Text, chucVu));
                     this.Hide();
                     gv.ShowDialog();
+                    this.Close();
                 }
 
             }

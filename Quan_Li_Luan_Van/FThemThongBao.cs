@@ -25,7 +25,6 @@ namespace Quan_Li_Luan_Van
             this.maLV = maLV;
         }
 
-
         private void btnThem_Click(object sender, EventArgs e)
         {
             ThongBao tb = TaoThongBao();

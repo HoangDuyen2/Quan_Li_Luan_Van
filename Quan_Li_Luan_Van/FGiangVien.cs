@@ -14,7 +14,7 @@ namespace Quan_Li_Luan_Van
     public partial class FGiangVien : Form
     {
         TaiKhoan taiKhoan;
-        PersonDAO trangChinh = new PersonDAO();
+        GiangVienDAO trangChinh = new GiangVienDAO();
         GiangVien gv ;
         public FGiangVien(TaiKhoan taiKhoan)
         {

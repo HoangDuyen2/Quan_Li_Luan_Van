@@ -14,7 +14,7 @@ namespace Quan_Li_Luan_Van
 {
     public partial class FLuanVanCuaToi_GV : Form
     {
-        private Person gv;
+        private GiangVien gv;
         GiangVienDAO luanvan;
         private string query = "";
         
@@ -22,7 +22,7 @@ namespace Quan_Li_Luan_Van
         {
             InitializeComponent();
         }
-        public FLuanVanCuaToi_GV(Person gv) :this()
+        public FLuanVanCuaToi_GV(GiangVien gv) :this()
         {
             this.gv = gv;
             this.luanvan = new GiangVienDAO();

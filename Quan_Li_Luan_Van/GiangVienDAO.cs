@@ -77,20 +77,21 @@ namespace Quan_Li_Luan_Van
         public void getInfoDLV(string query, FlowLayoutPanel panel)
         {
             panel.Controls.Clear();
+            MessageBox.Show(query);
             List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(query);
             foreach (var row in getMaLV)
             {
                 UCDuyet ucd = new UCDuyet();
-                ucd.MaLV = (string)row["MaLV"].ToString();
-                ucd.LbTenLV.Text = (string)row["TenLV"].ToString();
-                ucd.LbChuyenNganh.Text = (string)row["ChuyenNganh"].ToString();
-                if ((string)row["TinhTrang"].ToString() == "Đang chờ duyệt")
+                ucd.MaLV = (string)row["LuanVan.MaLV"].ToString();
+                ucd.LbTenLV.Text = (string)row["LuanVan.TenLV"].ToString();
+                ucd.LbChuyenNganh.Text = (string)row["LuanVan.ChuyenNganh"].ToString();
+                if ((string)row["DuyetDangKy.TinhTrang"].ToString() == "Đang chờ duyệt")
                     ucd.LBTrangThai.ForeColor = System.Drawing.Color.Green;
-                if ((string)row["TinhTrang"].ToString() == "Từ chối")
+                if ((string)row["DuyetDangKy.TinhTrang"].ToString() == "Từ chối")
                     ucd.LBTrangThai.ForeColor = System.Drawing.Color.Black;
-                if ((string)row["TinhTrang"].ToString() == "Đã duyệt")
+                if ((string)row["DuyetDangKy.TinhTrang"].ToString() == "Đã duyệt")
                     ucd.LBTrangThai.ForeColor = System.Drawing.Color.Red;
-                ucd.LBTrangThai.Text = (string)row["TinhTrang"].ToString();
+                ucd.LBTrangThai.Text = (string)row["DuyetDangKy.TinhTrang"].ToString();
                 panel.Controls.Add(ucd);
             }
         }

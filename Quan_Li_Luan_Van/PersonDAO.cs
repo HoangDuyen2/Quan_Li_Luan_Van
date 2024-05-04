@@ -89,7 +89,7 @@ namespace Quan_Li_Luan_Van
             }
             return "";
         }
-        public LuanVanDuyet Load(string maLV)
+        public LuanVanDuyet LoadLVD(string maLV)
         {
             DSThanhVien(maLV);
             luanVan = loadLuanVanDuyet(maLV, luanVan);

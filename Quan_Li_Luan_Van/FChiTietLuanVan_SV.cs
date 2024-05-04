@@ -18,13 +18,12 @@ namespace Quan_Li_Luan_Van
         private string maLV;
         Hide_Show hide = new Hide_Show();
         LuanVanDuyet luanVan = new LuanVanDuyet();
-        PersonDAO chiTiet = new PersonDAO();
-        SinhVienDAO dangKy = new SinhVienDAO();
-        Person person = null;
-        public FChiTietLuanVan_SV(string maLV,Person person) : this()
+        SinhVienDAO chiTiet = new SinhVienDAO();
+        SinhVien sinhVien = null;
+        public FChiTietLuanVan_SV(string maLV,SinhVien SV) : this()
         {
             this.maLV = maLV;
-            this.person = person;
+            this.sinhVien = SV;
         }
 
         public FChiTietLuanVan_SV()
@@ -63,25 +62,25 @@ namespace Quan_Li_Luan_Van
         {
             CapNhatDuLieu();
             ucChiTietLuanVan1.ThongTin(luanVan);
-            ucChiTietLuanVan1.TxtTVien11.Text = person.getMaso();
-            ucChiTietLuanVan1.LbTenMSSV1.Text = chiTiet.TenThanhVien(person.getMaso());
+            ucChiTietLuanVan1.TxtTVien11.Text = sinhVien.getMaso();
+            ucChiTietLuanVan1.LbTenMSSV1.Text = chiTiet.TenThanhVien(sinhVien.getMaso());
             ucChiTietLuanVan1.KhongTruyCap();
-            if(dangKy.checkTungNguoiDangKy(person.getMaso()))
+            if(chiTiet.checkTungNguoiDangKy(sinhVien.getMaso()))
                 btnDangKy.Enabled = false;
         }
 
         private void CapNhatDuLieu()
         {
-            luanVan = chiTiet.Load(maLV);
+            luanVan = chiTiet.LoadLVD(maLV);
         }
 
         private void btnChapNhan_Click(object sender, EventArgs e)
         {
-            luanVan.MSSV11 = person.getMaso();
+            luanVan.MSSV11 = sinhVien.getMaso();
             luanVan.MSSV21 = ucChiTietLuanVan1.TxtTVien21.Text;
             luanVan.MSSV31 = ucChiTietLuanVan1.TxtTV31.Text;
-            if(dangKy.checkNguoiDangKy(luanVan))
-                dangKy.DangKy(luanVan);
+            if(chiTiet.checkNguoiDangKy(luanVan))
+                chiTiet.DangKy(luanVan);
             this.Close();
         }
     }

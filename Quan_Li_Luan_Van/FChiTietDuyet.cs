@@ -18,9 +18,9 @@ namespace Quan_Li_Luan_Van
         GiangVienDAO chiTiet = new GiangVienDAO();
         LuanVanDuyet luanVan = new LuanVanDuyet();
         GiangVienDAO duyet = new GiangVienDAO();
-        public FChiTietDuyet(string message) : this()
+        public FChiTietDuyet(string MaLV) : this()
         {
-            maLV = message;
+            maLV = MaLV;
         }
 
         public FChiTietDuyet()

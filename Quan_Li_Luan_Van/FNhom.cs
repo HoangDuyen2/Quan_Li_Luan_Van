@@ -12,7 +12,7 @@ namespace Quan_Li_Luan_Van
 {
     public partial class FNhom : Form
     {
-        private Person gv;
+        private GiangVien giangVien;
         private string query;
         private GiangVienDAO giangVienDao;
 
@@ -21,11 +21,11 @@ namespace Quan_Li_Luan_Van
             InitializeComponent();
         }
 
-        public FNhom(Person gv) : this()
+        public FNhom(GiangVien gv) : this()
         {
-            this.gv = gv;
+            this.giangVien = gv;
             giangVienDao = new GiangVienDAO();
-            this.query = giangVienDao.TruyVanDSNhom(gv.getMaso());
+            this.query = giangVienDao.TruyVanDSNhom(giangVien.getMaso());
         }
 
         private void FNhom_Load(object sender, EventArgs e)
