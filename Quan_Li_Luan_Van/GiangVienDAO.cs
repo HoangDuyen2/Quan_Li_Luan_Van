@@ -400,7 +400,7 @@ namespace Quan_Li_Luan_Van
         }
         public void LoadListThanhVien(string maLV, FlowLayoutPanel panel)
         {
-            string query = @"SELECT DISTINCT sv.MSSV, sv.TenSV
+            string query = @"SELECT DISTINCT sv.MSSV, sv.TenSV, sv.Diem
                      FROM DSThanhVien dtv
                      JOIN SinhVien sv ON sv.MSSV = dtv.MSSV1 OR sv.MSSV = dtv.MSSV2 OR sv.MSSV = dtv.MSSV3
                      WHERE dtv.MaLV = @MaLV";
