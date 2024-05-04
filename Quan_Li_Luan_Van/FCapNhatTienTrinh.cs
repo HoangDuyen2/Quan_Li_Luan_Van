@@ -185,5 +185,10 @@ namespace Quan_Li_Luan_Van
                 lblThanhTienDo.Text = "Tiến độ: " + TrackTienTrinh.Value.ToString() + "%";
             }
         }
+
+        private void chartTienDo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

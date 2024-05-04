@@ -171,11 +171,11 @@
     <Compile Include="FChiTietLuanVan_GV.Designer.cs">
       <DependentUpon>FChiTietLuanVan_GV.cs</DependentUpon>
     </Compile>
-    <Compile Include="FChiTietTask_All.cs">
+    <Compile Include="FChiTietNhiemVu_GV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FChiTietTask_All.Designer.cs">
-      <DependentUpon>FChiTietTask_All.cs</DependentUpon>
+    <Compile Include="FChiTietNhiemVu_GV.Designer.cs">
+      <DependentUpon>FChiTietNhiemVu_GV.cs</DependentUpon>
     </Compile>
     <Compile Include="FChiTietThongBao.cs">
       <SubType>Form</SubType>
@@ -379,8 +379,8 @@
     <EmbeddedResource Include="FChiTietLuanVan_GV.resx">
       <DependentUpon>FChiTietLuanVan_GV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FChiTietTask_All.resx">
-      <DependentUpon>FChiTietTask_All.cs</DependentUpon>
+    <EmbeddedResource Include="FChiTietNhiemVu_GV.resx">
+      <DependentUpon>FChiTietNhiemVu_GV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FChiTietThongBao.resx">
       <DependentUpon>FChiTietThongBao.cs</DependentUpon>
