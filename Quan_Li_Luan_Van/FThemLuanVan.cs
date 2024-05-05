@@ -16,12 +16,10 @@ namespace Quan_Li_Luan_Van
         private string maGV;
         Hide_Show hide_Show = new Hide_Show();
         GiangVienDAO lvDao = new GiangVienDAO();
-
         public FThemLuanVan()
         {
             InitializeComponent();
         }
-
         public FThemLuanVan(string maGV) : this()
         {
             this.maGV = maGV;
@@ -34,52 +32,57 @@ namespace Quan_Li_Luan_Van
             txtYeuCau.Enter += TxtYeuCau_GetFocus;
             txtYeuCau.LostFocus += TxtYeuCau_LostFocus;
         }
-
         private void FThemLuanVan_Load(object sender, EventArgs e)
         {
             
         }
-
+        #region UX Textbox
         private void TxtMaLuanVan_GetFocus(object sender, EventArgs e)
         {
             hide_Show.Hide(sender, e);
         }
-
         private void TxtMaLuanVan_LostFocus(object sender, EventArgs e)
         {
             hide_Show.Show(sender, e);
         }
-
         private void TxtTenLuanVan_GetFocus(object sender, EventArgs e)
         {
             hide_Show.Hide(sender, e);
         }
-
         private void TxtTenLuanVan_LostFocus(object sender, EventArgs e)
         {
             hide_Show.Show(sender, e);
         }
-
         private void TxtChucNang_GetFocus(object sender, EventArgs e)
         {
             hide_Show.Hide(sender, e);
         }
-
         private void TxtChucNang_LostFocus(object sender, EventArgs e)
         {
             hide_Show.Show(sender, e);
         }
-
         private void TxtYeuCau_GetFocus(object sender, EventArgs e)
         {
             hide_Show.Hide(sender, e);
         }
-
         private void TxtYeuCau_LostFocus(object sender, EventArgs e)
         {
             hide_Show.Show(sender, e);
         }
+        #endregion
+        private LuanVan TaoLuanVan()
+        {
+            string maLuanVan = txtMaLuanVan.Text;
+            string tenLuanVan = txtTenLuanVan.Text;
+            string chuyenNganh = cbboxChuyenNganh.SelectedItem != null ? cbboxChuyenNganh.SelectedItem.ToString() : "";
+            string linhVuc = cbboxLinhVuc.SelectedItem != null ? cbboxLinhVuc.SelectedItem.ToString() : "";
+            string chucNang = txtChucNang.Text;
+            string congNghe = cbboxCongNghe.SelectedItem != null ? cbboxCongNghe.SelectedItem.ToString() : "";
+            string ngonNgu = cbboxNgonNgu.SelectedItem != null ? cbboxNgonNgu.SelectedItem.ToString() : "";
+            string yeuCau = txtYeuCau.Text;
 
+            return new LuanVan(maLuanVan, tenLuanVan, maGV, chuyenNganh, linhVuc, chucNang, congNghe, ngonNgu, yeuCau, "Chưa có nhóm");
+        }
         private void btnThem_Click(object sender, EventArgs e)
         {
             LuanVan lv = TaoLuanVan();
@@ -94,19 +97,6 @@ namespace Quan_Li_Luan_Van
                 this.DialogResult = DialogResult.OK;
                 this.Hide();
             }
-        }
-        private LuanVan TaoLuanVan()
-        {
-            string maLuanVan = txtMaLuanVan.Text;
-            string tenLuanVan = txtTenLuanVan.Text;
-            string chuyenNganh = cbboxChuyenNganh.SelectedItem != null ? cbboxChuyenNganh.SelectedItem.ToString() : "";
-            string linhVuc = cbboxLinhVuc.SelectedItem != null ? cbboxLinhVuc.SelectedItem.ToString() : "";
-            string chucNang = txtChucNang.Text;
-            string congNghe = cbboxCongNghe.SelectedItem != null ? cbboxCongNghe.SelectedItem.ToString() : "";
-            string ngonNgu = cbboxNgonNgu.SelectedItem != null ? cbboxNgonNgu.SelectedItem.ToString() : "";
-            string yeuCau = txtYeuCau.Text;
-
-            return new LuanVan(maLuanVan, tenLuanVan, maGV, chuyenNganh, linhVuc, chucNang, congNghe, ngonNgu, yeuCau, "Chưa có nhóm");
         }
     }
 }

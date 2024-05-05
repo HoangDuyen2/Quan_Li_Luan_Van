@@ -19,29 +19,26 @@ namespace Quan_Li_Luan_Van
             InitializeComponent();
             this.sinhVien = sinhVien;
         }
-
         private void FLuanVanToi_SV_Load(object sender, EventArgs e)
         {
-            string maLV = luanVan.getMaLV(sinhVien.getMaso());
+            string maLV = luanVan.getMaLVCuaToi(sinhVien.getMaso());
             if (maLV != "")
             {
-                luanVan.ShowData(flPanelDSTask, luanVan.LoadLVCT(maLV), sinhVien.getMaso());
+                luanVan.LoadDSNhiemVu(flPanelDSTask, luanVan.QueryDSNhiemVu(maLV), sinhVien.getMaso());
             }
             else
             {
                 btnThemNhiemVu.Enabled = false;
                 MessageBox.Show("Sinh viên hiện chưa tham gia vào luận văn nào. Vui lòng đăng kí luận văn trước", "Thông báo");
             }
-
         }
-
         private void btnThemNhiemVu_Click(object sender, EventArgs e)
         {
-            FThemNhiemVu fThemNhiemVu = new FThemNhiemVu(luanVan.getMaLV(sinhVien.getMaso()), sinhVien.getMaso());
-            fThemNhiemVu.ShowDialog();
-            FLuanVanToi_SV_Load(sender, e);
+            FThemNhiemVu fThemNhiemVu = new FThemNhiemVu(luanVan.getMaLVCuaToi(sinhVien.getMaso()), sinhVien.getMaso());
+            if (fThemNhiemVu.ShowDialog() == DialogResult.OK)
+            {
+                FLuanVanToi_SV_Load(sender, e);
+            }            
         }
-
     }
-
 }

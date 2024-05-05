@@ -183,7 +183,7 @@
             this.flPanelDSLV.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.flPanelDSLV.Location = new System.Drawing.Point(0, 132);
             this.flPanelDSLV.Name = "flPanelDSLV";
-            this.flPanelDSLV.Size = new System.Drawing.Size(1052, 507);
+            this.flPanelDSLV.Size = new System.Drawing.Size(1052, 550);
             this.flPanelDSLV.TabIndex = 22;
             // 
             // FDangKyLuanVan

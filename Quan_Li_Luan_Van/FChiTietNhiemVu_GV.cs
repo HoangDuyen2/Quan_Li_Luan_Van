@@ -14,7 +14,10 @@ namespace Quan_Li_Luan_Van
     {
         private string maNV;
         private string maGV;
-       
+        public FChiTietTask_All()
+        {
+            InitializeComponent();
+        }
         public FChiTietTask_All(string MaNV, string maGV) : this()
         {
             this.maNV = MaNV;
@@ -23,11 +26,6 @@ namespace Quan_Li_Luan_Van
             LoadPhanHoi();
             LoadCapNhatTienTrinh();
             LoadDataChart();
-        }
-
-        public FChiTietTask_All()
-        {
-            InitializeComponent();
         }
         public void LoadDataChart()
         {
@@ -58,9 +56,7 @@ namespace Quan_Li_Luan_Van
             chartTienDo.ChartAreas[0].AxisY.Maximum = 100;
             chartTienDo.ChartAreas[0].AxisY.Interval = 10;
             chartTienDo.ChartAreas[0].AxisY.LabelStyle.Angle = 0;
-
             chartTienDo.Legends[0].Enabled = false;
-
             chartTienDo.ChartAreas[0].RecalculateAxesScale();
         }
         private Color GetColorBasedOnProgress(int progress)
@@ -82,7 +78,7 @@ namespace Quan_Li_Luan_Van
             if (nhiemVu != null && !nhiemVu.KiemTraNull())
             {
                 txtTenNV.Text = nhiemVu.TenNV;
-                txtTienTrinh.Text = nhiemVu.TienTrinh.ToString() + "%";
+                txtTienTrinh.Text = nhiemVu.TienTrinh.ToString();
                 txtNoiDungNV.Text = nhiemVu.NoiDung;
             }
         }

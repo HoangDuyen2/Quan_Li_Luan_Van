@@ -79,11 +79,11 @@ namespace Quan_Li_Luan_Van
         }
         public string TenThanhVien(string MSSV)
         {
-            string quenry = "SELECT TenSV " +
+            string query = "SELECT TenSV " +
                             "FROM SinhVien " +
                             "WHERE MSSV = '" + MSSV + "'";
-            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(quenry);
-            foreach (var row in getMaLV)
+            List<Dictionary<string, object>> tenSV = dBConnection.ExecuteReaderData(query);
+            foreach (var row in tenSV)
             {
                 return (string)row["TenSV"].ToString();
             }

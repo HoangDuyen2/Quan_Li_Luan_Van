@@ -24,43 +24,30 @@ namespace Quan_Li_Luan_Van
             txtTimkiem.LostFocus += TxtTimKiem_LostFocus;
             this.sinhVien = sinhvien;
         }
-
         private void FTrangChu_Load(object sender, EventArgs e)
         {
-            if (sVDAO.getMaLV(sinhVien.getMaso()) == "")
+            if (sVDAO.getMaLVCuaToi(sinhVien.getMaso()) == "")
             {
                 MessageBox.Show("Hiện bạn chưa tham gia bất kì một luận văn nào. Hãy tham gia luận văn để nhận các thông báo từ giảng viên", "Thông báo");
             }
-            else maLV = sVDAO.getMaLV(sinhVien.getMaso());
+            else maLV = sVDAO.getMaLVCuaToi(sinhVien.getMaso());
             sVDAO.LoadDSTB(flpanelDSThongBao, sVDAO.LoadTrangChu(maLV));
         }
-
         private void TxtTimKiem_GetFocus(object sender, EventArgs e)
         {
             hide_Show.Hide(sender, e);
         }
-
         private void TxtTimKiem_LostFocus(object sender, EventArgs e)
         {
             hide_Show.Show(sender, e);
         }
-
-        private void btnThemThongBao_Click(object sender, EventArgs e)
-        {
-            FThemThongBao tb = new FThemThongBao();
-            tb.ShowDialog();
-        }
-
         private void dtNgayThang_ValueChanged(object sender, EventArgs e)
         {
             sVDAO.LoadDSTB(flpanelDSThongBao, sVDAO.LoadTrangChu(maLV)+sVDAO.TraCuuNgay(dtNgayThang.Value));
         }
-
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             sVDAO.LoadDSTB(flpanelDSThongBao, sVDAO.LoadTrangChu(maLV) + sVDAO.traCuuTheoNoiDung(txtTimkiem.Text));
         }
-
     }
-
 }

@@ -80,9 +80,7 @@ namespace Quan_Li_Luan_Van
             chartTienDo.ChartAreas[0].AxisY.Maximum = 100;
             chartTienDo.ChartAreas[0].AxisY.Interval = 10;
             chartTienDo.ChartAreas[0].AxisY.LabelStyle.Angle = 0;
-
             chartTienDo.Legends[0].Enabled = false;
-
             chartTienDo.ChartAreas[0].RecalculateAxesScale();
         }
         private Color GetColorBasedOnProgress(int progress)
@@ -103,22 +101,6 @@ namespace Quan_Li_Luan_Van
                 lblThanhTienDo.Text = "Tiến độ: " + txtTienTrinh.Text + "%";
             }
         }
-        private void btnPhanHoi_Click(object sender, EventArgs e)
-        {
-            GiangVienDAO phanhoi = new GiangVienDAO();
-            PhanHoi ph = TaoPhanHoi();
-            if (!ph.checkNullPhanHoi())
-            {
-                MessageBox.Show("Vui lòng điền đủ thông tin");
-            }
-            else
-            {
-                phanhoi.ThemPhanHoi(ph);
-                MessageBox.Show("Thêm thành công");
-                txtPhanHoi.Text = "";
-                LoadPhanHoi();
-            }
-        }
         private PhanHoi TaoPhanHoi()
         {
             SinhVienDAO ph = new SinhVienDAO();
@@ -130,25 +112,20 @@ namespace Quan_Li_Luan_Van
 
             return new PhanHoi(tenNguoiGui, chuoiThoiGian, noiDung, this.maNV);
         }
-        private void btnCapNhat_Click(object sender, EventArgs e)
+        private void btnPhanHoi_Click(object sender, EventArgs e)
         {
-            CapNhatTienTrinh update = TaoCapNhatTienTrinh();
-            if (update == null)
+            SinhVienDAO phanhoi = new SinhVienDAO();
+            PhanHoi ph = TaoPhanHoi();
+            if (!ph.checkNullPhanHoi())
             {
-                return;
-            }
-            SinhVienDAO dao = new SinhVienDAO();
-            bool result = dao.UpdateProgress(update);
-            if (result)
-            {
-                MessageBox.Show("Cập nhật thành công!");
-                LoadDataChart();
-                LoadCapNhatTienTrinh();
-                LoadInfoTask();
+                MessageBox.Show("Vui lòng điền đủ thông tin");
             }
             else
             {
-                MessageBox.Show("Cập nhật thất bại. Vui lòng thử lại.");
+                phanhoi.ThemPhanHoi(ph);
+                MessageBox.Show("Thêm thành công");
+                txtPhanHoi.Text = "";
+                LoadPhanHoi();
             }
         }
         private CapNhatTienTrinh TaoCapNhatTienTrinh()
@@ -174,9 +151,26 @@ namespace Quan_Li_Luan_Van
 
             return new CapNhatTienTrinh(this.maNV, this.MSSV, capNhat, tienTrinhMoi, chuoiThoiGian);
         }
-        private void btnThoat_Click(object sender, EventArgs e)
+        private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            this.Close();  
+            CapNhatTienTrinh update = TaoCapNhatTienTrinh();
+            if (update == null)
+            {
+                return;
+            }
+            SinhVienDAO dao = new SinhVienDAO();
+            bool result = dao.UpdateProgress(update);
+            if (result)
+            {
+                MessageBox.Show("Cập nhật thành công!");
+                LoadDataChart();
+                LoadCapNhatTienTrinh();
+                LoadInfoTask();
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật thất bại. Vui lòng thử lại.");
+            }
         }
         private void TrackTienTrinh_ValueChanged(object sender, EventArgs e)
         {
@@ -185,10 +179,9 @@ namespace Quan_Li_Luan_Van
                 lblThanhTienDo.Text = "Tiến độ: " + TrackTienTrinh.Value.ToString() + "%";
             }
         }
-
-        private void chartTienDo_Click(object sender, EventArgs e)
+        private void btnThoat_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

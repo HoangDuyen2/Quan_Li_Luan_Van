@@ -145,7 +145,6 @@
     <Compile Include="UCUpdateTask.Designer.cs">
       <DependentUpon>UCUpdateTask.cs</DependentUpon>
     </Compile>
-    <Compile Include="XoaLuanVanDAO.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="FChinhLuanVan.cs">
       <SubType>Form</SubType>

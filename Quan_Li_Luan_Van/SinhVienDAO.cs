@@ -16,7 +16,7 @@ namespace Quan_Li_Luan_Van
         #region Load Form Trang chủ
         string queryTrangChu = "SELECT * " +
                     "FROM ThongBao ";
-        public string getMaLV(string MSSV)
+        public string getMaLVCuaToi(string MSSV)
         {
             string maLV = "";
             string sqlStr = string.Format("SELECT * FROM DSThanhVien WHERE MSSV1 = '{0}' OR MSSV2 = '{1}' OR MSSV3 = '{2}'", MSSV, MSSV, MSSV);
@@ -200,23 +200,23 @@ namespace Quan_Li_Luan_Van
 
         #endregion
         #region Form luận văn của tôi
-        public string LoadLVCT(string maLV)
+        public string QueryDSNhiemVu(string maLV)
         {
             if (maLV != "")
             {
-                string quenry = "SELECT LuanVan.MaLV, NhiemVu.TenNV, NhiemVu.TienTrinh, NhiemVu.MaNV, NhiemVu.MaNguoiTao " +
+                string query = "SELECT LuanVan.MaLV, NhiemVu.TenNV, NhiemVu.TienTrinh, NhiemVu.MaNV, NhiemVu.MaNguoiTao " +
                          "FROM NhiemVu, LuanVan " +
                          "WHERE NhiemVu.MaLV = LuanVan.MaLV AND LuanVan.MaLV = '" + maLV + "'";
-                return quenry;
+                return query;
             }
             return "";
         }
 
-        public void ShowData(FlowLayoutPanel panel, string truyVan, string User)
+        public void LoadDSNhiemVu(FlowLayoutPanel panel, string truyVan, string User)
         {
             panel.Controls.Clear();
-            List<Dictionary<string, object>> ds = dbConnection.ExecuteReaderData(truyVan);
-            foreach (var row in ds)
+            List<Dictionary<string, object>> nhiemvus = dbConnection.ExecuteReaderData(truyVan);
+            foreach (var row in nhiemvus)
             {
                 UCTask_SV task = new UCTask_SV();
                 task.MaUser = User;
@@ -227,13 +227,6 @@ namespace Quan_Li_Luan_Van
                 panel.Controls.Add(task);
             }
         }
-
-        public void ThemPhanHoi(PhanHoi ph)
-        {
-            string query = string.Format("INSERT INTO PhanHoi(TenNguoiGui, ThoiGianGui, NoiDung, MaNV) VALUES (N'{0}', N'{1}', N'{2}', '{3}')", ph.Name, ph.Thoigian, ph.Noidung, ph.NhiemVu);
-            dbConnection.ThucThi(query);
-        }
-
         public bool UpdateProgress(CapNhatTienTrinh update)
         {
             string queryInsertProgress = "INSERT INTO CapNhatTienTrinh (MaNV, MSSV, PhanTramCapNhat, TienTrinh, ThoiGian) VALUES (@MaNV, @MSSV, @PhanTramCapNhat, @TienTrinh, @ThoiGian)";

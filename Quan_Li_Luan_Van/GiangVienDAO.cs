@@ -234,8 +234,8 @@ namespace Quan_Li_Luan_Van
             foreach (var row in getMaLV)
             {
                 UCTask uctask = new UCTask();
-                uctask.MaNguoiDangNhap = maGV;
 
+                uctask.MaNguoiDangNhap = maGV;
                 uctask.MaLV = maLV;
                 uctask.MaNV = (string)row["MaNV"].ToString();
                 uctask.LblTenNV.Text = (string)row["TenNV"].ToString();
@@ -259,21 +259,17 @@ namespace Quan_Li_Luan_Van
             }
             return tenLV;
         }
-
         public string GetTenGV(string maGV)
         {
-            string tenGV = "";
-            string query = "SELECT TenGV FROM GiangVien WHERE MaGV = @maGV";
-            SqlParameter[] lstParam =
+            string query = "SELECT TenGV " +
+                            "FROM GiangVien " +
+                            "WHERE MaGV = '" + maGV + "'";
+            List<Dictionary<string, object>> tenGV = dBConnection.ExecuteReaderData(query);
+            foreach (var row in tenGV)
             {
-                new SqlParameter("@maGV", SqlDbType.NVarChar) {Value = maGV},
-            };
-            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(query, lstParam);
-            foreach (var row in getMaLV)
-            {
-                tenGV = (string)row["TenGV"].ToString();
+                return (string)row["TenGV"].ToString();
             }
-            return tenGV;
+            return "";
         }
         public void LoadListThanhVien(string maLV, FlowLayoutPanel panel)
         {
