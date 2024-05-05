@@ -71,7 +71,7 @@ namespace Quan_Li_Luan_Van
             MaGV = maGV;
             string quenry = "SELECT LuanVan.MaLV, TenLV, ChuyenNganh, TinhTrang " +
                           "FROM LuanVan JOIN DuyetDangKy ON " +
-                          "LuanVan.MaLV = DuyetDangKy.MaLV and MaGV = '" + maGV + "'";
+                          "LuanVan.MaLV = DuyetDangKy.MaLV WHERE MaGV = '" + maGV + "' ";
             return quenry;
         }
         public void getInfoDLV(string query, FlowLayoutPanel panel)
@@ -122,19 +122,14 @@ namespace Quan_Li_Luan_Van
             dBConnection.ThucThi(query1);
             dBConnection.ThucThi(query2);
         }
-        public string traCuu(string text, string quenry)
+        public string traCuu(string text)
         {
-            string query = "SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, DuyetDangKy.TinhTrang " +
-           "FROM LuanVan " +
-           "JOIN DuyetDangKy ON LuanVan.MaLV = DuyetDangKy.MaLV and LuanVan.MaGV = '" + MaGV + "'";
             if (text != "Tất cả")
             {
-                string tracuu = "WHERE TinhTrang = N'" + text + "'";
-                quenry = query + tracuu;
+                string tracuu = "AND TinhTrang = N'" + text + "'";
+                return tracuu;
             }
-            else quenry = query;
-            dBConnection.ThucThi(quenry);
-            return quenry;
+            return "";
         }
 
         #endregion
