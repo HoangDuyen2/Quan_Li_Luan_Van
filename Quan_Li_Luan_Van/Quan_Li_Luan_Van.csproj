@@ -147,12 +147,6 @@
     </Compile>
     <Compile Include="XoaLuanVanDAO.cs" />
     <Compile Include="DBConnection.cs" />
-    <Compile Include="FBaoCaoTienDo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FBaoCaoTienDo.Designer.cs">
-      <DependentUpon>FBaoCaoTienDo.cs</DependentUpon>
-    </Compile>
     <Compile Include="FChinhLuanVan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -361,9 +355,6 @@
     <Compile Include="UCThongTinCaNhan.Designer.cs">
       <DependentUpon>UCThongTinCaNhan.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FBaoCaoTienDo.resx">
-      <DependentUpon>FBaoCaoTienDo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FCapNhatTienTrinh.resx">
       <DependentUpon>FCapNhatTienTrinh.cs</DependentUpon>
     </EmbeddedResource>
