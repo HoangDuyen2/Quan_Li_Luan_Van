@@ -17,21 +17,20 @@ namespace Quan_Li_Luan_Van
         private string maLV;
         private string maGV;
         GiangVienDAO lvDAO = new GiangVienDAO();
+        private FLuanVanCuaToi_GV parentForm;
         LuanVan lv = new LuanVan();
         public FChinhLuanVan()
         {
             InitializeComponent();
         }
-
-        public FChinhLuanVan(string maLV, string maGV) : this()
+        public FChinhLuanVan(string maLV, string maGV, FLuanVanCuaToi_GV parentForm) : this() 
         {
             this.maLV = maLV;
             this.maGV = maGV;
+            this.parentForm = parentForm;
         }
-
         private void FChinhSuaLuanVan_Load(object sender, EventArgs e)
         {
-            
             lv = lvDAO.getLuanVan(maLV);
             txtMaLuanVan.Text = lv.MaLV.ToString();
             txtMaLuanVan.Enabled = false;
@@ -56,8 +55,11 @@ namespace Quan_Li_Luan_Van
                 lvDAO.ChinhSua(lv);
                 MessageBox.Show("Lưu thành công");
                 this.Close();
+                if (parentForm != null)
+                {
+                    parentForm.LoadDSLuanVan();
+                }
             }
-
         }
         private LuanVan TaoLuanVan()
         {
@@ -70,11 +72,6 @@ namespace Quan_Li_Luan_Van
             string ngonNgu = cbboxNgonNgu.SelectedItem != null ? cbboxNgonNgu.SelectedItem.ToString() : "";
             string yeuCau = txtYeuCau.Text;
             return new LuanVan(maLuanVan, tenLuanVan, maGV, chuyenNganh, linhVuc, chucNang, congNghe, ngonNgu, yeuCau, "Chưa có nhóm");
-        }
-
-        private void txtYeuCau_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

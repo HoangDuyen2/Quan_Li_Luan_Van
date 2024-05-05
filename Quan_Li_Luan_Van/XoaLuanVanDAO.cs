@@ -16,7 +16,7 @@ namespace Quan_Li_Luan_Van
             conn = new SqlConnection(Properties.Settings.Default.cnnStr);
             dbConnection = new DBConnection();
         }
-        public void Xoa(string maLV)
+        public void XoaLuanVan(string maLV)
         {
             string XoaDuyet = string.Format("Delete From DuyetDangKy WHERE MaLV = '{0}'", maLV);
             dbConnection.ThucThi(XoaDuyet);

@@ -90,7 +90,6 @@
             this.Name = "FXoaLuanVan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FXoaLuanVan";
-            this.Load += new System.EventHandler(this.FXoaLuanVan_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

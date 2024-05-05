@@ -69,7 +69,7 @@
             this.lblTrangThai.AutoSize = true;
             this.lblTrangThai.Font = new System.Drawing.Font("Leelawadee UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTrangThai.ForeColor = System.Drawing.Color.Crimson;
-            this.lblTrangThai.Location = new System.Drawing.Point(907, 3);
+            this.lblTrangThai.Location = new System.Drawing.Point(902, 4);
             this.lblTrangThai.Name = "lblTrangThai";
             this.lblTrangThai.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblTrangThai.Size = new System.Drawing.Size(104, 23);

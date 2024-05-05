@@ -14,12 +14,10 @@ namespace Quan_Li_Luan_Van
     {
         private string maLV;
         private string maGV;
-
         public UCLVCuaToi()
         {
             InitializeComponent();
         }
-
         public Label LblChuyenNganh { get => lblChuyenNganh; set => lblChuyenNganh = value; }
         public Label LblTenLV { get => lblTenLV; set => lblTenLV = value; }        
         public Label LblTrangThai { get => lblTrangThai; set => lblTrangThai = value;}
@@ -30,25 +28,34 @@ namespace Quan_Li_Luan_Van
 
         private void btnChinhSua_Click(object sender, EventArgs e)
         {
-            FChinhLuanVan chinhlv = new FChinhLuanVan(maLV,maGV);
-            chinhlv.ShowDialog();            
+            FLuanVanCuaToi_GV parentForm = this.ParentForm as FLuanVanCuaToi_GV;
+            if (parentForm != null)
+            {
+                FChinhLuanVan chinhlv = new FChinhLuanVan(maLV, maGV, parentForm);
+                chinhlv.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Failed to find parent form.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-
         private void btnChiTiet_Click(object sender, EventArgs e)
         {
             FChiTietLuanVan_GV ctlv = new FChiTietLuanVan_GV(maLV);
             ctlv.ShowDialog();
         }
-
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            FXoaLuanVan_TB xoalv = new FXoaLuanVan_TB(maLV); 
-            xoalv.ShowDialog();
-        }
-
-        private void btnChamDiem_Click(object sender, EventArgs e)
-        {
-            
+            FLuanVanCuaToi_GV parentForm = this.ParentForm as FLuanVanCuaToi_GV;
+            if (parentForm != null)
+            {
+                FXoaLuanVan_TB xoalv = new FXoaLuanVan_TB(maLV, parentForm);
+                xoalv.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Failed to find parent form.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

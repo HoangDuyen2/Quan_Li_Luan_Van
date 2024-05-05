@@ -17,7 +17,6 @@ namespace Quan_Li_Luan_Van
         private GiangVien gv;
         GiangVienDAO luanvan;
         private string query = "";
-        
         public FLuanVanCuaToi_GV()
         {
             InitializeComponent();
@@ -26,19 +25,16 @@ namespace Quan_Li_Luan_Van
         {
             this.gv = gv;
             this.luanvan = new GiangVienDAO();
-            this.query = luanvan.LoadMyTheses(gv.getMaso());
+            this.query = luanvan.QueryLoadLVCT(gv.getMaso());
         }
-
         private void FLuanVanToi_Load(object sender, EventArgs e)
         {
-            luanvan.GetMyThesesInfo(query, flPanelDSLV);
+            luanvan.LoadLVCT(query, flPanelDSLV);
         }
-
-        private void LoadDSLuanVan()
+        public void LoadDSLuanVan()
         {
-            luanvan.GetMyThesesInfo(query, flPanelDSLV);
+            luanvan.LoadLVCT(query, flPanelDSLV);
         }
-
         private void btnThemLuanVan_Click(object sender, EventArgs e)
         {
             FThemLuanVan fThemLuanVan = new FThemLuanVan(gv.getMaso());
@@ -47,10 +43,9 @@ namespace Quan_Li_Luan_Van
                 LoadDSLuanVan();
             }
         }
-
         private void ChonTinhTrang(object sender, EventArgs e)
         {
-            query = luanvan.LoadMyTheses(gv.getMaso());
+            query = luanvan.QueryLoadLVCT(gv.getMaso());
             string text = cbboxTrangThai.SelectedItem.ToString();
             if (text != "Tất cả")
             {
@@ -58,7 +53,5 @@ namespace Quan_Li_Luan_Van
             }
             LoadDSLuanVan();
         }
-
     }
-
 }

@@ -13,25 +13,31 @@ namespace Quan_Li_Luan_Van
     public partial class FXoaLuanVan_TB : Form
     {
         private string maLV;
-        XoaLuanVanDAO xoaLV = new XoaLuanVanDAO();
+        GiangVienDAO luanvan = new GiangVienDAO();
+        private FLuanVanCuaToi_GV parentForm;
         public FXoaLuanVan_TB()
         {
             InitializeComponent();
         }
-        public FXoaLuanVan_TB(string maLV):this()
+        public FXoaLuanVan_TB(string maLV, FLuanVanCuaToi_GV parentForm) : this()
         {
             this.maLV = maLV;
-        }
-
-        private void FXoaLuanVan_Load(object sender, EventArgs e)
-        {
-
+            this.parentForm = parentForm;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            xoaLV.Xoa(maLV);
+            luanvan.XoaLuanVan(maLV);
             this.Close();
+
+            if (parentForm != null)
+            {
+                parentForm.LoadDSLuanVan();
+            }
+            else
+            {
+                MessageBox.Show("Parent form is not available. Cannot refresh the list.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -39,4 +45,5 @@ namespace Quan_Li_Luan_Van
             this.Close();
         }
     }
+
 }

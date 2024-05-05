@@ -17,7 +17,6 @@ namespace Quan_Li_Luan_Van
     {
         DBConnection dBConnection = new DBConnection();
         string sqlQuery;
-
         #region Form Danh sách các luận văn
         string queryDSLV = "SELECT LuanVan.MaLV, LuanVan.TenLV, LuanVan.ChuyenNganh, GiangVien.TenGV, LuanVan.TrangThai " +
                                    "FROM LuanVan " +
@@ -130,34 +129,38 @@ namespace Quan_Li_Luan_Van
             dBConnection.ThucThi(query2);
         }
         #endregion
-        #region Thêm luận văn
+        #region Danh sách luận văn của tôi
+        public void XoaLuanVan(string maLV)
+        {
+            string XoaDuyet = string.Format("Delete From DuyetDangKy WHERE MaLV = '{0}'", maLV);
+            dBConnection.ThucThi(XoaDuyet);
+            string sqlXoa = string.Format("DELETE FROM LuanVan WHERE MaLV = '{0}'", maLV);
+            dBConnection.ThucThi(sqlXoa);
+        }
         public void ThemLuanVan(LuanVan luanVan)
         {
             string sqlThem = string.Format("INSERT INTO LuanVan(MaLV, TenLV, MaGV, ChuyenNganh, LinhVuc, ChucNang, CongNghe,NgonNgu, YeuCau, TrangThai) VALUES ('{0}', N'{1}', '{2}', N'{3}', N'{4}', N'{5}', N'{6}', N'{7}', N'{8}', N'{9}')",
                 luanVan.MaLV, luanVan.TenLV, luanVan.MaGV, luanVan.ChuyenNganh, luanVan.LinhVuc, luanVan.ChucNang, luanVan.CongNghe, luanVan.NgonNgu, luanVan.YeuCau, luanVan.TrangThai);
             dBConnection.ThucThi(sqlThem);
         }
-        #endregion
-        #region Chỉnh luận văn
         public LuanVan getLuanVan(string maLV)
         {
-            LuanVan sualv = new LuanVan();
+            LuanVan luanVan = new LuanVan();
             string query = "SELECT * FROM LuanVan WHERE MaLV = N'" + maLV + "'";
-            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(query);
-            foreach (var row in getMaLV)
+            List<Dictionary<string, object>> LV = dBConnection.ExecuteReaderData(query);
+            foreach (var row in LV)
             {
-                sualv.MaLV = (string)row["MaLV"].ToString();
-                sualv.TenLV = (string)row["TenLV"].ToString();
-                sualv.ChuyenNganh = (string)row["ChuyenNganh"].ToString();
-                sualv.ChucNang = (string)row["ChucNang"].ToString();
-                sualv.YeuCau = (string)row["YeuCau"].ToString();
-                sualv.CongNghe = (string)row["CongNghe"].ToString();
-                sualv.LinhVuc = (string)row["LinhVuc"].ToString();
-                sualv.NgonNgu = (string)row["NgonNgu"].ToString();
+                luanVan.MaLV = (string)row["MaLV"].ToString();
+                luanVan.TenLV = (string)row["TenLV"].ToString();
+                luanVan.ChuyenNganh = (string)row["ChuyenNganh"].ToString();
+                luanVan.ChucNang = (string)row["ChucNang"].ToString();
+                luanVan.YeuCau = (string)row["YeuCau"].ToString();
+                luanVan.CongNghe = (string)row["CongNghe"].ToString();
+                luanVan.LinhVuc = (string)row["LinhVuc"].ToString();
+                luanVan.NgonNgu = (string)row["NgonNgu"].ToString();
             }
-            return sualv;
+            return luanVan;
         }
-
         public void ChinhSua(LuanVan luanvan)
         {
             string query = $"UPDATE LuanVan SET TenLV = N'{luanvan.TenLV}', ChuyenNganh = N'{luanvan.ChuyenNganh}', " +
@@ -165,9 +168,7 @@ namespace Quan_Li_Luan_Van
                 $" LinhVuc = N'{luanvan.LinhVuc}', NgonNgu = N'{luanvan.NgonNgu}' WHERE MaLV = '{luanvan.MaLV}'";
             dBConnection.ThucThi(query);
         }
-        #endregion
-        #region Luận Văn Của Tôi
-        public string LoadMyTheses(string maGV)
+        public string QueryLoadLVCT(string maGV)
         {
             this.maGV = maGV;
             string query = $"SELECT LuanVan.MaLV, LuanVan.TenLV, LuanVan.ChuyenNganh, GiangVien.TenGV, LuanVan.TrangThai " +
@@ -175,12 +176,11 @@ namespace Quan_Li_Luan_Van
                            $"WHERE LuanVan.MaGV = '{maGV}'";
             return query;
         }
-
-        public void GetMyThesesInfo(string query, FlowLayoutPanel panel)
+        public void LoadLVCT(string query, FlowLayoutPanel panel)
         {
             panel.Controls.Clear();
-            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(query);
-            foreach (var row in getMaLV)
+            List<Dictionary<string, object>> dsLVCT = dBConnection.ExecuteReaderData(query);
+            foreach (var row in dsLVCT)
             {
                 UCLVCuaToi uclv = new UCLVCuaToi();
                 uclv.MaGV = MaGV;
@@ -196,19 +196,7 @@ namespace Quan_Li_Luan_Van
                 panel.Controls.Add(uclv);
             }
         }
-
-        public string QueryMyTheses(string text)
-        {
-            string baseQuery = $"SELECT LuanVan.TenLV, LuanVan.ChuyenNganh, DuyetDangKy.TinhTrang " +
-                               $"FROM LuanVan JOIN DuyetDangKy ON LuanVan.MaLV = DuyetDangKy.MaLV AND LuanVan.MaGV = '{MaGV}'";
-            if (text != "Tất cả")
-            {
-                baseQuery += $" WHERE TinhTrang = N'{text}'";
-            }
-            return baseQuery;
-        }
-
-        #endregion
+        #endregion        
         #region Quản lí nhóm luận văn
         public string TruyVanDSNhom(string maGV)
         {
