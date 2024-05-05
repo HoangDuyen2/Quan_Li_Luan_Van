@@ -34,18 +34,18 @@ namespace Quan_Li_Luan_Van
 
         private void TraCuu_Load(object sender, EventArgs e)
         {
-            dSLuanVan.getInfo(dSLuanVan.Load(),flPanelDSLV);
+            dSLuanVan.LoadListLuanVan(dSLuanVan.QueryBase(),flPanelDSLV);
         }
 
         private void ChonChuyenNganh(object sender, EventArgs e)
         {
             string text = comboxChuyenNganh.SelectedItem.ToString();
-            dSLuanVan.getInfo(dSLuanVan.chonChuyenNganh(text), flPanelDSLV);
+            dSLuanVan.LoadListLuanVan(dSLuanVan.QueryChonChuyenNganh(text), flPanelDSLV);
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            dSLuanVan.getInfo(dSLuanVan.timKiem(txtTenGV.Text), flPanelDSLV);
+            dSLuanVan.LoadListLuanVan(dSLuanVan.QueryTimKiemGV(txtTenGV.Text), flPanelDSLV);
         }
 
     }

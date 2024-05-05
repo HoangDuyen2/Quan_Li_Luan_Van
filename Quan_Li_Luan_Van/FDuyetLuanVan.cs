@@ -14,33 +14,25 @@ namespace Quan_Li_Luan_Van
     {
         private string maGV;
         private GiangVienDAO duyetLuanVan = new GiangVienDAO();
-        private string query = "";
-
         public FDuyetLuanVan()
         {
             InitializeComponent();
         }
-
         public FDuyetLuanVan(string maGV) : this()
         {
             this.maGV = maGV;
         }
-
         private void FDuyetLuanVan_Load(object sender, EventArgs e)
         {
-
-            duyetLuanVan.getInfoDLV(duyetLuanVan.LoadDLV(maGV), flPanelDSLV);
+            duyetLuanVan.getInfoDLV(duyetLuanVan.QueryDLV(maGV), flPanelDSLV);
         }
         private void cbbLoaiTraCuu_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbbLoaiTraCuu.SelectedItem != null)
             {
                 string text = cbbLoaiTraCuu.SelectedItem.ToString();
-                duyetLuanVan.getInfoDLV(duyetLuanVan.LoadDLV(maGV)+duyetLuanVan.traCuu(text), flPanelDSLV);            
+                duyetLuanVan.getInfoDLV(duyetLuanVan.QueryDLV(maGV)+duyetLuanVan.traCuu(text), flPanelDSLV);            
             }
-
         }
-
     }
-
 }

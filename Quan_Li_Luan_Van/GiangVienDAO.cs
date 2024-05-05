@@ -22,12 +22,11 @@ namespace Quan_Li_Luan_Van
         string queryDSLV = "SELECT LuanVan.MaLV, LuanVan.TenLV, LuanVan.ChuyenNganh, GiangVien.TenGV, LuanVan.TrangThai " +
                                    "FROM LuanVan " +
                                    "JOIN GiangVien ON LuanVan.MaGV = GiangVien.MaGV ";
-        public string Load()
+        public string QueryBase()
         {
-            
             return queryDSLV;
         }
-        public string chonChuyenNganh(string text)
+        public string QueryChonChuyenNganh(string text)
         {
             if (text != "Tất cả")
             {
@@ -36,7 +35,7 @@ namespace Quan_Li_Luan_Van
             }
             return queryDSLV;
         }
-        public string timKiem(string text)
+        public string QueryTimKiemGV(string text)
         {
             if (text != "")
             {
@@ -45,11 +44,11 @@ namespace Quan_Li_Luan_Van
             }
             return queryDSLV;
         }
-        public void getInfo(string query, FlowLayoutPanel panel)
+        public void LoadListLuanVan(string query, FlowLayoutPanel panel)
         {
             panel.Controls.Clear();
-            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(query);
-            foreach (var row in getMaLV)
+            List<Dictionary<string, object>> dsLuanVan = dBConnection.ExecuteReaderData(query);
+            foreach (var row in dsLuanVan)
             {
                 UCLV_GV uclv = new UCLV_GV();
                 uclv.MaLV = (string)row["MaLV"].ToString();
@@ -66,19 +65,27 @@ namespace Quan_Li_Luan_Van
         #region Form Duyệt luận văn
         private string maGV;
         public string MaGV { get => maGV; set => maGV = value; }
-        public string LoadDLV(string maGV)
+        public string QueryDLV(string maGV)
         {
-            MaGV = maGV;
-            string quenry = "SELECT LuanVan.MaLV, TenLV, ChuyenNganh, TinhTrang " +
+            string stringSQL = "SELECT LuanVan.MaLV, TenLV, ChuyenNganh, TinhTrang " +
                           "FROM LuanVan JOIN DuyetDangKy ON " +
                           "LuanVan.MaLV = DuyetDangKy.MaLV WHERE MaGV = '" + maGV + "' ";
-            return quenry;
+            return stringSQL;
+        }
+        public string traCuu(string text)
+        {
+            if (text != "Tất cả")
+            {
+                string tracuu = "AND TinhTrang = N'" + text + "'";
+                return tracuu;
+            }
+            return "";
         }
         public void getInfoDLV(string query, FlowLayoutPanel panel)
         {
             panel.Controls.Clear();
-            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(query);
-            foreach (var row in getMaLV)
+            List<Dictionary<string, object>> listDLV = dBConnection.ExecuteReaderData(query);
+            foreach (var row in listDLV)
             {
                 UCDuyet ucd = new UCDuyet();
                 ucd.MaLV = (string)row["MaLV"].ToString();
@@ -122,16 +129,6 @@ namespace Quan_Li_Luan_Van
             dBConnection.ThucThi(query1);
             dBConnection.ThucThi(query2);
         }
-        public string traCuu(string text)
-        {
-            if (text != "Tất cả")
-            {
-                string tracuu = "AND TinhTrang = N'" + text + "'";
-                return tracuu;
-            }
-            return "";
-        }
-
         #endregion
         #region Thêm luận văn
         public void ThemLuanVan(LuanVan luanVan)
@@ -293,106 +290,7 @@ namespace Quan_Li_Luan_Van
             return tenGV;
         }
 
-        public NhiemVu GetTask(string maNV)
-        {
-            NhiemVu nhiemvu = new NhiemVu();
-            string query = "SELECT * FROM NhiemVu " +
-                           " WHERE MaNV  = N'" + maNV + "'";
-            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(query);
-            foreach (var row in getMaLV)
-            {
-                nhiemvu.TenNV = (string)row["TenNV"].ToString();
-                nhiemvu.TienTrinh = (int)row["TienTrinh"].GetHashCode();
-                nhiemvu.NoiDung = (string)row["NoiDung"].ToString();
-            }
-            return nhiemvu;
-        }
-        public void LoadListPhanHoi(string maNV, FlowLayoutPanel panel)
-        {
-            panel.Controls.Clear();
-            string query = "Select * From PhanHoi " +
-                    " WHERE MaNV = N'" + maNV + "'";
-            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(query);
-            foreach (var row in getMaLV)
-            {
-                UCPhanHoi uCPhanHoi = new UCPhanHoi();
-                uCPhanHoi.LblTen.Text = (string)row["TenNguoiGui"].ToString();
-                uCPhanHoi.LblThoiGian.Text = (string)row["ThoiGianGui"].ToString();
-                uCPhanHoi.TxtNoiDung.Text = (string)row["NoiDung"].ToString();
-                panel.Controls.Add(uCPhanHoi);
-            }
-        }
-        public void LoadListCapNhatTienTrinh(string maNV, FlowLayoutPanel panel)
-        {
-            string query = @"
-                            SELECT sv.TenSV, cnt.ThoiGian, cnt.PhanTramCapNhat, cnt.TienTrinh
-                            FROM SinhVien sv
-                            JOIN CapNhatTienTrinh cnt ON sv.MSSV = cnt.MSSV
-                            WHERE cnt.MaNV = @maNV
-                            ORDER BY cnt.ThoiGian DESC;";
-            panel.Controls.Clear();
-            SqlParameter[] lstParam =
-            {
-                new SqlParameter("@maNV", SqlDbType.NVarChar) {Value = maNV},
-            };
-            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(query,lstParam);
-            foreach (var row in getMaLV)
-            {
-                UCUpdateTask uCUpdateTask = new UCUpdateTask();
-                uCUpdateTask.LblTenSV.Text = (string)row["TenSV"].ToString();
-                uCUpdateTask.LblThoiGian.Text = (string)row["ThoiGian"].ToString();
-                uCUpdateTask.LblTienTrinh.Text = (string)row["TienTrinh"].ToString();
-                panel.Controls.Add(uCUpdateTask);
-            }
-        }
-        public DataTable GetStudentProgressData(string maNV)
-        {
-            DataTable dataTable = new DataTable();
-            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr))
-            {
-                conn.Open();
-                string query = @" SELECT sv.TenSV, SUM(ct.PhanTramCapNhat) AS TongPhanTramCapNhat                                
-                                FROM NhiemVu nv
-                                JOIN LuanVan lv ON nv.MaLV = lv.MaLV
-                                JOIN DSThanhVien dstv ON lv.MaLV = dstv.MaLV
-                                LEFT JOIN SinhVien sv ON sv.MSSV = dstv.MSSV1 OR sv.MSSV = dstv.MSSV2 OR sv.MSSV = dstv.MSSV3
-                                LEFT JOIN CapNhatTienTrinh ct ON sv.MSSV = ct.MSSV AND ct.MaNV = nv.MaNV
-                                WHERE nv.MaNV = @MaNV
-                                GROUP BY sv.TenSV";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@MaNV", maNV);
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                adapter.Fill(dataTable);
-            }
-            return dataTable;
-        }
-        public DataTable GetStudentProgressDataAll(string maLV)
-        {
-            DataTable dataTable = new DataTable();
-            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr))
-            {
-                string query = @"
-                                SELECT sv.TenSV, 
-                                       COALESCE(CAST((ISNULL(SUM(cpt.PhanTramCapNhat), 0) * 100.0 / NULLIF(SUM(SUM(cpt.PhanTramCapNhat)) OVER(), 0)) AS DECIMAL(5,2)), 0) AS TongPhanTramHoanThanh
-                                FROM DSThanhVien dtv
-                                JOIN SinhVien sv ON sv.MSSV = dtv.MSSV1 OR sv.MSSV = dtv.MSSV2 OR sv.MSSV = dtv.MSSV3
-                                LEFT JOIN NhiemVu nv ON nv.MaLV = dtv.MaLV
-                                LEFT JOIN CapNhatTienTrinh cpt ON cpt.MaNV = nv.MaNV AND cpt.MSSV = sv.MSSV
-                                WHERE dtv.MaLV = @MaLV
-                                GROUP BY sv.TenSV";
-
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@MaLV", maLV);
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                adapter.Fill(dataTable);
-            }
-            return dataTable;
-        }
-        public void ThemPhanHoi(PhanHoi ph)
-        {
-            string query = string.Format("INSERT INTO PhanHoi(TenNguoiGui, ThoiGianGui, NoiDung, MaNV) VALUES (N'{0}', N'{1}', N'{2}', '{3}')", ph.Name, ph.Thoigian, ph.Noidung, ph.NhiemVu);
-            dBConnection.ThucThi(query);
-        }
+ 
         public void LoadListThanhVien(string maLV, FlowLayoutPanel panel)
         {
             string query = @"SELECT DISTINCT sv.MSSV, sv.TenSV, sv.Diem

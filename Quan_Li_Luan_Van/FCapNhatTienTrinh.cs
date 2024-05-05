@@ -30,7 +30,7 @@ namespace Quan_Li_Luan_Van
         }
         public void LoadInfoTask()
         {
-            GiangVienDAO task = new GiangVienDAO();
+            SinhVienDAO task = new SinhVienDAO();
             NhiemVu nhiemVu = task.GetTask(this.maNV);
 
             if (nhiemVu != null && !nhiemVu.KiemTraNull())
@@ -43,17 +43,17 @@ namespace Quan_Li_Luan_Van
         }
         public void LoadPhanHoi()
         {
-            GiangVienDAO task = new GiangVienDAO();
+            SinhVienDAO task = new SinhVienDAO();
             task.LoadListPhanHoi(this.maNV, fpnChat);
         }
         public void LoadCapNhatTienTrinh()
         {
-            GiangVienDAO tientrinh = new GiangVienDAO();
+            SinhVienDAO tientrinh = new SinhVienDAO();
             tientrinh.LoadListCapNhatTienTrinh(this.maNV, fpnUpdateTask);
         }
         public void LoadDataChart()
         {
-            GiangVienDAO chartData = new GiangVienDAO();
+            SinhVienDAO chartData = new SinhVienDAO();
             DataTable dt = chartData.GetStudentProgressData(this.maNV);
             chartTienDo.Series.Clear();
             chartTienDo.Series.Add("Progress");
