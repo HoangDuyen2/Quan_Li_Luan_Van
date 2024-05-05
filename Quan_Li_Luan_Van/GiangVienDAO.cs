@@ -69,9 +69,9 @@ namespace Quan_Li_Luan_Van
         public string LoadDLV(string maGV)
         {
             MaGV = maGV;
-            string quenry = "SELECT LuanVan.MaLV, LuanVan.TenLV, LuanVan.ChuyenNganh, DuyetDangKy.TinhTrang " +
+            string quenry = "SELECT LuanVan.MaLV, TenLV, ChuyenNganh, TinhTrang " +
                           "FROM LuanVan JOIN DuyetDangKy ON " +
-                          "LuanVan.MaLV = DuyetDangKy.MaLV and LuanVan.MaGV = '" + maGV + "'";
+                          "LuanVan.MaLV = DuyetDangKy.MaLV and MaGV = '" + maGV + "'";
             return quenry;
         }
         public void getInfoDLV(string query, FlowLayoutPanel panel)
@@ -81,16 +81,16 @@ namespace Quan_Li_Luan_Van
             foreach (var row in getMaLV)
             {
                 UCDuyet ucd = new UCDuyet();
-                ucd.MaLV = (string)row["LuanVan.MaLV"].ToString();
-                ucd.LbTenLV.Text = (string)row["LuanVan.TenLV"].ToString();
-                ucd.LbChuyenNganh.Text = (string)row["LuanVan.ChuyenNganh"].ToString();
-                if ((string)row["DuyetDangKy.TinhTrang"].ToString() == "Đang chờ duyệt")
+                ucd.MaLV = (string)row["MaLV"].ToString();
+                ucd.LbTenLV.Text = (string)row["TenLV"].ToString();
+                ucd.LbChuyenNganh.Text = (string)row["ChuyenNganh"].ToString();
+                if ((string)row["TinhTrang"].ToString() == "Đang chờ duyệt")
                     ucd.LBTrangThai.ForeColor = System.Drawing.Color.Green;
-                if ((string)row["DuyetDangKy.TinhTrang"].ToString() == "Từ chối")
+                else if ((string)row["TinhTrang"].ToString() == "Từ chối")
                     ucd.LBTrangThai.ForeColor = System.Drawing.Color.Black;
-                if ((string)row["DuyetDangKy.TinhTrang"].ToString() == "Đã duyệt")
+                else if ((string)row["TinhTrang"].ToString() == "Đã duyệt")
                     ucd.LBTrangThai.ForeColor = System.Drawing.Color.Red;
-                ucd.LBTrangThai.Text = (string)row["DuyetDangKy.TinhTrang"].ToString();
+                ucd.LBTrangThai.Text = (string)row["TinhTrang"].ToString();
                 panel.Controls.Add(ucd);
             }
         }

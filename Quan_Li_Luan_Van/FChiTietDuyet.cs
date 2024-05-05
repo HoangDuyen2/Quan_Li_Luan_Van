@@ -29,8 +29,13 @@ namespace Quan_Li_Luan_Van
         private void FChiTietDuyet_Load(object sender, EventArgs e)
         {
             CapNhatDuLieu();
+            if (luanVan.TrangThai == "Đã có nhóm")
+            {
+                btnChapNhan.Enabled = false;
+                btnTuChoi.Enabled = false;
+            }
             ThongTin();
-            KhongTruyCap();
+            KhongTruyCap();   
         }
 
         public void KhongTruyCap()
@@ -66,6 +71,7 @@ namespace Quan_Li_Luan_Van
         private void CapNhatDuLieu()
         {
             luanVan = chiTiet.LoadCTLV(maLV);
+            
         }
 
         private void btnTuChoi_Click(object sender, EventArgs e)

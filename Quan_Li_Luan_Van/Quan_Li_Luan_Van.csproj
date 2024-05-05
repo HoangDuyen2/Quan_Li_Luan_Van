@@ -219,12 +219,6 @@
     <Compile Include="FLuanVanCuaToi_SV.Designer.cs">
       <DependentUpon>FLuanVanCuaToi_SV.cs</DependentUpon>
     </Compile>
-    <Compile Include="FNhanXetChamDiem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FNhanXetChamDiem.Designer.cs">
-      <DependentUpon>FNhanXetChamDiem.cs</DependentUpon>
-    </Compile>
     <Compile Include="FNhom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,12 +251,6 @@
     </Compile>
     <Compile Include="FSinhVien.Designer.cs">
       <DependentUpon>FSinhVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FTask.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FTask.Designer.cs">
-      <DependentUpon>FTask.cs</DependentUpon>
     </Compile>
     <Compile Include="FThemThongBao.cs">
       <SubType>Form</SubType>
@@ -406,17 +394,11 @@
     <EmbeddedResource Include="FLuuDiem_TB.resx">
       <DependentUpon>FLuuDiem_TB.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FNhanXetChamDiem.resx">
-      <DependentUpon>FNhanXetChamDiem.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FNhom.resx">
       <DependentUpon>FNhom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FSinhVien.resx">
       <DependentUpon>FSinhVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FTask.resx">
-      <DependentUpon>FTask.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FThemNhiemVu.resx">
       <DependentUpon>FThemNhiemVu.cs</DependentUpon>

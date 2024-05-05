@@ -87,7 +87,7 @@
             this.dtBirth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtBirth.Location = new System.Drawing.Point(750, 265);
             this.dtBirth.Name = "dtBirth";
-            this.dtBirth.Size = new System.Drawing.Size(265, 39);
+            this.dtBirth.Size = new System.Drawing.Size(265, 43);
             this.dtBirth.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.dtBirth.StateCommon.Border.Color2 = System.Drawing.Color.Blue;
             this.dtBirth.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -97,7 +97,7 @@
             this.dtBirth.StateCommon.Border.Rounding = 16;
             this.dtBirth.StateCommon.Border.Width = 1;
             this.dtBirth.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.dtBirth.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtBirth.StateCommon.Content.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.8F);
             this.dtBirth.TabIndex = 35;
             this.dtBirth.ValueNullable = new System.DateTime(2024, 3, 10, 0, 0, 0, 0);
             // 
