@@ -37,5 +37,7 @@ namespace Quan_Li_Luan_Van
         {
             luanVan = chiTiet.LoadLVD(maLV);
         }
+
     }
+
 }

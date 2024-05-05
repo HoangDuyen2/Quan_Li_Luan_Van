@@ -38,7 +38,10 @@ namespace Quan_Li_Luan_Van
             if (fThemNhiemVu.ShowDialog() == DialogResult.OK)
             {
                 FLuanVanToi_SV_Load(sender, e);
-            }            
+            }
+            
         }
+
     }
+
 }

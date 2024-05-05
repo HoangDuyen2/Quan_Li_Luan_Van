@@ -49,5 +49,7 @@ namespace Quan_Li_Luan_Van
         {
             sVDAO.LoadDSTB(flpanelDSThongBao, sVDAO.LoadTrangChu(maLV) + sVDAO.traCuuTheoNoiDung(txtTimkiem.Text));
         }
+
     }
+
 }

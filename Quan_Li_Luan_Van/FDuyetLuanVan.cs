@@ -33,6 +33,9 @@ namespace Quan_Li_Luan_Van
                 string text = cbbLoaiTraCuu.SelectedItem.ToString();
                 duyetLuanVan.getInfoDLV(duyetLuanVan.QueryDLV(maGV)+duyetLuanVan.traCuu(text), flPanelDSLV);            
             }
+
         }
+
     }
+
 }

@@ -37,5 +37,7 @@ namespace Quan_Li_Luan_Van
         {
             person = ucThongTinCaNhan1.capNhat(person);
         }
+
     }
+
 }

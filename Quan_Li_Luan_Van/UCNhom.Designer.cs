@@ -82,7 +82,7 @@
             // 
             // pictureBoxNen
             // 
-            this.pictureBoxNen.Image = global::Quan_Li_Luan_Van.Properties.Resources.anhSubject;
+            this.pictureBoxNen.Image = global::Quan_Li_Luan_Van.Properties.Resources.group;
             this.pictureBoxNen.Location = new System.Drawing.Point(19, 14);
             this.pictureBoxNen.Name = "pictureBoxNen";
             this.pictureBoxNen.Size = new System.Drawing.Size(78, 76);

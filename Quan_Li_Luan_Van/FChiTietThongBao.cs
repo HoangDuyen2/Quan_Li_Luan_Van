@@ -26,7 +26,6 @@ namespace Quan_Li_Luan_Van
             txtNguoiGui.Text = tb.NguoiGui;
             txtNoiDungTB.Text = tb.NoiDung;
             txtTenTieuDe.Text = tb.TieuDe;
-//            txtThoiGian.Text = tb.ThoiGian.ToString();
         }
 
         private void btnThem_Click(object sender, EventArgs e)

@@ -97,6 +97,9 @@ namespace Quan_Li_Luan_Van
                 this.DialogResult = DialogResult.OK;
                 this.Hide();
             }
+
         }
+
     }
+
 }
