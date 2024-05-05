@@ -53,7 +53,7 @@
             // lblTenLV
             // 
             this.lblTenLV.AutoSize = true;
-            this.lblTenLV.Font = new System.Drawing.Font("Leelawadee UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenLV.Font = new System.Drawing.Font("Leelawadee UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenLV.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.lblTenLV.Location = new System.Drawing.Point(96, 15);
             this.lblTenLV.Name = "lblTenLV";
