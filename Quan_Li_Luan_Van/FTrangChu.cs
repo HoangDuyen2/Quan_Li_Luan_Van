@@ -50,6 +50,10 @@ namespace Quan_Li_Luan_Van
             sVDAO.LoadDSTB(flpanelDSThongBao, sVDAO.LoadTrangChu(maLV) + sVDAO.traCuuTheoNoiDung(txtTimkiem.Text));
         }
 
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            FTrangChu_Load(sender, e);
+        }
     }
 
 }
