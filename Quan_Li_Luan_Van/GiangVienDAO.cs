@@ -66,7 +66,7 @@ namespace Quan_Li_Luan_Van
         public string MaGV { get => maGV; set => maGV = value; }
         public string QueryDLV(string maGV)
         {
-            string stringSQL = "SELECT LuanVan.MaLV, TenLV, ChuyenNganh, TinhTrang " +
+            string stringSQL = "SELECT LuanVan.MaLV, TenLV, ChuyenNganh, DuyetDangKy.TinhTrang " +
                           "FROM LuanVan JOIN DuyetDangKy ON " +
                           "LuanVan.MaLV = DuyetDangKy.MaLV WHERE MaGV = '" + maGV + "' ";
             return stringSQL;
@@ -75,7 +75,7 @@ namespace Quan_Li_Luan_Van
         {
             if (text != "Tất cả")
             {
-                string tracuu = "AND TinhTrang = N'" + text + "'";
+                string tracuu = "AND DuyetDangKy.TinhTrang = N'" + text + "'";
                 return tracuu;
             }
             return "";

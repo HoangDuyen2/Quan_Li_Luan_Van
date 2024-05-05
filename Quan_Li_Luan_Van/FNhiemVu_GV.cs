@@ -30,6 +30,10 @@ namespace Quan_Li_Luan_Van
         {
             luanvan.LoadDSTask(maLV, flPanelDSTask, maGV);
             lblTenLV.Text = luanvan.GetTenLV(maLV);
+            if (luanvan.getTinhTrangLVCuaToi(maLV) == "Đã hoàn thành")
+            {
+                btnThemNhiemVu.Enabled = false;
+            }
         }
         public void LoadDSNV()
         {
