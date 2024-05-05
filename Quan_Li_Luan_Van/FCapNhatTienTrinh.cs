@@ -28,6 +28,11 @@ namespace Quan_Li_Luan_Van
             LoadPhanHoi();
             LoadDataChart();
             InitializeProgressLabel();
+            if (svDAO.getTinhTrangLVCuaToi(svDAO.getMaLVCuaToi(maSV)) == "Đã hoàn thành")
+            {
+                btnCapNhat.Enabled = false;
+                btnPhanHoi.Enabled = false;
+            }
         }
         public void LoadInfoTask()
         {
