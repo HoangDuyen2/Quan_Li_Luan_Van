@@ -86,6 +86,12 @@
     <Compile Include="FChinhSuaTask.Designer.cs">
       <DependentUpon>FChinhSuaTask.cs</DependentUpon>
     </Compile>
+    <Compile Include="FXemDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FXemDiem.Designer.cs">
+      <DependentUpon>FXemDiem.cs</DependentUpon>
+    </Compile>
     <Compile Include="GiangVienDAO.cs" />
     <Compile Include="PersonDAO.cs" />
     <Compile Include="PhanHoi.cs" />
@@ -386,6 +392,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FTrangChu.resx">
       <DependentUpon>FTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FXemDiem.resx">
+      <DependentUpon>FXemDiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FXoaLuanVan_TB.resx">
       <DependentUpon>FXoaLuanVan_TB.cs</DependentUpon>

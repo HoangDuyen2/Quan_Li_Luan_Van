@@ -25,6 +25,10 @@ namespace Quan_Li_Luan_Van
             if (maLV != "")
             {
                 luanVan.LoadDSNhiemVu(flPanelDSTask, luanVan.QueryDSNhiemVu(maLV), sinhVien.getMaso());
+                if(luanVan.getTinhTrangLVCuaToi(maLV) == "Đã hoàn thành")
+                {
+                    btnThemNhiemVu.Enabled = false;
+                }
             }
             else
             {
@@ -41,7 +45,14 @@ namespace Quan_Li_Luan_Van
             }
             
         }
-
+        private void buttonXemDiem_Click(object sender, EventArgs e)
+        {
+            FXemDiem fXemDiem = new FXemDiem(luanVan.getMaLVCuaToi(sinhVien.getMaso()));
+            if(fXemDiem.ShowDialog() == DialogResult.OK)
+            {
+                FLuanVanToi_SV_Load(sender, e);
+            }
+        }
     }
 
 }

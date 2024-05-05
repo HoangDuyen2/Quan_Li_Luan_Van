@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
+using System.Data.Odbc;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -303,6 +304,43 @@ namespace Quan_Li_Luan_Van
                 adapter.Fill(dataTable);
             }
             return dataTable;
+        }
+        #endregion
+        #region Xem điểm
+        public void LoadListScoreThanhVien(string maLV, FlowLayoutPanel panel)
+        {
+            string query = @"SELECT DISTINCT sv.MSSV, sv.TenSV, sv.Diem
+                     FROM DSThanhVien dtv
+                     JOIN SinhVien sv ON sv.MSSV = dtv.MSSV1 OR sv.MSSV = dtv.MSSV2 OR sv.MSSV = dtv.MSSV3
+                     WHERE dtv.MaLV = @MaLV";
+            panel.Controls.Clear();
+            SqlParameter[] lstParam =
+            {
+                new SqlParameter("@MaLV", SqlDbType.NVarChar) {Value = maLV},
+            };
+            List<Dictionary<string, object>> ds = dBConnection.ExecuteReaderData(query, lstParam);
+            foreach (var row in ds)
+            {
+                UCChamDiem uCChamDiem = new UCChamDiem();
+                uCChamDiem.LblMSSV.Text = (string)row["MSSV"].ToString();
+                uCChamDiem.LblTenSV.Text = (string)row["TenSV"].ToString();
+                uCChamDiem.TxtDiem.Enabled = false;
+                uCChamDiem.TxtDiem.Text = (string)row["Diem"].ToString();
+                panel.Controls.Add(uCChamDiem);
+            }
+        }
+        #endregion
+        #region Xem tình trạng luận văn
+        public string getTinhTrangLVCuaToi(string maLV)
+        {
+            string tinhTrang = "";
+            string sqlStr = string.Format("SELECT TinhTrang FROM LuanVan WHERE MaLV = '{0}'", maLV);
+            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(sqlStr);
+            foreach (var row in getMaLV)
+            {
+                tinhTrang = (string)row["TinhTrang"].ToString();
+            }
+            return tinhTrang;
         }
         #endregion
     }

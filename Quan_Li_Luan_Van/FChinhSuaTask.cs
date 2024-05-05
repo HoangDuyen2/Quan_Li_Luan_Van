@@ -24,6 +24,10 @@ namespace Quan_Li_Luan_Van
             LoadNhiemVu();
             if (!personDAO.checkMaNguoi(this.maNguoiDN, this.maNV))
                 btnChinhSua.Enabled = false;
+            if (personDAO.getTinhTrangLVCuaToi(nv.MaLV) == "Đã hoàn thành")
+            {
+                btnChinhSua.Enabled = false;
+            }
         }
         public FChinhSuaTask()
         {
