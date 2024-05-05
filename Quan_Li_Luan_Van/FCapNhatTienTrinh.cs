@@ -14,11 +14,13 @@ namespace Quan_Li_Luan_Van
     {
         private string maNV;
         private string MSSV;
+        SinhVienDAO task = new SinhVienDAO();
+
         public FCapNhatTienTrinh()
         {
             InitializeComponent();
         }
-        public FCapNhatTienTrinh(string maNV, string maSV) :this()
+        public FCapNhatTienTrinh(string maNV, string maSV) : this()
         {
             this.maNV = maNV;
             this.MSSV = maSV;
@@ -30,9 +32,7 @@ namespace Quan_Li_Luan_Van
         }
         public void LoadInfoTask()
         {
-            SinhVienDAO task = new SinhVienDAO();
             NhiemVu nhiemVu = task.GetTask(this.maNV);
-
             if (nhiemVu != null && !nhiemVu.KiemTraNull())
             {
                 txtTenNV.Text = nhiemVu.TenNV;
@@ -43,18 +43,15 @@ namespace Quan_Li_Luan_Van
         }
         public void LoadPhanHoi()
         {
-            SinhVienDAO task = new SinhVienDAO();
             task.LoadListPhanHoi(this.maNV, fpnChat);
         }
         public void LoadCapNhatTienTrinh()
         {
-            SinhVienDAO tientrinh = new SinhVienDAO();
-            tientrinh.LoadListCapNhatTienTrinh(this.maNV, fpnUpdateTask);
+            task.LoadListCapNhatTienTrinh(this.maNV, fpnUpdateTask);
         }
         public void LoadDataChart()
         {
-            SinhVienDAO chartData = new SinhVienDAO();
-            DataTable dt = chartData.GetStudentProgressData(this.maNV);
+            DataTable dt = task.GetStudentProgressData(this.maNV);
             chartTienDo.Series.Clear();
             chartTienDo.Series.Add("Progress");
             chartTienDo.Series["Progress"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
@@ -103,9 +100,7 @@ namespace Quan_Li_Luan_Van
         }
         private PhanHoi TaoPhanHoi()
         {
-            SinhVienDAO ph = new SinhVienDAO();
-
-            string tenNguoiGui = ph.TenThanhVien(MSSV);
+            string tenNguoiGui = task.TenThanhVien(MSSV);
             string noiDung = txtPhanHoi.Text;
             DateTime thoiGian = DateTime.Now;
             string chuoiThoiGian = thoiGian.ToString("yyyy-MM-dd HH:mm:ss");
@@ -114,7 +109,6 @@ namespace Quan_Li_Luan_Van
         }
         private void btnPhanHoi_Click(object sender, EventArgs e)
         {
-            SinhVienDAO phanhoi = new SinhVienDAO();
             PhanHoi ph = TaoPhanHoi();
             if (!ph.checkNullPhanHoi())
             {
@@ -122,7 +116,7 @@ namespace Quan_Li_Luan_Van
             }
             else
             {
-                phanhoi.ThemPhanHoi(ph);
+                task.ThemPhanHoi(ph);
                 MessageBox.Show("Thêm thành công");
                 txtPhanHoi.Text = "";
                 LoadPhanHoi();
