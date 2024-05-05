@@ -86,12 +86,6 @@
     <Compile Include="FChinhSuaTask.Designer.cs">
       <DependentUpon>FChinhSuaTask.cs</DependentUpon>
     </Compile>
-    <Compile Include="FTienTrinh_GV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FTienTrinh_GV.Designer.cs">
-      <DependentUpon>FTienTrinh_GV.cs</DependentUpon>
-    </Compile>
     <Compile Include="GiangVienDAO.cs" />
     <Compile Include="PersonDAO.cs" />
     <Compile Include="PhanHoi.cs" />
@@ -389,9 +383,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FNhiemVu_GV.resx">
       <DependentUpon>FNhiemVu_GV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FTienTrinh_GV.resx">
-      <DependentUpon>FTienTrinh_GV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FTrangChu.resx">
       <DependentUpon>FTrangChu.cs</DependentUpon>
