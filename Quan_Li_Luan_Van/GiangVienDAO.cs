@@ -77,7 +77,6 @@ namespace Quan_Li_Luan_Van
         public void getInfoDLV(string query, FlowLayoutPanel panel)
         {
             panel.Controls.Clear();
-            MessageBox.Show(query);
             List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(query);
             foreach (var row in getMaLV)
             {

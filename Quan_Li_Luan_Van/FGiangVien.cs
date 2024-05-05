@@ -50,6 +50,7 @@ namespace Quan_Li_Luan_Van
             childForm.BringToFront();
             childForm.Show();
         }
+
         private void btnDangKy_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FDanhSachLuanVan(), sender);
@@ -90,5 +91,7 @@ namespace Quan_Li_Luan_Van
             fLogin.ShowDialog();
             this.Close();
         }
+
     }
+
 }

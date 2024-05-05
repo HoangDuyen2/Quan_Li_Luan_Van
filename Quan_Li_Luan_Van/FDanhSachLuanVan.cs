@@ -47,5 +47,7 @@ namespace Quan_Li_Luan_Van
         {
             dSLuanVan.getInfo(dSLuanVan.timKiem(txtTenGV.Text), flPanelDSLV);
         }
+
     }
+
 }

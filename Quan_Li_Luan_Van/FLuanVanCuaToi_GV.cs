@@ -29,7 +29,6 @@ namespace Quan_Li_Luan_Van
             this.query = luanvan.LoadMyTheses(gv.getMaso());
         }
 
-
         private void FLuanVanToi_Load(object sender, EventArgs e)
         {
             luanvan.GetMyThesesInfo(query, flPanelDSLV);
@@ -59,5 +58,7 @@ namespace Quan_Li_Luan_Van
             }
             LoadDSLuanVan();
         }
+
     }
+
 }
