@@ -86,29 +86,11 @@
     <Compile Include="FChinhSuaTask.Designer.cs">
       <DependentUpon>FChinhSuaTask.cs</DependentUpon>
     </Compile>
-    <Compile Include="FGuiThongBao_TB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FGuiThongBao_TB.Designer.cs">
-      <DependentUpon>FGuiThongBao_TB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FLuuDiem_TB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FLuuDiem_TB.Designer.cs">
-      <DependentUpon>FLuuDiem_TB.cs</DependentUpon>
-    </Compile>
     <Compile Include="FTienTrinh_GV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FTienTrinh_GV.Designer.cs">
       <DependentUpon>FTienTrinh_GV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FXoaNhiemVu_TB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FXoaNhiemVu_TB.Designer.cs">
-      <DependentUpon>FXoaNhiemVu_TB.cs</DependentUpon>
     </Compile>
     <Compile Include="GiangVienDAO.cs" />
     <Compile Include="PersonDAO.cs" />
@@ -381,17 +363,11 @@
     <EmbeddedResource Include="FDangNhap.resx">
       <DependentUpon>FDangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FGuiThongBao_TB.resx">
-      <DependentUpon>FGuiThongBao_TB.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FLuanVanCuaToi_GV.resx">
       <DependentUpon>FLuanVanCuaToi_GV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FLuanVanCuaToi_SV.resx">
       <DependentUpon>FLuanVanCuaToi_SV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FLuuDiem_TB.resx">
-      <DependentUpon>FLuuDiem_TB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FNhom.resx">
       <DependentUpon>FNhom.cs</DependentUpon>
@@ -422,9 +398,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FXoaLuanVan_TB.resx">
       <DependentUpon>FXoaLuanVan_TB.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FXoaNhiemVu_TB.resx">
-      <DependentUpon>FXoaNhiemVu_TB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

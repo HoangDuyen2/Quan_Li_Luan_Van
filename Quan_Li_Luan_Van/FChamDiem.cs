@@ -14,6 +14,7 @@ namespace Quan_Li_Luan_Van
     public partial class FChamDiem : Form
     {
         private string maLV;
+        private GiangVienDAO giangVienDAO;
         public FChamDiem()
         {
             InitializeComponent();
@@ -21,18 +22,17 @@ namespace Quan_Li_Luan_Van
         public FChamDiem(string maLV) : this()
         {
             this.maLV = maLV;
+            this.giangVienDAO = new GiangVienDAO();
             LoadDSThanhVien();
             LoadDataChart();
         }
         public void LoadDSThanhVien()
         {
-            GiangVienDAO chamdiem = new GiangVienDAO();
-            chamdiem.LoadListThanhVien(this.maLV, flpDSThanhVien);
+            giangVienDAO.LoadListThanhVien(this.maLV, flpDSThanhVien);
         }
         public void LoadDataChart()
         {
-            GiangVienDAO chartData = new GiangVienDAO();
-            DataTable dt = chartData.GetStudentProgressDataAll(this.maLV);
+            DataTable dt = giangVienDAO.GetStudentProgressDataAll(this.maLV);
             chartTienDo.Series.Clear();
             chartTienDo.Series.Add("Progress");
             chartTienDo.Series["Progress"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
@@ -74,15 +74,16 @@ namespace Quan_Li_Luan_Van
             else
                 return System.Drawing.Color.Green;
         }
-
         private void btnLuuDiem_Click(object sender, EventArgs e)
         {
             bool allScoresValid = true;
             foreach (UCChamDiem uc in flpDSThanhVien.Controls)
             {
-                if (string.IsNullOrWhiteSpace(uc.TxtDiem.Text) || !decimal.TryParse(uc.TxtDiem.Text, NumberStyles.Any, CultureInfo.InvariantCulture, out decimal score))
+                if (string.IsNullOrWhiteSpace(uc.TxtDiem.Text) ||
+                    !decimal.TryParse(uc.TxtDiem.Text, NumberStyles.Any, CultureInfo.InvariantCulture, out decimal score) ||
+                    score < 0 || score > 10) 
                 {
-                    MessageBox.Show("Please enter a valid score for all students.");
+                    MessageBox.Show("Please enter a valid score for all students (0-10).", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     allScoresValid = false;
                     break;
                 }
@@ -93,13 +94,12 @@ namespace Quan_Li_Luan_Van
                 foreach (UCChamDiem uc in flpDSThanhVien.Controls)
                 {
                     decimal score = decimal.Parse(uc.TxtDiem.Text, CultureInfo.InvariantCulture);
-                    score = Math.Round(score, 2);
+                    score = Math.Round(score, 2); 
                     string mssv = uc.LblMSSV.Text;
                     new GiangVienDAO().UpdateStudentScore(mssv, score);
                 }
-                MessageBox.Show("Scores updated successfully!");
+                MessageBox.Show("Scores updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

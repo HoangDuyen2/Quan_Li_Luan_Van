@@ -14,6 +14,7 @@ namespace Quan_Li_Luan_Van
     {
         private string maNV;
         private string maGV;
+        GiangVienDAO gvDAO = new GiangVienDAO();
         public FChiTietTask_All()
         {
             InitializeComponent();
@@ -29,8 +30,7 @@ namespace Quan_Li_Luan_Van
         }
         public void LoadDataChart()
         {
-            GiangVienDAO chartData = new GiangVienDAO();
-            DataTable dt = chartData.GetStudentProgressData(this.maNV);
+            DataTable dt = gvDAO.GetStudentProgressData(this.maNV);
             chartTienDo.Series.Clear();
             chartTienDo.Series.Add("Progress");
             chartTienDo.Series["Progress"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
@@ -72,8 +72,7 @@ namespace Quan_Li_Luan_Van
         }
         public void LoadInfoTask()
         {
-            GiangVienDAO task = new GiangVienDAO();
-            NhiemVu nhiemVu = task.GetTask(this.maNV);
+            NhiemVu nhiemVu = gvDAO.GetTask(this.maNV);
 
             if (nhiemVu != null && !nhiemVu.KiemTraNull())
             {
@@ -84,17 +83,14 @@ namespace Quan_Li_Luan_Van
         }
         public void LoadCapNhatTienTrinh()
         {
-            GiangVienDAO tientrinh = new GiangVienDAO();
-            tientrinh.LoadListCapNhatTienTrinh(this.maNV, fpnUpdateTask);
+            gvDAO.LoadListCapNhatTienTrinh(this.maNV, fpnUpdateTask);
         }
         public void LoadPhanHoi()
         {
-            GiangVienDAO task = new GiangVienDAO();
-            task.LoadListPhanHoi(this.maNV, fpnChat);
+            gvDAO.LoadListPhanHoi(this.maNV, fpnChat);
         }
         private void btnPhanHoi_Click(object sender, EventArgs e)
-        {
-            GiangVienDAO taskDao = new GiangVienDAO();
+        {;
             PhanHoi ph = TaoPhanHoi();
             if (!ph.checkNullPhanHoi())
             {
@@ -102,7 +98,7 @@ namespace Quan_Li_Luan_Van
             }
             else
             {
-                taskDao.ThemPhanHoi(ph);
+                gvDAO.ThemPhanHoi(ph);
                 MessageBox.Show("Thêm thành công");
                 txtPhanHoi.Text = "";
                 LoadPhanHoi();
@@ -110,9 +106,7 @@ namespace Quan_Li_Luan_Van
         }
         private PhanHoi TaoPhanHoi()
         {
-            GiangVienDAO ph = new GiangVienDAO();
-
-            string tenNguoiGui = ph.GetTenGV(maGV);
+            string tenNguoiGui = gvDAO.GetTenGV(maGV);
             string noiDung = txtPhanHoi.Text;
             DateTime thoiGian = DateTime.Now;
             string chuoiThoiGian = thoiGian.ToString("yyyy-MM-dd HH:mm:ss");
