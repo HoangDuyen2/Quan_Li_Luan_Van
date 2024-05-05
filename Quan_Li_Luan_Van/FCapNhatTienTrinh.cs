@@ -14,8 +14,7 @@ namespace Quan_Li_Luan_Van
     {
         private string maNV;
         private string MSSV;
-        SinhVienDAO task = new SinhVienDAO();
-
+        private SinhVienDAO svDAO = new SinhVienDAO();
         public FCapNhatTienTrinh()
         {
             InitializeComponent();
@@ -32,7 +31,8 @@ namespace Quan_Li_Luan_Van
         }
         public void LoadInfoTask()
         {
-            NhiemVu nhiemVu = task.GetTask(this.maNV);
+            NhiemVu nhiemVu = svDAO.GetTask(this.maNV);
+
             if (nhiemVu != null && !nhiemVu.KiemTraNull())
             {
                 txtTenNV.Text = nhiemVu.TenNV;
@@ -43,15 +43,15 @@ namespace Quan_Li_Luan_Van
         }
         public void LoadPhanHoi()
         {
-            task.LoadListPhanHoi(this.maNV, fpnChat);
+            svDAO.LoadListPhanHoi(this.maNV, fpnChat);
         }
         public void LoadCapNhatTienTrinh()
         {
-            task.LoadListCapNhatTienTrinh(this.maNV, fpnUpdateTask);
+            svDAO.LoadListCapNhatTienTrinh(this.maNV, fpnUpdateTask);
         }
         public void LoadDataChart()
         {
-            DataTable dt = task.GetStudentProgressData(this.maNV);
+            DataTable dt = svDAO.GetStudentProgressData(this.maNV);
             chartTienDo.Series.Clear();
             chartTienDo.Series.Add("Progress");
             chartTienDo.Series["Progress"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
@@ -100,7 +100,7 @@ namespace Quan_Li_Luan_Van
         }
         private PhanHoi TaoPhanHoi()
         {
-            string tenNguoiGui = task.TenThanhVien(MSSV);
+            string tenNguoiGui = svDAO.TenThanhVien(MSSV);
             string noiDung = txtPhanHoi.Text;
             DateTime thoiGian = DateTime.Now;
             string chuoiThoiGian = thoiGian.ToString("yyyy-MM-dd HH:mm:ss");
@@ -116,7 +116,7 @@ namespace Quan_Li_Luan_Van
             }
             else
             {
-                task.ThemPhanHoi(ph);
+                svDAO.ThemPhanHoi(ph);
                 MessageBox.Show("Thêm thành công");
                 txtPhanHoi.Text = "";
                 LoadPhanHoi();
@@ -152,8 +152,7 @@ namespace Quan_Li_Luan_Van
             {
                 return;
             }
-            SinhVienDAO dao = new SinhVienDAO();
-            bool result = dao.UpdateProgress(update);
+            bool result = svDAO.UpdateProgress(update);
             if (result)
             {
                 MessageBox.Show("Cập nhật thành công!");
