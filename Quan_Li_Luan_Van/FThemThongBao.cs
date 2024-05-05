@@ -19,12 +19,19 @@ namespace Quan_Li_Luan_Van
         {
             InitializeComponent();
         }
-
         public FThemThongBao(string maLV) :this()
         {
             this.maLV = maLV;
         }
+        private ThongBao TaoThongBao()
+        {
+            string tieuDe = cbboxTieuDe.SelectedItem != null ? cbboxTieuDe.SelectedItem.ToString() : "";
+            string noiDung = txtNoiDungTB.Text;
+            DateTime thoiGian = DateTime.Now;
+            string chuoiThoiGian = thoiGian.ToString("yyyy-MM-dd HH:mm:ss");
 
+            return new ThongBao(tieuDe, noiDung, chuoiThoiGian, maLV);
+        }
         private void btnThem_Click(object sender, EventArgs e)
         {
             ThongBao tb = TaoThongBao();
@@ -39,19 +46,9 @@ namespace Quan_Li_Luan_Van
                 this.Close();
             }
         }
-
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-        private ThongBao TaoThongBao()
-        {
-            string tieuDe = cbboxTieuDe.SelectedItem != null ? cbboxTieuDe.SelectedItem.ToString() : "";
-            string noiDung = txtNoiDungTB.Text;
-            DateTime thoiGian = DateTime.Now;
-            string chuoiThoiGian = thoiGian.ToString("yyyy-MM-dd HH:mm:ss");
-
-            return new ThongBao(tieuDe, noiDung, chuoiThoiGian, maLV);
         }
     }
 }

@@ -22,24 +22,21 @@ namespace Quan_Li_Luan_Van
         public Label LblTenLV { get => lblTenLV; set => lblTenLV = value; }
         public string MaGV { get => maGV; set => maGV = value; }
         public string MaLV { get => maLV; set => maLV = value; }
-
         private void btnChiTiet_Click(object sender, EventArgs e)
         {
             FChiTietLuanVan_GV ctlv = new FChiTietLuanVan_GV(maLV);
             ctlv.ShowDialog();
+        }
+        private void btnThongBao_Click(object sender, EventArgs e)
+        {
+            FThemThongBao fThemThongBao = new FThemThongBao(MaLV);
+            fThemThongBao.ShowDialog();
         }
         private void btnTienTrinh_Click(object sender, EventArgs e)
         {
             FNhiemVu_GV task = new FNhiemVu_GV(maLV,maGV);
             task.Show();
         }
-
-        private void btnThongBao_Click(object sender, EventArgs e)
-        {
-            FThemThongBao fThemThongBao = new FThemThongBao(MaLV);
-            fThemThongBao.ShowDialog();
-        }
-
         private void btnChamDiem_Click(object sender, EventArgs e)
         {
             FChamDiem fChamDiem = new FChamDiem(MaLV);

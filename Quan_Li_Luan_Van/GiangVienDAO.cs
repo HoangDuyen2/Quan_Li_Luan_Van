@@ -198,7 +198,7 @@ namespace Quan_Li_Luan_Van
         }
         #endregion        
         #region Quản lí nhóm luận văn
-        public string TruyVanDSNhom(string maGV)
+        public string QueryLoadDSNhom(string maGV)
         {
             this.maGV = maGV;
             string query = $"SELECT LuanVan.MaLV, LuanVan.TenLV, LuanVan.ChuyenNganh, GiangVien.TenGV, LuanVan.TrangThai " +
@@ -207,12 +207,11 @@ namespace Quan_Li_Luan_Van
                            $"WHERE LuanVan.MaGV = '{maGV}' AND LuanVan.TrangThai = N'Đã có nhóm'";
             return query;
         }
-
-        public void DSNhomInfo(string query, FlowLayoutPanel panel)
+        public void LoadListNhom(string query, FlowLayoutPanel panel)
         {
             panel.Controls.Clear();
-            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(query);
-            foreach (var row in getMaLV)
+            List<Dictionary<string, object>> nhoms = dBConnection.ExecuteReaderData(query);
+            foreach (var row in nhoms)
             {
                 UCNhom ucnhom = new UCNhom();
                 ucnhom.MaGV = this.maGV;
@@ -227,7 +226,6 @@ namespace Quan_Li_Luan_Van
             sqlQuery = string.Format("INSERT INTO ThongBao(TieuDe, NoiDung, ThoiGian, MaLV) VALUES (N'{0}', N'{1}', '{2}', '{3}')", tb.TieuDe, tb.NoiDung, tb.ThoiGian, tb.MaLV);
             dBConnection.ThucThi(sqlQuery);
         }
-
         public void LoadDSTask(string maLV, FlowLayoutPanel panel, string maGV)
         {
             panel.Controls.Clear();
@@ -277,8 +275,6 @@ namespace Quan_Li_Luan_Van
             }
             return tenGV;
         }
-
- 
         public void LoadListThanhVien(string maLV, FlowLayoutPanel panel)
         {
             string query = @"SELECT DISTINCT sv.MSSV, sv.TenSV, sv.Diem

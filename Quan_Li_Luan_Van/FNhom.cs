@@ -15,22 +15,23 @@ namespace Quan_Li_Luan_Van
         private GiangVien giangVien;
         private string query;
         private GiangVienDAO giangVienDao;
-
         public FNhom()
         {
             InitializeComponent();
         }
-
         public FNhom(GiangVien gv) : this()
         {
             this.giangVien = gv;
             giangVienDao = new GiangVienDAO();
-            this.query = giangVienDao.TruyVanDSNhom(giangVien.getMaso());
+            this.query = giangVienDao.QueryLoadDSNhom(giangVien.getMaso());
         }
-
         private void FNhom_Load(object sender, EventArgs e)
         {
-            giangVienDao.DSNhomInfo(query, flpanelDSNhom);
+            giangVienDao.LoadListNhom(query, flpanelDSNhom);
+        }
+        public void LoadDSNhom()
+        {
+            giangVienDao.LoadListNhom(query, flpanelDSNhom);
         }
     }
 }

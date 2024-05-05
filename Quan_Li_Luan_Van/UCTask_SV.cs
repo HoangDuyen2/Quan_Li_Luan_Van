@@ -38,11 +38,6 @@ namespace Quan_Li_Luan_Van
             FCapNhatTienTrinh fCapNhatTienTrinh = new FCapNhatTienTrinh(maNV, mssvLogin);
             fCapNhatTienTrinh.ShowDialog();
         }
-
-        private void UCTask_SV_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
 

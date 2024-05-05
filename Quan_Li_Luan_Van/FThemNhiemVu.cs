@@ -26,7 +26,6 @@ namespace Quan_Li_Luan_Van
             this.maLV = maLV;
             this.idNguoiTao = maGV;
         }
-
         private NhiemVu ThemNhiemVu()
         {
             string maNV = txtMaNV.Text;
@@ -38,7 +37,6 @@ namespace Quan_Li_Luan_Van
         private void btnThem_Click(object sender, EventArgs e)
         {
             NhiemVu nv = ThemNhiemVu();
-
             if (nv.KiemTraNull())
             {
                 MessageBox.Show("Vui lòng điền đủ thông tin");

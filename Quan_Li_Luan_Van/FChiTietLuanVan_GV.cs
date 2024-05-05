@@ -16,16 +16,14 @@ namespace Quan_Li_Luan_Van
         private string maLV;
         GiangVienDAO chiTiet = new GiangVienDAO();
         LuanVanDuyet luanVan = new LuanVanDuyet();
-        public FChiTietLuanVan_GV(string MaLV) : this()
-        {
-            maLV = MaLV;
-        }
-
         public FChiTietLuanVan_GV()
         {
             InitializeComponent();
         }
-
+        public FChiTietLuanVan_GV(string MaLV) : this()
+        {
+            this.maLV = MaLV;
+        }
         private void FChiTietLuanVan_GV_Load(object sender, EventArgs e)
         {
             CapNhatDuLieu();
@@ -35,12 +33,9 @@ namespace Quan_Li_Luan_Van
             ucChiTietLuanVan1.TxtTVien2.Enabled = false;
             ucChiTietLuanVan1.TxtTV3.Enabled = false;
         }
-
         private void CapNhatDuLieu()
         {
             luanVan = chiTiet.LoadLVD(maLV);
         }
-
     }
-
 }

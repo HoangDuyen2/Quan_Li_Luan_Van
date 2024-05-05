@@ -129,7 +129,6 @@
             this.Controls.Add(this.pictureBoxNen);
             this.Name = "UCTask_SV";
             this.Size = new System.Drawing.Size(1034, 94);
-            this.Load += new System.EventHandler(this.UCTask_SV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
