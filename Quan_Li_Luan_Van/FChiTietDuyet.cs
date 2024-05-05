@@ -17,7 +17,6 @@ namespace Quan_Li_Luan_Van
         private string maLV;
         GiangVienDAO chiTiet = new GiangVienDAO();
         LuanVanDuyet luanVan = new LuanVanDuyet();
-        GiangVienDAO duyet = new GiangVienDAO();
         public FChiTietDuyet(string MaLV) : this()
         {
             maLV = MaLV;
@@ -71,13 +70,13 @@ namespace Quan_Li_Luan_Van
 
         private void btnTuChoi_Click(object sender, EventArgs e)
         {
-            duyet.TuChoi(luanVan);
+            chiTiet.TuChoi(luanVan);
             this.Close();
         }
 
         private void btnChapNhan_Click(object sender, EventArgs e)
         {
-            duyet.ChapNhan(luanVan);
+            chiTiet.ChapNhan(luanVan);
             this.Close();
         }
     }
