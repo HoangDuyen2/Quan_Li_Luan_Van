@@ -32,9 +32,7 @@ namespace Quan_Li_Luan_Van
             InitializeComponent();
         }
 
-        //private Button currentButton;
         private Form activeForm;
-
         private void OpenChildForm(Form childForm, object btnSender)
         {
             if (activeForm != null)
@@ -56,6 +54,7 @@ namespace Quan_Li_Luan_Van
             labelMSSV.Text = sinhVien.getMaso();
             labelTen.Text = sinhVien.getHoTen();
             labelChucVu.Text = taiKhoan.getChucVu();
+            OpenChildForm(new FTrangChu(sinhVien), sender);
         }
 
         private void buttonHome_Click(object sender, EventArgs e)
@@ -89,7 +88,5 @@ namespace Quan_Li_Luan_Van
             OpenChildForm(new FThongTinCaNhan_SV(sinhVien), sender);
             FSinhVien_Load(sender, e);
         }
-
     }
-
 }
