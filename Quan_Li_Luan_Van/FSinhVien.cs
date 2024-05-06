@@ -54,24 +54,22 @@ namespace Quan_Li_Luan_Van
             labelMSSV.Text = sinhVien.getMaso();
             labelTen.Text = sinhVien.getHoTen();
             labelChucVu.Text = taiKhoan.getChucVu();
+            OpenChildForm(new FTrangChu(sinhVien), sender);
         }
 
         private void buttonHome_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FTrangChu(sinhVien), sender);
-            FSinhVien_Load(sender, e);
         }
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FDangKyLuanVan(sinhVien), sender);
-            FSinhVien_Load(sender, e);
         }
 
         private void btnLuanVan_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FLuanVanCuaToi_SV(sinhVien),sender);
-            FSinhVien_Load(sender, e);
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
@@ -85,7 +83,6 @@ namespace Quan_Li_Luan_Van
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FThongTinCaNhan_SV(sinhVien), sender);
-            FSinhVien_Load(sender, e);
         }
     }
 }

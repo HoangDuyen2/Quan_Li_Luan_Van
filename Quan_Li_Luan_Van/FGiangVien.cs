@@ -32,6 +32,7 @@ namespace Quan_Li_Luan_Van
             labelMSSV.Text = gv.getMaso();
             labelTen.Text = gv.getHoTen();
             labelChucVu.Text = taiKhoan.getChucVu();
+            OpenChildForm(new FNhom(gv), sender);
         }
 
         private Form activeForm;
@@ -53,31 +54,26 @@ namespace Quan_Li_Luan_Van
         private void btnDangKy_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FDanhSachLuanVan(), sender);
-            FGiangVien_Load(sender, e);
         }
 
         private void btnLuanVan_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FDuyetLuanVan(gv.getMaso()), sender);
-            FGiangVien_Load(sender, e);
         }
 
         private void picboxUser_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FThongTinCaNhan_GV(gv), sender);
-            FGiangVien_Load(sender, e);
         }
 
         private void btnLuanVanCuaToi_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FLuanVanCuaToi_GV(gv), sender);
-            FGiangVien_Load(sender, e);
         }
 
         private void btnDSNhom_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FNhom(gv), sender);
-            FGiangVien_Load(sender, e);
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
