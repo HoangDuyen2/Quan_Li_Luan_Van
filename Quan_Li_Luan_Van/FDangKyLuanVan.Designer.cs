@@ -195,6 +195,7 @@
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.groupBoxTraCuuLuanVan);
             this.Name = "FDangKyLuanVan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng ký luận văn";
             this.Load += new System.EventHandler(this.FDKLV_Load);
             this.panelTitle.ResumeLayout(false);

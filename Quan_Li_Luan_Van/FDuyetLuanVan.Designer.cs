@@ -134,6 +134,7 @@
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.flPanelDSLV);
             this.Name = "FDuyetLuanVan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FDuyetLuanVan";
             this.Load += new System.EventHandler(this.FDuyetLuanVan_Load);
             this.panelTitle.ResumeLayout(false);

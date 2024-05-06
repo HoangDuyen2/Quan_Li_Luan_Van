@@ -192,6 +192,7 @@
             this.Controls.Add(this.groupBoxTraCuuLuanVan);
             this.Controls.Add(this.flPanelDSLV);
             this.Name = "FDanhSachLuanVan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh Sách Luận Văn";
             this.Load += new System.EventHandler(this.TraCuu_Load);
             this.panelTitle.ResumeLayout(false);
