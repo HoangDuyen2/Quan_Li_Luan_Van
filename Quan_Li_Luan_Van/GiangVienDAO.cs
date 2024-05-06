@@ -244,21 +244,6 @@ namespace Quan_Li_Luan_Van
             }
         }
 
-        public string GetTenLV(string maLV)
-        {
-            string tenLV = "";
-            string query = "SELECT TenLV FROM LuanVan WHERE MaLV = @maLV";
-            SqlParameter[] lstParam =
-            {
-                new SqlParameter("@maLV", SqlDbType.NVarChar) {Value = maLV},
-            };
-            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(query, lstParam);
-            foreach (var row in getMaLV)
-            {
-                tenLV = (string)row["TenLV"].ToString();
-            }
-            return tenLV;
-        }
         public string GetTenGV(string maGV)
         {
             string query = "SELECT TenGV " +

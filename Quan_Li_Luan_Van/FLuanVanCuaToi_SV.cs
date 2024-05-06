@@ -14,6 +14,7 @@ namespace Quan_Li_Luan_Van
     {
         SinhVien sinhVien = null;
         SinhVienDAO luanVan = new SinhVienDAO();
+        public string maLV;
         public FLuanVanCuaToi_SV(SinhVien sinhVien)
         {
             InitializeComponent();
@@ -21,10 +22,10 @@ namespace Quan_Li_Luan_Van
         }
         private void FLuanVanToi_SV_Load(object sender, EventArgs e)
         {
-            string maLV = luanVan.getMaLVCuaToi(sinhVien.getMaso());
+            maLV = luanVan.getMaLVCuaToi(sinhVien.getMaso());
             if (maLV != "")
             {
-                luanVan.LoadDSNhiemVu(flPanelDSTask, luanVan.QueryDSNhiemVu(maLV), sinhVien.getMaso());
+                LoadNhiemVu();
                 if(luanVan.getTinhTrangLVCuaToi(maLV) == "Đã hoàn thành")
                 {
                     btnThemNhiemVu.Enabled = false;
@@ -32,9 +33,15 @@ namespace Quan_Li_Luan_Van
             }
             else
             {
+                buttonXemDiem.Enabled = false;
                 btnThemNhiemVu.Enabled = false;
                 MessageBox.Show("Sinh viên hiện chưa tham gia vào luận văn nào. Vui lòng đăng kí luận văn trước", "Thông báo");
             }
+        }
+        public void LoadNhiemVu()
+        {
+            lblTenLV.Text = luanVan.GetTenLV(maLV);
+            luanVan.LoadDSNhiemVu(flPanelDSTask, luanVan.QueryDSNhiemVu(maLV), sinhVien.getMaso());
         }
         private void btnThemNhiemVu_Click(object sender, EventArgs e)
         {
@@ -48,10 +55,8 @@ namespace Quan_Li_Luan_Van
         private void buttonXemDiem_Click(object sender, EventArgs e)
         {
             FXemDiem fXemDiem = new FXemDiem(luanVan.getMaLVCuaToi(sinhVien.getMaso()));
-            if(fXemDiem.ShowDialog() == DialogResult.OK)
-            {
-                FLuanVanToi_SV_Load(sender, e);
-            }
+            fXemDiem.ShowDialog();
+            LoadNhiemVu();
         }
     }
 

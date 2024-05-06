@@ -30,9 +30,9 @@
         {
             this.flPanelDSTask = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBoxTraCuuLuanVan = new System.Windows.Forms.GroupBox();
-            this.labelTieuDe = new System.Windows.Forms.Label();
             this.buttonXemDiem = new System.Windows.Forms.Button();
             this.btnThemNhiemVu = new System.Windows.Forms.Button();
+            this.lblTenLV = new System.Windows.Forms.Label();
             this.groupBoxTraCuuLuanVan.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +47,7 @@
             // 
             // groupBoxTraCuuLuanVan
             // 
-            this.groupBoxTraCuuLuanVan.Controls.Add(this.labelTieuDe);
+            this.groupBoxTraCuuLuanVan.Controls.Add(this.lblTenLV);
             this.groupBoxTraCuuLuanVan.Controls.Add(this.buttonXemDiem);
             this.groupBoxTraCuuLuanVan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxTraCuuLuanVan.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -56,18 +56,6 @@
             this.groupBoxTraCuuLuanVan.Size = new System.Drawing.Size(1073, 121);
             this.groupBoxTraCuuLuanVan.TabIndex = 29;
             this.groupBoxTraCuuLuanVan.TabStop = false;
-            // 
-            // labelTieuDe
-            // 
-            this.labelTieuDe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
-            this.labelTieuDe.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTieuDe.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelTieuDe.Location = new System.Drawing.Point(18, 4);
-            this.labelTieuDe.Name = "labelTieuDe";
-            this.labelTieuDe.Size = new System.Drawing.Size(269, 41);
-            this.labelTieuDe.TabIndex = 18;
-            this.labelTieuDe.Text = "LUẬN VĂN CỦA TÔI";
-            this.labelTieuDe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonXemDiem
             // 
@@ -102,6 +90,17 @@
             this.btnThemNhiemVu.UseVisualStyleBackColor = false;
             this.btnThemNhiemVu.Click += new System.EventHandler(this.btnThemNhiemVu_Click);
             // 
+            // lblTenLV
+            // 
+            this.lblTenLV.AutoSize = true;
+            this.lblTenLV.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenLV.Location = new System.Drawing.Point(6, 0);
+            this.lblTenLV.Name = "lblTenLV";
+            this.lblTenLV.Size = new System.Drawing.Size(506, 38);
+            this.lblTenLV.TabIndex = 16;
+            this.lblTenLV.Text = "Bạn chưa tham gia bất kì luận văn nào";
+            this.lblTenLV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FLuanVanCuaToi_SV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -115,6 +114,7 @@
             this.Text = "FLuanVanToi_SV";
             this.Load += new System.EventHandler(this.FLuanVanToi_SV_Load);
             this.groupBoxTraCuuLuanVan.ResumeLayout(false);
+            this.groupBoxTraCuuLuanVan.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -124,7 +124,7 @@
         private System.Windows.Forms.FlowLayoutPanel flPanelDSTask;
         private System.Windows.Forms.GroupBox groupBoxTraCuuLuanVan;
         private System.Windows.Forms.Button buttonXemDiem;
-        private System.Windows.Forms.Label labelTieuDe;
         private System.Windows.Forms.Button btnThemNhiemVu;
+        private System.Windows.Forms.Label lblTenLV;
     }
 }

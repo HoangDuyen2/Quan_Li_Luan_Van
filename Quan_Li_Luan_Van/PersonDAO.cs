@@ -330,7 +330,7 @@ namespace Quan_Li_Luan_Van
             }
         }
         #endregion
-        #region Xem tình trạng luận văn
+        #region Xem tình trạng, lấy tên luận văn
         public string getTinhTrangLVCuaToi(string maLV)
         {
             string tinhTrang = "";
@@ -341,6 +341,22 @@ namespace Quan_Li_Luan_Van
                 tinhTrang = (string)row["TinhTrang"].ToString();
             }
             return tinhTrang;
+        }
+
+        public string GetTenLV(string maLV)
+        {
+            string tenLV = "";
+            string query = "SELECT TenLV FROM LuanVan WHERE MaLV = @maLV";
+            SqlParameter[] lstParam =
+            {
+                new SqlParameter("@maLV", SqlDbType.NVarChar) {Value = maLV},
+            };
+            List<Dictionary<string, object>> getMaLV = dBConnection.ExecuteReaderData(query, lstParam);
+            foreach (var row in getMaLV)
+            {
+                tenLV = (string)row["TenLV"].ToString();
+            }
+            return tenLV;
         }
         #endregion
     }
