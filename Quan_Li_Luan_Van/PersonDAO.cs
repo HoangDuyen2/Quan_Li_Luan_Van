@@ -307,7 +307,7 @@ namespace Quan_Li_Luan_Van
         }
         #endregion
         #region Xem điểm
-        public void LoadListScoreThanhVien(string maLV, FlowLayoutPanel panel)
+        public void LoadListScoreThanhVien(string maLV, FlowLayoutPanel panel, bool x)
         {
             string query = @"SELECT DISTINCT sv.MSSV, sv.TenSV, sv.Diem
                      FROM DSThanhVien dtv
@@ -324,7 +324,7 @@ namespace Quan_Li_Luan_Van
                 UCChamDiem uCChamDiem = new UCChamDiem();
                 uCChamDiem.LblMSSV.Text = (string)row["MSSV"].ToString();
                 uCChamDiem.LblTenSV.Text = (string)row["TenSV"].ToString();
-                uCChamDiem.TxtDiem.Enabled = false;
+                uCChamDiem.TxtDiem.Enabled = x;
                 uCChamDiem.TxtDiem.Text = (string)row["Diem"].ToString();
                 panel.Controls.Add(uCChamDiem);
             }

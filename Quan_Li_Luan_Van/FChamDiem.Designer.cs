@@ -83,9 +83,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label1.Location = new System.Drawing.Point(603, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 28);
+            this.label1.Size = new System.Drawing.Size(281, 28);
             this.label1.TabIndex = 18;
-            this.label1.Text = "THỐNG KÊ ";
+            this.label1.Text = "THỐNG KÊ % HOÀN THÀNH";
             // 
             // chartTienDo
             // 

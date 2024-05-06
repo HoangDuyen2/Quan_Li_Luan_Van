@@ -25,7 +25,7 @@ namespace Quan_Li_Luan_Van
 
         private void FXemDiem_Load(object sender, EventArgs e)
         {
-            sinhVienDAO.LoadListScoreThanhVien(this.maLV, flpDSThanhVien);
+            sinhVienDAO.LoadListScoreThanhVien(this.maLV, flpDSThanhVien,false);
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
