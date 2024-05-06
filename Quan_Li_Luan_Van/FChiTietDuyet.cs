@@ -17,9 +17,11 @@ namespace Quan_Li_Luan_Van
         private string maLV;
         GiangVienDAO chiTiet = new GiangVienDAO();
         LuanVanDuyet luanVan = new LuanVanDuyet();
-        public FChiTietDuyet(string MaLV) : this()
+        private FDuyetLuanVan parentForm;
+        public FChiTietDuyet(string MaLV, FDuyetLuanVan parentForm) : this()
         {
             maLV = MaLV;
+            this.parentForm = parentForm;
         }
 
         public FChiTietDuyet()
@@ -78,12 +80,20 @@ namespace Quan_Li_Luan_Van
         {
             chiTiet.TuChoi(luanVan);
             this.Close();
+            if (parentForm != null)
+            {
+                parentForm.LoadDSDuyet();
+            }
         }
 
         private void btnChapNhan_Click(object sender, EventArgs e)
         {
             chiTiet.ChapNhan(luanVan);
             this.Close();
+            if (parentForm != null)
+            {
+                parentForm.LoadDSDuyet();
+            }
         }
     }
 }

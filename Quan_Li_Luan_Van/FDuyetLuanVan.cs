@@ -26,6 +26,10 @@ namespace Quan_Li_Luan_Van
         {
             duyetLuanVan.getInfoDLV(duyetLuanVan.QueryDLV(maGV), flPanelDSLV);
         }
+        public void LoadDSDuyet()
+        {
+            duyetLuanVan.getInfoDLV(duyetLuanVan.QueryDLV(maGV), flPanelDSLV);
+        }
         private void cbbLoaiTraCuu_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbbLoaiTraCuu.SelectedItem != null)
