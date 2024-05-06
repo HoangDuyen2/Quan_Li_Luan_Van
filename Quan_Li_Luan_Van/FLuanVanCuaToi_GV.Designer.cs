@@ -110,7 +110,7 @@
             "Chưa có nhóm"});
             this.cbboxTrangThai.Location = new System.Drawing.Point(136, 36);
             this.cbboxTrangThai.Name = "cbboxTrangThai";
-            this.cbboxTrangThai.Size = new System.Drawing.Size(228, 39);
+            this.cbboxTrangThai.Size = new System.Drawing.Size(228, 41);
             this.cbboxTrangThai.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Blue;
             this.cbboxTrangThai.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.Blue;
             this.cbboxTrangThai.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -119,8 +119,8 @@
             this.cbboxTrangThai.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.cbboxTrangThai.StateCommon.ComboBox.Border.Rounding = 20;
             this.cbboxTrangThai.StateCommon.ComboBox.Border.Width = 1;
-            this.cbboxTrangThai.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Gray;
-            this.cbboxTrangThai.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbboxTrangThai.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.cbboxTrangThai.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.cbboxTrangThai.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(1);
             this.cbboxTrangThai.StateCommon.DropBack.Color1 = System.Drawing.Color.White;
             this.cbboxTrangThai.StateCommon.DropBack.Color2 = System.Drawing.Color.White;

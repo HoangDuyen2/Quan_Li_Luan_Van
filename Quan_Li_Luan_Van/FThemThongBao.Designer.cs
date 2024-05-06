@@ -85,7 +85,7 @@
             "Cập nhật tiến độ"});
             this.cbboxTieuDe.Location = new System.Drawing.Point(119, 34);
             this.cbboxTieuDe.Name = "cbboxTieuDe";
-            this.cbboxTieuDe.Size = new System.Drawing.Size(273, 39);
+            this.cbboxTieuDe.Size = new System.Drawing.Size(273, 41);
             this.cbboxTieuDe.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Blue;
             this.cbboxTieuDe.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.Blue;
             this.cbboxTieuDe.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -94,8 +94,8 @@
             this.cbboxTieuDe.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.cbboxTieuDe.StateCommon.ComboBox.Border.Rounding = 20;
             this.cbboxTieuDe.StateCommon.ComboBox.Border.Width = 1;
-            this.cbboxTieuDe.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Gray;
-            this.cbboxTieuDe.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbboxTieuDe.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.cbboxTieuDe.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.cbboxTieuDe.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(1);
             this.cbboxTieuDe.StateCommon.DropBack.Color1 = System.Drawing.Color.White;
             this.cbboxTieuDe.StateCommon.DropBack.Color2 = System.Drawing.Color.White;
@@ -119,8 +119,8 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtNoiDungTB.StateCommon.Border.Rounding = 12;
             this.txtNoiDungTB.StateCommon.Border.Width = 1;
-            this.txtNoiDungTB.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtNoiDungTB.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F);
+            this.txtNoiDungTB.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.txtNoiDungTB.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.txtNoiDungTB.TabIndex = 29;
             this.txtNoiDungTB.Text = "";
             // 

@@ -39,7 +39,7 @@
             // 
             this.txtDiem.Location = new System.Drawing.Point(291, 21);
             this.txtDiem.Name = "txtDiem";
-            this.txtDiem.Size = new System.Drawing.Size(103, 35);
+            this.txtDiem.Size = new System.Drawing.Size(103, 36);
             this.txtDiem.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtDiem.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.txtDiem.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -49,8 +49,8 @@
             this.txtDiem.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.txtDiem.StateCommon.Border.Rounding = 16;
             this.txtDiem.StateCommon.Border.Width = 1;
-            this.txtDiem.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtDiem.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiem.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.txtDiem.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.txtDiem.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtDiem.TabIndex = 60;
             // 

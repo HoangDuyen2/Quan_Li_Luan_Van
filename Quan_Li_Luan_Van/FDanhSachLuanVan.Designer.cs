@@ -68,7 +68,7 @@
             // 
             this.txtTenGV.Location = new System.Drawing.Point(88, 29);
             this.txtTenGV.Name = "txtTenGV";
-            this.txtTenGV.Size = new System.Drawing.Size(284, 35);
+            this.txtTenGV.Size = new System.Drawing.Size(284, 36);
             this.txtTenGV.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtTenGV.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.txtTenGV.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -78,8 +78,8 @@
             this.txtTenGV.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.txtTenGV.StateCommon.Border.Rounding = 16;
             this.txtTenGV.StateCommon.Border.Width = 1;
-            this.txtTenGV.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtTenGV.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenGV.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.txtTenGV.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.txtTenGV.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtTenGV.TabIndex = 14;
             // 
@@ -112,7 +112,7 @@
             "Kỹ thuật ứng dụng"});
             this.comboxChuyenNganh.Location = new System.Drawing.Point(532, 26);
             this.comboxChuyenNganh.Name = "comboxChuyenNganh";
-            this.comboxChuyenNganh.Size = new System.Drawing.Size(273, 39);
+            this.comboxChuyenNganh.Size = new System.Drawing.Size(273, 41);
             this.comboxChuyenNganh.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Blue;
             this.comboxChuyenNganh.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.Blue;
             this.comboxChuyenNganh.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -121,8 +121,8 @@
             this.comboxChuyenNganh.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.comboxChuyenNganh.StateCommon.ComboBox.Border.Rounding = 20;
             this.comboxChuyenNganh.StateCommon.ComboBox.Border.Width = 1;
-            this.comboxChuyenNganh.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Gray;
-            this.comboxChuyenNganh.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboxChuyenNganh.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.comboxChuyenNganh.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.comboxChuyenNganh.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(1);
             this.comboxChuyenNganh.StateCommon.DropBack.Color1 = System.Drawing.Color.White;
             this.comboxChuyenNganh.StateCommon.DropBack.Color2 = System.Drawing.Color.White;

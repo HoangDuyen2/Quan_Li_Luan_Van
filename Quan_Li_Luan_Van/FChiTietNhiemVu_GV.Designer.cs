@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelNoidung = new System.Windows.Forms.Panel();
             this.lblChat = new System.Windows.Forms.Label();
             this.chartTienDo = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -93,16 +93,16 @@
             // 
             // chartTienDo
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chartTienDo.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chartTienDo.Legends.Add(legend4);
+            chartArea1.Name = "ChartArea1";
+            this.chartTienDo.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartTienDo.Legends.Add(legend1);
             this.chartTienDo.Location = new System.Drawing.Point(585, 28);
             this.chartTienDo.Name = "chartTienDo";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chartTienDo.Series.Add(series4);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartTienDo.Series.Add(series1);
             this.chartTienDo.Size = new System.Drawing.Size(521, 191);
             this.chartTienDo.TabIndex = 23;
             // 
@@ -147,8 +147,8 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtPhanHoi.StateCommon.Border.Rounding = 12;
             this.txtPhanHoi.StateCommon.Border.Width = 1;
-            this.txtPhanHoi.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtPhanHoi.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F);
+            this.txtPhanHoi.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.txtPhanHoi.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.txtPhanHoi.TabIndex = 35;
             this.txtPhanHoi.Text = "";
             // 
@@ -198,7 +198,7 @@
             // 
             this.txtTienTrinh.Location = new System.Drawing.Point(449, 33);
             this.txtTienTrinh.Name = "txtTienTrinh";
-            this.txtTienTrinh.Size = new System.Drawing.Size(119, 35);
+            this.txtTienTrinh.Size = new System.Drawing.Size(119, 36);
             this.txtTienTrinh.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtTienTrinh.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.txtTienTrinh.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -208,8 +208,8 @@
             this.txtTienTrinh.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.txtTienTrinh.StateCommon.Border.Rounding = 16;
             this.txtTienTrinh.StateCommon.Border.Width = 1;
-            this.txtTienTrinh.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtTienTrinh.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTienTrinh.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.txtTienTrinh.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.txtTienTrinh.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtTienTrinh.StateDisabled.Border.Color1 = System.Drawing.Color.Blue;
             this.txtTienTrinh.StateDisabled.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -244,8 +244,8 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtNoiDungNV.StateCommon.Border.Rounding = 12;
             this.txtNoiDungNV.StateCommon.Border.Width = 1;
-            this.txtNoiDungNV.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtNoiDungNV.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F);
+            this.txtNoiDungNV.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.txtNoiDungNV.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.txtNoiDungNV.TabIndex = 29;
             this.txtNoiDungNV.Text = "";
             // 
@@ -264,7 +264,7 @@
             // 
             this.txtTenNV.Location = new System.Drawing.Point(16, 33);
             this.txtTenNV.Name = "txtTenNV";
-            this.txtTenNV.Size = new System.Drawing.Size(429, 35);
+            this.txtTenNV.Size = new System.Drawing.Size(429, 36);
             this.txtTenNV.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtTenNV.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.txtTenNV.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -274,8 +274,8 @@
             this.txtTenNV.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.txtTenNV.StateCommon.Border.Rounding = 16;
             this.txtTenNV.StateCommon.Border.Width = 1;
-            this.txtTenNV.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtTenNV.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenNV.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.txtTenNV.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.txtTenNV.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtTenNV.StateDisabled.Border.Color1 = System.Drawing.Color.Blue;
             this.txtTenNV.StateDisabled.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));

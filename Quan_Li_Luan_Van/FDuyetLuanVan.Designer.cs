@@ -91,7 +91,7 @@
             "Từ chối"});
             this.cbbLoaiTraCuu.Location = new System.Drawing.Point(148, 29);
             this.cbbLoaiTraCuu.Name = "cbbLoaiTraCuu";
-            this.cbbLoaiTraCuu.Size = new System.Drawing.Size(233, 39);
+            this.cbbLoaiTraCuu.Size = new System.Drawing.Size(233, 41);
             this.cbbLoaiTraCuu.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Blue;
             this.cbbLoaiTraCuu.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.Blue;
             this.cbbLoaiTraCuu.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -100,8 +100,8 @@
             this.cbbLoaiTraCuu.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.cbbLoaiTraCuu.StateCommon.ComboBox.Border.Rounding = 20;
             this.cbbLoaiTraCuu.StateCommon.ComboBox.Border.Width = 1;
-            this.cbbLoaiTraCuu.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Gray;
-            this.cbbLoaiTraCuu.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbLoaiTraCuu.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.cbbLoaiTraCuu.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.cbbLoaiTraCuu.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(1);
             this.cbbLoaiTraCuu.StateCommon.DropBack.Color1 = System.Drawing.Color.White;
             this.cbbLoaiTraCuu.StateCommon.DropBack.Color2 = System.Drawing.Color.White;

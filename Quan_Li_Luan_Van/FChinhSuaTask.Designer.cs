@@ -60,7 +60,7 @@
             this.txtMaNV.Enabled = false;
             this.txtMaNV.Location = new System.Drawing.Point(16, 43);
             this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.Size = new System.Drawing.Size(555, 35);
+            this.txtMaNV.Size = new System.Drawing.Size(165, 36);
             this.txtMaNV.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtMaNV.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.txtMaNV.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -70,8 +70,8 @@
             this.txtMaNV.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.txtMaNV.StateCommon.Border.Rounding = 16;
             this.txtMaNV.StateCommon.Border.Width = 1;
-            this.txtMaNV.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtMaNV.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaNV.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.txtMaNV.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.txtMaNV.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtMaNV.StateDisabled.Border.Color1 = System.Drawing.Color.Blue;
             this.txtMaNV.StateDisabled.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -106,8 +106,8 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtNoiDungNV.StateCommon.Border.Rounding = 12;
             this.txtNoiDungNV.StateCommon.Border.Width = 1;
-            this.txtNoiDungNV.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtNoiDungNV.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F);
+            this.txtNoiDungNV.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.txtNoiDungNV.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.txtNoiDungNV.TabIndex = 29;
             this.txtNoiDungNV.Text = "";
             // 
@@ -126,7 +126,7 @@
             // 
             this.txtTenNV.Location = new System.Drawing.Point(16, 112);
             this.txtTenNV.Name = "txtTenNV";
-            this.txtTenNV.Size = new System.Drawing.Size(555, 35);
+            this.txtTenNV.Size = new System.Drawing.Size(555, 36);
             this.txtTenNV.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtTenNV.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.txtTenNV.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -136,8 +136,8 @@
             this.txtTenNV.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.txtTenNV.StateCommon.Border.Rounding = 16;
             this.txtTenNV.StateCommon.Border.Width = 1;
-            this.txtTenNV.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtTenNV.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenNV.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.txtTenNV.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.txtTenNV.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtTenNV.StateDisabled.Border.Color1 = System.Drawing.Color.Blue;
             this.txtTenNV.StateDisabled.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -176,7 +176,7 @@
             this.lblThemNV.AutoSize = true;
             this.lblThemNV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThemNV.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblThemNV.Location = new System.Drawing.Point(207, 4);
+            this.lblThemNV.Location = new System.Drawing.Point(207, 9);
             this.lblThemNV.Name = "lblThemNV";
             this.lblThemNV.Size = new System.Drawing.Size(207, 28);
             this.lblThemNV.TabIndex = 16;

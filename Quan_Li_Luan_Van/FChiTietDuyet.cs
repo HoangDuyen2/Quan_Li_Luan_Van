@@ -95,5 +95,25 @@ namespace Quan_Li_Luan_Van
                 parentForm.LoadDSDuyet();
             }
         }
+
+        private void lbTenSV1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMSSV3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbTenSV3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtChucNang_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
