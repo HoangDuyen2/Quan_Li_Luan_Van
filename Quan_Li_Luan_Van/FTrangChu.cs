@@ -31,7 +31,7 @@ namespace Quan_Li_Luan_Van
                 MessageBox.Show("Hiện bạn chưa tham gia bất kì một luận văn nào. Hãy tham gia luận văn để nhận các thông báo từ giảng viên", "Thông báo");
             }
             else maLV = sVDAO.getMaLVCuaToi(sinhVien.getMaso());
-            sVDAO.LoadDSTB(flpanelDSThongBao, sVDAO.LoadTrangChu(maLV));
+            sVDAO.LoadDSTB(flpanelDSThongBao, sVDAO.LoadTrangChu(maLV) +" ORDER BY ThoiGian DESC");
         }
         private void TxtTimKiem_GetFocus(object sender, EventArgs e)
         {
