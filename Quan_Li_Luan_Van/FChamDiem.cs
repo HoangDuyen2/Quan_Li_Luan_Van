@@ -28,7 +28,7 @@ namespace Quan_Li_Luan_Van
         }
         public void LoadDSThanhVien()
         {
-            giangVienDAO.LoadListThanhVien(this.maLV, flpDSThanhVien);
+            giangVienDAO.LoadListScoreThanhVien(this.maLV, flpDSThanhVien);
         }
         public void LoadDataChart()
         {
