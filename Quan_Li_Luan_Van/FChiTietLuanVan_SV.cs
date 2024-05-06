@@ -73,16 +73,20 @@ namespace Quan_Li_Luan_Van
             luanVan = chiTiet.LoadLVD(maLV);
         }
 
-        private void btnChapNhan_Click(object sender, EventArgs e)
+        private void btnDangKy_Click(object sender, EventArgs e)
         {
             luanVan.MSSV11 = sinhVien.getMaso();
             luanVan.MSSV21 = ucChiTietLuanVan1.TxtTVien2.Text;
             luanVan.MSSV31 = ucChiTietLuanVan1.TxtTV3.Text;
-            if(chiTiet.checkNguoiDangKy(luanVan))
+
+            if (chiTiet.checkNguoiDangKy(luanVan))
+            {
                 chiTiet.DangKy(luanVan);
+                MessageBox.Show("Đăng kí thành công");
+                this.DialogResult = DialogResult.OK;
+            }
             this.Close();
         }
-
     }
 
 }

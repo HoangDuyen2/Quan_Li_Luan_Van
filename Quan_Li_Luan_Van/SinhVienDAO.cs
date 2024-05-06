@@ -100,12 +100,12 @@ namespace Quan_Li_Luan_Van
             string query1;
             if (luanVan.MSSV31 == "")
             {
-                query1 = string.Format("INSERT INTO DuyetDangKy (MaLV, MSSV1, MSSV2, MSSV3, TinhTrang) " + "VALUES ('{0}','{1}','{2}',NULL,N'Đang chờ duyệt')",
+                query1 = string.Format("INSERT INTO DuyetDangKy (MaLV, MSSV1, MSSV2, MSSV3, TinhTrang) " + " VALUES ('{0}','{1}','{2}',NULL,N'Đang chờ duyệt')",
                 luanVan.MaLV, luanVan.MSSV11, luanVan.MSSV21);
             }
             else
             {
-                query1 = string.Format("INSERT INTO DuyetDangKy (MaLV, MSSV1, MSSV2, MSSV3, TinhTrang) " + "VALUES ('{0}','{1}','{2}','{3}',N'Đang chờ duyệt')",
+                query1 = string.Format("INSERT INTO DuyetDangKy (MaLV, MSSV1, MSSV2, MSSV3, TinhTrang) " + " VALUES ('{0}','{1}','{2}','{3}',N'Đang chờ duyệt')",
                 luanVan.MaLV, luanVan.MSSV11, luanVan.MSSV21, luanVan.MSSV31);
             }
             dbConnection.ThucThi(query1);
