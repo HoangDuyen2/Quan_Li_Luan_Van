@@ -96,7 +96,7 @@ namespace Quan_Li_Luan_Van
                     decimal score = decimal.Parse(uc.TxtDiem.Text, CultureInfo.InvariantCulture);
                     score = Math.Round(score, 2); 
                     string mssv = uc.LblMSSV.Text;
-                    new GiangVienDAO().UpdateStudentScore(mssv, score);
+                    new GiangVienDAO().UpdateStudentScore(mssv, score, maLV);
                 }
                 MessageBox.Show("Scores updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

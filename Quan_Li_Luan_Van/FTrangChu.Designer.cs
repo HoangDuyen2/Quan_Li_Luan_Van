@@ -188,6 +188,7 @@
             this.Controls.Add(this.flpanelDSThongBao);
             this.Controls.Add(this.panelChucnang);
             this.Name = "FTrangChu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang chủ";
             this.Load += new System.EventHandler(this.FTrangChu_Load);
             this.panelChucnang.ResumeLayout(false);

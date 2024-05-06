@@ -111,6 +111,7 @@
             this.Controls.Add(this.flPanelDSTask);
             this.Controls.Add(this.groupBoxTraCuuLuanVan);
             this.Name = "FLuanVanCuaToi_SV";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FLuanVanToi_SV";
             this.Load += new System.EventHandler(this.FLuanVanToi_SV_Load);
             this.groupBoxTraCuuLuanVan.ResumeLayout(false);

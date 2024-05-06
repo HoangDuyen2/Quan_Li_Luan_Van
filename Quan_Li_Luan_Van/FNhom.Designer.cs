@@ -71,6 +71,7 @@
             this.Controls.Add(this.flpanelDSNhom);
             this.Controls.Add(this.PanelTieuDe);
             this.Name = "FNhom";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FNhom";
             this.Load += new System.EventHandler(this.FNhom_Load);
             this.PanelTieuDe.ResumeLayout(false);

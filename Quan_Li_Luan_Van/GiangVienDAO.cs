@@ -139,8 +139,8 @@ namespace Quan_Li_Luan_Van
         }
         public void ThemLuanVan(LuanVan luanVan)
         {
-            string sqlThem = string.Format("INSERT INTO LuanVan(MaLV, TenLV, MaGV, ChuyenNganh, LinhVuc, ChucNang, CongNghe,NgonNgu, YeuCau, TrangThai) VALUES ('{0}', N'{1}', '{2}', N'{3}', N'{4}', N'{5}', N'{6}', N'{7}', N'{8}', N'{9}')",
-                luanVan.MaLV, luanVan.TenLV, luanVan.MaGV, luanVan.ChuyenNganh, luanVan.LinhVuc, luanVan.ChucNang, luanVan.CongNghe, luanVan.NgonNgu, luanVan.YeuCau, luanVan.TrangThai);
+            string sqlThem = string.Format("INSERT INTO LuanVan(MaLV, TenLV, MaGV, ChuyenNganh, LinhVuc, ChucNang, CongNghe,NgonNgu, YeuCau, TrangThai, TinhTrang) VALUES ('{0}', N'{1}', '{2}', N'{3}', N'{4}', N'{5}', N'{6}', N'{7}', N'{8}', N'{9}', N'{10}')",
+                luanVan.MaLV, luanVan.TenLV, luanVan.MaGV, luanVan.ChuyenNganh, luanVan.LinhVuc, luanVan.ChucNang, luanVan.CongNghe, luanVan.NgonNgu, luanVan.YeuCau, luanVan.TrangThai, "Chưa hoàn thành");
             dBConnection.ThucThi(sqlThem);
         }
         public LuanVan getLuanVan(string maLV)
@@ -291,9 +291,10 @@ namespace Quan_Li_Luan_Van
                 panel.Controls.Add(uCChamDiem);
             }
         }
-        public void UpdateStudentScore(string mssv, decimal score)
+        public void UpdateStudentScore(string mssv, decimal score, string maLV)
         {
-            string query = "UPDATE SinhVien SET Diem = @score WHERE MSSV = @mssv";
+            string query = "UPDATE SinhVien SET Diem = @score,  WHERE MSSV = @mssv";
+            string quenry = "UPDATE LuanVan SET TinhTrang = N'Đã hoàn thành' WHERE MaLV = @MaLV";
             try
             {
                 using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr))
@@ -303,6 +304,12 @@ namespace Quan_Li_Luan_Van
                     {
                         cmd.Parameters.AddWithValue("@score", score);
                         cmd.Parameters.AddWithValue("@mssv", mssv);
+                        cmd.ExecuteNonQuery();
+                    }
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand(quenry, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@MaLV", maLV);
                         cmd.ExecuteNonQuery();
                     }
                 }
