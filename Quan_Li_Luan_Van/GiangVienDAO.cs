@@ -293,7 +293,7 @@ namespace Quan_Li_Luan_Van
         }
         public void UpdateStudentScore(string mssv, decimal score, string maLV)
         {
-            string query = "UPDATE SinhVien SET Diem = @score,  WHERE MSSV = @mssv";
+            string query = "UPDATE SinhVien SET Diem = @score  WHERE MSSV = @mssv";
             string quenry = "UPDATE LuanVan SET TinhTrang = N'Đã hoàn thành' WHERE MaLV = @MaLV";
             try
             {
@@ -306,12 +306,14 @@ namespace Quan_Li_Luan_Van
                         cmd.Parameters.AddWithValue("@mssv", mssv);
                         cmd.ExecuteNonQuery();
                     }
+                    conn.Close();
                     conn.Open();
                     using (SqlCommand cmd = new SqlCommand(quenry, conn))
                     {
                         cmd.Parameters.AddWithValue("@MaLV", maLV);
                         cmd.ExecuteNonQuery();
                     }
+                    conn.Close();
                 }
             }
             catch (Exception ex)
