@@ -39,7 +39,7 @@
             // btnThoat
             // 
             this.btnThoat.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
-            this.btnThoat.Location = new System.Drawing.Point(275, 342);
+            this.btnThoat.Location = new System.Drawing.Point(186, 342);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
             this.btnThoat.Size = new System.Drawing.Size(125, 40);
@@ -52,7 +52,7 @@
             this.lblXemDiem.AutoSize = true;
             this.lblXemDiem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblXemDiem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblXemDiem.Location = new System.Drawing.Point(288, 9);
+            this.lblXemDiem.Location = new System.Drawing.Point(199, 9);
             this.lblXemDiem.Name = "lblXemDiem";
             this.lblXemDiem.Size = new System.Drawing.Size(112, 28);
             this.lblXemDiem.TabIndex = 26;
@@ -60,8 +60,9 @@
             // 
             // flpDSThanhVien
             // 
+            this.flpDSThanhVien.BackColor = System.Drawing.SystemColors.HighlightText;
             this.flpDSThanhVien.Controls.Add(this.ucChamDiem1);
-            this.flpDSThanhVien.Location = new System.Drawing.Point(132, 50);
+            this.flpDSThanhVien.Location = new System.Drawing.Point(43, 50);
             this.flpDSThanhVien.Name = "flpDSThanhVien";
             this.flpDSThanhVien.Size = new System.Drawing.Size(421, 281);
             this.flpDSThanhVien.TabIndex = 31;
@@ -77,7 +78,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 391);
+            this.ClientSize = new System.Drawing.Size(517, 391);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.lblXemDiem);
             this.Controls.Add(this.flpDSThanhVien);
