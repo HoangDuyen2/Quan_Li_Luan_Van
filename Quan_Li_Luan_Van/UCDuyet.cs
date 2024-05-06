@@ -25,8 +25,16 @@ namespace Quan_Li_Luan_Van
         public PictureBox PictureBoxNen { get => pictureBoxNen; set => pictureBoxNen = value; }
         private void buttonChiTiet_Click(object sender, EventArgs e)
         {
-            FChiTietDuyet chiTietDuyet = new FChiTietDuyet(MaLV);
-            chiTietDuyet.Show();
+            FDuyetLuanVan parentForm = this.ParentForm as FDuyetLuanVan;
+            if (parentForm != null)
+            {
+                FChiTietDuyet chiTietDuyet = new FChiTietDuyet(maLV, parentForm);
+                chiTietDuyet.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Failed to find parent form.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
