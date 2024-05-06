@@ -293,7 +293,7 @@ namespace Quan_Li_Luan_Van
         }
         public void UpdateStudentScore(string mssv, decimal score, string maLV)
         {
-            string query = "UPDATE SinhVien SET Diem = @score,  WHERE MSSV = @mssv";
+            string query = "UPDATE SinhVien SET Diem = @score WHERE MSSV = @mssv";
             string quenry = "UPDATE LuanVan SET TinhTrang = N'Đã hoàn thành' WHERE MaLV = @MaLV";
             try
             {

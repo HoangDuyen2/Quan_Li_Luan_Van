@@ -37,7 +37,7 @@ namespace Quan_Li_Luan_Van
         }
         private void btnChiTiet_Click(object sender, EventArgs e)
         {
-            FChiTietTask_All fChiTietTask_GV = new FChiTietTask_All(maNV, MaNguoiDangNhap);
+            FChiTietTask_All fChiTietTask_GV = new FChiTietTask_All(maNV, MaNguoiDangNhap, maLV);
             fChiTietTask_GV.ShowDialog();
         }
     }

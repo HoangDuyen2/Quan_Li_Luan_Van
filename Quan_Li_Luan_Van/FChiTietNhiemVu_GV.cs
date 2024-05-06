@@ -14,15 +14,21 @@ namespace Quan_Li_Luan_Van
     {
         private string maNV;
         private string maGV;
+        private string maLV;
         GiangVienDAO gvDAO = new GiangVienDAO();
         public FChiTietTask_All()
         {
             InitializeComponent();
         }
-        public FChiTietTask_All(string MaNV, string maGV) : this()
+        public FChiTietTask_All(string MaNV, string maGV, string MaLV) : this()
         {
             this.maNV = MaNV;
             this.maGV = maGV;
+            this.maLV = MaLV;
+            if (gvDAO.getTinhTrangLVCuaToi(maLV) == "Đã hoàn thành")
+            {
+                btnPhanHoi.Enabled = false;
+            }
             LoadInfoTask();
             LoadPhanHoi();
             LoadCapNhatTienTrinh();
