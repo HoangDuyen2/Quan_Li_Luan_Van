@@ -15,11 +15,12 @@ namespace Quan_Li_Luan_Van
         private string maNV;
         private string MSSV;
         private SinhVienDAO svDAO = new SinhVienDAO();
+        private FLuanVanCuaToi_SV parentForm;
         public FCapNhatTienTrinh()
         {
             InitializeComponent();
         }
-        public FCapNhatTienTrinh(string maNV, string maSV) : this()
+        public FCapNhatTienTrinh(string maNV, string maSV, FLuanVanCuaToi_SV parentForm) : this()
         {
             this.maNV = maNV;
             this.MSSV = maSV;
@@ -33,6 +34,7 @@ namespace Quan_Li_Luan_Van
                 btnCapNhat.Enabled = false;
                 btnPhanHoi.Enabled = false;
             }
+            this.parentForm = parentForm;
         }
         public void LoadInfoTask()
         {
@@ -164,6 +166,10 @@ namespace Quan_Li_Luan_Van
                 LoadDataChart();
                 LoadCapNhatTienTrinh();
                 LoadInfoTask();
+                if (parentForm != null)
+                {
+                    parentForm.LoadNhiemVu();
+                }
             }
             else
             {

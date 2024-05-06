@@ -16,7 +16,6 @@ namespace Quan_Li_Luan_Van
         private string maNV;
         private string maNguoiTao;
         private string mssvLogin;
-
         public UCTask_SV()
         {
             InitializeComponent();
@@ -35,8 +34,16 @@ namespace Quan_Li_Luan_Van
         }
         private void btnChiTiet_Click(object sender, EventArgs e)
         {
-            FCapNhatTienTrinh fCapNhatTienTrinh = new FCapNhatTienTrinh(maNV, mssvLogin);
-            fCapNhatTienTrinh.ShowDialog();
+            FLuanVanCuaToi_SV parentForm = this.ParentForm as FLuanVanCuaToi_SV;
+            if (parentForm != null)
+            {
+                FCapNhatTienTrinh fCapNhatTienTrinh = new FCapNhatTienTrinh(maNV, mssvLogin, parentForm);
+                fCapNhatTienTrinh.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Failed to find parent form.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -176,7 +176,7 @@
             this.lblThemNV.AutoSize = true;
             this.lblThemNV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThemNV.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblThemNV.Location = new System.Drawing.Point(217, 4);
+            this.lblThemNV.Location = new System.Drawing.Point(207, 4);
             this.lblThemNV.Name = "lblThemNV";
             this.lblThemNV.Size = new System.Drawing.Size(207, 28);
             this.lblThemNV.TabIndex = 16;

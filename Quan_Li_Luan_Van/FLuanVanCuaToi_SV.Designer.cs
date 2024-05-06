@@ -30,9 +30,10 @@
         {
             this.flPanelDSTask = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBoxTraCuuLuanVan = new System.Windows.Forms.GroupBox();
+            this.lblTenLV = new System.Windows.Forms.Label();
             this.buttonXemDiem = new System.Windows.Forms.Button();
             this.btnThemNhiemVu = new System.Windows.Forms.Button();
-            this.lblTenLV = new System.Windows.Forms.Label();
+            this.lblDSNV = new System.Windows.Forms.Label();
             this.groupBoxTraCuuLuanVan.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,6 +48,7 @@
             // 
             // groupBoxTraCuuLuanVan
             // 
+            this.groupBoxTraCuuLuanVan.Controls.Add(this.lblDSNV);
             this.groupBoxTraCuuLuanVan.Controls.Add(this.lblTenLV);
             this.groupBoxTraCuuLuanVan.Controls.Add(this.buttonXemDiem);
             this.groupBoxTraCuuLuanVan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -57,13 +59,24 @@
             this.groupBoxTraCuuLuanVan.TabIndex = 29;
             this.groupBoxTraCuuLuanVan.TabStop = false;
             // 
+            // lblTenLV
+            // 
+            this.lblTenLV.AutoSize = true;
+            this.lblTenLV.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenLV.Location = new System.Drawing.Point(6, 0);
+            this.lblTenLV.Name = "lblTenLV";
+            this.lblTenLV.Size = new System.Drawing.Size(506, 38);
+            this.lblTenLV.TabIndex = 16;
+            this.lblTenLV.Text = "Bạn chưa tham gia bất kì luận văn nào";
+            this.lblTenLV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // buttonXemDiem
             // 
             this.buttonXemDiem.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonXemDiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonXemDiem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.buttonXemDiem.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.buttonXemDiem.Location = new System.Drawing.Point(84, 64);
+            this.buttonXemDiem.Location = new System.Drawing.Point(916, 73);
             this.buttonXemDiem.Name = "buttonXemDiem";
             this.buttonXemDiem.Size = new System.Drawing.Size(142, 39);
             this.buttonXemDiem.TabIndex = 15;
@@ -90,16 +103,15 @@
             this.btnThemNhiemVu.UseVisualStyleBackColor = false;
             this.btnThemNhiemVu.Click += new System.EventHandler(this.btnThemNhiemVu_Click);
             // 
-            // lblTenLV
+            // lblDSNV
             // 
-            this.lblTenLV.AutoSize = true;
-            this.lblTenLV.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenLV.Location = new System.Drawing.Point(6, 0);
-            this.lblTenLV.Name = "lblTenLV";
-            this.lblTenLV.Size = new System.Drawing.Size(506, 38);
-            this.lblTenLV.TabIndex = 16;
-            this.lblTenLV.Text = "Bạn chưa tham gia bất kì luận văn nào";
-            this.lblTenLV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblDSNV.AutoSize = true;
+            this.lblDSNV.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSNV.Location = new System.Drawing.Point(9, 89);
+            this.lblDSNV.Name = "lblDSNV";
+            this.lblDSNV.Size = new System.Drawing.Size(167, 23);
+            this.lblDSNV.TabIndex = 0;
+            this.lblDSNV.Text = "Danh sách nhiệm vụ";
             // 
             // FLuanVanCuaToi_SV
             // 
@@ -126,5 +138,6 @@
         private System.Windows.Forms.Button buttonXemDiem;
         private System.Windows.Forms.Button btnThemNhiemVu;
         private System.Windows.Forms.Label lblTenLV;
+        private System.Windows.Forms.Label lblDSNV;
     }
 }

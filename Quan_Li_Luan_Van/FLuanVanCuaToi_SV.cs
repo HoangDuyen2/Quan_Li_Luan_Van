@@ -23,19 +23,18 @@ namespace Quan_Li_Luan_Van
         private void FLuanVanToi_SV_Load(object sender, EventArgs e)
         {
             maLV = luanVan.getMaLVCuaToi(sinhVien.getMaso());
-            if (maLV != "")
+            if (string.IsNullOrEmpty(maLV))
             {
-                LoadNhiemVu();
-                if(luanVan.getTinhTrangLVCuaToi(maLV) == "Đã hoàn thành")
-                {
-                    btnThemNhiemVu.Enabled = false;
-                }
+                btnThemNhiemVu.Enabled = false;
+                buttonXemDiem.Enabled = false;
+                MessageBox.Show("Sinh viên hiện chưa tham gia vào luận văn nào. Vui lòng đăng kí luận văn trước", "Thông báo");
             }
             else
             {
-                buttonXemDiem.Enabled = false;
-                btnThemNhiemVu.Enabled = false;
-                MessageBox.Show("Sinh viên hiện chưa tham gia vào luận văn nào. Vui lòng đăng kí luận văn trước", "Thông báo");
+                LoadNhiemVu();
+                string tinhTrangLV = luanVan.getTinhTrangLVCuaToi(maLV);
+                btnThemNhiemVu.Enabled = tinhTrangLV != "Đã hoàn thành";
+                buttonXemDiem.Enabled = tinhTrangLV == "Đã hoàn thành";
             }
         }
         public void LoadNhiemVu()
@@ -48,15 +47,13 @@ namespace Quan_Li_Luan_Van
             FThemNhiemVu fThemNhiemVu = new FThemNhiemVu(luanVan.getMaLVCuaToi(sinhVien.getMaso()), sinhVien.getMaso());
             if (fThemNhiemVu.ShowDialog() == DialogResult.OK)
             {
-                FLuanVanToi_SV_Load(sender, e);
+                LoadNhiemVu();
             }
-            
         }
         private void buttonXemDiem_Click(object sender, EventArgs e)
         {
             FXemDiem fXemDiem = new FXemDiem(luanVan.getMaLVCuaToi(sinhVien.getMaso()));
             fXemDiem.ShowDialog();
-            LoadNhiemVu();
         }
     }
-    }
+}
