@@ -98,7 +98,7 @@ namespace Quan_Li_Luan_Van
         public void DangKy(LuanVanDuyet luanVan)
         {
             string query1;
-            if (luanVan.MSSV31 == "")
+            if (luanVan.MSSV31 == "" || luanVan.MSSV31 == "Mời nhập vào")
             {
                 query1 = string.Format("INSERT INTO DuyetDangKy (MaLV, MSSV1, MSSV2, MSSV3, TinhTrang) " + " VALUES ('{0}','{1}','{2}',NULL,N'Đang chờ duyệt')",
                 luanVan.MaLV, luanVan.MSSV11, luanVan.MSSV21);
@@ -152,10 +152,13 @@ namespace Quan_Li_Luan_Van
             }
             return queryDKLV;
         }
-
+        public bool isValidStudent(string MSSV)
+        {
+            string sqlStr = string.Format("SELECT * FROM SinhVien WHERE MSSV = '{0}'", MSSV);
+            return dbConnection.KiemTra(sqlStr);
+        }
         public bool checkTungNguoiDangKy(string MSSV)
         {
-
             string sqlStr = string.Format("SELECT * FROM DSThanhVien WHERE MSSV1 = '{0}' OR MSSV2 = '{1}' OR MSSV3 = '{2}'", MSSV, MSSV, MSSV);
             if (dbConnection.KiemTra(sqlStr))
             {
@@ -171,25 +174,23 @@ namespace Quan_Li_Luan_Van
 
         public bool checkNguoiDangKy(LuanVanDuyet luanVan)
         {
-            if (luanVan.MSSV11 != "")
+            if (!isValidStudent(luanVan.MSSV21))
             {
-                if (checkTungNguoiDangKy(luanVan.MSSV11))
+                MessageBox.Show("MSSV thành viên thứ 2 không hợp lệ");
+                return false;
+            } else if (checkTungNguoiDangKy(luanVan.MSSV21))
+            {
+                MessageBox.Show("MSSV2 đã có nhóm");
+                return false;
+            }
+            if (luanVan.MSSV31 != "" && luanVan.MSSV31 != "Mời nhập vào")
+            {
+                if (!isValidStudent(luanVan.MSSV31))
                 {
-                    MessageBox.Show("MSSV1 đã có nhóm");
+                    MessageBox.Show("MSSV thành viên thứ 3 không hợp lệ");
                     return false;
                 }
-            }
-            if (luanVan.MSSV21 != "")
-            {
-                if (checkTungNguoiDangKy(luanVan.MSSV21))
-                {
-                    MessageBox.Show("MSSV2 đã có nhóm");
-                    return false;
-                }
-            }
-            if (luanVan.MSSV31 != "")
-            {
-                if (checkTungNguoiDangKy(luanVan.MSSV31))
+                else if (checkTungNguoiDangKy(luanVan.MSSV31))
                 {
                     MessageBox.Show("MSSV3 đã có nhóm");
                     return false;

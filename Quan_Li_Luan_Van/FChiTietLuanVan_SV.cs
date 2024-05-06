@@ -78,15 +78,16 @@ namespace Quan_Li_Luan_Van
             luanVan.MSSV11 = sinhVien.getMaso();
             luanVan.MSSV21 = ucChiTietLuanVan1.TxtTVien2.Text;
             luanVan.MSSV31 = ucChiTietLuanVan1.TxtTV3.Text;
-
+            if (string.IsNullOrWhiteSpace(luanVan.MSSV21) && string.IsNullOrWhiteSpace(luanVan.MSSV31))
+            {
+                MessageBox.Show("Cần thêm ít nhất 1 thành viên nữa để tạo nhóm! ");
+                return;
+            }
             if (chiTiet.checkNguoiDangKy(luanVan))
             {
                 chiTiet.DangKy(luanVan);
-                MessageBox.Show("Đăng kí thành công");
-                this.DialogResult = DialogResult.OK;
+                MessageBox.Show("Đăng kí thành công, chờ giáo viên duyệt để chính thức tham gia luận văn này");
             }
-            this.Close();
         }
     }
-
 }
