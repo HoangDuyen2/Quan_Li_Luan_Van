@@ -287,9 +287,9 @@
             this.btnChapNhan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnChapNhan.Image = global::Quan_Li_Luan_Van.Properties.Resources.approve1;
             this.btnChapNhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChapNhan.Location = new System.Drawing.Point(806, 606);
+            this.btnChapNhan.Location = new System.Drawing.Point(784, 606);
             this.btnChapNhan.Name = "btnChapNhan";
-            this.btnChapNhan.Size = new System.Drawing.Size(144, 42);
+            this.btnChapNhan.Size = new System.Drawing.Size(170, 42);
             this.btnChapNhan.TabIndex = 60;
             this.btnChapNhan.Text = "Chấp nhận";
             this.btnChapNhan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -305,7 +305,7 @@
             this.btnTuChoi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnTuChoi.Image = global::Quan_Li_Luan_Van.Properties.Resources.reject;
             this.btnTuChoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTuChoi.Location = new System.Drawing.Point(668, 606);
+            this.btnTuChoi.Location = new System.Drawing.Point(646, 606);
             this.btnTuChoi.Name = "btnTuChoi";
             this.btnTuChoi.Size = new System.Drawing.Size(132, 42);
             this.btnTuChoi.TabIndex = 59;

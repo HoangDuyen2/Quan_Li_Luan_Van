@@ -66,7 +66,7 @@ namespace Quan_Li_Luan_Van
         public string LoadTrangChu(string maLV)
         {
             string sql = " WHERE MaLV = '" + maLV + "' ";
-            return queryTrangChu + sql;
+            return queryTrangChu + sql + " ORDER BY ThoiGian DESC";
         }
 
         public ThongBao noiDungTB(string maTB)
