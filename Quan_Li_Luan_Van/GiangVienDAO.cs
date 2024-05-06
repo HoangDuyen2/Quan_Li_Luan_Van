@@ -291,9 +291,10 @@ namespace Quan_Li_Luan_Van
                 panel.Controls.Add(uCChamDiem);
             }
         }
-        public void UpdateStudentScore(string mssv, decimal score)
+        public void UpdateStudentScore(string mssv, decimal score, string maLV)
         {
-            string query = "UPDATE SinhVien SET Diem = @score WHERE MSSV = @mssv";
+            string query = "UPDATE SinhVien SET Diem = @score,  WHERE MSSV = @mssv";
+            string quenry = "UPDATE LuanVan SET TinhTrang = N'Đã hoàn thành' WHERE MaLV = @MaLV";
             try
             {
                 using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr))
@@ -303,6 +304,12 @@ namespace Quan_Li_Luan_Van
                     {
                         cmd.Parameters.AddWithValue("@score", score);
                         cmd.Parameters.AddWithValue("@mssv", mssv);
+                        cmd.ExecuteNonQuery();
+                    }
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand(quenry, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@MaLV", maLV);
                         cmd.ExecuteNonQuery();
                     }
                 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ucThongTinCaNhan1 = new Quan_Li_Luan_Van.UCThongTinCaNhan();
             this.SuspendLayout();
             // 
@@ -45,6 +46,7 @@
             this.ClientSize = new System.Drawing.Size(1077, 714);
             this.Controls.Add(this.ucThongTinCaNhan1);
             this.Name = "FThongTinCaNhan_SV";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FThongTinCaNhan_SV";
             this.Load += new System.EventHandler(this.FThongTinCaNhan_SV_Load);
             this.ResumeLayout(false);

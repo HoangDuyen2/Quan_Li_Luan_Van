@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.panelChucnang = new System.Windows.Forms.Panel();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.lbNoiDungTB = new System.Windows.Forms.Label();
+            this.btnTimKiem = new System.Windows.Forms.Button();
             this.lblTieuDe = new System.Windows.Forms.Label();
             this.dtNgayThang = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.lblChonngay = new System.Windows.Forms.Label();
             this.txtTimkiem = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.flpanelDSThongBao = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.btnTimKiem = new System.Windows.Forms.Button();
             this.panelChucnang.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +57,23 @@
             this.panelChucnang.Size = new System.Drawing.Size(1050, 127);
             this.panelChucnang.TabIndex = 5;
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnRefresh.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnRefresh.Image = global::Quan_Li_Luan_Van.Properties.Resources.refresh2;
+            this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRefresh.Location = new System.Drawing.Point(19, 71);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(143, 42);
+            this.btnRefresh.TabIndex = 57;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // lbNoiDungTB
             // 
             this.lbNoiDungTB.AutoSize = true;
@@ -68,6 +85,24 @@
             this.lbNoiDungTB.Size = new System.Drawing.Size(80, 19);
             this.lbNoiDungTB.TabIndex = 56;
             this.lbNoiDungTB.Text = "Nội dung";
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnTimKiem.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnTimKiem.Image = global::Quan_Li_Luan_Van.Properties.Resources.find;
+            this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimKiem.Location = new System.Drawing.Point(879, 73);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(158, 42);
+            this.btnTimKiem.TabIndex = 55;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // lblTieuDe
             // 
@@ -145,41 +180,6 @@
             this.flpanelDSThongBao.Size = new System.Drawing.Size(1050, 532);
             this.flpanelDSThongBao.TabIndex = 6;
             // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnRefresh.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnRefresh.Image = global::Quan_Li_Luan_Van.Properties.Resources.refresh2;
-            this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefresh.Location = new System.Drawing.Point(19, 71);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(143, 42);
-            this.btnRefresh.TabIndex = 57;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnTimKiem.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnTimKiem.Image = global::Quan_Li_Luan_Van.Properties.Resources.find;
-            this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiem.Location = new System.Drawing.Point(879, 73);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(158, 42);
-            this.btnTimKiem.TabIndex = 55;
-            this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTimKiem.UseVisualStyleBackColor = false;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
-            // 
             // FTrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -188,6 +188,7 @@
             this.Controls.Add(this.flpanelDSThongBao);
             this.Controls.Add(this.panelChucnang);
             this.Name = "FTrangChu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang chủ";
             this.Load += new System.EventHandler(this.FTrangChu_Load);
             this.panelChucnang.ResumeLayout(false);

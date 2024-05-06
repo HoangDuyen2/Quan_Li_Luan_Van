@@ -152,6 +152,7 @@
             this.Controls.Add(this.groupBoxTraCuuLuanVan);
             this.Controls.Add(this.flPanelDSLV);
             this.Name = "FLuanVanCuaToi_GV";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Luận Văn Của Tôi";
             this.Load += new System.EventHandler(this.FLuanVanToi_Load);
             this.panelTitle.ResumeLayout(false);
