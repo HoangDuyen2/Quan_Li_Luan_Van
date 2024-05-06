@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Quan_Li_Luan_Van
 {
-    public class SinhVienDAO: PersonDAO
+    public class SinhVienDAO : PersonDAO
     {
         DBConnection dbConnection = new DBConnection();
         #region Load Form Trang chủ
@@ -20,8 +20,8 @@ namespace Quan_Li_Luan_Van
         {
             string maLV = "";
             string sqlStr = string.Format("SELECT * FROM DSThanhVien WHERE MSSV1 = '{0}' OR MSSV2 = '{1}' OR MSSV3 = '{2}'", MSSV, MSSV, MSSV);
-            List<Dictionary<string,object>> getMaLV = dbConnection.ExecuteReaderData(sqlStr);
-            foreach(var row in getMaLV)
+            List<Dictionary<string, object>> getMaLV = dbConnection.ExecuteReaderData(sqlStr);
+            foreach (var row in getMaLV)
             {
                 maLV = (string)row["MaLV"].ToString();
             }
@@ -32,7 +32,7 @@ namespace Quan_Li_Luan_Van
         {
             panel.Controls.Clear();
             List<Dictionary<string, object>> ds = dbConnection.ExecuteReaderData(truyVan);
-            foreach(var row in ds)
+            foreach (var row in ds)
             {
                 UCThongBao uctb = new UCThongBao();
                 uctb.ID_TB1 = (string)row["ID_TB"].ToString();
@@ -178,7 +178,8 @@ namespace Quan_Li_Luan_Van
             {
                 MessageBox.Show("MSSV thành viên thứ 2 không hợp lệ");
                 return false;
-            } else if (checkTungNguoiDangKy(luanVan.MSSV21))
+            }
+            else if (checkTungNguoiDangKy(luanVan.MSSV21))
             {
                 MessageBox.Show("MSSV2 đã có nhóm");
                 return false;
@@ -270,7 +271,7 @@ namespace Quan_Li_Luan_Van
                 conn.Close();
             }
         }
-            public class PersonDAO
+        public class PersonDAO
         {
             DBConnection dBConnection = new DBConnection();
             #region Load label ở form FSinhVien và FGiangVien
@@ -467,7 +468,7 @@ namespace Quan_Li_Luan_Van
         }
 
     }
-        #endregion
+    #endregion
 }
 
 

@@ -32,7 +32,6 @@ namespace Quan_Li_Luan_Van
             labelMSSV.Text = gv.getMaso();
             labelTen.Text = gv.getHoTen();
             labelChucVu.Text = taiKhoan.getChucVu();
-            OpenChildForm(new FNhom(gv), sender);
         }
 
         private Form activeForm;
