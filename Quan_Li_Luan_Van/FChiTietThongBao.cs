@@ -28,8 +28,7 @@ namespace Quan_Li_Luan_Van
             txtTenTieuDe.Text = tb.TieuDe;
             txtThoiGian.Text = tb.ThoiGian;
         }
-
-        private void btnThem_Click(object sender, EventArgs e)
+        private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
         }

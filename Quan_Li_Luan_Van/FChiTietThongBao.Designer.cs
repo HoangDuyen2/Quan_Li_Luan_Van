@@ -37,7 +37,7 @@
             this.lblNDTB = new System.Windows.Forms.Label();
             this.txtTenTieuDe = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.lblTieuDe = new System.Windows.Forms.Label();
-            this.btnThem = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnThoat = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.lblTB = new System.Windows.Forms.Label();
             this.panelNoidung.SuspendLayout();
             this.SuspendLayout();
@@ -54,16 +54,16 @@
             this.panelNoidung.Controls.Add(this.txtTenTieuDe);
             this.panelNoidung.Controls.Add(this.lblTieuDe);
             this.panelNoidung.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.panelNoidung.Location = new System.Drawing.Point(19, 59);
+            this.panelNoidung.Location = new System.Drawing.Point(17, 40);
             this.panelNoidung.Name = "panelNoidung";
-            this.panelNoidung.Size = new System.Drawing.Size(653, 502);
+            this.panelNoidung.Size = new System.Drawing.Size(537, 455);
             this.panelNoidung.TabIndex = 12;
             // 
             // txtThoiGian
             // 
             this.txtThoiGian.Location = new System.Drawing.Point(149, 148);
             this.txtThoiGian.Name = "txtThoiGian";
-            this.txtThoiGian.Size = new System.Drawing.Size(481, 36);
+            this.txtThoiGian.Size = new System.Drawing.Size(372, 36);
             this.txtThoiGian.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtThoiGian.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.txtThoiGian.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -102,7 +102,7 @@
             // 
             this.txtNguoiGui.Location = new System.Drawing.Point(120, 80);
             this.txtNguoiGui.Name = "txtNguoiGui";
-            this.txtNguoiGui.Size = new System.Drawing.Size(510, 36);
+            this.txtNguoiGui.Size = new System.Drawing.Size(401, 36);
             this.txtNguoiGui.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtNguoiGui.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.txtNguoiGui.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -141,7 +141,7 @@
             // 
             this.txtNoiDungTB.Location = new System.Drawing.Point(16, 261);
             this.txtNoiDungTB.Name = "txtNoiDungTB";
-            this.txtNoiDungTB.Size = new System.Drawing.Size(614, 226);
+            this.txtNoiDungTB.Size = new System.Drawing.Size(505, 179);
             this.txtNoiDungTB.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.txtNoiDungTB.StateCommon.Border.Color2 = System.Drawing.Color.Blue;
             this.txtNoiDungTB.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -169,7 +169,7 @@
             // 
             this.txtTenTieuDe.Location = new System.Drawing.Point(120, 15);
             this.txtTenTieuDe.Name = "txtTenTieuDe";
-            this.txtTenTieuDe.Size = new System.Drawing.Size(510, 36);
+            this.txtTenTieuDe.Size = new System.Drawing.Size(401, 36);
             this.txtTenTieuDe.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtTenTieuDe.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.txtTenTieuDe.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -204,23 +204,23 @@
             this.lblTieuDe.TabIndex = 0;
             this.lblTieuDe.Text = "Tiêu đề";
             // 
-            // btnThem
+            // btnThoat
             // 
-            this.btnThem.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
-            this.btnThem.Location = new System.Drawing.Point(263, 567);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
-            this.btnThem.Size = new System.Drawing.Size(169, 40);
-            this.btnThem.TabIndex = 11;
-            this.btnThem.Values.Text = "Đã Xem";
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            this.btnThoat.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
+            this.btnThoat.Location = new System.Drawing.Point(201, 501);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
+            this.btnThoat.Size = new System.Drawing.Size(169, 40);
+            this.btnThoat.TabIndex = 11;
+            this.btnThoat.Values.Text = "Đã Xem";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // lblTB
             // 
             this.lblTB.AutoSize = true;
             this.lblTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTB.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblTB.Location = new System.Drawing.Point(279, 15);
+            this.lblTB.Location = new System.Drawing.Point(210, 9);
             this.lblTB.Name = "lblTB";
             this.lblTB.Size = new System.Drawing.Size(132, 28);
             this.lblTB.TabIndex = 10;
@@ -230,10 +230,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(690, 622);
+            this.ClientSize = new System.Drawing.Size(571, 551);
             this.Controls.Add(this.panelNoidung);
-            this.Controls.Add(this.btnThem);
+            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.lblTB);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FChiTietThongBao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi Tiết Thông Báo";
@@ -252,7 +253,7 @@
         private System.Windows.Forms.Label lblNDTB;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtTenTieuDe;
         private System.Windows.Forms.Label lblTieuDe;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnThem;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnThoat;
         private System.Windows.Forms.Label lblTB;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtNguoiGui;
         private System.Windows.Forms.Label lblNguoiGui;
