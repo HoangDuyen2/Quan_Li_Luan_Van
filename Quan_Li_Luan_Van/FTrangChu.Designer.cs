@@ -65,7 +65,7 @@
             this.btnRefresh.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnRefresh.Image = global::Quan_Li_Luan_Van.Properties.Resources.refresh2;
             this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefresh.Location = new System.Drawing.Point(19, 71);
+            this.btnRefresh.Location = new System.Drawing.Point(894, 73);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(143, 42);
             this.btnRefresh.TabIndex = 57;
@@ -80,7 +80,7 @@
             this.lbNoiDungTB.BackColor = System.Drawing.SystemColors.Control;
             this.lbNoiDungTB.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNoiDungTB.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbNoiDungTB.Location = new System.Drawing.Point(472, 86);
+            this.lbNoiDungTB.Location = new System.Drawing.Point(308, 86);
             this.lbNoiDungTB.Name = "lbNoiDungTB";
             this.lbNoiDungTB.Size = new System.Drawing.Size(80, 19);
             this.lbNoiDungTB.TabIndex = 56;
@@ -94,7 +94,7 @@
             this.btnTimKiem.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnTimKiem.Image = global::Quan_Li_Luan_Van.Properties.Resources.find;
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiem.Location = new System.Drawing.Point(879, 73);
+            this.btnTimKiem.Location = new System.Drawing.Point(711, 73);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(158, 42);
             this.btnTimKiem.TabIndex = 55;
@@ -120,7 +120,7 @@
             // 
             this.dtNgayThang.CalendarTodayDate = new System.DateTime(2024, 3, 16, 0, 0, 0, 0);
             this.dtNgayThang.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtNgayThang.Location = new System.Drawing.Point(265, 72);
+            this.dtNgayThang.Location = new System.Drawing.Point(101, 72);
             this.dtNgayThang.Name = "dtNgayThang";
             this.dtNgayThang.Size = new System.Drawing.Size(191, 43);
             this.dtNgayThang.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -144,7 +144,7 @@
             this.lblChonngay.BackColor = System.Drawing.SystemColors.Control;
             this.lblChonngay.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChonngay.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblChonngay.Location = new System.Drawing.Point(168, 86);
+            this.lblChonngay.Location = new System.Drawing.Point(4, 86);
             this.lblChonngay.Name = "lblChonngay";
             this.lblChonngay.Size = new System.Drawing.Size(91, 19);
             this.lblChonngay.TabIndex = 16;
@@ -152,7 +152,7 @@
             // 
             // txtTimkiem
             // 
-            this.txtTimkiem.Location = new System.Drawing.Point(562, 76);
+            this.txtTimkiem.Location = new System.Drawing.Point(398, 76);
             this.txtTimkiem.Name = "txtTimkiem";
             this.txtTimkiem.Size = new System.Drawing.Size(297, 39);
             this.txtTimkiem.StateCommon.Back.Color1 = System.Drawing.Color.White;

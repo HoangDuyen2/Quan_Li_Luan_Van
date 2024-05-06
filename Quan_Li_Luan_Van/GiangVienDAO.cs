@@ -271,29 +271,9 @@ namespace Quan_Li_Luan_Van
             }
             return "";
         }
-        public void LoadListThanhVien(string maLV, FlowLayoutPanel panel)
-        {
-            string query = @"SELECT DISTINCT sv.MSSV, sv.TenSV, sv.Diem
-                     FROM DSThanhVien dtv
-                     JOIN SinhVien sv ON sv.MSSV = dtv.MSSV1 OR sv.MSSV = dtv.MSSV2 OR sv.MSSV = dtv.MSSV3
-                     WHERE dtv.MaLV = @MaLV";
-            panel.Controls.Clear();
-            SqlParameter[] lstParam =
-            {
-                new SqlParameter("@MaLV", SqlDbType.NVarChar) {Value = maLV},
-            };
-            List<Dictionary<string, object>> ds = dBConnection.ExecuteReaderData(query,lstParam);
-            foreach (var row in ds)
-            {
-                UCChamDiem uCChamDiem = new UCChamDiem();
-                uCChamDiem.LblMSSV.Text = (string)row["MSSV"].ToString();
-                uCChamDiem.LblTenSV.Text = (string)row["TenSV"].ToString();
-                panel.Controls.Add(uCChamDiem);
-            }
-        }
         public void UpdateStudentScore(string mssv, decimal score, string maLV)
         {
-            string query = "UPDATE SinhVien SET Diem = @score WHERE MSSV = @mssv";
+            string query = "UPDATE SinhVien SET Diem = @score  WHERE MSSV = @mssv";
             string quenry = "UPDATE LuanVan SET TinhTrang = N'Đã hoàn thành' WHERE MaLV = @MaLV";
             try
             {
@@ -306,12 +286,14 @@ namespace Quan_Li_Luan_Van
                         cmd.Parameters.AddWithValue("@mssv", mssv);
                         cmd.ExecuteNonQuery();
                     }
+                    conn.Close();
                     conn.Open();
                     using (SqlCommand cmd = new SqlCommand(quenry, conn))
                     {
                         cmd.Parameters.AddWithValue("@MaLV", maLV);
                         cmd.ExecuteNonQuery();
                     }
+                    conn.Close();
                 }
             }
             catch (Exception ex)
