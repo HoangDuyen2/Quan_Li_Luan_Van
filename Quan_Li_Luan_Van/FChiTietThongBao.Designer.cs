@@ -63,7 +63,7 @@
             // 
             this.txtThoiGian.Location = new System.Drawing.Point(149, 148);
             this.txtThoiGian.Name = "txtThoiGian";
-            this.txtThoiGian.Size = new System.Drawing.Size(372, 36);
+            this.txtThoiGian.Size = new System.Drawing.Size(372, 37);
             this.txtThoiGian.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtThoiGian.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.txtThoiGian.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -73,8 +73,8 @@
             this.txtThoiGian.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.txtThoiGian.StateCommon.Border.Rounding = 16;
             this.txtThoiGian.StateCommon.Border.Width = 1;
-            this.txtThoiGian.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtThoiGian.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtThoiGian.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.txtThoiGian.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.txtThoiGian.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtThoiGian.StateDisabled.Border.Color1 = System.Drawing.Color.Blue;
             this.txtThoiGian.StateDisabled.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -102,7 +102,7 @@
             // 
             this.txtNguoiGui.Location = new System.Drawing.Point(120, 80);
             this.txtNguoiGui.Name = "txtNguoiGui";
-            this.txtNguoiGui.Size = new System.Drawing.Size(401, 36);
+            this.txtNguoiGui.Size = new System.Drawing.Size(401, 37);
             this.txtNguoiGui.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtNguoiGui.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.txtNguoiGui.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -112,8 +112,8 @@
             this.txtNguoiGui.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.txtNguoiGui.StateCommon.Border.Rounding = 16;
             this.txtNguoiGui.StateCommon.Border.Width = 1;
-            this.txtNguoiGui.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtNguoiGui.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNguoiGui.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.txtNguoiGui.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.txtNguoiGui.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtNguoiGui.StateDisabled.Border.Color1 = System.Drawing.Color.Blue;
             this.txtNguoiGui.StateDisabled.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -149,8 +149,8 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtNoiDungTB.StateCommon.Border.Rounding = 12;
             this.txtNoiDungTB.StateCommon.Border.Width = 1;
-            this.txtNoiDungTB.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtNoiDungTB.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F);
+            this.txtNoiDungTB.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.txtNoiDungTB.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.txtNoiDungTB.TabIndex = 29;
             this.txtNoiDungTB.Text = "";
             // 
@@ -169,7 +169,7 @@
             // 
             this.txtTenTieuDe.Location = new System.Drawing.Point(120, 15);
             this.txtTenTieuDe.Name = "txtTenTieuDe";
-            this.txtTenTieuDe.Size = new System.Drawing.Size(401, 36);
+            this.txtTenTieuDe.Size = new System.Drawing.Size(401, 37);
             this.txtTenTieuDe.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtTenTieuDe.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.txtTenTieuDe.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -179,8 +179,8 @@
             this.txtTenTieuDe.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.txtTenTieuDe.StateCommon.Border.Rounding = 16;
             this.txtTenTieuDe.StateCommon.Border.Width = 1;
-            this.txtTenTieuDe.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtTenTieuDe.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenTieuDe.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.txtTenTieuDe.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.txtTenTieuDe.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtTenTieuDe.StateDisabled.Border.Color1 = System.Drawing.Color.Blue;
             this.txtTenTieuDe.StateDisabled.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -207,12 +207,12 @@
             // btnThoat
             // 
             this.btnThoat.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
-            this.btnThoat.Location = new System.Drawing.Point(201, 501);
+            this.btnThoat.Location = new System.Drawing.Point(236, 505);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
-            this.btnThoat.Size = new System.Drawing.Size(169, 40);
+            this.btnThoat.Size = new System.Drawing.Size(98, 40);
             this.btnThoat.TabIndex = 11;
-            this.btnThoat.Values.Text = "Đã Xem";
+            this.btnThoat.Values.Text = "Thoát";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // lblTB

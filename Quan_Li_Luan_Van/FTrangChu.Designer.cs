@@ -120,9 +120,9 @@
             // 
             this.dtNgayThang.CalendarTodayDate = new System.DateTime(2024, 3, 16, 0, 0, 0, 0);
             this.dtNgayThang.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtNgayThang.Location = new System.Drawing.Point(101, 72);
+            this.dtNgayThang.Location = new System.Drawing.Point(101, 75);
             this.dtNgayThang.Name = "dtNgayThang";
-            this.dtNgayThang.Size = new System.Drawing.Size(191, 43);
+            this.dtNgayThang.Size = new System.Drawing.Size(191, 40);
             this.dtNgayThang.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.dtNgayThang.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.dtNgayThang.StateCommon.Border.Color2 = System.Drawing.Color.Blue;
@@ -132,8 +132,8 @@
             this.dtNgayThang.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.dtNgayThang.StateCommon.Border.Rounding = 16;
             this.dtNgayThang.StateCommon.Border.Width = 1;
-            this.dtNgayThang.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.dtNgayThang.StateCommon.Content.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtNgayThang.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.dtNgayThang.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.dtNgayThang.TabIndex = 20;
             this.dtNgayThang.ValueNullable = new System.DateTime(2024, 3, 10, 0, 0, 0, 0);
             this.dtNgayThang.ValueChanged += new System.EventHandler(this.dtNgayThang_ValueChanged);
@@ -152,9 +152,9 @@
             // 
             // txtTimkiem
             // 
-            this.txtTimkiem.Location = new System.Drawing.Point(398, 76);
+            this.txtTimkiem.Location = new System.Drawing.Point(394, 78);
             this.txtTimkiem.Name = "txtTimkiem";
-            this.txtTimkiem.Size = new System.Drawing.Size(297, 39);
+            this.txtTimkiem.Size = new System.Drawing.Size(297, 37);
             this.txtTimkiem.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtTimkiem.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.txtTimkiem.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -164,8 +164,8 @@
             this.txtTimkiem.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.txtTimkiem.StateCommon.Border.Rounding = 16;
             this.txtTimkiem.StateCommon.Border.Width = 1;
-            this.txtTimkiem.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.txtTimkiem.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimkiem.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.txtTimkiem.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.txtTimkiem.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtTimkiem.TabIndex = 15;
             this.txtTimkiem.Text = "Nhập để tìm kiếm";

@@ -39,22 +39,23 @@
             // lblTieuDe
             // 
             this.lblTieuDe.AutoSize = true;
-            this.lblTieuDe.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTieuDe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lblTieuDe.Location = new System.Drawing.Point(112, 21);
+            this.lblTieuDe.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTieuDe.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lblTieuDe.Location = new System.Drawing.Point(101, 24);
             this.lblTieuDe.Name = "lblTieuDe";
-            this.lblTieuDe.Size = new System.Drawing.Size(123, 24);
+            this.lblTieuDe.Size = new System.Drawing.Size(135, 28);
             this.lblTieuDe.TabIndex = 3;
             this.lblTieuDe.Text = "Họp Meeting";
+            this.lblTieuDe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbNoiDungTB
             // 
             this.lbNoiDungTB.AutoSize = true;
-            this.lbNoiDungTB.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNoiDungTB.Font = new System.Drawing.Font("Leelawadee UI Semilight", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNoiDungTB.ForeColor = System.Drawing.Color.Black;
-            this.lbNoiDungTB.Location = new System.Drawing.Point(114, 61);
+            this.lbNoiDungTB.Location = new System.Drawing.Point(103, 50);
             this.lbNoiDungTB.Name = "lbNoiDungTB";
-            this.lbNoiDungTB.Size = new System.Drawing.Size(123, 20);
+            this.lbNoiDungTB.Size = new System.Drawing.Size(128, 23);
             this.lbNoiDungTB.TabIndex = 4;
             this.lbNoiDungTB.Text = "Thông báo nghỉ";
             // 
@@ -79,7 +80,7 @@
             this.lblThoiGian.AutoSize = true;
             this.lblThoiGian.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThoiGian.ForeColor = System.Drawing.Color.Black;
-            this.lblThoiGian.Location = new System.Drawing.Point(782, 8);
+            this.lblThoiGian.Location = new System.Drawing.Point(866, 8);
             this.lblThoiGian.Name = "lblThoiGian";
             this.lblThoiGian.Size = new System.Drawing.Size(159, 20);
             this.lblThoiGian.TabIndex = 13;
