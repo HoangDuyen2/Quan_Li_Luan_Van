@@ -76,7 +76,10 @@ namespace Quan_Li_Luan_Van
                 }
 
             }
-
+            else
+            {
+                MessageBox.Show("Invalid username, password, or role.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
     }

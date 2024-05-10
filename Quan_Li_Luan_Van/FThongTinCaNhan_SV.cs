@@ -35,7 +35,7 @@ namespace Quan_Li_Luan_Van
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            person = ucThongTinCaNhan1.capNhat(person);
+            person = ucThongTinCaNhan1.capNhat(person,"SinhVien");
         }
 
     }

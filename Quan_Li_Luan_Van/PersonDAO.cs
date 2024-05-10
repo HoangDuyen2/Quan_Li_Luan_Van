@@ -54,11 +54,21 @@ namespace Quan_Li_Luan_Van
         }
         #endregion
         #region Update dữ liệu trong form thông tin cá nhân
-        public void CapNhatThongTin(Person person)
+        public void CapNhatThongTin(Person person, string table)
         {
-            string sqlStr = string.Format("UPDATE SinhVien SET TenSV = N'{0}', GioiTinh = N'{1}', DiaChi = N'{3}', " +
+            string sqlStr;
+            if( table == "SinhVien")
+            {
+                sqlStr = string.Format("UPDATE SinhVien SET TenSV = N'{0}', GioiTinh = N'{1}', DiaChi = N'{2}', " +
             "CCCD = '{3}', NgaySinh = '{4}', SDT = '{5}', Email = '{6}' WHERE MSSV = '{7}'", person.getHoTen(), person.getGioiTinh(),
                 person.getDiaChi(), person.getCCCD(), person.getNTNS(), person.getSDT(), person.getEmail(), person.getMaso());
+            }
+            else
+            {
+                sqlStr = string.Format("UPDATE GiangVien SET TenGV = N'{0}', GioiTinh = N'{1}', DiaChi = N'{2}', " +
+            "CCCD = '{3}', NgaySinh = '{4}', SDT = '{5}', Email = '{6}' WHERE MaGV = '{7}'", person.getHoTen(), person.getGioiTinh(),
+                person.getDiaChi(), person.getCCCD(), person.getNTNS(), person.getSDT(), person.getEmail(), person.getMaso());
+            }
             dBConnection.ThucThi(sqlStr);
         }
         #endregion

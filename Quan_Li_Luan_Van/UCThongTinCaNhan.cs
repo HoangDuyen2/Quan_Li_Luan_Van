@@ -59,14 +59,14 @@ namespace Quan_Li_Luan_Van
             BtnChinhSua.Hide();
             BtnOK.Show();
         }
-        public Person capNhat(Person person)
+        public Person capNhat(Person person, string table)
         {
             string sex = "";
             if (RbNam.Checked) sex = "Nam";
             else sex = "Nu";
             person = new Person(TxtID.Text,TxtHoTen.Text, sex, TxtDiaChi.Text, TxtCCCD.Text, DtBirth.Value.ToShortDateString(),
                 TxtPhone.Text, TxtEmail.Text);
-            thongTinCaNhan.CapNhatThongTin(person);
+            thongTinCaNhan.CapNhatThongTin(person, table);
             BtnChinhSua.Show();
             KhongTruyCap(person);
             return person;
