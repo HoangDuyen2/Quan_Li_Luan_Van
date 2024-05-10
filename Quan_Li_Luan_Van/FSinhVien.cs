@@ -54,7 +54,7 @@ namespace Quan_Li_Luan_Van
             labelMSSV.Text = sinhVien.getMaso();
             labelTen.Text = sinhVien.getHoTen();
             labelChucVu.Text = taiKhoan.getChucVu();
-            OpenChildForm(new FTrangChu(sinhVien), sender);
+            //OpenChildForm(new FTrangChu(sinhVien), sender);
         }
 
         private void buttonHome_Click(object sender, EventArgs e)
